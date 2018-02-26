@@ -4,13 +4,7 @@ import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 import { linkTo } from '@storybook/addon-links';
 
-import { Welcome } from '@storybook/react/demo';
-
-import { Button, TextInput } from '../src';
-
-storiesOf('Welcome', module).add('to Storybook', () => (
-  <Welcome showApp={linkTo('Button')} />
-));
+import { Button, Dropdown, TextInput } from '../src';
 
 storiesOf('Button', module)
   .add('with text', () => (
@@ -19,5 +13,7 @@ storiesOf('Button', module)
   .add('with some emoji', () => (
     <Button onClick={action('clicked')}>😀 😎 👍 💯</Button>
   ));
+
+storiesOf('Dropdown', module).add('simple', () => <Dropdown />);
 
 storiesOf('TextInput', module).add('simple', () => <TextInput value="" />);
