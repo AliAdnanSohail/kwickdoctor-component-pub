@@ -6,8 +6,7 @@
   "main": "dist/index.js",
   "scripts": {
     "clean-dist": "rm -rf ./dist",
-    "build":
-      "yarn run clean-dist && NODE_ENV=production `yarn bin`/babel ./src --out-dir ./dist",
+    "build": "yarn run clean-dist && NODE_ENV=production `yarn bin`/babel ./src --out-dir ./dist",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "test": "jest --coverage"
@@ -45,5 +44,7 @@
     "react-dom": "^16.2.0",
     "react-test-renderer": "^16.2.0"
   },
-  "dependencies": {}
+  "dependencies": {
+    "styled-jsx": "^2.2.5"
+  }
 }

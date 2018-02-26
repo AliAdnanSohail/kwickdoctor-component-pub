@@ -7,6 +7,11 @@ export default class Button extends Component {
     return (
       <button className="button" onClick={onClick}>
         {children}
+        <style jsx>{`
+          .button {
+            border: none;
+          }
+        `}</style>
       </button>
     );
   }
