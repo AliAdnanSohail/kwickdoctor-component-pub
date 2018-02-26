@@ -32,14 +32,14 @@ var Button = function (_Component) {
     key: "render",
     value: function render() {
       var _props = this.props,
-          title = _props.title,
+          children = _props.children,
           onClick = _props.onClick;
 
 
       return _react2.default.createElement(
         "button",
         { className: "button", onClick: onClick },
-        title
+        children
       );
     }
   }]);
