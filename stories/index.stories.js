@@ -8,10 +8,10 @@ import { Button, Dropdown, TextInput } from '../src';
 
 storiesOf('Button', module)
   .add('with text', () => (
-    <Button onClick={action('clicked')}>Hello Button</Button>
+    <Button onClick={action('clicked')} color="red">Hello Button</Button>
   ))
   .add('with some emoji', () => (
-    <Button onClick={action('clicked')}>😀 😎 👍 💯</Button>
+    <Button onClick={action('clicked')} color="blue">😀 😎 👍 💯</Button>
   ));
 
 storiesOf('Dropdown', module).add('simple', () => <Dropdown />);
