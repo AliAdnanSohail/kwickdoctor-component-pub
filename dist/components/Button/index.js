@@ -1,19 +1,18 @@
-"use strict";
+'use strict';
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.default = undefined;
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _style = require("styled-jsx/style");
-
-var _style2 = _interopRequireDefault(_style);
-
-var _react = require("react");
+var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = require('prop-types');
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -33,7 +32,7 @@ var Button = function (_Component) {
   }
 
   _createClass(Button, [{
-    key: "render",
+    key: 'render',
     value: function render() {
       var _props = this.props,
           children = _props.children,
@@ -41,19 +40,19 @@ var Button = function (_Component) {
 
 
       return _react2.default.createElement(
-        "button",
-        { onClick: onClick, className: "jsx-975318052" + " " + "button"
-        },
-        children,
-        _react2.default.createElement(_style2.default, {
-          styleId: "975318052",
-          css: [".button.jsx-975318052{border:none;}"]
-        })
+        'button',
+        { className: 'button', onClick: onClick },
+        children
       );
     }
   }]);
 
   return Button;
 }(_react.Component);
+
+Button.propTypes = {
+  onClick: _propTypes2.default.func.isRequired,
+  children: _propTypes2.default.any.isRequired
+};
 
 exports.default = Button;
