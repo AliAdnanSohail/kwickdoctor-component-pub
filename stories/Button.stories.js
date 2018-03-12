@@ -19,7 +19,9 @@ storiesOf('Button', module)
       ~~~js
       <Button>Click Here</Button>
       ~~~`)(() => (
-        <Button onClick={action('clicked')}>{text('text', 'Hello!')}</Button>
+        <Button onClick={action('clicked')}>
+          {text('children', 'Hello!')}
+        </Button>
       )),
     ),
   );
