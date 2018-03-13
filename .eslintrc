@@ -1,0 +1,20 @@
+{
+  "rules": {
+    "react/prefer-stateless-function": 0,
+    "indent": ["error", 2],
+    "react/jsx-indent": ["error", 2],
+    "react/jsx-indent-props": ["error", 2],
+    "react/jsx-filename-extension": 0,
+    "react/prop-types": 0,
+    "linebreak-style": 0,
+    "no-underscore-dangle": 0
+  },
+  "extends": ["airbnb"],
+  "env": {
+    "browser": true
+  },
+  "parser": "babel-eslint",
+  "globals": {
+    "google": true
+  }
+}

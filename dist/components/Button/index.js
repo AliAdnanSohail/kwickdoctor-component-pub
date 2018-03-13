@@ -3,6 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
+exports.default = undefined;
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
@@ -35,14 +36,14 @@ var Button = function (_Component) {
     key: 'render',
     value: function render() {
       var _props = this.props,
-          children = _props.children,
+          title = _props.title,
           onClick = _props.onClick;
 
 
       return _react2.default.createElement(
         'button',
         { className: 'button', onClick: onClick },
-        children
+        title
       );
     }
   }]);
@@ -50,9 +51,10 @@ var Button = function (_Component) {
   return Button;
 }(_react.Component);
 
+exports.default = Button;
+
+
 Button.propTypes = {
   onClick: _propTypes2.default.func.isRequired,
-  children: _propTypes2.default.any.isRequired
+  title: _propTypes2.default.string.isRequired
 };
-
-exports.default = Button;

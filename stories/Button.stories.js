@@ -14,14 +14,9 @@ storiesOf('Button', module)
   .addDecorator(checkA11y)
   .add(
     'with text',
-    withNotes('A very simple component')(
-      withInfo(`
+    withNotes('A very simple component')(withInfo(`
       ~~~js
       <Button>Click Here</Button>
-      ~~~`)(() => (
-        <Button onClick={action('clicked')}>
-          {text('children', 'Hello!')}
-        </Button>
-      )),
-    ),
+      ~~~
+      `)(() => <Button onClick={action('clicked')} title={text('children', 'Hello!')} />)),
   );
