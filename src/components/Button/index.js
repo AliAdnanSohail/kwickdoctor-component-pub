@@ -10,7 +10,12 @@ export default class Button extends Component {
       title, onClick, transparent, squared, accent,
     } = this.props;
 
-    const classes = classnames('button', { transparent }, { squared }, { accent });
+    const classes = classnames(
+      'button',
+      { 'button--transparent': transparent },
+      { 'button--squared': squared },
+      { 'button--accent': accent },
+    );
 
     return (
       <button className={classes} onClick={onClick}>

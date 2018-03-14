@@ -6,7 +6,7 @@ export default css`
     box-shadow: 0px 12px 34px rgba(0, 0, 0, 0.1);
     border-radius: 4px;
 
-    &.rounded {
+    &--rounded {
       border-radius: 12px;
     }
   }

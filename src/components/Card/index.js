@@ -8,7 +8,7 @@ export default class Card extends Component {
   render() {
     const { children, rounded, style } = this.props;
 
-    const classes = classnames('card', { rounded });
+    const classes = classnames('card', { 'card--rounded': rounded });
 
     return (
       <div className={classes} style={style}>

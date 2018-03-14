@@ -22,23 +22,23 @@ export default css`
       size: 0.875rem;
     }
 
-    &::-webkit-input-placeholder {
+    ::-webkit-input-placeholder {
       color: ${settings.placeholderColor};
     }
 
-    &::-moz-placeholder {
+    ::-moz-placeholder {
       color: ${settings.placeholderColor};
     }
 
-    &:-ms-input-placeholder {
+    :-ms-input-placeholder {
       color: ${settings.placeholderColor};
     }
 
-    &:-moz-placeholder {
+    :-moz-placeholder {
       color: ${settings.placeholderColor};
     }
 
-    &:focus {
+    :focus {
       outline: none;
       padding: 12px 16px;
       border-color: ${settings.primaryColor};

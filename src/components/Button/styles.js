@@ -33,18 +33,18 @@ export default css`
       transform: uppercase;
     }
 
-    &.transparent {
+    &--transparent {
       background-color: transparent;
       box-shadow: 0px 0px 10px rgba(12, 151, 249, 0.15);
 
       color: ${settings.textColor};
     }
 
-    &.squared {
+    &--squared {
       border-radius: 12px;
     }
 
-    &.accent {
+    &--accent {
       color: ${settings.primaryColor};
       background-color: #ffffff;
       border-color: #ffffff;
