@@ -29,52 +29,47 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var Button = function (_Component) {
-  _inherits(Button, _Component);
+var Card = function (_Component) {
+  _inherits(Card, _Component);
 
-  function Button() {
-    _classCallCheck(this, Button);
+  function Card() {
+    _classCallCheck(this, Card);
 
-    return _possibleConstructorReturn(this, (Button.__proto__ || Object.getPrototypeOf(Button)).apply(this, arguments));
+    return _possibleConstructorReturn(this, (Card.__proto__ || Object.getPrototypeOf(Card)).apply(this, arguments));
   }
 
-  _createClass(Button, [{
+  _createClass(Card, [{
     key: 'render',
     value: function render() {
       var _props = this.props,
-          title = _props.title,
-          onClick = _props.onClick,
-          transparent = _props.transparent,
-          squared = _props.squared,
-          accent = _props.accent;
+          children = _props.children,
+          rounded = _props.rounded,
+          style = _props.style;
 
 
-      var classes = (0, _classnames2.default)(_styles.button, { transparent: transparent }, { squared: squared }, { accent: accent });
+      var classes = (0, _classnames2.default)(_styles.card, { rounded: rounded });
 
       return _react2.default.createElement(
-        'button',
-        { className: classes, onClick: onClick },
-        title
+        'div',
+        { className: classes, style: style },
+        children
       );
     }
   }]);
 
-  return Button;
+  return Card;
 }(_react.Component);
 
-exports.default = Button;
+exports.default = Card;
 
 
-Button.propTypes = {
-  onClick: _propTypes2.default.func.isRequired,
-  title: _propTypes2.default.string.isRequired,
-  transparent: _propTypes2.default.bool,
-  squared: _propTypes2.default.bool,
-  accent: _propTypes2.default.bool
+Card.propTypes = {
+  children: _propTypes2.default.node.isRequired,
+  rounded: _propTypes2.default.bool,
+  style: _propTypes2.default.object
 };
 
-Button.defaultProps = {
-  transparent: false,
-  squared: false,
-  accent: false
+Card.defaultProps = {
+  rounded: false,
+  style: {}
 };

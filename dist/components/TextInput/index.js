@@ -15,9 +15,7 @@ var _propTypes = require('prop-types');
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
 
-var _classnames = require('classnames');
-
-var _classnames2 = _interopRequireDefault(_classnames);
+var _grommet = require('grommet');
 
 var _styles = require('./styles.scss');
 
@@ -29,52 +27,57 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var Button = function (_Component) {
-  _inherits(Button, _Component);
+var TextInput = function (_Component) {
+  _inherits(TextInput, _Component);
 
-  function Button() {
-    _classCallCheck(this, Button);
+  function TextInput() {
+    _classCallCheck(this, TextInput);
 
-    return _possibleConstructorReturn(this, (Button.__proto__ || Object.getPrototypeOf(Button)).apply(this, arguments));
+    return _possibleConstructorReturn(this, (TextInput.__proto__ || Object.getPrototypeOf(TextInput)).apply(this, arguments));
   }
 
-  _createClass(Button, [{
+  _createClass(TextInput, [{
     key: 'render',
     value: function render() {
       var _props = this.props,
-          title = _props.title,
-          onClick = _props.onClick,
-          transparent = _props.transparent,
-          squared = _props.squared,
-          accent = _props.accent;
+          id = _props.id,
+          label = _props.label,
+          name = _props.name,
+          placeholder = _props.placeholder,
+          onChange = _props.onChange;
 
-
-      var classes = (0, _classnames2.default)(_styles.button, { transparent: transparent }, { squared: squared }, { accent: accent });
 
       return _react2.default.createElement(
-        'button',
-        { className: classes, onClick: onClick },
-        title
+        'label',
+        { htmlFor: id },
+        label,
+        _react2.default.createElement(_grommet.TextInput, {
+          id: id,
+          name: name,
+          onDOMChange: onChange,
+          placeHolder: placeholder,
+          className: _styles.textInput
+        })
       );
     }
   }]);
 
-  return Button;
+  return TextInput;
 }(_react.Component);
 
-exports.default = Button;
+exports.default = TextInput;
 
 
-Button.propTypes = {
-  onClick: _propTypes2.default.func.isRequired,
-  title: _propTypes2.default.string.isRequired,
-  transparent: _propTypes2.default.bool,
-  squared: _propTypes2.default.bool,
-  accent: _propTypes2.default.bool
+TextInput.propTypes = {
+  id: _propTypes2.default.string.isRequired,
+  name: _propTypes2.default.string,
+  placeholder: _propTypes2.default.string,
+  onChange: _propTypes2.default.func.isRequired,
+  label: _propTypes2.default.string
 };
 
-Button.defaultProps = {
-  transparent: false,
-  squared: false,
-  accent: false
+TextInput.defaultProps = {
+  name: '',
+  placeholder: '',
+  label: ''
 };
