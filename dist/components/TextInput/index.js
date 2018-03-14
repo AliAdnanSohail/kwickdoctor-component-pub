@@ -7,6 +7,10 @@ exports.default = undefined;
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
+var _style = require('styled-jsx/style');
+
+var _style2 = _interopRequireDefault(_style);
+
 var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
@@ -15,9 +19,9 @@ var _propTypes = require('prop-types');
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
 
-var _grommet = require('grommet');
+var _styles = require('./styles');
 
-var _styles = require('./styles.scss');
+var _styles2 = _interopRequireDefault(_styles);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -49,14 +53,19 @@ var TextInput = function (_Component) {
 
       return _react2.default.createElement(
         'label',
-        { htmlFor: id },
+        { htmlFor: id, className: 'jsx-' + _styles2.default.__scopedHash
+        },
         label,
-        _react2.default.createElement(_grommet.TextInput, {
+        _react2.default.createElement('input', {
           id: id,
           name: name,
-          onDOMChange: onChange,
-          placeHolder: placeholder,
-          className: _styles.textInput
+          onChange: onChange,
+          placeholder: placeholder,
+          className: 'jsx-' + _styles2.default.__scopedHash + ' ' + 'text-input'
+        }),
+        _react2.default.createElement(_style2.default, {
+          styleId: _styles2.default.__scopedHash,
+          css: _styles2.default.__scoped
         })
       );
     }

@@ -5,6 +5,6 @@
     "transform-class-properties",
     "transform-object-rest-spread",
     "transform-export-extensions",
-    "styled-jsx/babel"
+    ["styled-jsx/babel", { "plugins": ["styled-jsx-plugin-sass", "styled-jsx-plugin-stylelint"] }]
   ]
 }

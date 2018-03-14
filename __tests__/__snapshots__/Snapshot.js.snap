@@ -9,7 +9,7 @@ exports[`Storyshots Button simple button 1`] = `
   }
 >
   <button
-    className=""
+    className="jsx-2338278291 button"
     onClick={[Function]}
   >
     Hello!
@@ -26,7 +26,7 @@ exports[`Storyshots Card simple card 1`] = `
   }
 >
   <div
-    className=""
+    className="jsx-1550507998 card"
     style={
       Object {
         "padding": "50px",
@@ -48,21 +48,16 @@ exports[`Storyshots TextInput simple text input 1`] = `
   }
 >
   <label
+    className="jsx-3018655035"
     htmlFor="text-input"
   >
     text input
     <input
-      autoComplete="off"
-      className="grommetux-text-input grommetux-input"
-      defaultValue={undefined}
+      className="jsx-3018655035 text-input"
       id="text-input"
       name="name"
       onChange={[Function]}
-      onFocus={[Function]}
-      onKeyDown={[Function]}
       placeholder="text input"
-      type="text"
-      value={undefined}
     />
   </label>
 </div>

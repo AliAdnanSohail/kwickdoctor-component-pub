@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { TextInput as GTextInput } from 'grommet';
 
-import { textInput } from './styles.scss';
+import styles from './styles';
 
 export default class TextInput extends Component {
   render() {
@@ -13,13 +12,15 @@ export default class TextInput extends Component {
     return (
       <label htmlFor={id}>
         {label}
-        <GTextInput
+        <input
           id={id}
           name={name}
-          onDOMChange={onChange}
-          placeHolder={placeholder}
-          className={textInput}
+          onChange={onChange}
+          placeholder={placeholder}
+          className="text-input"
         />
+
+        <style jsx>{styles}</style>
       </label>
     );
   }

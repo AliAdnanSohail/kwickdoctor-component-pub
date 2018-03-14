@@ -2,17 +2,19 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 
-import { card } from './styles.scss';
+import styles from './styles';
 
 export default class Card extends Component {
   render() {
     const { children, rounded, style } = this.props;
 
-    const classes = classnames(card, { rounded });
+    const classes = classnames('card', { rounded });
 
     return (
       <div className={classes} style={style}>
         {children}
+
+        <style jsx>{styles}</style>
       </div>
     );
   }

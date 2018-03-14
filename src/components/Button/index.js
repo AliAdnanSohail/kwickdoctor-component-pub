@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 
-import { button } from './styles.scss';
+import styles from './styles';
 
 export default class Button extends Component {
   render() {
@@ -10,11 +10,13 @@ export default class Button extends Component {
       title, onClick, transparent, squared, accent,
     } = this.props;
 
-    const classes = classnames(button, { transparent }, { squared }, { accent });
+    const classes = classnames('button', { transparent }, { squared }, { accent });
 
     return (
       <button className={classes} onClick={onClick}>
         {title}
+
+        <style jsx>{styles}</style>
       </button>
     );
   }
