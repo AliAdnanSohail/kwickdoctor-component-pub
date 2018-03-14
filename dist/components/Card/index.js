@@ -53,7 +53,7 @@ var Card = function (_Component) {
           style = _props.style;
 
 
-      var classes = (0, _classnames2.default)('card', { rounded: rounded });
+      var classes = (0, _classnames2.default)('card', { 'card--rounded': rounded });
 
       return _react2.default.createElement(
         'div',

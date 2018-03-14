@@ -55,7 +55,7 @@ var Button = function (_Component) {
           accent = _props.accent;
 
 
-      var classes = (0, _classnames2.default)('button', { transparent: transparent }, { squared: squared }, { accent: accent });
+      var classes = (0, _classnames2.default)('button', { 'button--transparent': transparent }, { 'button--squared': squared }, { 'button--accent': accent });
 
       return _react2.default.createElement(
         'button',
