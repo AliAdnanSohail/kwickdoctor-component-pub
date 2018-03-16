@@ -32,18 +32,19 @@ export default class Textarea extends Component {
 
   render() {
     const {
-      id, label, name, placeholder, error,
+      id, label, name, placeholder, error, className,
     } = this.props;
     const errorMessage = this.errorMessage();
 
     const classes = classnames(
       'text-input',
+      className,
       { error },
     );
 
     return (
       <div>
-        <label htmlFor={id}> {label}</label>
+        <label htmlFor={id}>{label}</label>
         <textarea
           id={id}
           name={name}
@@ -67,6 +68,7 @@ Textarea.propTypes = {
   label: PropTypes.string,
   value: PropTypes.string,
   error: PropTypes.string,
+  className: PropTypes.string,
 };
 
 Textarea.defaultProps = {
@@ -75,4 +77,5 @@ Textarea.defaultProps = {
   label: '',
   value: '',
   error: '',
+  className: undefined,
 };

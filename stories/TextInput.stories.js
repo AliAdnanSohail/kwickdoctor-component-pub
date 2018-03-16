@@ -22,6 +22,7 @@ storiesOf('TextInput', module)
       value={text('value', 'example text')}
       label={text('label', 'Text input')}
       error={text('error', '')}
+      className={text('class name', '')}
     />
   ));
 
@@ -39,5 +40,6 @@ storiesOf('TextInput', module)
       value={text('value', 'example textarea')}
       label={text('label', 'Textarea')}
       error={text('error', '')}
+      className={text('class name', '')}
     />
   ));
