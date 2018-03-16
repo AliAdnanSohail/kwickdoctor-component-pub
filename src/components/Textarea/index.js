@@ -2,9 +2,9 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 
-import styles from './styles';
+import styles from './../TextInput/styles';
 
-export default class TextInput extends Component {
+export default class Textarea extends Component {
   constructor(props) {
     super(props);
     this.handleChange = this.handleChange.bind(this);
@@ -44,7 +44,7 @@ export default class TextInput extends Component {
     return (
       <div>
         <label htmlFor={id}> {label}</label>
-        <input
+        <textarea
           id={id}
           name={name}
           onChange={this.handleChange}
@@ -59,7 +59,7 @@ export default class TextInput extends Component {
   }
 }
 
-TextInput.propTypes = {
+Textarea.propTypes = {
   id: PropTypes.string.isRequired,
   name: PropTypes.string,
   placeholder: PropTypes.string,
@@ -69,7 +69,7 @@ TextInput.propTypes = {
   error: PropTypes.string,
 };
 
-TextInput.defaultProps = {
+Textarea.defaultProps = {
   name: '',
   placeholder: '',
   label: '',
