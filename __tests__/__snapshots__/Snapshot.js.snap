@@ -9,7 +9,7 @@ exports[`Storyshots Button simple button 1`] = `
   }
 >
   <button
-    className="jsx-2338278291 button"
+    className="jsx-780996603 button"
     onClick={[Function]}
   >
     Hello!
@@ -26,7 +26,7 @@ exports[`Storyshots Card simple card 1`] = `
   }
 >
   <div
-    className="jsx-1550507998 card"
+    className="jsx-3439448312 card"
     style={
       Object {
         "padding": "50px",
@@ -48,17 +48,34 @@ exports[`Storyshots TextInput simple text input 1`] = `
   }
 >
   <label
-    className="jsx-3018655035"
+    className="jsx-4144538081"
     htmlFor="text-input"
   >
     text input
     <input
-      className="jsx-3018655035 text-input"
+      className="jsx-4144538081 text-input"
       id="text-input"
       name="name"
       onChange={[Function]}
       placeholder="text input"
     />
   </label>
+</div>
+`;
+
+exports[`Storyshots TimePicker not simple button 1`] = `
+<div
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
+>
+  <button
+    className="jsx-780996603 button"
+    onClick={[Function]}
+  >
+    Hello!
+  </button>
 </div>
 `;
