@@ -77,7 +77,7 @@ export default class TimePicker extends Component {
       return (
         <React.Fragment>
           <div className='b-select__options-wrap'>
-            {this.state.hours.map((time)=><div className={classnames({'b-select__option': true, 'b-select__option_selected': this.state.selectedHours == time.value})} key={time.value} onClick={this.changeHours}>{time.value}</div>)}
+            {this.state.hours.map((time)=><div className={classnames('b-select__option', {'b-select__option_selected': this.state.selectedHours == time.value})} key={time.value} onClick={this.changeHours}>{time.value}</div>)}
           </div>
           <style jsx>{styles}</style>
         </React.Fragment>
@@ -90,7 +90,7 @@ export default class TimePicker extends Component {
       return (
         <React.Fragment>
           <div className='b-select__options-wrap b-select__options-wrap_size_small'>
-            {this.state.minuts.map((time)=><div className={classnames({'b-select__option': true, 'b-select__option_selected': this.state.selectedMin == time.value})} key={time.value} onClick={this.changeMin}>{time.value}</div>)}
+            {this.state.minuts.map((time)=><div className={classnames('b-select__option', {'b-select__option_selected': this.state.selectedMin == time.value})} key={time.value} onClick={this.changeMin}>{time.value}</div>)}
           </div>
           <style jsx>{styles}</style>
         </React.Fragment>
@@ -99,11 +99,15 @@ export default class TimePicker extends Component {
   }  
 
   switchHoursList(){
-    this.setState({ visibleHoursList: !this.state.visibleHoursList });
+    this.setState(function(prevState, props){
+      return { visibleHoursList: !prevState.visibleHoursList }
+    });
   }
 
   switchMinutsList(){
-    this.setState({ visibleMinutsList: !this.state.visibleMinutsList });
+    this.setState(function(prevState, props){
+      return { visibleMinutsList: !prevState.visibleMinutsList }
+    });
   }
 
 
@@ -113,16 +117,6 @@ export default class TimePicker extends Component {
       title
     } = this.props;
 
-    // const classTest = classnames({
-    //   'b-select__option_selected': true
-    // });
-
-    const classes = classnames(
-      'b-time-picker',
-      // { 'button--transparent': transparent },
-      // { 'button--squared': squared },
-      // { 'button--accent': accent },
-    );
 
     return (
       <section className={classes}>
