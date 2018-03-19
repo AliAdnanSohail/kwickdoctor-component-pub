@@ -48,4 +48,5 @@ Button.defaultProps = {
   transparent: false,
   squared: false,
   social: '',
+  accent: false,
 };
