@@ -11,16 +11,17 @@ export default css`
     bottom: 0;
     background: rgba(0,0,0,0.6);
     display: flex;
-    align-items: center;
+    align-items: baseline;
     justify-content: center;
     overflow: auto;
+    padding-top: 100px;
   }
   .modal-window {
     position: absolute;
     border-radius: 6px;
     background-color: #FFFFFF;
     box-shadow: 0 10px 20px 0 rgba(0,0,0,0.15);
-    padding: 44px 16px 16px 16px;
+    padding: 60px 100px;
   }
   .icons-close {
     position: absolute;
@@ -32,7 +33,8 @@ export default css`
     outline: none;
     opacity: 0.6;
     transition: opacity 0.4s ease;
-    background: url("${settings.closeIcon}");
+    background: url("${settings.closeIcon}") no-repeat center;
+    background-size: 13px 13px;
     cursor: pointer;
     &:hover {
       opacity: 1;
