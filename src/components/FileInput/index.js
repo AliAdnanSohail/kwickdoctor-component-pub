@@ -7,32 +7,32 @@ export default class FileInput extends Component {
   constructor(props) {
     super(props);
     this.state = { showFile: false };
-
-    this.handleFile = this.handleFile.bind(this);
-    this.handleClick = this.handleClick.bind(this);
-    this.handleRemove = this.handleRemove.bind(this);
   }
+
   handleFile() {
     this.setState({ showFile: true });
   }
+
   handleClick() {
     this.fileUpload.click();
   }
+
   handleRemove() {
     this.setState({ showFile: false });
   }
+  
   render() {
     const {
-      id, name, message
+      id, name, message,
     } = this.props;
 
     if (!this.state.showFile) {
       return (
         <React.Fragment key={id}>
-          <button className="upload-license-copy" onClick={this.handleClick}>
+          <button className="upload-license-copy" onClick={(e) => this.handleClick(e)}>
             <i className="icon-upload" /> {message}
           </button>
-          <input className="inputFile" type="file" name={name} ref={(input) => { this.fileUpload = input; }} onChange={this.handleFile} />
+          <input className="inputFile" type="file" name={name} ref={(input) => { this.fileUpload = input; }} onChange={(e) => this.handleFile(e)} />
           <style jsx>{styles}</style>
         </React.Fragment>);
     }
@@ -43,7 +43,7 @@ export default class FileInput extends Component {
           {this.fileUpload.files[0].name}
         </div>
         <div className="icons">
-          <div className="remove" onClick={this.handleRemove} />
+          <div className="remove" onClick={(e)=> this.handleRemove(e)} />
         </div>
         <style jsx>{styles}</style>
       </div>);
