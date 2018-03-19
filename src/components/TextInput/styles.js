@@ -14,6 +14,7 @@ export default css`
     color: ${settings.textColor};
     padding: 12px 16px;
     width: 100%;
+    min-height: 44px;
     min-width: 100%;
     max-width: 100%;
     box-sizing: border-box;
@@ -61,8 +62,8 @@ export default css`
     border-radius: 3px;	
     background-color: #FFFFFF;	
     box-shadow: 0 2px 14px 0 rgba(0,0,0,0.14);
-    width: 50%;
-
+    max-width: 50%;
+    width: auto;
     font-size: 0.875rem;
     font-weight: 500;
     left: 16px;
@@ -77,13 +78,10 @@ export default css`
       top: 0;
       left: 3em;
       box-sizing: border-box;
-      
       border: 0.4em solid black;
       border-color: transparent transparent #FFFFFF #FFFFFF;
-      
       transform-origin: 0 0;
       transform: rotate(135deg);
-      
       box-shadow: -2px 2px 4px 0 rgba(0, 0, 0, 0.1);
     }
   }

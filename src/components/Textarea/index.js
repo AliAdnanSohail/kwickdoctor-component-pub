@@ -7,7 +7,6 @@ import styles from './../TextInput/styles';
 export default class Textarea extends Component {
   constructor(props) {
     super(props);
-    this.handleChange = this.handleChange.bind(this);
     this.state = { value: props.value };
   }
 
@@ -35,7 +34,6 @@ export default class Textarea extends Component {
       id, label, name, placeholder, error, className,
     } = this.props;
     const errorMessage = this.errorMessage();
-
     const classes = classnames(
       'text-input',
       className,
@@ -48,7 +46,7 @@ export default class Textarea extends Component {
         <textarea
           id={id}
           name={name}
-          onChange={this.handleChange}
+          onChange={e => this.handleChange(e)}
           placeholder={placeholder}
           className={classes}
           value={this.state.value}
