@@ -21,13 +21,13 @@ export default class Button extends Component {
 
     if (social) {
       return (
-        <button className={circle} onClick={onClick}>
+        <button className={circle} onClick={onClick} aria-label={social} >
           <style jsx>{styles}</style>
         </button>
       );
     }
     return (
-      <button className={classes} onClick={onClick}>
+      <button className={classes} onClick={onClick} aria-label={title} >
         {title}
         <style jsx>{styles}</style>
       </button>
