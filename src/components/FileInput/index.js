@@ -20,7 +20,7 @@ export default class FileInput extends Component {
   handleRemove() {
     this.setState({ showFile: false });
   }
-  
+
   render() {
     const {
       id, name, message,
@@ -29,10 +29,10 @@ export default class FileInput extends Component {
     if (!this.state.showFile) {
       return (
         <React.Fragment key={id}>
-          <button className="upload-license-copy" onClick={(e) => this.handleClick(e)}>
+          <button className="upload-license-copy" onClick={e => this.handleClick(e)}>
             <i className="icon-upload" /> {message}
           </button>
-          <input className="inputFile" type="file" name={name} ref={(input) => { this.fileUpload = input; }} onChange={(e) => this.handleFile(e)} />
+          <input className="inputFile" type="file" name={name} ref={(input) => { this.fileUpload = input; }} onChange={e => this.handleFile(e)} />
           <style jsx>{styles}</style>
         </React.Fragment>);
     }
@@ -43,7 +43,7 @@ export default class FileInput extends Component {
           {this.fileUpload.files[0].name}
         </div>
         <div className="icons">
-          <div className="remove" onClick={(e)=> this.handleRemove(e)} />
+          <div className="remove" onClick={e => this.handleRemove(e)} />
         </div>
         <style jsx>{styles}</style>
       </div>);
@@ -53,7 +53,7 @@ export default class FileInput extends Component {
 FileInput.propTypes = {
   id: PropTypes.string.isRequired,
   name: PropTypes.string,
-  message: PropTypes.string.isRequired,
+  message: PropTypes.string,
 };
 
 FileInput.defaultProps = {
