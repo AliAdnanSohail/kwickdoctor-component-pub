@@ -1,11 +1,21 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
-// import { action } from '@storybook/addon-actions';
 
 import styles from './styles';
 
 export default class ButtonGroup extends Component {
+  constructor(props) {
+    super(props);
+    this.state = { selectedOption: '' };
+  }
+
+  handleChange(e) {
+    this.setState({
+      selectedOption: e.target.value,
+    });
+  }
+
   render() {
   //  const { value } = this.props;
     const {
@@ -16,14 +26,28 @@ export default class ButtonGroup extends Component {
       { 'button-group-primary': primary },
     );
 
-    const children = buttons.map(button =>
-      <button key={button.id} className="button" onClick={button.onClick}>{button.content}</button>);
+    const children = buttons.map(button => (
+      <React.Fragment key={button.value}>
+        <div className={this.state.selectedOption === button.value ? 'button active' : 'button'}>
+          <label htmlFor={button.value}>
+            {button.label || button.value}
+            <input
+              type="radio"
+              name={button.value}
+              value={button.value}
+              checked={this.state.selectedOption === button.value}
+              onChange={e => this.handleChange(e)}
+            />
+          </label>
+          <style jsx >{styles}</style>
+        </div>
+      </React.Fragment>
+    ));
 
     return (
       <div className={classes}>
         { children }
-        <style jsx global>{styles}</style>
-        {/* using global scope above, cant pass jsx classes to children generated with .map */}
+        <style jsx >{styles}</style>
       </div>
     );
   }
@@ -36,10 +60,10 @@ ButtonGroup.propTypes = {
 
 ButtonGroup.defaultProps = {
   buttons: [
-    { id: 'bv1', content: 'button 1', onClick: () => { console.log('link1'); } },
-    { id: 'bv2', content: 'button 2', onClick: () => { console.log('link2'); } },
-    { id: 'bv3', content: 'button 3', onClick: () => { console.log('link3'); } },
-    { id: 'bv4', content: 'button 4', onClick: () => { console.log('link4'); } },
+    { value: 'bv1', label: 'button 1', onChange: () => { console.log('link1'); } },
+    { value: 'bv2', label: 'button 2', onChange: () => { console.log('link2'); } },
+    { value: 'bv3', label: 'button 3', onChange: () => { console.log('link3'); } },
+    { value: 'bv4', label: 'button 4', onChange: () => { console.log('link4'); } },
   ],
   primary: false,
 };

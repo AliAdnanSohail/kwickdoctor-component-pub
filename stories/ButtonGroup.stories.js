@@ -8,16 +8,16 @@ import { ButtonGroup } from '../src';
 import results from '../.jest-test-results.json';
 
 const primeButtons = [
-  { id: 'bv1', content: 'male', onClick: () => { console.log('link1'); } },
-  { id: 'bv2', content: 'female', onClick: () => { console.log('link2'); } },
+  { value: 'male', label: 'male', onChange: () => { console.log('link1'); } },
+  { value: 'female', label: 'female', onChange: () => { console.log('link2'); } },
 ];
 const defaultButtons = [
-  { id: 'bv1', content: 'all', onClick: () => { console.log('link1'); } },
-  { id: 'bv2', content: 'medical records', onClick: () => { console.log('link2'); } },
-  { id: 'bv3', content: 'prescriptions', onClick: () => { console.log('link3'); } },
-  { id: 'bv4', content: 'lab analysis', onClick: () => { console.log('link4'); } },
-  { id: 'bv5', content: 'sick list', onClick: () => { console.log('link5'); } },
-  { id: 'bv6', content: 'other', onClick: () => { console.log('link6'); } },
+  { value: 'all', label: 'all', onChange: () => { console.log('link1'); } },
+  { value: 'mr', label: 'medical records', onChange: () => { console.log('link2'); } },
+  { value: 'pr', label: 'prescriptions', onChange: () => { console.log('link3'); } },
+  { value: 'la', label: 'lab analysis', onChange: () => { console.log('link4'); } },
+  { value: 'sl', label: 'sick list', onChange: () => { console.log('link5'); } },
+  { value: 'other', label: 'other', onChange: () => { console.log('link6'); } },
 ];
 
 

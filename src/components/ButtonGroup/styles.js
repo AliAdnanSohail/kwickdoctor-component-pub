@@ -6,11 +6,12 @@ export const button = css`button { color: hotpink; }`;
 
 export default css`
   .button-group .button {
-    padding: 13px 54px;
+    display: inline-block;
+    position: relative;
+    padding: 10px 51px 10px 52px;
     height: 52px;
     box-sizing: border-box;
-    cursor: pointer;
-    line-height: 26px;
+    line-height: 32px;
     color: ${settings.secondaryColor};
     background-color: #fff;
 
@@ -64,5 +65,19 @@ export default css`
   .button-group.button-group-primary .button.active, .button-group.button-group-primary .button:hover, .button-group.button-group-primary .button:active, .button-group.button-group-primary .button:focus {
     color: #fff;
     background-color: ${settings.primaryColor};
+  }
+
+  .button input[type="radio"] {
+    display: block;
+    cursor: pointer;
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    z-index: 2;
+    width:  100%;
+    height: 100%;
+    opacity: 0;
   }
 `;
