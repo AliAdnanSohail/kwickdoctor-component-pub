@@ -15,6 +15,7 @@ export default css`
     justify-content: center;
     overflow: auto;
     padding-top: 100px;
+    z-index: 999;
   }
   .modal-window {
     position: absolute;

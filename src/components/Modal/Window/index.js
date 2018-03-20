@@ -1,38 +1,34 @@
 import React, { Component } from 'react';
+import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
-
-import styles from './../styles';
+import Background from './../Background';
+import Box from './../Box';
 
 export default class Window extends Component {
   render() {
-    const customStyles = {};
-    const { width, height, onCloseClick } = this.props;
-    if (width) {
-      customStyles.width = width;
-    }
-    if (height) {
-      customStyles.height = height;
-    }
+    const rootEl = document.getElementById(this.props.rootId);
 
     return (
-      <div style={customStyles} className="modal-window">
-        <button className="icons-close" onClick={() => onCloseClick} />
-        <div className="modal-window-container">
-          {this.props.children}
-        </div>
-        <style jsx>{styles}</style>
-      </div>
+      this.props.show && (
+        ReactDOM.createPortal(
+          (
+            <Background>
+              <Box {...this.props} />
+            </Background>
+          ),
+          rootEl,
+        )
+      )
     );
   }
 }
 
 Window.propTypes = {
-  width: PropTypes.string,
-  height: PropTypes.string,
-  onCloseClick: PropTypes.func.isRequired,
+  show: PropTypes.bool,
+  rootId: PropTypes.string,
 };
 
 Window.defaultProps = {
-  width: undefined,
-  height: undefined,
+  show: false,
+  rootId: 'root',
 };

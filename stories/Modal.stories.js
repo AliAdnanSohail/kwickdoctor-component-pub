@@ -20,10 +20,10 @@ storiesOf('Modal', module)
 storiesOf('Modal', module)
   .addDecorator(withKnobs)
   .addDecorator(checkA11y)
-  .addDecorator(withTests({ results })('ModalBackground'))
+  .addDecorator(withTests({ results })('ModalBox'))
   .addDecorator(getStory => <div style={{ padding: '24px' }}>{getStory()}</div>)
-  .add('Window', () => (
-    <Modal.Window
+  .add('Box', () => (
+    <Modal.Box
       width={text('width', '476px')}
       height={text('height', '200px')}
       onCloseClick={action('closeClick')}
@@ -33,16 +33,35 @@ storiesOf('Modal', module)
 storiesOf('Modal', module)
   .addDecorator(withKnobs)
   .addDecorator(checkA11y)
-  .addDecorator(withTests({ results })('ModalBackground'))
+  .addDecorator(withTests({ results })('ModalWindow'))
   .addDecorator(getStory => <div style={{ padding: '24px' }}>{getStory()}</div>)
-  .add('Modal', () => (
-    <Modal.Background>
+  .add('Modal Window', () => (
+    <div>
+      Back text
       <Modal.Window
+        show={boolean('show', true)}
         width={text('width', '476px')}
         height={text('height', '200px')}
         onCloseClick={action('closeClick')}
       >
         {text('Content', 'Modal content')}
       </Modal.Window>
-    </Modal.Background>
+    </div>
+  ));
+
+
+storiesOf('Modal', module)
+  .addDecorator(withKnobs)
+  .addDecorator(checkA11y)
+  .addDecorator(getStory => <div style={{ padding: '24px' }}>{getStory()}</div>)
+  .add('Modal Example', () => (
+    <div>
+      <Modal.Example
+        width={text('width', '476px')}
+        height={text('height', '200px')}
+        onCloseClick={action('closeClick')}
+      >
+        {text('Content', 'Modal content')}
+      </Modal.Example>
+    </div>
   ));
