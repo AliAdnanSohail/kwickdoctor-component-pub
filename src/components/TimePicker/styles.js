@@ -5,15 +5,21 @@ import settings from '../../utils/style-helper';
 export default css`
   .b-time-picker{
     &__get-time{
+      position: absolute;
+      left: 0;
+      right: 0;
       &-wrap{
         border-radius: 6px;	
-        background-color: #f5f5f5;
+        background-color: white;
         box-shadow: 0 0 30px 0 rgba(53,65,81,0.1);
         padding: 20px;
         max-width: 183px;
         display: flex;
         justify-content: space-between;
       }
+    }
+    &__wrapper{
+      position: relative;
     }
     &__title{
       font-size: 18px;
@@ -40,6 +46,9 @@ export default css`
     position: relative;
     padding: 14px;
     padding-left: 35px;
+    &_centred{
+      text-align: center;
+    }
   };
   .b-select{
     &__field{
@@ -50,6 +59,7 @@ export default css`
       cursor: pointer;
       user-select: none;
       max-width: 30px;
+      box-shadow: 0 0 30px 0 rgba(53,65,81,0.1);
     }
     &__options-wrap{
       height: 200px;
@@ -64,15 +74,20 @@ export default css`
       overflow-y: scroll;
       &_size{
         &_small{
-          height: 68px;
+          height: 64px;
+          overflow: auto;
         }
       }
 
     }
     &__option{
       padding: 7px 40px 7px 7px;
+      &:hover{
+        background-color: #EFF0F4;
+        color: #0C97F9;
+      }
       &_selected{
-        color: blue;
+        color: #0C97F9;
       }
     }
     &__arrow{
@@ -88,22 +103,22 @@ export default css`
     width: 100%;
     background-color: yellow;
   }
-::-webkit-scrollbar {
-  width: 12px;
-}
- 
-/* Track */
-::-webkit-scrollbar-track {
+  ::-webkit-scrollbar {
+    width: 12px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
 
-}
- 
-/* Handle */
-::-webkit-scrollbar-thumb {
-  -webkit-border-radius: 10px;
-  border-radius: 10px;
-  background: #E1E1E1;
-}
-::-webkit-scrollbar-thumb:window-inactive {
-	background: rgba(255,0,0,0.4); 
-}
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 5.5px;
+    background: #E1E1E1;
+  }
+  ::-webkit-scrollbar-thumb:window-inactive {
+    background: rgba(255,0,0,0.4); 
+  }
 `;

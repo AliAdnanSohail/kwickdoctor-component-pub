@@ -1,0 +1,221 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Button simple button 1`] = `
+<div
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
+>
+  <button
+    className="jsx-2338278291 button"
+    onClick={[Function]}
+  >
+    Hello!
+  </button>
+</div>
+`;
+
+exports[`Storyshots ButtonGroup ButtonGroup default 1`] = `
+<div
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
+>
+  <div
+    className="button-group"
+  >
+    <button
+      className="button"
+      onClick={[Function]}
+    >
+      all
+    </button>
+    <button
+      className="button"
+      onClick={[Function]}
+    >
+      medical records
+    </button>
+    <button
+      className="button"
+      onClick={[Function]}
+    >
+      prescriptions
+    </button>
+    <button
+      className="button"
+      onClick={[Function]}
+    >
+      lab analysis
+    </button>
+    <button
+      className="button"
+      onClick={[Function]}
+    >
+      sick list
+    </button>
+    <button
+      className="button"
+      onClick={[Function]}
+    >
+      other
+    </button>
+  </div>
+</div>
+`;
+
+exports[`Storyshots ButtonGroup ButtonGroup primary 1`] = `
+<div
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
+>
+  <div
+    className="button-group button-group-primary"
+  >
+    <button
+      className="button"
+      onClick={[Function]}
+    >
+      male
+    </button>
+    <button
+      className="button"
+      onClick={[Function]}
+    >
+      female
+    </button>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Card simple card 1`] = `
+<div
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
+>
+  <div
+    className="jsx-1550507998 card"
+    style={
+      Object {
+        "padding": "50px",
+        "width": "200px",
+      }
+    }
+  >
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos libero deserunt soluta.
+  </div>
+</div>
+`;
+
+exports[`Storyshots TextInput simple text input 1`] = `
+<div
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
+>
+  <label
+    className="jsx-3018655035"
+    htmlFor="text-input"
+  >
+    text input
+    <input
+      className="jsx-3018655035 text-input"
+      id="text-input"
+      name="name"
+      onChange={[Function]}
+      placeholder="text input"
+    />
+  </label>
+</div>
+`;
+
+exports[`Storyshots TimePicker TimePicker 1`] = `
+<div
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
+>
+  <section
+    className="jsx-3947417489 b-time-picker"
+  >
+    <div
+      className="jsx-3947417489 b-time-picker__wrapper"
+    >
+      <div
+        className="jsx-3947417489 b-time-picker__title"
+      >
+        Appointment time
+      </div>
+      <div
+        className="jsx-3947417489 b-time-picker__input"
+        onClick={[Function]}
+        onKeyPress={[Function]}
+        role="button"
+        tabIndex="0"
+      >
+        <div
+          className="jsx-3947417489 b-time-picker__logo"
+        >
+          <img
+            alt="clock"
+            className="jsx-3947417489"
+            src={Object {}}
+          />
+        </div>
+        <input
+          className="jsx-3947417489 b-input"
+          onChange={[Function]}
+          type="text"
+          value="Pick time"
+        />
+      </div>
+      
+    </div>
+  </section>
+</div>
+`;
+
+exports[`Storyshots Toast simple toast 1`] = `
+<div
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
+>
+  <div
+    className="jsx-4177506176 box rectangle-22"
+  >
+    <div
+      className="jsx-4177506176 circle"
+    />
+    <div
+      className="jsx-4177506176 message"
+    >
+      You have a booked appointment..bla bla
+    </div>
+    <div
+      className="jsx-4177506176 icons-close"
+    >
+      <div
+        className="jsx-4177506176 icon"
+        onClick={[Function]}
+      />
+    </div>
+  </div>
+</div>
+`;

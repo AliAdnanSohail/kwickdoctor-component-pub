@@ -11,8 +11,11 @@ export default class TimePicker extends Component {
       defaultInputText: this.props.defaultInputText,
       selectedHours: '01',
       selectedMin: '00',
+      hoursToched: false,
+      minutsToched: false,
       visibleHoursList: false,
       visibleMinutsList: false,
+      visibleTimeBlock: false,
       hours: [
         { value: '01' },
         { value: '02' },
@@ -47,12 +50,15 @@ export default class TimePicker extends Component {
 
   changeTime() {
     this.setState({ defaultInputText: `${this.state.selectedHours}:${this.state.selectedMin}` });
+    this.props.onChange();
   }
 
   changeMin(event) {
     this.setState({ selectedMin: event.target.textContent });
     setTimeout(() => {
       this.changeTime();
+      this.setState(prevState => ({ minutsToched: !prevState.minutsToched }));
+      this.timeBlockController();
     }, 0);
   }
 
@@ -60,7 +66,15 @@ export default class TimePicker extends Component {
     this.setState({ selectedHours: event.target.textContent });
     setTimeout(() => {
       this.changeTime();
+      this.setState(prevState => ({ hoursToched: !prevState.hoursToched }));
+      this.timeBlockController();
     }, 0);
+  }
+
+  timeBlockController() {
+    if (this.state.hoursToched && this.state.minutsToched) {
+      this.switchTimeBlock();
+    }
   }
 
   switchHoursList() {
@@ -70,6 +84,13 @@ export default class TimePicker extends Component {
   switchMinutsList() {
     this.setState(prevState => ({ visibleMinutsList: !prevState.visibleMinutsList }));
   }
+
+  switchTimeBlock() {
+    this.setState(prevState => ({ visibleTimeBlock: !prevState.visibleTimeBlock }));
+    this.setState({ hoursToched: false });
+    this.setState({ minutsToched: false });
+  }
+
   renderHoursList() {
     if (this.state.visibleHoursList) {
       return (
@@ -120,9 +141,52 @@ export default class TimePicker extends Component {
     return '';
   }
 
+  renderTimeBlock() {
+    if (this.state.visibleTimeBlock) {
+      return (
+        <div className="b-time-picker__get-time">
+          <div className="b-time-picker__get-time-wrap">
+            <div
+              className="b-select"
+              role="button"
+              tabIndex="0"
+              onClick={e => this.switchHoursList(e)}
+              onKeyPress={e => this.switchHoursList(e)}
+            >
+              <div className="b-select__field">
+                {this.state.selectedHours}
+                <div className="b-select__arrow">
+                  <img src={require('./image/previous.svg')} alt="prevuous" />
+                </div>
+                { this.renderHoursList() }
+              </div>
+            </div>
+            <div
+              className="b-select"
+              role="button"
+              tabIndex="0"
+              onClick={e => this.switchMinutsList(e)}
+              onKeyPress={e => this.switchMinutsList(e)}
+            >
+              <div className="b-select__field">
+                {this.state.selectedMin}
+                <div className="b-select__arrow">
+                  <img src={require('./image/previous.svg')} alt="previous" />
+                </div>
+                { this.renderMinuntsList() }
+              </div>
+            </div>
+          </div>
+          <style jsx>{styles}</style>
+        </div>
+      );
+    }
+    return '';
+  }
+
   render() {
     const {
-      title,
+      title, onChange,
     } = this.props;
     const classes = classnames('b-time-picker');
 
@@ -132,47 +196,24 @@ export default class TimePicker extends Component {
           <div className="b-time-picker__title">
             {title}
           </div>
-          <div className="b-time-picker__input">
+          <div
+            className="b-time-picker__input"
+            role="button"
+            tabIndex="0"
+            onClick={e => this.switchTimeBlock(e)}
+            onKeyPress={e => this.switchTimeBlock(e)}
+          >
             <div className="b-time-picker__logo">
               <img src={require('./image/clock2.svg')} alt="clock" />
             </div>
-            <input type="text" className="b-input" value={this.state.defaultInputText} />
+            <input
+              type="text"
+              className="b-input"
+              onChange={onChange}
+              value={this.state.defaultInputText}
+            />
           </div>
-          <div className="b-time-picker__get-time">
-            <div className="b-time-picker__get-time-wrap">
-              <div
-                className="b-select"
-                role="button"
-                tabIndex="0"
-                onClick={e => this.switchHoursList(e)}
-                onKeyPress={e => this.switchHoursList(e)}
-              >
-                <div className="b-select__field">
-                  {this.state.selectedHours}
-                  <div className="b-select__arrow">
-                    <img src={require('./image/previous.svg')} alt="prevuous" />
-                  </div>
-                  { this.renderHoursList() }
-                </div>
-              </div>
-              <div
-                className="b-select"
-                role="button"
-                tabIndex="0"
-                onClick={e => this.switchMinutsList(e)}
-                onKeyPress={e => this.switchMinutsList(e)}
-              >
-                <div className="b-select__field">
-                  {this.state.selectedMin}
-                  <div className="b-select__arrow">
-                    <img src={require('./image/previous.svg')} alt="previous" />
-                  </div>
-                  { this.renderMinuntsList() }
-                </div>
-              </div>
-            </div>
-          </div>
-
+          {this.renderTimeBlock()}
         </div>
         <style jsx>{styles}</style>
       </section>
