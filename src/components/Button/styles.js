@@ -1,7 +1,5 @@
 import css from 'styled-jsx/css';
 import settings from '../../utils/style-helper';
-import fcbk from './social/facebook.png'
-import google from './social/google.png'
 
 export default css`
   .button {
@@ -50,29 +48,15 @@ export default css`
       background-color: #ffffff;
       border-color: #ffffff;
     }
-  }
-  .social{    
-    border : none;
-    width: 50px;
-    height: 50px;
-    text-align: center;
-    padding: 15px 15px;
-    font-size: 0px;
-    line-height: 1.428571429;
-    border-radius: 50px;
-
-    &--facebook{
-      background-color: #435890;
-      background-image: url(${fcbk}) ;
-      background-position: center;
-      background-repeat:no-repeat;
-    }
-
-    &--google{
-      background-color: #cd5848;
-      background-image: url(${google}) ;
-      background-position: center;
-      background-repeat:no-repeat;
+    &--circle{
+      border : none;
+      width: 50px;
+      height: 50px;
+      text-align: center;
+      padding: 15px 15px;
+      font-size: 0px;
+      line-height: 1.428571429;
+      border-radius: 50px;
     }
   }
 `;

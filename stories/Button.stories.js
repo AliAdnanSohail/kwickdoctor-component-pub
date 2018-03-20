@@ -20,6 +20,7 @@ storiesOf('Button', module)
       transparent={boolean('transparent', false)}
       squared={boolean('squared', false)}
       accent={boolean('accent', false)}
-      social={text('social', 'facebook')}
+      circle={boolean('circle', false)}
+      icon={text('icon', './social/facebook.png')}
     />
   ));
