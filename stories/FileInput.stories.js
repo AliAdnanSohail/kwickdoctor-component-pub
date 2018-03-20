@@ -16,6 +16,6 @@ storiesOf('FileInput', module)
     <FileInput
       id="text-input"
       name={text('name', 'name')}
-      message="Upload your license"
+      message="Upload license"
     />
   ));
