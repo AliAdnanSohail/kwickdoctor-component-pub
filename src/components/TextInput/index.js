@@ -7,7 +7,6 @@ import styles from './styles';
 export default class TextInput extends Component {
   constructor(props) {
     super(props);
-
     this.state = { value: props.value };
   }
 
@@ -29,25 +28,51 @@ export default class TextInput extends Component {
     );
   };
 
-  render() {
+  inputElement = () => {
     const {
-      id, label, name, placeholder, error, className,
+      id, name, placeholder, error, className, multiline,
     } = this.props;
+    const classes = classnames(
+      'text-input',
+      className,
+      { error },
+    );
+    const elementProps = {
+      id,
+      name,
+      placeholder,
+      className: classes,
+      value: this.state.value,
+      onChange: this.handleChange,
+    };
 
-    const classes = classnames('text-input', className, { error });
+    if (multiline) {
+      return (
+        <React.Fragment>
+          <textarea {...elementProps} />
+          <style jsx>{styles}</style>
+        </React.Fragment>
+      );
+    }
+
+    return (
+      <React.Fragment>
+        <input type="text" {...elementProps} />
+        <style jsx>{styles}</style>
+      </React.Fragment>
+    );
+  }
+
+  render() {
+    const { id, label } = this.props;
+    const errorMessage = this.errorMessage();
+    const inputElement = this.inputElement();
 
     return (
       <div>
         <label htmlFor={id}>{label}</label>
-        <input
-          id={id}
-          name={name}
-          onChange={this.handleChange}
-          placeholder={placeholder}
-          className={classes}
-          value={this.state.value}
-        />
-        {this.errorMessage()}
+        {inputElement}
+        {errorMessage}
         <style jsx>{styles}</style>
       </div>
     );
@@ -63,6 +88,7 @@ TextInput.propTypes = {
   value: PropTypes.string,
   error: PropTypes.string,
   className: PropTypes.string,
+  multiline: PropTypes.bool,
 };
 
 TextInput.defaultProps = {
@@ -72,4 +98,5 @@ TextInput.defaultProps = {
   value: '',
   error: '',
   className: undefined,
+  multiline: false,
 };
