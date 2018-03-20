@@ -16,10 +16,9 @@ storiesOf('Button', module)
   .add('simple button', () => (
     <Button
       onClick={action('clicked')}
-      title={text('title', 'continue')}
+      title={text('title', 'Hello!')}
       transparent={boolean('transparent', false)}
       squared={boolean('squared', false)}
       accent={boolean('accent', false)}
-      social={text('social', 'facebook')}
     />
   ));
