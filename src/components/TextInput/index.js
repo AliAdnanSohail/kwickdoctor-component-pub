@@ -7,38 +7,34 @@ import styles from './styles';
 export default class TextInput extends Component {
   constructor(props) {
     super(props);
+
     this.state = { value: props.value };
   }
 
-  handleChange(event) {
+  handleChange = (event) => {
     this.setState({ value: event.target.value });
     this.props.onChange(event);
-  }
+  };
 
-  errorMessage() {
+  errorMessage = () => {
     const { error } = this.props;
-    if (!error) {
-      return null;
-    }
 
     return (
-      <div className="input-error">
-        {error}
-        <style jsx>{styles}</style>
-      </div>
+      error && (
+        <div className="input-error">
+          {error}
+          <style jsx>{styles}</style>
+        </div>
+      )
     );
-  }
+  };
 
   render() {
     const {
       id, label, name, placeholder, error, className,
     } = this.props;
-    const errorMessage = this.errorMessage();
-    const classes = classnames(
-      'text-input',
-      className,
-      { error },
-    );
+
+    const classes = classnames('text-input', className, { error });
 
     return (
       <div>
@@ -46,12 +42,12 @@ export default class TextInput extends Component {
         <input
           id={id}
           name={name}
-          onChange={e => this.handleChange(e)}
+          onChange={this.handleChange}
           placeholder={placeholder}
           className={classes}
           value={this.state.value}
         />
-        {errorMessage}
+        {this.errorMessage()}
         <style jsx>{styles}</style>
       </div>
     );
