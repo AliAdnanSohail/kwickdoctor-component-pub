@@ -3,13 +3,9 @@ import css from 'styled-jsx/css';
 export default css`
 
 .upload-avatar {
-  background: none;
-  border: none;
-  font-size: 12px; 
-  font-weight: 500; 
-  line-height: 16px;
   cursor: pointer;
-  margin-right: 10px;
+  width:70px;
+  height: 70px;
 }
 
 .inputFile {
