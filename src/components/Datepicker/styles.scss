@@ -33,7 +33,6 @@
   .react-datepicker__month-container {
     padding: 5px 15px;
   }
-
   .react-datepicker__navigation {
     border: none;
     &::before {
@@ -56,7 +55,11 @@
   }
   .react-datepicker__day {
     border-radius: 100%;
-    margin: 0.4rem 0.3rem;
+    margin: 6.8px 4.8px;
+    font-size: 0.75rem;
+    width: 24px;
+    height: 24px;
+    line-height: 24px;
     &:hover {
       background-color: #EFF0F4;
     }
@@ -64,23 +67,23 @@
       background-color: #0c97f9;
     }
   }
-
   .react-datepicker__month {
     margin-top: 0;
   }
-
   .react-datepicker__header {
     border: none;
   }
-
   .react-datepicker__day-names  {
-    
     .react-datepicker__day-name {
-      margin: 0.4rem 0.3rem;
+      margin: 6.8px 4.8px;
       color: #BBBCCD;
+      margin: 6.8px 4.8px;
+      font-size: 0.75rem;
+      width: 24px;
+      height: 24px;
+      line-height: 24px;
     }
   }
-  
   .react-datepicker__day--outside-month {
     color: #BBBCCD;
   }
