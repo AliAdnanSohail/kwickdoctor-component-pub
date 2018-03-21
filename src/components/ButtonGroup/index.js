@@ -14,40 +14,49 @@ export default class ButtonGroup extends Component {
     this.setState({
       selectedOption: e.target.value,
     });
+    this.props.onChange(e.target.value);
   }
+
 
   render() {
   //  const { value } = this.props;
     const {
-      buttons, primary,
+      buttons, primary, groupLabel,
     } = this.props;
     const classes = classnames(
-      'button-group',
-      { 'button-group-primary': primary },
+      'radio-button-group',
+      { primary },
     );
+
+    const common = groupLabel.toLowerCase() || 'group';
+
 
     const children = buttons.map(button => (
       <React.Fragment key={button.value}>
-        <div className={this.state.selectedOption === button.value ? 'button active' : 'button'}>
-          <label htmlFor={button.value}>
-            {button.label || button.value}
-            <input
-              type="radio"
-              name={button.value}
-              value={button.value}
-              checked={this.state.selectedOption === button.value}
-              onChange={e => this.handleChange(e)}
-            />
-          </label>
-          <style jsx >{styles}</style>
-        </div>
+        <label className={this.state.selectedOption === button.value ? 'button active' : 'button'} htmlFor={`${button.value}-${common}`}>
+          {button.label || button.value}
+          <input
+            type="radio"
+            name={common}
+            id={`${button.value}-${common}`}
+            value={button.value}
+            checked={this.state.selectedOption === button.value}
+            onChange={e => this.handleChange(e)}
+          />
+        </label>
+        <style jsx >{styles}</style>
       </React.Fragment>
     ));
 
     return (
-      <div className={classes}>
-        { children }
+      <div>
         <style jsx >{styles}</style>
+        <fieldset>
+          {groupLabel.length > 0 && <legend>{ groupLabel }:</legend>}
+          <div className={classes}>
+            { children }
+          </div>
+        </fieldset>
       </div>
     );
   }
@@ -56,14 +65,15 @@ export default class ButtonGroup extends Component {
 ButtonGroup.propTypes = {
   primary: PropTypes.bool,
   buttons: PropTypes.arrayOf(PropTypes.object),
+  groupLabel: PropTypes.string,
+  onChange: PropTypes.func.isRequired,
 };
 
 ButtonGroup.defaultProps = {
   buttons: [
-    { value: 'bv1', label: 'button 1', onChange: () => { console.log('link1'); } },
-    { value: 'bv2', label: 'button 2', onChange: () => { console.log('link2'); } },
-    { value: 'bv3', label: 'button 3', onChange: () => { console.log('link3'); } },
-    { value: 'bv4', label: 'button 4', onChange: () => { console.log('link4'); } },
+    { value: 'bv1', label: 'button 1' },
+    { value: 'bv2', label: 'button 2' },
   ],
   primary: false,
+  groupLabel: '',
 };
