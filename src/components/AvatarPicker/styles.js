@@ -22,8 +22,8 @@ export default css`
 
 .user{
   border-radius: 50%;
-  width:70px;
-  height: 70px;
+  width:75px;
+  height: 75px;
 }
 .avatar-container {
   color: #C1C2CF;
@@ -33,7 +33,6 @@ export default css`
 .container {
   display: flex;
   align-items: center;
-  width: 150px; 
 }
 
 .icon-trash{
@@ -43,8 +42,8 @@ export default css`
   background-color: #EA6577;
   border-radius: 50%;
   cursor: pointer;
-  width : 45px;
-  height: 45px;
+  width : 40px;
+  height: 40px;
 }
 .icon-edit{
   display: flex;
@@ -53,7 +52,7 @@ export default css`
   background-color: #4695EF;
   border-radius: 50%;
   cursor: pointer;
-  width : 30px;
-  height: 30px;  
+  width : 40px;
+  height: 40px;  
 }
 `;
