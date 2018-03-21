@@ -5,7 +5,7 @@ import classnames from 'classnames';
 import styles from './../styles';
 
 export default class CalendarDay extends React.Component {
-  getEventsPoints() {
+  getEventsPoints = () => {
     const { events } = this.props;
     if (!events.length) {
       return null;
@@ -25,7 +25,7 @@ export default class CalendarDay extends React.Component {
     );
   }
 
-  clickHandler() {
+  clickHandler = () => {
     this.props.onClick(this.props.moment, this.props.events);
   }
 
@@ -47,7 +47,7 @@ export default class CalendarDay extends React.Component {
     const eventsList = this.getEventsPoints();
 
     return (
-      <li onClick={() => this.clickHandler()} className={classes}>
+      <li onClick={this.clickHandler} className={classes}>
         {day}
         {eventsList}
         <style jsx>{styles}</style>

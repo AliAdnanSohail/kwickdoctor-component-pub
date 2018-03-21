@@ -15,7 +15,7 @@ export default class Datepicker extends React.Component {
     };
   }
 
-  handleChange(date) {
+  handleChange = (date) => {
     this.setState({
       value: date,
     });

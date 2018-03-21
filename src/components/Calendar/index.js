@@ -13,11 +13,9 @@ export default class Calendar extends React.Component {
     };
   }
 
-  getEventsForDay(date) {
-    return this.props.events.filter(event => date.isSame(event.date, 'day'));
-  }
+  getEventsForDay = date => this.props.events.filter(event => date.isSame(event[this.props.eventDatePropName], 'day'))
 
-  getDays() {
+  getDays = () => {
     const date = this.state.pageDate.clone();
     date.startOf('month');
     let dayOfweek = date.day();
@@ -38,13 +36,14 @@ export default class Calendar extends React.Component {
         weekEnd: iterateDate.day() === 0 || iterateDate.day() === 6,
         events: this.getEventsForDay(iterateDate),
         now: iterateDate.isSame(moment(), 'day'),
+        onClick: this.props.onClickByDay,
       });
       iterateDate.add('days', 1);
     }
     return days;
   }
 
-  navigationHandler(n) {
+  navigationHandler = n => () => {
     const newPageDate = this.state.pageDate.clone().add(n, 'month');
     this.setState({
       pageDate: newPageDate,
@@ -54,14 +53,14 @@ export default class Calendar extends React.Component {
 
   render() {
     const daysList = this.getDays()
-      .map(day => <CalendarDay onClick={this.props.onClickByDay} {...day} />);
+      .map(day => <CalendarDay {...day} />);
     const month = this.state.pageDate.format('MMMM · YYYY');
     return (
       <div className="calendar">
         <div className="calendar__header">
           <div className="calendar__header__navigation">
-            <button onClick={() => this.navigationHandler(-1)} className="calendar__header__navigation__button calendar__header__navigation__button_prev" />
-            <button onClick={() => this.navigationHandler(1)} className="calendar__header__navigation__button calendar__header__navigation__button_next" />
+            <button onClick={this.navigationHandler(-1)} className="calendar__header__navigation__button calendar__header__navigation__button_prev" />
+            <button onClick={this.navigationHandler(1)} className="calendar__header__navigation__button calendar__header__navigation__button_next" />
           </div>
           <div className="calendar__header__month">{month}</div>
           <ul className="calendar__header__days-of-week">
@@ -89,6 +88,7 @@ Calendar.propTypes = {
   events: PropTypes.array, // eslint-disable-line react/forbid-prop-types
   onChangeMonth: PropTypes.func,
   onClickByDay: PropTypes.func,
+  eventDatePropName: PropTypes.string,
 };
 
 Calendar.defaultProps = {
@@ -97,4 +97,5 @@ Calendar.defaultProps = {
   events: [],
   onChangeMonth() {},
   onClickByDay() {},
+  eventDatePropName: 'date',
 };
