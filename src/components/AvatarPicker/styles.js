@@ -43,8 +43,8 @@ export default css`
   background-color: #EA6577;
   border-radius: 50%;
   cursor: pointer;
-  width : 30px;
-  height: 30px;
+  width : 45px;
+  height: 45px;
 }
 .icon-edit{
   display: flex;
