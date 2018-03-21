@@ -9,6 +9,7 @@ export default class Calendar extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      selectedDay: undefined,
       pageDate: moment(this.props.startPageDate),
     };
   }
@@ -16,6 +17,7 @@ export default class Calendar extends React.Component {
   getEventsForDay = date => this.props.events.filter(event => date.isSame(event[this.props.eventDatePropName], 'day'))
 
   getDays = () => {
+    const { selectedDay } = this.state;
     const date = this.state.pageDate.clone();
     date.startOf('month');
     let dayOfweek = date.day();
@@ -30,13 +32,14 @@ export default class Calendar extends React.Component {
     for (let i = 0; i < this.props.numberOfDays; i++) {
       days.push({
         isNotPageMonth: !this.state.pageDate.isSame(iterateDate, 'month'),
+        selected: selectedDay && selectedDay.isSame(iterateDate, 'day'),
         key: i,
         day: iterateDate.date(),
         moment: iterateDate.clone().startOf('day'),
         weekEnd: iterateDate.day() === 0 || iterateDate.day() === 6,
         events: this.getEventsForDay(iterateDate),
         now: iterateDate.isSame(moment(), 'day'),
-        onClick: this.props.onClickByDay,
+        onClick: this.clickByDayHandler,
       });
       iterateDate.add('days', 1);
     }
@@ -51,10 +54,26 @@ export default class Calendar extends React.Component {
     this.props.onChangeMonth(newPageDate.clone().startOf('month'));
   }
 
+  clickByDayHandler = (dayMoment, events) => {
+    this.setState({
+      selectedDay: dayMoment,
+    });
+    this.props.onClickByDay(dayMoment, events);
+  }
+
   render() {
     const daysList = this.getDays()
       .map(day => <CalendarDay {...day} />);
-    const month = this.state.pageDate.format('MMMM · YYYY');
+    const { pageDate } = this.state;
+    const month = (
+      <React.Fragment>
+        {pageDate.format('MMMM')}
+        <span className="calendar__header__month__center-point">·</span>
+        {pageDate.format('YYYY')}
+        <style jsx>{styles}</style>
+      </React.Fragment>
+    );
+
     return (
       <div className="calendar">
         <div className="calendar__header">

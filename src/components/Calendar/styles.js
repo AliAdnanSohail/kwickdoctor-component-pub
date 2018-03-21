@@ -4,13 +4,17 @@ import settings from '../../utils/style-helper';
 
 export default css`
 .calendar {
-  max-width: 400px;
+  max-width: 490px;
   color: ${settings.textColor};
   &__header {
     &__month {
       text-align: center;
       font-weight: bold;
       font-size: 1.2rem;
+      &__center-point {
+        display: inline-block;
+        padding: 0 7px;
+      }
     }
     &__navigation {
       position: relative;
@@ -30,20 +34,20 @@ export default css`
           font-size: 1.3rem;
           position: absolute;
           display: block;
-          right: 7px;
+          right: 13px;
           background-repeat: no-repeat;
           cursor: pointer;
           top: 0;
         }
         &_prev::before {
           transform: rotate(180deg);
-          left: 7px;
+          left: 13px;
           right: auto;
         }
       }
     }
     &__days-of-week {
-      padding: 0;
+      padding: 5px 0 0 0;
       margin: 0;
       list-style: none;
       display: flex;
@@ -55,7 +59,7 @@ export default css`
         text-align: center;
         color: #BBBCCD;
         padding: 13px 0;
-        font-weight: normal;
+        font-weight: 300;
       }
     }
   }
@@ -69,12 +73,14 @@ export default css`
     font-size: 0.875rem;
     &__day {
       color: #4F5362;
-      width: 13%;
-      margin: 0 0.64285715%;
+      width: 14.2857143%;
+      height: 40px;
       text-align: center;
-      padding: 7px 0;
+      padding: 0;
       font-weight: 600;
-      &_events {
+      line-height: 40px;
+      cursor: pointer;
+      &_selected {
         border-radius: 20px;
         color: #ffffff;
         background: ${settings.primaryColor};
@@ -88,19 +94,26 @@ export default css`
         right: 0;
         top: 0;
         bottom: 0;
-        width: 40%;
+        width: 38px;
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
         flex-wrap: wrap;
+        @media all and (max-width: 490px) { 
+          width: 100%;
+          height: 11px;
+          top: auto;
+          flex-direction: row;
+          align-items: baseline;
+        }
         &__event {
           display: block;
           width: 4px;
           height: 4px;
           background: #ffffff;
           border-radius: 100%;
-          margin: 1px 0;
+          margin: 1px;
         }
       }
     }
