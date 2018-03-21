@@ -5,13 +5,12 @@ import classnames from 'classnames';
 import styles from './styles';
 
 function ButtonIcon(props) {
-  if (!props.icon) {
-    return null;
+  if (props.icon && props.circle) {
+    return (
+      <img src={props.icon} alt="" />
+    );
   }
-
-  return (
-    <img src={require(`${props.icon}`)} alt="" />
-  );
+  return null;
 }
 
 export default class Button extends Component {
@@ -27,10 +26,10 @@ export default class Button extends Component {
       { 'button--accent': accent },
       { 'button--circle': circle },
     );
-    
+
     return (
       <button className={classes} onClick={onClick} aria-label={title} >
-        <ButtonIcon icon={icon} />
+        <ButtonIcon icon={icon} circle={circle} />
         {title}
         <style jsx>{styles}</style>
       </button>
