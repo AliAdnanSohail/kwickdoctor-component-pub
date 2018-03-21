@@ -16,7 +16,7 @@ export default class Box extends Component {
 
     return (
       <div style={customStyles} className="modal-window">
-        <button className="icons-close" onClick={() => onCloseClick()} />
+        <button className="icons-close" onClick={onCloseClick} />
         <div className="modal-window-container">
           {this.props.children}
         </div>
