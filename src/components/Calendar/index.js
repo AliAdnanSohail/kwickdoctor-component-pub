@@ -32,7 +32,7 @@ export default class Calendar extends React.Component {
     for (let i = 0; i < this.props.numberOfDays; i++) {
       days.push({
         isNotPageMonth: !this.state.pageDate.isSame(iterateDate, 'month'),
-        selected: selectedDay && selectedDay.isSame(iterateDate, 'day'),
+        selected: !!(selectedDay && selectedDay.isSame(iterateDate, 'day')),
         key: i,
         day: iterateDate.date(),
         moment: iterateDate.clone().startOf('day'),
