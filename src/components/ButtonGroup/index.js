@@ -73,6 +73,10 @@ ButtonGroup.defaultProps = {
   buttons: [
     { value: 'bv1', label: 'button 1' },
     { value: 'bv2', label: 'button 2' },
+    { value: 'bv3', label: 'button 3' },
+    { value: 'bv4', label: 'button 4' },
+    { value: 'bv5', label: 'button 5' },
+    { value: 'bv6', label: 'button 6' },
   ],
   primary: false,
   groupLabel: '',

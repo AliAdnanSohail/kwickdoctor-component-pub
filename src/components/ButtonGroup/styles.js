@@ -56,7 +56,7 @@ export default css`
     }
   }
 
-  .radio-button-group.button-group-primary .button {
+  .radio-button-group.primary .button {
     border: {
       color: ${settings.primaryColor};
     }
@@ -69,7 +69,6 @@ export default css`
   }
 
   .button input[type="radio"] {
-    display: block;
     cursor: pointer;
     position:absolute;
     top:0;

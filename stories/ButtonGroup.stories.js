@@ -31,5 +31,5 @@ storiesOf('ButtonGroup', module)
     <ButtonGroup onChange={action('OnChange')} primary={boolean('primary', true)} buttons={primeButtons} groupLabel="Gender" />
   ))
   .add('RadioButtonGroup default no label', () => (
-    <ButtonGroup onChange={action('OnChange')} primary={boolean('primary', false)} buttons={defaultButtons} />
+    <ButtonGroup onChange={action('OnChange')} primary={boolean('primary', false)} buttons={defaultButtons} groupLabel="default" />
   ));
