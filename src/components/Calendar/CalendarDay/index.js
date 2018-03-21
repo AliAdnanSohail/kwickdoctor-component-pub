@@ -6,8 +6,8 @@ import styles from './../styles';
 
 export default class CalendarDay extends React.Component {
   getEventsPoints = () => {
-    const { events } = this.props;
-    if (!events.length) {
+    const { events, selected } = this.props;
+    if (!selected || !events.length) {
       return null;
     }
     const eventsList = events.map((event, index) => (
