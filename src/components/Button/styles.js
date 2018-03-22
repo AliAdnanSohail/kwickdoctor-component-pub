@@ -3,7 +3,7 @@ import settings from '../../utils/style-helper';
 
 export default css`
   .button {
-    padding: 12px 16px;
+    padding: 12px 16px 14px 17px;
     height: 52px;
 
     background-color: ${settings.primaryColor};
@@ -53,7 +53,7 @@ export default css`
       width: 50px;
       height: 50px;
       text-align: center;
-      padding: 15px 15px;
+      padding: 16px 15px 15px 16px;
       font-size: 0px;
       line-height: 1.428571429;
       border-radius: 50px;
