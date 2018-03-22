@@ -41,15 +41,15 @@ export default css`
   font-weight: 500;
   line-height: 18px;
   cursor: pointer;
-  padding: 16px 12px;
+  padding: 16px 0px 17px 11.5px;
   white-space: nowrap;
   overflow: hidden;
 }
 .icon-board{
-  padding-left: 15px;
+  padding: 12.5px 0px 13.5px 14.5px;
 }
 .icon-remove{
-  padding: 16px 16px 15px 12px;
+  padding: 16px 16px 16px 11.5px;
   cursor: pointer;
 }
 `;
