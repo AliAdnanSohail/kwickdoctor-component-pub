@@ -84,6 +84,7 @@
     "@storybook/react": "^3.3.15",
     "classnames": "^2.2.5",
     "grommet": "^1.10.1",
+    "react-aria-modal": "^2.12.1",
     "styled-jsx": "^2.2.6"
   }
 }

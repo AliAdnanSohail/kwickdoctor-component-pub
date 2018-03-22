@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Window from './../Window';
+import AriaModal from './../AriaModal';
 
 export default class Example extends Component {
   constructor(props) {
@@ -25,7 +25,7 @@ export default class Example extends Component {
     return (
       <React.Fragment>
         <button onClick={this.openModal}>Show modal</button>
-        <Window {...{ ...this.props, show: this.state.showModal, onCloseClick: this.closeModal }} />
+        <AriaModal {...{ ...this.props, show: this.state.showModal, onCloseClick: this.closeModal }} />
       </React.Fragment>
     );
   }

@@ -1,11 +1,11 @@
 import Background from './Background';
 import Box from './Box';
-import Window from './Window';
 import Example from './Example';
+import AriaModal from './AriaModal';
 
 export default {
   Background,
   Box,
-  Window,
   Example,
+  AriaModal,
 };
