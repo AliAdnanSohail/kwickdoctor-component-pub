@@ -82,7 +82,52 @@ export default css`
         background-color: #0c97f9;
         color: white;
         padding: 5px 5px 5px 25px;
+        user-select: none;
       }
     }
+  }
+  .b-tags-list{
+    background-color: #FFFFFF;	
+    box-shadow: 0 2px 40px 0 rgba(0,0,0,0.05);
+    border-radius: 6px;
+    position: absolute;
+    left: 0;
+    top: 41px;
+    &__wrapper{
+      max-height: 190px;
+      overflow-y: scroll;
+      overflow-x: hidden;
+      max-width: max-content;
+      &_no-overflow{
+        overflow: auto;
+      }
+    }
+    &__tag{
+      padding: 10px;
+      padding-right: 50px;
+      cursor: pointer;
+      width: -webkit-fill-available;
+      &:hover{
+        background-color: #EFF0F4;
+      }
+    }
+  }
+  ::-webkit-scrollbar {
+    width: 12px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 5.5px;
+    background: #E1E1E1;
+  }
+  ::-webkit-scrollbar-thumb:window-inactive {
+    background: rgba(255,0,0,0.4); 
   }
 `;
