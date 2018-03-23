@@ -68,7 +68,7 @@ export default class Calendar extends React.Component {
     const month = (
       <React.Fragment>
         {pageDate.format('MMMM')}
-        <span className="calendar__header__month__center-point">·</span>
+        <span className="calendar__header-month-center-point">·</span>
         {pageDate.format('YYYY')}
         <style jsx>{styles}</style>
       </React.Fragment>
@@ -77,19 +77,19 @@ export default class Calendar extends React.Component {
     return (
       <div className="calendar">
         <div className="calendar__header">
-          <div className="calendar__header__navigation">
-            <button onClick={this.navigationHandler(-1)} className="calendar__header__navigation__button calendar__header__navigation__button_prev" />
-            <button onClick={this.navigationHandler(1)} className="calendar__header__navigation__button calendar__header__navigation__button_next" />
+          <div className="calendar__header-navigation">
+            <button onClick={this.navigationHandler(-1)} className="calendar__header-navigation-button calendar__header-navigation-button--prev" />
+            <button onClick={this.navigationHandler(1)} className="calendar__header-navigation-button calendar__header-navigation-button--next" />
           </div>
-          <div className="calendar__header__month">{month}</div>
-          <ul className="calendar__header__days-of-week">
-            <li className="calendar__header__days-of-week__day">MON</li>
-            <li className="calendar__header__days-of-week__day">TUE</li>
-            <li className="calendar__header__days-of-week__day">WED</li>
-            <li className="calendar__header__days-of-week__day">THU</li>
-            <li className="calendar__header__days-of-week__day">FRI</li>
-            <li className="calendar__header__days-of-week__day">SAT</li>
-            <li className="calendar__header__days-of-week__day">SUN</li>
+          <div className="calendar__header-month">{month}</div>
+          <ul className="calendar__header-days-of-week">
+            <li className="calendar__header-days-of-week-day">MON</li>
+            <li className="calendar__header-days-of-week-day">TUE</li>
+            <li className="calendar__header-days-of-week-day">WED</li>
+            <li className="calendar__header-days-of-week-day">THU</li>
+            <li className="calendar__header-days-of-week-day">FRI</li>
+            <li className="calendar__header-days-of-week-day">SAT</li>
+            <li className="calendar__header-days-of-week-day">SUN</li>
           </ul>
         </div>
         <ul className="calendar__month">

@@ -12,13 +12,13 @@ export default class CalendarDay extends React.Component {
     }
     const eventsList = events.map((event, index) => (
       <React.Fragment key={index}>
-        <li className="calendar__month__day__events-list__event" />
+        <li className="calendar__month-day-events-list-event" />
         <style jsx>{styles}</style>
       </React.Fragment>
     ));
 
     return (
-      <ul className="calendar__month__day__events-list">
+      <ul className="calendar__month-day-events-list">
         {eventsList}
         <style jsx>{styles}</style>
       </ul>
@@ -39,12 +39,12 @@ export default class CalendarDay extends React.Component {
       selected,
     } = this.props;
     const classes = classnames(
-      'calendar__month__day',
-      { 'calendar__month__day_not-current-month': isNotPageMonth },
-      { calendar__month__day_weekend: weekEnd },
-      { calendar__month__day_events: events.length },
-      { calendar__month__day_selected: selected },
-      { calendar__month__day_now: !!now },
+      'calendar__month-day',
+      { 'calendar__month-day--not-current-month': isNotPageMonth },
+      { 'calendar__month-day--weekend': weekEnd },
+      { 'calendar__month-day--events': events.length },
+      { 'calendar__month-day--selected': selected },
+      { 'calendar__month-day--now': !!now },
     );
     const eventsList = this.getEventsPoints();
 

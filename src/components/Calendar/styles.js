@@ -7,19 +7,19 @@ export default css`
   max-width: 490px;
   color: ${settings.textColor};
   &__header {
-    &__month {
+    &-month {
       text-align: center;
       font-weight: bold;
       font-size: 1.2rem;
-      &__center-point {
+      &-center-point {
         display: inline-block;
         padding: 0 7px;
       }
     }
-    &__navigation {
+    &-navigation {
       position: relative;
       height: 0;
-      &__button {
+      &-button {
         border: none;
         background: transparent;
         margin: 0;
@@ -39,14 +39,14 @@ export default css`
           cursor: pointer;
           top: 0;
         }
-        &_prev::before {
+        &--prev::before {
           transform: rotate(180deg);
           left: 13px;
           right: auto;
         }
       }
     }
-    &__days-of-week {
+    &-days-of-week {
       padding: 5px 0 0 0;
       margin: 0;
       list-style: none;
@@ -54,7 +54,7 @@ export default css`
       flex-wrap: wrap;
       align-items: baseline;
       font-size: 0.875rem;
-      &__day {
+      &-day {
         width: 14.2857143%;
         text-align: center;
         color: #BBBCCD;
@@ -71,7 +71,7 @@ export default css`
     flex-wrap: wrap;
     align-items: baseline;
     font-size: 0.875rem;
-    &__day {
+    &-day {
       color: #4F5362;
       width: 14.2857143%;
       height: 40px;
@@ -80,13 +80,13 @@ export default css`
       font-weight: 600;
       line-height: 40px;
       cursor: pointer;
-      &_selected {
+      &--selected {
         border-radius: 20px;
         color: #ffffff;
         background: ${settings.primaryColor};
         position: relative;
       }
-      &__events-list {
+      &-events-list {
         padding: 0;
         margin: 0;
         list-style: none;
@@ -107,7 +107,7 @@ export default css`
           flex-direction: row;
           align-items: baseline;
         }
-        &__event {
+        &-event {
           display: block;
           width: 4px;
           height: 4px;
