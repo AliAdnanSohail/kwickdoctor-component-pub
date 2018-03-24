@@ -1,120 +1,139 @@
-import React from 'react';
-import moment from 'moment';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import CalendarDay from './CalendarDay';
+import Moment from 'moment';
+import { extendMoment } from 'moment-range';
+import { NextIcon, PreviousIcon } from 'grommet/components/icons/base';
 
-import styles from './styles';
+import Day from './Day';
+import { header, navigation, calendar as calendarStyles, month as monthStyles } from './styles';
 
-export default class Calendar extends React.Component {
+const moment = extendMoment(Moment);
+
+export default class Calendar extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-      selectedDay: undefined,
-      pageDate: moment(this.props.startPageDate),
-    };
+
+    this.state = { selected: props.selected.clone(), current: props.selected.clone() };
   }
 
-  getEventsForDay = date => this.props.events.filter(event => date.isSame(event[this.props.eventDatePropName], 'day'))
+  onSelect = (day, events) => {
+    this.setState({ selected: day });
+    this.props.onSelect(day, events);
+  };
+
+  onChangeMonth = count => this.setState({ current: this.state.current.add(count, 'month') });
+
+  getEvents = date => this.props.events.filter(event => date.isSame(event.date, 'day'));
 
   getDays = () => {
-    const { selectedDay } = this.state;
-    const date = this.state.pageDate.clone();
-    date.startOf('month');
-    let dayOfweek = date.day();
-    dayOfweek = dayOfweek === 0 ? 7 : dayOfweek;
-    if (dayOfweek > 1) {
-      date.date((dayOfweek - 2) * -1);
-    }
+    const { min, max } = this.props;
+    const { selected, current } = this.state;
 
-    const days = [];
-    const iterateDate = date.clone();
-    /* eslint no-plusplus: ["error", { "allowForLoopAfterthoughts": true }] */
-    for (let i = 0; i < this.props.numberOfDays; i++) {
-      days.push({
-        isNotPageMonth: !this.state.pageDate.isSame(iterateDate, 'month'),
-        selected: !!(selectedDay && selectedDay.isSame(iterateDate, 'day')),
-        key: i,
-        day: iterateDate.date(),
-        moment: iterateDate.clone().startOf('day'),
-        weekEnd: iterateDate.day() === 0 || iterateDate.day() === 6,
-        events: this.getEventsForDay(iterateDate),
-        now: iterateDate.isSame(moment(), 'day'),
-        onClick: this.clickByDayHandler,
-      });
-      iterateDate.add('days', 1);
-    }
-    return days;
-  }
+    const start = current
+      .clone()
+      .startOf('month')
+      .weekday(0);
 
-  navigationHandler = n => () => {
-    const newPageDate = this.state.pageDate.clone().add(n, 'month');
-    this.setState({
-      pageDate: newPageDate,
-    });
-    this.props.onChangeMonth(newPageDate.clone().startOf('month'));
-  }
+    const end = current
+      .clone()
+      .endOf('month')
+      .weekday(6);
 
-  clickByDayHandler = (dayMoment, events) => {
-    this.setState({
-      selectedDay: dayMoment,
-    });
-    this.props.onClickByDay(dayMoment, events);
-  }
+    const days = Array.from(moment()
+      .range(start, end)
+      .by('days'));
 
-  render() {
-    const daysList = this.getDays()
-      .map(day => <CalendarDay {...day} />);
-    const { pageDate } = this.state;
-    const month = (
-      <React.Fragment>
-        {pageDate.format('MMMM')}
-        <span className="calendar__header-month-center-point">·</span>
-        {pageDate.format('YYYY')}
-        <style jsx>{styles}</style>
-      </React.Fragment>
-    );
+    return days.map(day => ({
+      day,
+      disabled: (min && day.isBefore(min, 'day')) || (max && day.isAfter(max, 'day')),
+      selected: day.isSame(selected, 'month') && day.isSame(selected, 'day'),
+      events: this.getEvents(day),
+      onSelect: this.onSelect,
+    }));
+  };
+
+  getWeekNames = () =>
+    Array.from(new Array(7), (value, index) => index).map(item =>
+      moment()
+        .weekday(item)
+        .format('ddd'));
+
+  renderNavigation = () => {
+    const { current } = this.state;
 
     return (
-      <div className="calendar">
-        <div className="calendar__header">
-          <div className="calendar__header-navigation">
-            <button onClick={this.navigationHandler(-1)} className="calendar__header-navigation-button calendar__header-navigation-button--prev" />
-            <button onClick={this.navigationHandler(1)} className="calendar__header-navigation-button calendar__header-navigation-button--next" />
-          </div>
-          <div className="calendar__header-month">{month}</div>
-          <ul className="calendar__header-days-of-week">
-            <li className="calendar__header-days-of-week-day">MON</li>
-            <li className="calendar__header-days-of-week-day">TUE</li>
-            <li className="calendar__header-days-of-week-day">WED</li>
-            <li className="calendar__header-days-of-week-day">THU</li>
-            <li className="calendar__header-days-of-week-day">FRI</li>
-            <li className="calendar__header-days-of-week-day">SAT</li>
-            <li className="calendar__header-days-of-week-day">SUN</li>
-          </ul>
+      <div className="navigation">
+        <button onClick={() => this.onChangeMonth(-1)}>
+          <PreviousIcon size="xsmall" />
+        </button>
+
+        <div className="navigation__month">
+          {current.format('MMMM')}
+          <span>·</span>
+          {current.format('YYYY')}
         </div>
-        <ul className="calendar__month">
-          {daysList}
-        </ul>
-        <style jsx>{styles}</style>
+
+        <button onClick={() => this.onChangeMonth(1)}>
+          <NextIcon size="xsmall" />
+        </button>
+
+        <style>{navigation}</style>
+      </div>
+    );
+  };
+
+  renderHeader = () => (
+    <div>
+      {this.renderNavigation()}
+
+      <ul className="weekdays">
+        {this.getWeekNames().map(item => (
+          <li key={item} className="weekdays__item">
+            {item}
+          </li>
+        ))}
+      </ul>
+
+      <style>{header}</style>
+    </div>
+  );
+
+  renderMonth = () => (
+    <ul className="month">
+      {this.getDays().map(item => (
+        <li key={`${item.day.format('YYYY-MM-DD')}-${Math.random()}`}>
+          <Day {...item} />
+        </li>
+      ))}
+
+      <style>{monthStyles}</style>
+    </ul>
+  );
+
+  render() {
+    return (
+      <div className="calendar">
+        {this.renderHeader()}
+        {this.renderMonth()}
+
+        <style>{calendarStyles}</style>
       </div>
     );
   }
 }
 
 Calendar.propTypes = {
-  numberOfDays: PropTypes.number,
-  startPageDate: PropTypes.object, // eslint-disable-line react/forbid-prop-types
-  events: PropTypes.array, // eslint-disable-line react/forbid-prop-types
-  onChangeMonth: PropTypes.func,
-  onClickByDay: PropTypes.func,
-  eventDatePropName: PropTypes.string,
+  min: PropTypes.object,
+  max: PropTypes.object,
+  selected: PropTypes.object,
+  events: PropTypes.array,
+  onSelect: PropTypes.func,
 };
 
 Calendar.defaultProps = {
-  numberOfDays: 42,
-  startPageDate: moment(),
+  min: undefined,
+  max: undefined,
+  selected: moment(),
   events: [],
-  onChangeMonth() {},
-  onClickByDay() {},
-  eventDatePropName: 'date',
+  onSelect: () => {},
 };
