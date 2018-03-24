@@ -16,12 +16,12 @@ export const day = css`
     font-weight: 600;
     line-height: 40px;
 
-    :focus {
-      outline: none;
-    }
-
     :not(&--disabled) {
       cursor: pointer;
+    }
+
+    :focus {
+      outline: none;
     }
 
     &--selected {
