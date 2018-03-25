@@ -1,5 +1,7 @@
 import css from 'styled-jsx/css';
 
+import settings from '../../utils/style-helper';
+
 export const calendar = css`
   .calendar {
     background-color: #ffffff;
@@ -84,7 +86,7 @@ export const calendar = css`
         height: 24px;
         line-height: 24px;
 
-        color: #2a2a30;
+        color: ${settings.textColor};
 
         font: {
           size: 0.75rem;
@@ -92,13 +94,13 @@ export const calendar = css`
         }
 
         :hover:not(&--selected) {
-          color: #2a2a30;
+          color: ${settings.textColor};
           background-color: #eff0f4;
         }
 
         &--selected {
           color: #ffffff;
-          background-color: #0c97f9;
+          background-color: ${settings.primaryColor};
         }
 
         &--outside-month {
@@ -129,7 +131,7 @@ export const datepicker = css`
     width: 100%;
     padding: 12px 16px 12px 52px;
 
-    color: #2a2a30;
+    color: ${settings.textColor};
     font-size: 0.875rem;
 
     box-sizing: border-box;
@@ -145,13 +147,13 @@ export const datepicker = css`
     border: {
       width: 2px;
       style: solid;
-      color: #e7e7f0;
+      color: ${settings.borderColor};
       radius: 4px;
     }
 
     :focus {
       outline: none;
-      border-color: #0c97f9;
+      border-color: ${settings.primaryColor};
     }
   }
 `;
@@ -165,13 +167,13 @@ export const wrapper = css`
 
 export const label = css`
   label {
-    color: #222328;
+    color: ${settings.textColor};
     display: block;
     margin-bottom: 6px;
 
     font: {
       weight: 500;
-      size: 0.875rem;
+      size: 1rem;
     }
   }
 `;
