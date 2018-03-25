@@ -11,7 +11,7 @@
     "build:storybook": "build-storybook",
     "storybook": "start-storybook -p 6006",
     "storybook:deploy": "storybook-to-ghpages",
-    "test": "jest --coverage",
+    "test": "jest --coverage -u",
     "test:output": "jest --json --outputFile=.jest-test-results.json"
   },
   "repository": {
