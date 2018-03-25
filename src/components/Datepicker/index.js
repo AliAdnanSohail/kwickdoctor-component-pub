@@ -4,7 +4,7 @@ import ReactDatePicker from 'react-datepicker';
 import moment from 'moment';
 
 import 'react-datepicker/dist/react-datepicker.css';
-import { calendar, datepicker, label as labelStyles } from './styles';
+import { calendar, datepicker, label as labelStyles, wrapper } from './styles';
 
 export default class Datepicker extends Component {
   constructor(props) {
@@ -25,23 +25,23 @@ export default class Datepicker extends Component {
 
     return (
       <Fragment>
-        <label htmlFor={id}>
-          <div>{label}</div>
-          <ReactDatePicker
-            id={id}
-            name={name}
-            selected={this.state.value}
-            onChange={date => this.handleChange(date)}
-            className="datepicker"
-            calendarClassName="calendar"
-            dateFormat={dateFormat}
-            useWeekdaysShort
-          />
-        </label>
+        <label htmlFor={id}>{label}</label>
+
+        <ReactDatePicker
+          id={id}
+          name={name}
+          selected={this.state.value}
+          onChange={date => this.handleChange(date)}
+          className="datepicker"
+          calendarClassName="calendar"
+          dateFormat={dateFormat}
+          useWeekdaysShort
+        />
 
         <style>{calendar}</style>
         <style>{datepicker}</style>
         <style>{labelStyles}</style>
+        <style>{wrapper}</style>
       </Fragment>
     );
   }

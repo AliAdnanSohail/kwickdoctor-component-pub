@@ -156,25 +156,22 @@ export const datepicker = css`
   }
 `;
 
+export const wrapper = css`
+  .react-datepicker-wrapper,
+  .react-datepicker__input-container {
+    width: 100%;
+  }
+`;
+
 export const label = css`
   label {
     color: #222328;
     display: block;
+    margin-bottom: 6px;
 
     font: {
       weight: 500;
       size: 0.875rem;
-    }
-
-    .react-datepicker-wrapper,
-    .react-datepicker__input-container {
-      width: 100%;
-    }
-
-    > div {
-      :not(:last-child) {
-        margin-bottom: 6px;
-      }
     }
   }
 `;
