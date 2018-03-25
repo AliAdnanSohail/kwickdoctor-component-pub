@@ -7,6 +7,7 @@ import styles, { error as errorStyles, textInput, label as labelStyles } from '.
 export default class TextInput extends Component {
   constructor(props) {
     super(props);
+
     this.state = { value: props.value };
   }
 
@@ -22,6 +23,7 @@ export default class TextInput extends Component {
       error && (
         <div className="input-error">
           {error}
+
           <style jsx>{errorStyles}</style>
         </div>
       )
@@ -62,14 +64,15 @@ export default class TextInput extends Component {
 
   render() {
     const { id, label } = this.props;
+    const input = this.inputElement();
     const errorMessage = this.errorMessage();
-    const inputElement = this.inputElement();
 
     return (
       <div>
         <label htmlFor={id}>{label}</label>
-        {inputElement}
+        {input}
         {errorMessage}
+
         <style jsx>{styles}</style>
         <style jsx>{labelStyles}</style>
       </div>

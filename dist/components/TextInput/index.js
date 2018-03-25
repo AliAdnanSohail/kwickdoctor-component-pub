@@ -119,8 +119,8 @@ var TextInput = function (_Component) {
           id = _props.id,
           label = _props.label;
 
+      var input = this.inputElement();
       var errorMessage = this.errorMessage();
-      var inputElement = this.inputElement();
 
       return _react2.default.createElement(
         'div',
@@ -133,7 +133,7 @@ var TextInput = function (_Component) {
           },
           label
         ),
-        inputElement,
+        input,
         errorMessage,
         _react2.default.createElement(_style2.default, {
           styleId: _styles2.default.__scopedHash,
