@@ -13,17 +13,17 @@ it('renders correctly', () => {
 it('transparent button renders correctly', () => {
   const element = mount(<Button onClick={() => {}} title="Hello!" transparent />);
 
-  expect(element.find('button').hasClass('transparent')).toEqual(true);
+  expect(element.find('button').hasClass('button--transparent')).toEqual(true);
 });
 
 it('squared button renders correctly', () => {
   const element = mount(<Button onClick={() => {}} title="Hello!" squared />);
 
-  expect(element.find('button').hasClass('squared')).toEqual(true);
+  expect(element.find('button').hasClass('button--squared')).toEqual(true);
 });
 
 it('accent button renders correctly', () => {
   const element = mount(<Button onClick={() => {}} title="Hello!" accent />);
 
-  expect(element.find('button').hasClass('accent')).toEqual(true);
+  expect(element.find('button').hasClass('button--accent')).toEqual(true);
 });
