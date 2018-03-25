@@ -3,7 +3,6 @@
 
 # testing
 /coverage
-/__testes__/__snapshots__
 
 # misc
 .DS_Store

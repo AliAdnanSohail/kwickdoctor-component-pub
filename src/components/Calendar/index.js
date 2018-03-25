@@ -77,7 +77,7 @@ export default class Calendar extends Component {
           <NextIcon size="xsmall" />
         </button>
 
-        <style>{navigation}</style>
+        <style jsx>{navigation}</style>
       </div>
     );
   };
@@ -94,7 +94,7 @@ export default class Calendar extends Component {
         ))}
       </ul>
 
-      <style>{header}</style>
+      <style jsx>{header}</style>
     </div>
   );
 
@@ -106,7 +106,7 @@ export default class Calendar extends Component {
         </li>
       ))}
 
-      <style>{monthStyles}</style>
+      <style jsx>{monthStyles}</style>
     </ul>
   );
 
@@ -116,7 +116,7 @@ export default class Calendar extends Component {
         {this.renderHeader()}
         {this.renderMonth()}
 
-        <style>{calendarStyles}</style>
+        <style jsx>{calendarStyles}</style>
       </div>
     );
   }

@@ -22,7 +22,7 @@ export default class TextInput extends Component {
       error && (
         <div className="input-error">
           {error}
-          <style>{errorStyles}</style>
+          <style jsx>{errorStyles}</style>
         </div>
       )
     );
@@ -33,7 +33,7 @@ export default class TextInput extends Component {
       id, name, placeholder, error, className, multiline,
     } = this.props;
 
-    const classes = classnames('text-input', className, { error });
+    const classes = classnames(className, { error });
 
     const elementProps = {
       id,
@@ -70,8 +70,8 @@ export default class TextInput extends Component {
         <label htmlFor={id}>{label}</label>
         {inputElement}
         {errorMessage}
-        <style>{styles}</style>
-        <style>{labelStyles}</style>
+        <style jsx>{styles}</style>
+        <style jsx>{labelStyles}</style>
       </div>
     );
   }

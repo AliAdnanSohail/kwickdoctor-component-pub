@@ -30,11 +30,30 @@ export const calendar = css`
       }
 
       &__triangle {
-        left: 28px !important;
-        border-bottom-color: #ffffff !important;
+        position: absolute;
+        top: 0 !important;
+        left: 36px !important;
+
+        width: 0;
+        height: 0;
+        margin: 0 !important;
+
+        transform-origin: 0 0;
+        transform: rotate(135deg);
+
+        box: {
+          sizing: border-box !important;
+          shadow: -4px 4px 14px 0 rgba(0, 0, 0, 0.05) !important;
+        }
+
+        border: {
+          width: 6px !important;
+          style: solid !important;
+          color: transparent transparent #ffffff #ffffff !important;
+        }
 
         :before {
-          border-bottom-color: rgba(240, 240, 240, 0.25) !important;
+          content: none !important;
         }
       }
 
@@ -93,7 +112,7 @@ export const calendar = css`
           weight: 400;
         }
 
-        :hover:not(&--selected) {
+        :hover:not(.react-datepicker__day--selected) {
           color: ${settings.textColor};
           background-color: #eff0f4;
         }

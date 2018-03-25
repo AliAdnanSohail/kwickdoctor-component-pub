@@ -1,5 +1,4 @@
 import css from 'styled-jsx/css';
-
 import settings from '../../utils/style-helper';
 
 export default css`
@@ -29,15 +28,14 @@ export const error = css`
       weight: 500;
     }
 
-    :after {
+    :before {
       content: '';
       position: absolute;
       top: 0;
-      left: 36px;
+      left: 32px;
 
       width: 0;
       height: 0;
-      margin-left: -0.5em;
 
       transform-origin: 0 0;
       transform: rotate(135deg);
@@ -48,7 +46,7 @@ export const error = css`
       }
 
       border: {
-        width: 0.4em;
+        width: 6px;
         style: solid;
         color: transparent transparent #ffffff #ffffff;
       }
@@ -70,7 +68,8 @@ export const label = css`
 `;
 
 export const textInput = css`
-  .text-input {
+  input,
+  textarea {
     width: 100%;
     min-width: 100%;
     max-width: 100%;

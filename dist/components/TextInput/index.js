@@ -5,6 +5,8 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = undefined;
 
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 var _style = require('styled-jsx/style');
@@ -55,13 +57,54 @@ var TextInput = function (_Component) {
       return error && _react2.default.createElement(
         'div',
         {
-          className: 'jsx-' + _styles2.default.__scopedHash + ' ' + 'input-error'
+          className: 'jsx-' + _styles.error.__scopedHash + ' ' + 'input-error'
         },
         error,
         _react2.default.createElement(_style2.default, {
-          styleId: _styles2.default.__scopedHash,
-          css: _styles2.default.__scoped
+          styleId: _styles.error.__scopedHash,
+          css: _styles.error.__scoped
         })
+      );
+    };
+
+    _this.inputElement = function () {
+      var _this$props = _this.props,
+          id = _this$props.id,
+          name = _this$props.name,
+          placeholder = _this$props.placeholder,
+          error = _this$props.error,
+          className = _this$props.className,
+          multiline = _this$props.multiline;
+
+
+      var classes = (0, _classnames2.default)(className, { error: error });
+
+      var elementProps = {
+        id: id,
+        name: name,
+        placeholder: placeholder,
+        className: classes,
+        value: _this.state.value,
+        onChange: _this.handleChange
+      };
+
+      return _react2.default.createElement(
+        _react.Fragment,
+        null,
+        multiline ? _react2.default.createElement(
+          _react.Fragment,
+          null,
+          _react2.default.createElement('textarea', elementProps)
+        ) : _react2.default.createElement(
+          _react.Fragment,
+          null,
+          _react2.default.createElement('input', _extends({ type: 'text' }, elementProps))
+        ),
+        _react2.default.createElement(
+          'style',
+          null,
+          _styles.textInput
+        )
       );
     };
 
@@ -74,39 +117,31 @@ var TextInput = function (_Component) {
     value: function render() {
       var _props = this.props,
           id = _props.id,
-          label = _props.label,
-          name = _props.name,
-          placeholder = _props.placeholder,
-          error = _props.error,
-          className = _props.className;
+          label = _props.label;
 
-
-      var classes = (0, _classnames2.default)('text-input', className, { error: error });
+      var errorMessage = this.errorMessage();
+      var inputElement = this.inputElement();
 
       return _react2.default.createElement(
         'div',
         {
-          className: 'jsx-' + _styles2.default.__scopedHash
+          className: 'jsx-' + _styles2.default.__scopedHash + ' jsx-' + _styles.label.__scopedHash
         },
         _react2.default.createElement(
           'label',
-          { htmlFor: id, className: 'jsx-' + _styles2.default.__scopedHash
+          { htmlFor: id, className: 'jsx-' + _styles2.default.__scopedHash + ' jsx-' + _styles.label.__scopedHash
           },
           label
         ),
-        _react2.default.createElement('input', {
-          id: id,
-          name: name,
-          onChange: this.handleChange,
-          placeholder: placeholder,
-
-          value: this.state.value,
-          className: 'jsx-' + _styles2.default.__scopedHash + ' ' + (classes || '')
-        }),
-        this.errorMessage(),
+        inputElement,
+        errorMessage,
         _react2.default.createElement(_style2.default, {
           styleId: _styles2.default.__scopedHash,
           css: _styles2.default.__scoped
+        }),
+        _react2.default.createElement(_style2.default, {
+          styleId: _styles.label.__scopedHash,
+          css: _styles.label.__scoped
         })
       );
     }
@@ -122,11 +157,12 @@ TextInput.propTypes = {
   id: _propTypes2.default.string.isRequired,
   name: _propTypes2.default.string,
   placeholder: _propTypes2.default.string,
-  onChange: _propTypes2.default.func.isRequired,
   label: _propTypes2.default.string,
   value: _propTypes2.default.string,
   error: _propTypes2.default.string,
-  className: _propTypes2.default.string
+  className: _propTypes2.default.string,
+  multiline: _propTypes2.default.bool,
+  onChange: _propTypes2.default.func.isRequired
 };
 
 TextInput.defaultProps = {
@@ -135,5 +171,6 @@ TextInput.defaultProps = {
   label: '',
   value: '',
   error: '',
-  className: undefined
+  className: undefined,
+  multiline: false
 };
