@@ -61,6 +61,11 @@ export const label = css`
     color: ${settings.textColor};
     display: block;
     margin-bottom: 6px;
+
+    font: {
+      weight: 500;
+      size: 1rem;
+    }
   }
 `;
 
