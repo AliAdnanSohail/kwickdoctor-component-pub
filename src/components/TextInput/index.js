@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 
@@ -32,11 +32,9 @@ export default class TextInput extends Component {
     const {
       id, name, placeholder, error, className, multiline,
     } = this.props;
-    const classes = classnames(
-      'text-input',
-      className,
-      { error },
-    );
+
+    const classes = classnames('text-input', className, { error });
+
     const elementProps = {
       id,
       name,
@@ -46,22 +44,18 @@ export default class TextInput extends Component {
       onChange: this.handleChange,
     };
 
-    if (multiline) {
-      return (
-        <React.Fragment>
-          <textarea {...elementProps} />
-          <style jsx>{styles}</style>
-        </React.Fragment>
-      );
-    }
-
-    return (
-      <React.Fragment>
+    return multiline ? (
+      <Fragment>
+        <textarea {...elementProps} />
+        <style jsx>{styles}</style>
+      </Fragment>
+    ) : (
+      <Fragment>
         <input type="text" {...elementProps} />
         <style jsx>{styles}</style>
-      </React.Fragment>
+      </Fragment>
     );
-  }
+  };
 
   render() {
     const { id, label } = this.props;
@@ -83,12 +77,12 @@ TextInput.propTypes = {
   id: PropTypes.string.isRequired,
   name: PropTypes.string,
   placeholder: PropTypes.string,
-  onChange: PropTypes.func.isRequired,
   label: PropTypes.string,
   value: PropTypes.string,
   error: PropTypes.string,
   className: PropTypes.string,
   multiline: PropTypes.bool,
+  onChange: PropTypes.func.isRequired,
 };
 
 TextInput.defaultProps = {
