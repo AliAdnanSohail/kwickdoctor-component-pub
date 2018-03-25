@@ -19,6 +19,10 @@ var _propTypes = require('prop-types');
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
 
+var _classnames = require('classnames');
+
+var _classnames2 = _interopRequireDefault(_classnames);
+
 var _styles = require('./styles');
 
 var _styles2 = _interopRequireDefault(_styles);
@@ -34,10 +38,35 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 var TextInput = function (_Component) {
   _inherits(TextInput, _Component);
 
-  function TextInput() {
+  function TextInput(props) {
     _classCallCheck(this, TextInput);
 
-    return _possibleConstructorReturn(this, (TextInput.__proto__ || Object.getPrototypeOf(TextInput)).apply(this, arguments));
+    var _this = _possibleConstructorReturn(this, (TextInput.__proto__ || Object.getPrototypeOf(TextInput)).call(this, props));
+
+    _this.handleChange = function (event) {
+      _this.setState({ value: event.target.value });
+      _this.props.onChange(event);
+    };
+
+    _this.errorMessage = function () {
+      var error = _this.props.error;
+
+
+      return error && _react2.default.createElement(
+        'div',
+        {
+          className: 'jsx-' + _styles2.default.__scopedHash + ' ' + 'input-error'
+        },
+        error,
+        _react2.default.createElement(_style2.default, {
+          styleId: _styles2.default.__scopedHash,
+          css: _styles2.default.__scoped
+        })
+      );
+    };
+
+    _this.state = { value: props.value };
+    return _this;
   }
 
   _createClass(TextInput, [{
@@ -48,21 +77,33 @@ var TextInput = function (_Component) {
           label = _props.label,
           name = _props.name,
           placeholder = _props.placeholder,
-          onChange = _props.onChange;
+          error = _props.error,
+          className = _props.className;
 
+
+      var classes = (0, _classnames2.default)('text-input', className, { error: error });
 
       return _react2.default.createElement(
-        'label',
-        { htmlFor: id, className: 'jsx-' + _styles2.default.__scopedHash
+        'div',
+        {
+          className: 'jsx-' + _styles2.default.__scopedHash
         },
-        label,
+        _react2.default.createElement(
+          'label',
+          { htmlFor: id, className: 'jsx-' + _styles2.default.__scopedHash
+          },
+          label
+        ),
         _react2.default.createElement('input', {
           id: id,
           name: name,
-          onChange: onChange,
+          onChange: this.handleChange,
           placeholder: placeholder,
-          className: 'jsx-' + _styles2.default.__scopedHash + ' ' + 'text-input'
+
+          value: this.state.value,
+          className: 'jsx-' + _styles2.default.__scopedHash + ' ' + (classes || '')
         }),
+        this.errorMessage(),
         _react2.default.createElement(_style2.default, {
           styleId: _styles2.default.__scopedHash,
           css: _styles2.default.__scoped
@@ -82,11 +123,17 @@ TextInput.propTypes = {
   name: _propTypes2.default.string,
   placeholder: _propTypes2.default.string,
   onChange: _propTypes2.default.func.isRequired,
-  label: _propTypes2.default.string
+  label: _propTypes2.default.string,
+  value: _propTypes2.default.string,
+  error: _propTypes2.default.string,
+  className: _propTypes2.default.string
 };
 
 TextInput.defaultProps = {
   name: '',
   placeholder: '',
-  label: ''
+  label: '',
+  value: '',
+  error: '',
+  className: undefined
 };

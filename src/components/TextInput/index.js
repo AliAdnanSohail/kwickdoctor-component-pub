@@ -1,27 +1,78 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import PropTypes from 'prop-types';
+import classnames from 'classnames';
 
-import styles from './styles';
+import styles, { error as errorStyles, textInput, label as labelStyles } from './styles';
 
 export default class TextInput extends Component {
-  render() {
-    const {
-      id, label, name, placeholder, onChange,
-    } = this.props;
+  constructor(props) {
+    super(props);
+    this.state = { value: props.value };
+  }
+
+  handleChange = (event) => {
+    this.setState({ value: event.target.value });
+    this.props.onChange(event);
+  };
+
+  errorMessage = () => {
+    const { error } = this.props;
 
     return (
-      <label htmlFor={id}>
-        {label}
-        <input
-          id={id}
-          name={name}
-          onChange={onChange}
-          placeholder={placeholder}
-          className="text-input"
-        />
+      error && (
+        <div className="input-error">
+          {error}
+          <style>{errorStyles}</style>
+        </div>
+      )
+    );
+  };
 
-        <style jsx>{styles}</style>
-      </label>
+  inputElement = () => {
+    const {
+      id, name, placeholder, error, className, multiline,
+    } = this.props;
+
+    const classes = classnames('text-input', className, { error });
+
+    const elementProps = {
+      id,
+      name,
+      placeholder,
+      className: classes,
+      value: this.state.value,
+      onChange: this.handleChange,
+    };
+
+    return (
+      <Fragment>
+        {multiline ? (
+          <Fragment>
+            <textarea {...elementProps} />
+          </Fragment>
+        ) : (
+          <Fragment>
+            <input type="text" {...elementProps} />
+          </Fragment>
+        )}
+        <style>{textInput}</style>
+      </Fragment>
+    );
+  };
+
+  render() {
+    const { id, label } = this.props;
+    const errorMessage = this.errorMessage();
+    const inputElement = this.inputElement();
+
+    return (
+      <div>
+        <label htmlFor={id}>{label}</label>
+        {inputElement}
+        {errorMessage}
+        <style>{styles}</style>
+        <style>{labelStyles}</style>
+      </div>
     );
   }
 }
@@ -30,12 +81,20 @@ TextInput.propTypes = {
   id: PropTypes.string.isRequired,
   name: PropTypes.string,
   placeholder: PropTypes.string,
-  onChange: PropTypes.func.isRequired,
   label: PropTypes.string,
+  value: PropTypes.string,
+  error: PropTypes.string,
+  className: PropTypes.string,
+  multiline: PropTypes.bool,
+  onChange: PropTypes.func.isRequired,
 };
 
 TextInput.defaultProps = {
   name: '',
   placeholder: '',
   label: '',
+  value: '',
+  error: '',
+  className: undefined,
+  multiline: false,
 };
