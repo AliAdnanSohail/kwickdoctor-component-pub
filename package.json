@@ -7,12 +7,11 @@
   "scripts": {
     "clean": "rm -rf ./dist",
     "build": "yarn clean && yarn test:output && NODE_ENV=production `yarn bin`/babel ./src --out-dir ./dist",
-    "build:webpack": "./node_modules/webpack/bin/webpack.js -p --config ./.storybook/webpack.config.js",
-    "build:storybook": "build-storybook",
     "storybook": "start-storybook -p 6006",
     "storybook:deploy": "storybook-to-ghpages",
+    "storybook:build": "build-storybook",
     "test": "jest --coverage",
-    "test:output": "jest --json --outputFile=.jest-test-results.json",
+    "test:output": "yarn test --json --outputFile=.jest-test-results.json",
     "test:update": "yarn test --updateSnapshot"
   },
   "repository": {
