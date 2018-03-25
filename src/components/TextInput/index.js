@@ -2,7 +2,7 @@ import React, { Component, Fragment } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 
-import styles from './styles';
+import styles, { error as errorStyles, textInput, label as labelStyles } from './styles';
 
 export default class TextInput extends Component {
   constructor(props) {
@@ -22,7 +22,7 @@ export default class TextInput extends Component {
       error && (
         <div className="input-error">
           {error}
-          <style jsx>{styles}</style>
+          <style>{errorStyles}</style>
         </div>
       )
     );
@@ -44,15 +44,18 @@ export default class TextInput extends Component {
       onChange: this.handleChange,
     };
 
-    return multiline ? (
+    return (
       <Fragment>
-        <textarea {...elementProps} />
-        <style jsx>{styles}</style>
-      </Fragment>
-    ) : (
-      <Fragment>
-        <input type="text" {...elementProps} />
-        <style jsx>{styles}</style>
+        {multiline ? (
+          <Fragment>
+            <textarea {...elementProps} />
+          </Fragment>
+        ) : (
+          <Fragment>
+            <input type="text" {...elementProps} />
+          </Fragment>
+        )}
+        <style>{textInput}</style>
       </Fragment>
     );
   };
@@ -67,7 +70,8 @@ export default class TextInput extends Component {
         <label htmlFor={id}>{label}</label>
         {inputElement}
         {errorMessage}
-        <style jsx>{styles}</style>
+        <style>{styles}</style>
+        <style>{labelStyles}</style>
       </div>
     );
   }

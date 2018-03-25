@@ -6,23 +6,87 @@ export default css`
   div {
     position: relative;
   }
+`;
 
-  .text-input {
-    border: 2px solid #e7e7f0;
-    border-radius: 4px;
-    background-color: #ffffff;
-    color: ${settings.textColor};
+export const error = css`
+  .input-error {
+    position: absolute;
+    left: 16px;
+
+    width: auto;
+    max-width: 50%;
+
     padding: 12px 16px;
+    margin-top: -6px;
+
+    border-radius: 3px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 14px 0 rgba(0, 0, 0, 0.14);
+    color: ${settings.errorColor};
+
+    font: {
+      size: 0.875rem;
+      weight: 500;
+    }
+
+    :after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 36px;
+
+      width: 0;
+      height: 0;
+      margin-left: -0.5em;
+
+      transform-origin: 0 0;
+      transform: rotate(135deg);
+
+      box: {
+        sizing: border-box;
+        shadow: -4px 4px 14px 0 rgba(0, 0, 0, 0.05);
+      }
+
+      border: {
+        width: 0.4em;
+        style: solid;
+        color: transparent transparent #ffffff #ffffff;
+      }
+    }
+  }
+`;
+
+export const label = css`
+  label {
+    color: ${settings.textColor};
+    display: block;
+    margin-bottom: 6px;
+  }
+`;
+
+export const textInput = css`
+  .text-input {
     width: 100%;
-    min-height: 44px;
     min-width: 100%;
     max-width: 100%;
+    min-height: 44px;
+    padding: 12px 16px;
+
+    background-color: #ffffff;
+    color: ${settings.textColor};
     box-sizing: border-box;
 
     font: {
       style: normal;
       weight: normal;
       size: 0.875rem;
+    }
+
+    border: {
+      width: 2px;
+      style: solid;
+      color: ${settings.borderColor};
+      radius: 4px;
     }
 
     ::-webkit-input-placeholder {
@@ -46,47 +110,10 @@ export default css`
       padding: 12px 16px;
       border-color: ${settings.primaryColor};
     }
+
     &.error,
     &.error:focus {
       border-color: ${settings.errorColor};
-    }
-  }
-
-  label {
-    color: ${settings.textColor};
-    display: block;
-    font-weight: 500;
-    padding-bottom: 5px;
-  }
-
-  .input-error {
-    position: absolute;
-    padding: 11px 16px;
-    border-radius: 3px;
-    background-color: #ffffff;
-    box-shadow: 0 2px 14px 0 rgba(0, 0, 0, 0.14);
-    max-width: 50%;
-    width: auto;
-    font-size: 0.875rem;
-    font-weight: 500;
-    left: 16px;
-    margin-top: -6px;
-    color: ${settings.errorColor};
-
-    :after {
-      content: '';
-      position: absolute;
-      width: 0;
-      height: 0;
-      margin-left: -0.5em;
-      top: 0;
-      left: 3em;
-      box-sizing: border-box;
-      border: 0.4em solid black;
-      border-color: transparent transparent #ffffff #ffffff;
-      transform-origin: 0 0;
-      transform: rotate(135deg);
-      box-shadow: -2px 2px 4px 0 rgba(0, 0, 0, 0.1);
     }
   }
 `;
