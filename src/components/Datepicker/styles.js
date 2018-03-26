@@ -2,8 +2,14 @@ import css from 'styled-jsx/css';
 
 import settings from '../../utils/style-helper';
 
+export const datepickerBlock = css`
+  .datepicker-block {
+    position: relative;
+  }
+`;
+
 export const calendar = css`
-  .calendar {
+.datepicker-block  .calendar {
     background-color: #ffffff;
 
     border: none;
@@ -146,7 +152,7 @@ export const calendar = css`
 `;
 
 export const datepicker = css`
-  .datepicker {
+.datepicker-block  .datepicker {
     width: 100%;
     padding: 12px 16px 12px 52px;
 
@@ -175,17 +181,20 @@ export const datepicker = css`
       border-color: ${settings.primaryColor};
     }
   }
+  .datepicker-block.has-error .datepicker, .datepicker-block.has-error .datepicker:focus {
+    border-color: ${settings.errorColor};
+  }
 `;
 
 export const wrapper = css`
-  .react-datepicker-wrapper,
-  .react-datepicker__input-container {
+  .datepicker-block .react-datepicker-wrapper,
+  .datepicker-block .react-datepicker__input-container {
     width: 100%;
   }
 `;
 
 export const label = css`
-  label {
+  .datepicker-block  label {
     color: ${settings.textColor};
     display: block;
     margin-bottom: 6px;
@@ -193,6 +202,53 @@ export const label = css`
     font: {
       weight: 500;
       size: 1rem;
+    }
+  }
+`;
+
+export const error = css`
+  .datepicker-block .input-error {
+    position: absolute;
+    left: 4px;
+
+    width: auto;
+    max-width: 50%;
+
+    padding: 12px 16px;
+    margin-top: -6px;
+
+    border-radius: 3px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 14px 0 rgba(0, 0, 0, 0.14);
+    color: ${settings.errorColor};
+
+    font: {
+      size: 0.875rem;
+      weight: 500;
+    }
+
+    :before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 32px;
+
+      width: 0;
+      height: 0;
+
+      transform-origin: 0 0;
+      transform: rotate(135deg);
+
+      box: {
+        sizing: border-box;
+        shadow: -4px 4px 14px 0 rgba(0, 0, 0, 0.05);
+      }
+
+      border: {
+        width: 6px;
+        style: solid;
+        color: transparent transparent #ffffff #ffffff;
+      }
     }
   }
 `;

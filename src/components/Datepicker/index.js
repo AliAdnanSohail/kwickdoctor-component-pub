@@ -2,9 +2,10 @@ import React, { Component, Fragment } from 'react';
 import PropTypes from 'prop-types';
 import ReactDatePicker from 'react-datepicker';
 import moment from 'moment';
+import classnames from 'classnames';
 
 import 'react-datepicker/dist/react-datepicker.css';
-import { calendar, datepicker, label as labelStyles, wrapper } from './styles';
+import { calendar, datepicker, label as labelStyles, wrapper, error as errorStyles, datepickerBlock as datepickerBlockStyles } from './styles';
 
 export default class Datepicker extends Component {
   constructor(props) {
@@ -13,6 +14,18 @@ export default class Datepicker extends Component {
     this.state = { value: props.value };
   }
 
+  errorMessage = () => {
+    const { error } = this.props;
+
+    return (
+      error && (
+        <div className="input-error">
+          {error}
+        </div>
+      )
+    );
+  };
+
   handleChange = (date) => {
     this.setState({ value: date });
     this.props.onChange(date);
@@ -20,11 +33,12 @@ export default class Datepicker extends Component {
 
   render() {
     const {
-      id, label, name, dateFormat,
+      id, label, name, dateFormat, error,
     } = this.props;
+    const blockClasses = classnames('datepicker-block', { 'has-error': !!error });
 
     return (
-      <Fragment>
+      <div className={blockClasses}>
         <label htmlFor={id}>{label}</label>
 
         <ReactDatePicker
@@ -37,12 +51,15 @@ export default class Datepicker extends Component {
           dateFormat={dateFormat}
           useWeekdaysShort
         />
+        {this.errorMessage()}
 
+        <style>{datepickerBlockStyles}</style>
         <style>{calendar}</style>
         <style>{datepicker}</style>
         <style>{labelStyles}</style>
         <style>{wrapper}</style>
-      </Fragment>
+        <style>{errorStyles}</style>
+      </div>
     );
   }
 }
@@ -54,6 +71,7 @@ Datepicker.propTypes = {
   value: PropTypes.object,
   dateFormat: PropTypes.string,
   onChange: PropTypes.func.isRequired,
+  error: PropTypes.string,
 };
 
 Datepicker.defaultProps = {
@@ -61,4 +79,5 @@ Datepicker.defaultProps = {
   label: '',
   value: moment(),
   dateFormat: 'DD MMM, YYYY',
+  error: '',
 };
