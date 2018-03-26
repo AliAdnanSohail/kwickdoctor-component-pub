@@ -74,14 +74,3 @@ export const calendar = css`
   }
 `;
 
-export const month = css`
-  .month {
-    padding: 0;
-    margin: 0;
-    list-style: none;
-    font-size: 0.745rem;
-    li {
-      float: left;
-    }
-  }
-`;

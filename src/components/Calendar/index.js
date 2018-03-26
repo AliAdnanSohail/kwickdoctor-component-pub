@@ -4,8 +4,8 @@ import Moment from 'moment';
 import { extendMoment } from 'moment-range';
 import { NextIcon, PreviousIcon } from 'grommet/components/icons/base';
 
-import Day from './Day';
-import { header, navigation, calendar as calendarStyles, month as monthStyles } from './styles';
+import Month from './Month';
+import { header, navigation, calendar as calendarStyles } from './styles';
 
 const moment = extendMoment(Moment);
 
@@ -98,23 +98,11 @@ export default class Calendar extends Component {
     </div>
   );
 
-  renderMonth = () => (
-    <ul className="month">
-      {this.getDays().map(item => (
-        <li key={`${item.day.format('YYYY-MM-DD')}-${Math.random()}`}>
-          <Day {...item} />
-        </li>
-      ))}
-
-      <style jsx>{monthStyles}</style>
-    </ul>
-  );
-
   render() {
     return (
       <div className="calendar">
         {this.renderHeader()}
-        {this.renderMonth()}
+        <Month days={this.getDays()} />
 
         <style jsx>{calendarStyles}</style>
       </div>
