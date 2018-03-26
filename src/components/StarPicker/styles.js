@@ -13,7 +13,7 @@ $star-filled : url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACYAAAAmCAYAAA
     height: 40px;
     box-sizing: border-box;
     content : $star-empty;
-    padding-right : 10px;
+    padding-right : 11px;
     cursor: pointer;
   }
   
