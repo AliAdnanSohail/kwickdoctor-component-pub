@@ -15,10 +15,8 @@ export const day = css`
     text-align: center;
     font-weight: 600;
     line-height: 40px;
-
-    :not(&--disabled) {
-      cursor: pointer;
-    }
+    background: transparent;
+    cursor: pointer;
 
     :focus {
       outline: none;
@@ -33,6 +31,7 @@ export const day = css`
     &--disabled {
       font-weight: 500;
       color: #bbbccd;
+      cursor: default;
     }
   }
 `;
@@ -47,20 +46,30 @@ export const events = css`
     right: 0;
     top: 0;
     bottom: 0;
-
+    display: block;
+    line-height: 4px;
     width: 20px;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-
+    &.events-qty-1 {
+      padding-top: 17px;
+    }
+    &.events-qty-2 {
+      padding-top: 14px;
+    }
+    &.events-qty-3 {
+      padding-top: 12px;
+    }
+    &.events-qty-4 {
+      padding-top: 9px;
+    }
+    &.events-qty-5 {
+      padding-top: 7px;
+    }
     &__item {
       display: block;
       width: 4px;
       height: 4px;
+      line-height: 4px;
       margin: 1px;
-
       background: #ffffff;
       border-radius: 100%;
     }
@@ -68,9 +77,11 @@ export const events = css`
     @media all and (max-width: 490px) {
       width: 100%;
       height: 11px;
+      padding-top: 0 !important;
       top: auto;
-      flex-direction: row;
-      align-items: baseline;
+      &__item {
+        display: inline-block;
+      }
     }
   }
 `;

@@ -7,15 +7,12 @@ export const header = css`
     padding: 0;
     margin: 0;
     list-style: none;
-
-    display: flex;
-    align-items: baseline;
     font-size: 0.745rem;
 
     &__item {
       width: 70px;
       height: 40px;
-
+      float: left;
       line-height: 40px;
       color: #bbbccd;
       font-weight: 300;
@@ -30,15 +27,10 @@ export const header = css`
 
 export const navigation = css`
   .navigation {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-
     margin-bottom: 14px;
+    position: relative;
 
     &__month {
-      flex: 1;
       text-align: center;
       font-weight: bold;
       font-size: 1rem;
@@ -50,10 +42,6 @@ export const navigation = css`
     }
 
     button {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      justify-content: center;
       border: none;
       margin: 0;
       padding: 0;
@@ -63,6 +51,13 @@ export const navigation = css`
       background: transparent;
       outline: none;
       cursor: pointer;
+      position: absolute;
+      left: 0;
+      top: 0;
+      &.next {
+        left: auto;
+        right: 0;
+      }
 
       svg {
         width: 14px !important;
@@ -84,11 +79,9 @@ export const month = css`
     padding: 0;
     margin: 0;
     list-style: none;
-
-    display: flex;
-    flex-wrap: wrap;
-    align-items: baseline;
-
     font-size: 0.745rem;
+    li {
+      float: left;
+    }
   }
 `;

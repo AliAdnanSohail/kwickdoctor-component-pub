@@ -22,9 +22,18 @@ storiesOf('Calendar', module)
         { date: moment(), name: 'event' },
         { date: moment(), name: 'event' },
         { date: moment(), name: 'event' },
+        { date: moment(), name: 'event' },
+        { date: moment(), name: 'event' },
         { date: moment().add(1, 'day'), name: 'event' },
         { date: moment().add(1, 'day'), name: 'event' },
-        { date: moment().add(5, 'day'), name: 'event' },
+        { date: moment().add(1, 'day'), name: 'event' },
+        { date: moment().add(1, 'day'), name: 'event' },
+        { date: moment().add(2, 'day'), name: 'event' },
+        { date: moment().add(2, 'day'), name: 'event' },
+        { date: moment().add(2, 'day'), name: 'event' },
+        { date: moment().add(3, 'day'), name: 'event' },
+        { date: moment().add(3, 'day'), name: 'event' },
+        { date: moment().add(4, 'day'), name: 'event' },
       ]}
       onSelect={action('onSelect')}
     />

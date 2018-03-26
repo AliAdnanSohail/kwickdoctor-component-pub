@@ -46,7 +46,7 @@ export default class Calendar extends Component {
     return days.map(day => ({
       day,
       disabled: (min && day.isBefore(min, 'day')) || (max && day.isAfter(max, 'day')),
-      selected: day.isSame(selected, 'month') && day.isSame(selected, 'day'),
+      selected: day.isSame(selected, 'day'),
       events: this.getEvents(day),
       onSelect: this.onSelect,
     }));
@@ -63,7 +63,7 @@ export default class Calendar extends Component {
 
     return (
       <div className="navigation">
-        <button onClick={() => this.onChangeMonth(-1)}>
+        <button className="prev" onClick={() => this.onChangeMonth(-1)}>
           <PreviousIcon size="xsmall" />
         </button>
 
@@ -73,7 +73,7 @@ export default class Calendar extends Component {
           {current.format('YYYY')}
         </div>
 
-        <button onClick={() => this.onChangeMonth(1)}>
+        <button className="next" onClick={() => this.onChangeMonth(1)}>
           <NextIcon size="xsmall" />
         </button>
 

@@ -13,11 +13,12 @@ export default class Day extends Component {
 
   getDots = () => {
     const { events, selected } = this.props;
+    const classes = classnames('events', `events-qty-${events.length}`);
 
     return (
       selected &&
       events.length > 0 && (
-        <ul className="events">
+        <ul className={classes}>
           {events.map(event => (
             <li key={`${event.date.format('D')}-${Math.random()}`} className="events__item" />
           ))}
