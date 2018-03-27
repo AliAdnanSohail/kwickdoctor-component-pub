@@ -28,6 +28,7 @@ const baseProps = {
   ],
   onSelect() {},
   selected: moment(testDate),
+  hasEvents: true,
 };
 
 it('Calendar renders correctly', () => {
@@ -78,8 +79,8 @@ it('Calendar events dots shows correctly', () => {
   const button = element.find(`.day--date--${clickDate.format('YYYY-MM-DD')}`);
   button.simulate('click');
 
-  expect(element.find(`.day--selected.day--date--${clickDate.format('YYYY-MM-DD')}`)).toHaveLength(1);
-  expect(element.find(`.day--selected.day--date--${clickDate.format('YYYY-MM-DD')} .events__item`)).toHaveLength(4);
+  expect(element.find(`.day--selected--with-events.day--date--${clickDate.format('YYYY-MM-DD')}`)).toHaveLength(1);
+  expect(element.find(`.day--selected--with-events.day--date--${clickDate.format('YYYY-MM-DD')} .events__item`)).toHaveLength(4);
 });
 
 it('Calendar min and max sets correctly', () => {

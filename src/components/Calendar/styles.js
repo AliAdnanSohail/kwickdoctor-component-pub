@@ -10,10 +10,10 @@ export const header = css`
     font-size: 0.745rem;
 
     &__item {
-      width: 70px;
-      height: 40px;
+      width: 14.2857143%;
+      height: 80px;
       float: left;
-      line-height: 40px;
+      line-height: 80px;
       color: #bbbccd;
       font-weight: 300;
 
@@ -27,14 +27,14 @@ export const header = css`
 
 export const navigation = css`
   .navigation {
-    margin-bottom: 14px;
+    margin-bottom: 15px;
     position: relative;
 
     &__month {
       text-align: center;
       font-weight: bold;
-      font-size: 1rem;
-
+      font-size: 1.1rem;
+      padding-top: 5px;
       span {
         display: inline-block;
         padding: 0 7px;
@@ -46,7 +46,7 @@ export const navigation = css`
       margin: 0;
       padding: 0;
 
-      width: 70px;
+      width: 95px;
 
       background: transparent;
       outline: none;
@@ -69,7 +69,7 @@ export const navigation = css`
 
 export const calendar = css`
   .calendar {
-    max-width: 490px;
+    max-width: 665px;
     color: ${settings.textColor};
   }
 `;

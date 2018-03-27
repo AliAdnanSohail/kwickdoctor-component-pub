@@ -5,8 +5,8 @@ import settings from '../../../utils/style-helper';
 export const day = css`
   .day {
     position: relative;
-    width: 70px;
-    height: 40px;
+    width: 100%;
+    height: 80px;
     padding: 0;
 
     border: none;
@@ -14,7 +14,7 @@ export const day = css`
     color: #4f5362;
     text-align: center;
     font-weight: 600;
-    line-height: 40px;
+    line-height: 80px;
     background: transparent;
     cursor: pointer;
 
@@ -23,9 +23,25 @@ export const day = css`
     }
 
     &--selected {
-      border-radius: 20px;
-      color: #ffffff;
-      background: ${settings.primaryColor};
+      &--without-events {
+        padding: 13px 0;
+        line-height: 54px;
+        .day__border {
+          max-width: 100%;
+          width: 54px;
+          height: 54px;
+          display: inline-block;
+          color: #ffffff;
+          background: ${settings.primaryColor};
+          border-radius: 100%;
+        }
+      }
+      &--with-events {
+        color: #ffffff;
+        background: ${settings.primaryColor};
+        border-radius: 40px;
+      }
+      
     }
 
     &--disabled {
@@ -33,6 +49,13 @@ export const day = css`
       color: #bbbccd;
       cursor: default;
     }
+
+    @media all and (max-width: 630px) {
+      padding: 0 !important;
+      height: 54px;
+      line-height: 54px;
+    }
+    
   }
 `;
 
@@ -48,21 +71,21 @@ export const events = css`
     bottom: 0;
     display: block;
     line-height: 4px;
-    width: 20px;
+    width: 27px;
     &.events-qty-1 {
-      padding-top: 17px;
+      padding-top: 36px;
     }
     &.events-qty-2 {
-      padding-top: 14px;
+      padding-top: 33px;
     }
     &.events-qty-3 {
-      padding-top: 12px;
+      padding-top: 31px;
     }
     &.events-qty-4 {
-      padding-top: 9px;
+      padding-top: 28px;
     }
     &.events-qty-5 {
-      padding-top: 7px;
+      padding-top: 26px;
     }
     &__item {
       display: block;
@@ -74,9 +97,9 @@ export const events = css`
       border-radius: 100%;
     }
 
-    @media all and (max-width: 490px) {
+    @media all and (max-width: 630px) {
       width: 100%;
-      height: 11px;
+      height: 18px;
       padding-top: 0 !important;
       top: auto;
       &__item {

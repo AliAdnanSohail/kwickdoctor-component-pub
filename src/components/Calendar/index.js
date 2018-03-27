@@ -23,7 +23,7 @@ export default class Calendar extends Component {
 
   onChangeMonth = count => this.setState({ current: this.state.current.add(count, 'month') });
 
-  getEvents = date => this.props.events.filter(event => date.isSame(event.date, 'day'));
+  getEvents = date => (this.props.hasEvents ? this.props.events.filter(event => date.isSame(event.date, 'day')) : []);
 
   getDays = () => {
     const { min, max } = this.props;
@@ -64,7 +64,7 @@ export default class Calendar extends Component {
     return (
       <div className="navigation">
         <button className="prev" onClick={() => this.onChangeMonth(-1)}>
-          <PreviousIcon size="xsmall" />
+          <PreviousIcon />
         </button>
 
         <div className="navigation__month">
@@ -74,7 +74,7 @@ export default class Calendar extends Component {
         </div>
 
         <button className="next" onClick={() => this.onChangeMonth(1)}>
-          <NextIcon size="xsmall" />
+          <NextIcon />
         </button>
 
         <style jsx>{navigation}</style>
@@ -116,6 +116,7 @@ Calendar.propTypes = {
   selected: PropTypes.object,
   events: PropTypes.array,
   onSelect: PropTypes.func,
+  hasEvents: PropTypes.bool,
 };
 
 Calendar.defaultProps = {
@@ -124,4 +125,5 @@ Calendar.defaultProps = {
   selected: moment(),
   events: [],
   onSelect: () => {},
+  hasEvents: false,
 };

@@ -61,9 +61,9 @@ var Calendar = function (_Component) {
     };
 
     _this.getEvents = function (date) {
-      return _this.props.events.filter(function (event) {
+      return _this.props.hasEvents ? _this.props.events.filter(function (event) {
         return date.isSame(event.date, 'day');
-      });
+      }) : [];
     };
 
     _this.getDays = function () {
@@ -115,7 +115,7 @@ var Calendar = function (_Component) {
               return _this.onChangeMonth(-1);
             }, className: 'jsx-' + _styles.navigation.__scopedHash + ' ' + 'prev'
           },
-          _react2.default.createElement(_base.PreviousIcon, { size: 'xsmall' })
+          _react2.default.createElement(_base.PreviousIcon, null)
         ),
         _react2.default.createElement(
           'div',
@@ -138,7 +138,7 @@ var Calendar = function (_Component) {
               return _this.onChangeMonth(1);
             }, className: 'jsx-' + _styles.navigation.__scopedHash + ' ' + 'next'
           },
-          _react2.default.createElement(_base.NextIcon, { size: 'xsmall' })
+          _react2.default.createElement(_base.NextIcon, null)
         ),
         _react2.default.createElement(_style2.default, {
           styleId: _styles.navigation.__scopedHash,
@@ -208,7 +208,8 @@ Calendar.propTypes = {
   max: _propTypes2.default.object,
   selected: _propTypes2.default.object,
   events: _propTypes2.default.array,
-  onSelect: _propTypes2.default.func
+  onSelect: _propTypes2.default.func,
+  hasEvents: _propTypes2.default.bool
 };
 
 Calendar.defaultProps = {
@@ -216,5 +217,6 @@ Calendar.defaultProps = {
   max: undefined,
   selected: moment(),
   events: [],
-  onSelect: function onSelect() {}
+  onSelect: function onSelect() {},
+  hasEvents: false
 };

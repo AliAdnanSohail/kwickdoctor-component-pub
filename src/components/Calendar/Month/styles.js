@@ -5,9 +5,10 @@ export default css`
     padding: 0;
     margin: 0;
     list-style: none;
-    font-size: 0.745rem;
+    font-size: 1rem;
     li {
       float: left;
+      width: 14.2857143%;
     }
   }
 `;
