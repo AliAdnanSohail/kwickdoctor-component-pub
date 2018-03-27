@@ -26,9 +26,3 @@ it('accent button renders correctly', () => {
 
   expect(element.find('button').hasClass('button--accent')).toEqual(true);
 });
-
-it('accent button renders correctly', () => {
-  const element = mount(<Button onClick={() => {}} title="Hello!" circle />);
-
-  expect(element.find('button').hasClass('button--circle')).toEqual(true);
-});

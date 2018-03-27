@@ -3,5 +3,6 @@ export default {
   textColor: '#2A2A30',
   borderColor: '#E7E7F0',
   placeholderColor: '#828393',
+  errorColor: '#FF5572',
   secondaryColor: '#505362',
 };
