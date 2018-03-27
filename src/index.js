@@ -1,3 +1,4 @@
+export { default as AvatarPicker } from './components/AvatarPicker';
 export { default as Button } from './components/Button';
 export { default as ButtonGroup } from './components/ButtonGroup';
 export { default as Calendar } from './components/Calendar';
