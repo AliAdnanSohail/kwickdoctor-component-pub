@@ -22,6 +22,7 @@ export default class Day extends Component {
           {events.map(event => (
             <li key={`${event.date.format('D')}-${Math.random()}`} className="events__item" />
           ))}
+
           <style jsx>{eventsStyles}</style>
         </ul>
       )
@@ -47,6 +48,7 @@ export default class Day extends Component {
           {day.format('D')}
         </span>
         {this.getDots()}
+
         <style jsx>{dayStyles}</style>
       </button>
     );
