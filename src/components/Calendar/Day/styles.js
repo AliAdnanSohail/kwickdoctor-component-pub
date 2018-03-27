@@ -5,7 +5,7 @@ import settings from '../../../utils/style-helper';
 export const day = css`
   .day {
     position: relative;
-    width: 95px;
+    width: 100%;
     height: 80px;
     padding: 0;
 
@@ -27,6 +27,7 @@ export const day = css`
         padding: 13px 0;
         line-height: 54px;
         .day__border {
+          max-width: 100%;
           width: 54px;
           height: 54px;
           display: inline-block;
@@ -47,6 +48,12 @@ export const day = css`
       font-weight: 500;
       color: #bbbccd;
       cursor: default;
+    }
+
+    @media all and (max-width: 630px) {
+      padding: 0 !important;
+      height: 54px;
+      line-height: 54px;
     }
     
   }
@@ -90,9 +97,9 @@ export const events = css`
       border-radius: 100%;
     }
 
-    @media all and (max-width: 490px) {
+    @media all and (max-width: 630px) {
       width: 100%;
-      height: 11px;
+      height: 18px;
       padding-top: 0 !important;
       top: auto;
       &__item {

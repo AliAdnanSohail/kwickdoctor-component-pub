@@ -10,7 +10,7 @@ export const header = css`
     font-size: 0.745rem;
 
     &__item {
-      width: 95px;
+      width: 14.2857143%;
       height: 80px;
       float: left;
       line-height: 80px;

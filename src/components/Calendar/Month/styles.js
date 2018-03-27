@@ -8,6 +8,7 @@ export default css`
     font-size: 1rem;
     li {
       float: left;
+      width: 14.2857143%;
     }
   }
 `;
