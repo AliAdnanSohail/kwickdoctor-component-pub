@@ -11,13 +11,28 @@ $star-filled : url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACYAAAAmCAYAAA
     display: inline-block;
     position: relative;
     height: 40px;
-    box-sizing: border-box;
-    content : $star-empty;
     padding-right : 11px;
     cursor: pointer;
+    input{
+      display:none;
+    }
+    .star-grey{
+      fill:#bcbecf;
+    }
+    .star-green{
+      visibility:hidden;
+      fill:#bcbecf;
+    }
   }
   
   .star:hover, .star.active, .star:focus {
-    content: $star-filled;
+    .star-grey{
+      visibility:hidden;
+      fill:#bcbecf;
+    }
+    .star-green{
+      visibility:visible;
+      fill:#80c985;
+    }
   }
 `;
