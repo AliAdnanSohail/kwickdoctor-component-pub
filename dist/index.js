@@ -67,4 +67,13 @@ Object.defineProperty(exports, 'Toast', {
   }
 });
 
+var _validations = require('./utils/validations');
+
+Object.defineProperty(exports, 'Validate', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_validations).default;
+  }
+});
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }

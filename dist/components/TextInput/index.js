@@ -9,6 +9,8 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
+var _class, _temp, _initialiseProps;
+
 var _style = require('styled-jsx/style');
 
 var _style2 = _interopRequireDefault(_style);
@@ -21,9 +23,13 @@ var _propTypes = require('prop-types');
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
 
-var _classnames = require('classnames');
+var _Input = require('./Input');
 
-var _classnames2 = _interopRequireDefault(_classnames);
+var _Input2 = _interopRequireDefault(_Input);
+
+var _TextArea = require('./TextArea');
+
+var _TextArea2 = _interopRequireDefault(_TextArea);
 
 var _styles = require('./styles');
 
@@ -37,7 +43,7 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var TextInput = function (_Component) {
+var TextInput = (_temp = _class = function (_Component) {
   _inherits(TextInput, _Component);
 
   function TextInput(props) {
@@ -45,68 +51,7 @@ var TextInput = function (_Component) {
 
     var _this = _possibleConstructorReturn(this, (TextInput.__proto__ || Object.getPrototypeOf(TextInput)).call(this, props));
 
-    _this.handleChange = function (event) {
-      _this.setState({ value: event.target.value });
-      _this.props.onChange(event);
-    };
-
-    _this.errorMessage = function () {
-      var error = _this.props.error;
-
-
-      return error && _react2.default.createElement(
-        'div',
-        {
-          className: 'jsx-' + _styles.error.__scopedHash + ' ' + 'input-error'
-        },
-        error,
-        _react2.default.createElement(_style2.default, {
-          styleId: _styles.error.__scopedHash,
-          css: _styles.error.__scoped
-        })
-      );
-    };
-
-    _this.inputElement = function () {
-      var _this$props = _this.props,
-          id = _this$props.id,
-          name = _this$props.name,
-          placeholder = _this$props.placeholder,
-          error = _this$props.error,
-          className = _this$props.className,
-          multiline = _this$props.multiline;
-
-
-      var classes = (0, _classnames2.default)(className, { error: error });
-
-      var elementProps = {
-        id: id,
-        name: name,
-        placeholder: placeholder,
-        className: classes,
-        value: _this.state.value,
-        onChange: _this.handleChange
-      };
-
-      return _react2.default.createElement(
-        _react.Fragment,
-        null,
-        multiline ? _react2.default.createElement(
-          _react.Fragment,
-          null,
-          _react2.default.createElement('textarea', elementProps)
-        ) : _react2.default.createElement(
-          _react.Fragment,
-          null,
-          _react2.default.createElement('input', _extends({ type: 'text' }, elementProps))
-        ),
-        _react2.default.createElement(
-          'style',
-          null,
-          _styles.textInput
-        )
-      );
-    };
+    _initialiseProps.call(_this);
 
     _this.state = { value: props.value };
     return _this;
@@ -119,8 +64,6 @@ var TextInput = function (_Component) {
           id = _props.id,
           label = _props.label;
 
-      var input = this.inputElement();
-      var errorMessage = this.errorMessage();
 
       return _react2.default.createElement(
         'div',
@@ -133,8 +76,7 @@ var TextInput = function (_Component) {
           },
           label
         ),
-        input,
-        errorMessage,
+        this.inputElement(),
         _react2.default.createElement(_style2.default, {
           styleId: _styles2.default.__scopedHash,
           css: _styles2.default.__scoped
@@ -148,29 +90,63 @@ var TextInput = function (_Component) {
   }]);
 
   return TextInput;
-}(_react.Component);
+}(_react.Component), _initialiseProps = function _initialiseProps() {
+  var _this2 = this;
 
+  this.handleChange = function (event) {
+    _this2.setState({ value: event.target.value });
+    _this2.props.onChange(event);
+  };
+
+  this.inputElement = function () {
+    var _props2 = _this2.props,
+        id = _props2.id,
+        name = _props2.name,
+        placeholder = _props2.placeholder,
+        type = _props2.type,
+        className = _props2.className,
+        multiline = _props2.multiline,
+        validations = _props2.validations;
+    var value = _this2.state.value;
+
+
+    var props = {
+      id: id,
+      name: name,
+      type: type,
+      value: value,
+      placeholder: placeholder,
+      validations: validations,
+      className: className,
+      onChange: _this2.handleChange
+    };
+
+    return multiline ? _react2.default.createElement(_TextArea2.default, _extends({ name: name }, props)) : _react2.default.createElement(_Input2.default, _extends({ name: name }, props));
+  };
+}, _temp);
 exports.default = TextInput;
 
 
 TextInput.propTypes = {
   id: _propTypes2.default.string.isRequired,
   name: _propTypes2.default.string,
-  placeholder: _propTypes2.default.string,
   label: _propTypes2.default.string,
   value: _propTypes2.default.string,
-  error: _propTypes2.default.string,
+  type: _propTypes2.default.string,
+  placeholder: _propTypes2.default.string,
   className: _propTypes2.default.string,
   multiline: _propTypes2.default.bool,
+  validations: _propTypes2.default.array,
   onChange: _propTypes2.default.func.isRequired
 };
 
 TextInput.defaultProps = {
   name: '',
-  placeholder: '',
   label: '',
   value: '',
-  error: '',
+  type: 'text',
+  placeholder: '',
   className: undefined,
-  multiline: false
+  multiline: false,
+  validations: []
 };
