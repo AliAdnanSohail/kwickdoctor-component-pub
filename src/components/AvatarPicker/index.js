@@ -44,7 +44,7 @@ export default class AvatarPicker extends Component {
         <div className="container">
           <label className="avatar-container" htmlFor={id} aria-label="Edit image">
             <input type="file" name={name} id={id} className="inputFile" ref={(input) => { this.fileUpload = input; }} onChange={e => this.handleUpload(e)} />
-            <img className="user" alt="" src={this.state.image == null ? defaultImage : this.state.image} />
+            <img className="upload-img" alt="" src={this.state.image == null ? defaultImage : this.state.image} />
           </label>
           <style jsx>{styles}</style>
         </div>
@@ -59,7 +59,9 @@ export default class AvatarPicker extends Component {
         </div>
         <label className="avatar-container" htmlFor={id} aria-label="Edit image">
           <input type="file" name={name} id={id} className="inputFile" ref={(input) => { this.fileUpload = input; }} onChange={e => this.handleUpload(e)} />
-          <img className="user" alt="" src={this.state.image == null ? defaultImage : this.state.image} />
+          <div className="thumb">
+            <img className="thumb-img" alt="" src={this.state.image == null ? defaultImage : this.state.image} />
+          </div>
         </label>
         <div className="icon-edit">
           <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 21 21" fill="#ffffff" htmlFor={id} onClick={e => this.handleEdit(e)} >

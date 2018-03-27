@@ -19,12 +19,22 @@ export default css`
 .icon-upload{
   padding-right: 10px;
 }
-
-.user{
+.upload-img{
   border-radius: 50%;
   width:75px;
   height: 75px;
 }
+.thumb{
+  overflow: hidden;
+  height:75px;
+  width:75px;
+  border-radius: 50%;
+  img{
+    max-width:100px;
+    max-height: 100px;    
+  }
+}
+
 .avatar-container {
   color: #C1C2CF;
   padding: 17px 12px;
