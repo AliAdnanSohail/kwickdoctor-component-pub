@@ -56,11 +56,12 @@ var Day = function (_Component) {
           events = _this$props.events,
           selected = _this$props.selected;
 
+      var classes = (0, _classnames2.default)('events', 'events-qty-' + events.length);
 
       return selected && events.length > 0 && _react2.default.createElement(
         'ul',
         {
-          className: 'jsx-' + _styles.events.__scopedHash + ' ' + 'events'
+          className: 'jsx-' + _styles.events.__scopedHash + ' ' + (classes || '')
         },
         events.map(function (event) {
           return _react2.default.createElement('li', { key: event.date.format('D') + '-' + Math.random(), className: 'jsx-' + _styles.events.__scopedHash + ' ' + 'events__item'
@@ -83,7 +84,7 @@ var Day = function (_Component) {
           disabled = _props.disabled;
 
 
-      var classes = (0, _classnames2.default)('day', { 'day--selected': selected }, { 'day--disabled': disabled });
+      var classes = (0, _classnames2.default)('day', { 'day--selected': selected }, { 'day--disabled': disabled }, 'day--date--' + day.format('YYYY-MM-DD'));
 
       return _react2.default.createElement(
         'button',

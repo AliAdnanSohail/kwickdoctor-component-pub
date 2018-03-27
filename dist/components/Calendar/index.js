@@ -27,9 +27,9 @@ var _momentRange = require('moment-range');
 
 var _base = require('grommet/components/icons/base');
 
-var _Day = require('./Day');
+var _Month = require('./Month');
 
-var _Day2 = _interopRequireDefault(_Day);
+var _Month2 = _interopRequireDefault(_Month);
 
 var _styles = require('./styles');
 
@@ -85,7 +85,7 @@ var Calendar = function (_Component) {
         return {
           day: day,
           disabled: min && day.isBefore(min, 'day') || max && day.isAfter(max, 'day'),
-          selected: day.isSame(selected, 'month') && day.isSame(selected, 'day'),
+          selected: day.isSame(selected, 'day'),
           events: _this.getEvents(day),
           onSelect: _this.onSelect
         };
@@ -113,7 +113,7 @@ var Calendar = function (_Component) {
           'button',
           { onClick: function onClick() {
               return _this.onChangeMonth(-1);
-            }, className: 'jsx-' + _styles.navigation.__scopedHash
+            }, className: 'jsx-' + _styles.navigation.__scopedHash + ' ' + 'prev'
           },
           _react2.default.createElement(_base.PreviousIcon, { size: 'xsmall' })
         ),
@@ -136,7 +136,7 @@ var Calendar = function (_Component) {
           'button',
           { onClick: function onClick() {
               return _this.onChangeMonth(1);
-            }, className: 'jsx-' + _styles.navigation.__scopedHash
+            }, className: 'jsx-' + _styles.navigation.__scopedHash + ' ' + 'next'
           },
           _react2.default.createElement(_base.NextIcon, { size: 'xsmall' })
         ),
@@ -175,27 +175,6 @@ var Calendar = function (_Component) {
       );
     };
 
-    _this.renderMonth = function () {
-      return _react2.default.createElement(
-        'ul',
-        {
-          className: 'jsx-' + _styles.month.__scopedHash + ' ' + 'month'
-        },
-        _this.getDays().map(function (item) {
-          return _react2.default.createElement(
-            'li',
-            { key: item.day.format('YYYY-MM-DD') + '-' + Math.random(), className: 'jsx-' + _styles.month.__scopedHash
-            },
-            _react2.default.createElement(_Day2.default, item)
-          );
-        }),
-        _react2.default.createElement(_style2.default, {
-          styleId: _styles.month.__scopedHash,
-          css: _styles.month.__scoped
-        })
-      );
-    };
-
     _this.state = { selected: props.selected.clone(), current: props.selected.clone() };
     return _this;
   }
@@ -209,7 +188,7 @@ var Calendar = function (_Component) {
           className: 'jsx-' + _styles.calendar.__scopedHash + ' ' + 'calendar'
         },
         this.renderHeader(),
-        this.renderMonth(),
+        _react2.default.createElement(_Month2.default, { days: this.getDays() }),
         _react2.default.createElement(_style2.default, {
           styleId: _styles.calendar.__scopedHash,
           css: _styles.calendar.__scoped
