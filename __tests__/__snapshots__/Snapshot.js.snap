@@ -1,5 +1,38 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Storyshots AvatarPicker simple avatar picker 1`] = `
+<div
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
+>
+  <div
+    className="jsx-3276445436 container"
+  >
+    <label
+      aria-label="Edit image"
+      className="jsx-3276445436 avatar-container"
+      htmlFor="text-input"
+    >
+      <input
+        className="jsx-3276445436 inputFile"
+        id="text-input"
+        name="name"
+        onChange={[Function]}
+        type="file"
+      />
+      <img
+        alt=""
+        className="jsx-3276445436 user"
+        src="data:image/png;base64,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"
+      />
+    </label>
+  </div>
+</div>
+`;
+
 exports[`Storyshots Button simple button 1`] = `
 <div
   style={
