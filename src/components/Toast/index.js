@@ -5,46 +5,62 @@ import classnames from 'classnames';
 import styles from './styles';
 
 export default class Toast extends Component {
-  closeClicked() {
-    console.log('Close clicked', this.props);
+  constructor(props) {
+    super(props);
+    this.state = {
+      showToast: false,
+    };
   }
 
-  render() {
-    const {
-      message, primary, boxstyle,
-    } = this.props;
+  closeToast = () => {
+    this.setState({
+      showToast: false,
+    });
+    this.props.onHideClick('Toast hidden');
+  }
 
-    const classes = classnames(
-      'box',
-      { 'box--primary': primary },
-      boxstyle,
-    );
+  openToast = () => {
+    this.setState({
+      showToast: true,
+    });
+    this.props.onShowClick('Toast shown');
+  }
+
+
+  render() {
+    const { primary, boxstyle } = this.props;
+    const classes = classnames('box', { primary }, boxstyle);
 
     return (
-      <div className={classes}>
-        <div className="circle" />
-        <div className="message">
-          {message}
+      <React.Fragment>
+        <button onClick={this.openToast} style={{ marginBottom: 20 }}>Show Toast</button>
+        { this.state.showToast &&
+        <div className={classes}>
+          <div className="circle" />
+          <div className="message">
+            {this.props.children}
+          </div>
+          <div className="icons-close">
+            <button className="icon" onClick={this.closeToast} />
+          </div>
+          <style jsx>{styles}</style>
         </div>
-        <div className="icons-close">
-          <div className="icon" onClick={(e) => this.closeClicked(e)} />
-        </div>
-        <style jsx>{styles}</style>
-      </div>
+        }
+      </React.Fragment>
     );
   }
 }
 
 Toast.propTypes = {
-  message: PropTypes.string,
   primary: PropTypes.bool,
   boxstyle: PropTypes.string,
-  closeClicked: PropTypes.func,
+  onHideClick: PropTypes.func,
+  onShowClick: PropTypes.func,
 };
 
 Toast.defaultProps = {
-  message: 'You have a booked appointment..bla bla',
   primary: false,
   boxstyle: 'rectangle-22',
-  closeClicked: null,
+  onHideClick: null,
+  onShowClick: null,
 };

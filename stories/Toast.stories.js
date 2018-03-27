@@ -13,6 +13,25 @@ storiesOf('Toast', module)
   .addDecorator(checkA11y)
   .addDecorator(withTests({ results })('Toast'))
   .addDecorator(getStory => <div style={{ padding: '24px' }}>{getStory()}</div>)
-  .add('simple toast', () => (
-    <Toast primary={boolean('primary', false)} />
+  .add('Default toast', () => (
+    <div>
+      <Toast
+        primary={boolean('primary', false)}
+        onHideClick={action('hidden')}
+        onShowClick={action('shown')}
+      >
+        {text('Content', 'You have a booked appointment')}
+      </Toast>
+    </div>
+  ))
+  .add('Primary toast', () => (
+    <div>
+      <Toast
+        primary={boolean('primary', true)}
+        onHideClick={action('hidden')}
+        onShowClick={action('shown')}
+      >
+        {text('Content', 'Good news! You\'re going to die soon!')}
+      </Toast>
+    </div>
   ));
