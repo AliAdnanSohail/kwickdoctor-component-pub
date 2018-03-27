@@ -20,7 +20,7 @@ export const error = css`
 
     border-radius: 3px;
     background-color: #ffffff;
-    box-shadow: 0 2px 14px 0 rgba(0, 0, 0, 0.14);
+    box-shadow: 0 2px 40px 0 rgba(0, 0, 0, 0.05);
     color: ${settings.errorColor};
 
     font: {
