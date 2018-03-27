@@ -1,0 +1,106 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  className="jsx-3612707381"
+>
+  <fieldset
+    className="jsx-3612707381"
+  >
+    <div
+      className="jsx-3612707381 radio-button-group"
+    >
+      <label
+        className="jsx-3612707381 button"
+        htmlFor="bv1-group"
+      >
+        button 1
+        <input
+          checked={false}
+          className="jsx-3612707381"
+          id="bv1-group"
+          name="group"
+          onChange={[Function]}
+          type="radio"
+          value="bv1"
+        />
+      </label>
+      <label
+        className="jsx-3612707381 button"
+        htmlFor="bv2-group"
+      >
+        button 2
+        <input
+          checked={false}
+          className="jsx-3612707381"
+          id="bv2-group"
+          name="group"
+          onChange={[Function]}
+          type="radio"
+          value="bv2"
+        />
+      </label>
+      <label
+        className="jsx-3612707381 button"
+        htmlFor="bv3-group"
+      >
+        button 3
+        <input
+          checked={false}
+          className="jsx-3612707381"
+          id="bv3-group"
+          name="group"
+          onChange={[Function]}
+          type="radio"
+          value="bv3"
+        />
+      </label>
+      <label
+        className="jsx-3612707381 button"
+        htmlFor="bv4-group"
+      >
+        button 4
+        <input
+          checked={false}
+          className="jsx-3612707381"
+          id="bv4-group"
+          name="group"
+          onChange={[Function]}
+          type="radio"
+          value="bv4"
+        />
+      </label>
+      <label
+        className="jsx-3612707381 button"
+        htmlFor="bv5-group"
+      >
+        button 5
+        <input
+          checked={false}
+          className="jsx-3612707381"
+          id="bv5-group"
+          name="group"
+          onChange={[Function]}
+          type="radio"
+          value="bv5"
+        />
+      </label>
+      <label
+        className="jsx-3612707381 button"
+        htmlFor="bv6-group"
+      >
+        button 6
+        <input
+          checked={false}
+          className="jsx-3612707381"
+          id="bv6-group"
+          name="group"
+          onChange={[Function]}
+          type="radio"
+          value="bv6"
+        />
+      </label>
+    </div>
+  </fieldset>
+</div>
+`;
