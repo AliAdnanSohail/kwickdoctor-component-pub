@@ -522,11 +522,33 @@ exports[`Storyshots Calendar default 1`] = `
         className="jsx-3342723031"
       >
         <button
-          className="jsx-2185100080 day day--selected"
+          className="jsx-2185100080 day day--disabled"
           onClick={[Function]}
           type="button"
         >
           25
+        </button>
+      </li>
+      <li
+        className="jsx-3342723031"
+      >
+        <button
+          className="jsx-2185100080 day day--disabled"
+          onClick={[Function]}
+          type="button"
+        >
+          26
+        </button>
+      </li>
+      <li
+        className="jsx-3342723031"
+      >
+        <button
+          className="jsx-2185100080 day day--selected"
+          onClick={[Function]}
+          type="button"
+        >
+          27
           <ul
             className="jsx-3152833426 events"
           >
@@ -540,28 +562,6 @@ exports[`Storyshots Calendar default 1`] = `
               className="jsx-3152833426 events__item"
             />
           </ul>
-        </button>
-      </li>
-      <li
-        className="jsx-3342723031"
-      >
-        <button
-          className="jsx-2185100080 day"
-          onClick={[Function]}
-          type="button"
-        >
-          26
-        </button>
-      </li>
-      <li
-        className="jsx-3342723031"
-      >
-        <button
-          className="jsx-2185100080 day"
-          onClick={[Function]}
-          type="button"
-        >
-          27
         </button>
       </li>
       <li
@@ -673,7 +673,7 @@ exports[`Storyshots Datepicker Datepicker 1`] = `
           tabIndex={undefined}
           title={undefined}
           type="text"
-          value="25 Mar, 2018"
+          value="27 Mar, 2018"
         />
       </div>
     </div>
@@ -707,6 +707,23 @@ exports[`Storyshots Datepicker Datepicker 1`] = `
   <style>
     .react-datepicker-wrapper,.react-datepicker__input-container{width:100%;}
   </style>
+</div>
+`;
+
+exports[`Storyshots Modal default 1`] = `
+<div
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
+>
+  <button
+    className="jsx-780996603 button"
+    onClick={[Function]}
+  >
+    Open modal
+  </button>
 </div>
 `;
 
@@ -759,21 +776,21 @@ exports[`Storyshots Toast simple toast 1`] = `
   }
 >
   <div
-    className="jsx-4177506176 box rectangle-22"
+    className="jsx-701169459 box rectangle-22"
   >
     <div
-      className="jsx-4177506176 circle"
+      className="jsx-701169459 circle"
     />
     <div
-      className="jsx-4177506176 message"
+      className="jsx-701169459 message"
     >
       You have a booked appointment..bla bla
     </div>
     <div
-      className="jsx-4177506176 icons-close"
+      className="jsx-701169459 icons-close"
     >
       <div
-        className="jsx-4177506176 icon"
+        className="jsx-701169459 icon"
         onClick={[Function]}
       />
     </div>

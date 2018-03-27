@@ -1,11 +1,39 @@
-import Background from './Background';
-import Box from './Box';
-import Example from './Example';
-import AriaModal from './AriaModal';
+import React, { Component, Fragment } from 'react';
+import PropTypes from 'prop-types';
+import ReactAriaModal from 'react-aria-modal';
 
-export default {
-  Background,
-  Box,
-  Example,
-  AriaModal,
+import Backdrop from './Backdrop';
+import Content from './Content';
+
+export default class AriaModal extends Component {
+  getApplicationNode = () => document.getElementById(this.props.rootId);
+
+  getModal = () => (
+    <ReactAriaModal
+      onExit={this.props.onClose}
+      titleText={this.props.titleText}
+      getApplicationNode={this.getApplicationNode}
+    >
+      <Backdrop onClick={this.props.onClose}>
+        <Content onClose={this.props.onClose} {...this.props} />
+      </Backdrop>
+    </ReactAriaModal>
+  );
+
+  render() {
+    return this.props.show && this.getModal();
+  }
+}
+
+AriaModal.propTypes = {
+  show: PropTypes.bool,
+  rootId: PropTypes.string,
+  titleText: PropTypes.string,
+  onClose: PropTypes.func.isRequired,
+};
+
+AriaModal.defaultProps = {
+  show: false,
+  rootId: 'root',
+  titleText: 'dom one',
 };
