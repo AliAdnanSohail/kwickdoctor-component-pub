@@ -533,11 +533,22 @@ exports[`Storyshots Calendar default 1`] = `
         className="jsx-3850878744"
       >
         <button
-          className="jsx-18958608 day day--selected day--date--2018-03-26"
+          className="jsx-18958608 day day--disabled day--date--2018-03-26"
           onClick={[Function]}
           type="button"
         >
           26
+        </button>
+      </li>
+      <li
+        className="jsx-3850878744"
+      >
+        <button
+          className="jsx-18958608 day day--selected day--date--2018-03-27"
+          onClick={[Function]}
+          type="button"
+        >
+          27
           <ul
             className="jsx-1289224349 events events-qty-5"
           >
@@ -557,17 +568,6 @@ exports[`Storyshots Calendar default 1`] = `
               className="jsx-1289224349 events__item"
             />
           </ul>
-        </button>
-      </li>
-      <li
-        className="jsx-3850878744"
-      >
-        <button
-          className="jsx-18958608 day day--date--2018-03-27"
-          onClick={[Function]}
-          type="button"
-        >
-          27
         </button>
       </li>
       <li
@@ -679,7 +679,7 @@ exports[`Storyshots Datepicker Datepicker 1`] = `
           tabIndex={undefined}
           title={undefined}
           type="text"
-          value="26 Mar, 2018"
+          value="27 Mar, 2018"
         />
       </div>
     </div>
