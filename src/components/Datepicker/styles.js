@@ -143,7 +143,7 @@ export const calendar = css`
         text-transform: uppercase;
 
         font: {
-          size: 0.1rem;
+          size: 0.75rem;
           weight: 400;
         }
       }

@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import ReactDatePicker from 'react-datepicker';
 import moment from 'moment';
