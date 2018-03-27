@@ -29,13 +29,23 @@ export default class Day extends Component {
   };
 
   render() {
-    const { day, selected, disabled } = this.props;
+    const {
+      day, selected, disabled, events,
+    } = this.props;
 
-    const classes = classnames('day', { 'day--selected': selected }, { 'day--disabled': disabled }, `day--date--${day.format('YYYY-MM-DD')}`);
+    const classes = classnames(
+      'day',
+      { 'day--selected--without-events': selected && !events.length },
+      { 'day--selected--with-events': selected && !!events.length },
+      { 'day--disabled': disabled },
+      `day--date--${day.format('YYYY-MM-DD')}`,
+    );
 
     return (
       <button className={classes} type="button" onClick={this.onSelect}>
-        {day.format('D')}
+        <span className="day__border">
+          {day.format('D')}
+        </span>
         {this.getDots()}
         <style jsx>{dayStyles}</style>
       </button>

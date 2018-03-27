@@ -56,11 +56,12 @@ var Day = function (_Component) {
           events = _this$props.events,
           selected = _this$props.selected;
 
+      var classes = (0, _classnames2.default)('events', 'events-qty-' + events.length);
 
       return selected && events.length > 0 && _react2.default.createElement(
         'ul',
         {
-          className: 'jsx-' + _styles.events.__scopedHash + ' ' + 'events'
+          className: 'jsx-' + _styles.events.__scopedHash + ' ' + (classes || '')
         },
         events.map(function (event) {
           return _react2.default.createElement('li', { key: event.date.format('D') + '-' + Math.random(), className: 'jsx-' + _styles.events.__scopedHash + ' ' + 'events__item'
@@ -80,16 +81,23 @@ var Day = function (_Component) {
       var _props = this.props,
           day = _props.day,
           selected = _props.selected,
-          disabled = _props.disabled;
+          disabled = _props.disabled,
+          events = _props.events;
 
 
-      var classes = (0, _classnames2.default)('day', { 'day--selected': selected }, { 'day--disabled': disabled });
+      var classes = (0, _classnames2.default)('day', { 'day--selected--without-events': selected && !events.length }, { 'day--selected--with-events': selected && !!events.length }, { 'day--disabled': disabled }, 'day--date--' + day.format('YYYY-MM-DD'));
 
       return _react2.default.createElement(
         'button',
         { type: 'button', onClick: this.onSelect, className: 'jsx-' + _styles.day.__scopedHash + ' ' + (classes || '')
         },
-        day.format('D'),
+        _react2.default.createElement(
+          'span',
+          {
+            className: 'jsx-' + _styles.day.__scopedHash + ' ' + 'day__border'
+          },
+          day.format('D')
+        ),
         this.getDots(),
         _react2.default.createElement(_style2.default, {
           styleId: _styles.day.__scopedHash,
