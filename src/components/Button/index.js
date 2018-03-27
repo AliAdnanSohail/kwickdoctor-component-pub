@@ -4,15 +4,6 @@ import classnames from 'classnames';
 
 import styles from './styles';
 
-function ButtonIcon(props) {
-  if (props.icon && props.circle) {
-    return (
-      <img src={props.icon} alt="" />
-    );
-  }
-  return null;
-}
-
 export default class Button extends Component {
   render() {
     const {
@@ -28,9 +19,9 @@ export default class Button extends Component {
     );
 
     return (
-      <button className={classes} onClick={onClick} aria-label={title} >
-        <ButtonIcon icon={icon} circle={circle} />
-        {title}
+      <button className={classes} onClick={onClick} aria-label={title}>
+        {icon}
+        {!circle && title}
         <style jsx>{styles}</style>
       </button>
     );
@@ -44,7 +35,7 @@ Button.propTypes = {
   squared: PropTypes.bool,
   accent: PropTypes.bool,
   circle: PropTypes.bool,
-  icon: PropTypes.string,
+  icon: PropTypes.element,
 };
 
 Button.defaultProps = {
@@ -52,5 +43,5 @@ Button.defaultProps = {
   squared: false,
   circle: false,
   accent: false,
-  icon: '',
+  icon: undefined,
 };

@@ -3,8 +3,7 @@ import settings from '../../utils/style-helper';
 
 export default css`
   .button {
-    padding: 12px 16px 14px 17px;
-    height: 52px;
+    padding: 13px 54px;
 
     background-color: ${settings.primaryColor};
     box-sizing: border-box;
@@ -13,6 +12,8 @@ export default css`
     color: #ffffff;
 
     line-height: 26px;
+
+    height: 52px;
 
     border: {
       width: 1px;
@@ -48,15 +49,24 @@ export default css`
       background-color: #ffffff;
       border-color: #ffffff;
     }
-    &--circle{
-      border : none;
+    &--circle {
+      border: none;
+      border-radius: 50px;
+
       width: 50px;
       height: 50px;
+
       text-align: center;
-      padding: 16px 15px 15px 16px;
-      font-size: 0px;
-      line-height: 1.428571429;
-      border-radius: 50px;
+      padding: 0;
+
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+
+      .grommetux-control-icon {
+        fill: #fff;
+      }
     }
   }
 `;

@@ -1,8 +1,9 @@
-import React, { Component, Fragment } from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import classnames from 'classnames';
 
-import styles, { error as errorStyles, textInput, label as labelStyles } from './styles';
+import Input from './Input';
+import TextArea from './TextArea';
+import styles, { label as labelStyles } from './styles';
 
 export default class TextInput extends Component {
   constructor(props) {
@@ -16,62 +17,34 @@ export default class TextInput extends Component {
     this.props.onChange(event);
   };
 
-  errorMessage = () => {
-    const { error } = this.props;
-
-    return (
-      error && (
-        <div className="input-error">
-          {error}
-
-          <style jsx>{errorStyles}</style>
-        </div>
-      )
-    );
-  };
-
   inputElement = () => {
     const {
-      id, name, placeholder, error, className, multiline,
+      id, name, placeholder, type, className, multiline, validations,
     } = this.props;
 
-    const classes = classnames(className, { error });
+    const { value } = this.state;
 
-    const elementProps = {
+    const props = {
       id,
       name,
+      type,
+      value,
       placeholder,
-      className: classes,
-      value: this.state.value,
+      validations,
+      className,
       onChange: this.handleChange,
     };
 
-    return (
-      <Fragment>
-        {multiline ? (
-          <Fragment>
-            <textarea {...elementProps} />
-          </Fragment>
-        ) : (
-          <Fragment>
-            <input type="text" {...elementProps} />
-          </Fragment>
-        )}
-        <style>{textInput}</style>
-      </Fragment>
-    );
+    return multiline ? <TextArea name={name} {...props} /> : <Input name={name} {...props} />;
   };
 
   render() {
     const { id, label } = this.props;
-    const input = this.inputElement();
-    const errorMessage = this.errorMessage();
 
     return (
       <div>
         <label htmlFor={id}>{label}</label>
-        {input}
-        {errorMessage}
+        {this.inputElement()}
 
         <style jsx>{styles}</style>
         <style jsx>{labelStyles}</style>
@@ -83,21 +56,23 @@ export default class TextInput extends Component {
 TextInput.propTypes = {
   id: PropTypes.string.isRequired,
   name: PropTypes.string,
-  placeholder: PropTypes.string,
   label: PropTypes.string,
   value: PropTypes.string,
-  error: PropTypes.string,
+  type: PropTypes.string,
+  placeholder: PropTypes.string,
   className: PropTypes.string,
   multiline: PropTypes.bool,
+  validations: PropTypes.array,
   onChange: PropTypes.func.isRequired,
 };
 
 TextInput.defaultProps = {
   name: '',
-  placeholder: '',
   label: '',
   value: '',
-  error: '',
+  type: 'text',
+  placeholder: '',
   className: undefined,
   multiline: false,
+  validations: [],
 };
