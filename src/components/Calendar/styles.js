@@ -21,6 +21,11 @@ export const header = css`
         align: center;
         transform: uppercase;
       }
+
+      @media all and (max-width: 630px) {
+        height: 40px;
+        line-height: 40px;
+      }
     }
   }
 `;
