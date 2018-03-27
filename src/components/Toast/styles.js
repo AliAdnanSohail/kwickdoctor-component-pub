@@ -14,7 +14,7 @@ export default css`
   width: 392px;
   border-radius: 4px;
   background-color: #FFFFFF;
-  box-shadow: 0px 1px 20px 5px rgba(13, 78, 88, 0.5);
+  box-shadow: 0 2px 40px 0 rgba(0, 0, 0, 0.05);
   }
 
   // indicator
