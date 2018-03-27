@@ -20,5 +20,6 @@ storiesOf('Datepicker', module)
       onChange={action('changed')}
       label={text('label', 'Datepicker')}
       dateFormat={text('dateFormat', 'DD MMM, YYYY')}
+      error={text('error', '')}
     />
   ));

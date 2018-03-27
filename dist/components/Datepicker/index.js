@@ -23,6 +23,10 @@ var _moment = require('moment');
 
 var _moment2 = _interopRequireDefault(_moment);
 
+var _classnames = require('classnames');
+
+var _classnames2 = _interopRequireDefault(_classnames);
+
 require('react-datepicker/dist/react-datepicker.css');
 
 var _styles = require('./styles');
@@ -43,6 +47,17 @@ var Datepicker = function (_Component) {
 
     var _this = _possibleConstructorReturn(this, (Datepicker.__proto__ || Object.getPrototypeOf(Datepicker)).call(this, props));
 
+    _this.errorMessage = function () {
+      var error = _this.props.error;
+
+
+      return error && _react2.default.createElement(
+        'div',
+        { className: 'input-error' },
+        error
+      );
+    };
+
     _this.handleChange = function (date) {
       _this.setState({ value: date });
       _this.props.onChange(date);
@@ -61,12 +76,14 @@ var Datepicker = function (_Component) {
           id = _props.id,
           label = _props.label,
           name = _props.name,
-          dateFormat = _props.dateFormat;
+          dateFormat = _props.dateFormat,
+          error = _props.error;
 
+      var blockClasses = (0, _classnames2.default)('datepicker-block', { 'has-error': !!error });
 
       return _react2.default.createElement(
-        _react.Fragment,
-        null,
+        'div',
+        { className: blockClasses },
         _react2.default.createElement(
           'label',
           { htmlFor: id },
@@ -84,6 +101,12 @@ var Datepicker = function (_Component) {
           dateFormat: dateFormat,
           useWeekdaysShort: true
         }),
+        this.errorMessage(),
+        _react2.default.createElement(
+          'style',
+          null,
+          _styles.datepickerBlock
+        ),
         _react2.default.createElement(
           'style',
           null,
@@ -103,6 +126,11 @@ var Datepicker = function (_Component) {
           'style',
           null,
           _styles.wrapper
+        ),
+        _react2.default.createElement(
+          'style',
+          null,
+          _styles.error
         )
       );
     }
@@ -120,12 +148,14 @@ Datepicker.propTypes = {
   label: _propTypes2.default.string,
   value: _propTypes2.default.object,
   dateFormat: _propTypes2.default.string,
-  onChange: _propTypes2.default.func.isRequired
+  onChange: _propTypes2.default.func.isRequired,
+  error: _propTypes2.default.string
 };
 
 Datepicker.defaultProps = {
   name: '',
   label: '',
   value: (0, _moment2.default)(),
-  dateFormat: 'DD MMM, YYYY'
+  dateFormat: 'DD MMM, YYYY',
+  error: ''
 };
