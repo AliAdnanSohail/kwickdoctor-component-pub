@@ -3,35 +3,33 @@ import css from 'styled-jsx/css';
 import settings from '../../utils/style-helper';
 
 export default css`
-.content-label :not(:first-child){
-padding-left: 10px
-}
 .card-picker{
-  display: inline-block;
   text-align: center;
-  vertical-align:middle;
 }
 .card{
-  height: 350px;	
-  width: 268px;	
+  min-width: 140px;
+  max-width: 240px;
+  height: 100%;
   border: 1px solid #EFF0F4;	
   border-radius: 25px;
-  display: inline-block;
+  padding: 20px 10px;
+  margin: 10px;
+  float: left;
 }
 .card.active{
-  border: 1px solid #0C97F9; border-radius: 25px;
+  border: 1px solid #0C97F9; 
 }
 .card input{
   display:none;
 }
 .card img{
-  margin-top : 20px;
-  width:240px;
-  height:240px;
+  max-width:100%;
+  max-height:80%;
 }
 .content{
-  line-height: 80px;
+  width: 100%;
+  margin-top:20px;
+  margin-bottom:0px;
 }
-
-  
+ 
 `;
