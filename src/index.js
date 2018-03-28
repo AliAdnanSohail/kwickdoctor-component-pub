@@ -9,5 +9,6 @@ export { default as FileInput } from './components/FileInput';
 export { default as Modal } from './components/Modal';
 export { default as TextInput } from './components/TextInput';
 export { default as Toast } from './components/Toast';
+export { default as FileViewer } from './components/FileViewer';
 
 export { default as Validate } from './utils/validations';
