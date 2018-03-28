@@ -29,10 +29,10 @@ export default css`
   height:75px;
   width:75px;
   border-radius: 50%;
-  img{
-    max-width:100px;
+}
+.thumb img{
+    max-width: 100px;
     max-height: 100px;    
-  }
 }
 
 .avatar-container {
