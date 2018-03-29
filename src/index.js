@@ -8,6 +8,7 @@ export { default as Datepicker } from './components/Datepicker';
 export { default as FileInput } from './components/FileInput';
 export { default as Modal } from './components/Modal';
 export { default as TextInput } from './components/TextInput';
-export { default as Toast } from './components/Toast';
+export { default as ToastNotification } from './components/ToastNotification';
+export { default as ToastManager } from './components/ToastNotification/Manager';
 
 export { default as Validate } from './utils/validations';

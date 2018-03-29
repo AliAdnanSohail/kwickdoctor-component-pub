@@ -99,6 +99,7 @@
     "react-aria-modal": "^2.12.1",
     "react-datepicker": "^1.2.2",
     "react-motion": "^0.5.2",
+    "react-transition-group": "^2.3.0",
     "react-validation": "^3.0.7",
     "styled-jsx": "^2.2.6",
     "validator": "^9.4.1"
