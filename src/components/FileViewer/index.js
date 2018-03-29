@@ -1,25 +1,26 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-import styles from './styles';
+function FileExtension(filename) {
+  // rocket jump : all files which are not pdf renders as image
+  return /[^.]+$/.exec(filename).toString() === 'pdf';
+}
 
 export default class FileViewer extends Component {
+  constructor(props) {
+    super(props);
+    this.state = { isPdf: FileExtension(props.src[0].src) };
+  }
+
   render() {
-    const {
-      title, onClick,
-    } = this.props;
-
     return (
-      <button onClick={onClick}>
-        {title}
-
-        <style jsx>{styles}</style>
-      </button>
+      <React.Fragment>
+        {this.state.isPdf ? ('yes') : ('no') }
+      </React.Fragment>
     );
   }
 }
 
 FileViewer.propTypes = {
-  onClick: PropTypes.func.isRequired,
-  title: PropTypes.string.isRequired,
+  src: PropTypes.array.isRequired,
 };
