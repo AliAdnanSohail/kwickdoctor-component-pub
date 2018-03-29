@@ -17,5 +17,6 @@ storiesOf('StarPicker', module)
     <StarPicker
       onClick={action('clicked')}
       rank={number('rank', 3)}
+      amount={number('amount', 6)}
     />
   ));

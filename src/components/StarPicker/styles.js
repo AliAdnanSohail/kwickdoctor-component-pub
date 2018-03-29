@@ -14,7 +14,7 @@ $star-filled : url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACYAAAAmCAYAAA
     padding-right : 11px;
     cursor: pointer;
     input{
-      display:none;
+     display:none;
     }
     .star-grey{
       fill:#bcbecf;
