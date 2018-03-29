@@ -9,7 +9,7 @@ export default class Toast extends Component {
   componentDidMount = () => {
     const { timeOut } = this.props;
     if (timeOut !== 0) {
-      this.timer = setTimeout(this.requestHide, timeOut);
+      setTimeout(this.requestHide, timeOut);
     }
   };
 
@@ -37,9 +37,7 @@ export default class Toast extends Component {
 
     return (
       <div className={classes}>
-        <div className="circle-outer">
-          <div className="circle" />
-        </div>
+        <div className="circle" />
         <div className="message">
           {content}
         </div>

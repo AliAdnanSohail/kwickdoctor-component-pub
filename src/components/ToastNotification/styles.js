@@ -20,41 +20,37 @@ export default css`
     }
 
     &.rectangle-22 {
-      display: table;
       padding: 21px 18px;
       width: 392px;
       border-radius: 4px;
       background-color: #FFFFFF;
       box-shadow: 0 2px 40px 0 rgba(0, 0, 0, 0.05);
     }
-    .circle-outer {
-      padding: 5px 15px 0 0;
+    .circle {
+      margin: 5px 15px 0 0;
+      float: left;
+      display: block;
+      height: 7px;
       width: 7px;
-      display: table-cell;
-      .circle {
-        display: inline-block;
-        height: 7px;
-        width: 7px;
-        background-color: #222328;
-        border-radius: 50%;
-      }
+      background-color: #222328;
+      border-radius: 50%;
     }
     
     &.primary .circle {
       background-color: ${settings.primaryColor};
     }
     .message {
-      display: table-cell;
+      float: left;
       width: 335px;
       color: #222328;
       font-weight: 500;
       line-height: 18px;
     }
     .icons-close {
-      padding-left: 20px;
+
+      padding-top: 2px;
       width: 14px;
-      display: table-cell;
-      vertical-align: middle;
+      float: right;
     }
     .clear {
       clear: both;
@@ -92,7 +88,9 @@ export default css`
   left: 50%;
   margin-left: -196px;
 
-
+  .toNullHeight {
+    height: 0!important;
+  }
 
 }
 `;
