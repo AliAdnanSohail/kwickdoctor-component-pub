@@ -46,10 +46,10 @@ export default class ToastNotification extends Component {
   render() {
     const className = classnames('toast-container', { 'toast-container-empty': this.state.toasts.length === 0 });
 
-    return this.state.toasts.length > 0 && (
+    return (
       <div className={className}>
         <TransitionGroup>
-          {this.getToasts()}
+          {this.state.toasts.length > 0 && this.getToasts()}
         </TransitionGroup>
         <style>{styles}</style>
       </div>
@@ -62,5 +62,5 @@ ToastNotification.propTypes = {
 };
 
 ToastNotification.defaultProps = {
-  timeout: 400,
+  timeout: 200,
 };

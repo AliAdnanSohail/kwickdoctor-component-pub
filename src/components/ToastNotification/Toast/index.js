@@ -37,7 +37,9 @@ export default class Toast extends Component {
 
     return (
       <div className={classes}>
-        <div className="circle" />
+        <div className="circle-outer">
+          <div className="circle" />
+        </div>
         <div className="message">
           {content}
         </div>
@@ -46,6 +48,7 @@ export default class Toast extends Component {
             <CloseIcon />
           </button>
         </div>
+        <div className="clear" />
       </div>
     );
   }

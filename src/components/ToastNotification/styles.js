@@ -4,45 +4,67 @@ import settings from '../../utils/style-helper';
 
 export default css`
   .toast-box {
-    margin-top: 20px;
-    display: flex;
-    align-items: center;
+    margin-bottom: 10px;
     color: ${settings.textColor};
+    transition: all 200ms ease-out;
+    &.fade-enter {
+      opacity: 0.01;
+      transform: translate(40px);
+    }
+    &.fade-exit {
+      
+    }
+    &.fade-exit-active {
+      opacity: 0.01;
+      transform: translate(40px);
+    }
+
     &.rectangle-22 {
-      height: 78px;
+      display: table;
+      padding: 21px 18px;
       width: 392px;
       border-radius: 4px;
       background-color: #FFFFFF;
       box-shadow: 0 2px 40px 0 rgba(0, 0, 0, 0.05);
     }
-    .circle {
-      height: 7px;
+    .circle-outer {
+      padding: 5px 15px 0 0;
       width: 7px;
-      margin: 15px;
-      background-color: #222328;
-      border-radius: 50%;
+      display: table-cell;
+      .circle {
+        display: inline-block;
+        height: 7px;
+        width: 7px;
+        background-color: #222328;
+        border-radius: 50%;
+      }
     }
+    
     &.primary .circle {
       background-color: ${settings.primaryColor};
     }
     .message {
-      width: 303px;
+      display: table-cell;
+      width: 335px;
       color: #222328;
       font-weight: 500;
       line-height: 18px;
     }
     .icons-close {
-      height: 21px;
-      width: 52px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      padding-left: 20px;
+      width: 14px;
+      display: table-cell;
+      vertical-align: middle;
+    }
+    .clear {
+      clear: both;
     }
 
     .icon {
-      height: 13px;
-      width: 13px;
-      background-size: 13px 13px;
+      padding: 0;
+      margin: 0;
+      height: 14px;
+      width: 14px;
       transition: all 0.3s;
       border: none;
       outline: none;
@@ -56,7 +78,7 @@ export default css`
       .grommetux-control-icon-close {
         height: 14px;
         width: 14px;
-    
+        display: inline-block;
         path {
           stroke-width: 4;
         }
@@ -66,23 +88,11 @@ export default css`
 
 .toast-container {
   position: absolute;
+  top: 10px;
+  left: 50%;
+  margin-left: -196px;
 
-  bottom: 10px;
-  right: 10px;
-  
-  .fade-enter {
-    opacity: 0.01;
-  }
-  .fade-enter-active {
-    opacity: 1;
-    transition: opacity 500ms ease-in;
-  }
-  .fade-exit {
-    opacity: 1;
-  }
-  .fade-exit-active {
-    opacity: 0.01;
-    transition: opacity 500ms ease-in;
-  }
+
+
 }
 `;

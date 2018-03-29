@@ -24,7 +24,7 @@ class Manager extends EventEmitter {
       onHideClick() {},
       timeOut: 5000,
     };
-    if (!toast.priority) {
+    if (toast.priority) {
       this.listToasts.unshift(Object.assign(defaultToast, toast));
     } else {
       this.listToasts.push(Object.assign(defaultToast, toast));
