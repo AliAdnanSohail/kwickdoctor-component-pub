@@ -38,37 +38,37 @@ export default class ToastNotification extends Component {
   };
 
   slowTop = (el) => {
-    function dimension(elm) {
+    function getHeight(elm) {
       let elmHeight;
       let elmMargin;
       if (document.all) {
-        elmHeight = elm.currentStyle.height;
+        elmHeight = parseInt(elm.currentStyle.height, 10);
         elmMargin = parseInt(elm.currentStyle.marginTop, 10)
         + parseInt(elm.currentStyle.marginBottom, 10)
         + parseInt(elm.currentStyle.paddingTop, 10)
         + parseInt(elm.currentStyle.paddingBottom, 10);
       } else {
-        elmHeight = document.defaultView.getComputedStyle(elm, '').getPropertyValue('height');
+        elmHeight = parseInt(document.defaultView.getComputedStyle(elm, '').getPropertyValue('height'), 10);
         elmMargin = parseInt(document.defaultView.getComputedStyle(elm, '').getPropertyValue('margin-top'), 10)
         + parseInt(document.defaultView.getComputedStyle(elm, '').getPropertyValue('margin-bottom'), 10)
         + parseInt(document.defaultView.getComputedStyle(elm, '').getPropertyValue('padding-bottom'), 10)
         + parseInt(document.defaultView.getComputedStyle(elm, '').getPropertyValue('padding-top'), 10);
       }
-      return (parseInt(elmHeight, 10) + parseInt(elmMargin, 10));
+
+      return elmHeight + elmMargin;
     }
 
-    const height = dimension(el);
+    const height = getHeight(el);
     const newDiv = document.createElement('div');
 
-
-    newDiv.style.height = `${height - 5}px`;
-    newDiv.style.transition = 'all 200ms ease-out';
+    newDiv.style.height = `${height}px`;
+    newDiv.className = 'plug';
 
     el.parentNode.insertBefore(newDiv, el);
 
     setTimeout(() => {
-      newDiv.className = 'toNullHeight';
-    }, 1);
+      newDiv.className = 'plug plug--zeroHeight';
+    });
 
     setTimeout(() => {
       newDiv.remove();

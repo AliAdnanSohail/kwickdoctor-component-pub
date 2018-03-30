@@ -18,7 +18,6 @@ export default css`
       opacity: 0.01;
       transform: translate(40px);
     }
-
     &.rectangle-22 {
       padding: 21px 18px;
       width: 392px;
@@ -55,7 +54,6 @@ export default css`
     .clear {
       clear: both;
     }
-
     .icon {
       padding: 0;
       margin: 0;
@@ -81,16 +79,16 @@ export default css`
       }
     }
   }
-
-.toast-container {
-  position: absolute;
-  top: 10px;
-  left: 50%;
-  margin-left: -196px;
-
-  .toNullHeight {
-    height: 0!important;
+  .toast-container {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    margin-left: -196px;
+    .plug {
+      transition: all 200ms ease-out;
+      &--zeroHeight {
+        height: 0!important;
+      }
+    }
   }
-
-}
 `;
