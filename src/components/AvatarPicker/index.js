@@ -59,9 +59,7 @@ export default class AvatarPicker extends Component {
         </div>
         <label className="avatar-container" htmlFor={id} aria-label="Edit image">
           <input type="file" name={name} id={id} className="inputFile" ref={(input) => { this.fileUpload = input; }} onChange={e => this.handleUpload(e)} />
-          <div className="thumb">
-            <img className="thumb-img" alt="" src={this.state.image == null ? defaultImage : this.state.image} />
-          </div>
+          <div className="thumb" style={{ backgroundImage: `url(${this.state.image})` }} />
         </label>
         <div className="icon-edit">
           <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 21 21" fill="#ffffff" htmlFor={id} onClick={e => this.handleEdit(e)} >

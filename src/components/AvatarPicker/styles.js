@@ -25,14 +25,11 @@ export default css`
   height: 75px;
 }
 .thumb{
-  overflow: hidden;
   height:75px;
   width:75px;
   border-radius: 50%;
-}
-.thumb img{
-    max-width: 100px;
-    max-height: 100px;    
+  background-position: center center;
+  background-size: cover;
 }
 
 .avatar-container {
