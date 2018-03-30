@@ -11,7 +11,7 @@ export default class ToastNotification extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      toasts: [],
+      toasts: props.initialToasts,
     };
   }
 
@@ -96,9 +96,11 @@ export default class ToastNotification extends Component {
 }
 
 ToastNotification.propTypes = {
+  initialToasts: PropTypes.array,
   timeout: PropTypes.number,
 };
 
 ToastNotification.defaultProps = {
+  initialToasts: [],
   timeout: 200,
 };
