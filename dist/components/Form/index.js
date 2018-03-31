@@ -13,6 +13,8 @@ var _react2 = _interopRequireDefault(_react);
 
 var _form = require('react-validation/build/form');
 
+var _form2 = _interopRequireDefault(_form);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -37,7 +39,7 @@ var Form = function (_Component) {
 
 
       return _react2.default.createElement(
-        _form.Form,
+        _form2.default,
         this.props,
         children
       );
