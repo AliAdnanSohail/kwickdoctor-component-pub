@@ -77,15 +77,16 @@ exports.default = Button;
 
 
 Button.propTypes = {
-  onClick: _propTypes2.default.func.isRequired,
   title: _propTypes2.default.string.isRequired,
   transparent: _propTypes2.default.bool,
   squared: _propTypes2.default.bool,
-  accent: _propTypes2.default.bool
+  accent: _propTypes2.default.bool,
+  onClick: _propTypes2.default.func
 };
 
 Button.defaultProps = {
   transparent: false,
   squared: false,
-  accent: false
+  accent: false,
+  onClick: function onClick() {}
 };
