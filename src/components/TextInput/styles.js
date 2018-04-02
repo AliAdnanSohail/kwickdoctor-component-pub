@@ -23,6 +23,8 @@ export const error = css`
     box-shadow: 0 2px 40px 0 rgba(0, 0, 0, 0.05);
     color: ${settings.errorColor};
 
+    z-index: 999;
+
     font: {
       size: 0.875rem;
       weight: 500;

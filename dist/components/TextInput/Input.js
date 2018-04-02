@@ -16,13 +16,15 @@ var _react2 = _interopRequireDefault(_react);
 
 var _reactValidation = require('react-validation');
 
-var _classnames = require('classnames');
+var _classnames2 = require('classnames');
 
-var _classnames2 = _interopRequireDefault(_classnames);
+var _classnames3 = _interopRequireDefault(_classnames2);
 
 var _styles = require('./styles');
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
 
@@ -36,7 +38,7 @@ exports.default = (0, _reactValidation.control)(function (_ref) {
     _react.Fragment,
     null,
     _react2.default.createElement('input', _extends({}, props, {
-      className: 'jsx-' + _styles.error.__scopedHash + ' ' + ((0, _classnames2.default)(props.className, { error: error }) || '')
+      className: 'jsx-' + _styles.error.__scopedHash + ' ' + ((0, _classnames3.default)(props.className, _defineProperty({}, isChanged && isUsed && error, error)) || '')
     })),
     isChanged && isUsed && error && _react2.default.createElement(
       'div',

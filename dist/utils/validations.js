@@ -11,11 +11,19 @@ var _validator2 = _interopRequireDefault(_validator);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var required = function required(value) {
-  return !value.toString().trim().length && 'This filed is required';
+  if (!value.toString().trim().length) {
+    return 'This filed is required';
+  }
+
+  return null;
 };
 
 var email = function email(value) {
-  return !_validator2.default.isEmail(value) && value + ' is not a valid email.';
+  if (!_validator2.default.isEmail(value)) {
+    return value + ' is not a valid email.';
+  }
+
+  return null;
 };
 
 exports.default = {
