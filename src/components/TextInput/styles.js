@@ -15,6 +15,9 @@ export const error = css`
     width: auto;
     max-width: 100%;
 
+    box-sizing: border-box;
+    word-wrap: break-word;
+
     padding: 12px 16px;
     margin-top: -6px;
 
