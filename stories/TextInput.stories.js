@@ -21,7 +21,7 @@ storiesOf('TextInput', module)
         name={text('name', 'name')}
         onChange={action('changed')}
         placeholder={text('placeholder', 'text input')}
-        value={text('value', 'example text')}
+        value={text('value', '')}
         label={text('label', 'Text input')}
         className={text('class name', '')}
         multiline={boolean('multiline', false)}
