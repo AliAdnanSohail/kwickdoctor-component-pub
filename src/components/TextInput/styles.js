@@ -13,7 +13,7 @@ export const error = css`
     left: 16px;
 
     width: auto;
-    max-width: 100%;
+    max-width: calc(100% - 32px);
 
     box-sizing: border-box;
     word-wrap: break-word;
