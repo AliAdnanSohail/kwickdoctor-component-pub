@@ -8,7 +8,7 @@ export default css`
 `;
 
 export const error = css`
-  .input-error {
+  .error {
     position: absolute;
     left: 16px;
 
@@ -117,8 +117,8 @@ export const textInput = css`
       border-color: ${settings.primaryColor};
     }
 
-    &.error,
-    &.error:focus {
+    &.invalid,
+    &.invalid:focus {
       border-color: ${settings.errorColor};
     }
   }
