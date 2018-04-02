@@ -10,3 +10,5 @@ export { default as Form } from './Form';
 export { default as Modal } from './Modal';
 export { default as TextInput } from './TextInput';
 export { default as Toast } from './Toast';
+export { default as Stepper } from './Stepper/Stepper';
+export { default as Step } from './Stepper/Step';
