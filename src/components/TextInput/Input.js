@@ -8,7 +8,7 @@ export default control(({
   error, isChanged, isUsed, ...props
 }) => (
   <Fragment>
-    <input {...props} className={classnames(props.className, { error })} />
+    <input {...props} className={classnames(props.className, { error: !!error })} />
     {isChanged && isUsed && error && <div className="input-error">{error}</div>}
 
     <style>{textInput}</style>

@@ -36,7 +36,7 @@ exports.default = (0, _reactValidation.control)(function (_ref) {
     _react.Fragment,
     null,
     _react2.default.createElement('textarea', _extends({}, props, {
-      className: 'jsx-' + _styles.error.__scopedHash + ' ' + ((0, _classnames2.default)(props.className, { error: error }) || '')
+      className: 'jsx-' + _styles.error.__scopedHash + ' ' + ((0, _classnames2.default)(props.className, { error: !!error }) || '')
     })),
     isChanged && isUsed && error && _react2.default.createElement(
       'div',
