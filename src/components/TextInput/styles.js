@@ -59,7 +59,7 @@ export const error = css`
 export const label = css`
   label {
     color: ${settings.textColor};
-    display: block;
+    display: inline-block;
     margin-bottom: 6px;
 
     font: {
