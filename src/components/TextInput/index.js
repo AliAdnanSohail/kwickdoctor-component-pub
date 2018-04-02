@@ -42,7 +42,7 @@ export default class TextInput extends Component {
     const { id, label } = this.props;
 
     return (
-      <div>
+      <div className="form-field">
         <label htmlFor={id}>{label}</label>
         {this.inputElement()}
 
