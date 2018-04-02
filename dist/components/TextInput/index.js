@@ -68,7 +68,7 @@ var TextInput = (_temp = _class = function (_Component) {
       return _react2.default.createElement(
         'div',
         {
-          className: 'jsx-' + _styles2.default.__scopedHash + ' jsx-' + _styles.label.__scopedHash
+          className: 'jsx-' + _styles2.default.__scopedHash + ' jsx-' + _styles.label.__scopedHash + ' ' + 'form-field'
         },
         _react2.default.createElement(
           'label',
