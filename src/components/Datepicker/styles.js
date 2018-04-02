@@ -212,7 +212,7 @@ export const error = css`
     left: 4px;
 
     width: auto;
-    max-width: 50%;
+    max-width: 100%;
 
     padding: 12px 16px;
     margin-top: -6px;
