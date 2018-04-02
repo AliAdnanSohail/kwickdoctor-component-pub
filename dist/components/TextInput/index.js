@@ -23,6 +23,10 @@ var _propTypes = require('prop-types');
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
 
+var _classnames = require('classnames');
+
+var _classnames2 = _interopRequireDefault(_classnames);
+
 var _Input = require('./Input');
 
 var _Input2 = _interopRequireDefault(_Input);
@@ -62,13 +66,14 @@ var TextInput = (_temp = _class = function (_Component) {
     value: function render() {
       var _props = this.props,
           id = _props.id,
-          label = _props.label;
+          label = _props.label,
+          containerClassName = _props.containerClassName;
 
 
       return _react2.default.createElement(
         'div',
         {
-          className: 'jsx-' + _styles2.default.__scopedHash + ' jsx-' + _styles.label.__scopedHash + ' ' + 'form-field'
+          className: 'jsx-' + _styles2.default.__scopedHash + ' jsx-' + _styles.label.__scopedHash + ' ' + ((0, _classnames2.default)('form-field', containerClassName) || '')
         },
         _react2.default.createElement(
           'label',

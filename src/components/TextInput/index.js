@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import classnames from 'classnames';
 
 import Input from './Input';
 import TextArea from './TextArea';
@@ -39,10 +40,10 @@ export default class TextInput extends Component {
   };
 
   render() {
-    const { id, label } = this.props;
+    const { id, label, containerClassName } = this.props;
 
     return (
-      <div className="form-field">
+      <div className={classnames('form-field', containerClassName)}>
         <label htmlFor={id}>{label}</label>
         {this.inputElement()}
 
