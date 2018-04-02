@@ -28,15 +28,16 @@ export default class Button extends Component {
 }
 
 Button.propTypes = {
-  onClick: PropTypes.func.isRequired,
   title: PropTypes.string.isRequired,
   transparent: PropTypes.bool,
   squared: PropTypes.bool,
   accent: PropTypes.bool,
+  onClick: PropTypes.func,
 };
 
 Button.defaultProps = {
   transparent: false,
   squared: false,
   accent: false,
+  onClick: () => {},
 };

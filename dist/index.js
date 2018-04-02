@@ -4,30 +4,24 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _Button = require('./components/Button');
+var _components = require('./components');
 
-Object.defineProperty(exports, 'Button', {
-  enumerable: true,
-  get: function get() {
-    return _interopRequireDefault(_Button).default;
-  }
+Object.keys(_components).forEach(function (key) {
+  if (key === "default" || key === "__esModule") return;
+  Object.defineProperty(exports, key, {
+    enumerable: true,
+    get: function get() {
+      return _components[key];
+    }
+  });
 });
 
-var _Card = require('./components/Card');
+var _validations = require('./utils/validations');
 
-Object.defineProperty(exports, 'Card', {
+Object.defineProperty(exports, 'Validate', {
   enumerable: true,
   get: function get() {
-    return _interopRequireDefault(_Card).default;
-  }
-});
-
-var _TextInput = require('./components/TextInput');
-
-Object.defineProperty(exports, 'TextInput', {
-  enumerable: true,
-  get: function get() {
-    return _interopRequireDefault(_TextInput).default;
+    return _interopRequireDefault(_validations).default;
   }
 });
 
