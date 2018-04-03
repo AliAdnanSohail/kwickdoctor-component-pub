@@ -7,10 +7,6 @@ exports.default = undefined;
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _style = require('styled-jsx/style');
-
-var _style2 = _interopRequireDefault(_style);
-
 var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
@@ -23,9 +19,13 @@ var _classnames = require('classnames');
 
 var _classnames2 = _interopRequireDefault(_classnames);
 
-var _styles = require('./styles');
+var _Close = require('grommet/components/icons/base/Close');
 
-var _styles2 = _interopRequireDefault(_styles);
+var _Close2 = _interopRequireDefault(_Close);
+
+var _Manager = require('./../Manager');
+
+var _Manager2 = _interopRequireDefault(_Manager);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -38,29 +38,40 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 var Toast = function (_Component) {
   _inherits(Toast, _Component);
 
-  function Toast(props) {
+  function Toast() {
+    var _ref;
+
+    var _temp, _this, _ret;
+
     _classCallCheck(this, Toast);
 
-    var _this = _possibleConstructorReturn(this, (Toast.__proto__ || Object.getPrototypeOf(Toast)).call(this, props));
+    for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
 
-    _this.closeToast = function () {
-      _this.setState({
-        showToast: false
-      });
-      _this.props.onHideClick('Toast hidden');
-    };
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Toast.__proto__ || Object.getPrototypeOf(Toast)).call.apply(_ref, [this].concat(args))), _this), _this.componentDidMount = function () {
+      var timeOut = _this.props.timeOut;
 
-    _this.openToast = function () {
-      _this.setState({
-        showToast: true
-      });
-      _this.props.onShowClick('Toast shown');
-    };
+      if (timeOut !== 0) {
+        setTimeout(_this.requestHide, timeOut);
+      }
+    }, _this.closeToast = function () {
+      var onHideClick = _this.props.onHideClick;
 
-    _this.state = {
-      showToast: false
-    };
-    return _this;
+      if (onHideClick) {
+        onHideClick();
+      }
+      _this.requestHide();
+    }, _this.requestHide = function () {
+      var _this$props = _this.props,
+          onRequestHide = _this$props.onRequestHide,
+          id = _this$props.id;
+
+      if (onRequestHide) {
+        onRequestHide();
+      }
+      _Manager2.default.remove(id);
+    }, _temp), _possibleConstructorReturn(_this, _ret);
   }
 
   _createClass(Toast, [{
@@ -68,46 +79,30 @@ var Toast = function (_Component) {
     value: function render() {
       var _props = this.props,
           primary = _props.primary,
-          boxstyle = _props.boxstyle;
+          boxstyle = _props.boxstyle,
+          content = _props.content;
 
-      var classes = (0, _classnames2.default)('box', { primary: primary }, boxstyle);
+      var classes = (0, _classnames2.default)('toast-box', { primary: primary }, boxstyle);
 
       return _react2.default.createElement(
-        _react2.default.Fragment,
-        null,
+        'div',
+        { className: classes },
+        _react2.default.createElement('div', { className: 'circle' }),
         _react2.default.createElement(
-          'button',
-          { onClick: this.openToast, style: { marginBottom: 20 } },
-          'Show Toast'
-        ),
-        this.state.showToast && _react2.default.createElement(
           'div',
-          {
-            className: 'jsx-' + _styles2.default.__scopedHash + ' ' + (classes || '')
-          },
-          _react2.default.createElement('div', {
-            className: 'jsx-' + _styles2.default.__scopedHash + ' ' + 'circle'
-          }),
+          { className: 'message' },
+          content
+        ),
+        _react2.default.createElement(
+          'div',
+          { className: 'icons-close' },
           _react2.default.createElement(
-            'div',
-            {
-              className: 'jsx-' + _styles2.default.__scopedHash + ' ' + 'message'
-            },
-            this.props.children
-          ),
-          _react2.default.createElement(
-            'div',
-            {
-              className: 'jsx-' + _styles2.default.__scopedHash + ' ' + 'icons-close'
-            },
-            _react2.default.createElement('button', { onClick: this.closeToast, className: 'jsx-' + _styles2.default.__scopedHash + ' ' + 'icon'
-            })
-          ),
-          _react2.default.createElement(_style2.default, {
-            styleId: _styles2.default.__scopedHash,
-            css: _styles2.default.__scoped
-          })
-        )
+            'button',
+            { className: 'icon', onClick: this.closeToast },
+            _react2.default.createElement(_Close2.default, null)
+          )
+        ),
+        _react2.default.createElement('div', { className: 'clear' })
       );
     }
   }]);
@@ -119,15 +114,19 @@ exports.default = Toast;
 
 
 Toast.propTypes = {
+  id: _propTypes2.default.string.isRequired,
+  content: _propTypes2.default.node.isRequired,
   primary: _propTypes2.default.bool,
   boxstyle: _propTypes2.default.string,
   onHideClick: _propTypes2.default.func,
-  onShowClick: _propTypes2.default.func
+  timeOut: _propTypes2.default.number,
+  onRequestHide: _propTypes2.default.func
 };
 
 Toast.defaultProps = {
   primary: false,
   boxstyle: 'rectangle-22',
   onHideClick: null,
-  onShowClick: null
+  timeOut: 5000,
+  onRequestHide: function onRequestHide() {}
 };

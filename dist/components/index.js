@@ -103,12 +103,21 @@ Object.defineProperty(exports, 'TextInput', {
   }
 });
 
-var _Toast = require('./Toast');
+var _ToastNotification = require('./ToastNotification');
 
-Object.defineProperty(exports, 'Toast', {
+Object.defineProperty(exports, 'ToastNotification', {
   enumerable: true,
   get: function get() {
-    return _interopRequireDefault(_Toast).default;
+    return _interopRequireDefault(_ToastNotification).default;
+  }
+});
+
+var _Manager = require('./ToastNotification/Manager');
+
+Object.defineProperty(exports, 'ToastManager', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_Manager).default;
   }
 });
 
