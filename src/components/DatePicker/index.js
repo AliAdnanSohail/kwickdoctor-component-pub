@@ -34,9 +34,11 @@ export default class DatePicker extends Component {
 
   render() {
     const {
-      id, label, name, dateFormat, error,
+      id, label, name, dateFormat, error, containerClassName,
     } = this.props;
-    const blockClasses = classnames('datepicker-block', { 'has-error': !!error });
+    const blockClasses = classnames('form-field', containerClassName, {
+      'has-error': !!error,
+    });
 
     return (
       <div className={blockClasses}>
@@ -73,6 +75,7 @@ DatePicker.propTypes = {
   dateFormat: PropTypes.string,
   onChange: PropTypes.func.isRequired,
   error: PropTypes.string,
+  containerClassName: PropTypes.string,
 };
 
 DatePicker.defaultProps = {
@@ -81,4 +84,5 @@ DatePicker.defaultProps = {
   value: moment(),
   dateFormat: 'DD MMM, YYYY',
   error: '',
+  containerClassName: null,
 };

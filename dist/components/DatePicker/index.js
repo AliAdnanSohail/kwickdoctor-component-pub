@@ -75,9 +75,12 @@ var DatePicker = function (_Component) {
           label = _props.label,
           name = _props.name,
           dateFormat = _props.dateFormat,
-          error = _props.error;
+          error = _props.error,
+          containerClassName = _props.containerClassName;
 
-      var blockClasses = (0, _classnames2.default)('datepicker-block', { 'has-error': !!error });
+      var blockClasses = (0, _classnames2.default)('form-field', containerClassName, {
+        'has-error': !!error
+      });
 
       return _react2.default.createElement(
         'div',
@@ -145,7 +148,8 @@ DatePicker.propTypes = {
   value: _propTypes2.default.object,
   dateFormat: _propTypes2.default.string,
   onChange: _propTypes2.default.func.isRequired,
-  error: _propTypes2.default.string
+  error: _propTypes2.default.string,
+  containerClassName: _propTypes2.default.string
 };
 
 DatePicker.defaultProps = {
@@ -153,5 +157,6 @@ DatePicker.defaultProps = {
   label: '',
   value: (0, _moment2.default)(),
   dateFormat: 'DD MMM, YYYY',
-  error: ''
+  error: '',
+  containerClassName: null
 };

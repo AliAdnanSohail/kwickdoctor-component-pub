@@ -3,13 +3,13 @@ import css from 'styled-jsx/css';
 import settings from '../../utils/style-helper';
 
 export const datepickerBlock = css`
-  .datepicker-block {
+  .form-field {
     position: relative;
   }
 `;
 
 export const calendar = css`
-.datepicker-block  .calendar {
+  .form-field .calendar {
     background-color: #ffffff;
 
     border: none;
@@ -152,7 +152,7 @@ export const calendar = css`
 `;
 
 export const datepicker = css`
-.datepicker-block  .datepicker {
+  .form-field .datepicker {
     width: 100%;
     padding: 12px 16px 12px 52px;
 
@@ -181,20 +181,21 @@ export const datepicker = css`
       border-color: ${settings.primaryColor};
     }
   }
-  .datepicker-block.has-error .datepicker, .datepicker-block.has-error .datepicker:focus {
+  .form-field.has-error .datepicker,
+  .form-field.has-error .datepicker:focus {
     border-color: ${settings.errorColor};
   }
 `;
 
 export const wrapper = css`
-  .datepicker-block .react-datepicker-wrapper,
-  .datepicker-block .react-datepicker__input-container {
+  .form-field .react-datepicker-wrapper,
+  .form-field .react-datepicker__input-container {
     width: 100%;
   }
 `;
 
 export const label = css`
-  .datepicker-block  label {
+  .form-field label {
     color: ${settings.textColor};
     display: block;
     margin-bottom: 6px;
@@ -207,7 +208,7 @@ export const label = css`
 `;
 
 export const error = css`
-  .datepicker-block .input-error {
+  .form-field .input-error {
     position: absolute;
     left: 4px;
 

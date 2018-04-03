@@ -62,6 +62,7 @@ TextInput.propTypes = {
   type: PropTypes.string,
   placeholder: PropTypes.string,
   className: PropTypes.string,
+  containerClassName: PropTypes.string,
   multiline: PropTypes.bool,
   validations: PropTypes.array,
   onChange: PropTypes.func.isRequired,
@@ -73,7 +74,8 @@ TextInput.defaultProps = {
   value: '',
   type: 'text',
   placeholder: '',
-  className: undefined,
+  className: null,
+  containerClassName: null,
   multiline: false,
   validations: [],
 };
