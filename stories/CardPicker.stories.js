@@ -21,8 +21,8 @@ storiesOf('CardPicker', module)
   .addDecorator(getStory => <div style={{ padding: '24px' }}>{getStory()}</div>)
   .add('simple card picker', () => (
     <CardPicker
-      onClick={action('clicked')}
       cards={defaultCards}
-      selectedOption="male"
+      selected={defaultCards[0].value}
+      onSelect={action('clicked')}
     />
   ));

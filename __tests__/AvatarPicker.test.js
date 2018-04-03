@@ -7,8 +7,9 @@ const baseProps = {
   id: 'test-id',
   name: 'input-avatar-picker',
 };
+
 it('renders correctly', () => {
-  const element = renderer.create(<AvatarPicker {...baseProps} >test</AvatarPicker>).toJSON();
+  const element = renderer.create(<AvatarPicker {...baseProps} onChange={() => {}} />).toJSON();
 
   expect(element).toMatchSnapshot();
 });

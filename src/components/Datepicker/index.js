@@ -45,7 +45,7 @@ export default class Datepicker extends Component {
           id={id}
           name={name}
           selected={this.state.value}
-          onChange={date => this.handleChange(date)}
+          onChange={this.handleChange}
           className="datepicker"
           calendarClassName="calendar"
           dateFormat={dateFormat}

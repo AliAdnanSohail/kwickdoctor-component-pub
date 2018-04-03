@@ -1,18 +1,20 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`TextInput renders correctly 1`] = `
-<form>
+<form
+  validateAll={[Function]}
+>
   <div
-    className="jsx-2941157369 jsx-1178708339"
+    className="jsx-1685083184 jsx-1043162979 form-field"
   >
     <label
-      className="jsx-2941157369 jsx-1178708339"
+      className="jsx-1685083184 jsx-1043162979"
       htmlFor="text-input-id"
     >
       text-input-label
     </label>
     <input
-      className="jsx-2542774814 text-input-class"
+      className="jsx-3846816657 text-input-class"
       id="text-input-id"
       name="text-input-name"
       onBlur={[Function]}
@@ -28,7 +30,7 @@ exports[`TextInput renders correctly 1`] = `
       input:-ms-input-placeholder,textarea:-ms-input-placeholder{color:#828393;}
       input:-moz-placeholder,textarea:-moz-placeholder{color:#828393;}
       input:focus,textarea:focus{outline:none;padding:12px 16px;border-color:#0c97f9;}
-      input.error,input.error:focus,textarea.error,textarea.error:focus{border-color:#FF5572;}
+      input.invalid,input.invalid:focus,textarea.invalid,textarea.invalid:focus{border-color:#FF5572;}
     </style>
   </div>
 </form>

@@ -1,0 +1,199 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Modal renders correctly 1`] = `
+<div
+  id="modalRoot"
+>
+  <AriaModal
+    onClose={[Function]}
+    rootId="modalRoot"
+    show={true}
+    title="dom one"
+  >
+    <Displaced
+      getApplicationNode={[Function]}
+      mounted={true}
+      onExit={[Function]}
+      titleText="dom one"
+    >
+      <Modal
+        dialogId="react-aria-modal-dialog"
+        escapeExits={true}
+        focusTrapPaused={false}
+        getApplicationNode={[Function]}
+        includeDefaultStyles={true}
+        mounted={true}
+        onExit={[Function]}
+        scrollDisabled={true}
+        titleText="dom one"
+        underlayClickExits={true}
+        underlayColor="rgba(0,0,0,0.5)"
+        underlayProps={Object {}}
+      >
+        <FocusTrap
+          _createFocusTrap={[Function]}
+          active={true}
+          focusTrapOptions={Object {}}
+          paused={false}
+          tag="div"
+        >
+          <div>
+            <div
+              onClick={[Function]}
+              style={
+                Object {
+                  "WebkitOverflowScrolling": "touch",
+                  "background": "rgba(0,0,0,0.5)",
+                  "cursor": "pointer",
+                  "height": "100%",
+                  "left": 0,
+                  "overflowX": "hidden",
+                  "overflowY": "auto",
+                  "position": "fixed",
+                  "textAlign": "center",
+                  "top": 0,
+                  "width": "100%",
+                  "zIndex": 1050,
+                }
+              }
+            >
+              <div
+                aria-label="dom one"
+                id="react-aria-modal-dialog"
+                key="b"
+                role="dialog"
+                style={
+                  Object {
+                    "cursor": "default",
+                    "display": "inline-block",
+                    "maxWidth": "100%",
+                    "outline": null,
+                    "textAlign": "left",
+                    "top": 0,
+                  }
+                }
+              >
+                <Backdrop
+                  onClick={[Function]}
+                >
+                  <div
+                    className="jsx-1434159477 backdrop"
+                    onMouseDown={[Function]}
+                    role="button"
+                    tabIndex={0}
+                  >
+                    <Content
+                      onClose={[Function]}
+                      rootId="modalRoot"
+                      show={true}
+                      title="dom one"
+                    >
+                      <Motion
+                        defaultStyle={
+                          Object {
+                            "opacity": 0,
+                            "transform": 40,
+                          }
+                        }
+                        style={
+                          Object {
+                            "opacity": Object {
+                              "damping": 26,
+                              "precision": 0.01,
+                              "stiffness": 170,
+                              "val": 1,
+                            },
+                            "transform": Object {
+                              "damping": 26,
+                              "precision": 0.01,
+                              "stiffness": 170,
+                              "val": 0,
+                            },
+                          }
+                        }
+                      >
+                        <div
+                          className="jsx-2367379789 modal"
+                          style={
+                            Object {
+                              "opacity": 0,
+                              "transform": "translateX(40px)",
+                            }
+                          }
+                        >
+                          <button
+                            className="jsx-2367379789 close"
+                            onClick={[Function]}
+                          >
+                            <Close
+                              responsive={true}
+                            >
+                              <svg
+                                aria-label="close"
+                                className="grommetux-control-icon grommetux-control-icon-close grommetux-control-icon--responsive"
+                                height="24px"
+                                role="img"
+                                version="1.1"
+                                viewBox="0 0 24 24"
+                                width="24px"
+                              >
+                                <path
+                                  d="M3,3 L21,21 M3,21 L21,3"
+                                  fill="none"
+                                  stroke="#000"
+                                  strokeWidth="2"
+                                />
+                              </svg>
+                            </Close>
+                          </button>
+                          <div
+                            className="jsx-2367379789 modal__content"
+                          >
+                            <ModalContent
+                              className="test-modal-content"
+                              text="test modal content"
+                            >
+                              <div
+                                className="test-modal-content"
+                              >
+                                test modal content
+                              </div>
+                            </ModalContent>
+                          </div>
+                        </div>
+                      </Motion>
+                      <JSXStyle
+                        css={
+                          Array [
+                            ".modal.jsx-2367379789{position:absolute;padding:60px 100px;border-radius:6px;background-color:#ffffff;min-height:400px;min-width:calc(100% - 16px);box-shadow:0 10px 20px 0 rgba(0,0,0,0.15);box-sizing:border-box;}",
+                            "@media (min-width:700px){.modal.jsx-2367379789{min-width:700px;}}",
+                          ]
+                        }
+                        styleId="2367379789"
+                      />
+                      <style>
+                        .close{position:absolute;right:20px;top:20px;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;height:21px;width:21px;padding:0;border:none;outline:none;opacity:0.6;-webkit-transition:opacity 0.4s ease;transition:opacity 0.4s ease;cursor:pointer;}
+                        .close:hover{opacity:1;}
+                        .close .grommetux-control-icon{height:14px;width:14px;}
+                        .close .grommetux-control-icon path{stroke-width:4;}
+                      </style>
+                    </Content>
+                    <JSXStyle
+                      css={
+                        Array [
+                          ".backdrop.jsx-1434159477{position:absolute;top:0;left:0;right:0;bottom:0;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;}",
+                        ]
+                      }
+                      styleId="1434159477"
+                    />
+                  </div>
+                </Backdrop>
+              </div>
+            </div>
+          </div>
+        </FocusTrap>
+      </Modal>
+    </Displaced>
+  </AriaModal>
+</div>
+`;

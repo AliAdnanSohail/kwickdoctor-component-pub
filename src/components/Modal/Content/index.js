@@ -12,10 +12,10 @@ export default class Content extends Component {
     return (
       <Fragment>
         <Motion
-          defaultStyle={{ transform: 30, opacity: 0 }}
+          defaultStyle={{ transform: 40, opacity: 0 }}
           style={{
-            transform: spring(0, { stiffness: 150, damping: 40 }),
-            opacity: spring(1, { stiffness: 150, damping: 40 }),
+            transform: spring(0, { stiffness: 170, damping: 26 }),
+            opacity: spring(1, { stiffness: 170, damping: 26 }),
           }}
         >
           {({ transform, opacity }) => (

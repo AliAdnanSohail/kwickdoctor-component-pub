@@ -1,9 +1,8 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 import { mount } from 'enzyme';
-import Form from 'react-validation/build/form';
 
-import { TextInput } from '../src';
+import { Form, TextInput } from '../src';
 
 const baseProps = {
   id: 'text-input-id',
