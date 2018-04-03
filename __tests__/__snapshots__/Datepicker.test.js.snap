@@ -74,7 +74,7 @@ exports[`Datepicker renders correctly 1`] = `
     .datepicker-block .react-datepicker-wrapper,.datepicker-block .react-datepicker__input-container{width:100%;}
   </style>
   <style>
-    .datepicker-block .input-error{position:absolute;left:4px;width:auto;max-width:50%;padding:12px 16px;margin-top:-6px;border-radius:3px;background-color:#ffffff;box-shadow:0 2px 14px 0 rgba(0,0,0,0.14);color:#FF5572;font-size:0.875rem;font-weight:500;}
+    .datepicker-block .input-error{position:absolute;left:4px;width:auto;max-width:100%;box-sizing:border-box;word-wrap:break-word;padding:12px 16px;margin-top:-6px;border-radius:3px;background-color:#ffffff;box-shadow:0 2px 14px 0 rgba(0,0,0,0.14);color:#FF5572;font-size:0.875rem;font-weight:500;}
     .datepicker-block .input-error:before{content:'';position:absolute;top:0;left:32px;width:0;height:0;-webkit-transform-origin:0 0;-ms-transform-origin:0 0;transform-origin:0 0;-webkit-transform:rotate(135deg);-ms-transform:rotate(135deg);transform:rotate(135deg);box-sizing:border-box;box-shadow:-4px 4px 14px 0 rgba(0,0,0,0.05);border-width:6px;border-style:solid;border-color:transparent transparent #ffffff #ffffff;}
   </style>
 </div>

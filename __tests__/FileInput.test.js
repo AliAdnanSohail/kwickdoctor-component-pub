@@ -8,14 +8,13 @@ it('renders correctly', () => {
 
   expect(element).toMatchSnapshot();
 });
+
 it('input change correct', () => {
   const wrapper = shallow(<FileInput id="test" />);
   console.log(wrapper.debug());
   wrapper.find('input').simulate('change', {
     target: {
-      files: [
-        'someimage.png',
-      ],
+      files: ['someimage.png'],
     },
   });
 });

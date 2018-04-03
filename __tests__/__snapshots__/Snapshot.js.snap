@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Storyshots AvatarPicker simple avatar picker 1`] = `
+exports[`Storyshots Avatar Picker simple avatar picker 1`] = `
 <div
   style={
     Object {
@@ -9,26 +9,58 @@ exports[`Storyshots AvatarPicker simple avatar picker 1`] = `
   }
 >
   <div
-    className="jsx-3746173084 container"
+    className="jsx-2165763448 avatar"
   >
+    <div
+      className="jsx-2165763448 avatar__button"
+    />
     <label
       aria-label="Edit image"
-      className="jsx-3746173084 avatar-container"
-      htmlFor="text-input"
+      className="jsx-2165763448 avatar__container"
+      htmlFor="avatar"
     >
       <input
-        className="jsx-3746173084 inputFile"
-        id="text-input"
+        className="jsx-2165763448 file-input"
+        id="avatar"
         name="name"
         onChange={[Function]}
         type="file"
       />
-      <img
-        alt=""
-        className="jsx-3746173084 upload-img"
-        src="data:image/png;base64,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"
-      />
+      <div
+        className="jsx-2165763448 avatar__thumb"
+        style={
+          Object {
+            "backgroundImage": "url(null)",
+          }
+        }
+      >
+        <svg
+          aria-label="camera"
+          className="grommetux-control-icon grommetux-control-icon-camera grommetux-control-icon--responsive"
+          height="24px"
+          role="img"
+          version="1.1"
+          viewBox="0 0 24 24"
+          width="24px"
+        >
+          <path
+            d="M1,21 L1,7 L6,7 L8,3 L16,3 L18,7 L23,7 L23,21 L1,21 Z M12,18 C14.7614237,18 17,15.7614237 17,13 C17,10.2385763 14.7614237,8 12,8 C9.23857625,8 7,10.2385763 7,13 C7,15.7614237 9.23857625,18 12,18 Z"
+            fill="none"
+            stroke="#000"
+            strokeWidth="2"
+          />
+        </svg>
+      </div>
     </label>
+    <div
+      className="jsx-2165763448 avatar__button"
+    />
+    <style>
+      .avatar{display:grid;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;grid-template-columns:32px 1fr 32px;grid-gap:12px;width:226px;}
+      .avatar__container{cursor:pointer;color:#c1c2cf;}
+      .avatar__thumb{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;height:138px;width:138px;border-radius:50%;background-color:#e7e7f0;background-position:center;background-size:cover;}
+      .avatar__thumb svg{width:42px;height:42px;fill:#bbbccd;stroke:#bbbccd;}
+    </style>
   </div>
 </div>
 `;
@@ -42,10 +74,21 @@ exports[`Storyshots Button simple button 1`] = `
   }
 >
   <button
-    className="jsx-780996603 button"
+    className="button"
     onClick={[Function]}
+    style={Object {}}
   >
     Hello!
+    <style>
+      .button{padding:13px 54px;height:52px;background-color:#0c97f9;box-sizing:border-box;cursor:pointer;color:#ffffff;line-height:26px;border-width:1px;border-style:solid;border-color:#0c97f9;border-radius:26px;font-style:normal;font-weight:500;font-size:1rem;text-align:center;text-transform:uppercase;}
+      .button--accent{color:#0c97f9;background-color:#ffffff;border-color:#ffffff;}
+      .button--danger{color:#ffffff;background-color:#ea6577;border-color:#ea6577;}
+      .button--rounded{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;padding:0;border-radius:50%;}
+      .button--squared{border-radius:12px;}
+      .button--transparent{background-color:transparent;box-shadow:0px 0px 10px rgba(12,151,249,0.15);color:#2A2A30;}
+      .button svg{fill:#ffffff;stroke:#ffffff;}
+    </style>
+    <style />
   </button>
 </div>
 `;
@@ -270,7 +313,7 @@ exports[`Storyshots Calendar default 1`] = `
         <div
           className="jsx-3089003290 navigation__month"
         >
-          March
+          April
           <span
             className="jsx-3089003290"
           >
@@ -347,67 +390,7 @@ exports[`Storyshots Calendar default 1`] = `
         className="jsx-3270423735"
       >
         <button
-          className="jsx-2438573792 day day--disabled day--date--2018-02-25"
-          onClick={[Function]}
-          type="button"
-        >
-          <span
-            className="jsx-2438573792 day__border"
-          >
-            25
-          </span>
-        </button>
-      </li>
-      <li
-        className="jsx-3270423735"
-      >
-        <button
-          className="jsx-2438573792 day day--disabled day--date--2018-02-26"
-          onClick={[Function]}
-          type="button"
-        >
-          <span
-            className="jsx-2438573792 day__border"
-          >
-            26
-          </span>
-        </button>
-      </li>
-      <li
-        className="jsx-3270423735"
-      >
-        <button
-          className="jsx-2438573792 day day--disabled day--date--2018-02-27"
-          onClick={[Function]}
-          type="button"
-        >
-          <span
-            className="jsx-2438573792 day__border"
-          >
-            27
-          </span>
-        </button>
-      </li>
-      <li
-        className="jsx-3270423735"
-      >
-        <button
-          className="jsx-2438573792 day day--disabled day--date--2018-02-28"
-          onClick={[Function]}
-          type="button"
-        >
-          <span
-            className="jsx-2438573792 day__border"
-          >
-            28
-          </span>
-        </button>
-      </li>
-      <li
-        className="jsx-3270423735"
-      >
-        <button
-          className="jsx-2438573792 day day--disabled day--date--2018-03-01"
+          className="jsx-2438573792 day day--disabled day--date--2018-04-01"
           onClick={[Function]}
           type="button"
         >
@@ -422,7 +405,7 @@ exports[`Storyshots Calendar default 1`] = `
         className="jsx-3270423735"
       >
         <button
-          className="jsx-2438573792 day day--disabled day--date--2018-03-02"
+          className="jsx-2438573792 day day--disabled day--date--2018-04-02"
           onClick={[Function]}
           type="button"
         >
@@ -437,7 +420,7 @@ exports[`Storyshots Calendar default 1`] = `
         className="jsx-3270423735"
       >
         <button
-          className="jsx-2438573792 day day--disabled day--date--2018-03-03"
+          className="jsx-2438573792 day day--selected--without-events day--date--2018-04-03"
           onClick={[Function]}
           type="button"
         >
@@ -452,7 +435,7 @@ exports[`Storyshots Calendar default 1`] = `
         className="jsx-3270423735"
       >
         <button
-          className="jsx-2438573792 day day--disabled day--date--2018-03-04"
+          className="jsx-2438573792 day day--date--2018-04-04"
           onClick={[Function]}
           type="button"
         >
@@ -467,7 +450,7 @@ exports[`Storyshots Calendar default 1`] = `
         className="jsx-3270423735"
       >
         <button
-          className="jsx-2438573792 day day--disabled day--date--2018-03-05"
+          className="jsx-2438573792 day day--date--2018-04-05"
           onClick={[Function]}
           type="button"
         >
@@ -482,7 +465,7 @@ exports[`Storyshots Calendar default 1`] = `
         className="jsx-3270423735"
       >
         <button
-          className="jsx-2438573792 day day--disabled day--date--2018-03-06"
+          className="jsx-2438573792 day day--date--2018-04-06"
           onClick={[Function]}
           type="button"
         >
@@ -497,7 +480,7 @@ exports[`Storyshots Calendar default 1`] = `
         className="jsx-3270423735"
       >
         <button
-          className="jsx-2438573792 day day--disabled day--date--2018-03-07"
+          className="jsx-2438573792 day day--date--2018-04-07"
           onClick={[Function]}
           type="button"
         >
@@ -512,7 +495,7 @@ exports[`Storyshots Calendar default 1`] = `
         className="jsx-3270423735"
       >
         <button
-          className="jsx-2438573792 day day--disabled day--date--2018-03-08"
+          className="jsx-2438573792 day day--date--2018-04-08"
           onClick={[Function]}
           type="button"
         >
@@ -527,7 +510,7 @@ exports[`Storyshots Calendar default 1`] = `
         className="jsx-3270423735"
       >
         <button
-          className="jsx-2438573792 day day--disabled day--date--2018-03-09"
+          className="jsx-2438573792 day day--date--2018-04-09"
           onClick={[Function]}
           type="button"
         >
@@ -542,7 +525,7 @@ exports[`Storyshots Calendar default 1`] = `
         className="jsx-3270423735"
       >
         <button
-          className="jsx-2438573792 day day--disabled day--date--2018-03-10"
+          className="jsx-2438573792 day day--date--2018-04-10"
           onClick={[Function]}
           type="button"
         >
@@ -557,7 +540,7 @@ exports[`Storyshots Calendar default 1`] = `
         className="jsx-3270423735"
       >
         <button
-          className="jsx-2438573792 day day--disabled day--date--2018-03-11"
+          className="jsx-2438573792 day day--date--2018-04-11"
           onClick={[Function]}
           type="button"
         >
@@ -572,7 +555,7 @@ exports[`Storyshots Calendar default 1`] = `
         className="jsx-3270423735"
       >
         <button
-          className="jsx-2438573792 day day--disabled day--date--2018-03-12"
+          className="jsx-2438573792 day day--date--2018-04-12"
           onClick={[Function]}
           type="button"
         >
@@ -587,7 +570,7 @@ exports[`Storyshots Calendar default 1`] = `
         className="jsx-3270423735"
       >
         <button
-          className="jsx-2438573792 day day--disabled day--date--2018-03-13"
+          className="jsx-2438573792 day day--date--2018-04-13"
           onClick={[Function]}
           type="button"
         >
@@ -602,7 +585,7 @@ exports[`Storyshots Calendar default 1`] = `
         className="jsx-3270423735"
       >
         <button
-          className="jsx-2438573792 day day--disabled day--date--2018-03-14"
+          className="jsx-2438573792 day day--date--2018-04-14"
           onClick={[Function]}
           type="button"
         >
@@ -617,7 +600,7 @@ exports[`Storyshots Calendar default 1`] = `
         className="jsx-3270423735"
       >
         <button
-          className="jsx-2438573792 day day--disabled day--date--2018-03-15"
+          className="jsx-2438573792 day day--date--2018-04-15"
           onClick={[Function]}
           type="button"
         >
@@ -632,7 +615,7 @@ exports[`Storyshots Calendar default 1`] = `
         className="jsx-3270423735"
       >
         <button
-          className="jsx-2438573792 day day--disabled day--date--2018-03-16"
+          className="jsx-2438573792 day day--date--2018-04-16"
           onClick={[Function]}
           type="button"
         >
@@ -647,7 +630,7 @@ exports[`Storyshots Calendar default 1`] = `
         className="jsx-3270423735"
       >
         <button
-          className="jsx-2438573792 day day--disabled day--date--2018-03-17"
+          className="jsx-2438573792 day day--date--2018-04-17"
           onClick={[Function]}
           type="button"
         >
@@ -662,7 +645,7 @@ exports[`Storyshots Calendar default 1`] = `
         className="jsx-3270423735"
       >
         <button
-          className="jsx-2438573792 day day--disabled day--date--2018-03-18"
+          className="jsx-2438573792 day day--date--2018-04-18"
           onClick={[Function]}
           type="button"
         >
@@ -677,7 +660,7 @@ exports[`Storyshots Calendar default 1`] = `
         className="jsx-3270423735"
       >
         <button
-          className="jsx-2438573792 day day--disabled day--date--2018-03-19"
+          className="jsx-2438573792 day day--date--2018-04-19"
           onClick={[Function]}
           type="button"
         >
@@ -692,7 +675,7 @@ exports[`Storyshots Calendar default 1`] = `
         className="jsx-3270423735"
       >
         <button
-          className="jsx-2438573792 day day--disabled day--date--2018-03-20"
+          className="jsx-2438573792 day day--date--2018-04-20"
           onClick={[Function]}
           type="button"
         >
@@ -707,7 +690,7 @@ exports[`Storyshots Calendar default 1`] = `
         className="jsx-3270423735"
       >
         <button
-          className="jsx-2438573792 day day--disabled day--date--2018-03-21"
+          className="jsx-2438573792 day day--date--2018-04-21"
           onClick={[Function]}
           type="button"
         >
@@ -722,7 +705,7 @@ exports[`Storyshots Calendar default 1`] = `
         className="jsx-3270423735"
       >
         <button
-          className="jsx-2438573792 day day--disabled day--date--2018-03-22"
+          className="jsx-2438573792 day day--date--2018-04-22"
           onClick={[Function]}
           type="button"
         >
@@ -737,7 +720,7 @@ exports[`Storyshots Calendar default 1`] = `
         className="jsx-3270423735"
       >
         <button
-          className="jsx-2438573792 day day--disabled day--date--2018-03-23"
+          className="jsx-2438573792 day day--date--2018-04-23"
           onClick={[Function]}
           type="button"
         >
@@ -752,7 +735,7 @@ exports[`Storyshots Calendar default 1`] = `
         className="jsx-3270423735"
       >
         <button
-          className="jsx-2438573792 day day--disabled day--date--2018-03-24"
+          className="jsx-2438573792 day day--date--2018-04-24"
           onClick={[Function]}
           type="button"
         >
@@ -767,7 +750,7 @@ exports[`Storyshots Calendar default 1`] = `
         className="jsx-3270423735"
       >
         <button
-          className="jsx-2438573792 day day--disabled day--date--2018-03-25"
+          className="jsx-2438573792 day day--date--2018-04-25"
           onClick={[Function]}
           type="button"
         >
@@ -782,7 +765,7 @@ exports[`Storyshots Calendar default 1`] = `
         className="jsx-3270423735"
       >
         <button
-          className="jsx-2438573792 day day--disabled day--date--2018-03-26"
+          className="jsx-2438573792 day day--date--2018-04-26"
           onClick={[Function]}
           type="button"
         >
@@ -797,7 +780,7 @@ exports[`Storyshots Calendar default 1`] = `
         className="jsx-3270423735"
       >
         <button
-          className="jsx-2438573792 day day--disabled day--date--2018-03-27"
+          className="jsx-2438573792 day day--date--2018-04-27"
           onClick={[Function]}
           type="button"
         >
@@ -812,7 +795,7 @@ exports[`Storyshots Calendar default 1`] = `
         className="jsx-3270423735"
       >
         <button
-          className="jsx-2438573792 day day--disabled day--date--2018-03-28"
+          className="jsx-2438573792 day day--date--2018-04-28"
           onClick={[Function]}
           type="button"
         >
@@ -827,7 +810,7 @@ exports[`Storyshots Calendar default 1`] = `
         className="jsx-3270423735"
       >
         <button
-          className="jsx-2438573792 day day--disabled day--date--2018-03-29"
+          className="jsx-2438573792 day day--date--2018-04-29"
           onClick={[Function]}
           type="button"
         >
@@ -842,7 +825,7 @@ exports[`Storyshots Calendar default 1`] = `
         className="jsx-3270423735"
       >
         <button
-          className="jsx-2438573792 day day--disabled day--date--2018-03-30"
+          className="jsx-2438573792 day day--date--2018-04-30"
           onClick={[Function]}
           type="button"
         >
@@ -857,14 +840,74 @@ exports[`Storyshots Calendar default 1`] = `
         className="jsx-3270423735"
       >
         <button
-          className="jsx-2438573792 day day--selected--without-events day--date--2018-03-31"
+          className="jsx-2438573792 day day--date--2018-05-01"
           onClick={[Function]}
           type="button"
         >
           <span
             className="jsx-2438573792 day__border"
           >
-            31
+            1
+          </span>
+        </button>
+      </li>
+      <li
+        className="jsx-3270423735"
+      >
+        <button
+          className="jsx-2438573792 day day--date--2018-05-02"
+          onClick={[Function]}
+          type="button"
+        >
+          <span
+            className="jsx-2438573792 day__border"
+          >
+            2
+          </span>
+        </button>
+      </li>
+      <li
+        className="jsx-3270423735"
+      >
+        <button
+          className="jsx-2438573792 day day--date--2018-05-03"
+          onClick={[Function]}
+          type="button"
+        >
+          <span
+            className="jsx-2438573792 day__border"
+          >
+            3
+          </span>
+        </button>
+      </li>
+      <li
+        className="jsx-3270423735"
+      >
+        <button
+          className="jsx-2438573792 day day--disabled day--date--2018-05-04"
+          onClick={[Function]}
+          type="button"
+        >
+          <span
+            className="jsx-2438573792 day__border"
+          >
+            4
+          </span>
+        </button>
+      </li>
+      <li
+        className="jsx-3270423735"
+      >
+        <button
+          className="jsx-2438573792 day day--disabled day--date--2018-05-05"
+          onClick={[Function]}
+          type="button"
+        >
+          <span
+            className="jsx-2438573792 day__border"
+          >
+            5
           </span>
         </button>
       </li>
@@ -1038,7 +1081,7 @@ exports[`Storyshots Datepicker Datepicker 1`] = `
             tabIndex={undefined}
             title={undefined}
             type="text"
-            value="31 Mar, 2018"
+            value="03 Apr, 2018"
           />
         </div>
       </div>
@@ -1078,7 +1121,7 @@ exports[`Storyshots Datepicker Datepicker 1`] = `
       .datepicker-block .react-datepicker-wrapper,.datepicker-block .react-datepicker__input-container{width:100%;}
     </style>
     <style>
-      .datepicker-block .input-error{position:absolute;left:4px;width:auto;max-width:50%;padding:12px 16px;margin-top:-6px;border-radius:3px;background-color:#ffffff;box-shadow:0 2px 14px 0 rgba(0,0,0,0.14);color:#FF5572;font-size:0.875rem;font-weight:500;}
+      .datepicker-block .input-error{position:absolute;left:4px;width:auto;max-width:100%;box-sizing:border-box;word-wrap:break-word;padding:12px 16px;margin-top:-6px;border-radius:3px;background-color:#ffffff;box-shadow:0 2px 14px 0 rgba(0,0,0,0.14);color:#FF5572;font-size:0.875rem;font-weight:500;}
       .datepicker-block .input-error:before{content:'';position:absolute;top:0;left:32px;width:0;height:0;-webkit-transform-origin:0 0;-ms-transform-origin:0 0;transform-origin:0 0;-webkit-transform:rotate(135deg);-ms-transform:rotate(135deg);transform:rotate(135deg);box-sizing:border-box;box-shadow:-4px 4px 14px 0 rgba(0,0,0,0.05);border-width:6px;border-style:solid;border-color:transparent transparent #ffffff #ffffff;}
     </style>
   </div>
@@ -1135,10 +1178,21 @@ exports[`Storyshots Modal default 1`] = `
   }
 >
   <button
-    className="jsx-780996603 button"
+    className="button"
     onClick={[Function]}
+    style={Object {}}
   >
     Open modal
+    <style>
+      .button{padding:13px 54px;height:52px;background-color:#0c97f9;box-sizing:border-box;cursor:pointer;color:#ffffff;line-height:26px;border-width:1px;border-style:solid;border-color:#0c97f9;border-radius:26px;font-style:normal;font-weight:500;font-size:1rem;text-align:center;text-transform:uppercase;}
+      .button--accent{color:#0c97f9;background-color:#ffffff;border-color:#ffffff;}
+      .button--danger{color:#ffffff;background-color:#ea6577;border-color:#ea6577;}
+      .button--rounded{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;padding:0;border-radius:50%;}
+      .button--squared{border-radius:12px;}
+      .button--transparent{background-color:transparent;box-shadow:0px 0px 10px rgba(12,151,249,0.15);color:#2A2A30;}
+      .button svg{fill:#ffffff;stroke:#ffffff;}
+    </style>
+    <style />
   </button>
 </div>
 `;
@@ -1153,23 +1207,23 @@ exports[`Storyshots TextInput Text input 1`] = `
 >
   <form>
     <div
-      className="jsx-2941157369 jsx-1178708339"
+      className="jsx-1685083184 jsx-1043162979 form-field"
     >
       <label
-        className="jsx-2941157369 jsx-1178708339"
+        className="jsx-1685083184 jsx-1043162979"
         htmlFor="text-input"
       >
         Text input
       </label>
       <input
-        className="jsx-2542774814 "
+        className="jsx-3846816657 "
         id="text-input"
         name="name"
         onBlur={[Function]}
         onChange={[Function]}
         placeholder="text input"
         type="text"
-        value="example text"
+        value=""
       />
       <style>
         input,textarea{width:100%;min-width:100%;max-width:100%;min-height:44px;padding:12px 16px;background-color:#ffffff;color:#2A2A30;box-sizing:border-box;font-style:normal;font-weight:normal;font-size:0.875rem;border-width:2px;border-style:solid;border-color:#E7E7F0;border-radius:4px;}
@@ -1178,7 +1232,7 @@ exports[`Storyshots TextInput Text input 1`] = `
         input:-ms-input-placeholder,textarea:-ms-input-placeholder{color:#828393;}
         input:-moz-placeholder,textarea:-moz-placeholder{color:#828393;}
         input:focus,textarea:focus{outline:none;padding:12px 16px;border-color:#0c97f9;}
-        input.error,input.error:focus,textarea.error,textarea.error:focus{border-color:#FF5572;}
+        input.invalid,input.invalid:focus,textarea.invalid,textarea.invalid:focus{border-color:#FF5572;}
       </style>
     </div>
   </form>
