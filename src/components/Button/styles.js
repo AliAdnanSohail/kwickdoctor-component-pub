@@ -1,9 +1,11 @@
 import css from 'styled-jsx/css';
+
 import settings from '../../utils/style-helper';
 
 export default css`
   .button {
     padding: 13px 54px;
+    height: 52px;
 
     background-color: ${settings.primaryColor};
     box-sizing: border-box;
@@ -12,8 +14,6 @@ export default css`
     color: #ffffff;
 
     line-height: 26px;
-
-    height: 52px;
 
     border: {
       width: 1px;
@@ -33,40 +33,42 @@ export default css`
       transform: uppercase;
     }
 
-    &--transparent {
-      background-color: transparent;
-      box-shadow: 0px 0px 10px rgba(12, 151, 249, 0.15);
-
+    &--accent {
       color: ${settings.primaryColor};
+      background-color: #ffffff;
+      border-color: #ffffff;
+    }
+
+    &--danger {
+      color: #ffffff;
+      background-color: #ea6577;
+      border-color: #ea6577;
+    }
+
+    &--rounded {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+
+      padding: 0;
+      border-radius: 50%;
     }
 
     &--squared {
       border-radius: 12px;
     }
 
-    &--accent {
-      color: ${settings.primaryColor};
-      background-color: #ffffff;
-      border-color: #ffffff;
+    &--transparent {
+      background-color: transparent;
+      box-shadow: 0px 0px 10px rgba(12, 151, 249, 0.15);
+
+      color: ${settings.textColor};
     }
-    &--circle {
-      border: none;
-      border-radius: 50px;
 
-      width: 50px;
-      height: 50px;
-
-      text-align: center;
-      padding: 0;
-
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      justify-content: center;
-
-      .grommetux-control-icon {
-        fill: #fff;
-      }
+    svg {
+      fill: #ffffff;
+      stroke: #ffffff;
     }
   }
 `;

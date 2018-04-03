@@ -4,7 +4,7 @@ import { action } from '@storybook/addon-actions';
 import { withKnobs, text, boolean } from '@storybook/addon-knobs/react';
 import { checkA11y } from '@storybook/addon-a11y';
 import { withTests } from '@storybook/addon-jest';
-import AccessAccessibilityIcon from 'grommet/components/icons/base/AccessAccessibility';
+import { EditIcon } from 'grommet/components/icons';
 
 import { Button } from '../src';
 import results from '../.jest-test-results.json';
@@ -16,19 +16,12 @@ storiesOf('Button', module)
   .addDecorator(getStory => <div style={{ padding: '24px' }}>{getStory()}</div>)
   .add('simple button', () => (
     <Button
-      onClick={action('clicked')}
-      title={text('title', 'continue')}
-      transparent={boolean('transparent', false)}
+      accent={boolean('accent', false)}
+      icon={<EditIcon />}
+      rounded={boolean('rounded', false)}
       squared={boolean('squared', false)}
-      accent={boolean('accent', false)}
-    />
-  ))
-  .add('icon button', () => (
-    <Button
-      onClick={action('clicked')}
+      title={text('title', 'Hello!')}
       transparent={boolean('transparent', false)}
-      accent={boolean('accent', false)}
-      icon={<AccessAccessibilityIcon />}
-      circle
+      onClick={action('clicked')}
     />
   ));
