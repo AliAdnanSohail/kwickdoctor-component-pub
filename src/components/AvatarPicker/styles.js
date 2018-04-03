@@ -1,65 +1,55 @@
 import css from 'styled-jsx/css';
 
-export default css`
+export const fileInput = css`
+  .file-input {
+    position: absolute !important;
+    clip: rect(1px 1px 1px 1px);
+    clip: rect(1px, 1px, 1px, 1px);
+    padding: 0 !important;
+    border: 0 !important;
+    height: 1px !important;
+    width: 1px !important;
+    overflow: hidden;
+  }
+`;
 
-.upload-avatar {
-  cursor: pointer;
-  width:70px;
-  height: 70px;
-}
+export const avatar = css`
+  .avatar {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 32px 1fr 32px;
+    grid-gap: 12px;
 
-.inputFile {
-  width: 0.1px;
-  height: 0.1px;
-  opacity: 0;
-  overflow: hidden;
-  position: absolute;
-  z-index: -1;
-}
-.icon-upload{
-  padding-right: 10px;
-}
-.upload-img{
-  border-radius: 50%;
-  width:75px;
-  height: 75px;
-}
-.thumb{
-  height:75px;
-  width:75px;
-  border-radius: 50%;
-  background-position: center center;
-  background-size: cover;
-}
+    width: 226px;
 
-.avatar-container {
-  color: #C1C2CF;
-  padding: 17px 12px;
-  cursor: pointer;
-}
-.container {
-  display: flex;
-  align-items: center;
-}
+    &__container {
+      cursor: pointer;
+      color: #c1c2cf;
+    }
 
-.icon-trash{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #EA6577;
-  border-radius: 50%;
-  cursor: pointer;
-  width : 40px;
-  height: 40px;
-}
-.icon-edit{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #4695EF;
-  border-radius: 50%;
-  cursor: pointer;
-  width : 40px;
-  height: 40px;  
-}
+    &__thumb {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+
+      height: 138px;
+      width: 138px;
+      border-radius: 50%;
+
+      background: {
+        color: #e7e7f0;
+        position: center;
+        size: cover;
+      }
+
+      svg {
+        width: 42px;
+        height: 42px;
+
+        fill: #bbbccd;
+        stroke: #bbbccd;
+      }
+    }
+  }
 `;

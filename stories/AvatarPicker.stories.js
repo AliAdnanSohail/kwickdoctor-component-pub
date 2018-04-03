@@ -14,9 +14,5 @@ storiesOf('AvatarPicker', module)
   .addDecorator(withTests({ results })('AvatarPicker'))
   .addDecorator(getStory => <div style={{ padding: '24px' }}>{getStory()}</div>)
   .add('simple avatar picker', () => (
-    <AvatarPicker
-      onChange={action('OnChange')}
-      id="text-input"
-      name={text('name', 'name')}
-    />
+    <AvatarPicker onChange={action('OnChange')} id="avatar" name={text('name', 'name')} />
   ));
