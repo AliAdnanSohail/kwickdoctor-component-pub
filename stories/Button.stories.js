@@ -17,6 +17,7 @@ storiesOf('Button', module)
   .add('simple button', () => (
     <Button
       accent={boolean('accent', false)}
+      danger={boolean('danger', false)}
       icon={<EditIcon />}
       rounded={boolean('rounded', false)}
       squared={boolean('squared', false)}
