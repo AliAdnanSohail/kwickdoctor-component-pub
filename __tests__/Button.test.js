@@ -12,7 +12,6 @@ it('renders correctly', () => {
 
 it('transparent button renders correctly', () => {
   const element = mount(<Button onClick={() => {}} title="Hello!" transparent />);
-
   expect(element.find('button').hasClass('button--transparent')).toEqual(true);
 });
 

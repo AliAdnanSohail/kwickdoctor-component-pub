@@ -33,6 +33,32 @@ export default css`
       transform: uppercase;
     }
 
+    &--accent {
+      color: ${settings.primaryColor};
+      background-color: #ffffff;
+      border-color: #ffffff;
+    }
+
+    &--danger {
+      color: #ffffff;
+      background-color: #ea6577;
+      border-color: #ea6577;
+    }
+
+    &--rounded {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+
+      padding: 0;
+      border-radius: 50%;
+    }
+
+    &--squared {
+      border-radius: 12px;
+    }
+
     &--transparent {
       background-color: transparent;
       box-shadow: 0px 0px 10px rgba(12, 151, 249, 0.15);
@@ -40,14 +66,9 @@ export default css`
       color: ${settings.textColor};
     }
 
-    &--squared {
-      border-radius: 12px;
-    }
-
-    &--accent {
-      color: ${settings.primaryColor};
-      background-color: #ffffff;
-      border-color: #ffffff;
+    svg {
+      fill: #ffffff;
+      stroke: #ffffff;
     }
   }
 `;
