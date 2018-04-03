@@ -30,7 +30,6 @@ export default css`
   background-color: ${settings.primaryColor};
   }
 
-  // text
   .message {
   width: 303px;
   color: #222328;
@@ -58,6 +57,7 @@ export default css`
   background-image: url("${settings.closeIcon}");
   background-repeat: no-repeat;
   background-color: transparent;
+  
   &:hover {
     opacity: 1;
   }
