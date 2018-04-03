@@ -5,9 +5,16 @@ import moment from 'moment';
 import classnames from 'classnames';
 
 import 'react-datepicker/dist/react-datepicker.css';
-import { calendar, datepicker, label as labelStyles, wrapper, error as errorStyles, datepickerBlock as datepickerBlockStyles } from './styles';
+import {
+  calendar,
+  datepicker,
+  label as labelStyles,
+  wrapper,
+  error as errorStyles,
+  datepickerBlock as datepickerBlockStyles,
+} from './styles';
 
-export default class Datepicker extends Component {
+export default class DatePicker extends Component {
   constructor(props) {
     super(props);
 
@@ -17,13 +24,7 @@ export default class Datepicker extends Component {
   errorMessage = () => {
     const { error } = this.props;
 
-    return (
-      error && (
-        <div className="input-error">
-          {error}
-        </div>
-      )
-    );
+    return error && <div className="input-error">{error}</div>;
   };
 
   handleChange = (date) => {
@@ -64,7 +65,7 @@ export default class Datepicker extends Component {
   }
 }
 
-Datepicker.propTypes = {
+DatePicker.propTypes = {
   id: PropTypes.string.isRequired,
   name: PropTypes.string,
   label: PropTypes.string,
@@ -74,7 +75,7 @@ Datepicker.propTypes = {
   error: PropTypes.string,
 };
 
-Datepicker.defaultProps = {
+DatePicker.defaultProps = {
   name: '',
   label: '',
   value: moment(),

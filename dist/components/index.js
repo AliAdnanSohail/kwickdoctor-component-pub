@@ -58,12 +58,12 @@ Object.defineProperty(exports, 'CardPicker', {
   }
 });
 
-var _Datepicker = require('./Datepicker');
+var _DatePicker = require('./DatePicker');
 
-Object.defineProperty(exports, 'Datepicker', {
+Object.defineProperty(exports, 'DatePicker', {
   enumerable: true,
   get: function get() {
-    return _interopRequireDefault(_Datepicker).default;
+    return _interopRequireDefault(_DatePicker).default;
   }
 });
 

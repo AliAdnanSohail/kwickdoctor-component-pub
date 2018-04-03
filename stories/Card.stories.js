@@ -12,7 +12,7 @@ storiesOf('Card', module)
   .addDecorator(checkA11y)
   .addDecorator(withTests({ results })('Card'))
   .addDecorator(getStory => <div style={{ padding: '24px' }}>{getStory()}</div>)
-  .add('simple card', () => (
+  .add('default', () => (
     <Card style={{ width: '200px', padding: '50px' }} rounded={boolean('rounded', false)}>
       {text(
         'content',

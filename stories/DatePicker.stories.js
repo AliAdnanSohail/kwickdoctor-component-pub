@@ -5,21 +5,21 @@ import { withKnobs, text } from '@storybook/addon-knobs/react';
 import { checkA11y } from '@storybook/addon-a11y';
 import { withTests } from '@storybook/addon-jest';
 
-import { Datepicker } from '../src';
+import { DatePicker } from '../src';
 import results from '../.jest-test-results.json';
 
-storiesOf('Datepicker', module)
+storiesOf('Date Picker', module)
   .addDecorator(withKnobs)
   .addDecorator(checkA11y)
-  .addDecorator(withTests({ results })('Datepicker'))
+  .addDecorator(withTests({ results })('DatePicker'))
   .addDecorator(getStory => <div style={{ padding: '24px' }}>{getStory()}</div>)
-  .add('Datepicker', () => (
-    <Datepicker
+  .add('defauld', () => (
+    <DatePicker
       id={text('id', 'datepicker')}
       name={text('name', 'name')}
       onChange={action('changed')}
-      label={text('label', 'Datepicker')}
-      dateFormat={text('dateFormat', 'DD MMM, YYYY')}
+      label={text('label', 'Date Picker')}
+      dateFormat={text('date format', 'DD MMM, YYYY')}
       error={text('error', '')}
     />
   ));

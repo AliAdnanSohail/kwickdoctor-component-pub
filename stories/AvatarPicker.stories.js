@@ -13,6 +13,6 @@ storiesOf('Avatar Picker', module)
   .addDecorator(checkA11y)
   .addDecorator(withTests({ results })('AvatarPicker'))
   .addDecorator(getStory => <div style={{ padding: '24px' }}>{getStory()}</div>)
-  .add('simple avatar picker', () => (
-    <AvatarPicker onChange={action('onChange')} id="avatar" name={text('name', 'name')} />
+  .add('default', () => (
+    <AvatarPicker id="avatar" name={text('name', 'name')} onChange={action('onChange')} />
   ));

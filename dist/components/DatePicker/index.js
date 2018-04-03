@@ -39,13 +39,13 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var Datepicker = function (_Component) {
-  _inherits(Datepicker, _Component);
+var DatePicker = function (_Component) {
+  _inherits(DatePicker, _Component);
 
-  function Datepicker(props) {
-    _classCallCheck(this, Datepicker);
+  function DatePicker(props) {
+    _classCallCheck(this, DatePicker);
 
-    var _this = _possibleConstructorReturn(this, (Datepicker.__proto__ || Object.getPrototypeOf(Datepicker)).call(this, props));
+    var _this = _possibleConstructorReturn(this, (DatePicker.__proto__ || Object.getPrototypeOf(DatePicker)).call(this, props));
 
     _this.errorMessage = function () {
       var error = _this.props.error;
@@ -67,7 +67,7 @@ var Datepicker = function (_Component) {
     return _this;
   }
 
-  _createClass(Datepicker, [{
+  _createClass(DatePicker, [{
     key: 'render',
     value: function render() {
       var _props = this.props,
@@ -132,13 +132,13 @@ var Datepicker = function (_Component) {
     }
   }]);
 
-  return Datepicker;
+  return DatePicker;
 }(_react.Component);
 
-exports.default = Datepicker;
+exports.default = DatePicker;
 
 
-Datepicker.propTypes = {
+DatePicker.propTypes = {
   id: _propTypes2.default.string.isRequired,
   name: _propTypes2.default.string,
   label: _propTypes2.default.string,
@@ -148,7 +148,7 @@ Datepicker.propTypes = {
   error: _propTypes2.default.string
 };
 
-Datepicker.defaultProps = {
+DatePicker.defaultProps = {
   name: '',
   label: '',
   value: (0, _moment2.default)(),
