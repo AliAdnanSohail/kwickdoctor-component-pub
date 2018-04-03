@@ -947,94 +947,79 @@ exports[`Storyshots CardPicker simple card picker 1`] = `
   }
 >
   <div
-    className="jsx-2134820726 card-picker"
+    className="jsx-1526560949 card-picker"
   >
     <label
-      className="jsx-2134820726 content-label"
+      className="jsx-1526560949 card card--active"
       htmlFor="male"
     >
-      <div
-        className="jsx-2134820726 card active"
+      <input
+        checked={true}
+        className="jsx-1526560949"
+        id="male"
+        name="male"
+        onChange={[Function]}
+        type="radio"
+        value="male"
+      />
+      <img
+        alt="Male"
+        className="jsx-1526560949"
+        src="http://via.placeholder.com/240x240"
+      />
+      <p
+        className="jsx-1526560949 content"
       >
-        <input
-          checked={true}
-          className="jsx-2134820726"
-          id="male"
-          name="male"
-          onChange={[Function]}
-          onClick={[Function]}
-          type="radio"
-          value="male"
-        />
-        <img
-          alt=""
-          className="jsx-2134820726"
-          src="http://via.placeholder.com/240x240"
-        />
-        <p
-          className="jsx-2134820726 content"
-        >
-          Male
-        </p>
-      </div>
+        Male
+      </p>
     </label>
     <label
-      className="jsx-2134820726 content-label"
+      className="jsx-1526560949 card"
       htmlFor="any"
     >
-      <div
-        className="jsx-2134820726 card"
+      <input
+        checked={false}
+        className="jsx-1526560949"
+        id="any"
+        name="any"
+        onChange={[Function]}
+        type="radio"
+        value="any"
+      />
+      <img
+        alt="Any"
+        className="jsx-1526560949"
+        src="http://via.placeholder.com/240x240"
+      />
+      <p
+        className="jsx-1526560949 content"
       >
-        <input
-          checked={false}
-          className="jsx-2134820726"
-          id="any"
-          name="any"
-          onChange={[Function]}
-          onClick={[Function]}
-          type="radio"
-          value="any"
-        />
-        <img
-          alt=""
-          className="jsx-2134820726"
-          src="http://via.placeholder.com/240x240"
-        />
-        <p
-          className="jsx-2134820726 content"
-        >
-          Any
-        </p>
-      </div>
+        Any
+      </p>
     </label>
     <label
-      className="jsx-2134820726 content-label"
+      className="jsx-1526560949 card"
       htmlFor="female"
     >
-      <div
-        className="jsx-2134820726 card"
+      <input
+        checked={false}
+        className="jsx-1526560949"
+        id="female"
+        name="female"
+        onChange={[Function]}
+        type="radio"
+        value="female"
+      />
+      <img
+        alt="Female"
+        className="jsx-1526560949"
+        src="http://via.placeholder.com/240x240"
+      />
+      <p
+        className="jsx-1526560949 content"
       >
-        <input
-          checked={false}
-          className="jsx-2134820726"
-          id="female"
-          name="female"
-          onChange={[Function]}
-          onClick={[Function]}
-          type="radio"
-          value="female"
-        />
-        <img
-          alt=""
-          className="jsx-2134820726"
-          src="http://via.placeholder.com/240x240"
-        />
-        <p
-          className="jsx-2134820726 content"
-        >
-          Female
-        </p>
-      </div>
+        Female
+      </p>
     </label>
   </div>
 </div>
