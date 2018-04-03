@@ -8,7 +8,7 @@ import validator from 'validator';
  * @return {String|Null} [description]
  */
 const required = (value) => {
-  if (!value.toString().trim().length) {
+  if (validator.isEmpty(value)) {
     return 'This filed is required';
   }
 
