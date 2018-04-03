@@ -11,7 +11,7 @@ export default class AriaModal extends Component {
   getModal = () => (
     <ReactAriaModal
       onExit={this.props.onClose}
-      titleText={this.props.titleText}
+      titleText={this.props.title}
       getApplicationNode={this.getApplicationNode}
     >
       <Backdrop onClick={this.props.onClose}>
@@ -28,12 +28,12 @@ export default class AriaModal extends Component {
 AriaModal.propTypes = {
   show: PropTypes.bool,
   rootId: PropTypes.string,
-  titleText: PropTypes.string,
+  title: PropTypes.string,
   onClose: PropTypes.func.isRequired,
 };
 
 AriaModal.defaultProps = {
   show: false,
   rootId: 'root',
-  titleText: 'dom one',
+  title: 'dom one',
 };
