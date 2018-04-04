@@ -1,29 +1,62 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
-// import { action } from '@storybook/addon-actions';
 
 import styles from './styles';
 
 export default class ButtonGroup extends Component {
+  constructor(props) {
+    super(props);
+    this.state = { selectedOption: '' };
+  }
+
+  handleChange(e) {
+    this.setState({
+      selectedOption: e.target.value,
+    });
+    this.props.onChange(e.target.value);
+  }
+
+
   render() {
   //  const { value } = this.props;
     const {
-      buttons, primary,
+      buttons, primary, groupLabel,
     } = this.props;
     const classes = classnames(
-      'button-group',
-      { 'button-group-primary': primary },
+      'radio-button-group',
+      { primary },
     );
 
-    const children = buttons.map(button =>
-      <button key={button.id} className="button" onClick={button.onClick}>{button.content}</button>);
+    const common = groupLabel.toLowerCase() || 'group';
+
+
+    const children = buttons.map(button => (
+      <React.Fragment key={button.value}>
+        <label className={this.state.selectedOption === button.value ? 'button active' : 'button'} htmlFor={`${button.value}-${common}`}>
+          {button.label || button.value}
+          <input
+            type="radio"
+            name={common}
+            id={`${button.value}-${common}`}
+            value={button.value}
+            checked={this.state.selectedOption === button.value}
+            onChange={e => this.handleChange(e)}
+          />
+        </label>
+        <style jsx >{styles}</style>
+      </React.Fragment>
+    ));
 
     return (
-      <div className={classes}>
-        { children }
-        <style jsx global>{styles}</style>
-        {/* using global scope above, cant pass jsx classes to children generated with .map */}
+      <div>
+        <style jsx >{styles}</style>
+        <fieldset>
+          {groupLabel.length > 0 && <legend>{ groupLabel }:</legend>}
+          <div className={classes}>
+            { children }
+          </div>
+        </fieldset>
       </div>
     );
   }
@@ -32,14 +65,19 @@ export default class ButtonGroup extends Component {
 ButtonGroup.propTypes = {
   primary: PropTypes.bool,
   buttons: PropTypes.arrayOf(PropTypes.object),
+  groupLabel: PropTypes.string,
+  onChange: PropTypes.func.isRequired,
 };
 
 ButtonGroup.defaultProps = {
   buttons: [
-    { id: 'bv1', content: 'button 1', onClick: () => { console.log('link1'); } },
-    { id: 'bv2', content: 'button 2', onClick: () => { console.log('link2'); } },
-    { id: 'bv3', content: 'button 3', onClick: () => { console.log('link3'); } },
-    { id: 'bv4', content: 'button 4', onClick: () => { console.log('link4'); } },
+    { value: 'bv1', label: 'button 1' },
+    { value: 'bv2', label: 'button 2' },
+    { value: 'bv3', label: 'button 3' },
+    { value: 'bv4', label: 'button 4' },
+    { value: 'bv5', label: 'button 5' },
+    { value: 'bv6', label: 'button 6' },
   ],
   primary: false,
+  groupLabel: '',
 };

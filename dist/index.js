@@ -4,66 +4,24 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _Button = require('./components/Button');
+var _components = require('./components');
 
-Object.defineProperty(exports, 'Button', {
-  enumerable: true,
-  get: function get() {
-    return _interopRequireDefault(_Button).default;
-  }
+Object.keys(_components).forEach(function (key) {
+  if (key === "default" || key === "__esModule") return;
+  Object.defineProperty(exports, key, {
+    enumerable: true,
+    get: function get() {
+      return _components[key];
+    }
+  });
 });
 
-var _ButtonGroup = require('./components/ButtonGroup');
+var _validations = require('./utils/validations');
 
-Object.defineProperty(exports, 'ButtonGroup', {
+Object.defineProperty(exports, 'Validate', {
   enumerable: true,
   get: function get() {
-    return _interopRequireDefault(_ButtonGroup).default;
-  }
-});
-
-var _Calendar = require('./components/Calendar');
-
-Object.defineProperty(exports, 'Calendar', {
-  enumerable: true,
-  get: function get() {
-    return _interopRequireDefault(_Calendar).default;
-  }
-});
-
-var _Card = require('./components/Card');
-
-Object.defineProperty(exports, 'Card', {
-  enumerable: true,
-  get: function get() {
-    return _interopRequireDefault(_Card).default;
-  }
-});
-
-var _Datepicker = require('./components/Datepicker');
-
-Object.defineProperty(exports, 'Datepicker', {
-  enumerable: true,
-  get: function get() {
-    return _interopRequireDefault(_Datepicker).default;
-  }
-});
-
-var _TextInput = require('./components/TextInput');
-
-Object.defineProperty(exports, 'TextInput', {
-  enumerable: true,
-  get: function get() {
-    return _interopRequireDefault(_TextInput).default;
-  }
-});
-
-var _Toast = require('./components/Toast');
-
-Object.defineProperty(exports, 'Toast', {
-  enumerable: true,
-  get: function get() {
-    return _interopRequireDefault(_Toast).default;
+    return _interopRequireDefault(_validations).default;
   }
 });
 

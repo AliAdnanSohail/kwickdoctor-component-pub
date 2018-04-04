@@ -1,33 +1,37 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`TextInput renders correctly 1`] = `
-<div
-  className="jsx-2941157369 jsx-1178708339"
+<form
+  validateAll={[Function]}
 >
-  <label
-    className="jsx-2941157369 jsx-1178708339"
-    htmlFor="text-input-id"
+  <div
+    className="jsx-1685083184 jsx-1043162979 form-field"
   >
-    text-input-label
-  </label>
-  <input
-    className="text-input-class"
-    id="text-input-id"
-    name="text-input-name"
-    onChange={[Function]}
-    placeholder="text-input-placeholder"
-    type="text"
-    value="text-input-value"
-  />
-  <style>
-    input,textarea{width:100%;min-width:100%;max-width:100%;min-height:44px;padding:12px 16px;background-color:#ffffff;color:#2A2A30;box-sizing:border-box;font-style:normal;font-weight:normal;font-size:0.875rem;border-width:2px;border-style:solid;border-color:#E7E7F0;border-radius:4px;}
-    input::-webkit-input-placeholder,textarea::-webkit-input-placeholder{color:#828393;}
-    input::-moz-placeholder,textarea::-moz-placeholder{color:#828393;}
-    input:-ms-input-placeholder,textarea:-ms-input-placeholder{color:#828393;}
-    input:-moz-placeholder,textarea:-moz-placeholder{color:#828393;}
-    input:focus,textarea:focus{outline:none;padding:12px 16px;border-color:#0c97f9;}
-    input.error,input.error:focus,textarea.error,textarea.error:focus{border-color:#FF5572;}
-  </style>
-  
-</div>
+    <label
+      className="jsx-1685083184 jsx-1043162979"
+      htmlFor="text-input-id"
+    >
+      text-input-label
+    </label>
+    <input
+      className="jsx-3846816657 text-input-class"
+      id="text-input-id"
+      name="text-input-name"
+      onBlur={[Function]}
+      onChange={[Function]}
+      placeholder="text-input-placeholder"
+      type="text"
+      value="text-input-value"
+    />
+    <style>
+      input,textarea{width:100%;min-width:100%;max-width:100%;min-height:44px;padding:12px 16px;background-color:#ffffff;color:#2A2A30;box-sizing:border-box;font-style:normal;font-weight:normal;font-size:0.875rem;border-width:2px;border-style:solid;border-color:#E7E7F0;border-radius:4px;}
+      input::-webkit-input-placeholder,textarea::-webkit-input-placeholder{color:#828393;}
+      input::-moz-placeholder,textarea::-moz-placeholder{color:#828393;}
+      input:-ms-input-placeholder,textarea:-ms-input-placeholder{color:#828393;}
+      input:-moz-placeholder,textarea:-moz-placeholder{color:#828393;}
+      input:focus,textarea:focus{outline:none;padding:12px 16px;border-color:#0c97f9;}
+      input.invalid,input.invalid:focus,textarea.invalid,textarea.invalid:focus{border-color:#FF5572;}
+    </style>
+  </div>
+</form>
 `;

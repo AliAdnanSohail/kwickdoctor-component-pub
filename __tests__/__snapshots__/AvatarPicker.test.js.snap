@@ -1,0 +1,58 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  className="jsx-2165763448 avatar"
+>
+  <div
+    className="jsx-2165763448 avatar__button"
+  />
+  <label
+    aria-label="Edit image"
+    className="jsx-2165763448 avatar__container"
+    htmlFor="test-id"
+  >
+    <input
+      className="jsx-2165763448 file-input"
+      id="test-id"
+      name="input-avatar-picker"
+      onChange={[Function]}
+      type="file"
+    />
+    <div
+      className="jsx-2165763448 avatar__thumb"
+      style={
+        Object {
+          "backgroundImage": "url(null)",
+        }
+      }
+    >
+      <svg
+        aria-label="camera"
+        className="grommetux-control-icon grommetux-control-icon-camera grommetux-control-icon--responsive"
+        height="24px"
+        role="img"
+        version="1.1"
+        viewBox="0 0 24 24"
+        width="24px"
+      >
+        <path
+          d="M1,21 L1,7 L6,7 L8,3 L16,3 L18,7 L23,7 L23,21 L1,21 Z M12,18 C14.7614237,18 17,15.7614237 17,13 C17,10.2385763 14.7614237,8 12,8 C9.23857625,8 7,10.2385763 7,13 C7,15.7614237 9.23857625,18 12,18 Z"
+          fill="none"
+          stroke="#000"
+          strokeWidth="2"
+        />
+      </svg>
+    </div>
+  </label>
+  <div
+    className="jsx-2165763448 avatar__button"
+  />
+  <style>
+    .avatar{display:grid;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;grid-template-columns:32px 1fr 32px;grid-gap:12px;width:226px;}
+    .avatar__container{cursor:pointer;color:#c1c2cf;}
+    .avatar__thumb{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;height:138px;width:138px;border-radius:50%;background-color:#e7e7f0;background-position:center;background-size:cover;}
+    .avatar__thumb svg{width:42px;height:42px;fill:#bbbccd;stroke:#bbbccd;}
+  </style>
+</div>
+`;

@@ -2,26 +2,31 @@ import css from 'styled-jsx/css';
 import settings from '../../utils/style-helper';
 
 export default css`
-  div {
+  .form-field {
     position: relative;
   }
 `;
 
 export const error = css`
-  .input-error {
+  .error {
     position: absolute;
     left: 16px;
 
     width: auto;
-    max-width: 50%;
+    max-width: calc(100% - 32px);
+
+    box-sizing: border-box;
+    word-wrap: break-word;
 
     padding: 12px 16px;
     margin-top: -6px;
 
     border-radius: 3px;
     background-color: #ffffff;
-    box-shadow: 0 2px 14px 0 rgba(0, 0, 0, 0.14);
+    box-shadow: 0 2px 40px 0 rgba(0, 0, 0, 0.05);
     color: ${settings.errorColor};
+
+    z-index: 999;
 
     font: {
       size: 0.875rem;
@@ -57,7 +62,7 @@ export const error = css`
 export const label = css`
   label {
     color: ${settings.textColor};
-    display: block;
+    display: inline-block;
     margin-bottom: 6px;
 
     font: {
@@ -115,8 +120,8 @@ export const textInput = css`
       border-color: ${settings.primaryColor};
     }
 
-    &.error,
-    &.error:focus {
+    &.invalid,
+    &.invalid:focus {
       border-color: ${settings.errorColor};
     }
   }

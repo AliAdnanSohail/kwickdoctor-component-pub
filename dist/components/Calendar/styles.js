@@ -11,11 +11,11 @@ var _styleHelper2 = _interopRequireDefault(_styleHelper);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var header = exports.header = ['.weekdays{padding:0;margin:0;list-style:none;font-size:0.745rem;}', '.weekdays__item{width:95px;height:80px;float:left;line-height:80px;color:#bbbccd;font-weight:300;text-align:center;text-transform:uppercase;}'];
+var header = exports.header = ['.weekdays{padding:0;margin:0;list-style:none;font-size:0.745rem;}', '.weekdays__item{width:14.2857143%;height:80px;float:left;line-height:80px;color:#bbbccd;font-weight:300;text-align:center;text-transform:uppercase;}'];
 
-header.__hash = '1821193618';
-header.__scoped = ['.weekdays.jsx-588331411{padding:0;margin:0;list-style:none;font-size:0.745rem;}', '.weekdays__item.jsx-588331411{width:95px;height:80px;float:left;line-height:80px;color:#bbbccd;font-weight:300;text-align:center;text-transform:uppercase;}'];
-header.__scopedHash = '588331411';
+header.__hash = '2535097147';
+header.__scoped = ['.weekdays.jsx-1635075834{padding:0;margin:0;list-style:none;font-size:0.745rem;}', '.weekdays__item.jsx-1635075834{width:14.2857143%;height:80px;float:left;line-height:80px;color:#bbbccd;font-weight:300;text-align:center;text-transform:uppercase;}'];
+header.__scopedHash = '1635075834';
 var navigation = exports.navigation = ['.navigation{margin-bottom:15px;position:relative;}', '.navigation__month{text-align:center;font-weight:bold;font-size:1.1rem;padding-top:5px;}', '.navigation__month span{display:inline-block;padding:0 7px;}', '.navigation button{border:none;margin:0;padding:0;width:95px;background:transparent;outline:none;cursor:pointer;position:absolute;left:0;top:0;}', '.navigation button.next{left:auto;right:0;}', '.navigation button svg{width:14px !important;height:14px !important;}'];
 
 navigation.__hash = '1481994011';
