@@ -11,3 +11,4 @@ export { default as Modal } from './Modal';
 export { default as TextInput } from './TextInput';
 export { default as ToastNotification } from './ToastNotification';
 export { default as ToastManager } from './ToastNotification/Manager';
+export { default as TagInput } from './TagInput';
