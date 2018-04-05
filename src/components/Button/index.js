@@ -1,7 +1,9 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import css from 'styled-jsx/css';
+
+import { SpinningIcon } from 'grommet/components/icons';
 
 import styles from './styles';
 
@@ -23,15 +25,37 @@ export default class Button extends Component {
     `;
   };
 
+  renderContent = () => {
+    const {
+      children, icon, loading, rounded,
+    } = this.props;
+
+    if (rounded && icon) {
+      return (
+        <Fragment>
+          {loading ? <SpinningIcon size="small" className="button__loading-icon" /> : icon}
+
+          <style>{this.getIconStyle()}</style>
+        </Fragment>
+      );
+    }
+
+    return (
+      <Fragment>
+        {loading ? <SpinningIcon size="small" className="button__loading-icon" /> : undefined}
+        <span className="button__content">{children}</span>
+      </Fragment>
+    );
+  };
+
   render() {
     const {
       accent,
-      children,
       danger,
-      icon,
+      disabled,
+      loading,
       rounded,
       squared,
-      title,
       transparent,
       onClick,
     } = this.props;
@@ -40,44 +64,47 @@ export default class Button extends Component {
       'button',
       { 'button--accent': accent },
       { 'button--danger': danger },
+      { 'button--disabled': disabled },
+      { 'button--loading': loading },
       { 'button--rounded': rounded },
       { 'button--squared': squared },
       { 'button--transparent': transparent },
     );
 
     return (
-      <button className={classes} onClick={onClick} style={this.getSize()}>
-        {rounded && icon ? icon : title || children}
+      <button className={classes} onClick={onClick} style={this.getSize()} disabled={disabled}>
+        {this.renderContent()}
 
         <style>{styles}</style>
-        <style>{rounded && icon && this.getIconStyle()}</style>
       </button>
     );
   }
 }
 
 Button.propTypes = {
-  accent: PropTypes.bool,
-  children: PropTypes.element,
-  danger: PropTypes.bool,
+  children: PropTypes.any,
   icon: PropTypes.element,
-  rounded: PropTypes.bool,
   size: PropTypes.number,
+  accent: PropTypes.bool,
+  danger: PropTypes.bool,
+  disabled: PropTypes.bool,
+  loading: PropTypes.bool,
+  rounded: PropTypes.bool,
   squared: PropTypes.bool,
-  title: PropTypes.string,
   transparent: PropTypes.bool,
   onClick: PropTypes.func,
 };
 
 Button.defaultProps = {
-  accent: false,
   children: null,
-  danger: false,
   icon: null,
-  rounded: false,
   size: 40,
+  accent: false,
+  danger: false,
+  disabled: false,
+  loading: false,
+  rounded: false,
   squared: false,
-  title: null,
   transparent: false,
   onClick: null,
 };
