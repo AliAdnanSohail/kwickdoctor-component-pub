@@ -19,7 +19,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
  * @return {String|Null} [description]
  */
 var date = function date(value) {
-  return (0, _moment2.default)(value).isValid() ? undefined : 'Value is not valid date.';
+  return (0, _moment2.default)(value).isValid() ? undefined : 'This doesn’t look like a valid date. Check up, please!';
 };
 
 /**
@@ -30,7 +30,7 @@ var date = function date(value) {
  * @return {String|undefined} [description]
  */
 var email = function email(value) {
-  return value && !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(value) ? 'Invalid email address' : undefined;
+  return value && !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(value) ? 'This doesn’t look like a valid email. Check up, please!' : undefined;
 };
 
 /**
@@ -44,7 +44,7 @@ var email = function email(value) {
  */
 var equals = function equals(targetValue, name) {
   return function (value) {
-    return targetValue === value ? undefined : 'Must be the same with ' + name;
+    return targetValue === value ? undefined : 'This looks like value does not match with ' + name + '. Check up, please!';
   };
 };
 
@@ -59,7 +59,7 @@ var equals = function equals(targetValue, name) {
  */
 var maxLength = function maxLength(max) {
   return function (value) {
-    return value && value.length > max ? 'Must be ' + max + ' characters or less' : undefined;
+    return value && value.length > max ? 'Should be ' + max + ' characters or less. Check up, please!' : undefined;
   };
 };
 
@@ -74,7 +74,7 @@ var maxLength = function maxLength(max) {
  */
 var minLength = exports.minLength = function minLength(min) {
   return function (value) {
-    return value && value.length < min ? 'Must be ' + min + ' characters or more' : undefined;
+    return value && value.length < min ? 'Should be ' + min + ' characters or more. Check up, please!' : undefined;
   };
 };
 
@@ -86,7 +86,7 @@ var minLength = exports.minLength = function minLength(min) {
  * @return {String|Null} [description]
  */
 var number = function number(value) {
-  return value && Number.isNaN(Number(value)) ? 'Must be a number' : undefined;
+  return value && Number.isNaN(Number(value)) ? 'This doesn’t look like a valid number. Check up, please!' : undefined;
 };
 
 /**
