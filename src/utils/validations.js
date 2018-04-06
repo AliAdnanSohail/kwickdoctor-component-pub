@@ -1,4 +1,14 @@
 import validator from 'validator';
+import moment from 'moment';
+
+/**
+ * Returns error message if value is incorrect date and null if it's ok
+ *
+ * @param {String|moment|Date} value Value of input for validation
+ *
+ * @return {String|Null} [description]
+ */
+const date = value => (moment(value).isValid() ? undefined : 'Value is not valid date.');
 
 /**
  * Returns error message if value is incorrect email address and null if it's ok
@@ -52,6 +62,7 @@ const number = value => (value && validator.isNumeric(value) ? 'Must be a number
 const required = value => (validator.isEmpty(value) ? 'This filed is required' : undefined);
 
 export default {
+  date,
   email,
   maxLength,
   minLength,

@@ -3,6 +3,9 @@ import PropTypes from 'prop-types';
 import ReactDatePicker from 'react-datepicker';
 import moment from 'moment';
 import classnames from 'classnames';
+import uuidv4 from 'uuid/v4';
+import shallowEqualArrays from 'shallow-equal/arrays';
+import shallowEqualObjects from 'shallow-equal/objects';
 
 import 'react-datepicker/dist/react-datepicker.css';
 import {
@@ -18,24 +21,62 @@ export default class DatePicker extends Component {
   constructor(props) {
     super(props);
 
-    this.state = { value: props.value };
+    this.id = uuidv4();
+    this.state = {
+      value: moment(props.value),
+    };
   }
 
-  errorMessage = () => {
-    const { error } = this.props;
+  componentDidMount() {
+    this.context._register(this, this.id);
+  }
 
-    return error && <div className="input-error">{error}</div>;
-  };
+  componentWillReceiveProps({ validations: nextValidations, ...nextProps }) {
+    const { validations, ...props } = this.props;
 
-  handleChange = (date) => {
+    if (
+      !shallowEqualObjects(props, nextProps) ||
+      !shallowEqualArrays(validations, nextValidations)
+    ) {
+      this.context._setProps(nextProps, this.id);
+    }
+  }
+
+  shouldComponentUpdate(nextProps, nextState, nextContext) {
+    return nextContext !== this.context;
+  }
+
+  componentWillUnmount() {
+    this.context._unregister(this, this.id);
+  }
+
+  getError = () => {
+    const props = this.context._getProps(this.id);
+    if (!props) {
+      return null;
+    }
+    return props.error;
+  }
+
+  errorMessage = error => error && <div className="input-error">{error}</div>;
+
+  handleChange = (dateOrDateString) => {
+    let date = dateOrDateString;
+    if (date.target && typeof date.target.value === 'string') {
+      date = moment(date.target.value, this.props.dateFormat, true);
+    }
+
+    this.context._handleChange({ target: { value: date } }, this.id);
+
     this.setState({ value: date });
     this.props.onChange(date);
   };
 
   render() {
     const {
-      id, label, name, dateFormat, error, containerClassName,
+      id, label, name, dateFormat, containerClassName,
     } = this.props;
+    const error = this.getError();
     const blockClasses = classnames('form-field', containerClassName, {
       'has-error': !!error,
     });
@@ -49,12 +90,13 @@ export default class DatePicker extends Component {
           name={name}
           selected={this.state.value}
           onChange={this.handleChange}
+          onChangeRaw={this.handleChange}
           className="datepicker"
           calendarClassName="calendar"
           dateFormat={dateFormat}
           useWeekdaysShort
         />
-        {this.errorMessage()}
+        {this.errorMessage(error)}
 
         <style>{datepickerBlockStyles}</style>
         <style>{calendar}</style>
@@ -74,8 +116,8 @@ DatePicker.propTypes = {
   value: PropTypes.object,
   dateFormat: PropTypes.string,
   onChange: PropTypes.func.isRequired,
-  error: PropTypes.string,
   containerClassName: PropTypes.string,
+  validations: PropTypes.array,
 };
 
 DatePicker.defaultProps = {
@@ -83,6 +125,15 @@ DatePicker.defaultProps = {
   label: '',
   value: moment(),
   dateFormat: 'DD MMM, YYYY',
-  error: '',
   containerClassName: null,
+  validations: [],
+};
+
+DatePicker.contextTypes = {
+  _register: PropTypes.func.isRequired,
+  _unregister: PropTypes.func.isRequired,
+  _setProps: PropTypes.func.isRequired,
+  _handleChange: PropTypes.func.isRequired,
+  _handleBlur: PropTypes.func.isRequired,
+  _getProps: PropTypes.func.isRequired,
 };
