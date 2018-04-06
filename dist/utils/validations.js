@@ -44,7 +44,7 @@ var email = function email(value) {
  */
 var equals = function equals(targetValue, name) {
   return function (value) {
-    return targetValue === value ? undefined : 'This looks like value does not match with ' + name + '. Check up, please!';
+    return targetValue === value ? undefined : 'This doesn\u2019t look like value match with ' + name + '. Check up, please!';
   };
 };
 
@@ -97,7 +97,7 @@ var number = function number(value) {
  * @return {String|Null} [description]
  */
 var required = function required(value) {
-  return value ? undefined : 'Required';
+  return value ? undefined : 'This field is required. Check up, please!';
 };
 
 exports.default = {

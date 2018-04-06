@@ -34,7 +34,7 @@ const email = value =>
 const equals = (targetValue, name) => value =>
   (targetValue === value
     ? undefined
-    : `This looks like value does not match with ${name}. Check up, please!`);
+    : `This doesn’t look like value match with ${name}. Check up, please!`);
 
 /**
  * Returns error message if the value must be max characters or less
@@ -83,7 +83,7 @@ const number = value =>
  *
  * @return {String|Null} [description]
  */
-const required = value => (value ? undefined : 'Required');
+const required = value => (value ? undefined : 'This field is required. Check up, please!');
 
 export default {
   date,
