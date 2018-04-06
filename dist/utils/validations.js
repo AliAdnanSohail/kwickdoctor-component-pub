@@ -5,10 +5,6 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.minLength = undefined;
 
-var _validator = require('validator');
-
-var _validator2 = _interopRequireDefault(_validator);
-
 var _moment = require('moment');
 
 var _moment2 = _interopRequireDefault(_moment);
@@ -34,7 +30,7 @@ var date = function date(value) {
  * @return {String|undefined} [description]
  */
 var email = function email(value) {
-  return _validator2.default.isEmail(value) ? undefined : value + ' is not a valid email.';
+  return value && !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(value) ? 'Invalid email address' : undefined;
 };
 
 /**
@@ -75,7 +71,7 @@ var minLength = exports.minLength = function minLength(min) {
  * @return {String|Null} [description]
  */
 var number = function number(value) {
-  return value && _validator2.default.isNumeric(value) ? 'Must be a number' : undefined;
+  return value && Number.isNaN(Number(value)) ? 'Must be a number' : undefined;
 };
 
 /**
@@ -86,7 +82,7 @@ var number = function number(value) {
  * @return {String|Null} [description]
  */
 var required = function required(value) {
-  return _validator2.default.isEmpty(value) ? 'This filed is required' : undefined;
+  return value ? undefined : 'Required';
 };
 
 exports.default = {
