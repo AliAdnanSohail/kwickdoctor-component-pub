@@ -38,10 +38,12 @@ export default class Suggestions extends React.Component {
     const { items, isFocused } = this.props;
 
     return !!items.length && isFocused && (
-      <ul ref={(ul) => { this.wrapperElement = ul; }} className="tag-input__suggestions">
-        {this.renderSuggestions()}
+      <div className="tag-input__suggestions">
+        <ul className="tag-input__suggestions-list" ref={(ul) => { this.wrapperElement = ul; }}>
+          {this.renderSuggestions()}
+        </ul>
         <style jsx>{styles}</style>
-      </ul>
+      </div>
     );
   }
 }

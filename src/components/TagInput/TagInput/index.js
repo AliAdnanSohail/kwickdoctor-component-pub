@@ -2,20 +2,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import debounce from 'lodash.debounce';
 
+import KEYS from './../keys';
 import Tag from './../Tag';
 import Suggestions from './../Suggestions';
+import ExistingTags from './../ExistingTags';
 
 import styles from './styles';
-
-const KEYS = {
-  ENTER: 13,
-  TAB: 9,
-  BACKSPACE: 8,
-  UP_ARROW: 38,
-  DOWN_ARROW: 40,
-  ESCAPE: 27,
-  RIGHT_ARROW: 39,
-};
 
 export default class TagInput extends React.Component {
   constructor(props) {
@@ -56,9 +48,17 @@ export default class TagInput extends React.Component {
     return suggestions
       .filter((value, index) => suggestions.indexOf(value) === index)
       .filter(item => (
-        item.toLowerCase().indexOf(query.toLowerCase()) === 0 && tagsNames.indexOf(item) === -1
+        item.toLowerCase().indexOf(query.toLowerCase()) === 0 &&
+        tagsNames.indexOf(item.toLowerCase()) === -1
       ))
       .slice(0, 10);
+  }
+
+  getFilteredExistingsTags = () => {
+    const { existingTags } = this.props;
+    const tagsNames = this.getLowerCaseTagsNames();
+
+    return existingTags.filter(item => tagsNames.indexOf(item.toLowerCase()) === -1);
   }
 
   addTag = (name) => {
@@ -101,6 +101,7 @@ export default class TagInput extends React.Component {
     });
     if (this.textInput) {
       this.textInput.focus();
+      this.textInput.click();
     }
   }
 
@@ -225,6 +226,10 @@ export default class TagInput extends React.Component {
     this.addTag(this.state.suggestions[i]);
   }
 
+  handleExistingsTagClick = (i) => {
+    this.addTag(this.getFilteredExistingsTags()[i]);
+  }
+
 
   renderTags = () => {
     const { tags } = this.state;
@@ -251,6 +256,10 @@ export default class TagInput extends React.Component {
       <div ref={(wrapper) => { this.wrapperElement = wrapper; }} onClick={this.handleWrapperElementOnClick} className="tag-input">
         {/* eslint-enable */}
         <ul className="tag-input__tag-list">
+          <ExistingTags
+            existingTags={this.getFilteredExistingsTags()}
+            handleClick={this.handleExistingsTagClick}
+          />
           {this.renderTags()}
         </ul>
         <div className="tag-input__input">
@@ -285,6 +294,7 @@ TagInput.propTypes = {
     PropTypes.array,
   ]),
   suggestionsDelay: PropTypes.number,
+  existingTags: PropTypes.array,
   onChange: PropTypes.func,
   delimiters: PropTypes.array,
   minQueryLength: PropTypes.number,
@@ -296,6 +306,7 @@ TagInput.defaultProps = {
   tagCreate(name) { return name; },
   suggestions: [],
   suggestionsDelay: 0,
+  existingTags: [],
   onChange() {},
   delimiters: [KEYS.ENTER, KEYS.TAB],
   minQueryLength: 1,

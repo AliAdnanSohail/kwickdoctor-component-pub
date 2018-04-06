@@ -14,7 +14,7 @@ export default css`
     min-height: 48px;
     box-sizing: border-box;
     .tag-input__tag-list {
-      display: inline-block;
+      display: inline;
       list-style: none;
       margin: 0;
       padding: 0;
