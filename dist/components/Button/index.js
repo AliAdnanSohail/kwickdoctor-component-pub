@@ -19,6 +19,8 @@ var _classnames = require('classnames');
 
 var _classnames2 = _interopRequireDefault(_classnames);
 
+var _icons = require('grommet/components/icons');
+
 var _styles = require('./styles');
 
 var _styles2 = _interopRequireDefault(_styles);
@@ -61,6 +63,37 @@ var Button = function (_Component) {
 
 
       return _defaultExport;
+    }, _this.renderContent = function () {
+      var _this$props2 = _this.props,
+          children = _this$props2.children,
+          icon = _this$props2.icon,
+          loading = _this$props2.loading,
+          rounded = _this$props2.rounded;
+
+
+      if (rounded && icon) {
+        return _react2.default.createElement(
+          _react.Fragment,
+          null,
+          loading ? _react2.default.createElement(_icons.SpinningIcon, { size: 'small', className: 'button__loading-icon' }) : icon,
+          _react2.default.createElement(
+            'style',
+            null,
+            _this.getIconStyle()
+          )
+        );
+      }
+
+      return _react2.default.createElement(
+        _react.Fragment,
+        null,
+        loading ? _react2.default.createElement(_icons.SpinningIcon, { size: 'small', className: 'button__loading-icon' }) : undefined,
+        _react2.default.createElement(
+          'span',
+          { className: 'button__content' },
+          children
+        )
+      );
     }, _temp), _possibleConstructorReturn(_this, _ret);
   }
 
@@ -69,31 +102,25 @@ var Button = function (_Component) {
     value: function render() {
       var _props = this.props,
           accent = _props.accent,
-          children = _props.children,
           danger = _props.danger,
-          icon = _props.icon,
+          disabled = _props.disabled,
+          loading = _props.loading,
           rounded = _props.rounded,
           squared = _props.squared,
-          title = _props.title,
           transparent = _props.transparent,
           onClick = _props.onClick;
 
 
-      var classes = (0, _classnames2.default)('button', { 'button--accent': accent }, { 'button--danger': danger }, { 'button--rounded': rounded }, { 'button--squared': squared }, { 'button--transparent': transparent });
+      var classes = (0, _classnames2.default)('button', { 'button--accent': accent }, { 'button--danger': danger }, { 'button--disabled': disabled }, { 'button--loading': loading }, { 'button--rounded': rounded }, { 'button--squared': squared }, { 'button--transparent': transparent });
 
       return _react2.default.createElement(
         'button',
-        { className: classes, onClick: onClick, style: this.getSize() },
-        rounded && icon ? icon : title || children,
+        { className: classes, onClick: onClick, style: this.getSize(), disabled: disabled },
+        this.renderContent(),
         _react2.default.createElement(
           'style',
           null,
           _styles2.default
-        ),
-        _react2.default.createElement(
-          'style',
-          null,
-          rounded && icon && this.getIconStyle()
         )
       );
     }
@@ -106,27 +133,29 @@ exports.default = Button;
 
 
 Button.propTypes = {
-  accent: _propTypes2.default.bool,
-  children: _propTypes2.default.element,
-  danger: _propTypes2.default.bool,
+  children: _propTypes2.default.any,
   icon: _propTypes2.default.element,
-  rounded: _propTypes2.default.bool,
   size: _propTypes2.default.number,
+  accent: _propTypes2.default.bool,
+  danger: _propTypes2.default.bool,
+  disabled: _propTypes2.default.bool,
+  loading: _propTypes2.default.bool,
+  rounded: _propTypes2.default.bool,
   squared: _propTypes2.default.bool,
-  title: _propTypes2.default.string,
   transparent: _propTypes2.default.bool,
   onClick: _propTypes2.default.func
 };
 
 Button.defaultProps = {
-  accent: false,
   children: null,
-  danger: false,
   icon: null,
-  rounded: false,
   size: 40,
+  accent: false,
+  danger: false,
+  disabled: false,
+  loading: false,
+  rounded: false,
   squared: false,
-  title: null,
   transparent: false,
   onClick: null
 };

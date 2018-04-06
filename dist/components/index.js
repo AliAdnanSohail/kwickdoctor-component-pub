@@ -94,15 +94,6 @@ Object.defineProperty(exports, 'Modal', {
   }
 });
 
-var _TextInput = require('./TextInput');
-
-Object.defineProperty(exports, 'TextInput', {
-  enumerable: true,
-  get: function get() {
-    return _interopRequireDefault(_TextInput).default;
-  }
-});
-
 var _ToastNotification = require('./ToastNotification');
 
 Object.defineProperty(exports, 'ToastNotification', {
@@ -119,6 +110,18 @@ Object.defineProperty(exports, 'ToastManager', {
   get: function get() {
     return _interopRequireDefault(_Manager).default;
   }
+});
+
+var _FormFields = require('./FormFields');
+
+Object.keys(_FormFields).forEach(function (key) {
+  if (key === "default" || key === "__esModule") return;
+  Object.defineProperty(exports, key, {
+    enumerable: true,
+    get: function get() {
+      return _FormFields[key];
+    }
+  });
 });
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
