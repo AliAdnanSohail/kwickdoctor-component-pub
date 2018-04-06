@@ -16,13 +16,16 @@ storiesOf('Button', module)
   .addDecorator(getStory => <div style={{ padding: '24px' }}>{getStory()}</div>)
   .add('default', () => (
     <Button
+      icon={<EditIcon />}
       accent={boolean('accent', false)}
       danger={boolean('danger', false)}
-      icon={<EditIcon />}
+      disabled={boolean('disabled', false)}
+      loading={boolean('loading', false)}
       rounded={boolean('rounded', false)}
       squared={boolean('squared', false)}
-      title={text('title', 'Hello!')}
       transparent={boolean('transparent', false)}
       onClick={action('clicked')}
-    />
+    >
+      {text('title', 'Hello!')}
+    </Button>
   ));
