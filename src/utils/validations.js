@@ -7,7 +7,8 @@ import moment from 'moment';
  *
  * @return {String|Null} [description]
  */
-const date = value => (moment(value).isValid() ? undefined : 'Value is not valid date.');
+const date = value =>
+  (moment(value).isValid() ? undefined : 'This doesn’t look like a valid date. Check up, please!');
 
 /**
  * Returns error message if the value is incorrect email address and null if it's ok
@@ -18,7 +19,7 @@ const date = value => (moment(value).isValid() ? undefined : 'Value is not valid
  */
 const email = value =>
   (value && !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(value)
-    ? 'Invalid email address'
+    ? 'This doesn’t look like a valid email. Check up, please!'
     : undefined);
 
 /**
@@ -31,7 +32,9 @@ const email = value =>
  * @return {String|undefined} [description]
  */
 const equals = (targetValue, name) => value =>
-  (targetValue === value ? undefined : `Must be the same with ${name}`);
+  (targetValue === value
+    ? undefined
+    : `This looks like value does not match with ${name}. Check up, please!`);
 
 /**
  * Returns error message if the value must be max characters or less
@@ -43,7 +46,9 @@ const equals = (targetValue, name) => value =>
  * @return {String|undefined} [description]
  */
 const maxLength = max => value =>
-  (value && value.length > max ? `Must be ${max} characters or less` : undefined);
+  (value && value.length > max
+    ? `Should be ${max} characters or less. Check up, please!`
+    : undefined);
 
 /**
  * Returns error message if the value must be min characters or more
@@ -55,7 +60,9 @@ const maxLength = max => value =>
  * @return {String|Null} [description]
  */
 export const minLength = min => value =>
-  (value && value.length < min ? `Must be ${min} characters or more` : undefined);
+  (value && value.length < min
+    ? `Should be ${min} characters or more. Check up, please!`
+    : undefined);
 
 /**
  * Returns error message if the value isn't a number
@@ -64,7 +71,10 @@ export const minLength = min => value =>
  *
  * @return {String|Null} [description]
  */
-const number = value => (value && Number.isNaN(Number(value)) ? 'Must be a number' : undefined);
+const number = value =>
+  (value && Number.isNaN(Number(value))
+    ? 'This doesn’t look like a valid number. Check up, please!'
+    : undefined);
 
 /**
  * Returns error message if the value is empty and null if it's ok
