@@ -1,4 +1,3 @@
-import validator from 'validator';
 import moment from 'moment';
 
 /**
@@ -17,7 +16,10 @@ const date = value => (moment(value).isValid() ? undefined : 'Value is not valid
  *
  * @return {String|undefined} [description]
  */
-const email = value => (validator.isEmail(value) ? undefined : `${value} is not a valid email.`);
+const email = value =>
+  (value && !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(value)
+    ? 'Invalid email address'
+    : undefined);
 
 /**
  * Returns error message if value must be max characters or less
@@ -50,7 +52,7 @@ export const minLength = min => value =>
  *
  * @return {String|Null} [description]
  */
-const number = value => (value && validator.isNumeric(value) ? 'Must be a number' : undefined);
+const number = value => (value && Number.isNaN(Number(value)) ? 'Must be a number' : undefined);
 
 /**
  * Returns error message if value is empty and null if it's ok
@@ -59,7 +61,7 @@ const number = value => (value && validator.isNumeric(value) ? 'Must be a number
  *
  * @return {String|Null} [description]
  */
-const required = value => (validator.isEmpty(value) ? 'This filed is required' : undefined);
+const required = value => (value ? undefined : 'Required');
 
 export default {
   date,
