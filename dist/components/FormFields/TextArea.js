@@ -22,13 +22,21 @@ exports.default = (0, _renderer2.default)(function (input, label, _ref) {
   var children = _ref.children,
       className = _ref.className,
       id = _ref.id,
-      placeholder = _ref.placeholder;
+      name = _ref.name,
+      placeholder = _ref.placeholder,
+      value = _ref.value;
   return _react2.default.createElement(
     _react.Fragment,
     null,
     _react2.default.createElement(
       'textarea',
-      _extends({}, input, { id: id, placeholder: placeholder, className: className }),
+      _extends({}, input, {
+        className: className,
+        id: id,
+        name: name,
+        placeholder: placeholder,
+        value: value
+      }),
       children
     ),
     _react2.default.createElement(

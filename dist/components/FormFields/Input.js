@@ -19,13 +19,23 @@ var _styles = require('./styles');
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 exports.default = (0, _renderer2.default)(function (input, label, _ref) {
-  var id = _ref.id,
+  var className = _ref.className,
+      id = _ref.id,
+      name = _ref.name,
       placeholder = _ref.placeholder,
-      className = _ref.className;
+      type = _ref.type,
+      value = _ref.value;
   return _react2.default.createElement(
     _react.Fragment,
     null,
-    _react2.default.createElement('input', _extends({}, input, { id: id, placeholder: placeholder, className: className })),
+    _react2.default.createElement('input', _extends({}, input, {
+      className: className,
+      id: id,
+      name: name,
+      type: type,
+      placeholder: placeholder,
+      value: value
+    })),
     _react2.default.createElement(
       'style',
       null,

@@ -42,9 +42,9 @@ var email = function email(value) {
  *
  * @return {String|undefined} [description]
  */
-var equals = function equals(targetValue) {
+var equals = function equals(targetValue, name) {
   return function (value) {
-    return targetValue === value ? undefined : 'Invalid email address';
+    return targetValue === value ? undefined : 'Must be the same with ' + name;
   };
 };
 

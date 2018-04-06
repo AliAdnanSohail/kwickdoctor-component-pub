@@ -16,15 +16,18 @@ var _styles = require('./styles');
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-exports.default = (0, _renderer2.default)(function (input, label, _ref) {
-  var children = _ref.children;
+exports.default = (0, _renderer2.default)(function (input, label) {
+  for (var _len = arguments.length, rest = Array(_len > 2 ? _len - 2 : 0), _key = 2; _key < _len; _key++) {
+    rest[_key - 2] = arguments[_key];
+  }
+
   return _react2.default.createElement(
     _react.Fragment,
     null,
     _react2.default.createElement(
       'select',
       input,
-      children
+      rest.children
     ),
     _react2.default.createElement(
       'style',

@@ -30,8 +30,8 @@ const email = value =>
  *
  * @return {String|undefined} [description]
  */
-const equals = targetValue => value =>
-  (targetValue === value ? undefined : 'Invalid email address');
+const equals = (targetValue, name) => value =>
+  (targetValue === value ? undefined : `Must be the same with ${name}`);
 
 /**
  * Returns error message if the value must be max characters or less
