@@ -56,14 +56,14 @@ var Day = function (_Component) {
           events = _this$props.events,
           selected = _this$props.selected;
 
-      var classes = (0, _classnames2.default)('events', 'events-qty-' + events.length);
+      var classes = (0, _classnames2.default)('events', 'events-qty-' + events.slice(0, 3).length);
 
       return selected && events.length > 0 && _react2.default.createElement(
         'ul',
         {
           className: 'jsx-' + _styles.events.__scopedHash + ' ' + (classes || '')
         },
-        events.map(function (event) {
+        events.slice(0, 3).map(function (event) {
           return _react2.default.createElement('li', { key: event.date.format('D') + '-' + Math.random(), className: 'jsx-' + _styles.events.__scopedHash + ' ' + 'events__item'
           });
         }),
