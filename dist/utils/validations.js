@@ -9,7 +9,22 @@ var _validator = require('validator');
 
 var _validator2 = _interopRequireDefault(_validator);
 
+var _moment = require('moment');
+
+var _moment2 = _interopRequireDefault(_moment);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+/**
+ * Returns error message if value is incorrect date and null if it's ok
+ *
+ * @param {String|moment|Date} value Value of input for validation
+ *
+ * @return {String|Null} [description]
+ */
+var date = function date(value) {
+  return (0, _moment2.default)(value).isValid() ? undefined : 'Value is not valid date.';
+};
 
 /**
  * Returns error message if value is incorrect email address and null if it's ok
@@ -75,6 +90,7 @@ var required = function required(value) {
 };
 
 exports.default = {
+  date: date,
   email: email,
   maxLength: maxLength,
   minLength: minLength,
