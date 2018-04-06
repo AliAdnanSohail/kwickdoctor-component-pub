@@ -1,7 +1,7 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 
-import { ToastNotification } from '../src';
+import { Toast } from '../src';
 
 const toastContentProps = {
   className: 'test-toast-content',
@@ -27,8 +27,14 @@ const initialToasts = [
   },
 ];
 
+function createNodeMock() {
+  return {
+    className: '',
+  };
+}
+
 it('Toast renders correctly', () => {
-  const element = renderer.create(<ToastNotification initialToasts={initialToasts} />).toJSON();
+  const element = renderer.create(<Toast initialToasts={initialToasts} />, { createNodeMock }).toJSON();
 
   expect(element).toMatchSnapshot();
 });
