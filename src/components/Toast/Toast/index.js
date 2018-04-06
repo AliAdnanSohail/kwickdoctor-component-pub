@@ -4,14 +4,42 @@ import classnames from 'classnames';
 import CloseIcon from 'grommet/components/icons/base/Close';
 import Manager from './../Manager';
 
-
 export default class Toast extends Component {
   componentDidMount = () => {
     const { timeOut } = this.props;
     if (timeOut !== 0) {
       setTimeout(this.requestHide, timeOut);
     }
+    this.enter();
   };
+
+  enter = () => {
+    const { animationDuration } = this.props;
+    const baseClassName = this.element.className;
+
+    this.element.className = `${baseClassName} fade-enter`;
+    setTimeout(() => {
+      this.element.className = `${baseClassName} fade-enter-active`;
+    }, 0);
+
+    setTimeout(() => {
+      this.element.className = baseClassName;
+    }, animationDuration);
+  }
+
+  exit = () => {
+    const { animationDuration } = this.props;
+    const baseClassName = this.element.className;
+
+    this.element.className = `${baseClassName} fade-exit`;
+    setTimeout(() => {
+      this.element.className = `${baseClassName} fade-exit-active`;
+    }, 0);
+
+    setTimeout(() => {
+      Manager.remove(this.props.id);
+    }, animationDuration);
+  }
 
   closeToast = () => {
     const { onHideClick } = this.props;
@@ -22,21 +50,26 @@ export default class Toast extends Component {
   }
 
   requestHide = () => {
-    const { onRequestHide, id } = this.props;
+    const { onRequestHide } = this.props;
     if (onRequestHide) {
       onRequestHide();
     }
-    Manager.remove(id);
+    this.exit();
   };
 
   render() {
     const {
       primary, boxstyle, content,
     } = this.props;
-    const classes = classnames('toast-box', { primary }, boxstyle);
+
+    const classes = classnames(
+      'toast-box',
+      { primary },
+      boxstyle,
+    );
 
     return (
-      <div className={classes}>
+      <div ref={(div) => { this.element = div; }} className={classes}>
         <div className="circle" />
         <div className="message">
           {content}
@@ -59,6 +92,7 @@ Toast.propTypes = {
   boxstyle: PropTypes.string,
   onHideClick: PropTypes.func,
   timeOut: PropTypes.number,
+  animationDuration: PropTypes.number,
   onRequestHide: PropTypes.func,
 };
 
@@ -67,5 +101,6 @@ Toast.defaultProps = {
   boxstyle: 'rectangle-22',
   onHideClick: null,
   timeOut: 5000,
+  animationDuration: 500,
   onRequestHide() {},
 };

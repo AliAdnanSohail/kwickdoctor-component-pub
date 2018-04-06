@@ -4,23 +4,26 @@ import settings from '../../utils/style-helper';
 
 export default css`
   .toast-box {
+    max-height: 100%;
+    box-sizing: border-box;
     margin-bottom: 10px;
     color: ${settings.textColor};
-    transition: all 200ms ease-out;
+    transition: transform 200ms ease-out, opacity 200ms ease-out, max-height 100ms ease 200ms, padding 100ms ease 300ms, margin 100ms ease 400ms;
     &.fade-enter {
-      opacity: 0.01;
+      opacity: 0;
       transform: translate(40px);
-    }
-    &.fade-exit {
-      
     }
     &.fade-exit-active {
-      opacity: 0.01;
+      opacity: 0;
       transform: translate(40px);
+      max-height: 0!important;
+      margin: 0!important;
+      padding: 0!important;
+      overflow: hidden;
     }
     &.rectangle-22 {
       padding: 21px 18px;
-      width: 392px;
+      width: 413px;
       border-radius: 4px;
       background-color: #FFFFFF;
       box-shadow: 0 2px 40px 0 rgba(0, 0, 0, 0.05);
@@ -80,15 +83,9 @@ export default css`
     }
   }
   .toast-container {
-    position: absolute;
+    position: fixed;
     top: 10px;
     left: 50%;
     margin-left: -196px;
-    .plug {
-      transition: all 200ms ease-out;
-      &--zeroHeight {
-        height: 0!important;
-      }
-    }
   }
 `;
