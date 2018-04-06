@@ -12,7 +12,7 @@ var _moment2 = _interopRequireDefault(_moment);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 /**
- * Returns error message if value is incorrect date and null if it's ok
+ * Returns error message if the value is incorrect date and null if it's ok
  *
  * @param {String|moment|Date} value Value of input for validation
  *
@@ -23,7 +23,7 @@ var date = function date(value) {
 };
 
 /**
- * Returns error message if value is incorrect email address and null if it's ok
+ * Returns error message if the value is incorrect email address and null if it's ok
  *
  * @param {String} value Value of input for validation
  *
@@ -34,7 +34,22 @@ var email = function email(value) {
 };
 
 /**
- * Returns error message if value must be max characters or less
+ * Returns error message if the value is not equal to the specified
+ *
+ * @param {String|Number} targetValue Target value
+ *
+ * @param {String|Number} value Value of input for validation
+ *
+ * @return {String|undefined} [description]
+ */
+var equals = function equals(targetValue) {
+  return function (value) {
+    return targetValue === value ? undefined : 'Invalid email address';
+  };
+};
+
+/**
+ * Returns error message if the value must be max characters or less
  *
  * @param {Number} max Max length of value
  *
@@ -49,7 +64,7 @@ var maxLength = function maxLength(max) {
 };
 
 /**
- * Returns error message if value must be min characters or more
+ * Returns error message if the value must be min characters or more
  *
  * @param {Number} min Min length of value
  *
@@ -64,7 +79,7 @@ var minLength = exports.minLength = function minLength(min) {
 };
 
 /**
- * Returns error message if value isn't a number
+ * Returns error message if the value isn't a number
  *
  * @param {Number} value Value of input for validation
  *
@@ -75,7 +90,7 @@ var number = function number(value) {
 };
 
 /**
- * Returns error message if value is empty and null if it's ok
+ * Returns error message if the value is empty and null if it's ok
  *
  * @param {String|Number} value Value of input for validation
  *
@@ -88,6 +103,7 @@ var required = function required(value) {
 exports.default = {
   date: date,
   email: email,
+  equals: equals,
   maxLength: maxLength,
   minLength: minLength,
   number: number,
