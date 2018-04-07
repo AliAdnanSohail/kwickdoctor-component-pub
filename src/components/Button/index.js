@@ -8,6 +8,12 @@ import { SpinningIcon } from 'grommet/components/icons';
 import styles from './styles';
 
 export default class Button extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = { top: '50%', left: '50%' };
+  }
+
   getSize = () => {
     const { rounded, size } = this.props;
 
@@ -23,6 +29,12 @@ export default class Button extends Component {
         height: ${size / 2}px !important;
       }
     `;
+  };
+
+  handleMouseEnter = (event) => {
+    const { top, left } = this.button.getBoundingClientRect();
+
+    this.setState({ top: event.pageY - top, left: event.pageX - left });
   };
 
   renderContent = () => {
@@ -60,6 +72,8 @@ export default class Button extends Component {
       onClick,
     } = this.props;
 
+    const { top, left } = this.state;
+
     const classes = classnames(
       'button',
       { 'button--accent': accent },
@@ -72,8 +86,19 @@ export default class Button extends Component {
     );
 
     return (
-      <button className={classes} onClick={onClick} style={this.getSize()} disabled={disabled}>
+      <button
+        ref={(button) => {
+          this.button = button;
+        }}
+        className={classes}
+        onClick={onClick}
+        onMouseEnter={this.handleMouseEnter}
+        style={this.getSize()}
+        disabled={disabled}
+      >
         {this.renderContent()}
+
+        <span className="button__wave" style={{ top, left }} />
 
         <style>{styles}</style>
       </button>

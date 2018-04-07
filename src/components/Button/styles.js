@@ -17,7 +17,9 @@ export default css`
 
     line-height: 26px;
 
-    transition: background-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    transition: background-color 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+
+    overflow: hidden;
 
     border: {
       width: 1px;
@@ -47,12 +49,30 @@ export default css`
       transition: all 0.3s ease-in-out;
     }
 
+    &__wave {
+      position: absolute;
+      display: block;
+      width: 0;
+      height: 0;
+
+      border-radius: 50%;
+      background-color: #ffffff;
+
+      opacity: 0.5;
+
+      transform: translate(-50%, -50%);
+    }
+
     &:not(&--disabled) {
       &:hover,
       &:focus {
         background-color: ${settings.primaryLightColor};
         border-color: ${settings.primaryLightColor};
-        box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.1);
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+
+        .button__wave {
+          animation: wave 0.8s;
+        }
       }
     }
 
@@ -135,6 +155,27 @@ export default css`
       circle {
         stroke: #ffffff;
       }
+    }
+  }
+
+  @keyframes wave {
+    0% {
+      opacity: 0.5;
+
+      width: 0;
+      height: 0;
+    }
+    70% {
+      opacity: 0.1;
+
+      width: 300px;
+      height: 300px;
+    }
+    100% {
+      opacity: 0;
+
+      width: 300px;
+      height: 300px;
     }
   }
 `;
