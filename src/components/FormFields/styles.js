@@ -74,7 +74,7 @@ export const label = css`
 
 export const textInput = css`
   input,
-  textarea {
+  textarea  {
     width: 100%;
     min-width: 100%;
     max-width: 100%;
@@ -84,7 +84,8 @@ export const textInput = css`
     background-color: #ffffff;
     color: ${settings.textColor};
     box-sizing: border-box;
-
+    
+  
     font: {
       style: normal;
       weight: normal;
@@ -97,6 +98,8 @@ export const textInput = css`
       color: ${settings.borderColor};
       radius: 4px;
     }
+
+   
 
     ::-webkit-input-placeholder {
       color: ${settings.placeholderColor};
@@ -125,4 +128,111 @@ export const textInput = css`
       border-color: ${settings.errorColor};
     }
   }
+`;
+
+
+export const select = css`
+select{
+  border-width:0px,;
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  padding: 0;
+  margin: 0;
+  padding: 12px 16px;
+
+  font: {
+    style: normal;
+    weight: normal;
+    size: 0.875rem;
+  }
+
+  border: {
+    width: 2px;
+    style: solid;
+    color: ${settings.borderColor};
+    radius: 4px;
+  }
+
+  &.invalid,
+  &.invalid:focus {
+    border-color: ${settings.errorColor};
+  }
+
+  ::-webkit-scrollbar {
+    width: 5px;
+    opacity: 0.3;
+    border-radius: 2.5px;
+    background-color: #D8D8D8;
+  }
+
+  ::-moz-scrollbar {
+    width: 5px;
+    opacity: 0.3;
+    border-radius: 2.5px;
+    background-color: #D8D8D8;
+  }
+
+  -webkit-appearance: none;
+  appearance: none;
+  :-ms-expand {
+    display: none;
+  }
+
+  :focus {
+    outline: none;
+    padding: 12px 16px;
+    border-color: ${settings.primaryColor};
+  }
+
+  ::-webkit-input-placeholder {
+    color: ${settings.placeholderColor};
+  }
+
+  ::-moz-placeholder {
+    color: ${settings.placeholderColor};
+  }
+
+  :-ms-input-placeholder {
+    color: ${settings.placeholderColor};
+  }
+
+  :-moz-placeholder {
+    color: ${settings.placeholderColor};
+  }
+}
+
+option{
+  padding: 7px 12px;
+}
+
+.select-container {
+  width: 100%;
+  min-width: 100%;
+  max-width: 100%;
+  min-height: 44px;
+
+  background-color: #ffffff;
+  color: ${settings.textColor};
+  box-sizing: border-box;
+
+
+  :focus {
+    outline: none;
+    border-color: ${settings.primaryColor};
+  }
+
+}
+
+.icon{
+  position: absolute;
+  top: 40px;
+  right: 15px;
+
+  width: 11px;
+  height: 11px;
+  z-index: 1;
+  stroke: ${settings.placeholderColor};
+}
 `;
