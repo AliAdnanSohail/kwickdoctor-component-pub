@@ -10,5 +10,6 @@ export { default as Form } from './Form';
 export { default as Modal } from './Modal';
 export { default as ToastNotification } from './ToastNotification';
 export { default as ToastManager } from './ToastNotification/Manager';
+export { default as Video } from './Video';
 
 export * from './FormFields';
