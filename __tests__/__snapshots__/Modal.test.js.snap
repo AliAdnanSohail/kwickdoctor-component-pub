@@ -100,10 +100,10 @@ exports[`renders correctly 1`] = `
                   }
                 >
                   <div
-                    className="modal modal--animated has-entered"
+                    className="jsx-47904580 modal modal--animated has-entered"
                   >
                     <button
-                      className="modal__close-button"
+                      className="jsx-47904580 modal__close-button"
                       onClick={[Function]}
                     >
                       <Close
@@ -128,7 +128,7 @@ exports[`renders correctly 1`] = `
                       </Close>
                     </button>
                     <div
-                      className="modal__content"
+                      className="jsx-47904580 modal__content"
                     >
                       <ModalContent
                         className="test-modal-content"
@@ -142,15 +142,20 @@ exports[`renders correctly 1`] = `
                       </ModalContent>
                     </div>
                   </div>
-                  <style>
-                    .modal{position:relative;padding:60px 0;border-radius:6px;background-color:#ffffff;min-height:400px;min-width:calc(100% - 16px);-webkit-transition:all 0.3s ease-in-out;transition:all 0.3s ease-in-out;-webkit-transform:translateX(40px);-ms-transform:translateX(40px);transform:translateX(40px);opacity:0;box-shadow:0 10px 20px 0 rgba(0,0,0,0.15);box-sizing:border-box;}
-                    .modal__close-button{position:absolute;right:15px;top:15px;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;height:21px;width:21px;padding:0;border:none;background-color:transparent;outline:none;opacity:0.6;-webkit-transition:opacity 0.4s ease;transition:opacity 0.4s ease;cursor:pointer;}
-                    .modal__close-button:hover{opacity:1;}
-                    .modal__close-button svg{height:14px;width:14px;}
-                    .modal__close-button svg path{stroke-width:5;}
-                    .modal.has-entered{-webkit-transform:translateX(0);-ms-transform:translateX(0);transform:translateX(0);opacity:1;}
-                    @media (min-width:700px){.modal{min-width:700px;}}
-                  </style>
+                  <JSXStyle
+                    css={
+                      Array [
+                        ".modal.jsx-47904580{position:relative;padding:60px 0;border-radius:6px;background-color:#ffffff;min-height:400px;min-width:calc(100% - 16px);-webkit-transition:all 0.3s ease-in-out;transition:all 0.3s ease-in-out;-webkit-transform:translateX(40px);-ms-transform:translateX(40px);transform:translateX(40px);opacity:0;box-shadow:0 10px 20px 0 rgba(0,0,0,0.15);box-sizing:border-box;}",
+                        ".modal__close-button.jsx-47904580{position:absolute;right:15px;top:15px;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;height:21px;width:21px;padding:0;border:none;background-color:transparent;outline:none;opacity:0.6;-webkit-transition:opacity 0.4s ease;transition:opacity 0.4s ease;cursor:pointer;}",
+                        ".modal__close-button.jsx-47904580:hover{opacity:1;}",
+                        ".modal__close-button.jsx-47904580 svg{height:14px;width:14px;}",
+                        ".modal__close-button.jsx-47904580 svg path{stroke-width:5;}",
+                        ".modal.has-entered.jsx-47904580{-webkit-transform:translateX(0);-ms-transform:translateX(0);transform:translateX(0);opacity:1;}",
+                        "@media (min-width:700px){.modal.jsx-47904580{min-width:700px;}}",
+                      ]
+                    }
+                    styleId="47904580"
+                  />
                   <style>
                     .underlay{background-color:transparent;-webkit-transition:all 0.3s ease-in-out;transition:all 0.3s ease-in-out;}
                     .underlay.has-entered{background-color:rgba(0,0,0,0.4);}
