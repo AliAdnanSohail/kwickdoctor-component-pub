@@ -1,96 +1,129 @@
-
-import React from 'react';
-import EnzymeToJson from 'enzyme-to-json';
+import React, { Fragment } from 'react';
 import { mount } from 'enzyme';
+import EnzymeToJson from 'enzyme-to-json';
 
 import { Modal, Button } from '../src';
 
-const modalContentProps = {
+const baseProps = {
+  active: true,
+  rootId: 'modalRoot',
+  onExit: () => {},
+};
+
+const modalProps = {
   className: 'test-modal-content',
   text: 'test modal content',
 };
 
-class TestModalWrapper extends React.Component {
+class ModalWrapper extends React.Component {
   constructor(props) {
     super(props);
 
-    this.state = { show: props.show };
+    this.state = { active: props.active };
   }
 
   toggleModal = (state) => {
-    this.setState({ show: state });
+    this.setState({ active: state });
   };
 
   render() {
-    const { show } = this.state;
+    const { escapeExits, underlayClickExits } = this.props;
+    const { active } = this.state;
 
     return (
-      <React.Fragment>
-        <div id="modalRoot" />
+      <Fragment>
         <Button
-          title="Open modal"
           onClick={() => {
             this.toggleModal(true);
           }}
-        />
+        >
+          Open modal
+        </Button>
         <Modal
-          rootId="root"
-          show={show}
-          onClose={() => {
+          escapeExits={escapeExits}
+          underlayClickExits={underlayClickExits}
+          active={active}
+          onExit={() => {
             this.toggleModal(false);
           }}
         >
-          <ModalContent {...modalContentProps} />
+          <ModalContent {...modalProps} />
         </Modal>
-      </React.Fragment>
+      </Fragment>
     );
   }
 }
 
-function ModalContent(props) {
-  return (
-    <div className={props.className}>
-      {props.text}
-    </div>
-  );
-}
+const ModalContent = props => <div className={props.className}>{props.text}</div>;
 
-const baseProps = {
-  show: true,
-  rootId: 'modalRoot',
-  onClose() {},
-};
+const TestModal = () => (
+  <div id={baseProps.rootId}>
+    <Modal {...baseProps}>
+      <ModalContent {...modalProps} />
+    </Modal>
+  </div>
+);
 
-it('Modal renders correctly', () => {
-  const element = mount((
-    <div id={baseProps.rootId}>
-      <Modal {...baseProps}>
-        <ModalContent {...modalContentProps} />
-      </Modal>
-    </div>
-  ));
+it('renders correctly', () => {
+  const element = mount(<TestModal />);
 
   expect(EnzymeToJson(element)).toMatchSnapshot();
 });
 
-it('Modal show correctly', () => {
-  const element = mount(<TestModalWrapper show={false} />);
+it('modal content renders correctly', () => {
+  const element = mount(<ModalWrapper active />);
+
+  expect(element.find('.modal__content').text()).toEqual(modalProps.text);
+});
+
+it('shows correctly', () => {
+  const element = mount(<ModalWrapper active={false} />);
   element.find('button').simulate('click');
 
   expect(element.find('.modal__content')).toHaveLength(1);
 });
 
-it('Modal hide correctly', () => {
-  const element = mount(<TestModalWrapper show />);
-  element.find('.modal .close').simulate('click');
+it('hides correctly', () => {
+  const element = mount(<ModalWrapper active />);
+  element.find('.modal').simulate('click');
 
-  expect(element.find('.modal__content')).toHaveLength(0);
+  setTimeout(() => {
+    expect(element.find('.modal').exists()).toEqual(false);
+  }, 300);
 });
 
-it('Modal backdrop click correctly', () => {
-  const element = mount(<TestModalWrapper show />);
-  const backdrop = element.find('.backdrop');
-  backdrop.simulate('mousedown');
+it('underlay click event works correctly', () => {
+  const element = mount(<ModalWrapper active />);
+  element.find('.underlay').simulate('mousedown');
 
-  expect(element.find('.modal__content')).toHaveLength(0);
+  setTimeout(() => {
+    expect(element.find('.modal').exists()).toEqual(false);
+  }, 300);
+});
+
+it('disabled underlay click event works correctly', () => {
+  const element = mount(<ModalWrapper active escapeExits={false} />);
+  element.find('.underlay').simulate('mousedown');
+
+  setTimeout(() => {
+    expect(element.find('.modal').exists()).toEqual(true);
+  }, 300);
+});
+
+it('esc button works correctly', () => {
+  const element = mount(<ModalWrapper active />);
+  element.simulate('keyDown', { keyCode: 27 });
+
+  setTimeout(() => {
+    expect(element.find('.modal').exists()).toEqual(false);
+  }, 300);
+});
+
+it('disabled esc button works correctly', () => {
+  const element = mount(<ModalWrapper active escapeExits={false} />);
+  element.simulate('keyDown', { keyCode: 27 });
+
+  setTimeout(() => {
+    expect(element.find('.modal').exists()).toEqual(true);
+  }, 300);
 });

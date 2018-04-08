@@ -77,7 +77,6 @@ exports[`Storyshots Button default 1`] = `
     className="button"
     disabled={false}
     onClick={[Function]}
-    onMouseEnter={[Function]}
     style={Object {}}
   >
     <span
@@ -85,37 +84,28 @@ exports[`Storyshots Button default 1`] = `
     >
       Hello!
     </span>
-    <span
-      className="button__wave"
-      style={
-        Object {
-          "left": "50%",
-          "top": "50%",
-        }
-      }
-    />
     <style>
       .button{position:relative;padding:13px 64px;height:52px;background-color:#0c97f9;box-sizing:border-box;cursor:pointer;color:#ffffff;line-height:26px;-webkit-transition:background-color 0.4s ease-in-out,box-shadow 0.4s ease-in-out;transition:background-color 0.4s ease-in-out,box-shadow 0.4s ease-in-out;overflow:hidden;border-width:1px;border-style:solid;border-color:#0c97f9;border-radius:26px;font-style:normal;font-weight:500;font-size:1rem;text-align:center;text-transform:uppercase;}
       .button__loading-icon{width:18px;height:18px;}
       .button__content{display:inline-block;-webkit-transition:all 0.3s ease-in-out;transition:all 0.3s ease-in-out;}
       .button__wave{position:absolute;display:block;width:0;height:0;border-radius:50%;background-color:#ffffff;opacity:0.5;-webkit-transform:translate(-50%,-50%);-ms-transform:translate(-50%,-50%);transform:translate(-50%,-50%);}
       .button:not(.button--disabled):hover,.button:not(.button--disabled):focus{background-color:#38a9fa;border-color:#38a9fa;box-shadow:2px 2px 10px rgba(0,0,0,0.1);}
-      .button:not(.button--disabled):hover .button__wave,.button:not(.button--disabled):focus .button__wave{-webkit-animation:wave 0.8s;animation:wave 0.8s;}
       .button:not(.button--rounded) .button__loading-icon{position:absolute;top:calc(50% - 9px);left:32px;}
       .button--accent{color:#0c97f9;background-color:#ffffff;border-color:#ffffff;}
       .button--accent:not(.button--disabled):hover,.button--accent:not(.button--disabled):focus{color:#ffffff;}
       .button--danger{color:#ffffff;background-color:#ea6577;border-color:#ea6577;}
       .button--danger:not(.button--disabled):hover,.button--danger:not(.button--disabled):focus{background-color:#ed7888;border-color:#ed7888;}
       .button--disabled{opacity:0.7;cursor:not-allowed;}
-      .button--loading .button__content{-webkit-transform:translateX(9px);-ms-transform:translateX(9px);transform:translateX(9px);}
+      .button--loading .button__content{-webkit-transform:translateX(16px);-ms-transform:translateX(16px);transform:translateX(16px);}
       .button--rounded{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;padding:0;border-radius:50%;}
       .button--squared{border-radius:12px;}
       .button--transparent{background-color:transparent;box-shadow:0px 0px 10px rgba(12,151,249,0.15);color:#2A2A30;}
       .button--transparent:not(.button--disabled):hover,.button--transparent:not(.button--disabled):focus{color:#ffffff;}
+      .button.has-clicked .button__wave{-webkit-animation:wave 0.8s;animation:wave 0.8s;}
       .button svg{fill:#ffffff;stroke:#ffffff;}
       .button svg circle{stroke:#ffffff;}
-      @-webkit-keyframes wave{0%{opacity:0.5;width:0;height:0;}70%{opacity:0.1;width:300px;height:300px;}100%{opacity:0;width:300px;height:300px;}}
-      @keyframes wave{0%{opacity:0.5;width:0;height:0;}70%{opacity:0.1;width:300px;height:300px;}100%{opacity:0;width:300px;height:300px;}}
+      @-webkit-keyframes wave{0%{opacity:0.5;width:0;height:0;}100%{opacity:0;width:300px;height:300px;}}
+      @keyframes wave{0%{opacity:0.5;width:0;height:0;}100%{opacity:0;width:300px;height:300px;}}
     </style>
   </button>
 </div>
@@ -330,7 +320,7 @@ exports[`Storyshots Calendar default 1`] = `
         className="jsx-3270423735"
       >
         <button
-          className="jsx-1990659263 day day--selected--without-events day--date--2018-04-07"
+          className="jsx-1990659263 day day--disabled day--date--2018-04-07"
           onClick={[Function]}
           type="button"
         >
@@ -345,7 +335,7 @@ exports[`Storyshots Calendar default 1`] = `
         className="jsx-3270423735"
       >
         <button
-          className="jsx-1990659263 day day--date--2018-04-08"
+          className="jsx-1990659263 day day--selected--without-events day--date--2018-04-08"
           onClick={[Function]}
           type="button"
         >
@@ -917,7 +907,7 @@ exports[`Storyshots Date Picker defauld 1`] = `
               tabIndex={undefined}
               title={undefined}
               type="text"
-              value="07 Apr, 2018"
+              value="08 Apr, 2018"
             />
           </div>
         </div>
@@ -1121,43 +1111,35 @@ exports[`Storyshots Modal default 1`] = `
     className="button"
     disabled={false}
     onClick={[Function]}
-    onMouseEnter={[Function]}
     style={Object {}}
   >
     <span
       className="button__content"
-    />
-    <span
-      className="button__wave"
-      style={
-        Object {
-          "left": "50%",
-          "top": "50%",
-        }
-      }
-    />
+    >
+      Open modal
+    </span>
     <style>
       .button{position:relative;padding:13px 64px;height:52px;background-color:#0c97f9;box-sizing:border-box;cursor:pointer;color:#ffffff;line-height:26px;-webkit-transition:background-color 0.4s ease-in-out,box-shadow 0.4s ease-in-out;transition:background-color 0.4s ease-in-out,box-shadow 0.4s ease-in-out;overflow:hidden;border-width:1px;border-style:solid;border-color:#0c97f9;border-radius:26px;font-style:normal;font-weight:500;font-size:1rem;text-align:center;text-transform:uppercase;}
       .button__loading-icon{width:18px;height:18px;}
       .button__content{display:inline-block;-webkit-transition:all 0.3s ease-in-out;transition:all 0.3s ease-in-out;}
       .button__wave{position:absolute;display:block;width:0;height:0;border-radius:50%;background-color:#ffffff;opacity:0.5;-webkit-transform:translate(-50%,-50%);-ms-transform:translate(-50%,-50%);transform:translate(-50%,-50%);}
       .button:not(.button--disabled):hover,.button:not(.button--disabled):focus{background-color:#38a9fa;border-color:#38a9fa;box-shadow:2px 2px 10px rgba(0,0,0,0.1);}
-      .button:not(.button--disabled):hover .button__wave,.button:not(.button--disabled):focus .button__wave{-webkit-animation:wave 0.8s;animation:wave 0.8s;}
       .button:not(.button--rounded) .button__loading-icon{position:absolute;top:calc(50% - 9px);left:32px;}
       .button--accent{color:#0c97f9;background-color:#ffffff;border-color:#ffffff;}
       .button--accent:not(.button--disabled):hover,.button--accent:not(.button--disabled):focus{color:#ffffff;}
       .button--danger{color:#ffffff;background-color:#ea6577;border-color:#ea6577;}
       .button--danger:not(.button--disabled):hover,.button--danger:not(.button--disabled):focus{background-color:#ed7888;border-color:#ed7888;}
       .button--disabled{opacity:0.7;cursor:not-allowed;}
-      .button--loading .button__content{-webkit-transform:translateX(9px);-ms-transform:translateX(9px);transform:translateX(9px);}
+      .button--loading .button__content{-webkit-transform:translateX(16px);-ms-transform:translateX(16px);transform:translateX(16px);}
       .button--rounded{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;padding:0;border-radius:50%;}
       .button--squared{border-radius:12px;}
       .button--transparent{background-color:transparent;box-shadow:0px 0px 10px rgba(12,151,249,0.15);color:#2A2A30;}
       .button--transparent:not(.button--disabled):hover,.button--transparent:not(.button--disabled):focus{color:#ffffff;}
+      .button.has-clicked .button__wave{-webkit-animation:wave 0.8s;animation:wave 0.8s;}
       .button svg{fill:#ffffff;stroke:#ffffff;}
       .button svg circle{stroke:#ffffff;}
-      @-webkit-keyframes wave{0%{opacity:0.5;width:0;height:0;}70%{opacity:0.1;width:300px;height:300px;}100%{opacity:0;width:300px;height:300px;}}
-      @keyframes wave{0%{opacity:0.5;width:0;height:0;}70%{opacity:0.1;width:300px;height:300px;}100%{opacity:0;width:300px;height:300px;}}
+      @-webkit-keyframes wave{0%{opacity:0.5;width:0;height:0;}100%{opacity:0;width:300px;height:300px;}}
+      @keyframes wave{0%{opacity:0.5;width:0;height:0;}100%{opacity:0;width:300px;height:300px;}}
     </style>
   </button>
 </div>
@@ -1234,7 +1216,6 @@ exports[`Storyshots Toast default 1`] = `
     className="button"
     disabled={false}
     onClick={[Function]}
-    onMouseEnter={[Function]}
     style={Object {}}
   >
     <span
@@ -1242,37 +1223,28 @@ exports[`Storyshots Toast default 1`] = `
     >
       Create toast
     </span>
-    <span
-      className="button__wave"
-      style={
-        Object {
-          "left": "50%",
-          "top": "50%",
-        }
-      }
-    />
     <style>
       .button{position:relative;padding:13px 64px;height:52px;background-color:#0c97f9;box-sizing:border-box;cursor:pointer;color:#ffffff;line-height:26px;-webkit-transition:background-color 0.4s ease-in-out,box-shadow 0.4s ease-in-out;transition:background-color 0.4s ease-in-out,box-shadow 0.4s ease-in-out;overflow:hidden;border-width:1px;border-style:solid;border-color:#0c97f9;border-radius:26px;font-style:normal;font-weight:500;font-size:1rem;text-align:center;text-transform:uppercase;}
       .button__loading-icon{width:18px;height:18px;}
       .button__content{display:inline-block;-webkit-transition:all 0.3s ease-in-out;transition:all 0.3s ease-in-out;}
       .button__wave{position:absolute;display:block;width:0;height:0;border-radius:50%;background-color:#ffffff;opacity:0.5;-webkit-transform:translate(-50%,-50%);-ms-transform:translate(-50%,-50%);transform:translate(-50%,-50%);}
       .button:not(.button--disabled):hover,.button:not(.button--disabled):focus{background-color:#38a9fa;border-color:#38a9fa;box-shadow:2px 2px 10px rgba(0,0,0,0.1);}
-      .button:not(.button--disabled):hover .button__wave,.button:not(.button--disabled):focus .button__wave{-webkit-animation:wave 0.8s;animation:wave 0.8s;}
       .button:not(.button--rounded) .button__loading-icon{position:absolute;top:calc(50% - 9px);left:32px;}
       .button--accent{color:#0c97f9;background-color:#ffffff;border-color:#ffffff;}
       .button--accent:not(.button--disabled):hover,.button--accent:not(.button--disabled):focus{color:#ffffff;}
       .button--danger{color:#ffffff;background-color:#ea6577;border-color:#ea6577;}
       .button--danger:not(.button--disabled):hover,.button--danger:not(.button--disabled):focus{background-color:#ed7888;border-color:#ed7888;}
       .button--disabled{opacity:0.7;cursor:not-allowed;}
-      .button--loading .button__content{-webkit-transform:translateX(9px);-ms-transform:translateX(9px);transform:translateX(9px);}
+      .button--loading .button__content{-webkit-transform:translateX(16px);-ms-transform:translateX(16px);transform:translateX(16px);}
       .button--rounded{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;padding:0;border-radius:50%;}
       .button--squared{border-radius:12px;}
       .button--transparent{background-color:transparent;box-shadow:0px 0px 10px rgba(12,151,249,0.15);color:#2A2A30;}
       .button--transparent:not(.button--disabled):hover,.button--transparent:not(.button--disabled):focus{color:#ffffff;}
+      .button.has-clicked .button__wave{-webkit-animation:wave 0.8s;animation:wave 0.8s;}
       .button svg{fill:#ffffff;stroke:#ffffff;}
       .button svg circle{stroke:#ffffff;}
-      @-webkit-keyframes wave{0%{opacity:0.5;width:0;height:0;}70%{opacity:0.1;width:300px;height:300px;}100%{opacity:0;width:300px;height:300px;}}
-      @keyframes wave{0%{opacity:0.5;width:0;height:0;}70%{opacity:0.1;width:300px;height:300px;}100%{opacity:0;width:300px;height:300px;}}
+      @-webkit-keyframes wave{0%{opacity:0.5;width:0;height:0;}100%{opacity:0;width:300px;height:300px;}}
+      @keyframes wave{0%{opacity:0.5;width:0;height:0;}100%{opacity:0;width:300px;height:300px;}}
     </style>
   </button>
   <div
