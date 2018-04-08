@@ -11,7 +11,7 @@ export default class Button extends Component {
   constructor(props) {
     super(props);
 
-    this.state = { top: '50%', left: '50%' };
+    this.state = { top: '50%', left: '50%', clicked: false };
   }
 
   getSize = () => {
@@ -31,10 +31,25 @@ export default class Button extends Component {
     `;
   };
 
-  handleMouseEnter = (event) => {
+  handleClick = (event) => {
     const { top, left } = this.button.getBoundingClientRect();
 
-    this.setState({ top: event.pageY - top, left: event.pageX - left });
+    this.setState(
+      {
+        top: event ? event.pageY - top : top,
+        left: event ? event.pageX - left : left,
+        clicked: true,
+      },
+      () => {
+        setTimeout(() => {
+          this.setState({ clicked: false });
+        }, 300);
+      },
+    );
+
+    if (this.props.onClick) {
+      this.props.onClick(event);
+    }
   };
 
   renderContent = () => {
@@ -42,17 +57,13 @@ export default class Button extends Component {
       children, icon, loading, rounded,
     } = this.props;
 
-    if (rounded && icon) {
-      return (
-        <Fragment>
-          {loading ? <SpinningIcon size="small" className="button__loading-icon" /> : icon}
+    return rounded && icon ? (
+      <Fragment>
+        {loading ? <SpinningIcon size="small" className="button__loading-icon" /> : icon}
 
-          <style>{this.getIconStyle()}</style>
-        </Fragment>
-      );
-    }
-
-    return (
+        <style>{this.getIconStyle()}</style>
+      </Fragment>
+    ) : (
       <Fragment>
         {loading ? <SpinningIcon size="small" className="button__loading-icon" /> : undefined}
         <span className="button__content">{children}</span>
@@ -62,17 +73,10 @@ export default class Button extends Component {
 
   render() {
     const {
-      accent,
-      danger,
-      disabled,
-      loading,
-      rounded,
-      squared,
-      transparent,
-      onClick,
+      accent, danger, disabled, loading, rounded, squared, transparent,
     } = this.props;
 
-    const { top, left } = this.state;
+    const { top, left, clicked } = this.state;
 
     const classes = classnames(
       'button',
@@ -83,6 +87,7 @@ export default class Button extends Component {
       { 'button--rounded': rounded },
       { 'button--squared': squared },
       { 'button--transparent': transparent },
+      { 'has-clicked': clicked },
     );
 
     return (
@@ -91,14 +96,13 @@ export default class Button extends Component {
           this.button = button;
         }}
         className={classes}
-        onClick={onClick}
-        onMouseEnter={this.handleMouseEnter}
+        onClick={this.handleClick}
         style={this.getSize()}
         disabled={disabled}
       >
         {this.renderContent()}
 
-        <span className="button__wave" style={{ top, left }} />
+        {clicked && <span className="button__wave" style={{ top, left }} />}
 
         <style>{styles}</style>
       </button>

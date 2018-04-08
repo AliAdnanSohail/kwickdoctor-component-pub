@@ -69,10 +69,6 @@ export default css`
         background-color: ${settings.primaryLightColor};
         border-color: ${settings.primaryLightColor};
         box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
-
-        .button__wave {
-          animation: wave 0.8s;
-        }
       }
     }
 
@@ -117,7 +113,7 @@ export default css`
     }
 
     &--loading &__content {
-      transform: translateX(9px);
+      transform: translateX(16px);
     }
 
     &--rounded {
@@ -148,6 +144,12 @@ export default css`
       }
     }
 
+    &.has-clicked {
+      .button__wave {
+        animation: wave 0.8s;
+      }
+    }
+
     svg {
       fill: #ffffff;
       stroke: #ffffff;
@@ -164,12 +166,6 @@ export default css`
 
       width: 0;
       height: 0;
-    }
-    70% {
-      opacity: 0.1;
-
-      width: 300px;
-      height: 300px;
     }
     100% {
       opacity: 0;
