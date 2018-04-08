@@ -104,7 +104,7 @@ export default class Button extends Component {
 
         {clicked && <span className="button__wave" style={{ top, left }} />}
 
-        <style>{styles}</style>
+        <style jsx>{styles}</style>
       </button>
     );
   }

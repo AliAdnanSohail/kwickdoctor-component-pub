@@ -39,12 +39,12 @@ export default css`
       transform: uppercase;
     }
 
-    &__loading-icon {
+    :global(&__loading-icon) {
       width: 18px;
       height: 18px;
     }
 
-    &__content {
+    :global(&__content) {
       display: inline-block;
       transition: all 0.3s ease-in-out;
     }
@@ -73,7 +73,7 @@ export default css`
     }
 
     &:not(&--rounded) {
-      .button__loading-icon {
+      :global(.button__loading-icon) {
         position: absolute;
         top: calc(50% - 9px);
         left: 32px;
@@ -112,7 +112,7 @@ export default css`
       cursor: not-allowed;
     }
 
-    &--loading &__content {
+    &--loading :global(&__content) {
       transform: translateX(16px);
     }
 
@@ -150,11 +150,11 @@ export default css`
       }
     }
 
-    svg {
+    :global(svg) {
       fill: #ffffff;
       stroke: #ffffff;
 
-      circle {
+      :global(circle) {
         stroke: #ffffff;
       }
     }
