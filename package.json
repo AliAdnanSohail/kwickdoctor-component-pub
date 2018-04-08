@@ -12,7 +12,7 @@
     "storybook:build": "build-storybook",
     "test": "jest --coverage",
     "test:output": "yarn test --json --outputFile=.jest-test-results.json",
-    "test:update": "yarn test --updateSnapshot"
+    "test:update": "yarn test --updateSnapshot --json --outputFile=.jest-test-results.json"
   },
   "repository": {
     "type": "git",
