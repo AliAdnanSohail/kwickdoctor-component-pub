@@ -1,0 +1,167 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<TestModal>
+  <div
+    id="modalRoot"
+  >
+    <Modal
+      active={true}
+      alert={false}
+      escapeExits={true}
+      onExit={[Function]}
+      rootId="modalRoot"
+      title="dom one"
+      underlayClickExits={true}
+    >
+      <Displaced
+        alert={false}
+        escapeExits={true}
+        getApplicationNode={[Function]}
+        mounted={true}
+        onEnter={[Function]}
+        onExit={[Function]}
+        titleText="dom one"
+        underlayClass="underlay has-entered"
+        underlayClickExits={true}
+        underlayColor={false}
+        verticallyCenter={true}
+      >
+        <Modal
+          alert={false}
+          dialogId="react-aria-modal-dialog"
+          escapeExits={true}
+          focusTrapPaused={false}
+          getApplicationNode={[Function]}
+          includeDefaultStyles={true}
+          mounted={true}
+          onEnter={[Function]}
+          onExit={[Function]}
+          scrollDisabled={true}
+          titleText="dom one"
+          underlayClass="underlay has-entered"
+          underlayClickExits={true}
+          underlayColor={false}
+          underlayProps={Object {}}
+          verticallyCenter={true}
+        >
+          <FocusTrap
+            _createFocusTrap={[Function]}
+            active={true}
+            focusTrapOptions={Object {}}
+            paused={false}
+            tag="div"
+          >
+            <div>
+              <div
+                className="underlay has-entered"
+                onClick={[Function]}
+                style={
+                  Object {
+                    "WebkitOverflowScrolling": "touch",
+                    "cursor": "pointer",
+                    "height": "100%",
+                    "left": 0,
+                    "overflowX": "hidden",
+                    "overflowY": "auto",
+                    "position": "fixed",
+                    "textAlign": "center",
+                    "top": 0,
+                    "width": "100%",
+                    "zIndex": 1050,
+                  }
+                }
+              >
+                <div
+                  key="a"
+                  style={
+                    Object {
+                      "display": "inline-block",
+                      "height": "100%",
+                      "verticalAlign": "middle",
+                    }
+                  }
+                />
+                <div
+                  aria-label="dom one"
+                  id="react-aria-modal-dialog"
+                  key="b"
+                  role="dialog"
+                  style={
+                    Object {
+                      "cursor": "default",
+                      "display": "inline-block",
+                      "maxWidth": "100%",
+                      "outline": null,
+                      "textAlign": "left",
+                      "top": 0,
+                      "verticalAlign": "middle",
+                    }
+                  }
+                >
+                  <div
+                    className="modal modal--animated has-entered"
+                  >
+                    <button
+                      className="modal__close-button"
+                      onClick={[Function]}
+                    >
+                      <Close
+                        responsive={true}
+                      >
+                        <svg
+                          aria-label="close"
+                          className="grommetux-control-icon grommetux-control-icon-close grommetux-control-icon--responsive"
+                          height="24px"
+                          role="img"
+                          version="1.1"
+                          viewBox="0 0 24 24"
+                          width="24px"
+                        >
+                          <path
+                            d="M3,3 L21,21 M3,21 L21,3"
+                            fill="none"
+                            stroke="#000"
+                            strokeWidth="2"
+                          />
+                        </svg>
+                      </Close>
+                    </button>
+                    <div
+                      className="modal__content"
+                    >
+                      <ModalContent
+                        className="test-modal-content"
+                        text="test modal content"
+                      >
+                        <div
+                          className="test-modal-content"
+                        >
+                          test modal content
+                        </div>
+                      </ModalContent>
+                    </div>
+                  </div>
+                  <style>
+                    .modal{position:relative;padding:60px 0;border-radius:6px;background-color:#ffffff;min-height:400px;min-width:calc(100% - 16px);-webkit-transition:all 0.3s ease-in-out;transition:all 0.3s ease-in-out;-webkit-transform:translateX(40px);-ms-transform:translateX(40px);transform:translateX(40px);opacity:0;box-shadow:0 10px 20px 0 rgba(0,0,0,0.15);box-sizing:border-box;}
+                    .modal__close-button{position:absolute;right:15px;top:15px;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;height:21px;width:21px;padding:0;border:none;background-color:transparent;outline:none;opacity:0.6;-webkit-transition:opacity 0.4s ease;transition:opacity 0.4s ease;cursor:pointer;}
+                    .modal__close-button:hover{opacity:1;}
+                    .modal__close-button svg{height:14px;width:14px;}
+                    .modal__close-button svg path{stroke-width:5;}
+                    .modal.has-entered{-webkit-transform:translateX(0);-ms-transform:translateX(0);transform:translateX(0);opacity:1;}
+                    @media (min-width:700px){.modal{min-width:700px;}}
+                  </style>
+                  <style>
+                    .underlay{background-color:transparent;-webkit-transition:all 0.3s ease-in-out;transition:all 0.3s ease-in-out;}
+                    .underlay.has-entered{background-color:rgba(0,0,0,0.4);}
+                  </style>
+                </div>
+              </div>
+            </div>
+          </FocusTrap>
+        </Modal>
+      </Displaced>
+    </Modal>
+  </div>
+</TestModal>
+`;

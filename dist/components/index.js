@@ -58,12 +58,12 @@ Object.defineProperty(exports, 'CardPicker', {
   }
 });
 
-var _Datepicker = require('./Datepicker');
+var _DatePicker = require('./DatePicker');
 
-Object.defineProperty(exports, 'Datepicker', {
+Object.defineProperty(exports, 'DatePicker', {
   enumerable: true,
   get: function get() {
-    return _interopRequireDefault(_Datepicker).default;
+    return _interopRequireDefault(_DatePicker).default;
   }
 });
 
@@ -94,22 +94,34 @@ Object.defineProperty(exports, 'Modal', {
   }
 });
 
-var _TextInput = require('./TextInput');
+var _ToastNotification = require('./ToastNotification');
 
-Object.defineProperty(exports, 'TextInput', {
+Object.defineProperty(exports, 'ToastNotification', {
   enumerable: true,
   get: function get() {
-    return _interopRequireDefault(_TextInput).default;
+    return _interopRequireDefault(_ToastNotification).default;
   }
 });
 
-var _Toast = require('./Toast');
+var _Manager = require('./ToastNotification/Manager');
 
-Object.defineProperty(exports, 'Toast', {
+Object.defineProperty(exports, 'ToastManager', {
   enumerable: true,
   get: function get() {
-    return _interopRequireDefault(_Toast).default;
+    return _interopRequireDefault(_Manager).default;
   }
+});
+
+var _FormFields = require('./FormFields');
+
+Object.keys(_FormFields).forEach(function (key) {
+  if (key === "default" || key === "__esModule") return;
+  Object.defineProperty(exports, key, {
+    enumerable: true,
+    get: function get() {
+      return _FormFields[key];
+    }
+  });
 });
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }

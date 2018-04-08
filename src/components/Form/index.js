@@ -1,10 +1,8 @@
-import React, { Component } from 'react';
-import ValidationForm from 'react-validation/build/form';
+import React from 'react';
+import { form } from 'react-validation';
 
-export default class Form extends Component {
-  render() {
-    const { children } = this.props;
-
-    return <ValidationForm {...this.props}>{children}</ValidationForm>;
-  }
-}
+export default form(({
+  getValues, validate, showError, hideError, children, ...props
+}) => (
+  <form {...props}>{children}</form>
+));

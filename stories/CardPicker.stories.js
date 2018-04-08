@@ -14,15 +14,15 @@ const defaultCards = [
   { value: 'female', content: 'Female', img: 'http://via.placeholder.com/240x240' },
 ];
 
-storiesOf('CardPicker', module)
+storiesOf('Card Picker', module)
   .addDecorator(withKnobs)
   .addDecorator(checkA11y)
   .addDecorator(withTests({ results })('CardPicker'))
   .addDecorator(getStory => <div style={{ padding: '24px' }}>{getStory()}</div>)
-  .add('simple card picker', () => (
+  .add('default', () => (
     <CardPicker
-      onClick={action('clicked')}
       cards={defaultCards}
-      selectedOption="male"
+      selected={defaultCards[0].value}
+      onSelect={action('clicked')}
     />
   ));

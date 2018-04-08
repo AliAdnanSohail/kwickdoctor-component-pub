@@ -1,54 +1,59 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import classnames from 'classnames';
 
 import styles from './styles';
 
 export default class CardPicker extends Component {
   constructor(props) {
     super(props);
-    this.state = { selectedOption: this.props.selectedOption };
+
+    this.state = { selected: this.props.selected };
   }
-  handleChange(e) {
-    this.setState({
-      selectedOption: e.target.value,
+
+  handleChange = (event) => {
+    this.setState({ selected: event.target.value }, () => {
+      this.props.onSelect(this.state.selected);
     });
-  }
+  };
 
   render() {
-    const { cards, onClick } = this.props;
-
-    const children = cards.map(card => (
-      <React.Fragment>
-        <label className="content-label" htmlFor={card.value} >
-          <div className={this.state.selectedOption === card.value ? 'card active' : 'card'} key={card.value}>
-            <input
-              type="radio"
-              name={card.value}
-              id={card.value}
-              value={card.value}
-              checked={this.state.selectedOption === card.value}
-              onChange={e => this.handleChange(e)}
-              onClick={onClick}
-            />
-            <img src={card.img} alt="" />
-
-            <p className="content">{card.content}</p>
-
-          </div>
-        </label>
-        <style jsx>{styles}</style>
-      </React.Fragment>
-    ));
+    const { cards } = this.props;
+    const { selected } = this.state;
 
     return (
       <div className="card-picker">
-        {children}
+        {cards.map((card) => {
+          const classes = classnames('card', { 'card--active': card.value === selected });
+
+          return (
+            <label className={classes} htmlFor={card.value} key={card.value}>
+              <input
+                type="radio"
+                id={card.value}
+                name={card.value}
+                value={card.value}
+                checked={selected === card.value}
+                onChange={this.handleChange}
+              />
+              <img src={card.img} alt={card.content} />
+
+              <p className="content">{card.content}</p>
+            </label>
+          );
+        })}
         <style jsx>{styles}</style>
       </div>
     );
   }
 }
+
 CardPicker.propTypes = {
   cards: PropTypes.array.isRequired,
-  onClick: PropTypes.func.isRequired,
+  selected: PropTypes.string,
+  onSelect: PropTypes.func.isRequired,
+};
+
+CardPicker.defaultProps = {
+  selected: '',
 };

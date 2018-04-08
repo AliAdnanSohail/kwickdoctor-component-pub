@@ -34,12 +34,25 @@ export const day = css`
           color: #ffffff;
           background: ${settings.primaryColor};
           border-radius: 100%;
+          @media all and (max-width: 630px) {
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+          }
         }
       }
       &--with-events {
-        color: #ffffff;
-        background: ${settings.primaryColor};
-        border-radius: 40px;
+        padding: 13px 0;
+        line-height: 40px;
+        .day__border {
+          max-width: 100%;
+          width: 70px;
+          height: 40px;
+          display: inline-block;
+          color: #ffffff;
+          background: ${settings.primaryColor};
+          border-radius: 20px;
+        }
       }
       
     }
@@ -52,8 +65,8 @@ export const day = css`
 
     @media all and (max-width: 630px) {
       padding: 0 !important;
-      height: 54px;
-      line-height: 54px;
+      height: 40px;
+      line-height: 40px;
     }
     
   }
@@ -71,7 +84,7 @@ export const events = css`
     bottom: 0;
     display: block;
     line-height: 4px;
-    width: 27px;
+    width: 30px;
     &.events-qty-1 {
       padding-top: 36px;
     }
@@ -80,12 +93,6 @@ export const events = css`
     }
     &.events-qty-3 {
       padding-top: 31px;
-    }
-    &.events-qty-4 {
-      padding-top: 28px;
-    }
-    &.events-qty-5 {
-      padding-top: 26px;
     }
     &__item {
       display: block;
@@ -99,7 +106,7 @@ export const events = css`
 
     @media all and (max-width: 630px) {
       width: 100%;
-      height: 18px;
+      height: 13px;
       padding-top: 0 !important;
       top: auto;
       &__item {
