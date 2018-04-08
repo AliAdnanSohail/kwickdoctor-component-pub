@@ -45,11 +45,11 @@ export const modal = css`
         opacity: 1;
       }
 
-      svg {
+      :global(svg) {
         height: 14px;
         width: 14px;
 
-        path {
+        :global(path) {
           stroke-width: 5;
         }
       }

@@ -66,7 +66,7 @@ export default class Modal extends Component {
           <div className="modal__content">{children}</div>
         </div>
 
-        <style>{modal}</style>
+        <style jsx>{modal}</style>
         <style>{underlay}</style>
       </AriaModal>
     );
