@@ -7,6 +7,10 @@ exports.default = undefined;
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
+var _style = require('styled-jsx/style');
+
+var _style2 = _interopRequireDefault(_style);
+
 var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
@@ -71,7 +75,7 @@ var Button = function (_Component) {
         left: event ? event.pageX - left : left,
         clicked: true
       }, function () {
-        setTimeout(function () {
+        _this.timeout = setTimeout(function () {
           _this.setState({ clicked: false });
         }, 300);
       });
@@ -115,6 +119,11 @@ var Button = function (_Component) {
   }
 
   _createClass(Button, [{
+    key: 'componentWillUnmount',
+    value: function componentWillUnmount() {
+      clearTimeout(this.timeout);
+    }
+  }, {
     key: 'render',
     value: function render() {
       var _this2 = this;
@@ -141,18 +150,19 @@ var Button = function (_Component) {
           ref: function ref(button) {
             _this2.button = button;
           },
-          className: classes,
+
           onClick: this.handleClick,
           style: this.getSize(),
-          disabled: disabled
+          disabled: disabled,
+          className: 'jsx-' + _styles2.default.__scopedHash + ' ' + (classes || '')
         },
         this.renderContent(),
-        clicked && _react2.default.createElement('span', { className: 'button__wave', style: { top: top, left: left } }),
-        _react2.default.createElement(
-          'style',
-          null,
-          _styles2.default
-        )
+        clicked && _react2.default.createElement('span', { style: { top: top, left: left }, className: 'jsx-' + _styles2.default.__scopedHash + ' ' + 'button__wave'
+        }),
+        _react2.default.createElement(_style2.default, {
+          styleId: _styles2.default.__scopedHash,
+          css: _styles2.default.__scoped
+        })
       );
     }
   }]);

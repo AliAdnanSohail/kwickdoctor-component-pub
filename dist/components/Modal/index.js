@@ -7,6 +7,10 @@ exports.default = undefined;
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
+var _style = require('styled-jsx/style');
+
+var _style2 = _interopRequireDefault(_style);
+
 var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
@@ -56,7 +60,7 @@ var Modal = function (_Component) {
 
     _this.handleExit = function () {
       _this.setState({ modalHasEntered: false }, function () {
-        setTimeout(function () {
+        _this.timeout = setTimeout(function () {
           _this.setState({ active: false });
           _this.props.onExit();
         }, 300);
@@ -68,6 +72,11 @@ var Modal = function (_Component) {
   }
 
   _createClass(Modal, [{
+    key: 'componentWillUnmount',
+    value: function componentWillUnmount() {
+      clearTimeout(this.timeout);
+    }
+  }, {
     key: 'render',
     value: function render() {
       var _props = this.props,
@@ -109,23 +118,27 @@ var Modal = function (_Component) {
         },
         _react2.default.createElement(
           'div',
-          { className: modalContentClass },
+          {
+            className: 'jsx-' + _styles.modal.__scopedHash + ' ' + (modalContentClass || '')
+          },
           _react2.default.createElement(
             'button',
-            { className: 'modal__close-button', onClick: this.handleExit },
+            { onClick: this.handleExit, className: 'jsx-' + _styles.modal.__scopedHash + ' ' + 'modal__close-button'
+            },
             _react2.default.createElement(_base.CloseIcon, null)
           ),
           _react2.default.createElement(
             'div',
-            { className: 'modal__content' },
+            {
+              className: 'jsx-' + _styles.modal.__scopedHash + ' ' + 'modal__content'
+            },
             children
           )
         ),
-        _react2.default.createElement(
-          'style',
-          null,
-          _styles.modal
-        ),
+        _react2.default.createElement(_style2.default, {
+          styleId: _styles.modal.__scopedHash,
+          css: _styles.modal.__scoped
+        }),
         _react2.default.createElement(
           'style',
           null,
