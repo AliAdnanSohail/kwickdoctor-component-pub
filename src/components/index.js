@@ -12,3 +12,4 @@ export { default as Toast } from './Toast';
 export { default as ToastManager } from './Toast/Manager';
 
 export * from './FormFields';
+export * from './Stepper';

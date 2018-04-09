@@ -17,7 +17,9 @@ export default css`
 
     line-height: 26px;
 
-    transition: background-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    transition: background-color 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+
+    overflow: hidden;
 
     border: {
       width: 1px;
@@ -37,14 +39,28 @@ export default css`
       transform: uppercase;
     }
 
-    &__loading-icon {
+    :global(&__loading-icon) {
       width: 18px;
       height: 18px;
     }
 
-    &__content {
+    :global(&__content) {
       display: inline-block;
       transition: all 0.3s ease-in-out;
+    }
+
+    &__wave {
+      position: absolute;
+      display: block;
+      width: 0;
+      height: 0;
+
+      border-radius: 50%;
+      background-color: #ffffff;
+
+      opacity: 0.5;
+
+      transform: translate(-50%, -50%);
     }
 
     &:not(&--disabled) {
@@ -52,12 +68,12 @@ export default css`
       &:focus {
         background-color: ${settings.primaryLightColor};
         border-color: ${settings.primaryLightColor};
-        box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.1);
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
       }
     }
 
     &:not(&--rounded) {
-      .button__loading-icon {
+      :global(.button__loading-icon) {
         position: absolute;
         top: calc(50% - 9px);
         left: 32px;
@@ -96,8 +112,8 @@ export default css`
       cursor: not-allowed;
     }
 
-    &--loading &__content {
-      transform: translateX(9px);
+    &--loading :global(&__content) {
+      transform: translateX(16px);
     }
 
     &--rounded {
@@ -128,13 +144,34 @@ export default css`
       }
     }
 
-    svg {
+    &.has-clicked {
+      .button__wave {
+        animation: wave 0.8s;
+      }
+    }
+
+    :global(svg) {
       fill: #ffffff;
       stroke: #ffffff;
 
-      circle {
+      :global(circle) {
         stroke: #ffffff;
       }
+    }
+  }
+
+  @keyframes wave {
+    0% {
+      opacity: 0.5;
+
+      width: 0;
+      height: 0;
+    }
+    100% {
+      opacity: 0;
+
+      width: 300px;
+      height: 300px;
     }
   }
 `;
