@@ -5,6 +5,8 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = undefined;
 
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 var _react = require('react');
@@ -14,8 +16,6 @@ var _react2 = _interopRequireDefault(_react);
 var _propTypes = require('prop-types');
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
-
-var _reactTransitionGroup = require('react-transition-group');
 
 var _classnames = require('classnames');
 
@@ -28,6 +28,10 @@ var _Manager2 = _interopRequireDefault(_Manager);
 var _Toast = require('./Toast');
 
 var _Toast2 = _interopRequireDefault(_Toast);
+
+var _createUUID = require('./create-UUID');
+
+var _createUUID2 = _interopRequireDefault(_createUUID);
 
 var _styles = require('./styles');
 
@@ -59,51 +63,12 @@ var ToastNotification = function (_Component) {
 
     _this.getToasts = function () {
       var toasts = _this.state.toasts;
-      var timeout = _this.props.timeout;
 
 
       return toasts.map(function (toast) {
-        var key = toast.id || new Date().getTime() - Math.random();
-        return _react2.default.createElement(
-          _reactTransitionGroup.CSSTransition,
-          { classNames: 'fade', key: key, timeout: timeout, onExited: function onExited(d) {
-              _this.slowTop(d);
-            } },
-          _react2.default.createElement(_Toast2.default, toast)
-        );
+        var key = toast.id || (0, _createUUID2.default)();
+        return _react2.default.createElement(_Toast2.default, _extends({ key: key }, toast));
       });
-    };
-
-    _this.slowTop = function (el) {
-      function getHeight(elm) {
-        var elmHeight = void 0;
-        var elmMargin = void 0;
-        if (document.all) {
-          elmHeight = parseInt(elm.currentStyle.height, 10);
-          elmMargin = parseInt(elm.currentStyle.marginTop, 10) + parseInt(elm.currentStyle.marginBottom, 10) + parseInt(elm.currentStyle.paddingTop, 10) + parseInt(elm.currentStyle.paddingBottom, 10);
-        } else {
-          elmHeight = parseInt(document.defaultView.getComputedStyle(elm, '').getPropertyValue('height'), 10);
-          elmMargin = parseInt(document.defaultView.getComputedStyle(elm, '').getPropertyValue('margin-top'), 10) + parseInt(document.defaultView.getComputedStyle(elm, '').getPropertyValue('margin-bottom'), 10) + parseInt(document.defaultView.getComputedStyle(elm, '').getPropertyValue('padding-bottom'), 10) + parseInt(document.defaultView.getComputedStyle(elm, '').getPropertyValue('padding-top'), 10);
-        }
-
-        return elmHeight + elmMargin;
-      }
-
-      var height = getHeight(el);
-      var newDiv = document.createElement('div');
-
-      newDiv.style.height = height + 'px';
-      newDiv.className = 'plug';
-
-      el.parentNode.insertBefore(newDiv, el);
-
-      setTimeout(function () {
-        newDiv.className = 'plug plug--zeroHeight';
-      });
-
-      setTimeout(function () {
-        newDiv.remove();
-      }, 220);
     };
 
     _this.handleStoreChange = function (toasts) {
@@ -126,11 +91,7 @@ var ToastNotification = function (_Component) {
       return _react2.default.createElement(
         'div',
         { className: className },
-        _react2.default.createElement(
-          _reactTransitionGroup.TransitionGroup,
-          null,
-          this.state.toasts.length > 0 && this.getToasts()
-        ),
+        this.state.toasts.length > 0 && this.getToasts(),
         _react2.default.createElement(
           'style',
           null,
@@ -147,11 +108,9 @@ exports.default = ToastNotification;
 
 
 ToastNotification.propTypes = {
-  initialToasts: _propTypes2.default.array,
-  timeout: _propTypes2.default.number
+  initialToasts: _propTypes2.default.array
 };
 
 ToastNotification.defaultProps = {
-  initialToasts: [],
-  timeout: 200
+  initialToasts: []
 };

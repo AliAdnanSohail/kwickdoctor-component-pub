@@ -55,6 +55,33 @@ var Toast = function (_Component) {
       if (timeOut !== 0) {
         setTimeout(_this.requestHide, timeOut);
       }
+      _this.enter();
+    }, _this.enter = function () {
+      var animationDuration = _this.props.animationDuration;
+
+      var baseClassName = _this.element.className;
+
+      _this.element.className = baseClassName + ' fade-enter';
+      setTimeout(function () {
+        _this.element.className = baseClassName + ' fade-enter-active';
+      }, 0);
+
+      setTimeout(function () {
+        _this.element.className = baseClassName;
+      }, animationDuration);
+    }, _this.exit = function () {
+      var animationDuration = _this.props.animationDuration;
+
+      var baseClassName = _this.element.className;
+
+      _this.element.className = baseClassName + ' fade-exit';
+      setTimeout(function () {
+        _this.element.className = baseClassName + ' fade-exit-active';
+      }, 0);
+
+      setTimeout(function () {
+        _Manager2.default.remove(_this.props.id);
+      }, animationDuration);
     }, _this.closeToast = function () {
       var onHideClick = _this.props.onHideClick;
 
@@ -63,30 +90,33 @@ var Toast = function (_Component) {
       }
       _this.requestHide();
     }, _this.requestHide = function () {
-      var _this$props = _this.props,
-          onRequestHide = _this$props.onRequestHide,
-          id = _this$props.id;
+      var onRequestHide = _this.props.onRequestHide;
 
       if (onRequestHide) {
         onRequestHide();
       }
-      _Manager2.default.remove(id);
+      _this.exit();
     }, _temp), _possibleConstructorReturn(_this, _ret);
   }
 
   _createClass(Toast, [{
     key: 'render',
     value: function render() {
+      var _this2 = this;
+
       var _props = this.props,
           primary = _props.primary,
           boxstyle = _props.boxstyle,
           content = _props.content;
 
+
       var classes = (0, _classnames2.default)('toast-box', { primary: primary }, boxstyle);
 
       return _react2.default.createElement(
         'div',
-        { className: classes },
+        { ref: function ref(div) {
+            _this2.element = div;
+          }, className: classes },
         _react2.default.createElement('div', { className: 'circle' }),
         _react2.default.createElement(
           'div',
@@ -120,6 +150,7 @@ Toast.propTypes = {
   boxstyle: _propTypes2.default.string,
   onHideClick: _propTypes2.default.func,
   timeOut: _propTypes2.default.number,
+  animationDuration: _propTypes2.default.number,
   onRequestHide: _propTypes2.default.func
 };
 
@@ -128,5 +159,6 @@ Toast.defaultProps = {
   boxstyle: 'rectangle-22',
   onHideClick: null,
   timeOut: 5000,
+  animationDuration: 500,
   onRequestHide: function onRequestHide() {}
 };
