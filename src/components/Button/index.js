@@ -14,6 +14,10 @@ export default class Button extends Component {
     this.state = { top: '50%', left: '50%', clicked: false };
   }
 
+  componentWillUnmount() {
+    clearTimeout(this.timeout);
+  }
+
   getSize = () => {
     const { rounded, size } = this.props;
 
@@ -41,7 +45,7 @@ export default class Button extends Component {
         clicked: true,
       },
       () => {
-        setTimeout(() => {
+        this.timeout = setTimeout(() => {
           this.setState({ clicked: false });
         }, 300);
       },

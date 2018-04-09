@@ -17,13 +17,17 @@ export default class Modal extends Component {
     this.state = { modalHasEntered: false, active: props.active };
   }
 
+  componentWillUnmount() {
+    clearTimeout(this.timeout);
+  }
+
   handleEnter = () => {
     this.setState({ modalHasEntered: true });
   };
 
   handleExit = () => {
     this.setState({ modalHasEntered: false }, () => {
-      setTimeout(() => {
+      this.timeout = setTimeout(() => {
         this.setState({ active: false });
         this.props.onExit();
       }, 300);

@@ -87,43 +87,53 @@ it('hides correctly', () => {
   const element = mount(<ModalWrapper active />);
   element.find('.modal').simulate('click');
 
-  setTimeout(() => {
+  const timeout = setTimeout(() => {
     expect(element.find('.modal').exists()).toEqual(false);
   }, 300);
+
+  clearTimeout(timeout);
 });
 
 it('underlay click event works correctly', () => {
   const element = mount(<ModalWrapper active />);
   element.find('.underlay').simulate('mousedown');
 
-  setTimeout(() => {
+  const timeout = setTimeout(() => {
     expect(element.find('.modal').exists()).toEqual(false);
   }, 300);
+
+  clearTimeout(timeout);
 });
 
 it('disabled underlay click event works correctly', () => {
   const element = mount(<ModalWrapper active escapeExits={false} />);
   element.find('.underlay').simulate('mousedown');
 
-  setTimeout(() => {
+  const timeout = setTimeout(() => {
     expect(element.find('.modal').exists()).toEqual(true);
   }, 300);
+
+  clearTimeout(timeout);
 });
 
 it('esc button works correctly', () => {
   const element = mount(<ModalWrapper active />);
   element.simulate('keyDown', { keyCode: 27 });
 
-  setTimeout(() => {
+  const timeout = setTimeout(() => {
     expect(element.find('.modal').exists()).toEqual(false);
   }, 300);
+
+  clearTimeout(timeout);
 });
 
 it('disabled esc button works correctly', () => {
   const element = mount(<ModalWrapper active escapeExits={false} />);
   element.simulate('keyDown', { keyCode: 27 });
 
-  setTimeout(() => {
+  const timeout = setTimeout(() => {
     expect(element.find('.modal').exists()).toEqual(true);
   }, 300);
+
+  clearTimeout(timeout);
 });

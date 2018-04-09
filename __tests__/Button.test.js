@@ -73,7 +73,9 @@ it('wave effect shows correctly', () => {
 
   expect(element.find('button').hasClass('has-clicked')).toEqual(true);
 
-  setTimeout(() => {
+  const timeout = setTimeout(() => {
     expect(element.find('button').hasClass('has-clicked')).toEqual(false);
   }, 300);
+
+  clearTimeout(timeout);
 });
