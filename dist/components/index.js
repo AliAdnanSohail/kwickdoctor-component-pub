@@ -94,16 +94,16 @@ Object.defineProperty(exports, 'Modal', {
   }
 });
 
-var _ToastNotification = require('./ToastNotification');
+var _Toast = require('./Toast');
 
-Object.defineProperty(exports, 'ToastNotification', {
+Object.defineProperty(exports, 'Toast', {
   enumerable: true,
   get: function get() {
-    return _interopRequireDefault(_ToastNotification).default;
+    return _interopRequireDefault(_Toast).default;
   }
 });
 
-var _Manager = require('./ToastNotification/Manager');
+var _Manager = require('./Toast/Manager');
 
 Object.defineProperty(exports, 'ToastManager', {
   enumerable: true,
