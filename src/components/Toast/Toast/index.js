@@ -8,7 +8,7 @@ export default class Toast extends Component {
   componentDidMount = () => {
     const { timeOut } = this.props;
     if (timeOut !== 0) {
-      setTimeout(this.requestHide, timeOut);
+      this.timeoutID = setTimeout(this.requestHide, timeOut);
     }
     this.enter();
   };
@@ -54,6 +54,7 @@ export default class Toast extends Component {
     if (onRequestHide) {
       onRequestHide();
     }
+    clearTimeout(this.timeoutID);
     this.exit();
   };
 
