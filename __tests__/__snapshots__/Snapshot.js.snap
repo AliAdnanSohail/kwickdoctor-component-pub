@@ -327,7 +327,7 @@ exports[`Storyshots Calendar default 1`] = `
         className="jsx-3270423735"
       >
         <button
-          className="jsx-1990659263 day day--selected--without-events day--date--2018-04-09"
+          className="jsx-1990659263 day day--disabled day--date--2018-04-09"
           onClick={[Function]}
           type="button"
         >
@@ -342,7 +342,7 @@ exports[`Storyshots Calendar default 1`] = `
         className="jsx-3270423735"
       >
         <button
-          className="jsx-1990659263 day day--date--2018-04-10"
+          className="jsx-1990659263 day day--disabled day--date--2018-04-10"
           onClick={[Function]}
           type="button"
         >
@@ -357,7 +357,7 @@ exports[`Storyshots Calendar default 1`] = `
         className="jsx-3270423735"
       >
         <button
-          className="jsx-1990659263 day day--date--2018-04-11"
+          className="jsx-1990659263 day day--selected--without-events day--date--2018-04-11"
           onClick={[Function]}
           type="button"
         >
@@ -884,7 +884,7 @@ exports[`Storyshots Date Picker defauld 1`] = `
               tabIndex={undefined}
               title={undefined}
               type="text"
-              value="09 Apr, 2018"
+              value="11 Apr, 2018"
             />
           </div>
         </div>
@@ -1025,7 +1025,20 @@ exports[`Storyshots Form Fields Select 1`] = `
       className="jsx-1685083184 jsx-1043162979 jsx-3846816657"
       htmlFor={undefined}
     />
-    <select />
+    <select>
+      <option
+        value="1"
+      />
+      <option
+        value="2"
+      />
+      <option
+        value="3"
+      />
+      <option
+        value="4"
+      />
+    </select>
     <style>
       input,textarea{width:100%;min-width:100%;max-width:100%;min-height:44px;padding:12px 16px;background-color:#ffffff;color:#2A2A30;box-sizing:border-box;font-style:normal;font-weight:normal;font-size:0.875rem;border-width:2px;border-style:solid;border-color:#E7E7F0;border-radius:4px;}
       input::-webkit-input-placeholder,textarea::-webkit-input-placeholder{color:#828393;}

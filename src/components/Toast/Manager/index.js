@@ -4,6 +4,7 @@ import createUUID from './../create-UUID';
 class Manager extends EventEmitter {
   constructor() {
     super();
+
     this.listToasts = [];
   }
 
@@ -16,11 +17,13 @@ class Manager extends EventEmitter {
       onHideClick() {},
       timeOut: 5000,
     };
+
     if (toast.priority) {
       this.listToasts.unshift(Object.assign(defaultToast, toast));
     } else {
       this.listToasts.push(Object.assign(defaultToast, toast));
     }
+
     this.emitChange();
   }
 
