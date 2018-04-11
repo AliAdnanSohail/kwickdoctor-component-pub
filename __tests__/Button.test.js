@@ -1,4 +1,5 @@
 import React from 'react';
+// import jest from 'jest';
 import { mount } from 'enzyme';
 import { EditIcon, SpinningIcon } from 'grommet/components/icons';
 
@@ -63,4 +64,18 @@ it('button with loading prop renders correctly', () => {
     .find('button')
     .childAt(0)
     .type()).toEqual(SpinningIcon);
+});
+
+it('wave effect shows correctly', () => {
+  const element = mount(<Button>Hello!</Button>);
+
+  element.find('button').simulate('click');
+
+  expect(element.find('button').hasClass('has-clicked')).toEqual(true);
+
+  const timeout = setTimeout(() => {
+    expect(element.find('button').hasClass('has-clicked')).toEqual(false);
+  }, 300);
+
+  clearTimeout(timeout);
 });

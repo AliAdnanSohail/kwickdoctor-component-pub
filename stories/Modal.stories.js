@@ -12,34 +12,33 @@ class ModalWrapper extends React.Component {
   constructor(props) {
     super(props);
 
-    this.state = { show: false };
+    this.state = { active: false };
   }
 
   toggleModal = (state) => {
     this.props.toggleModal(state);
-    this.setState({ show: state });
+    this.setState({ active: state });
   };
 
   render() {
-    const { show } = this.state;
+    const { active } = this.state;
 
     return (
       <Fragment>
         <Button
-          title="Open modal"
           onClick={() => {
-            action('onClick');
             this.toggleModal(true);
           }}
-        />
+        >
+          Open modal
+        </Button>
         <Modal
-          show={show}
-          onClose={() => {
-            action('onClose');
+          active={active}
+          onExit={() => {
             this.toggleModal(false);
           }}
         >
-          {text('Content', 'Modal content')}
+          {text('content', 'Modal content')}
         </Modal>
       </Fragment>
     );
