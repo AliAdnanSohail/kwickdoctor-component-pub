@@ -76,7 +76,8 @@ export const label = css`
 
 export const textInput = css`
   input,
-  textarea {
+  textarea,
+  select {
     width: 100%;
     min-width: 100%;
     max-width: 100%;
@@ -86,6 +87,8 @@ export const textInput = css`
     background-color: #ffffff;
     color: ${settings.textColor};
     box-sizing: border-box;
+
+    -webkit-appearance: none;
 
     font: {
       style: normal;
@@ -203,6 +206,32 @@ export const fieldset = css`
 
     label {
       margin: 0;
+    }
+  }
+`;
+
+export const selectContainer = css`
+  .select-container {
+    position: relative;
+
+    select {
+      padding-right: 30px;
+    }
+
+    svg {
+      position: absolute;
+      right: 15px;
+      top: calc(50% - 6px);
+
+      height: 12px;
+      width: 12px;
+
+      fill: ${settings.borderColor};
+      stroke: ${settings.borderColor};
+
+      polyline {
+        stroke-width: 5;
+      }
     }
   }
 `;

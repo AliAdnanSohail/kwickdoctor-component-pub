@@ -12,8 +12,8 @@ export default renderer((input, label, {
       className={className}
       id={id}
       name={name}
-      type={type}
       placeholder={placeholder}
+      type={type}
       value={value}
     />
 

@@ -4,21 +4,14 @@ import renderer from 'react-test-renderer';
 import { Select } from '../src';
 
 const defaultProps = {
-  id: 'input-id',
-  name: 'input-name',
-  label: 'input-label',
-  placeholder: 'input-placeholder',
+  name: 'gender',
+  selected: 'any',
+  options: [{ value: 'male' }, { value: 'any' }, { value: 'female' }],
+  label: 'Label',
 };
 
 it('renders correctly', () => {
-  const element = renderer
-    .create(<Select {...defaultProps}>
-      <option value="1" />
-      <option value="2" />
-      <option value="3" />
-      <option value="4" />
-    </Select>)
-    .toJSON();
+  const element = renderer.create(<Select {...defaultProps} />).toJSON();
 
   expect(element).toMatchSnapshot();
 });

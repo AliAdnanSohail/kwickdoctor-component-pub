@@ -1045,13 +1045,13 @@ exports[`Storyshots Form Fields Input 1`] = `
       value={undefined}
     />
     <style>
-      input,textarea{width:100%;min-width:100%;max-width:100%;min-height:44px;padding:12px 16px;background-color:#ffffff;color:#2A2A30;box-sizing:border-box;font-style:normal;font-weight:normal;font-size:0.875rem;border-width:2px;border-style:solid;border-color:#E7E7F0;border-radius:4px;}
-      input::-webkit-input-placeholder,textarea::-webkit-input-placeholder{color:#828393;}
-      input::-moz-placeholder,textarea::-moz-placeholder{color:#828393;}
-      input:-ms-input-placeholder,textarea:-ms-input-placeholder{color:#828393;}
-      input:-moz-placeholder,textarea:-moz-placeholder{color:#828393;}
-      input:focus,textarea:focus{outline:none;padding:12px 16px;border-color:#0c97f9;}
-      input.invalid,input.invalid:focus,textarea.invalid,textarea.invalid:focus{border-color:#FF5572;}
+      input,textarea,select{width:100%;min-width:100%;max-width:100%;min-height:44px;padding:12px 16px;background-color:#ffffff;color:#2A2A30;box-sizing:border-box;-webkit-appearance:none;font-style:normal;font-weight:normal;font-size:0.875rem;border-width:2px;border-style:solid;border-color:#E7E7F0;border-radius:4px;}
+      input::-webkit-input-placeholder,textarea::-webkit-input-placeholder,select::-webkit-input-placeholder{color:#828393;}
+      input::-moz-placeholder,textarea::-moz-placeholder,select::-moz-placeholder{color:#828393;}
+      input:-ms-input-placeholder,textarea:-ms-input-placeholder,select:-ms-input-placeholder{color:#828393;}
+      input:-moz-placeholder,textarea:-moz-placeholder,select:-moz-placeholder{color:#828393;}
+      input:focus,textarea:focus,select:focus{outline:none;padding:12px 16px;border-color:#0c97f9;}
+      input.invalid,input.invalid:focus,textarea.invalid,textarea.invalid:focus,select.invalid,select.invalid:focus{border-color:#FF5572;}
     </style>
   </div>
 </div>
@@ -1148,29 +1148,73 @@ exports[`Storyshots Form Fields Select 1`] = `
     <label
       className="jsx-1685083184 jsx-4038665278 jsx-2881818901"
       htmlFor={undefined}
-    />
-    <select>
-      <option
-        value="1"
-      />
-      <option
-        value="2"
-      />
-      <option
-        value="3"
-      />
-      <option
-        value="4"
-      />
-    </select>
+    >
+      Label
+    </label>
+    <div
+      className="select-container"
+    >
+      <select
+        className=""
+        id={undefined}
+        name="Name"
+        placeholder={undefined}
+        type={undefined}
+        value={undefined}
+      >
+        <option
+          value="one"
+        >
+          one
+        </option>
+        <option
+          value="two"
+        >
+          two
+        </option>
+        <option
+          value="three"
+        >
+          three
+        </option>
+        <option
+          value="four"
+        >
+          four
+        </option>
+      </select>
+      <svg
+        aria-label="down"
+        className="grommetux-control-icon grommetux-control-icon-down grommetux-control-icon--responsive"
+        height="24px"
+        role="img"
+        version="1.1"
+        viewBox="0 0 24 24"
+        width="24px"
+      >
+        <polyline
+          fill="none"
+          points="7.086 3.174 17.086 13.174 7.086 23.174"
+          stroke="#000"
+          strokeWidth="2"
+          transform="scale(1 -1) rotate(-89 -1.32 0)"
+        />
+      </svg>
+    </div>
     <style>
-      input,textarea{width:100%;min-width:100%;max-width:100%;min-height:44px;padding:12px 16px;background-color:#ffffff;color:#2A2A30;box-sizing:border-box;font-style:normal;font-weight:normal;font-size:0.875rem;border-width:2px;border-style:solid;border-color:#E7E7F0;border-radius:4px;}
-      input::-webkit-input-placeholder,textarea::-webkit-input-placeholder{color:#828393;}
-      input::-moz-placeholder,textarea::-moz-placeholder{color:#828393;}
-      input:-ms-input-placeholder,textarea:-ms-input-placeholder{color:#828393;}
-      input:-moz-placeholder,textarea:-moz-placeholder{color:#828393;}
-      input:focus,textarea:focus{outline:none;padding:12px 16px;border-color:#0c97f9;}
-      input.invalid,input.invalid:focus,textarea.invalid,textarea.invalid:focus{border-color:#FF5572;}
+      input,textarea,select{width:100%;min-width:100%;max-width:100%;min-height:44px;padding:12px 16px;background-color:#ffffff;color:#2A2A30;box-sizing:border-box;-webkit-appearance:none;font-style:normal;font-weight:normal;font-size:0.875rem;border-width:2px;border-style:solid;border-color:#E7E7F0;border-radius:4px;}
+      input::-webkit-input-placeholder,textarea::-webkit-input-placeholder,select::-webkit-input-placeholder{color:#828393;}
+      input::-moz-placeholder,textarea::-moz-placeholder,select::-moz-placeholder{color:#828393;}
+      input:-ms-input-placeholder,textarea:-ms-input-placeholder,select:-ms-input-placeholder{color:#828393;}
+      input:-moz-placeholder,textarea:-moz-placeholder,select:-moz-placeholder{color:#828393;}
+      input:focus,textarea:focus,select:focus{outline:none;padding:12px 16px;border-color:#0c97f9;}
+      input.invalid,input.invalid:focus,textarea.invalid,textarea.invalid:focus,select.invalid,select.invalid:focus{border-color:#FF5572;}
+    </style>
+    <style>
+      .select-container{position:relative;}
+      .select-container select{padding-right:30px;}
+      .select-container svg{position:absolute;right:15px;top:calc(50% - 6px);height:12px;width:12px;fill:#E7E7F0;stroke:#E7E7F0;}
+      .select-container svg polyline{stroke-width:5;}
     </style>
   </div>
 </div>
@@ -1201,13 +1245,13 @@ exports[`Storyshots Form Fields TextArea 1`] = `
       value={undefined}
     />
     <style>
-      input,textarea{width:100%;min-width:100%;max-width:100%;min-height:44px;padding:12px 16px;background-color:#ffffff;color:#2A2A30;box-sizing:border-box;font-style:normal;font-weight:normal;font-size:0.875rem;border-width:2px;border-style:solid;border-color:#E7E7F0;border-radius:4px;}
-      input::-webkit-input-placeholder,textarea::-webkit-input-placeholder{color:#828393;}
-      input::-moz-placeholder,textarea::-moz-placeholder{color:#828393;}
-      input:-ms-input-placeholder,textarea:-ms-input-placeholder{color:#828393;}
-      input:-moz-placeholder,textarea:-moz-placeholder{color:#828393;}
-      input:focus,textarea:focus{outline:none;padding:12px 16px;border-color:#0c97f9;}
-      input.invalid,input.invalid:focus,textarea.invalid,textarea.invalid:focus{border-color:#FF5572;}
+      input,textarea,select{width:100%;min-width:100%;max-width:100%;min-height:44px;padding:12px 16px;background-color:#ffffff;color:#2A2A30;box-sizing:border-box;-webkit-appearance:none;font-style:normal;font-weight:normal;font-size:0.875rem;border-width:2px;border-style:solid;border-color:#E7E7F0;border-radius:4px;}
+      input::-webkit-input-placeholder,textarea::-webkit-input-placeholder,select::-webkit-input-placeholder{color:#828393;}
+      input::-moz-placeholder,textarea::-moz-placeholder,select::-moz-placeholder{color:#828393;}
+      input:-ms-input-placeholder,textarea:-ms-input-placeholder,select:-ms-input-placeholder{color:#828393;}
+      input:-moz-placeholder,textarea:-moz-placeholder,select:-moz-placeholder{color:#828393;}
+      input:focus,textarea:focus,select:focus{outline:none;padding:12px 16px;border-color:#0c97f9;}
+      input.invalid,input.invalid:focus,textarea.invalid,textarea.invalid:focus,select.invalid,select.invalid:focus{border-color:#FF5572;}
     </style>
   </div>
 </div>

@@ -41,12 +41,11 @@ storiesOf('Form Fields', module)
   .addDecorator(withTests({ results })('Select'))
   .addDecorator(getStory => <div style={{ padding: '24px' }}>{getStory()}</div>)
   .add('Select', () => (
-    <Select>
-      <option value="1" />
-      <option value="2" />
-      <option value="3" />
-      <option value="4" />
-    </Select>
+    <Select
+      name={text('name', 'Name')}
+      label={text('label', 'Label')}
+      options={[{ value: 'one' }, { value: 'two' }, { value: 'three' }, { value: 'four' }]}
+    />
   ));
 
 storiesOf('Form Fields', module)
