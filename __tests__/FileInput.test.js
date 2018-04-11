@@ -9,7 +9,7 @@ it('renders correctly', () => {
   expect(element).toMatchSnapshot();
 });
 
-it('input change correct', () => {
+it('Fileinput change correct', () => {
   const wrapper = shallow(<FileInput id="test" />);
   console.log(wrapper.debug());
   wrapper.find('input').simulate('change', {
