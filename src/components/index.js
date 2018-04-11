@@ -10,8 +10,8 @@ export { default as Form } from './Form';
 export { default as Modal } from './Modal';
 export { default as ToastNotification } from './ToastNotification';
 export { default as ToastManager } from './ToastNotification/Manager';
-export { default as Nav } from './Navigation/Nav';
 export { default as ShortProfileInfo } from './Navigation/ShortProfileInfo';
 
 export * from './FormFields';
+export * from './Navigation';
 export * from './Stepper';
