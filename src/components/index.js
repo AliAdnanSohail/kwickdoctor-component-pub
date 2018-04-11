@@ -8,6 +8,7 @@ export { default as DatePicker } from './DatePicker';
 export { default as FileInput } from './FileInput';
 export { default as Form } from './Form';
 export { default as Modal } from './Modal';
+export { default as TagInput } from './TagInput';
 export { default as Toast } from './Toast';
 export { default as ToastManager } from './Toast/Manager';
 
