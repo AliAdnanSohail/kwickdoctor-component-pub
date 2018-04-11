@@ -11,5 +11,8 @@ export { default as Modal } from './Modal';
 export { default as ToastNotification } from './ToastNotification';
 export { default as ToastManager } from './ToastNotification/Manager';
 export { default as VideoRecorder } from './VideoRecorder';
+export { default as VideoPlayer } from './VideoPlayer';
+export { default as RecordButton } from './VideoRecorder/buttons';
+// export { default as VideoSlider } from './VideoRecorder/slider';
 
 export * from './FormFields';

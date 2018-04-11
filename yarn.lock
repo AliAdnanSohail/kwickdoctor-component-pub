@@ -8080,6 +8080,12 @@ rst-selector-parser@^2.2.3:
     lodash.flattendeep "^4.4.0"
     nearley "^2.7.10"
 
+rtcpeerconnection-shim@^1.2.9:
+  version "1.2.11"
+  resolved "https://registry.yarnpkg.com/rtcpeerconnection-shim/-/rtcpeerconnection-shim-1.2.11.tgz#df2b2456020365daf26bf8c135523bca2deb252b"
+  dependencies:
+    sdp "^2.6.0"
+
 run-async@^2.2.0:
   version "2.3.0"
   resolved "https://registry.yarnpkg.com/run-async/-/run-async-2.3.0.tgz#0371ab4ae0bdd720d4166d7dfda64ff7a445a6c0"
@@ -8168,6 +8174,10 @@ scss-tokenizer@^0.2.3:
   dependencies:
     js-base64 "^2.1.8"
     source-map "^0.4.2"
+
+sdp@^2.6.0, sdp@^2.7.0:
+  version "2.7.0"
+  resolved "https://registry.yarnpkg.com/sdp/-/sdp-2.7.0.tgz#02b64ea0c29d73179afa19794e466b123b1b29f3"
 
 "semver@2 || 3 || 4 || 5", semver@^5.3.0, semver@^5.4.1:
   version "5.5.0"
@@ -9426,6 +9436,13 @@ webpack@^3.10.0:
     watchpack "^1.4.0"
     webpack-sources "^1.0.1"
     yargs "^8.0.2"
+
+webrtc-adapter@^6.1.4:
+  version "6.1.4"
+  resolved "https://registry.yarnpkg.com/webrtc-adapter/-/webrtc-adapter-6.1.4.tgz#6fb13589fd29c1a1061b80cf86f6f2b1a0c45431"
+  dependencies:
+    rtcpeerconnection-shim "^1.2.9"
+    sdp "^2.7.0"
 
 whatwg-encoding@^1.0.1, whatwg-encoding@^1.0.3:
   version "1.0.3"

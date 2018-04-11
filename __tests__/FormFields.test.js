@@ -1,5 +1,5 @@
 import React from 'react';
-import { mount, render  } from 'enzyme';
+import { mount, render } from 'enzyme';
 
 import { Input, TextArea, Select } from '../src';
 
@@ -54,7 +54,7 @@ describe('Select', () => {
     mount(<Select >
       <option value="1" >11</option>
       <option value="2" >22</option>
-    </Select>);
+          </Select>);
 
     expect(element).toMatchSnapshot();
   });
@@ -62,7 +62,8 @@ describe('Select', () => {
   // it('should change selected value', () => {
   //   const element =
   //   render(<Select >
-  //     <option value="1" >11</option>
+  
+  //     <option value="1" >11</opption>
   //     <option value="2" >22</option>
   //   </Select>);
 

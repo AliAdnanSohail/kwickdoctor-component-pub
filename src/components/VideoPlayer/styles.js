@@ -3,32 +3,35 @@ import css from 'styled-jsx/css';
 import settings from '../../utils/style-helper';
 
 export default css`
-
-.video_container {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-
-.video_controls {
+.videoPlayer_container{
   position: absolute;
-  top: 420px;
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  
 }
 
-p.borderBelow {
-  margin: 0 0 20px 0;
-  padding: 0 0 20px 0;
+button {
+  margin: 0 3px 10px 0;
+  padding-left: 2px;
+  padding-right: 2px;
+  width: 99px;
 }
+
+button:last-of-type {
+  margin: 0;
+}
+
 
 video {
-
+  height: 40%;
+  vertical-align: top;
+  width: calc(40em - 10px);
 }
+
+
+video:last-of-type {
+  margin: 0 0 20px 0;
+}
+
+
+
 @media screen and (max-width: 500px) {
   button {
     font-size: 0.8em;
@@ -43,8 +46,6 @@ video {
     width: calc(50vw - 48px);
   }
 
-  video#gumVideo {
-    margin: 0 10px 10px 0;
-  }
+  
 }
 `;

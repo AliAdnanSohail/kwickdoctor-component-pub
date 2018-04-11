@@ -105,6 +105,7 @@
     "shallow-equal": "^1.0.0",
     "styled-jsx": "^2.2.6",
     "uuid": "^3.2.1",
-    "validator": "^9.4.1"
+    "validator": "^9.4.1",
+    "webrtc-adapter": "^6.1.4"
   }
 }
