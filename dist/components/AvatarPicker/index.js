@@ -69,36 +69,25 @@ var AvatarPicker = function (_Component) {
       _this.props.onChange(event);
     };
 
-    _this.state = { image: null };
-    return _this;
-  }
+    _this.renderBig = function () {
+      var _this$props = _this.props,
+          id = _this$props.id,
+          name = _this$props.name;
+      var image = _this.state.image;
 
-  _createClass(AvatarPicker, [{
-    key: 'render',
-    value: function render() {
-      var _this2 = this;
 
-      var _props = this.props,
-          id = _props.id,
-          name = _props.name;
-      var image = this.state.image;
-
+      var thumbStyle = {
+        backgroundImage: image ? 'url(' + image + ')' : 'none'
+      };
 
       return _react2.default.createElement(
         'div',
         {
-          className: 'jsx-' + _styles.fileInput.__scopedHash + ' ' + 'avatar'
+          className: 'jsx-' + _styles.avatarBig.__scopedHash + ' jsx-' + _styles.fileInput.__scopedHash + ' ' + 'avatar'
         },
         _react2.default.createElement(
-          'div',
-          {
-            className: 'jsx-' + _styles.fileInput.__scopedHash + ' ' + 'avatar__button'
-          },
-          image && _react2.default.createElement(_.Button, { onClick: this.handleRemove, icon: _react2.default.createElement(_icons.TrashIcon, null), size: 32, rounded: true, danger: true })
-        ),
-        _react2.default.createElement(
           'label',
-          { htmlFor: id, 'aria-label': 'Edit image', className: 'jsx-' + _styles.fileInput.__scopedHash + ' ' + 'avatar__container'
+          { htmlFor: id, 'aria-label': 'Edit image', className: 'jsx-' + _styles.avatarBig.__scopedHash + ' jsx-' + _styles.fileInput.__scopedHash + ' ' + 'avatar__container'
           },
           _react2.default.createElement('input', {
             id: id,
@@ -106,14 +95,78 @@ var AvatarPicker = function (_Component) {
             name: name,
 
             ref: function ref(input) {
-              _this2.fileUpload = input;
+              _this.fileUpload = input;
             },
-            onChange: this.handleUpload,
-            className: 'jsx-' + _styles.fileInput.__scopedHash + ' ' + 'file-input'
+            onChange: _this.handleUpload,
+            className: 'jsx-' + _styles.avatarBig.__scopedHash + ' jsx-' + _styles.fileInput.__scopedHash + ' ' + 'file-input'
           }),
           _react2.default.createElement(
             'div',
-            { style: { backgroundImage: 'url(' + image + ')' }, className: 'jsx-' + _styles.fileInput.__scopedHash + ' ' + 'avatar__thumb'
+            { style: thumbStyle, className: 'jsx-' + _styles.avatarBig.__scopedHash + ' jsx-' + _styles.fileInput.__scopedHash + ' ' + 'avatar__thumb'
+            },
+            !image && _react2.default.createElement(_icons.CameraIcon, null)
+          )
+        ),
+        image && _react2.default.createElement(
+          'div',
+          {
+            className: 'jsx-' + _styles.avatarBig.__scopedHash + ' jsx-' + _styles.fileInput.__scopedHash + ' ' + 'avatar__button-container'
+          },
+          _react2.default.createElement(_.Button, { onClick: _this.handleRemove, icon: _react2.default.createElement(_icons.TrashIcon, null), size: 90, rounded: true, danger: true }),
+          _react2.default.createElement(_.Button, { onClick: _this.handleEdit, icon: _react2.default.createElement(_icons.EditIcon, null), size: 90, rounded: true })
+        ),
+        _react2.default.createElement(_style2.default, {
+          styleId: _styles.avatarBig.__scopedHash,
+          css: _styles.avatarBig.__scoped
+        }),
+        _react2.default.createElement(_style2.default, {
+          styleId: _styles.fileInput.__scopedHash,
+          css: _styles.fileInput.__scoped
+        })
+      );
+    };
+
+    _this.renderMedium = function () {
+      var _this$props2 = _this.props,
+          id = _this$props2.id,
+          name = _this$props2.name;
+      var image = _this.state.image;
+
+
+      var thumbStyle = {
+        backgroundImage: image ? 'url(' + image + ')' : 'none'
+      };
+
+      return _react2.default.createElement(
+        'div',
+        {
+          className: 'jsx-' + _styles.avatarMedium.__scopedHash + ' jsx-' + _styles.fileInput.__scopedHash + ' ' + 'avatar'
+        },
+        _react2.default.createElement(
+          'div',
+          {
+            className: 'jsx-' + _styles.avatarMedium.__scopedHash + ' jsx-' + _styles.fileInput.__scopedHash + ' ' + 'avatar__button'
+          },
+          image && _react2.default.createElement(_.Button, { onClick: _this.handleRemove, icon: _react2.default.createElement(_icons.TrashIcon, null), size: 32, rounded: true, danger: true })
+        ),
+        _react2.default.createElement(
+          'label',
+          { htmlFor: id, 'aria-label': 'Edit image', className: 'jsx-' + _styles.avatarMedium.__scopedHash + ' jsx-' + _styles.fileInput.__scopedHash + ' ' + 'avatar__container'
+          },
+          _react2.default.createElement('input', {
+            id: id,
+            type: 'file',
+            name: name,
+
+            ref: function ref(input) {
+              _this.fileUpload = input;
+            },
+            onChange: _this.handleUpload,
+            className: 'jsx-' + _styles.avatarMedium.__scopedHash + ' jsx-' + _styles.fileInput.__scopedHash + ' ' + 'file-input'
+          }),
+          _react2.default.createElement(
+            'div',
+            { style: thumbStyle, className: 'jsx-' + _styles.avatarMedium.__scopedHash + ' jsx-' + _styles.fileInput.__scopedHash + ' ' + 'avatar__thumb'
             },
             !image && _react2.default.createElement(_icons.CameraIcon, null)
           )
@@ -121,20 +174,37 @@ var AvatarPicker = function (_Component) {
         _react2.default.createElement(
           'div',
           {
-            className: 'jsx-' + _styles.fileInput.__scopedHash + ' ' + 'avatar__button'
+            className: 'jsx-' + _styles.avatarMedium.__scopedHash + ' jsx-' + _styles.fileInput.__scopedHash + ' ' + 'avatar__button'
           },
-          image && _react2.default.createElement(_.Button, { onClick: this.handleEdit, icon: _react2.default.createElement(_icons.EditIcon, null), size: 32, rounded: true })
+          image && _react2.default.createElement(_.Button, { onClick: _this.handleEdit, icon: _react2.default.createElement(_icons.EditIcon, null), size: 32, rounded: true })
         ),
-        _react2.default.createElement(
-          'style',
-          null,
-          _styles.avatar
-        ),
+        _react2.default.createElement(_style2.default, {
+          styleId: _styles.avatarMedium.__scopedHash,
+          css: _styles.avatarMedium.__scoped
+        }),
         _react2.default.createElement(_style2.default, {
           styleId: _styles.fileInput.__scopedHash,
           css: _styles.fileInput.__scoped
         })
       );
+    };
+
+    _this.state = { image: null };
+    return _this;
+  }
+
+  _createClass(AvatarPicker, [{
+    key: 'render',
+    value: function render() {
+      var size = this.props.size;
+
+
+      switch (size) {
+        case 'big':
+          return this.renderBig();
+        default:
+          return this.renderMedium();
+      }
     }
   }]);
 
@@ -147,9 +217,11 @@ exports.default = AvatarPicker;
 AvatarPicker.propTypes = {
   id: _propTypes2.default.string.isRequired,
   name: _propTypes2.default.string,
-  onChange: _propTypes2.default.func.isRequired
+  onChange: _propTypes2.default.func.isRequired,
+  size: _propTypes2.default.oneOf(['medium', 'big', 'small'])
 };
 
 AvatarPicker.defaultProps = {
-  name: 'input-avatar'
+  name: 'input-avatar',
+  size: 'medium'
 };

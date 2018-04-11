@@ -52,9 +52,11 @@ var Toast = function (_Component) {
     return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Toast.__proto__ || Object.getPrototypeOf(Toast)).call.apply(_ref, [this].concat(args))), _this), _this.componentDidMount = function () {
       var timeOut = _this.props.timeOut;
 
+
       if (timeOut !== 0) {
         _this.timeoutID = setTimeout(_this.requestHide, timeOut);
       }
+
       _this.enter();
     }, _this.enter = function () {
       var animationDuration = _this.props.animationDuration;
@@ -62,6 +64,7 @@ var Toast = function (_Component) {
       var baseClassName = _this.element.className;
 
       _this.element.className = baseClassName + ' fade-enter';
+
       setTimeout(function () {
         _this.element.className = baseClassName + ' fade-enter-active';
       }, 0);
@@ -75,6 +78,7 @@ var Toast = function (_Component) {
       var baseClassName = _this.element.className;
 
       _this.element.className = baseClassName + ' fade-exit';
+
       setTimeout(function () {
         _this.element.className = baseClassName + ' fade-exit-active';
       }, 0);
@@ -85,17 +89,22 @@ var Toast = function (_Component) {
     }, _this.closeToast = function () {
       var onHideClick = _this.props.onHideClick;
 
+
       if (onHideClick) {
         onHideClick();
       }
+
       _this.requestHide();
     }, _this.requestHide = function () {
       var onRequestHide = _this.props.onRequestHide;
 
+
       if (onRequestHide) {
         onRequestHide();
       }
+
       clearTimeout(_this.timeoutID);
+
       _this.exit();
     }, _temp), _possibleConstructorReturn(_this, _ret);
   }
@@ -115,9 +124,12 @@ var Toast = function (_Component) {
 
       return _react2.default.createElement(
         'div',
-        { ref: function ref(div) {
+        {
+          ref: function ref(div) {
             _this2.element = div;
-          }, className: classes },
+          },
+          className: classes
+        },
         _react2.default.createElement('div', { className: 'circle' }),
         _react2.default.createElement(
           'div',

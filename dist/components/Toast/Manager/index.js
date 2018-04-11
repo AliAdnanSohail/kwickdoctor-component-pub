@@ -44,11 +44,13 @@ var Manager = function (_EventEmitter) {
 
         timeOut: 5000
       };
+
       if (toast.priority) {
         this.listToasts.unshift(Object.assign(defaultToast, toast));
       } else {
         this.listToasts.push(Object.assign(defaultToast, toast));
       }
+
       this.emitChange();
     }
   }, {

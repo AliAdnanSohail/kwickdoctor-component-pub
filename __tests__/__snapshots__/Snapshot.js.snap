@@ -1,5 +1,58 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Storyshots Avatar Picker big 1`] = `
+<div
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
+>
+  <div
+    className="jsx-779310772 jsx-2165763448 avatar"
+  >
+    <label
+      aria-label="Edit image"
+      className="jsx-779310772 jsx-2165763448 avatar__container"
+      htmlFor="avatar"
+    >
+      <input
+        className="jsx-779310772 jsx-2165763448 file-input"
+        id="avatar"
+        name="name"
+        onChange={[Function]}
+        type="file"
+      />
+      <div
+        className="jsx-779310772 jsx-2165763448 avatar__thumb"
+        style={
+          Object {
+            "backgroundImage": "none",
+          }
+        }
+      >
+        <svg
+          aria-label="camera"
+          className="grommetux-control-icon grommetux-control-icon-camera grommetux-control-icon--responsive"
+          height="24px"
+          role="img"
+          version="1.1"
+          viewBox="0 0 24 24"
+          width="24px"
+        >
+          <path
+            d="M1,21 L1,7 L6,7 L8,3 L16,3 L18,7 L23,7 L23,21 L1,21 Z M12,18 C14.7614237,18 17,15.7614237 17,13 C17,10.2385763 14.7614237,8 12,8 C9.23857625,8 7,10.2385763 7,13 C7,15.7614237 9.23857625,18 12,18 Z"
+            fill="none"
+            stroke="#000"
+            strokeWidth="2"
+          />
+        </svg>
+      </div>
+    </label>
+  </div>
+</div>
+`;
+
 exports[`Storyshots Avatar Picker default 1`] = `
 <div
   style={
@@ -9,28 +62,28 @@ exports[`Storyshots Avatar Picker default 1`] = `
   }
 >
   <div
-    className="jsx-2165763448 avatar"
+    className="jsx-3385526183 jsx-2165763448 avatar"
   >
     <div
-      className="jsx-2165763448 avatar__button"
+      className="jsx-3385526183 jsx-2165763448 avatar__button"
     />
     <label
       aria-label="Edit image"
-      className="jsx-2165763448 avatar__container"
+      className="jsx-3385526183 jsx-2165763448 avatar__container"
       htmlFor="avatar"
     >
       <input
-        className="jsx-2165763448 file-input"
+        className="jsx-3385526183 jsx-2165763448 file-input"
         id="avatar"
         name="name"
         onChange={[Function]}
         type="file"
       />
       <div
-        className="jsx-2165763448 avatar__thumb"
+        className="jsx-3385526183 jsx-2165763448 avatar__thumb"
         style={
           Object {
-            "backgroundImage": "url(null)",
+            "backgroundImage": "none",
           }
         }
       >
@@ -53,14 +106,8 @@ exports[`Storyshots Avatar Picker default 1`] = `
       </div>
     </label>
     <div
-      className="jsx-2165763448 avatar__button"
+      className="jsx-3385526183 jsx-2165763448 avatar__button"
     />
-    <style>
-      .avatar{display:grid;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;grid-template-columns:32px 1fr 32px;grid-gap:12px;width:226px;}
-      .avatar__container{cursor:pointer;color:#c1c2cf;}
-      .avatar__thumb{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;height:138px;width:138px;border-radius:50%;background-color:#e7e7f0;background-position:center;background-size:cover;}
-      .avatar__thumb svg{width:42px;height:42px;fill:#bbbccd;stroke:#bbbccd;}
-    </style>
   </div>
 </div>
 `;
@@ -1251,6 +1298,141 @@ exports[`Storyshots Stepper Stepper 1`] = `
       </button>
       <br />
       current step 1
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Tag Input Tag Input 1`] = `
+<div
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
+>
+  <label
+    className="jsx-1043162979"
+    htmlFor="tag-input-id"
+  >
+    label
+  </label>
+  <div
+    className="jsx-3032076080 tag-input"
+    onClick={[Function]}
+  >
+    <ul
+      className="jsx-3032076080 tag-input__tag-list"
+    >
+      <li
+        className="jsx-4040469366 tag-input__add-existing-tag"
+      >
+        <button
+          className="jsx-4040469366"
+          onClick={[Function]}
+          onKeyDown={[Function]}
+        >
+          <svg
+            aria-label="add"
+            className="grommetux-control-icon grommetux-control-icon-add grommetux-control-icon--responsive"
+            height="24px"
+            role="img"
+            version="1.1"
+            viewBox="0 0 24 24"
+            width="24px"
+          >
+            <path
+              d="M12,22 L12,2 M2,12 L22,12"
+              fill="none"
+              stroke="#000"
+              strokeWidth="2"
+            />
+          </svg>
+          Add existing tag
+        </button>
+      </li>
+      <li
+        className="jsx-1684534872 tag-input__tag"
+      >
+        <span
+          className="jsx-1684534872 tag-input__tag-wrapper"
+        >
+          <span
+            className="jsx-1684534872 tag-input__tag-text"
+          >
+            tag one
+          </span>
+          <button
+            className="jsx-1684534872"
+            onClick={[Function]}
+          >
+            <svg
+              aria-label="close"
+              className="grommetux-control-icon grommetux-control-icon-close grommetux-control-icon--responsive"
+              height="24px"
+              role="img"
+              version="1.1"
+              viewBox="0 0 24 24"
+              width="24px"
+            >
+              <path
+                d="M3,3 L21,21 M3,21 L21,3"
+                fill="none"
+                stroke="#000"
+                strokeWidth="2"
+              />
+            </svg>
+          </button>
+        </span>
+      </li>
+      <li
+        className="jsx-1684534872 tag-input__tag"
+      >
+        <span
+          className="jsx-1684534872 tag-input__tag-wrapper"
+        >
+          <span
+            className="jsx-1684534872 tag-input__tag-text"
+          >
+            tag two
+          </span>
+          <button
+            className="jsx-1684534872"
+            onClick={[Function]}
+          >
+            <svg
+              aria-label="close"
+              className="grommetux-control-icon grommetux-control-icon-close grommetux-control-icon--responsive"
+              height="24px"
+              role="img"
+              version="1.1"
+              viewBox="0 0 24 24"
+              width="24px"
+            >
+              <path
+                d="M3,3 L21,21 M3,21 L21,3"
+                fill="none"
+                stroke="#000"
+                strokeWidth="2"
+              />
+            </svg>
+          </button>
+        </span>
+      </li>
+    </ul>
+    <div
+      className="jsx-3032076080 tag-input__input"
+    >
+      <input
+        className="jsx-3032076080"
+        id="tag-input-id"
+        onBlur={[Function]}
+        onChange={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        type="text"
+        value=""
+      />
     </div>
   </div>
 </div>

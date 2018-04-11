@@ -94,6 +94,15 @@ Object.defineProperty(exports, 'Modal', {
   }
 });
 
+var _TagInput = require('./TagInput');
+
+Object.defineProperty(exports, 'TagInput', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_TagInput).default;
+  }
+});
+
 var _Toast = require('./Toast');
 
 Object.defineProperty(exports, 'Toast', {

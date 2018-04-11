@@ -53,7 +53,7 @@ var ToastNotification = function (_Component) {
 
     var _this = _possibleConstructorReturn(this, (ToastNotification.__proto__ || Object.getPrototypeOf(ToastNotification)).call(this, props));
 
-    _this.componentWillMount = function () {
+    _this.componentDidMount = function () {
       _Manager2.default.addChangeListener(_this.handleStoreChange);
     };
 
@@ -61,7 +61,13 @@ var ToastNotification = function (_Component) {
       _Manager2.default.removeChangeListener(_this.handleStoreChange);
     };
 
-    _this.getToasts = function () {
+    _this.handleStoreChange = function (toasts) {
+      _this.setState({
+        toasts: toasts
+      });
+    };
+
+    _this.renderToasts = function () {
       var toasts = _this.state.toasts;
 
 
@@ -71,27 +77,21 @@ var ToastNotification = function (_Component) {
       });
     };
 
-    _this.handleStoreChange = function (toasts) {
-      _this.setState({
-        toasts: toasts
-      });
-    };
-
-    _this.state = {
-      toasts: props.initialToasts
-    };
+    _this.state = { toasts: props.initialToasts };
     return _this;
   }
 
   _createClass(ToastNotification, [{
     key: 'render',
     value: function render() {
-      var className = (0, _classnames2.default)('toast-container', { 'toast-container-empty': this.state.toasts.length === 0 });
+      var className = (0, _classnames2.default)('toast-container', {
+        'toast-container-empty': this.state.toasts.length === 0
+      });
 
       return _react2.default.createElement(
         'div',
         { className: className },
-        this.state.toasts.length > 0 && this.getToasts(),
+        this.state.toasts.length > 0 && this.renderToasts(),
         _react2.default.createElement(
           'style',
           null,

@@ -2,28 +2,28 @@
 
 exports[`renders correctly 1`] = `
 <div
-  className="jsx-2165763448 avatar"
+  className="jsx-3385526183 jsx-2165763448 avatar"
 >
   <div
-    className="jsx-2165763448 avatar__button"
+    className="jsx-3385526183 jsx-2165763448 avatar__button"
   />
   <label
     aria-label="Edit image"
-    className="jsx-2165763448 avatar__container"
+    className="jsx-3385526183 jsx-2165763448 avatar__container"
     htmlFor="test-id"
   >
     <input
-      className="jsx-2165763448 file-input"
+      className="jsx-3385526183 jsx-2165763448 file-input"
       id="test-id"
       name="input-avatar-picker"
       onChange={[Function]}
       type="file"
     />
     <div
-      className="jsx-2165763448 avatar__thumb"
+      className="jsx-3385526183 jsx-2165763448 avatar__thumb"
       style={
         Object {
-          "backgroundImage": "url(null)",
+          "backgroundImage": "none",
         }
       }
     >
@@ -46,13 +46,7 @@ exports[`renders correctly 1`] = `
     </div>
   </label>
   <div
-    className="jsx-2165763448 avatar__button"
+    className="jsx-3385526183 jsx-2165763448 avatar__button"
   />
-  <style>
-    .avatar{display:grid;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;grid-template-columns:32px 1fr 32px;grid-gap:12px;width:226px;}
-    .avatar__container{cursor:pointer;color:#c1c2cf;}
-    .avatar__thumb{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;height:138px;width:138px;border-radius:50%;background-color:#e7e7f0;background-position:center;background-size:cover;}
-    .avatar__thumb svg{width:42px;height:42px;fill:#bbbccd;stroke:#bbbccd;}
-  </style>
 </div>
 `;
