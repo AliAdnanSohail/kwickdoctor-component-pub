@@ -133,6 +133,18 @@ Object.keys(_FormFields).forEach(function (key) {
   });
 });
 
+var _Navigation = require('./Navigation');
+
+Object.keys(_Navigation).forEach(function (key) {
+  if (key === "default" || key === "__esModule") return;
+  Object.defineProperty(exports, key, {
+    enumerable: true,
+    get: function get() {
+      return _Navigation[key];
+    }
+  });
+});
+
 var _Stepper = require('./Stepper');
 
 Object.keys(_Stepper).forEach(function (key) {
