@@ -1,11 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`TextArea renders correctly 1`] = `
+exports[`renders correctly 1`] = `
 <div
-  className="jsx-1685083184 jsx-1043162979 jsx-3846816657 form-field"
+  className="jsx-1685083184 jsx-4038665278 jsx-2881818901 form-field"
 >
   <label
-    className="jsx-1685083184 jsx-1043162979 jsx-3846816657"
+    className="jsx-1685083184 jsx-4038665278 jsx-2881818901"
     htmlFor="input-id"
   >
     input-label

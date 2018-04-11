@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
 
-import renderer from './renderer';
-import { textInput } from './styles';
+import renderer from '../renderer';
+import { textInput } from '../styles';
 
 export default renderer((input, label, { ...rest }) => (
   <Fragment>

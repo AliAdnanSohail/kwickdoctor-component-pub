@@ -3,7 +3,7 @@
 exports[`TagInput renders correctly 1`] = `
 Array [
   <label
-    className="jsx-1043162979"
+    className="jsx-4038665278"
     htmlFor="tag-input-id"
   >
     tag-input-label

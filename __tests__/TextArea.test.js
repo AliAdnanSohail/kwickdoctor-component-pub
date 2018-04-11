@@ -10,7 +10,7 @@ const defaultProps = {
   placeholder: 'input-placeholder',
 };
 
-it('TextArea renders correctly', () => {
+it('renders correctly', () => {
   const element = renderer.create(<TextArea {...defaultProps} />).toJSON();
 
   expect(element).toMatchSnapshot();

@@ -10,7 +10,7 @@ const defaultProps = {
   placeholder: 'input-placeholder',
 };
 
-it('Input renders correctly', () => {
+it('renders correctly', () => {
   const element = renderer.create(<Input {...defaultProps} />).toJSON();
 
   expect(element).toMatchSnapshot();
