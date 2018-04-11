@@ -1,6 +1,6 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { withKnobs } from '@storybook/addon-knobs/react';
+import { withKnobs, text } from '@storybook/addon-knobs/react';
 import { checkA11y } from '@storybook/addon-a11y';
 import { withTests } from '@storybook/addon-jest';
 import { action } from '@storybook/addon-actions';
@@ -29,6 +29,8 @@ storiesOf('Tag Input', module)
   .addDecorator(getStory => <div style={{ padding: '24px' }}>{getStory()}</div>)
   .add('Tag Input', () => (
     <TagInput
+      id={text('id', 'tag-input-id')}
+      label={text('label', 'label')}
       tags={exampleTags}
       onChange={action('onChange')}
       tagCreate={name => ({ name, _id: '' })}

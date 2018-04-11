@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { Component, Fragment } from 'react';
 import PropTypes from 'prop-types';
 import debounce from 'lodash.debounce';
+import classnames from 'classnames';
 
 import KEYS from './../keys';
 import Tag from './../Tag';
@@ -8,8 +9,9 @@ import Suggestions from './../Suggestions';
 import ExistingTags from './../ExistingTags';
 
 import styles from './styles';
+import { label as labelStyles } from './../../FormFields/styles';
 
-export default class TagInput extends React.Component {
+export default class TagInput extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -250,42 +252,59 @@ export default class TagInput extends React.Component {
     const {
       query, suggestions, selectedIndex, isFocused,
     } = this.state;
+    const { label, id } = this.props;
+    const wrapperClassNames = classnames('tag-input', { focused: isFocused });
+
     /* eslint-disable jsx-a11y/click-events-have-key-events */
     /* eslint-disable jsx-a11y/no-static-element-interactions */
+    /* eslint-disable jsx-a11y/label-has-for */
     return (
-      <div ref={(wrapper) => { this.wrapperElement = wrapper; }} onClick={this.handleWrapperElementOnClick} className="tag-input">
-        {/* eslint-enable */}
-        <ul className="tag-input__tag-list">
-          <ExistingTags
-            existingTags={this.getFilteredExistingsTags()}
-            handleClick={this.handleExistingsTagClick}
-          />
-          {this.renderTags()}
-        </ul>
-        <div className="tag-input__input">
-          <input
-            type="text"
-            ref={(input) => { this.textInput = input; }}
-            value={query}
-            onChange={this.handleInputChange}
-            onKeyDown={this.handleInputKeyDown}
-            onFocus={this.handleFocus}
-            onBlur={this.handleBlur}
-          />
-          <Suggestions
-            isFocused={isFocused}
-            selected={selectedIndex}
-            handleClick={this.handleSuggestionClick}
-            items={suggestions}
-          />
+      <Fragment>
+        <label htmlFor={id}>
+          {label}
+          <style jsx>{labelStyles}</style>
+        </label>
+        <div
+          ref={(wrapper) => { this.wrapperElement = wrapper; }}
+          onClick={this.handleWrapperElementOnClick}
+          className={wrapperClassNames}
+        >
+          {/* eslint-enable */}
+          <ul className="tag-input__tag-list">
+            <ExistingTags
+              existingTags={this.getFilteredExistingsTags()}
+              handleClick={this.handleExistingsTagClick}
+            />
+            {this.renderTags()}
+          </ul>
+          <div className="tag-input__input">
+            <input
+              id={id}
+              type="text"
+              ref={(input) => { this.textInput = input; }}
+              value={query}
+              onChange={this.handleInputChange}
+              onKeyDown={this.handleInputKeyDown}
+              onFocus={this.handleFocus}
+              onBlur={this.handleBlur}
+            />
+            <Suggestions
+              isFocused={isFocused}
+              selected={selectedIndex}
+              handleClick={this.handleSuggestionClick}
+              items={suggestions}
+            />
+          </div>
+          <style jsx>{styles}</style>
         </div>
-        <style jsx>{styles}</style>
-      </div>
+      </Fragment>
     );
   }
 }
 
 TagInput.propTypes = {
+  id: PropTypes.string.isRequired,
+  label: PropTypes.string.isRequired,
   tags: PropTypes.array,
   tagNameProp: PropTypes.string,
   tagCreate: PropTypes.func,
