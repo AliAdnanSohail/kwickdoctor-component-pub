@@ -3,7 +3,7 @@ import renderer from 'react-test-renderer';
 import moment from 'moment';
 import { mount } from 'enzyme';
 
-import { Datepicker } from '../src';
+import { DatePicker } from '../src';
 
 const testDate = '2018-03-15';
 const baseProps = {
@@ -17,32 +17,32 @@ const baseProps = {
 };
 
 it('Datepicker renders correctly', () => {
-  const element = renderer.create(<Datepicker {...baseProps} />).toJSON();
+  const element = renderer.create(<DatePicker {...baseProps} />).toJSON();
 
   expect(element).toMatchSnapshot();
 });
 
 it('Datepicker set id correctly', () => {
-  const element = mount(<Datepicker {...baseProps} />);
+  const element = mount(<DatePicker {...baseProps} />);
 
   expect(element.find(`[htmlFor="${baseProps.id}"]`)).toHaveLength(1);
   expect(element.find(`input#${baseProps.id}`)).toHaveLength(1);
 });
 
 it('Datepicker set name correctly', () => {
-  const element = mount(<Datepicker {...baseProps} />);
+  const element = mount(<DatePicker {...baseProps} />);
 
   expect(element.find(`input[name="${baseProps.name}"]`)).toHaveLength(1);
 });
 
 it('Datepicker set value correctly', () => {
-  const element = mount(<Datepicker {...baseProps} />);
+  const element = mount(<DatePicker {...baseProps} />);
 
   expect(element.find('input').instance().value).toEqual(baseProps.value.format(baseProps.dateFormat));
 });
 
 it('Datepicker set label correctly', () => {
-  const element = mount(<Datepicker {...baseProps} />);
+  const element = mount(<DatePicker {...baseProps} />);
 
   expect(element.find('label').text()).toEqual(baseProps.label);
 });
@@ -55,7 +55,7 @@ it('Datepicker input correctly', () => {
     value = date;
   };
 
-  const element = mount(<Datepicker {...props} />);
+  const element = mount(<DatePicker {...props} />);
   const input = element.find('input');
   input.simulate('focus');
   input.simulate('change', { target: { value: inputValue } });
@@ -66,7 +66,7 @@ it('Datepicker input correctly', () => {
 it('Datepicker show error correctly', () => {
   const props = Object.assign({}, baseProps);
   props.error = 'error-text';
-  const element = mount(<Datepicker {...props} />);
+  const element = mount(<DatePicker {...props} />);
 
   expect(element.find('.input-error').text()).toEqual(props.error);
 });
@@ -77,7 +77,7 @@ it('Datepicker click by day correctly', () => {
   props.onChange = (date) => {
     value = date;
   };
-  const element = mount(<Datepicker {...props} />);
+  const element = mount(<DatePicker {...props} />);
   element.find('input').simulate('focus');
   element.find('[aria-label="day-16"]').simulate('click');
 

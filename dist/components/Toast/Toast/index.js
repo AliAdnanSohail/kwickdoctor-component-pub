@@ -53,7 +53,7 @@ var Toast = function (_Component) {
       var timeOut = _this.props.timeOut;
 
       if (timeOut !== 0) {
-        setTimeout(_this.requestHide, timeOut);
+        _this.timeoutID = setTimeout(_this.requestHide, timeOut);
       }
       _this.enter();
     }, _this.enter = function () {
@@ -95,6 +95,7 @@ var Toast = function (_Component) {
       if (onRequestHide) {
         onRequestHide();
       }
+      clearTimeout(_this.timeoutID);
       _this.exit();
     }, _temp), _possibleConstructorReturn(_this, _ret);
   }
