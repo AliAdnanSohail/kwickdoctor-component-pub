@@ -22,15 +22,6 @@ Object.defineProperty(exports, 'Button', {
   }
 });
 
-var _ButtonGroup = require('./ButtonGroup');
-
-Object.defineProperty(exports, 'ButtonGroup', {
-  enumerable: true,
-  get: function get() {
-    return _interopRequireDefault(_ButtonGroup).default;
-  }
-});
-
 var _Calendar = require('./Calendar');
 
 Object.defineProperty(exports, 'Calendar', {
