@@ -17,7 +17,7 @@ export default css`
 
     line-height: 26px;
 
-    transition: background-color 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
 
     overflow: hidden;
 
@@ -39,9 +39,20 @@ export default css`
       transform: uppercase;
     }
 
-    :global(&__loading-icon) {
+    &:focus {
+      outline: none;
+    }
+
+    :global(svg) {
+      fill: #ffffff;
+      stroke: #ffffff;
+
       width: 18px;
       height: 18px;
+
+      :global(circle, path) {
+        stroke: #ffffff;
+      }
     }
 
     :global(&__content) {
@@ -63,6 +74,15 @@ export default css`
       transform: translate(-50%, -50%);
     }
 
+    &--loading :global(&__content) {
+      transform: translateX(16px);
+    }
+
+    &--disabled {
+      opacity: 0.7;
+      cursor: not-allowed;
+    }
+
     &:not(&--disabled) {
       &:hover,
       &:focus {
@@ -72,23 +92,51 @@ export default css`
       }
     }
 
-    &:not(&--rounded) {
-      :global(.button__loading-icon) {
-        position: absolute;
-        top: calc(50% - 9px);
-        left: 32px;
+    &--flat {
+      color: ${settings.primaryColor};
+      background-color: transparent;
+      border-color: transparent;
+
+      :global(svg) {
+        stroke: ${settings.textColor};
+        fill: ${settings.textColor};
+
+        :global(path, circle) {
+          stroke: ${settings.textColor};
+        }
+      }
+
+      &:not(.button--disabled) {
+        &:hover,
+        &:focus {
+          color: ${settings.primaryColor};
+          background-color: transparent;
+          border-color: transparent;
+          box-shadow: none;
+        }
       }
     }
 
     &--accent {
       color: ${settings.primaryColor};
-      background-color: #ffffff;
-      border-color: #ffffff;
+      background-color: transparent;
+      border-color: transparent;
+
+      :global(svg) {
+        stroke: ${settings.textColor};
+        fill: ${settings.textColor};
+
+        :global(path, circle) {
+          stroke: ${settings.textColor};
+        }
+      }
 
       &:not(.button--disabled) {
         &:hover,
         &:focus {
-          color: #ffffff;
+          color: ${settings.primaryColor};
+          background-color: transparent;
+          border-color: transparent;
         }
       }
     }
@@ -107,23 +155,25 @@ export default css`
       }
     }
 
-    &--disabled {
-      opacity: 0.7;
-      cursor: not-allowed;
-    }
-
-    &--loading :global(&__content) {
-      transform: translateX(16px);
-    }
-
     &--rounded {
       display: flex;
       flex-direction: row;
       align-items: center;
       justify-content: center;
 
+      width: 52px;
+      height: 52px;
+
       padding: 0;
       border-radius: 50%;
+    }
+
+    &:not(&--rounded) {
+      :global(.button__loading-icon) {
+        position: absolute;
+        top: calc(50% - 9px);
+        left: 32px;
+      }
     }
 
     &--squared {
@@ -142,20 +192,60 @@ export default css`
           color: #ffffff;
         }
       }
+
+      :global(svg) {
+        stroke: ${settings.textColor};
+        fill: ${settings.textColor};
+
+        :global(path, circle) {
+          stroke: ${settings.textColor};
+        }
+      }
+    }
+
+    &--xs {
+      height: 32px;
+      line-height: 1;
+
+      padding: 0 32px;
+
+      font-size: 0.75rem;
+
+      &.button--rounded {
+        width: 32px;
+        height: 32px;
+      }
+
+      &:not(&--rounded) {
+        :global(.button__loading-icon) {
+          left: 16px;
+        }
+      }
+    }
+
+    &--s {
+      height: 42px;
+      line-height: 1;
+
+      padding: 0 42px;
+
+      font-size: 0.875rem;
+
+      &.button--rounded {
+        width: 42px;
+        height: 42px;
+      }
+
+      &:not(&--rounded) {
+        :global(.button__loading-icon) {
+          left: 21px;
+        }
+      }
     }
 
     &.has-clicked {
       .button__wave {
         animation: wave 0.8s;
-      }
-    }
-
-    :global(svg) {
-      fill: #ffffff;
-      stroke: #ffffff;
-
-      :global(circle) {
-        stroke: #ffffff;
       }
     }
   }

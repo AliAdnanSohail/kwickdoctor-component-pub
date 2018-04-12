@@ -1,5 +1,4 @@
 import React from 'react';
-// import jest from 'jest';
 import { mount } from 'enzyme';
 import { EditIcon, SpinningIcon } from 'grommet/components/icons';
 
@@ -32,6 +31,12 @@ it('disabled button renders correctly', () => {
 
   expect(element.find('button').hasClass('button--disabled')).toEqual(true);
   expect(element.prop('disabled')).toEqual(true);
+});
+
+it('flat button renders correctly', () => {
+  const element = mount(<Button flat>Hello!</Button>);
+
+  expect(element.find('button').hasClass('button--flat')).toEqual(true);
 });
 
 it('rounded button renders correctly', () => {
@@ -78,4 +83,16 @@ it('wave effect shows correctly', () => {
   }, 300);
 
   clearTimeout(timeout);
+});
+
+it('xs button renders correctly', () => {
+  const element = mount(<Button size="xs">Hello!</Button>);
+
+  expect(element.find('button').hasClass('button--xs')).toEqual(true);
+});
+
+it('s button renders correctly', () => {
+  const element = mount(<Button size="s">Hello!</Button>);
+
+  expect(element.find('button').hasClass('button--s')).toEqual(true);
 });

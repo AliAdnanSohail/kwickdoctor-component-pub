@@ -18,12 +18,6 @@ export default class Button extends Component {
     clearTimeout(this.timeout);
   }
 
-  getSize = () => {
-    const { rounded, size } = this.props;
-
-    return rounded ? { width: `${size}px`, height: `${size}px` } : {};
-  };
-
   getIconStyle = () => {
     const { size } = this.props;
 
@@ -77,16 +71,26 @@ export default class Button extends Component {
 
   render() {
     const {
-      accent, danger, disabled, loading, rounded, squared, transparent,
+      accent,
+      danger,
+      disabled,
+      flat,
+      loading,
+      rounded,
+      size,
+      squared,
+      transparent,
     } = this.props;
 
     const { top, left, clicked } = this.state;
 
     const classes = classnames(
       'button',
+      `button--${size}`,
       { 'button--accent': accent },
       { 'button--danger': danger },
       { 'button--disabled': disabled },
+      { 'button--flat': flat },
       { 'button--loading': loading },
       { 'button--rounded': rounded },
       { 'button--squared': squared },
@@ -101,7 +105,6 @@ export default class Button extends Component {
         }}
         className={classes}
         onClick={this.handleClick}
-        style={this.getSize()}
         disabled={disabled}
       >
         {this.renderContent()}
@@ -117,10 +120,11 @@ export default class Button extends Component {
 Button.propTypes = {
   children: PropTypes.any,
   icon: PropTypes.element,
-  size: PropTypes.number,
+  size: PropTypes.string,
   accent: PropTypes.bool,
   danger: PropTypes.bool,
   disabled: PropTypes.bool,
+  flat: PropTypes.bool,
   loading: PropTypes.bool,
   rounded: PropTypes.bool,
   squared: PropTypes.bool,
@@ -131,10 +135,11 @@ Button.propTypes = {
 Button.defaultProps = {
   children: null,
   icon: null,
-  size: 40,
+  size: undefined,
   accent: false,
   danger: false,
   disabled: false,
+  flat: false,
   loading: false,
   rounded: false,
   squared: false,

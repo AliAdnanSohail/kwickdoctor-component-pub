@@ -45,15 +45,6 @@ var Button = function (_Component) {
 
     var _this = _possibleConstructorReturn(this, (Button.__proto__ || Object.getPrototypeOf(Button)).call(this, props));
 
-    _this.getSize = function () {
-      var _this$props = _this.props,
-          rounded = _this$props.rounded,
-          size = _this$props.size;
-
-
-      return rounded ? { width: size + 'px', height: size + 'px' } : {};
-    };
-
     _this.getIconStyle = function () {
       var size = _this.props.size;
       var _defaultExport = ['button svg{width:' + size / 2 + 'px !important;height:' + size / 2 + 'px !important;}'];
@@ -86,11 +77,11 @@ var Button = function (_Component) {
     };
 
     _this.renderContent = function () {
-      var _this$props2 = _this.props,
-          children = _this$props2.children,
-          icon = _this$props2.icon,
-          loading = _this$props2.loading,
-          rounded = _this$props2.rounded;
+      var _this$props = _this.props,
+          children = _this$props.children,
+          icon = _this$props.icon,
+          loading = _this$props.loading,
+          rounded = _this$props.rounded;
 
 
       return rounded && icon ? _react2.default.createElement(
@@ -132,8 +123,10 @@ var Button = function (_Component) {
           accent = _props.accent,
           danger = _props.danger,
           disabled = _props.disabled,
+          flat = _props.flat,
           loading = _props.loading,
           rounded = _props.rounded,
+          size = _props.size,
           squared = _props.squared,
           transparent = _props.transparent;
       var _state = this.state,
@@ -142,7 +135,7 @@ var Button = function (_Component) {
           clicked = _state.clicked;
 
 
-      var classes = (0, _classnames2.default)('button', { 'button--accent': accent }, { 'button--danger': danger }, { 'button--disabled': disabled }, { 'button--loading': loading }, { 'button--rounded': rounded }, { 'button--squared': squared }, { 'button--transparent': transparent }, { 'has-clicked': clicked });
+      var classes = (0, _classnames2.default)('button', 'button--' + size, { 'button--accent': accent }, { 'button--danger': danger }, { 'button--disabled': disabled }, { 'button--flat': flat }, { 'button--loading': loading }, { 'button--rounded': rounded }, { 'button--squared': squared }, { 'button--transparent': transparent }, { 'has-clicked': clicked });
 
       return _react2.default.createElement(
         'button',
@@ -152,7 +145,6 @@ var Button = function (_Component) {
           },
 
           onClick: this.handleClick,
-          style: this.getSize(),
           disabled: disabled,
           className: 'jsx-' + _styles2.default.__scopedHash + ' ' + (classes || '')
         },
@@ -176,10 +168,11 @@ exports.default = Button;
 Button.propTypes = {
   children: _propTypes2.default.any,
   icon: _propTypes2.default.element,
-  size: _propTypes2.default.number,
+  size: _propTypes2.default.string,
   accent: _propTypes2.default.bool,
   danger: _propTypes2.default.bool,
   disabled: _propTypes2.default.bool,
+  flat: _propTypes2.default.bool,
   loading: _propTypes2.default.bool,
   rounded: _propTypes2.default.bool,
   squared: _propTypes2.default.bool,
@@ -190,10 +183,11 @@ Button.propTypes = {
 Button.defaultProps = {
   children: null,
   icon: null,
-  size: 40,
+  size: undefined,
   accent: false,
   danger: false,
   disabled: false,
+  flat: false,
   loading: false,
   rounded: false,
   squared: false,
