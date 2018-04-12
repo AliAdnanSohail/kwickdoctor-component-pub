@@ -8,15 +8,20 @@ import { withTests } from '@storybook/addon-jest';
 import { AvatarPicker } from '../src';
 import results from '../.jest-test-results.json';
 
-storiesOf('AvatarPicker', module)
+storiesOf('Avatar Picker', module)
   .addDecorator(withKnobs)
   .addDecorator(checkA11y)
   .addDecorator(withTests({ results })('AvatarPicker'))
   .addDecorator(getStory => <div style={{ padding: '24px' }}>{getStory()}</div>)
-  .add('simple avatar picker', () => (
-    <AvatarPicker
-      onChange={action('OnChange')}
-      id="text-input"
-      name={text('name', 'name')}
-    />
+  .add('default', () => (
+    <AvatarPicker id="avatar" name={text('name', 'name')} onChange={action('onChange')} />
+  ));
+
+storiesOf('Avatar Picker', module)
+  .addDecorator(withKnobs)
+  .addDecorator(checkA11y)
+  .addDecorator(withTests({ results })('AvatarPicker'))
+  .addDecorator(getStory => <div style={{ padding: '24px' }}>{getStory()}</div>)
+  .add('big', () => (
+    <AvatarPicker id="avatar" size="big" name={text('name', 'name')} onChange={action('onChange')} />
   ));

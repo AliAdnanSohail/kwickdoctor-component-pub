@@ -2,65 +2,60 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 
+import Manager from './Manager';
+import Toast from './Toast';
+import createUUID from './create-UUID';
+
 import styles from './styles';
 
-export default class Toast extends Component {
+export default class ToastNotification extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-      showToast: false,
-    };
+
+    this.state = { toasts: props.initialToasts };
   }
 
-  closeToast = () => {
+  componentDidMount = () => {
+    Manager.addChangeListener(this.handleStoreChange);
+  };
+
+  componentWillUnmount = () => {
+    Manager.removeChangeListener(this.handleStoreChange);
+  };
+
+  handleStoreChange = (toasts) => {
     this.setState({
-      showToast: false,
+      toasts,
     });
-    this.props.onHideClick('Toast hidden');
-  }
+  };
 
-  openToast = () => {
-    this.setState({
-      showToast: true,
+  renderToasts = () => {
+    const { toasts } = this.state;
+
+    return toasts.map((toast) => {
+      const key = toast.id || createUUID();
+      return <Toast key={key} {...toast} />;
     });
-    this.props.onShowClick('Toast shown');
-  }
-
+  };
 
   render() {
-    const { primary, boxstyle } = this.props;
-    const classes = classnames('box', { primary }, boxstyle);
+    const className = classnames('toast-container', {
+      'toast-container-empty': this.state.toasts.length === 0,
+    });
 
     return (
-      <React.Fragment>
-        <button onClick={this.openToast} style={{ marginBottom: 20 }}>Show Toast</button>
-        { this.state.showToast &&
-        <div className={classes}>
-          <div className="circle" />
-          <div className="message">
-            {this.props.children}
-          </div>
-          <div className="icons-close">
-            <button className="icon" onClick={this.closeToast} />
-          </div>
-          <style jsx>{styles}</style>
-        </div>
-        }
-      </React.Fragment>
+      <div className={className}>
+        {this.state.toasts.length > 0 && this.renderToasts()}
+        <style>{styles}</style>
+      </div>
     );
   }
 }
 
-Toast.propTypes = {
-  primary: PropTypes.bool,
-  boxstyle: PropTypes.string,
-  onHideClick: PropTypes.func,
-  onShowClick: PropTypes.func,
+ToastNotification.propTypes = {
+  initialToasts: PropTypes.array,
 };
 
-Toast.defaultProps = {
-  primary: false,
-  boxstyle: 'rectangle-22',
-  onHideClick: null,
-  onShowClick: null,
+ToastNotification.defaultProps = {
+  initialToasts: [],
 };

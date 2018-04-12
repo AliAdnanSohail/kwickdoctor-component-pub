@@ -1,39 +1,98 @@
-import React, { Component, Fragment } from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import ReactAriaModal from 'react-aria-modal';
+import classnames from 'classnames';
+import AriaModal from 'react-aria-modal';
+import { CloseIcon } from 'grommet/components/icons/base';
 
-import Backdrop from './Backdrop';
-import Content from './Content';
+import { modal, underlay } from './styles';
 
-export default class AriaModal extends Component {
-  getApplicationNode = () => document.getElementById(this.props.rootId);
+export default class Modal extends Component {
+  static getDerivedStateFromProps(nextProps, prevState) {
+    return nextProps.active !== prevState.active ? { active: nextProps.show } : null;
+  }
 
-  getModal = () => (
-    <ReactAriaModal
-      onExit={this.props.onClose}
-      titleText={this.props.titleText}
-      getApplicationNode={this.getApplicationNode}
-    >
-      <Backdrop onClick={this.props.onClose}>
-        <Content onClose={this.props.onClose} {...this.props} />
-      </Backdrop>
-    </ReactAriaModal>
-  );
+  constructor(props) {
+    super(props);
+
+    this.state = { modalHasEntered: false, active: props.active };
+  }
+
+  componentWillUnmount() {
+    clearTimeout(this.timeout);
+  }
+
+  handleEnter = () => {
+    this.setState({ modalHasEntered: true });
+  };
+
+  handleExit = () => {
+    this.setState({ modalHasEntered: false }, () => {
+      this.timeout = setTimeout(() => {
+        this.setState({ active: false });
+        this.props.onExit();
+      }, 300);
+    });
+  };
 
   render() {
-    return this.props.show && this.getModal();
+    const {
+      alert, children, escapeExits, rootId, title, underlayClickExits,
+    } = this.props;
+
+    const { active, modalHasEntered } = this.state;
+
+    const modalContentClass = classnames('modal', 'modal--animated', {
+      'has-entered': modalHasEntered,
+    });
+
+    const underlayClass = classnames('underlay', {
+      'has-entered': modalHasEntered,
+    });
+
+    return (
+      <AriaModal
+        alert={alert}
+        escapeExits={escapeExits}
+        getApplicationNode={() => document.getElementById(rootId)}
+        mounted={active}
+        onEnter={this.handleEnter}
+        onExit={this.handleExit}
+        titleText={title}
+        underlayColor={false}
+        underlayClass={underlayClass}
+        underlayClickExits={underlayClickExits}
+        verticallyCenter
+      >
+        <div className={modalContentClass}>
+          <button className="modal__close-button" onClick={this.handleExit}>
+            <CloseIcon />
+          </button>
+          <div className="modal__content">{children}</div>
+        </div>
+
+        <style jsx>{modal}</style>
+        <style>{underlay}</style>
+      </AriaModal>
+    );
   }
 }
 
-AriaModal.propTypes = {
-  show: PropTypes.bool,
+Modal.propTypes = {
+  active: PropTypes.bool.isRequired,
+  alert: PropTypes.bool,
+  children: PropTypes.node,
+  escapeExits: PropTypes.bool,
+  onExit: PropTypes.func.isRequired,
   rootId: PropTypes.string,
-  titleText: PropTypes.string,
-  onClose: PropTypes.func.isRequired,
+  title: PropTypes.string,
+  underlayClickExits: PropTypes.bool,
 };
 
-AriaModal.defaultProps = {
-  show: false,
+Modal.defaultProps = {
+  alert: false,
+  children: null,
+  escapeExits: true,
   rootId: 'root',
-  titleText: 'dom one',
+  title: 'dom one',
+  underlayClickExits: true,
 };
