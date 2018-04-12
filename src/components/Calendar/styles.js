@@ -7,16 +7,13 @@ export const header = css`
     padding: 0;
     margin: 0;
     list-style: none;
-
-    display: flex;
-    align-items: baseline;
     font-size: 0.745rem;
 
     &__item {
-      width: 70px;
-      height: 40px;
-
-      line-height: 40px;
+      width: 14.2857143%;
+      height: 80px;
+      float: left;
+      line-height: 80px;
       color: #bbbccd;
       font-weight: 300;
 
@@ -24,25 +21,25 @@ export const header = css`
         align: center;
         transform: uppercase;
       }
+
+      @media all and (max-width: 630px) {
+        height: 40px;
+        line-height: 40px;
+      }
     }
   }
 `;
 
 export const navigation = css`
   .navigation {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-
-    margin-bottom: 14px;
+    margin-bottom: 15px;
+    position: relative;
 
     &__month {
-      flex: 1;
       text-align: center;
       font-weight: bold;
-      font-size: 1rem;
-
+      font-size: 1.1rem;
+      padding-top: 5px;
       span {
         display: inline-block;
         padding: 0 7px;
@@ -50,19 +47,22 @@ export const navigation = css`
     }
 
     button {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      justify-content: center;
       border: none;
       margin: 0;
       padding: 0;
 
-      width: 70px;
+      width: 95px;
 
       background: transparent;
       outline: none;
       cursor: pointer;
+      position: absolute;
+      left: 0;
+      top: 0;
+      &.next {
+        left: auto;
+        right: 0;
+      }
 
       svg {
         width: 14px !important;
@@ -74,21 +74,8 @@ export const navigation = css`
 
 export const calendar = css`
   .calendar {
-    max-width: 490px;
+    max-width: 665px;
     color: ${settings.textColor};
   }
 `;
 
-export const month = css`
-  .month {
-    padding: 0;
-    margin: 0;
-    list-style: none;
-
-    display: flex;
-    flex-wrap: wrap;
-    align-items: baseline;
-
-    font-size: 0.745rem;
-  }
-`;

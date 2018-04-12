@@ -2,49 +2,60 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 
+import Manager from './Manager';
+import Toast from './Toast';
+import createUUID from './create-UUID';
+
 import styles from './styles';
 
-export default class Toast extends Component {
-  closeClicked() {
-    console.log('Close clicked', this.props);
+export default class ToastNotification extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = { toasts: props.initialToasts };
   }
 
-  render() {
-    const {
-      message, primary, boxstyle,
-    } = this.props;
+  componentDidMount = () => {
+    Manager.addChangeListener(this.handleStoreChange);
+  };
 
-    const classes = classnames(
-      'box',
-      { 'box--primary': primary },
-      boxstyle,
-    );
+  componentWillUnmount = () => {
+    Manager.removeChangeListener(this.handleStoreChange);
+  };
+
+  handleStoreChange = (toasts) => {
+    this.setState({
+      toasts,
+    });
+  };
+
+  renderToasts = () => {
+    const { toasts } = this.state;
+
+    return toasts.map((toast) => {
+      const key = toast.id || createUUID();
+      return <Toast key={key} {...toast} />;
+    });
+  };
+
+  render() {
+    const className = classnames('toast-container', {
+      'toast-container-empty': this.state.toasts.length === 0,
+    });
 
     return (
-      <div className={classes}>
-        <div className="circle" />
-        <div className="message">
-          {message}
-        </div>
-        <div className="icons-close">
-          <div className="icon" onClick={(e) => this.closeClicked(e)} />
-        </div>
-        <style jsx>{styles}</style>
+      <div className={className}>
+        {this.state.toasts.length > 0 && this.renderToasts()}
+        <style>{styles}</style>
       </div>
     );
   }
 }
 
-Toast.propTypes = {
-  message: PropTypes.string,
-  primary: PropTypes.bool,
-  boxstyle: PropTypes.string,
-  closeClicked: PropTypes.func,
+ToastNotification.propTypes = {
+  initialToasts: PropTypes.array,
 };
 
-Toast.defaultProps = {
-  message: 'You have a booked appointment..bla bla',
-  primary: false,
-  boxstyle: 'rectangle-22',
-  closeClicked: null,
+ToastNotification.defaultProps = {
+  initialToasts: [],
 };

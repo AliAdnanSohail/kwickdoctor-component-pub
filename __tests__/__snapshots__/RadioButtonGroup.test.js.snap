@@ -1,0 +1,53 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  className="jsx-1685083184 jsx-4038665278 jsx-2881818901 jsx-904933394 jsx-1324491324 form-field"
+>
+  <fieldset
+    className="jsx-1685083184 jsx-4038665278 jsx-2881818901 jsx-904933394 jsx-1324491324"
+  >
+    <legend
+      className="jsx-1685083184 jsx-4038665278 jsx-2881818901 jsx-904933394 jsx-1324491324"
+    >
+      Label
+    </legend>
+    <label
+      className="jsx-1685083184 jsx-4038665278 jsx-2881818901 jsx-904933394 jsx-1324491324 radio-button"
+    >
+      male
+      <input
+        className="jsx-1685083184 jsx-4038665278 jsx-2881818901 jsx-904933394 jsx-1324491324 "
+        defaultChecked={false}
+        name="gender"
+        type="radio"
+        value="male"
+      />
+    </label>
+    <label
+      className="jsx-1685083184 jsx-4038665278 jsx-2881818901 jsx-904933394 jsx-1324491324 radio-button radio-button--active"
+    >
+      any
+      <input
+        className="jsx-1685083184 jsx-4038665278 jsx-2881818901 jsx-904933394 jsx-1324491324 "
+        defaultChecked={true}
+        name="gender"
+        type="radio"
+        value="any"
+      />
+    </label>
+    <label
+      className="jsx-1685083184 jsx-4038665278 jsx-2881818901 jsx-904933394 jsx-1324491324 radio-button"
+    >
+      female
+      <input
+        className="jsx-1685083184 jsx-4038665278 jsx-2881818901 jsx-904933394 jsx-1324491324 "
+        defaultChecked={false}
+        name="gender"
+        type="radio"
+        value="female"
+      />
+    </label>
+  </fieldset>
+</div>
+`;

@@ -13,12 +13,13 @@ export default class Day extends Component {
 
   getDots = () => {
     const { events, selected } = this.props;
+    const classes = classnames('events', `events-qty-${events.slice(0, 3).length}`);
 
     return (
       selected &&
       events.length > 0 && (
-        <ul className="events">
-          {events.map(event => (
+        <ul className={classes}>
+          {events.slice(0, 3).map(event => (
             <li key={`${event.date.format('D')}-${Math.random()}`} className="events__item" />
           ))}
 
@@ -29,13 +30,23 @@ export default class Day extends Component {
   };
 
   render() {
-    const { day, selected, disabled } = this.props;
+    const {
+      day, selected, disabled, events,
+    } = this.props;
 
-    const classes = classnames('day', { 'day--selected': selected }, { 'day--disabled': disabled });
+    const classes = classnames(
+      'day',
+      { 'day--selected--without-events': selected && !events.length },
+      { 'day--selected--with-events': selected && !!events.length },
+      { 'day--disabled': disabled },
+      `day--date--${day.format('YYYY-MM-DD')}`,
+    );
 
     return (
       <button className={classes} type="button" onClick={this.onSelect}>
-        {day.format('D')}
+        <span className="day__border">
+          {day.format('D')}
+        </span>
         {this.getDots()}
 
         <style jsx>{dayStyles}</style>

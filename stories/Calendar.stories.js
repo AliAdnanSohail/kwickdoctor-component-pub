@@ -2,7 +2,7 @@ import React from 'react';
 import moment from 'moment';
 import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
-import { withKnobs } from '@storybook/addon-knobs/react';
+import { withKnobs, boolean } from '@storybook/addon-knobs/react';
 import { checkA11y } from '@storybook/addon-a11y';
 import { withTests } from '@storybook/addon-jest';
 
@@ -22,10 +22,20 @@ storiesOf('Calendar', module)
         { date: moment(), name: 'event' },
         { date: moment(), name: 'event' },
         { date: moment(), name: 'event' },
+        { date: moment(), name: 'event' },
+        { date: moment(), name: 'event' },
         { date: moment().add(1, 'day'), name: 'event' },
         { date: moment().add(1, 'day'), name: 'event' },
-        { date: moment().add(5, 'day'), name: 'event' },
+        { date: moment().add(1, 'day'), name: 'event' },
+        { date: moment().add(1, 'day'), name: 'event' },
+        { date: moment().add(2, 'day'), name: 'event' },
+        { date: moment().add(2, 'day'), name: 'event' },
+        { date: moment().add(2, 'day'), name: 'event' },
+        { date: moment().add(3, 'day'), name: 'event' },
+        { date: moment().add(3, 'day'), name: 'event' },
+        { date: moment().add(4, 'day'), name: 'event' },
       ]}
       onSelect={action('onSelect')}
+      hasEvents={boolean('has events', false)}
     />
   ));

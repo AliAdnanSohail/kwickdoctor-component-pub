@@ -1,11 +1,11 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
-import { withKnobs, text, boolean } from '@storybook/addon-knobs/react';
+import { withKnobs, text, boolean, number } from '@storybook/addon-knobs/react';
 import { checkA11y } from '@storybook/addon-a11y';
 import { withTests } from '@storybook/addon-jest';
 
-import { Toast } from '../src';
+import { Button, Toast, ToastManager } from '../src';
 import results from '../.jest-test-results.json';
 
 storiesOf('Toast', module)
@@ -13,6 +13,20 @@ storiesOf('Toast', module)
   .addDecorator(checkA11y)
   .addDecorator(withTests({ results })('Toast'))
   .addDecorator(getStory => <div style={{ padding: '24px' }}>{getStory()}</div>)
-  .add('simple toast', () => (
-    <Toast primary={boolean('primary', false)} />
+  .add('default', () => (
+    <Fragment>
+      <Button
+        onClick={() => {
+          ToastManager.create({
+            content: <div>{text('content', 'test')}</div>,
+            primary: boolean('primary', false),
+            onHideClick: action('onHideClick'),
+            timeOut: number('timeOut', 5000),
+          });
+        }}
+      >
+        Create toast
+      </Button>
+      <Toast />
+    </Fragment>
   ));
