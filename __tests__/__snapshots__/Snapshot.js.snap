@@ -404,7 +404,7 @@ exports[`Storyshots Calendar default 1`] = `
         className="jsx-3270423735"
       >
         <button
-          className="jsx-1990659263 day day--selected--without-events day--date--2018-04-11"
+          className="jsx-1990659263 day day--disabled day--date--2018-04-11"
           onClick={[Function]}
           type="button"
         >
@@ -419,7 +419,7 @@ exports[`Storyshots Calendar default 1`] = `
         className="jsx-3270423735"
       >
         <button
-          className="jsx-1990659263 day day--date--2018-04-12"
+          className="jsx-1990659263 day day--disabled day--date--2018-04-12"
           onClick={[Function]}
           type="button"
         >
@@ -434,7 +434,7 @@ exports[`Storyshots Calendar default 1`] = `
         className="jsx-3270423735"
       >
         <button
-          className="jsx-1990659263 day day--date--2018-04-13"
+          className="jsx-1990659263 day day--selected--without-events day--date--2018-04-13"
           onClick={[Function]}
           type="button"
         >
@@ -931,7 +931,7 @@ exports[`Storyshots Date Picker defauld 1`] = `
               tabIndex={undefined}
               title={undefined}
               type="text"
-              value="11 Apr, 2018"
+              value="13 Apr, 2018"
             />
           </div>
         </div>
@@ -1019,6 +1019,61 @@ exports[`Storyshots File Input default 1`] = `
 </div>
 `;
 
+exports[`Storyshots Form Fields Autocomplete 1`] = `
+<div
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
+>
+  <div
+    className="jsx-1685083184 jsx-4038665278 jsx-2881818901 form-field"
+  >
+    <label
+      className="jsx-1685083184 jsx-4038665278 jsx-2881818901"
+      htmlFor="autocomplete"
+    >
+      Label
+    </label>
+    <div
+      className="jsx-1685083184 jsx-4038665278 jsx-2881818901 autocomplete"
+      onFocus={[Function]}
+      role="textbox"
+      tabIndex={0}
+    >
+      <div
+        className="jsx-1685083184 jsx-4038665278 jsx-2881818901 autocomplete__input"
+      >
+        <input
+          className="jsx-1685083184 jsx-4038665278 jsx-2881818901"
+          id="autocomplete"
+          onBlur={[Function]}
+          onChange={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          placeholder="Start typing"
+          type="text"
+          value=""
+        />
+      </div>
+    </div>
+    <style>
+      .autocomplete{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;position:relative;padding:5px;width:100%;min-width:100%;max-width:100%;min-height:48px;background-color:#ffffff;box-sizing:border-box;border-width:2px;border-style:solid;border-color:#E7E7F0;border-radius:4px;}
+      .autocomplete.focused,.autocomplete:focus{outline:none;border-color:#0c97f9;}
+      .autocomplete.invalid,.autocomplete.invalid:focus{border-color:#FF5572;}
+      .autocomplete__input{position:relative;margin:5px 11px;}
+      .autocomplete__input input{line-height:24px;background:transparent;border:none;border-radius:inherit;font-style:normal;font-weight:normal;font-size:0.875rem;}
+      .autocomplete__input input::-webkit-input-placeholder{color:#828393;}
+      .autocomplete__input input::-moz-placeholder{color:#828393;}
+      .autocomplete__input input:-ms-input-placeholder{color:#828393;}
+      .autocomplete__input input:-moz-placeholder{color:#828393;}
+      .autocomplete__input input:focus{outline:none;}
+    </style>
+  </div>
+</div>
+`;
+
 exports[`Storyshots Form Fields Input 1`] = `
 <div
   style={
@@ -1066,70 +1121,53 @@ exports[`Storyshots Form Fields RadioButtonGroup 1`] = `
   }
 >
   <div
-    className="form-field"
+    className="jsx-1685083184 jsx-4038665278 jsx-2881818901 jsx-904933394 jsx-1324491324 form-field"
   >
-    <fieldset>
-      <legend>
+    <fieldset
+      className="jsx-1685083184 jsx-4038665278 jsx-2881818901 jsx-904933394 jsx-1324491324"
+    >
+      <legend
+        className="jsx-1685083184 jsx-4038665278 jsx-2881818901 jsx-904933394 jsx-1324491324"
+      >
         Label
       </legend>
       <label
-        className="radio-button radio-button--active"
+        className="jsx-1685083184 jsx-4038665278 jsx-2881818901 jsx-904933394 jsx-1324491324 radio-button radio-button--active"
       >
         male
         <input
+          className="jsx-1685083184 jsx-4038665278 jsx-2881818901 jsx-904933394 jsx-1324491324 "
           defaultChecked={true}
           name="Gender"
-          onChange={undefined}
           type="radio"
           value="male"
         />
       </label>
       <label
-        className="radio-button"
+        className="jsx-1685083184 jsx-4038665278 jsx-2881818901 jsx-904933394 jsx-1324491324 radio-button"
       >
         any
         <input
+          className="jsx-1685083184 jsx-4038665278 jsx-2881818901 jsx-904933394 jsx-1324491324 "
           defaultChecked={false}
           name="Gender"
-          onChange={undefined}
           type="radio"
           value="any"
         />
       </label>
       <label
-        className="radio-button"
+        className="jsx-1685083184 jsx-4038665278 jsx-2881818901 jsx-904933394 jsx-1324491324 radio-button"
       >
         female
         <input
+          className="jsx-1685083184 jsx-4038665278 jsx-2881818901 jsx-904933394 jsx-1324491324 "
           defaultChecked={false}
           name="Gender"
-          onChange={undefined}
           type="radio"
           value="female"
         />
       </label>
     </fieldset>
-    <style>
-      .radio-button{display:inline-block;position:relative;padding:12px 34px;margin-right:-2px;box-sizing:border-box;cursor:pointer;color:#2A2A30;-webkit-transition:all 0.3s ease-in-out;transition:all 0.3s ease-in-out;font-style:normal;font-weight:normal;font-size:0.875rem;text-align:center;text-transform:uppercase;border-width:2px;border-style:solid;border-color:#0c97f9;border-radius:0;}
-      .radio-button:nth-child(2){border-top-left-radius:26px;border-bottom-left-radius:26px;}
-      .radio-button:last-child{border-top-right-radius:26px;border-bottom-right-radius:26px;}
-      .radio-button--active{color:#ffffff;background-color:#0c97f9;}
-      .radio-button input[type='radio']{position:absolute !important;-webkit-clip:rect(1px 1px 1px 1px);clip:rect(1px 1px 1px 1px);-webkit-clip:rect(1px,1px,1px,1px);clip:rect(1px,1px,1px,1px);padding:0 !important;border:0 !important;height:1px !important;width:1px !important;overflow:hidden;}
-    </style>
-    <style>
-      fieldset{margin:0;border:none;}
-      fieldset label{margin:0;}
-    </style>
-    <style>
-      .form-field{position:relative;}
-    </style>
-    <style>
-      label,legend{color:#2A2A30;display:inline-block;margin-bottom:6px;font-weight:500;font-size:1rem;}
-    </style>
-    <style>
-      .error{position:absolute;left:16px;width:auto;max-width:calc(100% - 32px);box-sizing:border-box;word-wrap:break-word;padding:12px 16px;margin-top:-6px;border-radius:3px;background-color:#ffffff;box-shadow:0 2px 40px 0 rgba(0,0,0,0.05);color:#FF5572;z-index:999;font-size:0.875rem;font-weight:500;}
-      .error:before{content:'';position:absolute;top:0;left:32px;width:0;height:0;-webkit-transform-origin:0 0;-ms-transform-origin:0 0;transform-origin:0 0;-webkit-transform:rotate(135deg);-ms-transform:rotate(135deg);transform:rotate(135deg);box-sizing:border-box;box-shadow:-4px 4px 14px 0 rgba(0,0,0,0.05);border-width:6px;border-style:solid;border-color:transparent transparent #ffffff #ffffff;}
-    </style>
   </div>
 </div>
 `;
@@ -1152,10 +1190,10 @@ exports[`Storyshots Form Fields Select 1`] = `
       Label
     </label>
     <div
-      className="select-container"
+      className="jsx-792907225 select-container"
     >
       <select
-        className=""
+        className="jsx-792907225 "
         id={undefined}
         name="Name"
         placeholder={undefined}
@@ -1163,21 +1201,25 @@ exports[`Storyshots Form Fields Select 1`] = `
         value={undefined}
       >
         <option
+          className="jsx-792907225"
           value="one"
         >
           one
         </option>
         <option
+          className="jsx-792907225"
           value="two"
         >
           two
         </option>
         <option
+          className="jsx-792907225"
           value="three"
         >
           three
         </option>
         <option
+          className="jsx-792907225"
           value="four"
         >
           four
@@ -1209,12 +1251,6 @@ exports[`Storyshots Form Fields Select 1`] = `
       input:-moz-placeholder,textarea:-moz-placeholder,select:-moz-placeholder{color:#828393;}
       input:focus,textarea:focus,select:focus{outline:none;padding:12px 16px;border-color:#0c97f9;}
       input.invalid,input.invalid:focus,textarea.invalid,textarea.invalid:focus,select.invalid,select.invalid:focus{border-color:#FF5572;}
-    </style>
-    <style>
-      .select-container{position:relative;}
-      .select-container select{padding-right:30px;}
-      .select-container svg{position:absolute;right:15px;top:calc(50% - 6px);height:12px;width:12px;fill:#E7E7F0;stroke:#E7E7F0;}
-      .select-container svg polyline{stroke-width:5;}
     </style>
   </div>
 </div>
@@ -1456,141 +1492,6 @@ exports[`Storyshots Stepper Stepper 1`] = `
       </button>
       <br />
       current step 1
-    </div>
-  </div>
-</div>
-`;
-
-exports[`Storyshots Tag Input Tag Input 1`] = `
-<div
-  style={
-    Object {
-      "padding": "24px",
-    }
-  }
->
-  <label
-    className="jsx-4038665278"
-    htmlFor="tag-input-id"
-  >
-    label
-  </label>
-  <div
-    className="jsx-3032076080 tag-input"
-    onClick={[Function]}
-  >
-    <ul
-      className="jsx-3032076080 tag-input__tag-list"
-    >
-      <li
-        className="jsx-4040469366 tag-input__add-existing-tag"
-      >
-        <button
-          className="jsx-4040469366"
-          onClick={[Function]}
-          onKeyDown={[Function]}
-        >
-          <svg
-            aria-label="add"
-            className="grommetux-control-icon grommetux-control-icon-add grommetux-control-icon--responsive"
-            height="24px"
-            role="img"
-            version="1.1"
-            viewBox="0 0 24 24"
-            width="24px"
-          >
-            <path
-              d="M12,22 L12,2 M2,12 L22,12"
-              fill="none"
-              stroke="#000"
-              strokeWidth="2"
-            />
-          </svg>
-          Add existing tag
-        </button>
-      </li>
-      <li
-        className="jsx-1684534872 tag-input__tag"
-      >
-        <span
-          className="jsx-1684534872 tag-input__tag-wrapper"
-        >
-          <span
-            className="jsx-1684534872 tag-input__tag-text"
-          >
-            tag one
-          </span>
-          <button
-            className="jsx-1684534872"
-            onClick={[Function]}
-          >
-            <svg
-              aria-label="close"
-              className="grommetux-control-icon grommetux-control-icon-close grommetux-control-icon--responsive"
-              height="24px"
-              role="img"
-              version="1.1"
-              viewBox="0 0 24 24"
-              width="24px"
-            >
-              <path
-                d="M3,3 L21,21 M3,21 L21,3"
-                fill="none"
-                stroke="#000"
-                strokeWidth="2"
-              />
-            </svg>
-          </button>
-        </span>
-      </li>
-      <li
-        className="jsx-1684534872 tag-input__tag"
-      >
-        <span
-          className="jsx-1684534872 tag-input__tag-wrapper"
-        >
-          <span
-            className="jsx-1684534872 tag-input__tag-text"
-          >
-            tag two
-          </span>
-          <button
-            className="jsx-1684534872"
-            onClick={[Function]}
-          >
-            <svg
-              aria-label="close"
-              className="grommetux-control-icon grommetux-control-icon-close grommetux-control-icon--responsive"
-              height="24px"
-              role="img"
-              version="1.1"
-              viewBox="0 0 24 24"
-              width="24px"
-            >
-              <path
-                d="M3,3 L21,21 M3,21 L21,3"
-                fill="none"
-                stroke="#000"
-                strokeWidth="2"
-              />
-            </svg>
-          </button>
-        </span>
-      </li>
-    </ul>
-    <div
-      className="jsx-3032076080 tag-input__input"
-    >
-      <input
-        className="jsx-3032076080"
-        id="tag-input-id"
-        onBlur={[Function]}
-        onChange={[Function]}
-        onFocus={[Function]}
-        onKeyDown={[Function]}
-        type="text"
-        value=""
-      />
     </div>
   </div>
 </div>

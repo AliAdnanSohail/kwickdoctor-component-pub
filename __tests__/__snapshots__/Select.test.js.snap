@@ -11,10 +11,10 @@ exports[`renders correctly 1`] = `
     Label
   </label>
   <div
-    className="select-container"
+    className="jsx-792907225 select-container"
   >
     <select
-      className=""
+      className="jsx-792907225 "
       id={undefined}
       name="gender"
       placeholder={undefined}
@@ -22,16 +22,19 @@ exports[`renders correctly 1`] = `
       value={undefined}
     >
       <option
+        className="jsx-792907225"
         value="male"
       >
         male
       </option>
       <option
+        className="jsx-792907225"
         value="any"
       >
         any
       </option>
       <option
+        className="jsx-792907225"
         value="female"
       >
         female
@@ -63,12 +66,6 @@ exports[`renders correctly 1`] = `
     input:-moz-placeholder,textarea:-moz-placeholder,select:-moz-placeholder{color:#828393;}
     input:focus,textarea:focus,select:focus{outline:none;padding:12px 16px;border-color:#0c97f9;}
     input.invalid,input.invalid:focus,textarea.invalid,textarea.invalid:focus,select.invalid,select.invalid:focus{border-color:#FF5572;}
-  </style>
-  <style>
-    .select-container{position:relative;}
-    .select-container select{padding-right:30px;}
-    .select-container svg{position:absolute;right:15px;top:calc(50% - 6px);height:12px;width:12px;fill:#E7E7F0;stroke:#E7E7F0;}
-    .select-container svg polyline{stroke-width:5;}
   </style>
 </div>
 `;

@@ -2,7 +2,8 @@ import React, { Fragment } from 'react';
 import { DownIcon } from 'grommet/components/icons/base';
 
 import renderer from '../renderer';
-import { textInput, selectContainer } from '../styles';
+import selectStyles from './styles';
+import { textInput } from '../styles';
 
 export default renderer((input, label, {
   className, id, name, options, placeholder, type, value,
@@ -28,6 +29,6 @@ export default renderer((input, label, {
     </div>
 
     <style>{textInput}</style>
-    <style>{selectContainer}</style>
+    <style jsx>{selectStyles}</style>
   </Fragment>
 ));

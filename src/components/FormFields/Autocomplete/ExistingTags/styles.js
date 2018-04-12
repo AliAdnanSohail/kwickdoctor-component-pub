@@ -3,7 +3,7 @@ import css from 'styled-jsx/css';
 import settings from '../../../utils/style-helper';
 
 export default css`
-  .tag-input__add-existing-tag {
+  .tag--existing {
     display: inline-block;
     padding: 5px;
     max-width: 100%;

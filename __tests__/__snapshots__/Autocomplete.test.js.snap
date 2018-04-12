@@ -1,0 +1,48 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  className="jsx-1685083184 jsx-4038665278 jsx-2881818901 form-field"
+>
+  <label
+    className="jsx-1685083184 jsx-4038665278 jsx-2881818901"
+    htmlFor="autocomplete"
+  >
+    Label
+  </label>
+  <div
+    className="jsx-1685083184 jsx-4038665278 jsx-2881818901 autocomplete"
+    onFocus={[Function]}
+    role="textbox"
+    tabIndex={0}
+  >
+    <div
+      className="jsx-1685083184 jsx-4038665278 jsx-2881818901 autocomplete__input"
+    >
+      <input
+        className="jsx-1685083184 jsx-4038665278 jsx-2881818901"
+        id="autocomplete"
+        onBlur={[Function]}
+        onChange={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        placeholder="Start typing"
+        type="text"
+        value=""
+      />
+    </div>
+  </div>
+  <style>
+    .autocomplete{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;position:relative;padding:5px;width:100%;min-width:100%;max-width:100%;min-height:48px;background-color:#ffffff;box-sizing:border-box;border-width:2px;border-style:solid;border-color:#E7E7F0;border-radius:4px;}
+    .autocomplete.focused,.autocomplete:focus{outline:none;border-color:#0c97f9;}
+    .autocomplete.invalid,.autocomplete.invalid:focus{border-color:#FF5572;}
+    .autocomplete__input{position:relative;margin:5px 11px;}
+    .autocomplete__input input{line-height:24px;background:transparent;border:none;border-radius:inherit;font-style:normal;font-weight:normal;font-size:0.875rem;}
+    .autocomplete__input input::-webkit-input-placeholder{color:#828393;}
+    .autocomplete__input input::-moz-placeholder{color:#828393;}
+    .autocomplete__input input:-ms-input-placeholder{color:#828393;}
+    .autocomplete__input input:-moz-placeholder{color:#828393;}
+    .autocomplete__input input:focus{outline:none;}
+  </style>
+</div>
+`;

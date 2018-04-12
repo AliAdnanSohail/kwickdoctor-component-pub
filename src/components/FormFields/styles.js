@@ -132,106 +132,13 @@ export const textInput = css`
   }
 `;
 
-export const radioButton = css`
-  .radio-button {
-    display: inline-block;
-
-    position: relative;
-
-    padding: 12px 34px;
-    margin-right: -2px;
-
-    box-sizing: border-box;
-
-    cursor: pointer;
-
-    color: ${settings.textColor};
-
-    transition: all 0.3s ease-in-out;
-
-    font: {
-      style: normal;
-      weight: normal;
-      size: 0.875rem;
-    }
-
-    text: {
-      align: center;
-      transform: uppercase;
-    }
-
-    border: {
-      width: 2px;
-      style: solid;
-      color: ${settings.primaryColor};
-      radius: 0;
-    }
-
-    &:nth-child(2) {
-      border: {
-        top-left-radius: 26px;
-        bottom-left-radius: 26px;
-      }
-    }
-
-    &:last-child {
-      border: {
-        top-right-radius: 26px;
-        bottom-right-radius: 26px;
-      }
-    }
-
-    &--active {
-      color: #ffffff;
-      background-color: ${settings.primaryColor};
-    }
-
-    input[type='radio'] {
-      position: absolute !important;
-      clip: rect(1px 1px 1px 1px);
-      clip: rect(1px, 1px, 1px, 1px);
-      padding: 0 !important;
-      border: 0 !important;
-      height: 1px !important;
-      width: 1px !important;
-      overflow: hidden;
-    }
-  }
-`;
-
 export const fieldset = css`
   fieldset {
     margin: 0;
     border: none;
 
     label {
-      margin: 0;
-    }
-  }
-`;
-
-export const selectContainer = css`
-  .select-container {
-    position: relative;
-
-    select {
-      padding-right: 30px;
-    }
-
-    svg {
-      position: absolute;
-      right: 15px;
-      top: calc(50% - 6px);
-
-      height: 12px;
-      width: 12px;
-
-      fill: ${settings.borderColor};
-      stroke: ${settings.borderColor};
-
-      polyline {
-        stroke-width: 5;
-      }
+      margin-bottom: 0;
     }
   }
 `;

@@ -2,69 +2,52 @@
 
 exports[`renders correctly 1`] = `
 <div
-  className="form-field"
+  className="jsx-1685083184 jsx-4038665278 jsx-2881818901 jsx-904933394 jsx-1324491324 form-field"
 >
-  <fieldset>
-    <legend>
+  <fieldset
+    className="jsx-1685083184 jsx-4038665278 jsx-2881818901 jsx-904933394 jsx-1324491324"
+  >
+    <legend
+      className="jsx-1685083184 jsx-4038665278 jsx-2881818901 jsx-904933394 jsx-1324491324"
+    >
       Label
     </legend>
     <label
-      className="radio-button"
+      className="jsx-1685083184 jsx-4038665278 jsx-2881818901 jsx-904933394 jsx-1324491324 radio-button"
     >
       male
       <input
+        className="jsx-1685083184 jsx-4038665278 jsx-2881818901 jsx-904933394 jsx-1324491324 "
         defaultChecked={false}
         name="gender"
-        onChange={undefined}
         type="radio"
         value="male"
       />
     </label>
     <label
-      className="radio-button radio-button--active"
+      className="jsx-1685083184 jsx-4038665278 jsx-2881818901 jsx-904933394 jsx-1324491324 radio-button radio-button--active"
     >
       any
       <input
+        className="jsx-1685083184 jsx-4038665278 jsx-2881818901 jsx-904933394 jsx-1324491324 "
         defaultChecked={true}
         name="gender"
-        onChange={undefined}
         type="radio"
         value="any"
       />
     </label>
     <label
-      className="radio-button"
+      className="jsx-1685083184 jsx-4038665278 jsx-2881818901 jsx-904933394 jsx-1324491324 radio-button"
     >
       female
       <input
+        className="jsx-1685083184 jsx-4038665278 jsx-2881818901 jsx-904933394 jsx-1324491324 "
         defaultChecked={false}
         name="gender"
-        onChange={undefined}
         type="radio"
         value="female"
       />
     </label>
   </fieldset>
-  <style>
-    .radio-button{display:inline-block;position:relative;padding:12px 34px;margin-right:-2px;box-sizing:border-box;cursor:pointer;color:#2A2A30;-webkit-transition:all 0.3s ease-in-out;transition:all 0.3s ease-in-out;font-style:normal;font-weight:normal;font-size:0.875rem;text-align:center;text-transform:uppercase;border-width:2px;border-style:solid;border-color:#0c97f9;border-radius:0;}
-    .radio-button:nth-child(2){border-top-left-radius:26px;border-bottom-left-radius:26px;}
-    .radio-button:last-child{border-top-right-radius:26px;border-bottom-right-radius:26px;}
-    .radio-button--active{color:#ffffff;background-color:#0c97f9;}
-    .radio-button input[type='radio']{position:absolute !important;-webkit-clip:rect(1px 1px 1px 1px);clip:rect(1px 1px 1px 1px);-webkit-clip:rect(1px,1px,1px,1px);clip:rect(1px,1px,1px,1px);padding:0 !important;border:0 !important;height:1px !important;width:1px !important;overflow:hidden;}
-  </style>
-  <style>
-    fieldset{margin:0;border:none;}
-    fieldset label{margin:0;}
-  </style>
-  <style>
-    .form-field{position:relative;}
-  </style>
-  <style>
-    label,legend{color:#2A2A30;display:inline-block;margin-bottom:6px;font-weight:500;font-size:1rem;}
-  </style>
-  <style>
-    .error{position:absolute;left:16px;width:auto;max-width:calc(100% - 32px);box-sizing:border-box;word-wrap:break-word;padding:12px 16px;margin-top:-6px;border-radius:3px;background-color:#ffffff;box-shadow:0 2px 40px 0 rgba(0,0,0,0.05);color:#FF5572;z-index:999;font-size:0.875rem;font-weight:500;}
-    .error:before{content:'';position:absolute;top:0;left:32px;width:0;height:0;-webkit-transform-origin:0 0;-ms-transform-origin:0 0;transform-origin:0 0;-webkit-transform:rotate(135deg);-ms-transform:rotate(135deg);transform:rotate(135deg);box-sizing:border-box;box-shadow:-4px 4px 14px 0 rgba(0,0,0,0.05);border-width:6px;border-style:solid;border-color:transparent transparent #ffffff #ffffff;}
-  </style>
 </div>
 `;
