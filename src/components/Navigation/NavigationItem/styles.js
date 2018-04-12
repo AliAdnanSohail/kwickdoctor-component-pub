@@ -21,6 +21,8 @@ export default css`
     border-radius: 50%;
     box-sizing: border-box;
 
+    transition: all 0.3s ease-in-out;
+
     font: {
       size: 0.75rem;
       weight: bold;
@@ -34,8 +36,13 @@ export default css`
       width: 21px;
       height: 21px;
 
-      fill: #ffffff;
-      stroke: #ffffff;
+      fill: #ffffff !important;
+      stroke: #ffffff !important;
+
+      circle,
+      path {
+        stroke: #ffffff !important;
+      }
     }
 
     &__label {
