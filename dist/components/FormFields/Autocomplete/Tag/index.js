@@ -19,9 +19,7 @@ var _propTypes = require('prop-types');
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
 
-var _Close = require('grommet/components/icons/base/Close');
-
-var _Close2 = _interopRequireDefault(_Close);
+var _base = require('grommet/components/icons/base');
 
 var _styles = require('./styles');
 
@@ -35,8 +33,8 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var Tag = function (_React$Component) {
-  _inherits(Tag, _React$Component);
+var Tag = function (_Component) {
+  _inherits(Tag, _Component);
 
   function Tag() {
     _classCallCheck(this, Tag);
@@ -49,31 +47,26 @@ var Tag = function (_React$Component) {
     value: function render() {
       var _props = this.props,
           name = _props.name,
-          onRemoveClick = _props.onRemoveClick;
+          onRemove = _props.onRemove;
+
 
       return _react2.default.createElement(
-        'li',
+        'div',
         {
-          className: 'jsx-' + _styles2.default.__scopedHash + ' ' + 'tag-input__tag'
+          className: 'jsx-' + _styles2.default.__scopedHash + ' ' + 'tag'
         },
         _react2.default.createElement(
-          'span',
+          'div',
           {
-            className: 'jsx-' + _styles2.default.__scopedHash + ' ' + 'tag-input__tag-wrapper'
+            className: 'jsx-' + _styles2.default.__scopedHash + ' ' + 'tag__text'
           },
-          _react2.default.createElement(
-            'span',
-            {
-              className: 'jsx-' + _styles2.default.__scopedHash + ' ' + 'tag-input__tag-text'
-            },
-            name
-          ),
-          _react2.default.createElement(
-            'button',
-            { onClick: onRemoveClick, className: 'jsx-' + _styles2.default.__scopedHash
-            },
-            _react2.default.createElement(_Close2.default, null)
-          )
+          name
+        ),
+        _react2.default.createElement(
+          'button',
+          { onClick: onRemove, className: 'jsx-' + _styles2.default.__scopedHash + ' ' + 'tag__button'
+          },
+          _react2.default.createElement(_base.CloseIcon, null)
         ),
         _react2.default.createElement(_style2.default, {
           styleId: _styles2.default.__scopedHash,
@@ -84,12 +77,12 @@ var Tag = function (_React$Component) {
   }]);
 
   return Tag;
-}(_react2.default.Component);
+}(_react.Component);
 
 exports.default = Tag;
 
 
 Tag.propTypes = {
   name: _propTypes2.default.string.isRequired,
-  onRemoveClick: _propTypes2.default.func.isRequired
+  onRemove: _propTypes2.default.func.isRequired
 };

@@ -23,7 +23,7 @@ var _Add = require('grommet/components/icons/base/Add');
 
 var _Add2 = _interopRequireDefault(_Add);
 
-var _keys = require('./../keys');
+var _keys = require('../../../utils/keys');
 
 var _keys2 = _interopRequireDefault(_keys);
 
@@ -142,7 +142,7 @@ var ExistingTags = function (_React$Component) {
         _react2.default.createElement(_Suggestions2.default, {
           isFocused: isFocused,
           selected: selectedIndex,
-          handleClick: handleClick,
+          onClick: handleClick,
           items: existingTags
         }),
         _react2.default.createElement(_style2.default, {

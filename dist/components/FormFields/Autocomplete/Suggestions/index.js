@@ -19,13 +19,7 @@ var _propTypes = require('prop-types');
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
 
-var _classnames = require('classnames');
-
-var _classnames2 = _interopRequireDefault(_classnames);
-
 var _styles = require('./styles');
-
-var _styles2 = _interopRequireDefault(_styles);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -35,8 +29,8 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var Suggestions = function (_React$Component) {
-  _inherits(Suggestions, _React$Component);
+var Suggestions = function (_Component) {
+  _inherits(Suggestions, _Component);
 
   function Suggestions() {
     var _ref;
@@ -52,34 +46,29 @@ var Suggestions = function (_React$Component) {
     return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Suggestions.__proto__ || Object.getPrototypeOf(Suggestions)).call.apply(_ref, [this].concat(args))), _this), _this.renderSuggestions = function () {
       var _this$props = _this.props,
           items = _this$props.items,
-          handleClick = _this$props.handleClick,
-          selected = _this$props.selected;
+          onClick = _this$props.onClick;
 
 
       return items.map(function (suggestion, index) {
         return _react2.default.createElement(
           'li',
-          {
-            ref: function ref(li) {
-              if (index === selected) {
-                _this.selectedElement = li;
-              }
-            },
-
-            key: suggestion,
-            className: 'jsx-' + _styles2.default.__scopedHash + ' ' + ((0, _classnames2.default)('tag-input__suggestion', { 'tag-input__suggestion--selected': index === selected }) || '')
+          { key: suggestion, className: 'jsx-' + _styles.suggestion.__scopedHash + ' ' + 'suggestion'
           },
           _react2.default.createElement(
             'button',
-            { onMouseDown: function onMouseDown() {
-                handleClick(index);
-              }, className: 'jsx-' + _styles2.default.__scopedHash
+            {
+              onMouseDown: function onMouseDown(event) {
+                event.stopPropagation();
+
+                onClick(suggestion, index);
+              },
+              className: 'jsx-' + _styles.suggestion.__scopedHash
             },
             suggestion
           ),
           _react2.default.createElement(_style2.default, {
-            styleId: _styles2.default.__scopedHash,
-            css: _styles2.default.__scoped
+            styleId: _styles.suggestion.__scopedHash,
+            css: _styles.suggestion.__scoped
           })
         );
       });
@@ -87,57 +76,39 @@ var Suggestions = function (_React$Component) {
   }
 
   _createClass(Suggestions, [{
-    key: 'componentDidUpdate',
-    value: function componentDidUpdate(prevProps) {
-      var _props = this.props,
-          items = _props.items,
-          isFocused = _props.isFocused,
-          selected = _props.selected;
-
-      if (selected !== -1 && prevProps.selected !== selected && isFocused && items.length) {
-        this.wrapperElement.scrollTo(0, this.selectedElement.offsetTop);
-      }
-    }
-  }, {
     key: 'render',
     value: function render() {
-      var _this2 = this;
-
-      var _props2 = this.props,
-          items = _props2.items,
-          isFocused = _props2.isFocused;
+      var _props = this.props,
+          items = _props.items,
+          active = _props.active;
 
 
-      return !!items.length && isFocused && _react2.default.createElement(
-        'div',
-        {
-          className: 'jsx-' + _styles2.default.__scopedHash + ' ' + 'tag-input__suggestions'
-        },
+      return !!items.length && active && _react2.default.createElement(
+        _react.Fragment,
+        null,
         _react2.default.createElement(
           'ul',
-          { ref: function ref(ul) {
-              _this2.wrapperElement = ul;
-            }, className: 'jsx-' + _styles2.default.__scopedHash + ' ' + 'tag-input__suggestions-list'
+          {
+            className: 'jsx-' + _styles.suggestions.__scopedHash + ' ' + 'suggestions'
           },
           this.renderSuggestions()
         ),
         _react2.default.createElement(_style2.default, {
-          styleId: _styles2.default.__scopedHash,
-          css: _styles2.default.__scoped
+          styleId: _styles.suggestions.__scopedHash,
+          css: _styles.suggestions.__scoped
         })
       );
     }
   }]);
 
   return Suggestions;
-}(_react2.default.Component);
+}(_react.Component);
 
 exports.default = Suggestions;
 
 
 Suggestions.propTypes = {
+  active: _propTypes2.default.bool.isRequired,
   items: _propTypes2.default.array.isRequired,
-  handleClick: _propTypes2.default.func.isRequired,
-  isFocused: _propTypes2.default.bool.isRequired,
-  selected: _propTypes2.default.number.isRequired
+  onClick: _propTypes2.default.func.isRequired
 };

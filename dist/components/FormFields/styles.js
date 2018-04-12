@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.selectContainer = exports.fieldset = exports.radioButton = exports.textInput = exports.label = exports.error = undefined;
+exports.fieldset = exports.textInput = exports.label = exports.error = undefined;
 
 var _styleHelper = require('../../utils/style-helper');
 
@@ -31,17 +31,7 @@ var textInput = exports.textInput = ['input,textarea,select{width:100%;min-width
 textInput.__hash = '279718968';
 textInput.__scoped = ['input.jsx-3428902777,textarea.jsx-3428902777,select.jsx-3428902777{width:100%;min-width:100%;max-width:100%;min-height:44px;padding:12px 16px;background-color:#ffffff;color:' + _styleHelper2.default.textColor + ';box-sizing:border-box;-webkit-appearance:none;font-style:normal;font-weight:normal;font-size:0.875rem;border-width:2px;border-style:solid;border-color:' + _styleHelper2.default.borderColor + ';border-radius:4px;}', 'input.jsx-3428902777::-webkit-input-placeholder,textarea.jsx-3428902777::-webkit-input-placeholder,select.jsx-3428902777::-webkit-input-placeholder{color:' + _styleHelper2.default.placeholderColor + ';}', 'input.jsx-3428902777::-moz-placeholder,textarea.jsx-3428902777::-moz-placeholder,select.jsx-3428902777::-moz-placeholder{color:' + _styleHelper2.default.placeholderColor + ';}', 'input.jsx-3428902777:-ms-input-placeholder,textarea.jsx-3428902777:-ms-input-placeholder,select.jsx-3428902777:-ms-input-placeholder{color:' + _styleHelper2.default.placeholderColor + ';}', 'input.jsx-3428902777:-moz-placeholder,textarea.jsx-3428902777:-moz-placeholder,select.jsx-3428902777:-moz-placeholder{color:' + _styleHelper2.default.placeholderColor + ';}', 'input.jsx-3428902777:focus,textarea.jsx-3428902777:focus,select.jsx-3428902777:focus{outline:none;padding:12px 16px;border-color:' + _styleHelper2.default.primaryColor + ';}', 'input.invalid.jsx-3428902777,input.invalid.jsx-3428902777:focus,textarea.invalid.jsx-3428902777,textarea.invalid.jsx-3428902777:focus,select.invalid.jsx-3428902777,select.invalid.jsx-3428902777:focus{border-color:' + _styleHelper2.default.errorColor + ';}'];
 textInput.__scopedHash = '3428902777';
-var radioButton = exports.radioButton = ['.radio-button{display:inline-block;position:relative;padding:12px 34px;margin-right:-2px;box-sizing:border-box;cursor:pointer;color:' + _styleHelper2.default.textColor + ';-webkit-transition:all 0.3s ease-in-out;transition:all 0.3s ease-in-out;font-style:normal;font-weight:normal;font-size:0.875rem;text-align:center;text-transform:uppercase;border-width:2px;border-style:solid;border-color:' + _styleHelper2.default.primaryColor + ';border-radius:0;}', '.radio-button:nth-child(2){border-top-left-radius:26px;border-bottom-left-radius:26px;}', '.radio-button:last-child{border-top-right-radius:26px;border-bottom-right-radius:26px;}', '.radio-button--active{color:#ffffff;background-color:' + _styleHelper2.default.primaryColor + ';}', '.radio-button input[type=\'radio\']{position:absolute !important;-webkit-clip:rect(1px 1px 1px 1px);clip:rect(1px 1px 1px 1px);-webkit-clip:rect(1px,1px,1px,1px);clip:rect(1px,1px,1px,1px);padding:0 !important;border:0 !important;height:1px !important;width:1px !important;overflow:hidden;}'];
-
-radioButton.__hash = '1477559677';
-radioButton.__scoped = ['.radio-button.jsx-1324491324{display:inline-block;position:relative;padding:12px 34px;margin-right:-2px;box-sizing:border-box;cursor:pointer;color:' + _styleHelper2.default.textColor + ';-webkit-transition:all 0.3s ease-in-out;transition:all 0.3s ease-in-out;font-style:normal;font-weight:normal;font-size:0.875rem;text-align:center;text-transform:uppercase;border-width:2px;border-style:solid;border-color:' + _styleHelper2.default.primaryColor + ';border-radius:0;}', '.radio-button.jsx-1324491324:nth-child(2){border-top-left-radius:26px;border-bottom-left-radius:26px;}', '.radio-button.jsx-1324491324:last-child{border-top-right-radius:26px;border-bottom-right-radius:26px;}', '.radio-button--active.jsx-1324491324{color:#ffffff;background-color:' + _styleHelper2.default.primaryColor + ';}', '.radio-button.jsx-1324491324 input[type=\'radio\'].jsx-1324491324{position:absolute !important;-webkit-clip:rect(1px 1px 1px 1px);clip:rect(1px 1px 1px 1px);-webkit-clip:rect(1px,1px,1px,1px);clip:rect(1px,1px,1px,1px);padding:0 !important;border:0 !important;height:1px !important;width:1px !important;overflow:hidden;}'];
-radioButton.__scopedHash = '1324491324';
-var fieldset = exports.fieldset = ['fieldset{margin:0;border:none;}', 'fieldset label{margin:0;}'];
-
-fieldset.__hash = '1146484181';
-fieldset.__scoped = ['fieldset.jsx-3529046484{margin:0;border:none;}', 'fieldset.jsx-3529046484 label.jsx-3529046484{margin:0;}'];
-fieldset.__scopedHash = '3529046484';
-var selectContainer = exports.selectContainer = ['.select-container{position:relative;}', '.select-container select{padding-right:30px;}', '.select-container svg{position:absolute;right:15px;top:calc(50% - 6px);height:12px;width:12px;fill:' + _styleHelper2.default.borderColor + ';stroke:' + _styleHelper2.default.borderColor + ';}', '.select-container svg polyline{stroke-width:5;}'];
-selectContainer.__hash = '1266106455';
-selectContainer.__scoped = ['.select-container.jsx-2506051670{position:relative;}', '.select-container.jsx-2506051670 select.jsx-2506051670{padding-right:30px;}', '.select-container.jsx-2506051670 svg.jsx-2506051670{position:absolute;right:15px;top:calc(50% - 6px);height:12px;width:12px;fill:' + _styleHelper2.default.borderColor + ';stroke:' + _styleHelper2.default.borderColor + ';}', '.select-container.jsx-2506051670 svg.jsx-2506051670 polyline.jsx-2506051670{stroke-width:5;}'];
-selectContainer.__scopedHash = '2506051670';
+var fieldset = exports.fieldset = ['fieldset{margin:0;border:none;}', 'fieldset label{margin-bottom:0;}'];
+fieldset.__hash = '977507091';
+fieldset.__scoped = ['fieldset.jsx-904933394{margin:0;border:none;}', 'fieldset.jsx-904933394 label.jsx-904933394{margin-bottom:0;}'];
+fieldset.__scopedHash = '904933394';

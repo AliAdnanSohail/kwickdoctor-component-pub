@@ -40,4 +40,16 @@ Object.defineProperty(exports, 'TextArea', {
   }
 });
 
+var _Autocomplete = require('./Autocomplete');
+
+Object.keys(_Autocomplete).forEach(function (key) {
+  if (key === "default" || key === "__esModule") return;
+  Object.defineProperty(exports, key, {
+    enumerable: true,
+    get: function get() {
+      return _Autocomplete[key];
+    }
+  });
+});
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }

@@ -67,30 +67,12 @@ Object.defineProperty(exports, 'FileInput', {
   }
 });
 
-var _Form = require('./Form');
-
-Object.defineProperty(exports, 'Form', {
-  enumerable: true,
-  get: function get() {
-    return _interopRequireDefault(_Form).default;
-  }
-});
-
 var _Modal = require('./Modal');
 
 Object.defineProperty(exports, 'Modal', {
   enumerable: true,
   get: function get() {
     return _interopRequireDefault(_Modal).default;
-  }
-});
-
-var _TagInput = require('./TagInput');
-
-Object.defineProperty(exports, 'TagInput', {
-  enumerable: true,
-  get: function get() {
-    return _interopRequireDefault(_TagInput).default;
   }
 });
 
