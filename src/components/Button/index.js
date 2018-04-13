@@ -120,7 +120,7 @@ export default class Button extends Component {
 Button.propTypes = {
   children: PropTypes.any,
   icon: PropTypes.element,
-  size: PropTypes.string,
+  size: PropTypes.oneOf(['s', 'xs', '']),
   accent: PropTypes.bool,
   danger: PropTypes.bool,
   disabled: PropTypes.bool,

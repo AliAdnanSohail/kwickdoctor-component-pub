@@ -23,7 +23,7 @@ storiesOf('Button', module)
       flat={boolean('flat', false)}
       loading={boolean('loading', false)}
       rounded={boolean('rounded', false)}
-      size={text('size', 'normal')}
+      size={text('size', '')}
       squared={boolean('squared', false)}
       transparent={boolean('transparent', false)}
       onClick={action('clicked')}

@@ -121,7 +121,7 @@ exports[`Storyshots Button default 1`] = `
   }
 >
   <button
-    className="jsx-3114291467 button button--normal"
+    className="jsx-3114291467 button button--"
     disabled={false}
     onClick={[Function]}
   >
