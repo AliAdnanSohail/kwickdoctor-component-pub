@@ -20,10 +20,11 @@ export default class RecordButton extends Component {
 
   render() {
     return (
-      <button className="record_button" onClick={this.changeStyle}>
-        <div className={this.state.recordStarted ? 'square' : 'circle'} />
+      <div className="playpause">
+        <input type="checkbox" value="None" id="playpause" name="check" />
+        <label htmlFor="playpause" tabIndex={1} />
         <style>{styles}</style>
-      </button>
+      </div>
     );
   }
 }

@@ -18,7 +18,6 @@ export default css`
   display: flex;
   justify-content: center;
   width: 100%;
-  
 }
 
 p.borderBelow {
@@ -26,9 +25,6 @@ p.borderBelow {
   padding: 0 0 20px 0;
 }
 
-video {
-
-}
 @media screen and (max-width: 500px) {
   button {
     font-size: 0.8em;

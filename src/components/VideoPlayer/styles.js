@@ -3,8 +3,20 @@ import css from 'styled-jsx/css';
 import settings from '../../utils/style-helper';
 
 export default css`
+
 .videoPlayer_container{
   position: absolute;
+}
+
+.videoPlayer_controls{
+  position: absolute;
+  bottom: 20px;
+  height: 40px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  z-index: 2147483647;
 }
 
 button {
@@ -14,23 +26,17 @@ button {
   width: 99px;
 }
 
-button:last-of-type {
-  margin: 0;
-}
 
 
 video {
-  height: 40%;
+  height: 100%;
   vertical-align: top;
-  width: calc(40em - 10px);
+  z-index: 0;
+
 }
-
-
-video:last-of-type {
-  margin: 0 0 20px 0;
+video::-webkit-media-controls-enclosure {
+  display:none !important;
 }
-
-
 
 @media screen and (max-width: 500px) {
   button {

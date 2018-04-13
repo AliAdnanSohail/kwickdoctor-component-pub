@@ -1,11 +1,11 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import classnames from 'classnames';
 import css from 'styled-jsx/css';
 
 import styles from './styles';
-import Slider from './slider';
 import Recorder from './recorder';
-import RecordButton from './buttons';
+import RecordButton from './RecordButton';
+import VideoPlayer from '../VideoPlayer/';
 
 export default class VideoRecorder extends Component {
   constructor(props) {
@@ -13,8 +13,6 @@ export default class VideoRecorder extends Component {
     this.recorder = new Recorder();
     this.state = {
       playingVideo: false,
-      videoDuration: 0,
-      currentTime: 0,
     };
   }
   getVideoRef = (video) => {
@@ -29,51 +27,43 @@ export default class VideoRecorder extends Component {
     this.videoRef.srcObject = stream;
   }
 
-  checkRecordedVideo = () => this.recorder.hasVideoRecorded;
-
-  getVideoControls = () => {
-    if (this.hasVideoRecorded) {
-      return (
-        <Slider
-          value={this.state.videoProgress}
-          onChange={(event) => { this.setVideoProgress(event.target.value); }}
-          onmousedown={() => this.video.pause()}
-          onmouseup={() => this.video.play()}
-        />
-      );
-    }
-
-    return (<RecordButton click={this.recorder.toggleRecording} />);
+  createRecordedVideoUrl = () => {
+    const superBuffer = new Blob(this.recorder.recordedBlobs, { type: 'video/webm' });
+    this.setState({
+      videoUrl: window.URL.createObjectURL(superBuffer),
+      playingVideo: !this.state.playingVideo,
+      hasVideoRecorded: true,
+    });
   }
 
-  playRecordedVideo = () => {
-    this.setState({ playingVideo: !this.state.playingVideo });
-    const superBuffer = new Blob(this.recordedBlobs, { type: 'video/webm' });
-    this.videoRef.src = window.URL.createObjectURL(superBuffer);
-    this.videoRef.autoplay = true;
-    this.videoRef.loop = true;
-    this.videoRef.mute = false;
-    this.videoRef.ontimeupdate = () => {
-      this.setState({ currentTime: this.videoRef.currentTime });
-    };
+  toggleRecording =() => {
+    this.recorder.toggleRecording();
+    if (this.recorder.hasVideoRecorded) {
+      this.createRecordedVideoUrl();
+    }
+  }
+
+  renderVideo = () => {
+    if (!this.state.hasVideoRecorded) {
+      return (
+        <div className="video_container">
+          <video
+            autoPlay
+            muted
+            loop
+            ref={this.getVideoRef}
+          />
+          <div className="video_controls">
+            <RecordButton click={this.toggleRecording} />
+          </div>
+          <style>{styles}</style>
+        </div>);
+    }
+    return (<VideoPlayer src={this.state.videoUrl} />);
   }
 
   render() {
-    this.checkRecordedVideo();
-    return (
-      <div className="video_container">
-        <video
-          autoPlay
-          muted
-          loop
-          ref={this.getVideoRef}
-        />
-        <div className="video_controls">
-          {this.getVideoControls()}
-        </div>
-        <style>{styles}</style>
-      </div>
-    );
+    return this.renderVideo();
   }
 }
 

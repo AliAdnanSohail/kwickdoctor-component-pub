@@ -1,36 +1,49 @@
-import React, { Component, Fragment } from 'react';
+import 'rc-slider/assets/index.css';
+import React, { Component } from 'react';
+import Slider from 'rc-slider';
 import PropTypes from 'prop-types';
-import classnames from 'classnames';
-import css from 'styled-jsx/css';
 
 
-import styles from './styles';
-
-export default class Slider extends Component {
+export default class VideoSlider extends Component {
   constructor(props) {
     super(props);
-    this.state = { value: props.value };
-    console.log(props);
+    this.wrapperStyle = { width: this.props.width || '60%' };
   }
 
-
   render() {
+  // this.getMediaDevices();
     return (
-      <div className="slidecontainer">
-        <input
-          type="range"
-          min="1"
-          max="100"
-          value={this.props.value}
-          className="slider"
+      <div style={this.wrapperStyle}>
+        <Slider
+          min={this.props.min}
+          max={this.props.max}
           onChange={this.props.onChange}
-          onMouseDown={() => this.props.onMousedown()}
+          value={this.props.value}
+          trackStyle={{ backgroundColor: '#bfdef2' }}
+          handleStyle={{
+            borderColor: '#bfdef2',
+            backgroundColor: '#dee9ef',
+          }}
 
-          onMouseUp={() => this.props.onMouseup()}
+          railStyle={{ backgroundColor: '#dee9ef' }}
         />
-        <style>{styles}</style>
       </div>
     );
   }
 }
+
+VideoSlider.propTypes = {
+  value: PropTypes.number.isRequired,
+  onChange: PropTypes.func.isRequired,
+  min: PropTypes.number,
+  max: PropTypes.number,
+  width: PropTypes.string,
+};
+
+
+VideoSlider.defaultProps = {
+  min: 0,
+  max: 100,
+  width: '60%',
+};
 

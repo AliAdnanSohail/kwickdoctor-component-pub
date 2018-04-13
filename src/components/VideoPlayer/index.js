@@ -1,39 +1,34 @@
-import React, { Component } from 'react';
-
-import css from 'styled-jsx/css';
+import React, { Component, Fragment } from 'react';
 import classnames from 'classnames';
-import RecordButton from './buttons/';
-import Slider from './slider';
+import PropTypes from 'prop-types';
+import css from 'styled-jsx/css';
+
+import Slider from './Slider';
+import FullScreenButton from './FullScreenButton';
+import PlayPauseButton from './PlayPauseButton';
 import styles from './styles';
 
-export default class Video extends Component {
+export default class VideoPlayer extends Component {
   constructor(props) {
     super(props);
     this.state = {
       playingVideo: false,
       videoProgress: 0,
     };
+    this.checkFullScreenSupport();
   }
 
   getVideoRef = (video) => {
     this.videoRef = video;
-    console.log('getVideoSource');
-    this.getVideoSource();
+    this.initVideo();
   }
-
-  getVideoSource = () => {
-    console.log('getVideoSource');
-    this.playVideo();
-  }
-
 
     setVideoProgress = (progress) => {
       if (this.videoRef) {
         const time = Math.round((progress / 100) * this.videoRef.duration);
-        this.videoRef.currentTime = time;
-        // this.videoRef.oncanplay = () => {
-        //   delete this.videoRef.oncanplay;
-        // };
+        if (this.videoRef.currentTime !== time) {
+          this.videoRef.currentTime = time;
+        }
       }
     }
 
@@ -48,54 +43,110 @@ export default class Video extends Component {
 
     initVideo = () => {
       if (this.videoRef) {
-        this.videoRef.play();
+        this.setState({ playingVideo: !this.state.playingVideo });
         this.videoRef.loop = true;
-        // this.videoRef.muted = true;
+        this.videoRef.muted = true;
+        console.log(this.videoRef.duration);
         this.videoRef.ontimeupdate = this.calcVideoProgress;
+        this.playPromise = this.videoRef.play();
       }
     }
 
-    playVideo = () => {
-      console.log('play');
-      this.setState({ playingVideo: !this.state.playingVideo });
-      this.initVideo();
-    }
-
     pauseVideo = () => {
-      console.log('pauseVideo');
-      this.videoRef.pause();
-    }
-    playVideos = () => {
-      this.setVideoProgress(this.state.videoProgress);
-      this.videoRef.play();
+      if (this.playPromise !== undefined) {
+        this.playPromise.then(() => {
+          this.videoRef.pause();
+        }).catch((error) => {
+          console.error(error);
+        });
+      }
     }
 
-    render() {
+    checkFullScreenSupport = () => {
+      if ('fullscreenEnabled' in document || 'webkitFullscreenEnabled' in document || 'mozFullScreenEnabled' in document || 'msFullscreenEnabled' in document) {
+        if (document.fullscreenEnabled || document.webkitFullscreenEnabled || document.mozFullScreenEnabled || document.msFullscreenEnabled) {
+          return true;
+        }
+      }
+      return false;
+    }
+
+    playFullScreen = () => {
+      // check if user allows full screen of elements. This can be enabled or disabled in browser config. By default its enabled.
+      // its also used to check if browser supports full screen api.
+      if (this.checkFullScreenSupport()) {
+        // requestFullscreen is used to display an this.videoRef in full screen mode.
+        if ('requestFullscreen' in this.videoRef) {
+          this.videoRef.requestFullscreen();
+        } else if ('webkitRequestFullscreen' in this.videoRef) {
+          this.videoRef.webkitRequestFullscreen();
+        } else if ('mozRequestFullScreen' in this.videoRef) {
+          this.videoRef.mozRequestFullScreen();
+        } else if ('msRequestFullscreen' in this.videoRef) {
+          this.videoRef.msRequestFullscreen();
+        }
+        this.videoRef.controls = false;
+      } else {
+        console.log("User doesn't allow full screen");
+      }
+    }
+
+    // renderFullScreenButton = () => {
+    //   return ()
+    // }
+
+            screenChange = () => {
+              // fullscreenElement is assigned to html element if any element is in full screen mode.
+              if (document.fullscreenElement || document.webkitFullscreenElement || document.mozFullScreenElement || document.msFullscreenElement) {
+                console.log(`Current full screen element is : ${document.fullscreenElement || document.webkitFullscreenElement || document.mozFullScreenElement || document.msFullscreenElement}`);
+              } else {
+                // exitFullscreen us used to exit full screen manually
+                if ('exitFullscreen' in document) {
+                  document.exitFullscreen();
+                } else if ('webkitExitFullscreen' in document) {
+                  document.webkitExitFullscreen();
+                } else if ('mozCancelFullScreen' in document) {
+                  document.mozCancelFullScreen();
+                } else if ('msExitFullscreen' in document) {
+                  document.msExitFullscreen();
+                }
+              }
+            }
+
+      playVideo = () => {
+        this.playPromise = this.videoRef.play();
+      };
+
+
+      render() {
       // this.getMediaDevices();
-      return (
-        <div className="videoPlayer_container">
-          <video
-            ref={this.getVideoRef}
-          >
-            <source src="https://www.apacara.com/media/video/myVideo.webm" type="video/webm" />
-            <source src="https://www.apacara.com/media/video/myVideo.mp4" type="video/mp4" />
-            <source src="https://www.apacara.com/media/video/myVideo.ogv" type="video/ogg" />
-        Your browser doesn't support HTML5 video tag.
+        return (
+          <div className="videoPlayer_container">
+            <FullScreenButton onClick={() => this.playFullScreen()} />
+            <video
+              ref={this.getVideoRef}
+              src={this.props.src}
+            />
 
-          </video>
-
-          <Slider
-            value={this.state.videoProgress}
-            onChange={(event) => { this.setState({ videoProgress: event.target.value }); }}
-            onMousedown={this.pauseVideo}
-            onMouseup={this.playVideos}
-          />
-          <button onClick={() => this.videoRef.play()}>play</button>
-          <h4>{this.state.playingVideo ? this.state.videoProgress : 'no playing video'}</h4>
-          <style>{styles}</style>
-        </div>
-      );
-    }
+            <div className="videoPlayer_controls">
+              <Slider
+                value={this.state.videoProgress}
+                onChange={(value) => {
+                  this.setState({ videoProgress: value });
+                  this.setVideoProgress(value);
+                }}
+                onMousedown={this.pauseVideo}
+                onMouseup={this.playVideo}
+              />
+            </div>
+            <style>{styles}</style>
+          </div>
+        );
+      }
 }
 
+
+VideoPlayer.propTypes = {
+  src: PropTypes.string.isRequired,
+};
 // onChange={(event) => { this.setVideoProgress(event.target.value); }}

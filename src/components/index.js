@@ -12,7 +12,9 @@ export { default as ToastNotification } from './ToastNotification';
 export { default as ToastManager } from './ToastNotification/Manager';
 export { default as VideoRecorder } from './VideoRecorder';
 export { default as VideoPlayer } from './VideoPlayer';
-export { default as RecordButton } from './VideoRecorder/buttons';
-// export { default as VideoSlider } from './VideoRecorder/slider';
+export { default as RecordButton } from './VideoRecorder/RecordButton';
+export { default as VideoSlider } from './VideoPlayer/Slider';
+export { default as FullScreenButton } from './VideoPlayer/FullScreenButton';
+export { default as PlayPauseButton } from './VideoPlayer/PlayPauseButton';
 
 export * from './FormFields';
