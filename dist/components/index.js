@@ -76,6 +76,15 @@ Object.defineProperty(exports, 'Modal', {
   }
 });
 
+var _Paginator = require('./Paginator');
+
+Object.defineProperty(exports, 'Paginator', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_Paginator).default;
+  }
+});
+
 var _Toast = require('./Toast');
 
 Object.defineProperty(exports, 'Toast', {
