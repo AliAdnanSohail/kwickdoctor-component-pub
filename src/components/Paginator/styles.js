@@ -15,16 +15,6 @@ export default css`
     list-style: none;
 
     li {
-      position: relative;
-
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      justify-content: center;
-
-      height: 30px;
-      width: 30px;
-
       padding: 0;
       margin: 3px;
 
@@ -78,7 +68,15 @@ export default css`
     }
 
     a {
-      text-decoration: none;
+      position: relative;
+
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+
+      height: 30px;
+      width: 30px;
     }
   }
 `;
