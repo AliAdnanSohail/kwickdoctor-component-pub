@@ -3,77 +3,82 @@ import css from 'styled-jsx/css';
 import settings from '../../utils/style-helper';
 
 export default css`
-  .paginator {
-    display: block;
-  }
-
   .pagination {
-    display: inline-block;
+    display: flex;
+    flex-direction: row;
+
     width: 672px;
+
     margin: 0;
     padding: 0;
+
     list-style: none;
-  }
 
-  .pagination a {
-    text-decoration: none;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    line-height: 30px;
-    text-align: center;
-  }
+    li {
+      position: relative;
 
-  .pagination li {
-    float:left;
-    margin-left:3px;
-    height: 30px;
-    min-width: 30px;
-    padding: 6px 10px 6px 11px;
-    background-color: #fff;
-    color: ${settings.textColor};
-    border-radius: 20px;
-    box-sizing: border-box;
-    cursor: pointer;
-    transition: all 0.2s ease;
-    font-weight: bold;
-    font-size: 0.875rem;
-    position: relative;
-  }
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
 
-  .pagination li:hover:not(.break) {
-    background-color: #eff0f4;
-  }
+      height: 30px;
+      width: 30px;
 
-  .pagination li.break {
-    cursor: initial;
-  }
+      padding: 0;
+      margin: 3px;
 
+      background-color: transparent;
 
+      color: ${settings.textLightColor};
 
-  .pagination li.active, .pagination li.active:hover {
-      background-color: ${settings.primaryColor};
-      color: #fff;
-      cursor: initial;
-  }
+      border-radius: 50%;
+      box-sizing: border-box;
 
-  .pagination li.previous, .pagination li.next {
-    background-color: #eff0f4;
-  }
+      cursor: pointer;
 
-  .pagination li.previous a, .pagination li.next a {
-    padding: 3px 0;
-  }
+      transition: all 0.2s ease;
 
+      font: {
+        size: 0.875rem;
+      }
 
+      &:hover:not(.break) {
+        background-color: #eff0f4;
+      }
 
-  .pagination li.previous {
-    margin-right: 30px;
-  }
+      &.break {
+        cursor: initial;
+      }
 
-  .pagination li.next {
-    margin-left: 30px;
+      &.active,
+      &.active:hover {
+        background-color: ${settings.primaryColor};
+        color: #fff;
+        cursor: initial;
+      }
+
+      &.previous,
+      &.next {
+        background-color: #eff0f4;
+      }
+
+      &.previous {
+        margin-right: 30px;
+      }
+
+      &.next {
+        margin-left: 30px;
+      }
+
+      svg {
+        fill: ${settings.textLightColor};
+        stroke: ${settings.textLightColor};
+      }
+    }
+
+    a {
+      text-decoration: none;
+    }
   }
 `;

@@ -15,9 +15,9 @@ storiesOf('Paginator', module)
   .addDecorator(getStory => <div style={{ padding: '24px' }}>{getStory()}</div>)
   .add('default', () => (
     <Paginator
-      perPage={10}
-      onChangePage={action('Page Changed to')}
       marginPagesDisplayed={number('marginPagesDisplayed', 2)}
+      onPageChange={action('Page Changed to')}
+      pageCount={10}
       pageRangeDisplayed={number('pageRangeDisplayed', 4)}
     />
   ));
