@@ -14,6 +14,7 @@ export default class VideoPlayer extends Component {
     this.state = {
       playingVideo: false,
       videoProgress: 0,
+      playing: true,
     };
     this.checkFullScreenSupport();
   }
@@ -21,6 +22,9 @@ export default class VideoPlayer extends Component {
   getVideoRef = (video) => {
     this.videoRef = video;
     this.initVideo();
+  }
+  getVideoContainerRef = (elem) => {
+    this.containerRef = elem;
   }
 
     setVideoProgress = (progress) => {
@@ -71,63 +75,74 @@ export default class VideoPlayer extends Component {
       return false;
     }
 
+    makeAllControlsVIsible = () => {}
+
     playFullScreen = () => {
       // check if user allows full screen of elements. This can be enabled or disabled in browser config. By default its enabled.
       // its also used to check if browser supports full screen api.
       if (this.checkFullScreenSupport()) {
         // requestFullscreen is used to display an this.videoRef in full screen mode.
-        if ('requestFullscreen' in this.videoRef) {
-          this.videoRef.requestFullscreen();
-        } else if ('webkitRequestFullscreen' in this.videoRef) {
-          this.videoRef.webkitRequestFullscreen();
-        } else if ('mozRequestFullScreen' in this.videoRef) {
-          this.videoRef.mozRequestFullScreen();
-        } else if ('msRequestFullscreen' in this.videoRef) {
-          this.videoRef.msRequestFullscreen();
+        if ('requestFullscreen' in this.containerRef) {
+          this.containerRef.requestFullscreen();
+        } else if ('webkitRequestFullscreen' in this.containerRef) {
+          this.containerRef.webkitRequestFullscreen();
+        } else if ('mozRequestFullScreen' in this.containerRef) {
+          this.containerRef.mozRequestFullScreen();
+        } else if ('msRequestFullscreen' in this.containerRef) {
+          this.containerRef.msRequestFullscreen();
         }
-        this.videoRef.controls = false;
+        this.containerRef.controls = false;
       } else {
         console.log("User doesn't allow full screen");
       }
     }
 
-    // renderFullScreenButton = () => {
-    //   return ()
-    // }
-
-            screenChange = () => {
-              // fullscreenElement is assigned to html element if any element is in full screen mode.
-              if (document.fullscreenElement || document.webkitFullscreenElement || document.mozFullScreenElement || document.msFullscreenElement) {
-                console.log(`Current full screen element is : ${document.fullscreenElement || document.webkitFullscreenElement || document.mozFullScreenElement || document.msFullscreenElement}`);
-              } else {
-                // exitFullscreen us used to exit full screen manually
-                if ('exitFullscreen' in document) {
-                  document.exitFullscreen();
-                } else if ('webkitExitFullscreen' in document) {
-                  document.webkitExitFullscreen();
-                } else if ('mozCancelFullScreen' in document) {
-                  document.mozCancelFullScreen();
-                } else if ('msExitFullscreen' in document) {
-                  document.msExitFullscreen();
-                }
-              }
-            }
+      screenChange = () => {
+        // fullscreenElement is assigned to html element if any element is in full screen mode.
+        if (document.fullscreenElement || document.webkitFullscreenElement || document.mozFullScreenElement || document.msFullscreenElement) {
+          console.log(`Current full screen element is : ${document.fullscreenElement || document.webkitFullscreenElement || document.mozFullScreenElement || document.msFullscreenElement}`);
+        } else {
+          // exitFullscreen us used to exit full screen manually
+          if ('exitFullscreen' in document) {
+            document.exitFullscreen();
+          } else if ('webkitExitFullscreen' in document) {
+            document.webkitExitFullscreen();
+          } else if ('mozCancelFullScreen' in document) {
+            document.mozCancelFullScreen();
+          } else if ('msExitFullscreen' in document) {
+            document.msExitFullscreen();
+          }
+        }
+      }
 
       playVideo = () => {
         this.playPromise = this.videoRef.play();
       };
 
+      togglePlayPause = () => {
+        if (this.state.playing) {
+          this.pauseVideo();
+          this.setState({ playing: false });
+        } else {
+          this.playVideo();
+          this.setState({ playing: true });
+        }
+      }
+
 
       render() {
       // this.getMediaDevices();
         return (
-          <div className="videoPlayer_container">
-            <FullScreenButton onClick={() => this.playFullScreen()} />
+          <div
+            className="videoPlaycer_container"
+            ref={this.getVideoContainerRef}
+          >
+            
+            <FullScreenButton className="fullscreen_button" onClick={() => this.playFullScreen()} />
             <video
               ref={this.getVideoRef}
               src={this.props.src}
             />
-
             <div className="videoPlayer_controls">
               <Slider
                 value={this.state.videoProgress}

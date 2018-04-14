@@ -9,7 +9,7 @@ import styles from './styles';
 export default class RecordButton extends Component {
   render() {
     return (
-      <button className="fullscreen_button" onClick={this.props.onClick}>
+      <button className={`fullscreen_button ${this.props.className}`} onClick={this.props.onClick}>
         <ExpandIcon className="expand-icon" /> Fullscreen
         <style>{styles}</style>
       </button>

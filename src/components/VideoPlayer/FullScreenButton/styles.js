@@ -4,7 +4,7 @@ import settings from '../../../utils/style-helper';
 
 export default css`
   .fullscreen_button{
-    border-radius: 10px;
+    border-radius: 8px;
     background-color: black; 
     opacity: 0.5;
     width: 120px;
@@ -28,7 +28,7 @@ export default css`
 .fullscreen_button:hover{
   zoom: 1;
   filter: alpha(opacity=50);
-  opacity: 0.5;
+  opacity: 0.85;
 }
   
   .expand-icon{

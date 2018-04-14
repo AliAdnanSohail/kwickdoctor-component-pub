@@ -10,7 +10,15 @@ export default css`
   width: 100px;
   height: 100px;
   border-radius: 50%;
+  border: 0;
+
+  webkit-transition: opacity .5s ease-in-out;
+       -moz-transition: opacity .5s ease-in-out;
+        -ms-transition: opacity .5s ease-in-out;
+         -o-transition: opacity .5s ease-in-out;
+            transition: opacity .5s ease-in-out;
 }
+
 .playpause label {
   display: block;
   box-sizing: border-box;
@@ -19,8 +27,11 @@ export default css`
   border-color: transparent transparent transparent #202020;
   transition: 100ms all ease;
   cursor: pointer;
+
+  
   border-style: double;
   border-width: 0px 0 0px 50px;
+
   left: 25px;
   top: 25px;
   position: absolute;
