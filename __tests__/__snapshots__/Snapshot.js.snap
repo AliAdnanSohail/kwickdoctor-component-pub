@@ -121,7 +121,7 @@ exports[`Storyshots Button default 1`] = `
   }
 >
   <button
-    className="jsx-3114291467 button button--normal"
+    className="jsx-3114291467 button button--"
     disabled={false}
     onClick={[Function]}
   >
@@ -1410,6 +1410,200 @@ exports[`Storyshots Navigation default 1`] = `
     </ul>
   </nav>
 </main>
+`;
+
+exports[`Storyshots Paginator default 1`] = `
+<div
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
+>
+  <ul
+    className="pagination"
+  >
+    <li
+      className="previous disabled"
+    >
+      <a
+        className={undefined}
+        href={undefined}
+        onClick={[Function]}
+        onKeyPress={[Function]}
+        tabIndex="0"
+      >
+        <svg
+          aria-label="form-previous-link"
+          className="grommetux-control-icon grommetux-control-icon-form-previous-link grommetux-control-icon--small grommetux-control-icon--responsive"
+          height="24px"
+          role="img"
+          version="1.1"
+          viewBox="0 0 24 24"
+          width="24px"
+        >
+          <path
+            d="M6,12.4 L18,12.4 M12.6,7 L18,12.4 L12.6,17.8"
+            fill="none"
+            stroke="#000"
+            strokeWidth="2"
+            transform="matrix(-1 0 0 1 24 0)"
+          />
+        </svg>
+      </a>
+    </li>
+    <li
+      className="active"
+    >
+      <a
+        aria-current="page"
+        aria-label="Page 1 is your current page"
+        className={undefined}
+        href={undefined}
+        onClick={[Function]}
+        onKeyPress={[Function]}
+        tabIndex="0"
+      >
+        1
+      </a>
+    </li>
+    <li
+      className={undefined}
+    >
+      <a
+        aria-current={null}
+        aria-label="Page 2"
+        className={undefined}
+        href={undefined}
+        onClick={[Function]}
+        onKeyPress={[Function]}
+        tabIndex="0"
+      >
+        2
+      </a>
+    </li>
+    <li
+      className={undefined}
+    >
+      <a
+        aria-current={null}
+        aria-label="Page 3"
+        className={undefined}
+        href={undefined}
+        onClick={[Function]}
+        onKeyPress={[Function]}
+        tabIndex="0"
+      >
+        3
+      </a>
+    </li>
+    <li
+      className={undefined}
+    >
+      <a
+        aria-current={null}
+        aria-label="Page 4"
+        className={undefined}
+        href={undefined}
+        onClick={[Function]}
+        onKeyPress={[Function]}
+        tabIndex="0"
+      >
+        4
+      </a>
+    </li>
+    <li
+      className={undefined}
+    >
+      <a
+        aria-current={null}
+        aria-label="Page 5"
+        className={undefined}
+        href={undefined}
+        onClick={[Function]}
+        onKeyPress={[Function]}
+        tabIndex="0"
+      >
+        5
+      </a>
+    </li>
+    <li
+      className="break"
+    >
+      ...
+    </li>
+    <li
+      className={undefined}
+    >
+      <a
+        aria-current={null}
+        aria-label="Page 9"
+        className={undefined}
+        href={undefined}
+        onClick={[Function]}
+        onKeyPress={[Function]}
+        tabIndex="0"
+      >
+        9
+      </a>
+    </li>
+    <li
+      className={undefined}
+    >
+      <a
+        aria-current={null}
+        aria-label="Page 10"
+        className={undefined}
+        href={undefined}
+        onClick={[Function]}
+        onKeyPress={[Function]}
+        tabIndex="0"
+      >
+        10
+      </a>
+    </li>
+    <li
+      className="next"
+    >
+      <a
+        className={undefined}
+        href={undefined}
+        onClick={[Function]}
+        onKeyPress={[Function]}
+        tabIndex="0"
+      >
+        <svg
+          aria-label="form-next-link"
+          className="grommetux-control-icon grommetux-control-icon-form-next-link grommetux-control-icon--small grommetux-control-icon--responsive"
+          height="24px"
+          role="img"
+          version="1.1"
+          viewBox="0 0 24 24"
+          width="24px"
+        >
+          <path
+            d="M6,12.4 L18,12.4 M12.6,7 L18,12.4 L12.6,17.8"
+            fill="none"
+            stroke="#000"
+            strokeWidth="2"
+          />
+        </svg>
+      </a>
+    </li>
+  </ul>
+  <style>
+    .pagination{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;width:672px;margin:0;padding:0;list-style:none;}
+    .pagination li{position:relative;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;height:30px;width:30px;padding:0;margin:3px;background-color:transparent;color:#BBBCCD;border-radius:50%;box-sizing:border-box;cursor:pointer;-webkit-transition:all 0.2s ease;transition:all 0.2s ease;font-size:0.875rem;}
+    .pagination li:hover:not(.break){background-color:#eff0f4;}
+    .pagination li.break{cursor:initial;}
+    .pagination li.active,.pagination li.active:hover{background-color:#0c97f9;color:#fff;cursor:initial;}
+    .pagination li.previous,.pagination li.next{background-color:#eff0f4;}
+    .pagination li.previous{margin-right:30px;}
+    .pagination li.next{margin-left:30px;}
+    .pagination li svg{fill:#BBBCCD;stroke:#BBBCCD;}
+    .pagination a{-webkit-text-decoration:none;text-decoration:none;}
+  </style>
+</div>
 `;
 
 exports[`Storyshots Stepper Stepper 1`] = `

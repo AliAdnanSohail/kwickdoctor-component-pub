@@ -8,6 +8,8 @@ export default {
   dangerLightColor: '#ed7888',
 
   textColor: '#2A2A30',
+  textLightColor: '#BBBCCD',
+
   placeholderColor: '#828393',
 
   borderColor: '#E7E7F0',

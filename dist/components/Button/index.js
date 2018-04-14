@@ -168,7 +168,7 @@ exports.default = Button;
 Button.propTypes = {
   children: _propTypes2.default.any,
   icon: _propTypes2.default.element,
-  size: _propTypes2.default.string,
+  size: _propTypes2.default.oneOf(['s', 'xs', '']),
   accent: _propTypes2.default.bool,
   danger: _propTypes2.default.bool,
   disabled: _propTypes2.default.bool,
