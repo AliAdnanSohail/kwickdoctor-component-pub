@@ -97,7 +97,6 @@ export default class Button extends Component {
       { 'button--transparent': transparent },
       { 'has-clicked': clicked },
     );
-
     return (
       <button
         ref={(button) => {

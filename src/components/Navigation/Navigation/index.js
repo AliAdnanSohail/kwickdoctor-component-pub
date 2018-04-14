@@ -7,7 +7,7 @@ import styles from './styles';
 export default class Navigation extends Component {
   render() {
     const {
-      children, className, before, after,
+      children, className, before, after, 
     } = this.props;
 
     const classes = classnames('nav', className);
