@@ -123,6 +123,7 @@ var Button = function (_Component) {
 
       var _props = this.props,
           accent = _props.accent,
+          className = _props.className,
           danger = _props.danger,
           disabled = _props.disabled,
           flat = _props.flat,
@@ -137,7 +138,7 @@ var Button = function (_Component) {
           clicked = _state.clicked;
 
 
-      var classes = (0, _classnames3.default)('button', _defineProperty({}, 'button--' + size, size), { 'button--accent': accent }, { 'button--danger': danger }, { 'button--disabled': disabled }, { 'button--flat': flat }, { 'button--loading': loading }, { 'button--rounded': rounded }, { 'button--squared': squared }, { 'button--transparent': transparent }, { 'has-clicked': clicked });
+      var classes = (0, _classnames3.default)('button', className, _defineProperty({}, 'button--' + size, size), { 'button--accent': accent }, { 'button--danger': danger }, { 'button--disabled': disabled }, { 'button--flat': flat }, { 'button--loading': loading }, { 'button--rounded': rounded }, { 'button--squared': squared }, { 'button--transparent': transparent }, { 'has-clicked': clicked });
       return _react2.default.createElement(
         'button',
         {
@@ -167,6 +168,7 @@ exports.default = Button;
 
 
 Button.propTypes = {
+  className: _propTypes2.default.string,
   children: _propTypes2.default.any,
   icon: _propTypes2.default.element,
   size: _propTypes2.default.oneOf(['s', 'xs', '']),
@@ -182,6 +184,7 @@ Button.propTypes = {
 };
 
 Button.defaultProps = {
+  className: '',
   children: null,
   icon: null,
   size: undefined,

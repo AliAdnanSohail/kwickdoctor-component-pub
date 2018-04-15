@@ -72,6 +72,7 @@ export default class Button extends Component {
   render() {
     const {
       accent,
+      className,
       danger,
       disabled,
       flat,
@@ -86,6 +87,7 @@ export default class Button extends Component {
 
     const classes = classnames(
       'button',
+      className,
       { [`button--${size}`]: size },
       { 'button--accent': accent },
       { 'button--danger': danger },
@@ -117,6 +119,7 @@ export default class Button extends Component {
 }
 
 Button.propTypes = {
+  className: PropTypes.string,
   children: PropTypes.any,
   icon: PropTypes.element,
   size: PropTypes.oneOf(['s', 'xs', '']),
@@ -132,6 +135,7 @@ Button.propTypes = {
 };
 
 Button.defaultProps = {
+  className: '',
   children: null,
   icon: null,
   size: undefined,
