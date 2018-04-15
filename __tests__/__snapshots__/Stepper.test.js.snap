@@ -210,7 +210,7 @@ exports[`renders correctly 1`] = `
                 transparent={false}
               >
                 <button
-                  className="jsx-2170624607 button button--undefined"
+                  className="jsx-2170624607 button"
                   disabled={false}
                   onClick={[Function]}
                 >

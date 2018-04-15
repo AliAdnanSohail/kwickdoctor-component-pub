@@ -86,7 +86,7 @@ var VideoPlayer = function (_Component) {
       if (_this.videoRef) {
         _this.setState({ playingVideo: !_this.state.playingVideo });
         _this.videoRef.loop = true;
-        _this.videoRef.muted = true;
+        // this.videoRef.muted = true;
         console.log(_this.videoRef.duration);
         _this.videoRef.ontimeupdate = _this.calcVideoProgress;
         _this.playPromise = _this.videoRef.play();
@@ -183,17 +183,11 @@ var VideoPlayer = function (_Component) {
       // this.getMediaDevices();
       return _react2.default.createElement(
         'div',
-        {
-          className: 'videoPlaycer_container',
-          ref: this.getVideoContainerRef
-        },
+        { className: 'videoPlaycer_container', ref: this.getVideoContainerRef },
         _react2.default.createElement(_FullScreenButton2.default, { className: 'fullscreen_button', onClick: function onClick() {
             return _this2.playFullScreen();
           } }),
-        _react2.default.createElement('video', {
-          ref: this.getVideoRef,
-          src: this.props.src
-        }),
+        _react2.default.createElement('video', { ref: this.getVideoRef, src: this.props.src }),
         _react2.default.createElement(
           'div',
           { className: 'videoPlayer_controls' },

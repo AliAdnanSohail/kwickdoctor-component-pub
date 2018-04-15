@@ -19,9 +19,9 @@ var _propTypes = require('prop-types');
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
 
-var _classnames = require('classnames');
+var _classnames2 = require('classnames');
 
-var _classnames2 = _interopRequireDefault(_classnames);
+var _classnames3 = _interopRequireDefault(_classnames2);
 
 var _icons = require('grommet/components/icons');
 
@@ -30,6 +30,8 @@ var _styles = require('./styles');
 var _styles2 = _interopRequireDefault(_styles);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -135,7 +137,7 @@ var Button = function (_Component) {
           clicked = _state.clicked;
 
 
-      var classes = (0, _classnames2.default)('button', 'button--' + size, { 'button--accent': accent }, { 'button--danger': danger }, { 'button--disabled': disabled }, { 'button--flat': flat }, { 'button--loading': loading }, { 'button--rounded': rounded }, { 'button--squared': squared }, { 'button--transparent': transparent }, { 'has-clicked': clicked });
+      var classes = (0, _classnames3.default)('button', _defineProperty({}, 'button--' + size, size), { 'button--accent': accent }, { 'button--danger': danger }, { 'button--disabled': disabled }, { 'button--flat': flat }, { 'button--loading': loading }, { 'button--rounded': rounded }, { 'button--squared': squared }, { 'button--transparent': transparent }, { 'has-clicked': clicked });
       return _react2.default.createElement(
         'button',
         {

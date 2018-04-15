@@ -86,7 +86,7 @@ export default class Button extends Component {
 
     const classes = classnames(
       'button',
-      `button--${size}`,
+      { [`button--${size}`]: size },
       { 'button--accent': accent },
       { 'button--danger': danger },
       { 'button--disabled': disabled },

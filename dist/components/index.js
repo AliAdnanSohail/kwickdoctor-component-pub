@@ -121,42 +121,6 @@ Object.defineProperty(exports, 'VideoRecorder', {
   }
 });
 
-var _RecordButton = require('./VideoRecorder/RecordButton');
-
-Object.defineProperty(exports, 'RecordButton', {
-  enumerable: true,
-  get: function get() {
-    return _interopRequireDefault(_RecordButton).default;
-  }
-});
-
-var _Slider = require('./VideoPlayer/Slider');
-
-Object.defineProperty(exports, 'VideoSlider', {
-  enumerable: true,
-  get: function get() {
-    return _interopRequireDefault(_Slider).default;
-  }
-});
-
-var _FullScreenButton = require('./VideoPlayer/FullScreenButton');
-
-Object.defineProperty(exports, 'FullScreenButton', {
-  enumerable: true,
-  get: function get() {
-    return _interopRequireDefault(_FullScreenButton).default;
-  }
-});
-
-var _PlayPauseButton = require('./VideoPlayer/PlayPauseButton');
-
-Object.defineProperty(exports, 'PlayPauseButton', {
-  enumerable: true,
-  get: function get() {
-    return _interopRequireDefault(_PlayPauseButton).default;
-  }
-});
-
 var _FormFields = require('./FormFields');
 
 Object.keys(_FormFields).forEach(function (key) {

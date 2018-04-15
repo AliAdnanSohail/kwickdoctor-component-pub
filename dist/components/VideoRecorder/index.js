@@ -23,9 +23,9 @@ var _styles = require('./styles');
 
 var _styles2 = _interopRequireDefault(_styles);
 
-var _RecordButton = require('./RecordButton');
+var _VideoRecorderButton = require('./VideoRecorderButton');
 
-var _RecordButton2 = _interopRequireDefault(_RecordButton);
+var _VideoRecorderButton2 = _interopRequireDefault(_VideoRecorderButton);
 
 var _VideoPlayer = require('../VideoPlayer');
 
@@ -80,6 +80,10 @@ var VideoRecorder = function (_Component) {
     _this.start = function () {
       console.log('start');
 
+      if (!_this.state.available) {
+        return;
+      }
+
       _this.setState({ countingdown: true });
 
       _this.countdown = setInterval(function () {
@@ -114,6 +118,10 @@ var VideoRecorder = function (_Component) {
     _this.stop = function () {
       console.log('stop');
 
+      if (!_this.state.available) {
+        return;
+      }
+
       _this.recorder.stop();
 
       var blob = new Blob(_this.chunk, { type: 'video/webm' });
@@ -123,20 +131,6 @@ var VideoRecorder = function (_Component) {
       clearInterval(_this.timer);
 
       _this.props.onStop(blob);
-    };
-
-    _this.toggleRecording = function () {
-      console.log(_this.state);
-
-      if (!_this.state.available) {
-        return;
-      }
-
-      if (_this.state.recording) {
-        _this.stop();
-      } else {
-        _this.start();
-      }
     };
 
     _this.renderTimeState = function () {
@@ -180,10 +174,17 @@ var VideoRecorder = function (_Component) {
       );
     };
 
+    _this.renderControls = function () {
+      if (_this.state.recording) {
+        return _react2.default.createElement(_VideoRecorderButton2.default, { state: 'stop', onClick: _this.stop });
+      }
+
+      return _react2.default.createElement(_VideoRecorderButton2.default, { state: 'start', onClick: _this.start });
+    };
+
     _this.renderRecorder = function () {
       var _this$state2 = _this.state,
           countingdown = _this$state2.countingdown,
-          recording = _this$state2.recording,
           stoped = _this$state2.stoped,
           url = _this$state2.url;
 
@@ -215,7 +216,7 @@ var VideoRecorder = function (_Component) {
             },
             _this.renderTimeState()
           ),
-          countingdown ? _this.renderCountdown() : _react2.default.createElement(_RecordButton2.default, { active: recording, onClick: _this.toggleRecording })
+          countingdown ? _this.renderCountdown() : _this.renderControls()
         ),
         _react2.default.createElement(_style2.default, {
           styleId: _styles.controls.__scopedHash,
