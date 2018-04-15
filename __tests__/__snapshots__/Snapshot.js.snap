@@ -121,7 +121,7 @@ exports[`Storyshots Button default 1`] = `
   }
 >
   <button
-    className="jsx-2170624607 button"
+    className="jsx-149966548 button"
     disabled={false}
     onClick={[Function]}
   >
@@ -1301,7 +1301,7 @@ exports[`Storyshots Modal default 1`] = `
   }
 >
   <button
-    className="jsx-2170624607 button"
+    className="jsx-149966548 button"
     disabled={false}
     onClick={[Function]}
   >
@@ -1673,7 +1673,7 @@ exports[`Storyshots Stepper Stepper 1`] = `
       }
     >
       <button
-        className="jsx-2170624607 button"
+        className="jsx-149966548 button"
         disabled={false}
         onClick={[Function]}
       >
@@ -1699,7 +1699,7 @@ exports[`Storyshots Toast default 1`] = `
   }
 >
   <button
-    className="jsx-2170624607 button"
+    className="jsx-149966548 button"
     disabled={false}
     onClick={[Function]}
   >

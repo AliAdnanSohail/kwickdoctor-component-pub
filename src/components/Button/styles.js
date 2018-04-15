@@ -47,8 +47,8 @@ export default css`
       fill: #ffffff;
       stroke: #ffffff;
 
-      width: 18px;
-      height: 18px;
+      width: 24px;
+      height: 24px;
 
       :global(circle, path) {
         stroke: #ffffff;
@@ -216,6 +216,11 @@ export default css`
         height: 32px;
       }
 
+      :global(svg) {
+        width: 18px;
+        height: 18px;
+      }
+
       &:not(&--rounded) {
         :global(.button__loading-icon) {
           left: 16px;
@@ -234,6 +239,11 @@ export default css`
       &.button--rounded {
         width: 42px;
         height: 42px;
+      }
+
+      :global(svg) {
+        width: 18px;
+        height: 18px;
       }
 
       &:not(&--rounded) {

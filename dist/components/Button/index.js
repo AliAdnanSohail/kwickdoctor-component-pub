@@ -23,6 +23,10 @@ var _classnames2 = require('classnames');
 
 var _classnames3 = _interopRequireDefault(_classnames2);
 
+var _css = require('styled-jsx/css');
+
+var _css2 = _interopRequireDefault(_css);
+
 var _icons = require('grommet/components/icons');
 
 var _styles = require('./styles');
@@ -46,17 +50,6 @@ var Button = function (_Component) {
     _classCallCheck(this, Button);
 
     var _this = _possibleConstructorReturn(this, (Button.__proto__ || Object.getPrototypeOf(Button)).call(this, props));
-
-    _this.getIconStyle = function () {
-      var size = _this.props.size;
-      var _defaultExport = ['button svg{width:' + size / 2 + 'px !important;height:' + size / 2 + 'px !important;}'];
-      _defaultExport.__hash = '3358251005';
-      _defaultExport.__scoped = ['button.jsx-3205182652 svg.jsx-3205182652{width:' + size / 2 + 'px !important;height:' + size / 2 + 'px !important;}'];
-      _defaultExport.__scopedHash = '3205182652';
-
-
-      return _defaultExport;
-    };
 
     _this.handleClick = function (event) {
       var _this$button$getBound = _this.button.getBoundingClientRect(),
@@ -89,12 +82,7 @@ var Button = function (_Component) {
       return rounded && icon ? _react2.default.createElement(
         _react.Fragment,
         null,
-        loading ? _react2.default.createElement(_icons.SpinningIcon, { size: 'small', className: 'button__loading-icon' }) : icon,
-        _react2.default.createElement(
-          'style',
-          null,
-          _this.getIconStyle()
-        )
+        loading ? _react2.default.createElement(_icons.SpinningIcon, { size: 'small', className: 'button__loading-icon' }) : icon
       ) : _react2.default.createElement(
         _react.Fragment,
         null,

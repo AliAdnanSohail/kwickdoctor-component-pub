@@ -18,17 +18,6 @@ export default class Button extends Component {
     clearTimeout(this.timeout);
   }
 
-  getIconStyle = () => {
-    const { size } = this.props;
-
-    return css`
-      button svg {
-        width: ${size / 2}px !important;
-        height: ${size / 2}px !important;
-      }
-    `;
-  };
-
   handleClick = (event) => {
     const { top, left } = this.button.getBoundingClientRect();
 
@@ -58,8 +47,6 @@ export default class Button extends Component {
     return rounded && icon ? (
       <Fragment>
         {loading ? <SpinningIcon size="small" className="button__loading-icon" /> : icon}
-
-        <style>{this.getIconStyle()}</style>
       </Fragment>
     ) : (
       <Fragment>
