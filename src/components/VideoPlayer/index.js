@@ -49,7 +49,7 @@ export default class VideoPlayer extends Component {
       if (this.videoRef) {
         this.setState({ playingVideo: !this.state.playingVideo });
         this.videoRef.loop = true;
-        this.videoRef.muted = true;
+        // this.videoRef.muted = true;
         console.log(this.videoRef.duration);
         this.videoRef.ontimeupdate = this.calcVideoProgress;
         this.playPromise = this.videoRef.play();
