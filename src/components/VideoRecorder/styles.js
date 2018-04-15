@@ -3,44 +3,83 @@ import css from 'styled-jsx/css';
 import settings from '../../utils/style-helper';
 
 export default css`
+  .video-recorder {
+    position: relative;
 
-.video_container {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 
-.video_controls {
-  position: absolute;
-  top: 420px;
-  display: flex;
-  justify-content: center;
-  width: 100%;
-}
+    border-radius: 25px;
 
-p.borderBelow {
-  margin: 0 0 20px 0;
-  padding: 0 0 20px 0;
-}
+    overflow: hidden;
 
-@media screen and (max-width: 500px) {
-  button {
-    font-size: 0.8em;
-    width: calc(33% - 5px);
+    width: 100%;
+
+    @media (min-width: 700px) {
+      width: 640px;
+    }
   }
-}
+`;
 
-@media screen and (max-width: 720px) {
-  video {
-    height: calc((50vw - 48px) * 3 / 4);
-    margin: 0 10px 10px 0;
-    width: calc(50vw - 48px);
-  }
+export const controls = css`
+  .video-recorder-controls {
+    position: absolute;
+    bottom: 0;
+    padding: 24px;
 
-  video#gumVideo {
-    margin: 0 10px 10px 0;
+    width: 100%;
+
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    p {
+      margin-bottom: 16px;
+
+      color: #ffffff;
+      font-size: 0.875rem;
+      text-transform: uppercase;
+      letter-spacing: 0.2rem;
+    }
   }
-}
+`;
+
+export const countdown = css`
+  .countdown {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    height: 76px;
+    width: 148px;
+
+    border-radius: 6px;
+    background-color: rgba(255, 255, 255, 0.4);
+
+    color: #ffffff;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+`;
+
+export const unavailable = css`
+  .video-unavailable {
+    height: 480px;
+    width: 640px;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    background-color: ${settings.borderColor};
+
+    font-size: 1.5rem;
+    color: ${settings.textLightColor};
+  }
 `;

@@ -1,69 +1,263 @@
 import React, { Component, Fragment } from 'react';
-import classnames from 'classnames';
-import css from 'styled-jsx/css';
+import PropTypes from 'prop-types';
 
-import styles from './styles';
-import Recorder from './recorder';
+import styles, { controls, countdown as countdownStyles, unavailable } from './styles';
 import RecordButton from './RecordButton';
-import VideoPlayer from '../VideoPlayer/';
+import VideoPlayer from '../VideoPlayer';
 
 export default class VideoRecorder extends Component {
   constructor(props) {
     super(props);
-    this.recorder = new Recorder();
+
     this.state = {
-      playingVideo: false,
+      asked: false,
+      available: true,
+      countingdown: false,
+      countdownValue: 5,
+      // paused: false,
+      permission: false,
+      recording: false,
+      stoped: false,
+      time: 0,
+      url: '',
     };
-  }
-  getVideoRef = (video) => {
-    this.videoRef = video;
-    this.getVideoSource();
+
+    this.stream = null;
+    this.recorder = null;
+    this.chunk = [];
   }
 
-  getVideoSource = () => {
-    this.recorder.getMediaDevices(this.setVideoSource);
-  }
-  setVideoSource = (stream) => {
-    this.videoRef.srcObject = stream;
+  componentDidMount() {
+    console.log('componentDidMount');
+
+    const handleSuccess = (stream) => {
+      this.stream = stream;
+      this.chunk = [];
+
+      this.setState({ permission: true, asked: true });
+
+      this.video.srcObject = stream;
+
+      this.initMediaRecorder();
+
+      this.props.onGranted();
+    };
+
+    const handleFailed = (error) => {
+      this.setState({ asked: false });
+      this.props.onDenied(error);
+    };
+
+    navigator.mediaDevices
+      .getUserMedia({ audio: true, video: true })
+      .then(handleSuccess)
+      .catch(handleFailed);
   }
 
-  createRecordedVideoUrl = () => {
-    const superBuffer = new Blob(this.recorder.recordedBlobs, { type: 'video/webm' });
-    this.setState({
-      videoUrl: window.URL.createObjectURL(superBuffer),
-      playingVideo: !this.state.playingVideo,
-      hasVideoRecorded: true,
-    });
-  }
+  componentWillUnmount() {
+    console.log('componentWillUnmount');
 
-  toggleRecording =() => {
-    this.recorder.toggleRecording();
-    if (this.recorder.hasVideoRecorded) {
-      this.createRecordedVideoUrl();
+    this.recorder = null;
+    this.chunk = [];
+
+    if (this.stream) {
+      const tracks = this.stream.getTracks();
+
+      tracks.forEach((track) => {
+        track.stop();
+      });
+
+      this.stream = null;
     }
+
+    clearInterval(this.countdown);
+    clearInterval(this.timer);
   }
 
-  renderVideo = () => {
-    if (!this.state.hasVideoRecorded) {
-      return (
-        <div className="video_container">
-          <video
-            autoPlay
-            muted
-            loop
-            ref={this.getVideoRef}
-          />
-          <div className="video_controls">
-            <RecordButton click={this.toggleRecording} />
-          </div>
-          <style>{styles}</style>
-        </div>);
+  initMediaRecorder = () => {
+    console.log('initMediaRecorder');
+
+    try {
+      const options = {};
+      const types = ['video/webm;codecs=vp8', 'video/webm', ''];
+
+      for (let i = 0; i < types.length; i + 1) {
+        const type = types[i];
+
+        if (MediaRecorder.isTypeSupported(type)) {
+          options.mimeType = type;
+          break;
+        }
+      }
+
+      this.recorder = new MediaRecorder(this.stream, options);
+
+      this.recorder.ondataavailable = (event) => {
+        if (event.data && event.data.size > 0) {
+          this.chunk.push(event.data);
+        }
+      };
+
+      this.setState({ available: true });
+    } catch (err) {
+      this.setState({ available: false });
     }
-    return (<VideoPlayer src={this.state.videoUrl} />);
-  }
+  };
+
+  start = () => {
+    console.log('start');
+
+    this.setState({ countingdown: true });
+
+    this.countdown = setInterval(() => {
+      console.log('countdown');
+
+      const { countdownValue } = this.state;
+
+      this.setState({ countdownValue: countdownValue - 1 }, () => {
+        if (this.state.countdownValue === 0) {
+          this.props.onStart(this.stream);
+
+          this.chunk = [];
+          this.recorder.start(10);
+
+          this.setState({ countingdown: false, recording: true }, () => {
+            this.timer = setInterval(() => {
+              console.log('timer');
+
+              this.setState({ time: this.state.time + 1 });
+            }, 1000);
+
+            this.props.onStart(this.stream);
+
+            clearInterval(this.countdown);
+          });
+        }
+      });
+    }, 1000);
+  };
+
+  stop = () => {
+    console.log('stop');
+
+    this.recorder.stop();
+
+    const blob = new Blob(this.chunk, { type: 'video/webm' });
+
+    this.setState({ recording: false, stoped: true, url: window.URL.createObjectURL(blob) });
+
+    clearInterval(this.timer);
+
+    this.props.onStop(blob);
+  };
+
+  toggleRecording = () => {
+    console.log(this.state);
+
+    if (!this.state.available) {
+      return;
+    }
+
+    if (this.state.recording) {
+      this.stop();
+    } else {
+      this.start();
+    }
+  };
+
+  renderTimeState = () => {
+    const { countingdown, recording } = this.state;
+
+    if (countingdown) {
+      return 'Recording will start in';
+    } else if (recording) {
+      const { time } = this.state;
+
+      let minutes = parseInt(time / 60, 10);
+      let seconds = parseInt(time % 60, 10);
+
+      minutes = minutes < 10 ? `0${minutes}` : minutes;
+      seconds = seconds < 10 ? `0${seconds}` : seconds;
+
+      return `${minutes}:${seconds}`;
+    }
+
+    return 'Start recording';
+  };
+
+  renderCountdown = () => {
+    const { countdownValue } = this.state;
+    return (
+      <div className="countdown">
+        {countdownValue} sec
+        <style jsx>{countdownStyles}</style>
+      </div>
+    );
+  };
+
+  renderRecorder = () => {
+    const {
+      countingdown, recording, stoped, url,
+    } = this.state;
+
+    return stoped ? (
+      <VideoPlayer src={url} />
+    ) : (
+      <Fragment>
+        {/* eslint-disable-next-line */}
+        <video
+          autoPlay
+          muted
+          ref={(video) => {
+            this.video = video;
+          }}
+        >
+          Your browser does not support the video tag.
+        </video>
+        <div className="video-recorder-controls">
+          <p>{this.renderTimeState()}</p>
+          {countingdown ? (
+            this.renderCountdown()
+          ) : (
+            <RecordButton active={recording} onClick={this.toggleRecording} />
+          )}
+        </div>
+
+        <style jsx>{controls}</style>
+      </Fragment>
+    );
+  };
 
   render() {
-    return this.renderVideo();
+    const { available } = this.state;
+
+    return (
+      <div className="video-recorder">
+        {available ? (
+          this.renderRecorder()
+        ) : (
+          <div className="video-unavailable">Sorry, video recording is unavailable.</div>
+        )}
+
+        <style jsx>{styles}</style>
+        <style jsx>{unavailable}</style>
+      </div>
+    );
   }
 }
 
+VideoRecorder.propTypes = {
+  onDenied: PropTypes.func,
+  onGranted: PropTypes.func,
+  // onPause,
+  // onResume,
+  onStart: PropTypes.func,
+  onStop: PropTypes.func,
+};
+
+VideoRecorder.defaultProps = {
+  onDenied: () => {},
+  onGranted: () => {},
+  onStart: () => {},
+  onStop: () => {},
+};
