@@ -164,7 +164,7 @@ export default css`
       width: 52px;
       height: 52px;
 
-      padding: 0;
+      padding: 0 !important;
       border-radius: 50%;
     }
 
