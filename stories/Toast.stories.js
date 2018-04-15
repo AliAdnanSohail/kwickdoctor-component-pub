@@ -5,7 +5,7 @@ import { withKnobs, text, boolean, number } from '@storybook/addon-knobs/react';
 import { checkA11y } from '@storybook/addon-a11y';
 import { withTests } from '@storybook/addon-jest';
 
-import { Button, ToastNotification, ToastManager } from '../src';
+import { Button, Toast, ToastManager } from '../src';
 import results from '../.jest-test-results.json';
 
 storiesOf('Toast', module)
@@ -27,6 +27,6 @@ storiesOf('Toast', module)
       >
         Create toast
       </Button>
-      <ToastNotification />
+      <Toast />
     </Fragment>
   ));

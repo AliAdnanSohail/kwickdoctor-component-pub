@@ -33,6 +33,12 @@ it('disabled button renders correctly', () => {
   expect(element.prop('disabled')).toEqual(true);
 });
 
+it('flat button renders correctly', () => {
+  const element = mount(<Button flat>Hello!</Button>);
+
+  expect(element.find('button').hasClass('button--flat')).toEqual(true);
+});
+
 it('rounded button renders correctly', () => {
   const element = mount(<Button icon={<EditIcon />} rounded>Hello!</Button>);
 
@@ -63,4 +69,30 @@ it('button with loading prop renders correctly', () => {
     .find('button')
     .childAt(0)
     .type()).toEqual(SpinningIcon);
+});
+
+it('wave effect shows correctly', () => {
+  const element = mount(<Button>Hello!</Button>);
+
+  element.find('button').simulate('click');
+
+  expect(element.find('button').hasClass('has-clicked')).toEqual(true);
+
+  const timeout = setTimeout(() => {
+    expect(element.find('button').hasClass('has-clicked')).toEqual(false);
+  }, 300);
+
+  clearTimeout(timeout);
+});
+
+it('xs button renders correctly', () => {
+  const element = mount(<Button size="xs">Hello!</Button>);
+
+  expect(element.find('button').hasClass('button--xs')).toEqual(true);
+});
+
+it('s button renders correctly', () => {
+  const element = mount(<Button size="s">Hello!</Button>);
+
+  expect(element.find('button').hasClass('button--s')).toEqual(true);
 });

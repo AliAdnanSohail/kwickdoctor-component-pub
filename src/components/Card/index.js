@@ -6,9 +6,14 @@ import styles from './styles';
 
 export default class Card extends Component {
   render() {
-    const { children, rounded, style } = this.props;
+    const {
+      children,
+      rounded,
+      style,
+      className,
+    } = this.props;
 
-    const classes = classnames('card', { 'card--rounded': rounded });
+    const classes = classnames('card', className, { 'card--rounded': rounded });
 
     return (
       <div className={classes} style={style}>
@@ -22,6 +27,7 @@ export default class Card extends Component {
 
 Card.propTypes = {
   children: PropTypes.node.isRequired,
+  className: PropTypes.object.isRequired,
   rounded: PropTypes.bool,
   style: PropTypes.object,
 };

@@ -1,16 +1,39 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { withKnobs, text } from '@storybook/addon-knobs/react';
+import { withKnobs, text, array } from '@storybook/addon-knobs/react';
 import { checkA11y } from '@storybook/addon-a11y';
 import { withTests } from '@storybook/addon-jest';
 
-import { Input, TextArea, Select } from '../src';
+import { Autocomplete, Input, RadioButtonGroup, Select, TextArea } from '../src';
 import results from '../.jest-test-results.json';
 
 storiesOf('Form Fields', module)
   .addDecorator(withKnobs)
   .addDecorator(checkA11y)
-  .addDecorator(withTests({ results })('FormFields'))
+  .addDecorator(withTests({ results })('Autocomplete'))
+  .addDecorator(getStory => <div style={{ padding: '24px' }}>{getStory()}</div>)
+  .add('Autocomplete', () => (
+    <Autocomplete
+      id="autocomplete"
+      name={text('name', 'Name')}
+      label={text('label', 'Label')}
+      placeholder={text('placeholder', 'Start typing')}
+      suggestions={array('suggestions', [
+        'Pseudo',
+        'classes',
+        'are',
+        'bolted',
+        'on',
+        'to',
+        'selectors',
+      ])}
+    />
+  ));
+
+storiesOf('Form Fields', module)
+  .addDecorator(withKnobs)
+  .addDecorator(checkA11y)
+  .addDecorator(withTests({ results })('Input'))
   .addDecorator(getStory => <div style={{ padding: '24px' }}>{getStory()}</div>)
   .add('Input', () => (
     <Input
@@ -19,7 +42,40 @@ storiesOf('Form Fields', module)
       label={text('label', 'Label')}
       placeholder={text('placeholder', 'Start typing')}
     />
-  ))
+  ));
+
+storiesOf('Form Fields', module)
+  .addDecorator(withKnobs)
+  .addDecorator(checkA11y)
+  .addDecorator(withTests({ results })('RadioButtonGroup'))
+  .addDecorator(getStory => <div style={{ padding: '24px' }}>{getStory()}</div>)
+  .add('RadioButtonGroup', () => (
+    <RadioButtonGroup
+      name={text('name', 'Gender')}
+      selected={text('selected', 'male')}
+      options={[{ value: 'male' }, { value: 'any' }, { value: 'female' }]}
+      label={text('label', 'Label')}
+    />
+  ));
+
+storiesOf('Form Fields', module)
+  .addDecorator(withKnobs)
+  .addDecorator(checkA11y)
+  .addDecorator(withTests({ results })('Select'))
+  .addDecorator(getStory => <div style={{ padding: '24px' }}>{getStory()}</div>)
+  .add('Select', () => (
+    <Select
+      name={text('name', 'Name')}
+      label={text('label', 'Label')}
+      options={[{ value: 'one' }, { value: 'two' }, { value: 'three' }, { value: 'four' }]}
+    />
+  ));
+
+storiesOf('Form Fields', module)
+  .addDecorator(withKnobs)
+  .addDecorator(checkA11y)
+  .addDecorator(withTests({ results })('TextArea'))
+  .addDecorator(getStory => <div style={{ padding: '24px' }}>{getStory()}</div>)
   .add('TextArea', () => (
     <TextArea
       id="textarea"
@@ -27,21 +83,4 @@ storiesOf('Form Fields', module)
       label={text('label', 'Label')}
       placeholder={text('placeholder', 'Start typing')}
     />
-  ))
-  .add('Select', () => (
-    <Select
-      id="select"
-      name={text('name', 'Name')}
-      label={text('label', 'Label')}
-      placeholder={text('placeholder', 'Choose some')}
-    >
-      <option value="1" >11</option>
-      <option value="2" >22</option>
-      <option value="3" >33</option>
-      <option value="4" >44</option>
-      <option value="5" >5</option>
-      <option value="6" >6</option>
-      <option value="7" >7</option>
-      <option value="8" >8</option>
-    </Select>
   ));

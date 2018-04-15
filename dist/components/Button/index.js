@@ -7,6 +7,10 @@ exports.default = undefined;
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
+var _style = require('styled-jsx/style');
+
+var _style2 = _interopRequireDefault(_style);
+
 var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
@@ -36,25 +40,12 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 var Button = function (_Component) {
   _inherits(Button, _Component);
 
-  function Button() {
-    var _ref;
-
-    var _temp, _this, _ret;
-
+  function Button(props) {
     _classCallCheck(this, Button);
 
-    for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
-      args[_key] = arguments[_key];
-    }
+    var _this = _possibleConstructorReturn(this, (Button.__proto__ || Object.getPrototypeOf(Button)).call(this, props));
 
-    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Button.__proto__ || Object.getPrototypeOf(Button)).call.apply(_ref, [this].concat(args))), _this), _this.getSize = function () {
-      var _this$props = _this.props,
-          rounded = _this$props.rounded,
-          size = _this$props.size;
-
-
-      return rounded ? { width: size + 'px', height: size + 'px' } : {};
-    }, _this.getIconStyle = function () {
+    _this.getIconStyle = function () {
       var size = _this.props.size;
       var _defaultExport = ['button svg{width:' + size / 2 + 'px !important;height:' + size / 2 + 'px !important;}'];
       _defaultExport.__hash = '3358251005';
@@ -63,28 +54,46 @@ var Button = function (_Component) {
 
 
       return _defaultExport;
-    }, _this.renderContent = function () {
-      var _this$props2 = _this.props,
-          children = _this$props2.children,
-          icon = _this$props2.icon,
-          loading = _this$props2.loading,
-          rounded = _this$props2.rounded;
+    };
 
+    _this.handleClick = function (event) {
+      var _this$button$getBound = _this.button.getBoundingClientRect(),
+          top = _this$button$getBound.top,
+          left = _this$button$getBound.left;
 
-      if (rounded && icon) {
-        return _react2.default.createElement(
-          _react.Fragment,
-          null,
-          loading ? _react2.default.createElement(_icons.SpinningIcon, { size: 'small', className: 'button__loading-icon' }) : icon,
-          _react2.default.createElement(
-            'style',
-            null,
-            _this.getIconStyle()
-          )
-        );
+      _this.setState({
+        top: event ? event.pageY - top : top,
+        left: event ? event.pageX - left : left,
+        clicked: true
+      }, function () {
+        _this.timeout = setTimeout(function () {
+          _this.setState({ clicked: false });
+        }, 300);
+      });
+
+      if (_this.props.onClick) {
+        _this.props.onClick(event);
       }
+    };
 
-      return _react2.default.createElement(
+    _this.renderContent = function () {
+      var _this$props = _this.props,
+          children = _this$props.children,
+          icon = _this$props.icon,
+          loading = _this$props.loading,
+          rounded = _this$props.rounded;
+
+
+      return rounded && icon ? _react2.default.createElement(
+        _react.Fragment,
+        null,
+        loading ? _react2.default.createElement(_icons.SpinningIcon, { size: 'small', className: 'button__loading-icon' }) : icon,
+        _react2.default.createElement(
+          'style',
+          null,
+          _this.getIconStyle()
+        )
+      ) : _react2.default.createElement(
         _react.Fragment,
         null,
         loading ? _react2.default.createElement(_icons.SpinningIcon, { size: 'small', className: 'button__loading-icon' }) : undefined,
@@ -94,34 +103,58 @@ var Button = function (_Component) {
           children
         )
       );
-    }, _temp), _possibleConstructorReturn(_this, _ret);
+    };
+
+    _this.state = { top: '50%', left: '50%', clicked: false };
+    return _this;
   }
 
   _createClass(Button, [{
+    key: 'componentWillUnmount',
+    value: function componentWillUnmount() {
+      clearTimeout(this.timeout);
+    }
+  }, {
     key: 'render',
     value: function render() {
+      var _this2 = this;
+
       var _props = this.props,
           accent = _props.accent,
           danger = _props.danger,
           disabled = _props.disabled,
+          flat = _props.flat,
           loading = _props.loading,
           rounded = _props.rounded,
+          size = _props.size,
           squared = _props.squared,
-          transparent = _props.transparent,
-          onClick = _props.onClick;
+          transparent = _props.transparent;
+      var _state = this.state,
+          top = _state.top,
+          left = _state.left,
+          clicked = _state.clicked;
 
 
-      var classes = (0, _classnames2.default)('button', { 'button--accent': accent }, { 'button--danger': danger }, { 'button--disabled': disabled }, { 'button--loading': loading }, { 'button--rounded': rounded }, { 'button--squared': squared }, { 'button--transparent': transparent });
+      var classes = (0, _classnames2.default)('button', 'button--' + size, { 'button--accent': accent }, { 'button--danger': danger }, { 'button--disabled': disabled }, { 'button--flat': flat }, { 'button--loading': loading }, { 'button--rounded': rounded }, { 'button--squared': squared }, { 'button--transparent': transparent }, { 'has-clicked': clicked });
 
       return _react2.default.createElement(
         'button',
-        { className: classes, onClick: onClick, style: this.getSize(), disabled: disabled },
+        {
+          ref: function ref(button) {
+            _this2.button = button;
+          },
+
+          onClick: this.handleClick,
+          disabled: disabled,
+          className: 'jsx-' + _styles2.default.__scopedHash + ' ' + (classes || '')
+        },
         this.renderContent(),
-        _react2.default.createElement(
-          'style',
-          null,
-          _styles2.default
-        )
+        clicked && _react2.default.createElement('span', { style: { top: top, left: left }, className: 'jsx-' + _styles2.default.__scopedHash + ' ' + 'button__wave'
+        }),
+        _react2.default.createElement(_style2.default, {
+          styleId: _styles2.default.__scopedHash,
+          css: _styles2.default.__scoped
+        })
       );
     }
   }]);
@@ -135,10 +168,11 @@ exports.default = Button;
 Button.propTypes = {
   children: _propTypes2.default.any,
   icon: _propTypes2.default.element,
-  size: _propTypes2.default.number,
+  size: _propTypes2.default.oneOf(['s', 'xs', '']),
   accent: _propTypes2.default.bool,
   danger: _propTypes2.default.bool,
   disabled: _propTypes2.default.bool,
+  flat: _propTypes2.default.bool,
   loading: _propTypes2.default.bool,
   rounded: _propTypes2.default.bool,
   squared: _propTypes2.default.bool,
@@ -149,10 +183,11 @@ Button.propTypes = {
 Button.defaultProps = {
   children: null,
   icon: null,
-  size: 40,
+  size: undefined,
   accent: false,
   danger: false,
   disabled: false,
+  flat: false,
   loading: false,
   rounded: false,
   squared: false,

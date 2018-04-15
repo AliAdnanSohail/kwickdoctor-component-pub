@@ -70,7 +70,7 @@ it('Calendar onSelect event correctly', () => {
   button.simulate('click');
 
   expect(clickDate.isSame(dayMoment, 'day')).toEqual(true);
-  expect(eventsArray).toHaveLength(4);
+  expect(eventsArray).toHaveLength(3);
 });
 
 it('Calendar events dots shows correctly', () => {

@@ -8,11 +8,15 @@ import { SpinningIcon } from 'grommet/components/icons';
 import styles from './styles';
 
 export default class Button extends Component {
-  getSize = () => {
-    const { rounded, size } = this.props;
+  constructor(props) {
+    super(props);
 
-    return rounded ? { width: `${size}px`, height: `${size}px` } : {};
-  };
+    this.state = { top: '50%', left: '50%', clicked: false };
+  }
+
+  componentWillUnmount() {
+    clearTimeout(this.timeout);
+  }
 
   getIconStyle = () => {
     const { size } = this.props;
@@ -25,22 +29,39 @@ export default class Button extends Component {
     `;
   };
 
+  handleClick = (event) => {
+    const { top, left } = this.button.getBoundingClientRect();
+
+    this.setState(
+      {
+        top: event ? event.pageY - top : top,
+        left: event ? event.pageX - left : left,
+        clicked: true,
+      },
+      () => {
+        this.timeout = setTimeout(() => {
+          this.setState({ clicked: false });
+        }, 300);
+      },
+    );
+
+    if (this.props.onClick) {
+      this.props.onClick(event);
+    }
+  };
+
   renderContent = () => {
     const {
       children, icon, loading, rounded,
     } = this.props;
 
-    if (rounded && icon) {
-      return (
-        <Fragment>
-          {loading ? <SpinningIcon size="small" className="button__loading-icon" /> : icon}
+    return rounded && icon ? (
+      <Fragment>
+        {loading ? <SpinningIcon size="small" className="button__loading-icon" /> : icon}
 
-          <style>{this.getIconStyle()}</style>
-        </Fragment>
-      );
-    }
-
-    return (
+        <style>{this.getIconStyle()}</style>
+      </Fragment>
+    ) : (
       <Fragment>
         {loading ? <SpinningIcon size="small" className="button__loading-icon" /> : undefined}
         <span className="button__content">{children}</span>
@@ -53,29 +74,43 @@ export default class Button extends Component {
       accent,
       danger,
       disabled,
+      flat,
       loading,
       rounded,
+      size,
       squared,
       transparent,
-      onClick,
     } = this.props;
+
+    const { top, left, clicked } = this.state;
 
     const classes = classnames(
       'button',
+      `button--${size}`,
       { 'button--accent': accent },
       { 'button--danger': danger },
       { 'button--disabled': disabled },
+      { 'button--flat': flat },
       { 'button--loading': loading },
       { 'button--rounded': rounded },
       { 'button--squared': squared },
       { 'button--transparent': transparent },
+      { 'has-clicked': clicked },
     );
-
     return (
-      <button className={classes} onClick={onClick} style={this.getSize()} disabled={disabled}>
+      <button
+        ref={(button) => {
+          this.button = button;
+        }}
+        className={classes}
+        onClick={this.handleClick}
+        disabled={disabled}
+      >
         {this.renderContent()}
 
-        <style>{styles}</style>
+        {clicked && <span className="button__wave" style={{ top, left }} />}
+
+        <style jsx>{styles}</style>
       </button>
     );
   }
@@ -84,10 +119,11 @@ export default class Button extends Component {
 Button.propTypes = {
   children: PropTypes.any,
   icon: PropTypes.element,
-  size: PropTypes.number,
+  size: PropTypes.oneOf(['s', 'xs', '']),
   accent: PropTypes.bool,
   danger: PropTypes.bool,
   disabled: PropTypes.bool,
+  flat: PropTypes.bool,
   loading: PropTypes.bool,
   rounded: PropTypes.bool,
   squared: PropTypes.bool,
@@ -98,10 +134,11 @@ Button.propTypes = {
 Button.defaultProps = {
   children: null,
   icon: null,
-  size: 40,
+  size: undefined,
   accent: false,
   danger: false,
   disabled: false,
+  flat: false,
   loading: false,
   rounded: false,
   squared: false,

@@ -20,8 +20,10 @@ storiesOf('Button', module)
       accent={boolean('accent', false)}
       danger={boolean('danger', false)}
       disabled={boolean('disabled', false)}
+      flat={boolean('flat', false)}
       loading={boolean('loading', false)}
       rounded={boolean('rounded', false)}
+      size={text('size', 'small')}
       squared={boolean('squared', false)}
       transparent={boolean('transparent', false)}
       onClick={action('clicked')}

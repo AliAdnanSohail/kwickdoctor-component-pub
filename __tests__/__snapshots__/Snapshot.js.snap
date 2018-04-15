@@ -1,5 +1,58 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Storyshots Avatar Picker big 1`] = `
+<div
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
+>
+  <div
+    className="jsx-779310772 jsx-2165763448 avatar"
+  >
+    <label
+      aria-label="Edit image"
+      className="jsx-779310772 jsx-2165763448 avatar__container"
+      htmlFor="avatar"
+    >
+      <input
+        className="jsx-779310772 jsx-2165763448 file-input"
+        id="avatar"
+        name="name"
+        onChange={[Function]}
+        type="file"
+      />
+      <div
+        className="jsx-779310772 jsx-2165763448 avatar__thumb"
+        style={
+          Object {
+            "backgroundImage": "none",
+          }
+        }
+      >
+        <svg
+          aria-label="camera"
+          className="grommetux-control-icon grommetux-control-icon-camera grommetux-control-icon--responsive"
+          height="24px"
+          role="img"
+          version="1.1"
+          viewBox="0 0 24 24"
+          width="24px"
+        >
+          <path
+            d="M1,21 L1,7 L6,7 L8,3 L16,3 L18,7 L23,7 L23,21 L1,21 Z M12,18 C14.7614237,18 17,15.7614237 17,13 C17,10.2385763 14.7614237,8 12,8 C9.23857625,8 7,10.2385763 7,13 C7,15.7614237 9.23857625,18 12,18 Z"
+            fill="none"
+            stroke="#000"
+            strokeWidth="2"
+          />
+        </svg>
+      </div>
+    </label>
+  </div>
+</div>
+`;
+
 exports[`Storyshots Avatar Picker default 1`] = `
 <div
   style={
@@ -9,28 +62,28 @@ exports[`Storyshots Avatar Picker default 1`] = `
   }
 >
   <div
-    className="jsx-2165763448 avatar"
+    className="jsx-3385526183 jsx-2165763448 avatar"
   >
     <div
-      className="jsx-2165763448 avatar__button"
+      className="jsx-3385526183 jsx-2165763448 avatar__button"
     />
     <label
       aria-label="Edit image"
-      className="jsx-2165763448 avatar__container"
+      className="jsx-3385526183 jsx-2165763448 avatar__container"
       htmlFor="avatar"
     >
       <input
-        className="jsx-2165763448 file-input"
+        className="jsx-3385526183 jsx-2165763448 file-input"
         id="avatar"
         name="name"
         onChange={[Function]}
         type="file"
       />
       <div
-        className="jsx-2165763448 avatar__thumb"
+        className="jsx-3385526183 jsx-2165763448 avatar__thumb"
         style={
           Object {
-            "backgroundImage": "url(null)",
+            "backgroundImage": "none",
           }
         }
       >
@@ -53,14 +106,8 @@ exports[`Storyshots Avatar Picker default 1`] = `
       </div>
     </label>
     <div
-      className="jsx-2165763448 avatar__button"
+      className="jsx-3385526183 jsx-2165763448 avatar__button"
     />
-    <style>
-      .avatar{display:grid;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;grid-template-columns:32px 1fr 32px;grid-gap:12px;width:226px;}
-      .avatar__container{cursor:pointer;color:#c1c2cf;}
-      .avatar__thumb{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;height:138px;width:138px;border-radius:50%;background-color:#e7e7f0;background-position:center;background-size:cover;}
-      .avatar__thumb svg{width:42px;height:42px;fill:#bbbccd;stroke:#bbbccd;}
-    </style>
   </div>
 </div>
 `;
@@ -74,35 +121,15 @@ exports[`Storyshots Button default 1`] = `
   }
 >
   <button
-    className="button"
+    className="jsx-3114291467 button button--"
     disabled={false}
     onClick={[Function]}
-    style={Object {}}
   >
     <span
       className="button__content"
     >
       Hello!
     </span>
-    <style>
-      .button{position:relative;padding:13px 64px;height:52px;background-color:#0c97f9;box-sizing:border-box;cursor:pointer;color:#ffffff;line-height:26px;-webkit-transition:background-color 0.2s ease-in-out,box-shadow 0.2s ease-in-out;transition:background-color 0.2s ease-in-out,box-shadow 0.2s ease-in-out;border-width:1px;border-style:solid;border-color:#0c97f9;border-radius:26px;font-style:normal;font-weight:500;font-size:1rem;text-align:center;text-transform:uppercase;}
-      .button__loading-icon{width:18px;height:18px;}
-      .button__content{display:inline-block;-webkit-transition:all 0.3s ease-in-out;transition:all 0.3s ease-in-out;}
-      .button:not(.button--disabled):hover,.button:not(.button--disabled):focus{background-color:#38a9fa;border-color:#38a9fa;box-shadow:1px 1px 10px rgba(0,0,0,0.1);}
-      .button:not(.button--rounded) .button__loading-icon{position:absolute;top:calc(50% - 9px);left:32px;}
-      .button--accent{color:#0c97f9;background-color:#ffffff;border-color:#ffffff;}
-      .button--accent:not(.button--disabled):hover,.button--accent:not(.button--disabled):focus{color:#ffffff;}
-      .button--danger{color:#ffffff;background-color:#ea6577;border-color:#ea6577;}
-      .button--danger:not(.button--disabled):hover,.button--danger:not(.button--disabled):focus{background-color:#ed7888;border-color:#ed7888;}
-      .button--disabled{opacity:0.7;cursor:not-allowed;}
-      .button--loading .button__content{-webkit-transform:translateX(9px);-ms-transform:translateX(9px);transform:translateX(9px);}
-      .button--rounded{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;padding:0;border-radius:50%;}
-      .button--squared{border-radius:12px;}
-      .button--transparent{background-color:transparent;box-shadow:0px 0px 10px rgba(12,151,249,0.15);color:#2A2A30;}
-      .button--transparent:not(.button--disabled):hover,.button--transparent:not(.button--disabled):focus{color:#ffffff;}
-      .button svg{fill:#ffffff;stroke:#ffffff;}
-      .button svg circle{stroke:#ffffff;}
-    </style>
   </button>
 </div>
 `;
@@ -301,7 +328,7 @@ exports[`Storyshots Calendar default 1`] = `
         className="jsx-3270423735"
       >
         <button
-          className="jsx-1990659263 day day--selected--without-events day--date--2018-04-06"
+          className="jsx-1990659263 day day--disabled day--date--2018-04-06"
           onClick={[Function]}
           type="button"
         >
@@ -316,7 +343,7 @@ exports[`Storyshots Calendar default 1`] = `
         className="jsx-3270423735"
       >
         <button
-          className="jsx-1990659263 day day--date--2018-04-07"
+          className="jsx-1990659263 day day--disabled day--date--2018-04-07"
           onClick={[Function]}
           type="button"
         >
@@ -331,7 +358,7 @@ exports[`Storyshots Calendar default 1`] = `
         className="jsx-3270423735"
       >
         <button
-          className="jsx-1990659263 day day--date--2018-04-08"
+          className="jsx-1990659263 day day--disabled day--date--2018-04-08"
           onClick={[Function]}
           type="button"
         >
@@ -346,7 +373,7 @@ exports[`Storyshots Calendar default 1`] = `
         className="jsx-3270423735"
       >
         <button
-          className="jsx-1990659263 day day--date--2018-04-09"
+          className="jsx-1990659263 day day--disabled day--date--2018-04-09"
           onClick={[Function]}
           type="button"
         >
@@ -361,7 +388,7 @@ exports[`Storyshots Calendar default 1`] = `
         className="jsx-3270423735"
       >
         <button
-          className="jsx-1990659263 day day--date--2018-04-10"
+          className="jsx-1990659263 day day--disabled day--date--2018-04-10"
           onClick={[Function]}
           type="button"
         >
@@ -376,7 +403,7 @@ exports[`Storyshots Calendar default 1`] = `
         className="jsx-3270423735"
       >
         <button
-          className="jsx-1990659263 day day--date--2018-04-11"
+          className="jsx-1990659263 day day--disabled day--date--2018-04-11"
           onClick={[Function]}
           type="button"
         >
@@ -391,7 +418,7 @@ exports[`Storyshots Calendar default 1`] = `
         className="jsx-3270423735"
       >
         <button
-          className="jsx-1990659263 day day--date--2018-04-12"
+          className="jsx-1990659263 day day--disabled day--date--2018-04-12"
           onClick={[Function]}
           type="button"
         >
@@ -406,7 +433,7 @@ exports[`Storyshots Calendar default 1`] = `
         className="jsx-3270423735"
       >
         <button
-          className="jsx-1990659263 day day--date--2018-04-13"
+          className="jsx-1990659263 day day--selected--without-events day--date--2018-04-13"
           onClick={[Function]}
           type="button"
         >
@@ -903,7 +930,7 @@ exports[`Storyshots Date Picker defauld 1`] = `
               tabIndex={undefined}
               title={undefined}
               type="text"
-              value="06 Apr, 2018"
+              value="13 Apr, 2018"
             />
           </div>
         </div>
@@ -991,6 +1018,61 @@ exports[`Storyshots File Input default 1`] = `
 </div>
 `;
 
+exports[`Storyshots Form Fields Autocomplete 1`] = `
+<div
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
+>
+  <div
+    className="jsx-1685083184 jsx-4038665278 jsx-2881818901 form-field"
+  >
+    <label
+      className="jsx-1685083184 jsx-4038665278 jsx-2881818901"
+      htmlFor="autocomplete"
+    >
+      Label
+    </label>
+    <div
+      className="jsx-1685083184 jsx-4038665278 jsx-2881818901 autocomplete"
+      onFocus={[Function]}
+      role="textbox"
+      tabIndex={0}
+    >
+      <div
+        className="jsx-1685083184 jsx-4038665278 jsx-2881818901 autocomplete__input"
+      >
+        <input
+          className="jsx-1685083184 jsx-4038665278 jsx-2881818901"
+          id="autocomplete"
+          onBlur={[Function]}
+          onChange={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          placeholder="Start typing"
+          type="text"
+          value=""
+        />
+      </div>
+    </div>
+    <style>
+      .autocomplete{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;position:relative;padding:5px;width:100%;min-width:100%;max-width:100%;min-height:48px;background-color:#ffffff;box-sizing:border-box;border-width:2px;border-style:solid;border-color:#E7E7F0;border-radius:4px;}
+      .autocomplete.focused,.autocomplete:focus{outline:none;border-color:#0c97f9;}
+      .autocomplete.invalid,.autocomplete.invalid:focus{border-color:#FF5572;}
+      .autocomplete__input{position:relative;margin:5px 11px;}
+      .autocomplete__input input{line-height:24px;background:transparent;border:none;border-radius:inherit;font-style:normal;font-weight:normal;font-size:0.875rem;}
+      .autocomplete__input input::-webkit-input-placeholder{color:#828393;}
+      .autocomplete__input input::-moz-placeholder{color:#828393;}
+      .autocomplete__input input:-ms-input-placeholder{color:#828393;}
+      .autocomplete__input input:-moz-placeholder{color:#828393;}
+      .autocomplete__input input:focus{outline:none;}
+    </style>
+  </div>
+</div>
+`;
+
 exports[`Storyshots Form Fields Input 1`] = `
 <div
   style={
@@ -1000,10 +1082,10 @@ exports[`Storyshots Form Fields Input 1`] = `
   }
 >
   <div
-    className="jsx-1685083184 jsx-1043162979 jsx-3846816657 form-field"
+    className="jsx-1685083184 jsx-4038665278 jsx-2881818901 form-field"
   >
     <label
-      className="jsx-1685083184 jsx-1043162979 jsx-3846816657"
+      className="jsx-1685083184 jsx-4038665278 jsx-2881818901"
       htmlFor="input"
     >
       Label
@@ -1011,17 +1093,80 @@ exports[`Storyshots Form Fields Input 1`] = `
     <input
       className=""
       id="input"
+      name="Name"
       placeholder="Start typing"
+      type={undefined}
+      value={undefined}
     />
     <style>
-      input,textarea{width:100%;min-width:100%;max-width:100%;min-height:44px;padding:12px 16px;background-color:#ffffff;color:#2A2A30;box-sizing:border-box;font-style:normal;font-weight:normal;font-size:0.875rem;border-width:2px;border-style:solid;border-color:#E7E7F0;border-radius:4px;}
-      input::-webkit-input-placeholder,textarea::-webkit-input-placeholder{color:#828393;}
-      input::-moz-placeholder,textarea::-moz-placeholder{color:#828393;}
-      input:-ms-input-placeholder,textarea:-ms-input-placeholder{color:#828393;}
-      input:-moz-placeholder,textarea:-moz-placeholder{color:#828393;}
-      input:focus,textarea:focus{outline:none;padding:12px 16px;border-color:#0c97f9;}
-      input.invalid,input.invalid:focus,textarea.invalid,textarea.invalid:focus{border-color:#FF5572;}
+      input,textarea,select{width:100%;min-width:100%;max-width:100%;min-height:44px;padding:12px 16px;background-color:#ffffff;color:#2A2A30;box-sizing:border-box;-webkit-appearance:none;font-style:normal;font-weight:normal;font-size:0.875rem;border-width:2px;border-style:solid;border-color:#E7E7F0;border-radius:4px;}
+      input::-webkit-input-placeholder,textarea::-webkit-input-placeholder,select::-webkit-input-placeholder{color:#828393;}
+      input::-moz-placeholder,textarea::-moz-placeholder,select::-moz-placeholder{color:#828393;}
+      input:-ms-input-placeholder,textarea:-ms-input-placeholder,select:-ms-input-placeholder{color:#828393;}
+      input:-moz-placeholder,textarea:-moz-placeholder,select:-moz-placeholder{color:#828393;}
+      input:focus,textarea:focus,select:focus{outline:none;padding:12px 16px;border-color:#0c97f9;}
+      input.invalid,input.invalid:focus,textarea.invalid,textarea.invalid:focus,select.invalid,select.invalid:focus{border-color:#FF5572;}
     </style>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Form Fields RadioButtonGroup 1`] = `
+<div
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
+>
+  <div
+    className="jsx-1685083184 jsx-4038665278 jsx-2881818901 jsx-904933394 jsx-1324491324 form-field"
+  >
+    <fieldset
+      className="jsx-1685083184 jsx-4038665278 jsx-2881818901 jsx-904933394 jsx-1324491324"
+    >
+      <legend
+        className="jsx-1685083184 jsx-4038665278 jsx-2881818901 jsx-904933394 jsx-1324491324"
+      >
+        Label
+      </legend>
+      <label
+        className="jsx-1685083184 jsx-4038665278 jsx-2881818901 jsx-904933394 jsx-1324491324 radio-button radio-button--active"
+      >
+        male
+        <input
+          className="jsx-1685083184 jsx-4038665278 jsx-2881818901 jsx-904933394 jsx-1324491324 "
+          defaultChecked={true}
+          name="Gender"
+          type="radio"
+          value="male"
+        />
+      </label>
+      <label
+        className="jsx-1685083184 jsx-4038665278 jsx-2881818901 jsx-904933394 jsx-1324491324 radio-button"
+      >
+        any
+        <input
+          className="jsx-1685083184 jsx-4038665278 jsx-2881818901 jsx-904933394 jsx-1324491324 "
+          defaultChecked={false}
+          name="Gender"
+          type="radio"
+          value="any"
+        />
+      </label>
+      <label
+        className="jsx-1685083184 jsx-4038665278 jsx-2881818901 jsx-904933394 jsx-1324491324 radio-button"
+      >
+        female
+        <input
+          className="jsx-1685083184 jsx-4038665278 jsx-2881818901 jsx-904933394 jsx-1324491324 "
+          defaultChecked={false}
+          name="Gender"
+          type="radio"
+          value="female"
+        />
+      </label>
+    </fieldset>
   </div>
 </div>
 `;
@@ -1035,34 +1180,76 @@ exports[`Storyshots Form Fields Select 1`] = `
   }
 >
   <div
-    className="jsx-1685083184 jsx-1043162979 jsx-3846816657 form-field"
+    className="jsx-1685083184 jsx-4038665278 jsx-2881818901 form-field"
   >
     <label
-      className="jsx-1685083184 jsx-1043162979 jsx-3846816657"
+      className="jsx-1685083184 jsx-4038665278 jsx-2881818901"
       htmlFor={undefined}
-    />
-    <select>
-      <option
-        value="1"
-      />
-      <option
-        value="2"
-      />
-      <option
-        value="3"
-      />
-      <option
-        value="4"
-      />
-    </select>
+    >
+      Label
+    </label>
+    <div
+      className="jsx-792907225 select-container"
+    >
+      <select
+        className="jsx-792907225 "
+        id={undefined}
+        name="Name"
+        placeholder={undefined}
+        type={undefined}
+        value={undefined}
+      >
+        <option
+          className="jsx-792907225"
+          value="one"
+        >
+          one
+        </option>
+        <option
+          className="jsx-792907225"
+          value="two"
+        >
+          two
+        </option>
+        <option
+          className="jsx-792907225"
+          value="three"
+        >
+          three
+        </option>
+        <option
+          className="jsx-792907225"
+          value="four"
+        >
+          four
+        </option>
+      </select>
+      <svg
+        aria-label="down"
+        className="grommetux-control-icon grommetux-control-icon-down grommetux-control-icon--responsive"
+        height="24px"
+        role="img"
+        version="1.1"
+        viewBox="0 0 24 24"
+        width="24px"
+      >
+        <polyline
+          fill="none"
+          points="7.086 3.174 17.086 13.174 7.086 23.174"
+          stroke="#000"
+          strokeWidth="2"
+          transform="scale(1 -1) rotate(-89 -1.32 0)"
+        />
+      </svg>
+    </div>
     <style>
-      input,textarea{width:100%;min-width:100%;max-width:100%;min-height:44px;padding:12px 16px;background-color:#ffffff;color:#2A2A30;box-sizing:border-box;font-style:normal;font-weight:normal;font-size:0.875rem;border-width:2px;border-style:solid;border-color:#E7E7F0;border-radius:4px;}
-      input::-webkit-input-placeholder,textarea::-webkit-input-placeholder{color:#828393;}
-      input::-moz-placeholder,textarea::-moz-placeholder{color:#828393;}
-      input:-ms-input-placeholder,textarea:-ms-input-placeholder{color:#828393;}
-      input:-moz-placeholder,textarea:-moz-placeholder{color:#828393;}
-      input:focus,textarea:focus{outline:none;padding:12px 16px;border-color:#0c97f9;}
-      input.invalid,input.invalid:focus,textarea.invalid,textarea.invalid:focus{border-color:#FF5572;}
+      input,textarea,select{width:100%;min-width:100%;max-width:100%;min-height:44px;padding:12px 16px;background-color:#ffffff;color:#2A2A30;box-sizing:border-box;-webkit-appearance:none;font-style:normal;font-weight:normal;font-size:0.875rem;border-width:2px;border-style:solid;border-color:#E7E7F0;border-radius:4px;}
+      input::-webkit-input-placeholder,textarea::-webkit-input-placeholder,select::-webkit-input-placeholder{color:#828393;}
+      input::-moz-placeholder,textarea::-moz-placeholder,select::-moz-placeholder{color:#828393;}
+      input:-ms-input-placeholder,textarea:-ms-input-placeholder,select:-ms-input-placeholder{color:#828393;}
+      input:-moz-placeholder,textarea:-moz-placeholder,select:-moz-placeholder{color:#828393;}
+      input:focus,textarea:focus,select:focus{outline:none;padding:12px 16px;border-color:#0c97f9;}
+      input.invalid,input.invalid:focus,textarea.invalid,textarea.invalid:focus,select.invalid,select.invalid:focus{border-color:#FF5572;}
     </style>
   </div>
 </div>
@@ -1077,10 +1264,10 @@ exports[`Storyshots Form Fields TextArea 1`] = `
   }
 >
   <div
-    className="jsx-1685083184 jsx-1043162979 jsx-3846816657 form-field"
+    className="jsx-1685083184 jsx-4038665278 jsx-2881818901 form-field"
   >
     <label
-      className="jsx-1685083184 jsx-1043162979 jsx-3846816657"
+      className="jsx-1685083184 jsx-4038665278 jsx-2881818901"
       htmlFor="textarea"
     >
       Label
@@ -1088,16 +1275,18 @@ exports[`Storyshots Form Fields TextArea 1`] = `
     <textarea
       className=""
       id="textarea"
+      name="Name"
       placeholder="Start typing"
+      value={undefined}
     />
     <style>
-      input,textarea{width:100%;min-width:100%;max-width:100%;min-height:44px;padding:12px 16px;background-color:#ffffff;color:#2A2A30;box-sizing:border-box;font-style:normal;font-weight:normal;font-size:0.875rem;border-width:2px;border-style:solid;border-color:#E7E7F0;border-radius:4px;}
-      input::-webkit-input-placeholder,textarea::-webkit-input-placeholder{color:#828393;}
-      input::-moz-placeholder,textarea::-moz-placeholder{color:#828393;}
-      input:-ms-input-placeholder,textarea:-ms-input-placeholder{color:#828393;}
-      input:-moz-placeholder,textarea:-moz-placeholder{color:#828393;}
-      input:focus,textarea:focus{outline:none;padding:12px 16px;border-color:#0c97f9;}
-      input.invalid,input.invalid:focus,textarea.invalid,textarea.invalid:focus{border-color:#FF5572;}
+      input,textarea,select{width:100%;min-width:100%;max-width:100%;min-height:44px;padding:12px 16px;background-color:#ffffff;color:#2A2A30;box-sizing:border-box;-webkit-appearance:none;font-style:normal;font-weight:normal;font-size:0.875rem;border-width:2px;border-style:solid;border-color:#E7E7F0;border-radius:4px;}
+      input::-webkit-input-placeholder,textarea::-webkit-input-placeholder,select::-webkit-input-placeholder{color:#828393;}
+      input::-moz-placeholder,textarea::-moz-placeholder,select::-moz-placeholder{color:#828393;}
+      input:-ms-input-placeholder,textarea:-ms-input-placeholder,select:-ms-input-placeholder{color:#828393;}
+      input:-moz-placeholder,textarea:-moz-placeholder,select:-moz-placeholder{color:#828393;}
+      input:focus,textarea:focus,select:focus{outline:none;padding:12px 16px;border-color:#0c97f9;}
+      input.invalid,input.invalid:focus,textarea.invalid,textarea.invalid:focus,select.invalid,select.invalid:focus{border-color:#FF5572;}
     </style>
   </div>
 </div>
@@ -1112,38 +1301,312 @@ exports[`Storyshots Modal default 1`] = `
   }
 >
   <button
-    className="button"
+    className="jsx-3114291467 button button--undefined"
     disabled={false}
     onClick={[Function]}
-    style={Object {}}
   >
     <span
       className="button__content"
-    />
-    <style>
-      .button{position:relative;padding:13px 64px;height:52px;background-color:#0c97f9;box-sizing:border-box;cursor:pointer;color:#ffffff;line-height:26px;-webkit-transition:background-color 0.2s ease-in-out,box-shadow 0.2s ease-in-out;transition:background-color 0.2s ease-in-out,box-shadow 0.2s ease-in-out;border-width:1px;border-style:solid;border-color:#0c97f9;border-radius:26px;font-style:normal;font-weight:500;font-size:1rem;text-align:center;text-transform:uppercase;}
-      .button__loading-icon{width:18px;height:18px;}
-      .button__content{display:inline-block;-webkit-transition:all 0.3s ease-in-out;transition:all 0.3s ease-in-out;}
-      .button:not(.button--disabled):hover,.button:not(.button--disabled):focus{background-color:#38a9fa;border-color:#38a9fa;box-shadow:1px 1px 10px rgba(0,0,0,0.1);}
-      .button:not(.button--rounded) .button__loading-icon{position:absolute;top:calc(50% - 9px);left:32px;}
-      .button--accent{color:#0c97f9;background-color:#ffffff;border-color:#ffffff;}
-      .button--accent:not(.button--disabled):hover,.button--accent:not(.button--disabled):focus{color:#ffffff;}
-      .button--danger{color:#ffffff;background-color:#ea6577;border-color:#ea6577;}
-      .button--danger:not(.button--disabled):hover,.button--danger:not(.button--disabled):focus{background-color:#ed7888;border-color:#ed7888;}
-      .button--disabled{opacity:0.7;cursor:not-allowed;}
-      .button--loading .button__content{-webkit-transform:translateX(9px);-ms-transform:translateX(9px);transform:translateX(9px);}
-      .button--rounded{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;padding:0;border-radius:50%;}
-      .button--squared{border-radius:12px;}
-      .button--transparent{background-color:transparent;box-shadow:0px 0px 10px rgba(12,151,249,0.15);color:#2A2A30;}
-      .button--transparent:not(.button--disabled):hover,.button--transparent:not(.button--disabled):focus{color:#ffffff;}
-      .button svg{fill:#ffffff;stroke:#ffffff;}
-      .button svg circle{stroke:#ffffff;}
-    </style>
+    >
+      Open modal
+    </span>
   </button>
 </div>
 `;
 
-exports[`Storyshots Radio Button Group default 1`] = `
+exports[`Storyshots Navigation default 1`] = `
+<main
+  style={
+    Object {
+      "display": "flex",
+      "minHeight": "100vh",
+    }
+  }
+>
+  <nav
+    className="jsx-1112336804 nav"
+  >
+    <ul
+      className="jsx-1112336804 nav__list"
+    >
+      <li>
+        <a
+          aria-current={false}
+          className="nav-item"
+          href="/dashboard"
+          onClick={[Function]}
+          style={undefined}
+        >
+          <svg
+            aria-label="dashboard"
+            className="grommetux-control-icon grommetux-control-icon-dashboard nav-item__icon grommetux-control-icon--responsive"
+            height="24px"
+            role="img"
+            version="1.1"
+            viewBox="0 0 24 24"
+            width="24px"
+          >
+            <path
+              d="M12,22 C17.5228475,22 22,17.5228475 22,12 C22,6.4771525 17.5228475,2 12,2 C6.4771525,2 2,6.4771525 2,12 C2,17.5228475 6.4771525,22 12,22 Z M15,16 C15,14.3431458 13.6568542,13 12,13 C10.3431458,13 9,14.3431458 9,16 M5,5 L7,7 M12,7 L12,13 M12,3 L12,5 M19,12 L21,12 M3,12 L5,12 M17,7 L19,5 M3,17 L21,17"
+              fill="none"
+              stroke="#000"
+              strokeWidth="2"
+            />
+          </svg>
+          <span
+            className="nav-item__label"
+          >
+            Dashboards
+          </span>
+        </a>
+        <style>
+          .nav-item{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;width:53px;height:53px;padding:16px;color:#ffffff;-webkit-text-decoration:none;text-decoration:none;-webkit-letter-spacing:0.15rem;-moz-letter-spacing:0.15rem;-ms-letter-spacing:0.15rem;letter-spacing:0.15rem;text-transform:uppercase;border-radius:50%;box-sizing:border-box;-webkit-transition:all 0.3s ease-in-out;transition:all 0.3s ease-in-out;font-size:0.75rem;font-weight:bold;}
+          .nav-item--active{background-color:#0c97f9;}
+          .nav-item__icon{width:21px;height:21px;fill:#ffffff !important;stroke:#ffffff !important;}
+          .nav-item__icon circle,.nav-item__icon path{stroke:#ffffff !important;}
+          .nav-item__label{display:none;}
+          @media (min-width:960px){.nav-item{width:100%;padding:16px 16px 16px 50px;border-top-left-radius:0;border-bottom-left-radius:0;border-top-right-radius:30px;border-bottom-right-radius:30px;}.nav-item__icon{margin-right:30px;}.nav-item__label{display:inline-block;}}
+        </style>
+      </li>
+      <li>
+        <a
+          aria-current={false}
+          className="nav-item"
+          href="/notifications"
+          onClick={[Function]}
+          style={undefined}
+        >
+          <svg
+            aria-label="notification"
+            className="grommetux-control-icon grommetux-control-icon-notification nav-item__icon grommetux-control-icon--responsive"
+            height="24px"
+            role="img"
+            version="1.1"
+            viewBox="0 0 24 24"
+            width="24px"
+          >
+            <path
+              d="M4,19 L4,9 C4,4.582 7.582,1 12,1 C16.418,1 20,4.582 20,9 L20,19 M1,19 L23,19 M15,19 L15,20 C15,21.657 13.657,23 12,23 C10.343,23 9,21.657 9,20 L9,19"
+              fill="none"
+              stroke="#000"
+              strokeWidth="2"
+            />
+          </svg>
+          <span
+            className="nav-item__label"
+          >
+            Notifications
+          </span>
+        </a>
+        <style>
+          .nav-item{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;width:53px;height:53px;padding:16px;color:#ffffff;-webkit-text-decoration:none;text-decoration:none;-webkit-letter-spacing:0.15rem;-moz-letter-spacing:0.15rem;-ms-letter-spacing:0.15rem;letter-spacing:0.15rem;text-transform:uppercase;border-radius:50%;box-sizing:border-box;-webkit-transition:all 0.3s ease-in-out;transition:all 0.3s ease-in-out;font-size:0.75rem;font-weight:bold;}
+          .nav-item--active{background-color:#0c97f9;}
+          .nav-item__icon{width:21px;height:21px;fill:#ffffff !important;stroke:#ffffff !important;}
+          .nav-item__icon circle,.nav-item__icon path{stroke:#ffffff !important;}
+          .nav-item__label{display:none;}
+          @media (min-width:960px){.nav-item{width:100%;padding:16px 16px 16px 50px;border-top-left-radius:0;border-bottom-left-radius:0;border-top-right-radius:30px;border-bottom-right-radius:30px;}.nav-item__icon{margin-right:30px;}.nav-item__label{display:inline-block;}}
+        </style>
+      </li>
+    </ul>
+  </nav>
+</main>
+`;
+
+exports[`Storyshots Paginator default 1`] = `
+<div
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
+>
+  <ul
+    className="pagination"
+  >
+    <li
+      className="previous disabled"
+    >
+      <a
+        className={undefined}
+        href={undefined}
+        onClick={[Function]}
+        onKeyPress={[Function]}
+        tabIndex="0"
+      >
+        <svg
+          aria-label="form-previous-link"
+          className="grommetux-control-icon grommetux-control-icon-form-previous-link grommetux-control-icon--small grommetux-control-icon--responsive"
+          height="24px"
+          role="img"
+          version="1.1"
+          viewBox="0 0 24 24"
+          width="24px"
+        >
+          <path
+            d="M6,12.4 L18,12.4 M12.6,7 L18,12.4 L12.6,17.8"
+            fill="none"
+            stroke="#000"
+            strokeWidth="2"
+            transform="matrix(-1 0 0 1 24 0)"
+          />
+        </svg>
+      </a>
+    </li>
+    <li
+      className="active"
+    >
+      <a
+        aria-current="page"
+        aria-label="Page 1 is your current page"
+        className={undefined}
+        href={undefined}
+        onClick={[Function]}
+        onKeyPress={[Function]}
+        tabIndex="0"
+      >
+        1
+      </a>
+    </li>
+    <li
+      className={undefined}
+    >
+      <a
+        aria-current={null}
+        aria-label="Page 2"
+        className={undefined}
+        href={undefined}
+        onClick={[Function]}
+        onKeyPress={[Function]}
+        tabIndex="0"
+      >
+        2
+      </a>
+    </li>
+    <li
+      className={undefined}
+    >
+      <a
+        aria-current={null}
+        aria-label="Page 3"
+        className={undefined}
+        href={undefined}
+        onClick={[Function]}
+        onKeyPress={[Function]}
+        tabIndex="0"
+      >
+        3
+      </a>
+    </li>
+    <li
+      className={undefined}
+    >
+      <a
+        aria-current={null}
+        aria-label="Page 4"
+        className={undefined}
+        href={undefined}
+        onClick={[Function]}
+        onKeyPress={[Function]}
+        tabIndex="0"
+      >
+        4
+      </a>
+    </li>
+    <li
+      className={undefined}
+    >
+      <a
+        aria-current={null}
+        aria-label="Page 5"
+        className={undefined}
+        href={undefined}
+        onClick={[Function]}
+        onKeyPress={[Function]}
+        tabIndex="0"
+      >
+        5
+      </a>
+    </li>
+    <li
+      className="break"
+    >
+      ...
+    </li>
+    <li
+      className={undefined}
+    >
+      <a
+        aria-current={null}
+        aria-label="Page 9"
+        className={undefined}
+        href={undefined}
+        onClick={[Function]}
+        onKeyPress={[Function]}
+        tabIndex="0"
+      >
+        9
+      </a>
+    </li>
+    <li
+      className={undefined}
+    >
+      <a
+        aria-current={null}
+        aria-label="Page 10"
+        className={undefined}
+        href={undefined}
+        onClick={[Function]}
+        onKeyPress={[Function]}
+        tabIndex="0"
+      >
+        10
+      </a>
+    </li>
+    <li
+      className="next"
+    >
+      <a
+        className={undefined}
+        href={undefined}
+        onClick={[Function]}
+        onKeyPress={[Function]}
+        tabIndex="0"
+      >
+        <svg
+          aria-label="form-next-link"
+          className="grommetux-control-icon grommetux-control-icon-form-next-link grommetux-control-icon--small grommetux-control-icon--responsive"
+          height="24px"
+          role="img"
+          version="1.1"
+          viewBox="0 0 24 24"
+          width="24px"
+        >
+          <path
+            d="M6,12.4 L18,12.4 M12.6,7 L18,12.4 L12.6,17.8"
+            fill="none"
+            stroke="#000"
+            strokeWidth="2"
+          />
+        </svg>
+      </a>
+    </li>
+  </ul>
+  <style>
+    .pagination{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;width:672px;margin:0;padding:0;list-style:none;}
+    .pagination li{position:relative;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;height:30px;width:30px;padding:0;margin:3px;background-color:transparent;color:#BBBCCD;border-radius:50%;box-sizing:border-box;cursor:pointer;-webkit-transition:all 0.2s ease;transition:all 0.2s ease;font-size:0.875rem;}
+    .pagination li:hover:not(.break){background-color:#eff0f4;}
+    .pagination li.break{cursor:initial;}
+    .pagination li.active,.pagination li.active:hover{background-color:#0c97f9;color:#fff;cursor:initial;}
+    .pagination li.previous,.pagination li.next{background-color:#eff0f4;}
+    .pagination li.previous{margin-right:30px;}
+    .pagination li.next{margin-left:30px;}
+    .pagination li svg{fill:#BBBCCD;stroke:#BBBCCD;}
+    .pagination a{-webkit-text-decoration:none;text-decoration:none;}
+  </style>
+</div>
+`;
+
+exports[`Storyshots Stepper Stepper 1`] = `
 <div
   style={
     Object {
@@ -1152,52 +1615,77 @@ exports[`Storyshots Radio Button Group default 1`] = `
   }
 >
   <div
-    className="jsx-3612707381"
+    className={undefined}
   >
-    <fieldset
-      className="jsx-3612707381"
+    <ul
+      className="jsx-291528123 stepper-header"
     >
-      <legend
-        className="jsx-3612707381"
+      <li
+        className="jsx-1340858167 step-icon step-icon--current"
       >
-        Gender
-        :
-      </legend>
-      <div
-        className="jsx-3612707381 radio-button-group primary"
+        <span
+          className="jsx-1340858167"
+        />
+      </li>
+      <li
+        className="jsx-1340858167 step-icon step-icon--next"
       >
-        <label
-          className="jsx-3612707381 button"
-          htmlFor="male-gender"
+        <span
+          className="jsx-1340858167"
+        />
+      </li>
+      <li
+        className="jsx-1340858167 step-icon step-icon--next"
+      >
+        <span
+          className="jsx-1340858167"
+        />
+      </li>
+      <li
+        className="jsx-1340858167 step-icon step-icon--next"
+      >
+        <span
+          className="jsx-1340858167"
+        />
+      </li>
+      <li
+        className="jsx-1340858167 step-icon step-icon--next"
+      >
+        <span
+          className="jsx-1340858167"
+        />
+      </li>
+      <li
+        className="jsx-1340858167 step-icon step-icon--last step-icon--next"
+      >
+        <span
+          className="jsx-1340858167"
+        />
+      </li>
+    </ul>
+    <div
+      className="jsx-4224162652 step"
+      style={
+        Object {
+          "opacity": 1,
+          "transform": "translateX(0)",
+        }
+      }
+    >
+      <button
+        className="jsx-3114291467 button button--undefined"
+        disabled={false}
+        onClick={[Function]}
+      >
+        <span
+          className="button__content"
         >
-          male
-          <input
-            checked={false}
-            className="jsx-3612707381"
-            id="male-gender"
-            name="gender"
-            onChange={[Function]}
-            type="radio"
-            value="male"
-          />
-        </label>
-        <label
-          className="jsx-3612707381 button"
-          htmlFor="female-gender"
-        >
-          female
-          <input
-            checked={false}
-            className="jsx-3612707381"
-            id="female-gender"
-            name="gender"
-            onChange={[Function]}
-            type="radio"
-            value="female"
-          />
-        </label>
-      </div>
-    </fieldset>
+          Next
+        </span>
+      </button>
+      <br />
+      current step 1
+    </div>
   </div>
 </div>
 `;
@@ -1211,45 +1699,24 @@ exports[`Storyshots Toast default 1`] = `
   }
 >
   <button
-    className="button"
+    className="jsx-3114291467 button button--undefined"
     disabled={false}
     onClick={[Function]}
-    style={Object {}}
   >
     <span
       className="button__content"
     >
       Create toast
     </span>
-    <style>
-      .button{position:relative;padding:13px 64px;height:52px;background-color:#0c97f9;box-sizing:border-box;cursor:pointer;color:#ffffff;line-height:26px;-webkit-transition:background-color 0.2s ease-in-out,box-shadow 0.2s ease-in-out;transition:background-color 0.2s ease-in-out,box-shadow 0.2s ease-in-out;border-width:1px;border-style:solid;border-color:#0c97f9;border-radius:26px;font-style:normal;font-weight:500;font-size:1rem;text-align:center;text-transform:uppercase;}
-      .button__loading-icon{width:18px;height:18px;}
-      .button__content{display:inline-block;-webkit-transition:all 0.3s ease-in-out;transition:all 0.3s ease-in-out;}
-      .button:not(.button--disabled):hover,.button:not(.button--disabled):focus{background-color:#38a9fa;border-color:#38a9fa;box-shadow:1px 1px 10px rgba(0,0,0,0.1);}
-      .button:not(.button--rounded) .button__loading-icon{position:absolute;top:calc(50% - 9px);left:32px;}
-      .button--accent{color:#0c97f9;background-color:#ffffff;border-color:#ffffff;}
-      .button--accent:not(.button--disabled):hover,.button--accent:not(.button--disabled):focus{color:#ffffff;}
-      .button--danger{color:#ffffff;background-color:#ea6577;border-color:#ea6577;}
-      .button--danger:not(.button--disabled):hover,.button--danger:not(.button--disabled):focus{background-color:#ed7888;border-color:#ed7888;}
-      .button--disabled{opacity:0.7;cursor:not-allowed;}
-      .button--loading .button__content{-webkit-transform:translateX(9px);-ms-transform:translateX(9px);transform:translateX(9px);}
-      .button--rounded{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;padding:0;border-radius:50%;}
-      .button--squared{border-radius:12px;}
-      .button--transparent{background-color:transparent;box-shadow:0px 0px 10px rgba(12,151,249,0.15);color:#2A2A30;}
-      .button--transparent:not(.button--disabled):hover,.button--transparent:not(.button--disabled):focus{color:#ffffff;}
-      .button svg{fill:#ffffff;stroke:#ffffff;}
-      .button svg circle{stroke:#ffffff;}
-    </style>
   </button>
   <div
     className="toast-container toast-container-empty"
   >
-    <div />
     <style>
-      .toast-box{margin-bottom:10px;color:#2A2A30;-webkit-transition:all 200ms ease-out;transition:all 200ms ease-out;}
-      .toast-box.fade-enter{opacity:0.01;-webkit-transform:translate(40px);-ms-transform:translate(40px);transform:translate(40px);}
-      .toast-box.fade-exit-active{opacity:0.01;-webkit-transform:translate(40px);-ms-transform:translate(40px);transform:translate(40px);}
-      .toast-box.rectangle-22{padding:21px 18px;width:392px;border-radius:4px;background-color:#FFFFFF;box-shadow:0 2px 40px 0 rgba(0,0,0,0.05);}
+      .toast-box{max-height:100%;box-sizing:border-box;margin-bottom:10px;color:#2A2A30;-webkit-transition:-webkit-transform 200ms ease-out,opacity 200ms ease-out,max-height 100ms ease 200ms,padding 100ms ease 300ms,margin 100ms ease 400ms;-webkit-transition:transform 200ms ease-out,opacity 200ms ease-out,max-height 100ms ease 200ms,padding 100ms ease 300ms,margin 100ms ease 400ms;transition:transform 200ms ease-out,opacity 200ms ease-out,max-height 100ms ease 200ms,padding 100ms ease 300ms,margin 100ms ease 400ms;}
+      .toast-box.fade-enter{opacity:0;-webkit-transform:translate(40px);-ms-transform:translate(40px);transform:translate(40px);}
+      .toast-box.fade-exit-active{opacity:0;-webkit-transform:translate(40px);-ms-transform:translate(40px);transform:translate(40px);max-height:0 !important;margin:0 !important;padding:0 !important;overflow:hidden;}
+      .toast-box.rectangle-22{padding:21px 18px;width:413px;border-radius:4px;background-color:#FFFFFF;box-shadow:0 2px 40px 0 rgba(0,0,0,0.05);}
       .toast-box .circle{margin:5px 15px 0 0;float:left;display:block;height:7px;width:7px;background-color:#222328;border-radius:50%;}
       .toast-box.primary .circle{background-color:#0c97f9;}
       .toast-box .message{float:left;width:335px;color:#222328;font-weight:500;line-height:18px;}
@@ -1259,9 +1726,7 @@ exports[`Storyshots Toast default 1`] = `
       .toast-box .icon:hover{opacity:1;}
       .toast-box .icon .grommetux-control-icon-close{height:14px;width:14px;display:inline-block;}
       .toast-box .icon .grommetux-control-icon-close path{stroke-width:4;}
-      .toast-container{position:absolute;top:10px;left:50%;margin-left:-196px;}
-      .toast-container .plug{-webkit-transition:all 200ms ease-out;transition:all 200ms ease-out;}
-      .toast-container .plug--zeroHeight{height:0 !important;}
+      .toast-container{position:fixed;top:10px;left:50%;margin-left:-196px;}
     </style>
   </div>
 </div>
