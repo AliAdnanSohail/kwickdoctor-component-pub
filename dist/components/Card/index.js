@@ -50,10 +50,11 @@ var Card = function (_Component) {
       var _props = this.props,
           children = _props.children,
           rounded = _props.rounded,
-          style = _props.style;
+          style = _props.style,
+          className = _props.className;
 
 
-      var classes = (0, _classnames2.default)('card', { 'card--rounded': rounded });
+      var classes = (0, _classnames2.default)('card', className, { 'card--rounded': rounded });
 
       return _react2.default.createElement(
         'div',
@@ -76,6 +77,7 @@ exports.default = Card;
 
 Card.propTypes = {
   children: _propTypes2.default.node.isRequired,
+  className: _propTypes2.default.object.isRequired,
   rounded: _propTypes2.default.bool,
   style: _propTypes2.default.object
 };
