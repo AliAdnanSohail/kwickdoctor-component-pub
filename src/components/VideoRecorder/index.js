@@ -2,7 +2,7 @@ import React, { Component, Fragment } from 'react';
 import PropTypes from 'prop-types';
 
 import styles, { controls, countdown as countdownStyles, unavailable } from './styles';
-import RecordButton from './RecordButton';
+import VideoRecorderButton from './VideoRecorderButton';
 import VideoPlayer from '../VideoPlayer';
 
 export default class VideoRecorder extends Component {
@@ -107,6 +107,10 @@ export default class VideoRecorder extends Component {
   start = () => {
     console.log('start');
 
+    if (!this.state.available) {
+      return;
+    }
+
     this.setState({ countingdown: true });
 
     this.countdown = setInterval(() => {
@@ -140,6 +144,10 @@ export default class VideoRecorder extends Component {
   stop = () => {
     console.log('stop');
 
+    if (!this.state.available) {
+      return;
+    }
+
     this.recorder.stop();
 
     const blob = new Blob(this.chunk, { type: 'video/webm' });
@@ -149,20 +157,6 @@ export default class VideoRecorder extends Component {
     clearInterval(this.timer);
 
     this.props.onStop(blob);
-  };
-
-  toggleRecording = () => {
-    console.log(this.state);
-
-    if (!this.state.available) {
-      return;
-    }
-
-    if (this.state.recording) {
-      this.stop();
-    } else {
-      this.start();
-    }
   };
 
   renderTimeState = () => {
@@ -195,10 +189,16 @@ export default class VideoRecorder extends Component {
     );
   };
 
+  renderControls = () => {
+    if (this.state.recording) {
+      return <VideoRecorderButton state="stop" onClick={this.stop} />;
+    }
+
+    return <VideoRecorderButton state="start" onClick={this.start} />;
+  };
+
   renderRecorder = () => {
-    const {
-      countingdown, recording, stoped, url,
-    } = this.state;
+    const { countingdown, stoped, url } = this.state;
 
     return stoped ? (
       <VideoPlayer src={url} />
@@ -216,11 +216,7 @@ export default class VideoRecorder extends Component {
         </video>
         <div className="video-recorder-controls">
           <p>{this.renderTimeState()}</p>
-          {countingdown ? (
-            this.renderCountdown()
-          ) : (
-            <RecordButton active={recording} onClick={this.toggleRecording} />
-          )}
+          {countingdown ? this.renderCountdown() : this.renderControls()}
         </div>
 
         <style jsx>{controls}</style>
