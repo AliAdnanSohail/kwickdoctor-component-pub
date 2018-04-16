@@ -4,10 +4,12 @@ export default css`
   .nav {
     display: flex;
     flex-direction: column;
-    box-sizing: border-box;
 
+    height: 100%;
+    min-height: 100vh;
     width: 84px;
     padding: 40px 0 80px 0;
+    box-sizing: border-box;
 
     background: linear-gradient(#0d264a, #000c25);
 
