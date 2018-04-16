@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
-// import AriaModal from 'react-aria-modal';
-// import { CloseIcon } from 'grommet/components/icons/base';
 import { TrashIcon } from 'grommet/components/icons';
 
 import styles from './styles';
@@ -90,7 +88,6 @@ export default class Notification extends Component {
 }
 
 Notification.propTypes = {
-  // date: PropTypes.instanceOf(Date).isRequired,
   success: PropTypes.bool.isRequired,
   message: PropTypes.string.isRequired,
 };
