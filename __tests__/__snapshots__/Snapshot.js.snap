@@ -1427,7 +1427,7 @@ exports[`Storyshots Notification default 1`] = `
     <div
       className="jsx-449624016 jsx-1245880828 notification__time"
     >
-      12:27 AM, Apr 17
+      12:00 AM, Jun 20
     </div>
     <div
       className="jsx-449624016 jsx-1245880828 notification__message"
@@ -1493,7 +1493,7 @@ exports[`Storyshots Notification default 1`] = `
     <div
       className="jsx-449624016 jsx-1245880828 notification__time"
     >
-      12:27 AM, Apr 17
+      12:00 AM, Jun 20
     </div>
     <div
       className="jsx-449624016 jsx-1245880828 notification__message"

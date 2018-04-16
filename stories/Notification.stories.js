@@ -16,13 +16,13 @@ storiesOf('Notification', module)
   .add('default', () => (
     <Fragment>
       <Notification
-        date={moment()}
+        date={moment('20120620')}
         message={text('message', 'New message')}
         primary={boolean('primary', false)}
         read={boolean('read', false)}
       />
       <Notification
-        date={moment()}
+        date={moment('20120620')}
         message={text('message', 'New message')}
         primary={boolean('primary', false)}
         read={boolean('read', false)}
