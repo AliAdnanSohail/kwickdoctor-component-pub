@@ -7,7 +7,7 @@ import { withTests } from '@storybook/addon-jest';
 import { VideoRecorder } from '../src';
 import results from '../.jest-test-results.json';
 
-storiesOf('Video recorder', module)
+storiesOf('Video Recorder', module)
   .addDecorator(withKnobs)
   .addDecorator(checkA11y)
   .addDecorator(withTests({ results })('VideoRecorder'))
