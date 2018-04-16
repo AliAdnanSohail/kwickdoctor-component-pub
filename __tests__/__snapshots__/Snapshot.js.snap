@@ -478,7 +478,7 @@ exports[`Storyshots Calendar default 1`] = `
         className="jsx-3270423735"
       >
         <button
-          className="jsx-1990659263 day day--selected--without-events day--date--2018-04-16"
+          className="jsx-1990659263 day day--disabled day--date--2018-04-16"
           onClick={[Function]}
           type="button"
         >
@@ -493,7 +493,7 @@ exports[`Storyshots Calendar default 1`] = `
         className="jsx-3270423735"
       >
         <button
-          className="jsx-1990659263 day day--date--2018-04-17"
+          className="jsx-1990659263 day day--selected--without-events day--date--2018-04-17"
           onClick={[Function]}
           type="button"
         >
@@ -930,7 +930,7 @@ exports[`Storyshots Date Picker defauld 1`] = `
               tabIndex={undefined}
               title={undefined}
               type="text"
-              value="16 Apr, 2018"
+              value="17 Apr, 2018"
             />
           </div>
         </div>
@@ -1410,6 +1410,149 @@ exports[`Storyshots Navigation default 1`] = `
     </ul>
   </nav>
 </main>
+`;
+
+exports[`Storyshots Notification default 1`] = `
+<div
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
+>
+  <div
+    className="jsx-3439448312 card notification-card"
+    style={Object {}}
+  >
+    <div
+      className="jsx-449624016 jsx-1245880828 notification__time"
+    >
+      12:27 AM, Apr 17
+    </div>
+    <div
+      className="jsx-449624016 jsx-1245880828 notification__message"
+    >
+      <span
+        className="jsx-449624016 jsx-1245880828 notification__dot"
+      />
+      New message
+    </div>
+    <div
+      className="jsx-449624016 jsx-1245880828 notification__actions"
+    >
+      <button
+        className="jsx-149966548 button button--s button--flat button--rounded"
+        disabled={false}
+        onClick={[Function]}
+      >
+        <svg
+          aria-label="checkmark"
+          className="grommetux-control-icon grommetux-control-icon-checkmark grommetux-control-icon--responsive"
+          height="24px"
+          role="img"
+          version="1.1"
+          viewBox="0 0 24 24"
+          width="24px"
+        >
+          <polyline
+            fill="none"
+            points="2 14 9 20 22 4"
+            stroke="#000"
+            strokeWidth="2"
+          />
+        </svg>
+      </button>
+      <button
+        className="jsx-149966548 button button--s button--flat button--rounded"
+        disabled={false}
+        onClick={[Function]}
+      >
+        <svg
+          aria-label="trash"
+          className="grommetux-control-icon grommetux-control-icon-trash grommetux-control-icon--responsive"
+          height="24px"
+          role="img"
+          version="1.1"
+          viewBox="0 0 24 24"
+          width="24px"
+        >
+          <path
+            d="M4,5 L20,5 L20,23 L4,23 L4,5 Z M1,5 L23,5 M9,1 L15,1 L15,5 L9,5 L9,1 Z M9,1 L15,1 L15,5 L9,5 L9,1 Z M15,9 L15,19 M9,9 L9,19"
+            fill="none"
+            stroke="#000"
+            strokeWidth="2"
+          />
+        </svg>
+      </button>
+    </div>
+  </div>
+  <div
+    className="jsx-3439448312 card notification-card"
+    style={Object {}}
+  >
+    <div
+      className="jsx-449624016 jsx-1245880828 notification__time"
+    >
+      12:27 AM, Apr 17
+    </div>
+    <div
+      className="jsx-449624016 jsx-1245880828 notification__message"
+    >
+      <span
+        className="jsx-449624016 jsx-1245880828 notification__dot"
+      />
+      New message
+    </div>
+    <div
+      className="jsx-449624016 jsx-1245880828 notification__actions"
+    >
+      <button
+        className="jsx-149966548 button button--s button--flat button--rounded"
+        disabled={false}
+        onClick={[Function]}
+      >
+        <svg
+          aria-label="checkmark"
+          className="grommetux-control-icon grommetux-control-icon-checkmark grommetux-control-icon--responsive"
+          height="24px"
+          role="img"
+          version="1.1"
+          viewBox="0 0 24 24"
+          width="24px"
+        >
+          <polyline
+            fill="none"
+            points="2 14 9 20 22 4"
+            stroke="#000"
+            strokeWidth="2"
+          />
+        </svg>
+      </button>
+      <button
+        className="jsx-149966548 button button--s button--flat button--rounded"
+        disabled={false}
+        onClick={[Function]}
+      >
+        <svg
+          aria-label="trash"
+          className="grommetux-control-icon grommetux-control-icon-trash grommetux-control-icon--responsive"
+          height="24px"
+          role="img"
+          version="1.1"
+          viewBox="0 0 24 24"
+          width="24px"
+        >
+          <path
+            d="M4,5 L20,5 L20,23 L4,23 L4,5 Z M1,5 L23,5 M9,1 L15,1 L15,5 L9,5 L9,1 Z M9,1 L15,1 L15,5 L9,5 L9,1 Z M15,9 L15,19 M9,9 L9,19"
+            fill="none"
+            stroke="#000"
+            strokeWidth="2"
+          />
+        </svg>
+      </button>
+    </div>
+  </div>
+</div>
 `;
 
 exports[`Storyshots Paginator default 1`] = `

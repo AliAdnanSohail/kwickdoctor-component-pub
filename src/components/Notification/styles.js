@@ -1,56 +1,77 @@
 import css from 'styled-jsx/css';
+
 import settings from '../../utils/style-helper';
 
-export default css`
-  .notification {
+export const notificationCard = css`
+  :global(.notification-card) {
+    display: flex;
+    flex-direction: row;
+
     border-radius: 6px;
-    box-shadow: 0 0 30px 0 rgba(53, 65, 81, 0.1);
-    transition: all 1s;
-    &_animated{
-      opacity: 0;
-      transform: translateX(150px);
+
+    &:not(:last-child) {
+      margin-bottom: 12px;
     }
-    &__wrapper {
-      padding: 0 37px;
-      display: flex;
-      justify-content: space-between;
-    }
-    &__time-box {
-      padding: 25px 0;
-      padding-right: 37px;
-      border-right: 2px solid ${settings.textLightColor};
-    }
+  }
+`;
+
+export const notification = css`
+  .notification {
     &__time {
-      font-size: 1rem;
-    }
-    &__message-box {
-      padding: 25px 0;
-      padding-left: 20px;
       display: flex;
-      flex-grow: 1;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+
+      padding: 24px 36px;
+
+      font-size: 1rem;
+      font-weight: bold;
+
+      border-right: 2px solid ${settings.borderColor};
     }
+
+    &__dot {
+      height: 8px;
+      width: 8px;
+
+      margin-right: 8px;
+
+      border-radius: 50px;
+
+      background-color: ${settings.textColor};
+
+      &--primary {
+        background-color: ${settings.primaryColor};
+      }
+
+      &--read {
+        opacity: 0.5;
+      }
+    }
+
     &__message {
-      font-size: 0.875rem;
+      flex: 1;
+
       display: flex;
       align-items: center;
+
+      padding: 0 16px;
+
+      font-size: 0.875rem;
+      color: ${settings.textColor};
     }
-    &__delete-box {
-      padding: 25px 0;
-      cursor: pointer;
-    }
-    &__status {
-      margin-top: 9px;
-      margin-right: 15px;
-      width: 10px;
-      height: 10px;
-      border-radius: 50%;
-      &_color {
-        &_blue {
-          background-color: #94c8f5;
-        }
-        &_grey {
-          background-color: #8f9092;
-        }
+
+    &__actions {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+
+      padding: 0 24px;
+
+      :global(svg) {
+        fill: ${settings.textLightColor};
+        stroke: ${settings.textLightColor};
       }
     }
   }

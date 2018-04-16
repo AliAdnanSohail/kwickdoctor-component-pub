@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import { storiesOf } from '@storybook/react';
-import { withKnobs, text, boolean, date } from '@storybook/addon-knobs/react';
+import { withKnobs, boolean, text } from '@storybook/addon-knobs/react';
 import { checkA11y } from '@storybook/addon-a11y';
 import { withTests } from '@storybook/addon-jest';
+import moment from 'moment';
 
 import { Notification } from '../src';
 import results from '../.jest-test-results.json';
@@ -10,26 +11,21 @@ import results from '../.jest-test-results.json';
 storiesOf('Notification', module)
   .addDecorator(withKnobs)
   .addDecorator(checkA11y)
-  .addDecorator(withTests({ results })('Card'))
+  .addDecorator(withTests({ results })('Notification'))
   .addDecorator(getStory => <div style={{ padding: '24px' }}>{getStory()}</div>)
   .add('default', () => (
-    <div>
+    <Fragment>
       <Notification
-        date={date('date', new Date())}
-        success={boolean('success', true)}
-        message={text(
-          'message',
-          'New message',
-        )}
+        date={moment()}
+        message={text('message', 'New message')}
+        primary={boolean('primary', false)}
+        read={boolean('read', false)}
       />
       <Notification
-        date={date('date', new Date())}
-        success={boolean('success', false)}
-        message={text(
-          'message',
-          'Error message',
-        )}
+        date={moment()}
+        message={text('message', 'New message')}
+        primary={boolean('primary', false)}
+        read={boolean('read', false)}
       />
-    </div>
-
+    </Fragment>
   ));

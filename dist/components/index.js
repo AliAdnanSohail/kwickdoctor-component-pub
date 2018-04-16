@@ -121,6 +121,15 @@ Object.defineProperty(exports, 'VideoRecorder', {
   }
 });
 
+var _Notification = require('./Notification');
+
+Object.defineProperty(exports, 'Notification', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_Notification).default;
+  }
+});
+
 var _FormFields = require('./FormFields');
 
 Object.keys(_FormFields).forEach(function (key) {
