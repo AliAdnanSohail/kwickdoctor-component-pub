@@ -156,6 +156,8 @@ export default class VideoRecorder extends Component {
 
     clearInterval(this.timer);
 
+    // this.stream.getTracks().forEach(track => track.stop())
+
     this.props.onStop(blob);
   };
 
