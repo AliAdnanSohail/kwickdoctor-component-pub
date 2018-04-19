@@ -12,6 +12,7 @@ export { default as ToastManager } from './Toast/Manager';
 export { default as VideoPlayer } from './VideoPlayer';
 export { default as VideoRecorder } from './VideoRecorder';
 export { default as Notification } from './Notification';
+export { default as RadioButtons } from './RadioButtons';
 
 export * from './FormFields';
 export * from './Navigation';
