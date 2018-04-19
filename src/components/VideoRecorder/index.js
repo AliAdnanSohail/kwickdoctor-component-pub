@@ -61,12 +61,7 @@ export default class VideoRecorder extends Component {
     this.chunk = [];
 
     if (this.stream) {
-      const tracks = this.stream.getTracks();
-
-      tracks.forEach((track) => {
-        track.stop();
-      });
-
+      this.stream.getTracks().forEach(track => track.stop());
       this.stream = null;
     }
 
@@ -155,6 +150,8 @@ export default class VideoRecorder extends Component {
     this.setState({ recording: false, stoped: true, url: window.URL.createObjectURL(blob) });
 
     clearInterval(this.timer);
+
+    this.stream.getTracks().forEach(track => track.stop());
 
     this.props.onStop(blob);
   };

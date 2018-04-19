@@ -130,6 +130,10 @@ var VideoRecorder = function (_Component) {
 
       clearInterval(_this.timer);
 
+      _this.stream.getTracks().forEach(function (track) {
+        return track.stop();
+      });
+
       _this.props.onStop(blob);
     };
 
@@ -280,12 +284,9 @@ var VideoRecorder = function (_Component) {
       this.chunk = [];
 
       if (this.stream) {
-        var tracks = this.stream.getTracks();
-
-        tracks.forEach(function (track) {
-          track.stop();
+        this.stream.getTracks().forEach(function (track) {
+          return track.stop();
         });
-
         this.stream = null;
       }
 
