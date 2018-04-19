@@ -73,6 +73,10 @@ export const notification = css`
         fill: ${settings.textLightColor};
         stroke: ${settings.textLightColor};
       }
+      :global(svg polyline) {
+        fill: none;
+        stroke: ${settings.textLightColor}!important;
+      }
     }
   }
 `;
