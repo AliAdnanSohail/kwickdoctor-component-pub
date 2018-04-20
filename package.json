@@ -28,7 +28,8 @@
   "jest": {
     "moduleNameMapper": {
       "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js",
-      "\\.(css|scss)$": "<rootDir>/__mocks__/styleMock.js"
+      "\\.(css|scss)$": "<rootDir>/__mocks__/styleMock.js",
+      "\\.worker.js": "<rootDir>/__mocks__/workerMock.js"
     },
     "setupTestFrameworkScriptFile": "<rootDir>/test-setup.js",
     "collectCoverageFrom": [
@@ -100,9 +101,9 @@
     "moment-range": "3.1.1",
     "react-aria-modal": "2.12.1",
     "react-datepicker": "1.4.1",
-    "react-pdf": "3.0.2",
     "react-motion": "0.5.2",
     "react-paginate": "5.2.2",
+    "react-pdf": "3.0.4",
     "react-router-dom": "4.2.2",
     "react-transition-group": "2.3.0",
     "react-validation": "3.0.7",

@@ -935,6 +935,7 @@ exports[`Storyshots Date Picker defauld 1`] = `
           </div>
         </div>
       </div>
+      
       <style>
         .form-field{position:relative;}
       </style>
@@ -1015,6 +1016,46 @@ exports[`Storyshots File Input default 1`] = `
       Upload license
     </span>
   </label>
+</div>
+`;
+
+exports[`Storyshots FileViewer simple PDF viewer 1`] = `
+<div
+  style={
+    Object {
+      "backgroundColor": "#666666",
+      "height": "500px",
+      "padding": "24px",
+    }
+  }
+>
+  <div
+    className="react-pdf__Document"
+  >
+    <div
+      className="react-pdf__message react-pdf__message--loading"
+    >
+      Loading PDF…
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots FileViewer simple img viewer 1`] = `
+<div
+  style={
+    Object {
+      "backgroundColor": "#666666",
+      "height": "500px",
+      "padding": "24px",
+    }
+  }
+>
+  <img
+    alt="This document can't be displayed"
+    className="jsx-2199625982 image"
+    src={undefined}
+  />
 </div>
 `;
 
@@ -1749,6 +1790,425 @@ exports[`Storyshots Paginator default 1`] = `
 </div>
 `;
 
+exports[`Storyshots RadioButtons default 1`] = `
+<div
+  style={
+    Object {
+      "maxWidth": "443px",
+      "padding": "24px",
+    }
+  }
+>
+  <fieldset>
+    <div
+      className="radio__wrapper"
+    >
+      <div
+        className="radio__box"
+      >
+        <div
+          className="radio__icon"
+        >
+          <svg
+            aria-label="tools"
+            className="grommetux-control-icon grommetux-control-icon-tools grommetux-control-icon--responsive"
+            height="24px"
+            role="img"
+            version="1.1"
+            viewBox="0 0 24 24"
+            width="24px"
+          >
+            <path
+              d="M11,2 L22,13 L17.5,17.5 L6.5,6.5 L11,2 Z M16,6 L17,5 L19,7 L18,8 M13,13 L4,22 L2,20 L11,11 M5,18 L6,19"
+              fill="none"
+              stroke="#000"
+              strokeWidth="2"
+            />
+          </svg>
+        </div>
+        <input
+          className="radio__select"
+          defaultChecked={false}
+          name="group"
+          onChange={[Function]}
+          type="radio"
+          value="Medical record"
+        />
+        Medical record
+      </div>
+      <div
+        className="radio__box"
+      >
+        <div
+          className="radio__icon"
+        >
+          <svg
+            aria-label="tools"
+            className="grommetux-control-icon grommetux-control-icon-tools grommetux-control-icon--responsive"
+            height="24px"
+            role="img"
+            version="1.1"
+            viewBox="0 0 24 24"
+            width="24px"
+          >
+            <path
+              d="M11,2 L22,13 L17.5,17.5 L6.5,6.5 L11,2 Z M16,6 L17,5 L19,7 L18,8 M13,13 L4,22 L2,20 L11,11 M5,18 L6,19"
+              fill="none"
+              stroke="#000"
+              strokeWidth="2"
+            />
+          </svg>
+        </div>
+        <input
+          className="radio__select"
+          defaultChecked={false}
+          name="group"
+          onChange={[Function]}
+          type="radio"
+          value="Prescription"
+        />
+        Prescription
+      </div>
+      <div
+        className="radio__box"
+      >
+        <div
+          className="radio__icon"
+        >
+          <svg
+            aria-label="tools"
+            className="grommetux-control-icon grommetux-control-icon-tools grommetux-control-icon--responsive"
+            height="24px"
+            role="img"
+            version="1.1"
+            viewBox="0 0 24 24"
+            width="24px"
+          >
+            <path
+              d="M11,2 L22,13 L17.5,17.5 L6.5,6.5 L11,2 Z M16,6 L17,5 L19,7 L18,8 M13,13 L4,22 L2,20 L11,11 M5,18 L6,19"
+              fill="none"
+              stroke="#000"
+              strokeWidth="2"
+            />
+          </svg>
+        </div>
+        <input
+          className="radio__select"
+          defaultChecked={false}
+          name="group"
+          onChange={[Function]}
+          type="radio"
+          value="Lab analysis"
+        />
+        Lab analysis
+      </div>
+      <div
+        className="radio__box"
+      >
+        <div
+          className="radio__icon"
+        >
+          <svg
+            aria-label="tools"
+            className="grommetux-control-icon grommetux-control-icon-tools grommetux-control-icon--responsive"
+            height="24px"
+            role="img"
+            version="1.1"
+            viewBox="0 0 24 24"
+            width="24px"
+          >
+            <path
+              d="M11,2 L22,13 L17.5,17.5 L6.5,6.5 L11,2 Z M16,6 L17,5 L19,7 L18,8 M13,13 L4,22 L2,20 L11,11 M5,18 L6,19"
+              fill="none"
+              stroke="#000"
+              strokeWidth="2"
+            />
+          </svg>
+        </div>
+        <input
+          className="radio__select"
+          defaultChecked={false}
+          name="group"
+          onChange={[Function]}
+          type="radio"
+          value="Sick list"
+        />
+        Sick list
+      </div>
+    </div>
+    <style>
+      fieldset{border:none;}
+      .radio__wrapper{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;}
+      .radio__select{opacity:0;width:100%;height:46px;position:absolute;left:0px;}
+      .radio__icon{margin-right:18px;}
+      .radio__icon svg path{stroke:#b8b9cc !important;}
+      .radio__icon_active svg path{stroke:white !important;}
+      .radio__box{box-shadow:0px 0px 33px 0px rgba(0,0,0,0.12);border-radius:6px;color:#b8b9cc;font-size:0.8rem;text-transform:uppercase;padding:13px 16px 13px 23px;margin-bottom:20px;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-flex-basis:39%;-ms-flex-preferred-size:39%;flex-basis:39%;cursor:pointer;position:relative;}
+      .radio__box input[type="radio"]{cursor:pointer;}
+      .radio__box_active{background-color:#1f93f4;color:white;}
+      .radio__column{-webkit-flex-basis:47%;-ms-flex-preferred-size:47%;flex-basis:47%;}
+    </style>
+  </fieldset>
+</div>
+`;
+
+exports[`Storyshots StarPicker simple start picker 1`] = `
+<div
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
+>
+  <label
+    className="jsx-1428835773 star"
+    htmlFor="1-star1"
+  >
+    <input
+      checked={false}
+      className="jsx-1428835773"
+      id="1-star1"
+      name={1}
+      onChange={[Function]}
+      onClick={[Function]}
+      type="radio"
+      value={1}
+    />
+    <svg
+      aria-label="star"
+      className="grommetux-control-icon grommetux-control-icon-star grommetux-control-icon--large grommetux-control-icon--responsive"
+      height="24px"
+      role="img"
+      theme={
+        Object {
+          "icon": Object {
+            "color": "#70c983",
+            "size": Object {
+              "large": "40px",
+            },
+          },
+        }
+      }
+      version="1.1"
+      viewBox="0 0 24 24"
+      width="24px"
+    >
+      <polygon
+        fill="none"
+        points="5 21 8 14 3 9 9 9 12 3 15 9 21 9 16 14 19 21 12 17"
+        stroke="#000"
+        strokeWidth="2"
+      />
+    </svg>
+  </label>
+  <label
+    className="jsx-1428835773 star"
+    htmlFor="2-star2"
+  >
+    <input
+      checked={false}
+      className="jsx-1428835773"
+      id="2-star2"
+      name={2}
+      onChange={[Function]}
+      onClick={[Function]}
+      type="radio"
+      value={2}
+    />
+    <svg
+      aria-label="star"
+      className="grommetux-control-icon grommetux-control-icon-star grommetux-control-icon--large grommetux-control-icon--responsive"
+      height="24px"
+      role="img"
+      theme={
+        Object {
+          "icon": Object {
+            "color": "#70c983",
+            "size": Object {
+              "large": "40px",
+            },
+          },
+        }
+      }
+      version="1.1"
+      viewBox="0 0 24 24"
+      width="24px"
+    >
+      <polygon
+        fill="none"
+        points="5 21 8 14 3 9 9 9 12 3 15 9 21 9 16 14 19 21 12 17"
+        stroke="#000"
+        strokeWidth="2"
+      />
+    </svg>
+  </label>
+  <label
+    className="jsx-1428835773 star"
+    htmlFor="3-star3"
+  >
+    <input
+      checked={true}
+      className="jsx-1428835773"
+      id="3-star3"
+      name={3}
+      onChange={[Function]}
+      onClick={[Function]}
+      type="radio"
+      value={3}
+    />
+    <svg
+      aria-label="star"
+      className="grommetux-control-icon grommetux-control-icon-star grommetux-control-icon--large grommetux-control-icon--responsive"
+      height="24px"
+      role="img"
+      theme={
+        Object {
+          "icon": Object {
+            "color": "#70c983",
+            "size": Object {
+              "large": "40px",
+            },
+          },
+        }
+      }
+      version="1.1"
+      viewBox="0 0 24 24"
+      width="24px"
+    >
+      <polygon
+        fill="none"
+        points="5 21 8 14 3 9 9 9 12 3 15 9 21 9 16 14 19 21 12 17"
+        stroke="#000"
+        strokeWidth="2"
+      />
+    </svg>
+  </label>
+  <label
+    className="jsx-1428835773 star"
+    htmlFor="4-star4"
+  >
+    <input
+      checked={false}
+      className="jsx-1428835773"
+      id="4-star4"
+      name={4}
+      onChange={[Function]}
+      onClick={[Function]}
+      type="radio"
+      value={4}
+    />
+    <svg
+      aria-label="star"
+      className="grommetux-control-icon grommetux-control-icon-star grommetux-control-icon--large grommetux-control-icon--responsive"
+      height="24px"
+      role="img"
+      theme={
+        Object {
+          "icon": Object {
+            "color": "#bcbecf",
+            "size": Object {
+              "large": "40px",
+            },
+          },
+        }
+      }
+      version="1.1"
+      viewBox="0 0 24 24"
+      width="24px"
+    >
+      <polygon
+        fill="none"
+        points="5 21 8 14 3 9 9 9 12 3 15 9 21 9 16 14 19 21 12 17"
+        stroke="#000"
+        strokeWidth="2"
+      />
+    </svg>
+  </label>
+  <label
+    className="jsx-1428835773 star"
+    htmlFor="5-star5"
+  >
+    <input
+      checked={false}
+      className="jsx-1428835773"
+      id="5-star5"
+      name={5}
+      onChange={[Function]}
+      onClick={[Function]}
+      type="radio"
+      value={5}
+    />
+    <svg
+      aria-label="star"
+      className="grommetux-control-icon grommetux-control-icon-star grommetux-control-icon--large grommetux-control-icon--responsive"
+      height="24px"
+      role="img"
+      theme={
+        Object {
+          "icon": Object {
+            "color": "#bcbecf",
+            "size": Object {
+              "large": "40px",
+            },
+          },
+        }
+      }
+      version="1.1"
+      viewBox="0 0 24 24"
+      width="24px"
+    >
+      <polygon
+        fill="none"
+        points="5 21 8 14 3 9 9 9 12 3 15 9 21 9 16 14 19 21 12 17"
+        stroke="#000"
+        strokeWidth="2"
+      />
+    </svg>
+  </label>
+  <label
+    className="jsx-1428835773 star"
+    htmlFor="6-star6"
+  >
+    <input
+      checked={false}
+      className="jsx-1428835773"
+      id="6-star6"
+      name={6}
+      onChange={[Function]}
+      onClick={[Function]}
+      type="radio"
+      value={6}
+    />
+    <svg
+      aria-label="star"
+      className="grommetux-control-icon grommetux-control-icon-star grommetux-control-icon--large grommetux-control-icon--responsive"
+      height="24px"
+      role="img"
+      theme={
+        Object {
+          "icon": Object {
+            "color": "#bcbecf",
+            "size": Object {
+              "large": "40px",
+            },
+          },
+        }
+      }
+      version="1.1"
+      viewBox="0 0 24 24"
+      width="24px"
+    >
+      <polygon
+        fill="none"
+        points="5 21 8 14 3 9 9 9 12 3 15 9 21 9 16 14 19 21 12 17"
+        stroke="#000"
+        strokeWidth="2"
+      />
+    </svg>
+  </label>
+</div>
+`;
+
 exports[`Storyshots Stepper Stepper 1`] = `
 <div
   style={
@@ -1830,6 +2290,54 @@ exports[`Storyshots Stepper Stepper 1`] = `
       current step 1
     </div>
   </div>
+</div>
+`;
+
+exports[`Storyshots TimePicker TimePicker 1`] = `
+<div
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
+>
+  <section
+    className="jsx-3947417489 b-time-picker"
+  >
+    <div
+      className="jsx-3947417489 b-time-picker__wrapper"
+    >
+      <div
+        className="jsx-3947417489 b-time-picker__title"
+      >
+        Appointment time
+      </div>
+      <div
+        className="jsx-3947417489 b-time-picker__input"
+        onClick={[Function]}
+        onKeyPress={[Function]}
+        role="button"
+        tabIndex="0"
+      >
+        <div
+          className="jsx-3947417489 b-time-picker__logo"
+        >
+          <img
+            alt="clock"
+            className="jsx-3947417489"
+            src={Object {}}
+          />
+        </div>
+        <input
+          className="jsx-3947417489 b-input"
+          onChange={[Function]}
+          type="text"
+          value="Pick time"
+        />
+      </div>
+      
+    </div>
+  </section>
 </div>
 `;
 
