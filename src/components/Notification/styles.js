@@ -72,6 +72,11 @@ export const notification = css`
       :global(svg) {
         fill: ${settings.textLightColor};
         stroke: ${settings.textLightColor};
+
+        :global(path, circle, polyline) {
+          fill: none;
+          stroke: ${settings.textLightColor}!important;
+        }
       }
     }
   }
