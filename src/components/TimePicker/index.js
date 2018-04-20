@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 
+import { ClockIcon, NextIcon, PreviousIcon } from 'grommet/components/icons/base';
+
 import styles from './styles';
 
 export default class TimePicker extends Component {
@@ -30,10 +32,7 @@ export default class TimePicker extends Component {
         { value: '11' },
         { value: '12' },
       ],
-      minuts: [
-        { value: '00' },
-        { value: '30' },
-      ],
+      minuts: [{ value: '00' }, { value: '30' }],
     };
 
     this.classnames = classnames({
@@ -41,12 +40,8 @@ export default class TimePicker extends Component {
     });
   }
 
-  componentDidMount() {
-
-  }
-  componentWillUnmount() {
-
-  }
+  componentDidMount() {}
+  componentWillUnmount() {}
 
   changeTime() {
     this.setState({ defaultInputText: `${this.state.selectedHours}:${this.state.selectedMin}` });
@@ -96,18 +91,20 @@ export default class TimePicker extends Component {
       return (
         <React.Fragment>
           <div className="b-select__options-wrap">
-            {this.state.hours.map(time =>
-              (
-                <div
-                  role="button"
-                  tabIndex="0"
-                  onClick={e => this.changeHours(e)}
-                  onKeyPress={e => this.changeHours(e)}
-                  className={classnames('b-select__option', { 'b-select__option_selected': this.state.selectedHours === time.value })}
-                  key={time.value}
-                >{time.value}
-                </div>
-              ))}
+            {this.state.hours.map(time => (
+              <div
+                role="button"
+                tabIndex="0"
+                onClick={e => this.changeHours(e)}
+                onKeyPress={e => this.changeHours(e)}
+                className={classnames('b-select__option', {
+                  'b-select__option_selected': this.state.selectedHours === time.value,
+                })}
+                key={time.value}
+              >
+                {time.value}
+              </div>
+            ))}
           </div>
           <style jsx>{styles}</style>
         </React.Fragment>
@@ -121,18 +118,20 @@ export default class TimePicker extends Component {
       return (
         <React.Fragment>
           <div className="b-select__options-wrap b-select__options-wrap_size_small">
-            {this.state.minuts.map(time =>
-              (
-                <div
-                  role="button"
-                  tabIndex="0"
-                  className={classnames('b-select__option', { 'b-select__option_selected': this.state.selectedMin == time.value })}
-                  key={time.value}
-                  onClick={e => this.changeMin(e)}
-                  onKeyPress={e => this.changeMin(e)}
-                >{time.value}
-                </div>
-              ))}
+            {this.state.minuts.map(time => (
+              <div
+                role="button"
+                tabIndex="0"
+                className={classnames('b-select__option', {
+                  'b-select__option_selected': this.state.selectedMin === time.value,
+                })}
+                key={time.value}
+                onClick={e => this.changeMin(e)}
+                onKeyPress={e => this.changeMin(e)}
+              >
+                {time.value}
+              </div>
+            ))}
           </div>
           <style jsx>{styles}</style>
         </React.Fragment>
@@ -156,9 +155,9 @@ export default class TimePicker extends Component {
               <div className="b-select__field">
                 {this.state.selectedHours}
                 <div className="b-select__arrow">
-                  <img src={require('./image/previous.svg')} alt="prevuous" />
+                  <PreviousIcon />
                 </div>
-                { this.renderHoursList() }
+                {this.renderHoursList()}
               </div>
             </div>
             <div
@@ -171,9 +170,9 @@ export default class TimePicker extends Component {
               <div className="b-select__field">
                 {this.state.selectedMin}
                 <div className="b-select__arrow">
-                  <img src={require('./image/previous.svg')} alt="previous" />
+                  <NextIcon />
                 </div>
-                { this.renderMinuntsList() }
+                {this.renderMinuntsList()}
               </div>
             </div>
           </div>
@@ -185,17 +184,13 @@ export default class TimePicker extends Component {
   }
 
   render() {
-    const {
-      title, onChange,
-    } = this.props;
+    const { title, onChange } = this.props;
     const classes = classnames('b-time-picker');
 
     return (
       <section className={classes}>
         <div className="b-time-picker__wrapper">
-          <div className="b-time-picker__title">
-            {title}
-          </div>
+          <div className="b-time-picker__title">{title}</div>
           <div
             className="b-time-picker__input"
             role="button"
@@ -204,7 +199,7 @@ export default class TimePicker extends Component {
             onKeyPress={e => this.switchTimeBlock(e)}
           >
             <div className="b-time-picker__logo">
-              <img src={require('./image/clock2.svg')} alt="clock" />
+              <ClockIcon />
             </div>
             <input
               type="text"
@@ -226,6 +221,4 @@ TimePicker.propTypes = {
   defaultInputText: PropTypes.string.isRequired,
 };
 
-TimePicker.defaultProps = {
-
-};
+TimePicker.defaultProps = {};

@@ -23,6 +23,8 @@ var _classnames = require('classnames');
 
 var _classnames2 = _interopRequireDefault(_classnames);
 
+var _base = require('grommet/components/icons/base');
+
 var _styles = require('./styles');
 
 var _styles2 = _interopRequireDefault(_styles);
@@ -160,7 +162,9 @@ var TimePicker = function (_Component) {
                   },
 
                   key: time.value,
-                  className: 'jsx-' + _styles2.default.__scopedHash + ' ' + ((0, _classnames2.default)('b-select__option', { 'b-select__option_selected': _this4.state.selectedHours === time.value }) || '')
+                  className: 'jsx-' + _styles2.default.__scopedHash + ' ' + ((0, _classnames2.default)('b-select__option', {
+                    'b-select__option_selected': _this4.state.selectedHours === time.value
+                  }) || '')
                 },
                 time.value
               );
@@ -202,7 +206,9 @@ var TimePicker = function (_Component) {
                   onKeyPress: function onKeyPress(e) {
                     return _this5.changeMin(e);
                   },
-                  className: 'jsx-' + _styles2.default.__scopedHash + ' ' + ((0, _classnames2.default)('b-select__option', { 'b-select__option_selected': _this5.state.selectedMin == time.value }) || '')
+                  className: 'jsx-' + _styles2.default.__scopedHash + ' ' + ((0, _classnames2.default)('b-select__option', {
+                    'b-select__option_selected': _this5.state.selectedMin === time.value
+                  }) || '')
                 },
                 time.value
               );
@@ -256,8 +262,7 @@ var TimePicker = function (_Component) {
                   {
                     className: 'jsx-' + _styles2.default.__scopedHash + ' ' + 'b-select__arrow'
                   },
-                  _react2.default.createElement('img', { src: require('./image/previous.svg'), alt: 'prevuous', className: 'jsx-' + _styles2.default.__scopedHash
-                  })
+                  _react2.default.createElement(_base.PreviousIcon, null)
                 ),
                 this.renderHoursList()
               )
@@ -286,8 +291,7 @@ var TimePicker = function (_Component) {
                   {
                     className: 'jsx-' + _styles2.default.__scopedHash + ' ' + 'b-select__arrow'
                   },
-                  _react2.default.createElement('img', { src: require('./image/previous.svg'), alt: 'previous', className: 'jsx-' + _styles2.default.__scopedHash
-                  })
+                  _react2.default.createElement(_base.NextIcon, null)
                 ),
                 this.renderMinuntsList()
               )
@@ -347,8 +351,7 @@ var TimePicker = function (_Component) {
               {
                 className: 'jsx-' + _styles2.default.__scopedHash + ' ' + 'b-time-picker__logo'
               },
-              _react2.default.createElement('img', { src: require('./image/clock2.svg'), alt: 'clock', className: 'jsx-' + _styles2.default.__scopedHash
-              })
+              _react2.default.createElement(_base.ClockIcon, null)
             ),
             _react2.default.createElement('input', {
               type: 'text',
