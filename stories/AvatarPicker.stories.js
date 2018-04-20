@@ -14,7 +14,11 @@ storiesOf('Avatar Picker', module)
   .addDecorator(withTests({ results })('AvatarPicker'))
   .addDecorator(getStory => <div style={{ padding: '24px' }}>{getStory()}</div>)
   .add('default', () => (
-    <AvatarPicker id="avatar" name={text('name', 'name')} onChange={action('onChange')} />
+    <AvatarPicker
+      id="avatar"
+      name={text('name', 'name')}
+      onChange={action('onChange')}
+    />
   ));
 
 storiesOf('Avatar Picker', module)
@@ -23,5 +27,25 @@ storiesOf('Avatar Picker', module)
   .addDecorator(withTests({ results })('AvatarPicker'))
   .addDecorator(getStory => <div style={{ padding: '24px' }}>{getStory()}</div>)
   .add('big', () => (
-    <AvatarPicker id="avatar" size="medium" name={text('name', 'name')} onChange={action('onChange')} />
+    <AvatarPicker
+      id="avatar"
+      size="big"
+      name={text('name', 'name')}
+      onChange={action('onChange')}
+    />
   ));
+
+storiesOf('Avatar Picker', module)
+  .addDecorator(withKnobs)
+  .addDecorator(checkA11y)
+  .addDecorator(withTests({ results })('AvatarPicker'))
+  .addDecorator(getStory => <div style={{ padding: '24px' }}>{getStory()}</div>)
+  .add('medium', () => (
+    <AvatarPicker
+      id="avatar"
+      size="medium"
+      name={text('name', 'name')}
+      onChange={action('onChange')}
+    />
+  ));
+

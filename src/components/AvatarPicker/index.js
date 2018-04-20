@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { EditIcon, CameraIcon, TrashIcon } from 'grommet/components/icons';
-
-import { avatarLarge, avatarBig, fileInput } from './styles';
+import classnames from 'classnames';
+import { avatarBig, fileInput } from './styles';
 import { Button } from '../../';
 
 export default class AvatarPicker extends Component {
@@ -82,13 +82,18 @@ export default class AvatarPicker extends Component {
   }
 
   renderMedium= () => {
-    const { id, name } = this.props;
+    const {
+      id, name,
+    } = this.props;
     const { image } = this.state;
 
     const thumbStyle = {
       backgroundImage: image ? `url(${image})` : 'none',
     };
-
+    const classes = classnames(
+      'avatar__thumb',
+      'avatar__thumb_medium',
+    );
     return (
       <div className="avatar">
         <div className="avatar__button">
@@ -109,7 +114,7 @@ export default class AvatarPicker extends Component {
             onChange={this.handleUpload}
           />
 
-          <div className="avatar__thumb" style={thumbStyle}>
+          <div className={classes} style={thumbStyle}>
             {!image && <CameraIcon />}
           </div>
         </label>
@@ -118,7 +123,7 @@ export default class AvatarPicker extends Component {
           {image && <Button onClick={this.handleEdit} icon={<EditIcon />} size={32} rounded />}
         </div>
 
-        <style jsx>{avatarLarge}</style>
+        <style jsx>{avatarBig}</style>
         <style jsx>{fileInput}</style>
       </div>
     );
@@ -130,10 +135,6 @@ export default class AvatarPicker extends Component {
     switch (size) {
     case 'big':
       return this.renderBig();
-    case 'medium':
-      return this.renderMedium();
-    case 'large':
-      return this.renderLarge();
     default:
       return this.renderMedium();
     }
