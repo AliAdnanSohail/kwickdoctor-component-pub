@@ -171,7 +171,7 @@ export default css`
     &:not(&--rounded) {
       :global(.button__loading-icon) {
         position: absolute;
-        top: calc(50% - 9px);
+        top: calc(50% - 12px);
         left: 32px;
       }
     }
@@ -224,6 +224,7 @@ export default css`
       &:not(&--rounded) {
         :global(.button__loading-icon) {
           left: 16px;
+          top: calc(50% - 9px);
         }
       }
     }
@@ -249,6 +250,7 @@ export default css`
       &:not(&--rounded) {
         :global(.button__loading-icon) {
           left: 21px;
+          top: calc(50% - 9px);
         }
       }
     }
