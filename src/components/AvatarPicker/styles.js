@@ -102,3 +102,53 @@ export const avatarBig = css`
     }
   }
 `;
+
+
+export const avatarLarge = css`
+  .avatar {
+    width: 300px;
+    height: 300px;
+    position: relative;
+
+    &__container {
+      cursor: pointer;
+      color: #c1c2cf;
+    }
+
+    &__thumb {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+
+      height: 100%;
+      width: 100%;
+      border-radius: 22px;
+
+      background: {
+        color: #e7e7f0;
+        position: center;
+        size: cover;
+      }
+
+      :global(svg) {
+        width: 80px;
+        height: 80px;
+
+        fill: #bbbccd;
+        stroke: #bbbccd;
+      }
+    }
+
+    &__button-container {
+      position: absolute;
+      width: 100%;
+      bottom: 0;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      bottom: 20px;
+    }
+  }
+`;

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { EditIcon, CameraIcon, TrashIcon } from 'grommet/components/icons';
 
-import { avatarMedium, avatarBig, fileInput } from './styles';
+import { avatarLarge, avatarBig, fileInput } from './styles';
 import { Button } from '../../';
 
 export default class AvatarPicker extends Component {
@@ -118,7 +118,7 @@ export default class AvatarPicker extends Component {
           {image && <Button onClick={this.handleEdit} icon={<EditIcon />} size={32} rounded />}
         </div>
 
-        <style jsx>{avatarMedium}</style>
+        <style jsx>{avatarLarge}</style>
         <style jsx>{fileInput}</style>
       </div>
     );
@@ -130,6 +130,10 @@ export default class AvatarPicker extends Component {
     switch (size) {
     case 'big':
       return this.renderBig();
+    case 'medium':
+      return this.renderMedium();
+    case 'large':
+      return this.renderLarge();
     default:
       return this.renderMedium();
     }
