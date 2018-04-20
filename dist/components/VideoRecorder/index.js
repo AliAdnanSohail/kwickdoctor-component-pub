@@ -235,22 +235,24 @@ var VideoRecorder = function (_Component) {
 
       console.log('componentDidMount');
 
-      var handleSuccess = function handleSuccess(stream) {
-        _this2.video.srcObject = stream;
-        _this2.stream = stream;
+      if (navigator.mediaDevices) {
+        var handleSuccess = function handleSuccess(stream) {
+          _this2.video.srcObject = stream;
+          _this2.stream = stream;
 
-        _this2.chunk = [];
+          _this2.chunk = [];
 
-        _this2.initMediaRecorder();
+          _this2.initMediaRecorder();
 
-        _this2.props.onGranted();
-      };
+          _this2.props.onGranted();
+        };
 
-      var handleFailed = function handleFailed(error) {
-        _this2.props.onDenied(error);
-      };
+        var handleFailed = function handleFailed(error) {
+          _this2.props.onDenied(error);
+        };
 
-      navigator.mediaDevices.getUserMedia({ audio: true, video: true }).then(handleSuccess).catch(handleFailed);
+        navigator.mediaDevices.getUserMedia({ audio: true, video: true }).then(handleSuccess).catch(handleFailed);
+      }
     }
   }, {
     key: 'componentWillUnmount',
