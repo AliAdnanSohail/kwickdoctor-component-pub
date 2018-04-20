@@ -508,7 +508,7 @@ exports[`Storyshots Calendar default 1`] = `
         className="jsx-3270423735"
       >
         <button
-          className="jsx-1990659263 day day--selected--without-events day--date--2018-04-18"
+          className="jsx-1990659263 day day--disabled day--date--2018-04-18"
           onClick={[Function]}
           type="button"
         >
@@ -523,7 +523,7 @@ exports[`Storyshots Calendar default 1`] = `
         className="jsx-3270423735"
       >
         <button
-          className="jsx-1990659263 day day--date--2018-04-19"
+          className="jsx-1990659263 day day--disabled day--date--2018-04-19"
           onClick={[Function]}
           type="button"
         >
@@ -538,7 +538,7 @@ exports[`Storyshots Calendar default 1`] = `
         className="jsx-3270423735"
       >
         <button
-          className="jsx-1990659263 day day--date--2018-04-20"
+          className="jsx-1990659263 day day--selected--without-events day--date--2018-04-20"
           onClick={[Function]}
           type="button"
         >
@@ -930,7 +930,7 @@ exports[`Storyshots Date Picker defauld 1`] = `
               tabIndex={undefined}
               title={undefined}
               type="text"
-              value="18 Apr, 2018"
+              value="20 Apr, 2018"
             />
           </div>
         </div>
@@ -1888,7 +1888,7 @@ exports[`Storyshots Video Player default 1`] = `
   }
 >
   <div
-    className="jsx-3816864822 video-player-container"
+    className="jsx-1849615036 video-player-container"
   >
     <div
       className="video-react-controls-enabled video-react-paused video-react-fluid video-react-user-active video-react-workinghover video-react video-player"

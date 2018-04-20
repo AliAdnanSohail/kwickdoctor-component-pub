@@ -6,9 +6,20 @@ import 'video-react/dist/video-react.css';
 export default css`
   .video-player-container {
     position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    border-radius: 25px;
+
+    overflow: hidden;
+
     width: 100%;
 
-    :global(.video-player) {
+    @media (min-width: 700px) {
+      width: 640px;
     }
   }
 `;
