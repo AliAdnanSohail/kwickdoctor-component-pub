@@ -35,7 +35,7 @@ export default css`
       }
     }
     &__box {
-      box-shadow: 0px 0px 33px 0px rgba(0, 0, 0, 0.12);
+      box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.12);
       border-radius: 6px;
       color: #b8b9cc;
       font-size: 0.8rem;
@@ -51,7 +51,7 @@ export default css`
       cursor: pointer;
 
       position: relative;
-      input[type="radio"] {
+      input[type='radio'] {
         cursor: pointer;
       }
       &_active {
