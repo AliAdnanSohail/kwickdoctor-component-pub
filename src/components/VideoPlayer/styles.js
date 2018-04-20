@@ -1,4 +1,5 @@
 import css from 'styled-jsx/css';
+import 'video-react/dist/video-react.css';
 
 import settings from '../../utils/style-helper';
 
@@ -25,27 +26,14 @@ export default css`
     width: 99px;
   }
 
-  video {
-    width: 100%;
-    vertical-align: top;
-    object-fit: fill;
-  }
-
-  .fullscreen_button {
-    position: absolute;
-    top: 15px;
-    right: 15px;
-    margin: 0;
-  }
+    overflow: hidden;
 
   .playPause_button {
     position: absolute;
     width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
+    min-height: 480px;
+
+    background-color: ${settings.borderColor};
 
   /* hide the default Chrome video player styling */
 

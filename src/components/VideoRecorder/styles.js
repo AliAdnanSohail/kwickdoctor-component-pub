@@ -11,11 +11,12 @@ export default css`
     align-items: center;
     flex-direction: column;
 
-    border-radius: 25px;
-
     overflow: hidden;
 
     width: 100%;
+    min-height: 480px;
+
+    background-color: ${settings.borderColor};
 
     @media (min-width: 700px) {
       width: 640px;
