@@ -58,11 +58,7 @@ var equals = function equals(targetValue, name) {
  */
 var maxLength = function maxLength(max) {
   return function (value) {
-    if (!value || value.length > max) {
-      return 'Should be ' + max + ' characters or less. Check up, please!';
-    }
-
-    return undefined;
+    return value && value.length > max ? 'Should be ' + max + ' characters or less. Check up, please!' : undefined;
   };
 };
 
@@ -77,11 +73,7 @@ var maxLength = function maxLength(max) {
  */
 var minLength = function minLength(min) {
   return function (value) {
-    if (!value || value.length < min) {
-      return 'Should be ' + min + ' characters or more. Check up, please!';
-    }
-
-    return undefined;
+    return value && value.length < min ? 'Should be ' + min + ' characters or more. Check up, please!' : undefined;
   };
 };
 
