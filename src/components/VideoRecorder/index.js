@@ -3,23 +3,17 @@ import PropTypes from 'prop-types';
 
 import styles, { controls, countdown as countdownStyles, unavailable } from './styles';
 import VideoRecorderButton from './VideoRecorderButton';
-import VideoPlayer from '../VideoPlayer';
 
 export default class VideoRecorder extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      asked: false,
       available: true,
       countingdown: false,
       countdownValue: 5,
-      // paused: false,
-      permission: false,
       recording: false,
-      stoped: false,
       time: 0,
-      url: '',
     };
 
     this.stream = null;
@@ -31,12 +25,10 @@ export default class VideoRecorder extends Component {
     console.log('componentDidMount');
 
     const handleSuccess = (stream) => {
-      this.stream = stream;
-      this.chunk = [];
-
-      this.setState({ permission: true, asked: true });
-
       this.video.srcObject = stream;
+      this.stream = stream;
+
+      this.chunk = [];
 
       this.initMediaRecorder();
 
@@ -44,7 +36,6 @@ export default class VideoRecorder extends Component {
     };
 
     const handleFailed = (error) => {
-      this.setState({ asked: false });
       this.props.onDenied(error);
     };
 
@@ -115,9 +106,10 @@ export default class VideoRecorder extends Component {
 
       this.setState({ countdownValue: countdownValue - 1 }, () => {
         if (this.state.countdownValue === 0) {
-          this.props.onStart(this.stream);
+          clearInterval(this.countdown);
 
           this.chunk = [];
+
           this.recorder.start(10);
 
           this.setState({ countingdown: false, recording: true }, () => {
@@ -128,8 +120,6 @@ export default class VideoRecorder extends Component {
             }, 1000);
 
             this.props.onStart(this.stream);
-
-            clearInterval(this.countdown);
           });
         }
       });
@@ -143,15 +133,13 @@ export default class VideoRecorder extends Component {
       return;
     }
 
+    clearInterval(this.timer);
+
     this.recorder.stop();
 
     const blob = new Blob(this.chunk, { type: 'video/webm' });
 
-    this.setState({ recording: false, stoped: true, url: window.URL.createObjectURL(blob) });
-
-    clearInterval(this.timer);
-
-    this.stream.getTracks().forEach(track => track.stop());
+    this.setState({ recording: false, countdownValue: 5, time: 0 });
 
     this.props.onStop(blob);
   };
@@ -164,13 +152,10 @@ export default class VideoRecorder extends Component {
     } else if (recording) {
       const { time } = this.state;
 
-      let minutes = parseInt(time / 60, 10);
-      let seconds = parseInt(time % 60, 10);
+      const minutes = parseInt(time / 60, 10);
+      const seconds = parseInt(time % 60, 10);
 
-      minutes = minutes < 10 ? `0${minutes}` : minutes;
-      seconds = seconds < 10 ? `0${seconds}` : seconds;
-
-      return `${minutes}:${seconds}`;
+      return `${minutes < 10 ? `0${minutes}` : minutes}:${seconds < 10 ? `0${seconds}` : seconds}`;
     }
 
     return 'Start recording';
@@ -195,11 +180,9 @@ export default class VideoRecorder extends Component {
   };
 
   renderRecorder = () => {
-    const { countingdown, stoped, url } = this.state;
+    const { countingdown } = this.state;
 
-    return stoped ? (
-      <VideoPlayer src={url} />
-    ) : (
+    return (
       <Fragment>
         {/* eslint-disable-next-line */}
         <video
@@ -242,8 +225,6 @@ export default class VideoRecorder extends Component {
 VideoRecorder.propTypes = {
   onDenied: PropTypes.func,
   onGranted: PropTypes.func,
-  // onPause,
-  // onResume,
   onStart: PropTypes.func,
   onStop: PropTypes.func,
 };
