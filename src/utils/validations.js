@@ -45,10 +45,13 @@ const equals = (targetValue, name) => value =>
  *
  * @return {String|undefined} [description]
  */
-const maxLength = max => value =>
-  (value && value.length > max
-    ? `Should be ${max} characters or less. Check up, please!`
-    : undefined);
+const maxLength = max => (value) => {
+  if (!value || value.length > max) {
+    return `Should be ${max} characters or less. Check up, please!`;
+  }
+
+  return undefined;
+};
 
 /**
  * Returns error message if the value must be min characters or more
@@ -59,10 +62,13 @@ const maxLength = max => value =>
  *
  * @return {String|Null} [description]
  */
-const minLength = min => value =>
-  (value && value.length < min
-    ? `Should be ${min} characters or more. Check up, please!`
-    : undefined);
+const minLength = min => (value) => {
+  if (!value || value.length < min) {
+    return `Should be ${min} characters or more. Check up, please!`;
+  }
+
+  return undefined;
+};
 
 /**
  * Returns error message if the value isn't a number
