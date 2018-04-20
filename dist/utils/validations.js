@@ -3,7 +3,6 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.minLength = undefined;
 
 var _moment = require('moment');
 
@@ -72,7 +71,7 @@ var maxLength = function maxLength(max) {
  *
  * @return {String|Null} [description]
  */
-var minLength = exports.minLength = function minLength(min) {
+var minLength = function minLength(min) {
   return function (value) {
     return value && value.length < min ? 'Should be ' + min + ' characters or more. Check up, please!' : undefined;
   };

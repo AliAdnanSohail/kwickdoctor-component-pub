@@ -59,7 +59,7 @@ const maxLength = max => value =>
  *
  * @return {String|Null} [description]
  */
-export const minLength = min => value =>
+const minLength = min => value =>
   (value && value.length < min
     ? `Should be ${min} characters or more. Check up, please!`
     : undefined);
