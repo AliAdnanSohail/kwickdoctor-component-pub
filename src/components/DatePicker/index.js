@@ -27,37 +27,6 @@ export default class DatePicker extends Component {
     };
   }
 
-  componentDidMount() {
-    this.context._register(this, this.id);
-  }
-
-  componentWillReceiveProps({ validations: nextValidations, ...nextProps }) {
-    const { validations, ...props } = this.props;
-
-    if (
-      !shallowEqualObjects(props, nextProps) ||
-      !shallowEqualArrays(validations, nextValidations)
-    ) {
-      this.context._setProps(nextProps, this.id);
-    }
-  }
-
-  shouldComponentUpdate(nextProps, nextState, nextContext) {
-    return nextContext !== this.context;
-  }
-
-  componentWillUnmount() {
-    this.context._unregister(this, this.id);
-  }
-
-  getError = () => {
-    const props = this.context._getProps(this.id);
-    if (!props) {
-      return null;
-    }
-    return props.error;
-  }
-
   errorMessage = error => error && <div className="input-error">{error}</div>;
 
   handleChange = (dateOrDateString) => {
@@ -66,17 +35,14 @@ export default class DatePicker extends Component {
       date = moment(date.target.value, this.props.dateFormat, true);
     }
 
-    this.context._handleChange({ target: { value: date } }, this.id);
-
     this.setState({ value: date });
     this.props.onChange(date);
   };
 
   render() {
     const {
-      id, label, name, dateFormat, containerClassName,
+      id, label, name, dateFormat, containerClassName, error
     } = this.props;
-    const error = this.getError();
     const blockClasses = classnames('form-field', containerClassName, {
       'has-error': !!error,
     });
@@ -117,7 +83,7 @@ DatePicker.propTypes = {
   dateFormat: PropTypes.string,
   onChange: PropTypes.func.isRequired,
   containerClassName: PropTypes.string,
-  validations: PropTypes.array,
+  error: PropTypes.string,
 };
 
 DatePicker.defaultProps = {
@@ -126,14 +92,5 @@ DatePicker.defaultProps = {
   value: moment(),
   dateFormat: 'DD MMM, YYYY',
   containerClassName: null,
-  validations: [],
-};
-
-DatePicker.contextTypes = {
-  _register: PropTypes.func.isRequired,
-  _unregister: PropTypes.func.isRequired,
-  _setProps: PropTypes.func.isRequired,
-  _handleChange: PropTypes.func.isRequired,
-  _handleBlur: PropTypes.func.isRequired,
-  _getProps: PropTypes.func.isRequired,
+  error: '',
 };

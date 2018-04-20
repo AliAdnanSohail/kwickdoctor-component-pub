@@ -19,9 +19,13 @@ var _propTypes = require('prop-types');
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
 
-var _classnames = require('classnames');
+var _classnames2 = require('classnames');
 
-var _classnames2 = _interopRequireDefault(_classnames);
+var _classnames3 = _interopRequireDefault(_classnames2);
+
+var _css = require('styled-jsx/css');
+
+var _css2 = _interopRequireDefault(_css);
 
 var _icons = require('grommet/components/icons');
 
@@ -30,6 +34,8 @@ var _styles = require('./styles');
 var _styles2 = _interopRequireDefault(_styles);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -44,17 +50,6 @@ var Button = function (_Component) {
     _classCallCheck(this, Button);
 
     var _this = _possibleConstructorReturn(this, (Button.__proto__ || Object.getPrototypeOf(Button)).call(this, props));
-
-    _this.getIconStyle = function () {
-      var size = _this.props.size;
-      var _defaultExport = ['button svg{width:' + size / 2 + 'px !important;height:' + size / 2 + 'px !important;}'];
-      _defaultExport.__hash = '3358251005';
-      _defaultExport.__scoped = ['button.jsx-3205182652 svg.jsx-3205182652{width:' + size / 2 + 'px !important;height:' + size / 2 + 'px !important;}'];
-      _defaultExport.__scopedHash = '3205182652';
-
-
-      return _defaultExport;
-    };
 
     _this.handleClick = function (event) {
       var _this$button$getBound = _this.button.getBoundingClientRect(),
@@ -87,12 +82,7 @@ var Button = function (_Component) {
       return rounded && icon ? _react2.default.createElement(
         _react.Fragment,
         null,
-        loading ? _react2.default.createElement(_icons.SpinningIcon, { size: 'small', className: 'button__loading-icon' }) : icon,
-        _react2.default.createElement(
-          'style',
-          null,
-          _this.getIconStyle()
-        )
+        loading ? _react2.default.createElement(_icons.SpinningIcon, { size: 'small', className: 'button__loading-icon' }) : icon
       ) : _react2.default.createElement(
         _react.Fragment,
         null,
@@ -121,6 +111,7 @@ var Button = function (_Component) {
 
       var _props = this.props,
           accent = _props.accent,
+          className = _props.className,
           danger = _props.danger,
           disabled = _props.disabled,
           flat = _props.flat,
@@ -135,7 +126,7 @@ var Button = function (_Component) {
           clicked = _state.clicked;
 
 
-      var classes = (0, _classnames2.default)('button', 'button--' + size, { 'button--accent': accent }, { 'button--danger': danger }, { 'button--disabled': disabled }, { 'button--flat': flat }, { 'button--loading': loading }, { 'button--rounded': rounded }, { 'button--squared': squared }, { 'button--transparent': transparent }, { 'has-clicked': clicked });
+      var classes = (0, _classnames3.default)('button', className, _defineProperty({}, 'button--' + size, size), { 'button--accent': accent }, { 'button--danger': danger }, { 'button--disabled': disabled }, { 'button--flat': flat }, { 'button--loading': loading }, { 'button--rounded': rounded }, { 'button--squared': squared }, { 'button--transparent': transparent }, { 'has-clicked': clicked });
       return _react2.default.createElement(
         'button',
         {
@@ -165,6 +156,7 @@ exports.default = Button;
 
 
 Button.propTypes = {
+  className: _propTypes2.default.string,
   children: _propTypes2.default.any,
   icon: _propTypes2.default.element,
   size: _propTypes2.default.oneOf(['s', 'xs', '']),
@@ -180,6 +172,7 @@ Button.propTypes = {
 };
 
 Button.defaultProps = {
+  className: '',
   children: null,
   icon: null,
   size: undefined,

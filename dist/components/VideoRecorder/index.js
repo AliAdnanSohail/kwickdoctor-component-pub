@@ -23,13 +23,9 @@ var _styles = require('./styles');
 
 var _styles2 = _interopRequireDefault(_styles);
 
-var _RecordButton = require('./RecordButton');
+var _VideoRecorderButton = require('./VideoRecorderButton');
 
-var _RecordButton2 = _interopRequireDefault(_RecordButton);
-
-var _VideoPlayer = require('../VideoPlayer');
-
-var _VideoPlayer2 = _interopRequireDefault(_VideoPlayer);
+var _VideoRecorderButton2 = _interopRequireDefault(_VideoRecorderButton);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -80,6 +76,10 @@ var VideoRecorder = function (_Component) {
     _this.start = function () {
       console.log('start');
 
+      if (!_this.state.available) {
+        return;
+      }
+
       _this.setState({ countingdown: true });
 
       _this.countdown = setInterval(function () {
@@ -90,9 +90,10 @@ var VideoRecorder = function (_Component) {
 
         _this.setState({ countdownValue: countdownValue - 1 }, function () {
           if (_this.state.countdownValue === 0) {
-            _this.props.onStart(_this.stream);
+            clearInterval(_this.countdown);
 
             _this.chunk = [];
+
             _this.recorder.start(10);
 
             _this.setState({ countingdown: false, recording: true }, function () {
@@ -103,8 +104,6 @@ var VideoRecorder = function (_Component) {
               }, 1000);
 
               _this.props.onStart(_this.stream);
-
-              clearInterval(_this.countdown);
             });
           }
         });
@@ -114,29 +113,19 @@ var VideoRecorder = function (_Component) {
     _this.stop = function () {
       console.log('stop');
 
-      _this.recorder.stop();
-
-      var blob = new Blob(_this.chunk, { type: 'video/webm' });
-
-      _this.setState({ recording: false, stoped: true, url: window.URL.createObjectURL(blob) });
-
-      clearInterval(_this.timer);
-
-      _this.props.onStop(blob);
-    };
-
-    _this.toggleRecording = function () {
-      console.log(_this.state);
-
       if (!_this.state.available) {
         return;
       }
 
-      if (_this.state.recording) {
-        _this.stop();
-      } else {
-        _this.start();
-      }
+      clearInterval(_this.timer);
+
+      _this.recorder.stop();
+
+      var blob = new Blob(_this.chunk, { type: 'video/webm' });
+
+      _this.setState({ recording: false, countdownValue: 5, time: 0 });
+
+      _this.props.onStop(blob);
     };
 
     _this.renderTimeState = function () {
@@ -154,10 +143,7 @@ var VideoRecorder = function (_Component) {
         var minutes = parseInt(time / 60, 10);
         var seconds = parseInt(time % 60, 10);
 
-        minutes = minutes < 10 ? '0' + minutes : minutes;
-        seconds = seconds < 10 ? '0' + seconds : seconds;
-
-        return minutes + ':' + seconds;
+        return (minutes < 10 ? '0' + minutes : minutes) + ':' + (seconds < 10 ? '0' + seconds : seconds);
       }
 
       return 'Start recording';
@@ -180,15 +166,19 @@ var VideoRecorder = function (_Component) {
       );
     };
 
+    _this.renderControls = function () {
+      if (_this.state.recording) {
+        return _react2.default.createElement(_VideoRecorderButton2.default, { state: 'stop', onClick: _this.stop });
+      }
+
+      return _react2.default.createElement(_VideoRecorderButton2.default, { state: 'start', onClick: _this.start });
+    };
+
     _this.renderRecorder = function () {
-      var _this$state2 = _this.state,
-          countingdown = _this$state2.countingdown,
-          recording = _this$state2.recording,
-          stoped = _this$state2.stoped,
-          url = _this$state2.url;
+      var countingdown = _this.state.countingdown;
 
 
-      return stoped ? _react2.default.createElement(_VideoPlayer2.default, { src: url }) : _react2.default.createElement(
+      return _react2.default.createElement(
         _react.Fragment,
         null,
         _react2.default.createElement(
@@ -215,7 +205,7 @@ var VideoRecorder = function (_Component) {
             },
             _this.renderTimeState()
           ),
-          countingdown ? _this.renderCountdown() : _react2.default.createElement(_RecordButton2.default, { active: recording, onClick: _this.toggleRecording })
+          countingdown ? _this.renderCountdown() : _this.renderControls()
         ),
         _react2.default.createElement(_style2.default, {
           styleId: _styles.controls.__scopedHash,
@@ -225,16 +215,11 @@ var VideoRecorder = function (_Component) {
     };
 
     _this.state = {
-      asked: false,
       available: true,
       countingdown: false,
       countdownValue: 5,
-      // paused: false,
-      permission: false,
       recording: false,
-      stoped: false,
-      time: 0,
-      url: ''
+      time: 0
     };
 
     _this.stream = null;
@@ -251,12 +236,10 @@ var VideoRecorder = function (_Component) {
       console.log('componentDidMount');
 
       var handleSuccess = function handleSuccess(stream) {
-        _this2.stream = stream;
-        _this2.chunk = [];
-
-        _this2.setState({ permission: true, asked: true });
-
         _this2.video.srcObject = stream;
+        _this2.stream = stream;
+
+        _this2.chunk = [];
 
         _this2.initMediaRecorder();
 
@@ -264,7 +247,6 @@ var VideoRecorder = function (_Component) {
       };
 
       var handleFailed = function handleFailed(error) {
-        _this2.setState({ asked: false });
         _this2.props.onDenied(error);
       };
 
@@ -279,12 +261,9 @@ var VideoRecorder = function (_Component) {
       this.chunk = [];
 
       if (this.stream) {
-        var tracks = this.stream.getTracks();
-
-        tracks.forEach(function (track) {
-          track.stop();
+        this.stream.getTracks().forEach(function (track) {
+          return track.stop();
         });
-
         this.stream = null;
       }
 
@@ -330,8 +309,6 @@ exports.default = VideoRecorder;
 VideoRecorder.propTypes = {
   onDenied: _propTypes2.default.func,
   onGranted: _propTypes2.default.func,
-  // onPause,
-  // onResume,
   onStart: _propTypes2.default.func,
   onStop: _propTypes2.default.func
 };

@@ -19,9 +19,7 @@ var _propTypes = require('prop-types');
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
 
-var _classnames = require('classnames');
-
-var _classnames2 = _interopRequireDefault(_classnames);
+var _base = require('grommet/components/icons/base');
 
 var _styles = require('./styles');
 
@@ -35,29 +33,82 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var RecordButton = function (_Component) {
-  _inherits(RecordButton, _Component);
+var greyTheme = {
+  icon: {
+    size: {
+      large: '40px'
+    },
+    color: '#bcbecf'
+  }
+};
+var greenTheme = {
+  icon: {
+    size: {
+      large: '40px'
+    },
+    color: '#70c983'
+  }
+};
 
-  function RecordButton() {
-    _classCallCheck(this, RecordButton);
+var StarPicker = function (_Component) {
+  _inherits(StarPicker, _Component);
 
-    return _possibleConstructorReturn(this, (RecordButton.__proto__ || Object.getPrototypeOf(RecordButton)).apply(this, arguments));
+  function StarPicker(props) {
+    _classCallCheck(this, StarPicker);
+
+    var _this = _possibleConstructorReturn(this, (StarPicker.__proto__ || Object.getPrototypeOf(StarPicker)).call(this, props));
+
+    _this.state = { selectedOption: _this.props.rank, stars: _this.generateStars() };
+    return _this;
   }
 
-  _createClass(RecordButton, [{
+  _createClass(StarPicker, [{
+    key: 'handleChange',
+    value: function handleChange(e) {
+      this.setState({
+        selectedOption: parseInt(e.target.value, 10)
+      });
+    }
+  }, {
+    key: 'generateStars',
+    value: function generateStars() {
+      var res = [];
+      for (var i = 1; i <= this.props.amount; i += 1) {
+        res.push({ key: 'star' + i.toString(), value: parseInt(i, 10) });
+      }
+      return res;
+    }
+  }, {
     key: 'render',
     value: function render() {
-      var _props = this.props,
-          active = _props.active,
-          onClick = _props.onClick;
-
-
-      var classes = (0, _classnames2.default)('record-button', active ? 'record-button--stop' : 'record-button--start');
+      var _this2 = this;
 
       return _react2.default.createElement(
-        'button',
-        { onClick: onClick, className: 'jsx-' + _styles2.default.__scopedHash + ' ' + (classes || '')
-        },
+        _react2.default.Fragment,
+        null,
+        this.state.stars.map(function (star) {
+          return _react2.default.createElement(
+            'label',
+            { key: star.key, htmlFor: star.value + '-' + star.key, className: 'jsx-' + _styles2.default.__scopedHash + ' ' + 'star'
+            },
+            _react2.default.createElement('input', {
+              type: 'radio',
+              name: star.value,
+              id: star.value + '-' + star.key,
+              value: star.value,
+              checked: _this2.state.selectedOption === star.value,
+              onChange: function onChange(e) {
+                return _this2.handleChange(e);
+              },
+              onClick: _this2.props.onClick,
+              className: 'jsx-' + _styles2.default.__scopedHash
+            }),
+            _react2.default.createElement(_base.StarIcon, {
+              theme: _this2.state.selectedOption >= star.value ? greenTheme : greyTheme,
+              size: 'large'
+            })
+          );
+        }),
         _react2.default.createElement(_style2.default, {
           styleId: _styles2.default.__scopedHash,
           css: _styles2.default.__scoped
@@ -66,17 +117,13 @@ var RecordButton = function (_Component) {
     }
   }]);
 
-  return RecordButton;
+  return StarPicker;
 }(_react.Component);
 
-exports.default = RecordButton;
+exports.default = StarPicker;
 
-
-RecordButton.propTypes = {
-  active: _propTypes2.default.bool,
+StarPicker.propTypes = {
+  rank: _propTypes2.default.number.isRequired,
+  amount: _propTypes2.default.number.isRequired,
   onClick: _propTypes2.default.func.isRequired
-};
-
-RecordButton.defaultProps = {
-  active: false
 };

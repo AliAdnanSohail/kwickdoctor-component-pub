@@ -11,21 +11,13 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
-var _propTypes = require('prop-types');
-
-var _propTypes2 = _interopRequireDefault(_propTypes);
-
 var _classnames = require('classnames');
 
 var _classnames2 = _interopRequireDefault(_classnames);
 
-var _css = require('styled-jsx/css');
+var _propTypes = require('prop-types');
 
-var _css2 = _interopRequireDefault(_css);
-
-var _Expand = require('grommet/components/icons/base/Expand');
-
-var _Expand2 = _interopRequireDefault(_Expand);
+var _propTypes2 = _interopRequireDefault(_propTypes);
 
 var _styles = require('./styles');
 
@@ -39,23 +31,62 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var RecordButton = function (_Component) {
-  _inherits(RecordButton, _Component);
+var RadioButtons = function (_Component) {
+  _inherits(RadioButtons, _Component);
 
-  function RecordButton() {
-    _classCallCheck(this, RecordButton);
+  function RadioButtons(props) {
+    _classCallCheck(this, RadioButtons);
 
-    return _possibleConstructorReturn(this, (RecordButton.__proto__ || Object.getPrototypeOf(RecordButton)).apply(this, arguments));
+    var _this = _possibleConstructorReturn(this, (RadioButtons.__proto__ || Object.getPrototypeOf(RadioButtons)).call(this, props));
+
+    _this.state = {};
+    return _this;
   }
 
-  _createClass(RecordButton, [{
+  _createClass(RadioButtons, [{
     key: 'render',
     value: function render() {
+      var _props = this.props,
+          options = _props.options,
+          selected = _props.selected,
+          _onChange = _props.onChange;
+
+
       return _react2.default.createElement(
-        'button',
-        { className: 'fullscreen_button ' + this.props.className, onClick: this.props.onClick },
-        _react2.default.createElement(_Expand2.default, { className: 'expand-icon' }),
-        ' Fullscreen',
+        'fieldset',
+        null,
+        _react2.default.createElement(
+          'div',
+          { className: 'radio__wrapper' },
+          options.map(function (option) {
+            var classes = (0, _classnames2.default)('radio__box', {
+              radio__box_active: selected.toLowerCase() === option.value.toLowerCase()
+            });
+            var iconClasses = (0, _classnames2.default)('radio__icon', {
+              radio__icon_active: selected.toLowerCase() === option.value.toLowerCase()
+            });
+            return _react2.default.createElement(
+              'div',
+              { className: classes, key: option.value },
+              _react2.default.createElement(
+                'div',
+                { className: iconClasses },
+                option.icon
+              ),
+              _react2.default.createElement('input', {
+                type: 'radio',
+                name: 'group',
+                value: option.value,
+                className: 'radio__select',
+                onChange: function onChange(e) {
+                  return _onChange(e.target.value);
+                },
+                defaultChecked: selected === option.value
+              }),
+              option.value
+            );
+          })
+        ),
         _react2.default.createElement(
           'style',
           null,
@@ -65,7 +96,18 @@ var RecordButton = function (_Component) {
     }
   }]);
 
-  return RecordButton;
+  return RadioButtons;
 }(_react.Component);
 
-exports.default = RecordButton;
+exports.default = RadioButtons;
+
+
+RadioButtons.propTypes = {
+  options: _propTypes2.default.array.isRequired,
+  selected: _propTypes2.default.string,
+  onChange: _propTypes2.default.func.isRequired
+};
+
+RadioButtons.defaultProps = {
+  selected: 'lab analysis'
+};

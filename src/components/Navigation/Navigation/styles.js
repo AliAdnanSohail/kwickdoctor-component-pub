@@ -2,12 +2,20 @@ import css from 'styled-jsx/css';
 
 export default css`
   .nav {
+    display: flex;
+    flex-direction: column;
+
+    height: 100%;
+    min-height: 100vh;
     width: 84px;
     padding: 40px 0 80px 0;
+    box-sizing: border-box;
 
     background: linear-gradient(#0d264a, #000c25);
 
     &__list {
+      flex: 1;
+
       list-style-type: none;
       padding: 0 16px;
       margin: 0;

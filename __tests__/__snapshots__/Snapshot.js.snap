@@ -121,7 +121,7 @@ exports[`Storyshots Button default 1`] = `
   }
 >
   <button
-    className="jsx-2170624607 button button--small"
+    className="jsx-149966548 button"
     disabled={false}
     onClick={[Function]}
   >
@@ -463,7 +463,7 @@ exports[`Storyshots Calendar default 1`] = `
         className="jsx-3270423735"
       >
         <button
-          className="jsx-1990659263 day day--selected--without-events day--date--2018-04-15"
+          className="jsx-1990659263 day day--disabled day--date--2018-04-15"
           onClick={[Function]}
           type="button"
         >
@@ -478,7 +478,7 @@ exports[`Storyshots Calendar default 1`] = `
         className="jsx-3270423735"
       >
         <button
-          className="jsx-1990659263 day day--date--2018-04-16"
+          className="jsx-1990659263 day day--disabled day--date--2018-04-16"
           onClick={[Function]}
           type="button"
         >
@@ -493,7 +493,7 @@ exports[`Storyshots Calendar default 1`] = `
         className="jsx-3270423735"
       >
         <button
-          className="jsx-1990659263 day day--date--2018-04-17"
+          className="jsx-1990659263 day day--disabled day--date--2018-04-17"
           onClick={[Function]}
           type="button"
         >
@@ -508,7 +508,7 @@ exports[`Storyshots Calendar default 1`] = `
         className="jsx-3270423735"
       >
         <button
-          className="jsx-1990659263 day day--date--2018-04-18"
+          className="jsx-1990659263 day day--disabled day--date--2018-04-18"
           onClick={[Function]}
           type="button"
         >
@@ -523,7 +523,7 @@ exports[`Storyshots Calendar default 1`] = `
         className="jsx-3270423735"
       >
         <button
-          className="jsx-1990659263 day day--date--2018-04-19"
+          className="jsx-1990659263 day day--disabled day--date--2018-04-19"
           onClick={[Function]}
           type="button"
         >
@@ -538,7 +538,7 @@ exports[`Storyshots Calendar default 1`] = `
         className="jsx-3270423735"
       >
         <button
-          className="jsx-1990659263 day day--date--2018-04-20"
+          className="jsx-1990659263 day day--selected--without-events day--date--2018-04-20"
           onClick={[Function]}
           type="button"
         >
@@ -930,11 +930,12 @@ exports[`Storyshots Date Picker defauld 1`] = `
               tabIndex={undefined}
               title={undefined}
               type="text"
-              value="15 Apr, 2018"
+              value="20 Apr, 2018"
             />
           </div>
         </div>
       </div>
+      
       <style>
         .form-field{position:relative;}
       </style>
@@ -1015,6 +1016,46 @@ exports[`Storyshots File Input default 1`] = `
       Upload license
     </span>
   </label>
+</div>
+`;
+
+exports[`Storyshots FileViewer simple PDF viewer 1`] = `
+<div
+  style={
+    Object {
+      "backgroundColor": "#666666",
+      "height": "500px",
+      "padding": "24px",
+    }
+  }
+>
+  <div
+    className="react-pdf__Document"
+  >
+    <div
+      className="react-pdf__message react-pdf__message--loading"
+    >
+      Loading PDF…
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots FileViewer simple img viewer 1`] = `
+<div
+  style={
+    Object {
+      "backgroundColor": "#666666",
+      "height": "500px",
+      "padding": "24px",
+    }
+  }
+>
+  <img
+    alt="This document can't be displayed"
+    className="jsx-2199625982 image"
+    src={undefined}
+  />
 </div>
 `;
 
@@ -1301,7 +1342,7 @@ exports[`Storyshots Modal default 1`] = `
   }
 >
   <button
-    className="jsx-2170624607 button button--undefined"
+    className="jsx-149966548 button"
     disabled={false}
     onClick={[Function]}
   >
@@ -1324,10 +1365,10 @@ exports[`Storyshots Navigation default 1`] = `
   }
 >
   <nav
-    className="jsx-1112336804 nav"
+    className="jsx-970676680 nav"
   >
     <ul
-      className="jsx-1112336804 nav__list"
+      className="jsx-970676680 nav__list"
     >
       <li>
         <a
@@ -1410,6 +1451,149 @@ exports[`Storyshots Navigation default 1`] = `
     </ul>
   </nav>
 </main>
+`;
+
+exports[`Storyshots Notification default 1`] = `
+<div
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
+>
+  <div
+    className="jsx-3439448312 card notification-card"
+    style={Object {}}
+  >
+    <div
+      className="jsx-3375289435 jsx-1245880828 notification__time"
+    >
+      12:00 AM, Jun 20
+    </div>
+    <div
+      className="jsx-3375289435 jsx-1245880828 notification__message"
+    >
+      <span
+        className="jsx-3375289435 jsx-1245880828 notification__dot"
+      />
+      New message
+    </div>
+    <div
+      className="jsx-3375289435 jsx-1245880828 notification__actions"
+    >
+      <button
+        className="jsx-149966548 button button--s button--flat button--rounded"
+        disabled={false}
+        onClick={[Function]}
+      >
+        <svg
+          aria-label="checkmark"
+          className="grommetux-control-icon grommetux-control-icon-checkmark grommetux-control-icon--responsive"
+          height="24px"
+          role="img"
+          version="1.1"
+          viewBox="0 0 24 24"
+          width="24px"
+        >
+          <polyline
+            fill="none"
+            points="2 14 9 20 22 4"
+            stroke="#000"
+            strokeWidth="2"
+          />
+        </svg>
+      </button>
+      <button
+        className="jsx-149966548 button button--s button--flat button--rounded"
+        disabled={false}
+        onClick={[Function]}
+      >
+        <svg
+          aria-label="trash"
+          className="grommetux-control-icon grommetux-control-icon-trash grommetux-control-icon--responsive"
+          height="24px"
+          role="img"
+          version="1.1"
+          viewBox="0 0 24 24"
+          width="24px"
+        >
+          <path
+            d="M4,5 L20,5 L20,23 L4,23 L4,5 Z M1,5 L23,5 M9,1 L15,1 L15,5 L9,5 L9,1 Z M9,1 L15,1 L15,5 L9,5 L9,1 Z M15,9 L15,19 M9,9 L9,19"
+            fill="none"
+            stroke="#000"
+            strokeWidth="2"
+          />
+        </svg>
+      </button>
+    </div>
+  </div>
+  <div
+    className="jsx-3439448312 card notification-card"
+    style={Object {}}
+  >
+    <div
+      className="jsx-3375289435 jsx-1245880828 notification__time"
+    >
+      12:00 AM, Jun 20
+    </div>
+    <div
+      className="jsx-3375289435 jsx-1245880828 notification__message"
+    >
+      <span
+        className="jsx-3375289435 jsx-1245880828 notification__dot"
+      />
+      New message
+    </div>
+    <div
+      className="jsx-3375289435 jsx-1245880828 notification__actions"
+    >
+      <button
+        className="jsx-149966548 button button--s button--flat button--rounded"
+        disabled={false}
+        onClick={[Function]}
+      >
+        <svg
+          aria-label="checkmark"
+          className="grommetux-control-icon grommetux-control-icon-checkmark grommetux-control-icon--responsive"
+          height="24px"
+          role="img"
+          version="1.1"
+          viewBox="0 0 24 24"
+          width="24px"
+        >
+          <polyline
+            fill="none"
+            points="2 14 9 20 22 4"
+            stroke="#000"
+            strokeWidth="2"
+          />
+        </svg>
+      </button>
+      <button
+        className="jsx-149966548 button button--s button--flat button--rounded"
+        disabled={false}
+        onClick={[Function]}
+      >
+        <svg
+          aria-label="trash"
+          className="grommetux-control-icon grommetux-control-icon-trash grommetux-control-icon--responsive"
+          height="24px"
+          role="img"
+          version="1.1"
+          viewBox="0 0 24 24"
+          width="24px"
+        >
+          <path
+            d="M4,5 L20,5 L20,23 L4,23 L4,5 Z M1,5 L23,5 M9,1 L15,1 L15,5 L9,5 L9,1 Z M9,1 L15,1 L15,5 L9,5 L9,1 Z M15,9 L15,19 M9,9 L9,19"
+            fill="none"
+            stroke="#000"
+            strokeWidth="2"
+          />
+        </svg>
+      </button>
+    </div>
+  </div>
+</div>
 `;
 
 exports[`Storyshots Paginator default 1`] = `
@@ -1606,6 +1790,425 @@ exports[`Storyshots Paginator default 1`] = `
 </div>
 `;
 
+exports[`Storyshots RadioButtons default 1`] = `
+<div
+  style={
+    Object {
+      "maxWidth": "443px",
+      "padding": "24px",
+    }
+  }
+>
+  <fieldset>
+    <div
+      className="radio__wrapper"
+    >
+      <div
+        className="radio__box"
+      >
+        <div
+          className="radio__icon"
+        >
+          <svg
+            aria-label="tools"
+            className="grommetux-control-icon grommetux-control-icon-tools grommetux-control-icon--responsive"
+            height="24px"
+            role="img"
+            version="1.1"
+            viewBox="0 0 24 24"
+            width="24px"
+          >
+            <path
+              d="M11,2 L22,13 L17.5,17.5 L6.5,6.5 L11,2 Z M16,6 L17,5 L19,7 L18,8 M13,13 L4,22 L2,20 L11,11 M5,18 L6,19"
+              fill="none"
+              stroke="#000"
+              strokeWidth="2"
+            />
+          </svg>
+        </div>
+        <input
+          className="radio__select"
+          defaultChecked={false}
+          name="group"
+          onChange={[Function]}
+          type="radio"
+          value="Medical record"
+        />
+        Medical record
+      </div>
+      <div
+        className="radio__box"
+      >
+        <div
+          className="radio__icon"
+        >
+          <svg
+            aria-label="tools"
+            className="grommetux-control-icon grommetux-control-icon-tools grommetux-control-icon--responsive"
+            height="24px"
+            role="img"
+            version="1.1"
+            viewBox="0 0 24 24"
+            width="24px"
+          >
+            <path
+              d="M11,2 L22,13 L17.5,17.5 L6.5,6.5 L11,2 Z M16,6 L17,5 L19,7 L18,8 M13,13 L4,22 L2,20 L11,11 M5,18 L6,19"
+              fill="none"
+              stroke="#000"
+              strokeWidth="2"
+            />
+          </svg>
+        </div>
+        <input
+          className="radio__select"
+          defaultChecked={false}
+          name="group"
+          onChange={[Function]}
+          type="radio"
+          value="Prescription"
+        />
+        Prescription
+      </div>
+      <div
+        className="radio__box"
+      >
+        <div
+          className="radio__icon"
+        >
+          <svg
+            aria-label="tools"
+            className="grommetux-control-icon grommetux-control-icon-tools grommetux-control-icon--responsive"
+            height="24px"
+            role="img"
+            version="1.1"
+            viewBox="0 0 24 24"
+            width="24px"
+          >
+            <path
+              d="M11,2 L22,13 L17.5,17.5 L6.5,6.5 L11,2 Z M16,6 L17,5 L19,7 L18,8 M13,13 L4,22 L2,20 L11,11 M5,18 L6,19"
+              fill="none"
+              stroke="#000"
+              strokeWidth="2"
+            />
+          </svg>
+        </div>
+        <input
+          className="radio__select"
+          defaultChecked={false}
+          name="group"
+          onChange={[Function]}
+          type="radio"
+          value="Lab analysis"
+        />
+        Lab analysis
+      </div>
+      <div
+        className="radio__box"
+      >
+        <div
+          className="radio__icon"
+        >
+          <svg
+            aria-label="tools"
+            className="grommetux-control-icon grommetux-control-icon-tools grommetux-control-icon--responsive"
+            height="24px"
+            role="img"
+            version="1.1"
+            viewBox="0 0 24 24"
+            width="24px"
+          >
+            <path
+              d="M11,2 L22,13 L17.5,17.5 L6.5,6.5 L11,2 Z M16,6 L17,5 L19,7 L18,8 M13,13 L4,22 L2,20 L11,11 M5,18 L6,19"
+              fill="none"
+              stroke="#000"
+              strokeWidth="2"
+            />
+          </svg>
+        </div>
+        <input
+          className="radio__select"
+          defaultChecked={false}
+          name="group"
+          onChange={[Function]}
+          type="radio"
+          value="Sick list"
+        />
+        Sick list
+      </div>
+    </div>
+    <style>
+      fieldset{border:none;}
+      .radio__wrapper{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;}
+      .radio__select{opacity:0;width:100%;height:46px;position:absolute;left:0px;}
+      .radio__icon{margin-right:18px;}
+      .radio__icon svg path{stroke:#b8b9cc !important;}
+      .radio__icon_active svg path{stroke:white !important;}
+      .radio__box{box-shadow:0px 0px 33px 0px rgba(0,0,0,0.12);border-radius:6px;color:#b8b9cc;font-size:0.8rem;text-transform:uppercase;padding:13px 16px 13px 23px;margin-bottom:20px;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-flex-basis:39%;-ms-flex-preferred-size:39%;flex-basis:39%;cursor:pointer;position:relative;}
+      .radio__box input[type="radio"]{cursor:pointer;}
+      .radio__box_active{background-color:#1f93f4;color:white;}
+      .radio__column{-webkit-flex-basis:47%;-ms-flex-preferred-size:47%;flex-basis:47%;}
+    </style>
+  </fieldset>
+</div>
+`;
+
+exports[`Storyshots StarPicker simple start picker 1`] = `
+<div
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
+>
+  <label
+    className="jsx-1428835773 star"
+    htmlFor="1-star1"
+  >
+    <input
+      checked={false}
+      className="jsx-1428835773"
+      id="1-star1"
+      name={1}
+      onChange={[Function]}
+      onClick={[Function]}
+      type="radio"
+      value={1}
+    />
+    <svg
+      aria-label="star"
+      className="grommetux-control-icon grommetux-control-icon-star grommetux-control-icon--large grommetux-control-icon--responsive"
+      height="24px"
+      role="img"
+      theme={
+        Object {
+          "icon": Object {
+            "color": "#70c983",
+            "size": Object {
+              "large": "40px",
+            },
+          },
+        }
+      }
+      version="1.1"
+      viewBox="0 0 24 24"
+      width="24px"
+    >
+      <polygon
+        fill="none"
+        points="5 21 8 14 3 9 9 9 12 3 15 9 21 9 16 14 19 21 12 17"
+        stroke="#000"
+        strokeWidth="2"
+      />
+    </svg>
+  </label>
+  <label
+    className="jsx-1428835773 star"
+    htmlFor="2-star2"
+  >
+    <input
+      checked={false}
+      className="jsx-1428835773"
+      id="2-star2"
+      name={2}
+      onChange={[Function]}
+      onClick={[Function]}
+      type="radio"
+      value={2}
+    />
+    <svg
+      aria-label="star"
+      className="grommetux-control-icon grommetux-control-icon-star grommetux-control-icon--large grommetux-control-icon--responsive"
+      height="24px"
+      role="img"
+      theme={
+        Object {
+          "icon": Object {
+            "color": "#70c983",
+            "size": Object {
+              "large": "40px",
+            },
+          },
+        }
+      }
+      version="1.1"
+      viewBox="0 0 24 24"
+      width="24px"
+    >
+      <polygon
+        fill="none"
+        points="5 21 8 14 3 9 9 9 12 3 15 9 21 9 16 14 19 21 12 17"
+        stroke="#000"
+        strokeWidth="2"
+      />
+    </svg>
+  </label>
+  <label
+    className="jsx-1428835773 star"
+    htmlFor="3-star3"
+  >
+    <input
+      checked={true}
+      className="jsx-1428835773"
+      id="3-star3"
+      name={3}
+      onChange={[Function]}
+      onClick={[Function]}
+      type="radio"
+      value={3}
+    />
+    <svg
+      aria-label="star"
+      className="grommetux-control-icon grommetux-control-icon-star grommetux-control-icon--large grommetux-control-icon--responsive"
+      height="24px"
+      role="img"
+      theme={
+        Object {
+          "icon": Object {
+            "color": "#70c983",
+            "size": Object {
+              "large": "40px",
+            },
+          },
+        }
+      }
+      version="1.1"
+      viewBox="0 0 24 24"
+      width="24px"
+    >
+      <polygon
+        fill="none"
+        points="5 21 8 14 3 9 9 9 12 3 15 9 21 9 16 14 19 21 12 17"
+        stroke="#000"
+        strokeWidth="2"
+      />
+    </svg>
+  </label>
+  <label
+    className="jsx-1428835773 star"
+    htmlFor="4-star4"
+  >
+    <input
+      checked={false}
+      className="jsx-1428835773"
+      id="4-star4"
+      name={4}
+      onChange={[Function]}
+      onClick={[Function]}
+      type="radio"
+      value={4}
+    />
+    <svg
+      aria-label="star"
+      className="grommetux-control-icon grommetux-control-icon-star grommetux-control-icon--large grommetux-control-icon--responsive"
+      height="24px"
+      role="img"
+      theme={
+        Object {
+          "icon": Object {
+            "color": "#bcbecf",
+            "size": Object {
+              "large": "40px",
+            },
+          },
+        }
+      }
+      version="1.1"
+      viewBox="0 0 24 24"
+      width="24px"
+    >
+      <polygon
+        fill="none"
+        points="5 21 8 14 3 9 9 9 12 3 15 9 21 9 16 14 19 21 12 17"
+        stroke="#000"
+        strokeWidth="2"
+      />
+    </svg>
+  </label>
+  <label
+    className="jsx-1428835773 star"
+    htmlFor="5-star5"
+  >
+    <input
+      checked={false}
+      className="jsx-1428835773"
+      id="5-star5"
+      name={5}
+      onChange={[Function]}
+      onClick={[Function]}
+      type="radio"
+      value={5}
+    />
+    <svg
+      aria-label="star"
+      className="grommetux-control-icon grommetux-control-icon-star grommetux-control-icon--large grommetux-control-icon--responsive"
+      height="24px"
+      role="img"
+      theme={
+        Object {
+          "icon": Object {
+            "color": "#bcbecf",
+            "size": Object {
+              "large": "40px",
+            },
+          },
+        }
+      }
+      version="1.1"
+      viewBox="0 0 24 24"
+      width="24px"
+    >
+      <polygon
+        fill="none"
+        points="5 21 8 14 3 9 9 9 12 3 15 9 21 9 16 14 19 21 12 17"
+        stroke="#000"
+        strokeWidth="2"
+      />
+    </svg>
+  </label>
+  <label
+    className="jsx-1428835773 star"
+    htmlFor="6-star6"
+  >
+    <input
+      checked={false}
+      className="jsx-1428835773"
+      id="6-star6"
+      name={6}
+      onChange={[Function]}
+      onClick={[Function]}
+      type="radio"
+      value={6}
+    />
+    <svg
+      aria-label="star"
+      className="grommetux-control-icon grommetux-control-icon-star grommetux-control-icon--large grommetux-control-icon--responsive"
+      height="24px"
+      role="img"
+      theme={
+        Object {
+          "icon": Object {
+            "color": "#bcbecf",
+            "size": Object {
+              "large": "40px",
+            },
+          },
+        }
+      }
+      version="1.1"
+      viewBox="0 0 24 24"
+      width="24px"
+    >
+      <polygon
+        fill="none"
+        points="5 21 8 14 3 9 9 9 12 3 15 9 21 9 16 14 19 21 12 17"
+        stroke="#000"
+        strokeWidth="2"
+      />
+    </svg>
+  </label>
+</div>
+`;
+
 exports[`Storyshots Stepper Stepper 1`] = `
 <div
   style={
@@ -1673,7 +2276,7 @@ exports[`Storyshots Stepper Stepper 1`] = `
       }
     >
       <button
-        className="jsx-2170624607 button button--undefined"
+        className="jsx-149966548 button"
         disabled={false}
         onClick={[Function]}
       >
@@ -1690,6 +2293,54 @@ exports[`Storyshots Stepper Stepper 1`] = `
 </div>
 `;
 
+exports[`Storyshots TimePicker TimePicker 1`] = `
+<div
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
+>
+  <section
+    className="jsx-3947417489 b-time-picker"
+  >
+    <div
+      className="jsx-3947417489 b-time-picker__wrapper"
+    >
+      <div
+        className="jsx-3947417489 b-time-picker__title"
+      >
+        Appointment time
+      </div>
+      <div
+        className="jsx-3947417489 b-time-picker__input"
+        onClick={[Function]}
+        onKeyPress={[Function]}
+        role="button"
+        tabIndex="0"
+      >
+        <div
+          className="jsx-3947417489 b-time-picker__logo"
+        >
+          <img
+            alt="clock"
+            className="jsx-3947417489"
+            src={Object {}}
+          />
+        </div>
+        <input
+          className="jsx-3947417489 b-input"
+          onChange={[Function]}
+          type="text"
+          value="Pick time"
+        />
+      </div>
+      
+    </div>
+  </section>
+</div>
+`;
+
 exports[`Storyshots Toast default 1`] = `
 <div
   style={
@@ -1699,7 +2350,7 @@ exports[`Storyshots Toast default 1`] = `
   }
 >
   <button
-    className="jsx-2170624607 button button--undefined"
+    className="jsx-149966548 button"
     disabled={false}
     onClick={[Function]}
   >
@@ -1732,285 +2383,153 @@ exports[`Storyshots Toast default 1`] = `
 </div>
 `;
 
-exports[`Storyshots Video player default 1`] = `
+exports[`Storyshots Video Player default 1`] = `
 <div
   style={
     Object {
+      "alignItems": "center",
+      "display": "flex",
+      "flexDirection": "row",
+      "justifyContent": "center",
       "padding": "24px",
     }
   }
 >
   <div
-    className="videoPlaycer_container"
+    className="jsx-1849615036 video-player-container"
   >
-    <button
-      className="fullscreen_button fullscreen_button"
-      onClick={[Function]}
-    >
-      <svg
-        aria-label="expand"
-        className="grommetux-control-icon grommetux-control-icon-expand expand-icon grommetux-control-icon--responsive"
-        height="24px"
-        role="img"
-        version="1.1"
-        viewBox="0 0 24 24"
-        width="24px"
-      >
-        <path
-          d="M10,14 L2,22 M1,15 L1,23 L9,23 M22,2 L14,10 M15,1 L23,1 L23,9"
-          fill="none"
-          stroke="#000"
-          strokeWidth="2"
-        />
-      </svg>
-       Fullscreen
-      <style>
-        .fullscreen_button{border-radius:8px;background-color:black;opacity:0.5;width:120px;text-align:center;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:space-around;-webkit-justify-content:space-around;-ms-flex-pack:space-around;justify-content:space-around;padding:3px;color:white;padding:5px 10px;color:white;background-color:black;border:0.2px solid white;webkit-transition:opacity .5s ease-in-out;-moz-transition:opacity .5s ease-in-out;-ms-transition:opacity .5s ease-in-out;-o-transition:opacity .5s ease-in-out;-webkit-transition:opacity .5s ease-in-out;transition:opacity .5s ease-in-out;}
-        .fullscreen_button:hover{zoom:1;-webkit-filter:alpha(opacity=50);filter:alpha(opacity=50);opacity:0.85;}
-        .expand-icon{width:14px;height:14px;fill:white;stroke:white;}
-      </style>
-    </button>
-    <video
-      src="http://www.webestools.com/page/media/videoTag/BigBuckBunny.webm"
-    />
     <div
-      className="videoPlayer_controls"
-    >
-      <div
-        style={
-          Object {
-            "width": "60%",
-          }
-        }
-      >
-        <div
-          className="rc-slider"
-          onBlur={[Function]}
-          onFocus={[Function]}
-          onKeyDown={[Function]}
-          onMouseDown={[Function]}
-          onTouchStart={[Function]}
-          style={undefined}
-        >
-          <div
-            className="rc-slider-rail"
-            style={
-              Object {
-                "backgroundColor": "#dee9ef",
-              }
-            }
-          />
-          <div
-            className="rc-slider-track"
-            style={
-              Object {
-                "backgroundColor": "#bfdef2",
-                "left": "0%",
-                "width": "0%",
-              }
-            }
-          />
-          <div
-            className="rc-slider-step"
-          />
-          <div
-            aria-disabled={false}
-            aria-valuemax={100}
-            aria-valuemin={0}
-            aria-valuenow={0}
-            className="rc-slider-handle"
-            role="slider"
-            style={
-              Object {
-                "backgroundColor": "#dee9ef",
-                "borderColor": "#bfdef2",
-                "left": "0%",
-              }
-            }
-            tabIndex={0}
-          />
-          <div
-            className="rc-slider-mark"
-          />
-        </div>
-      </div>
-    </div>
-    <style>
-      .videoPlayer_container{position:absolute;}
-      .videoPlayer_controls{position:absolute;bottom:-10px;height:40px;width:100%;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;margin:0 auto;z-index:2147483648;}
-      button{margin:0 3px 10px 0;padding-left:2px;padding-right:2px;width:99px;}
-      video{width:100%;vertical-align:top;object-fit:fill;}
-      .fullscreen_button{position:absolute;top:15px;right:15px;margin:0;}
-      .playPause_button{position:absolute;width:100%;height:100%;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;}
-      video::-webkit-media-controls-overlay-enclosure{display:none !important;}
-      video::-webkit-media-controls-enclosure{display:none !important;}
-      video::-webkit-media-controls{display:none !important;}
-      video::-webkit-media-controls-panel{display:none !important;}
-      video::-webkit-media-controls-play-button{display:none !important;}
-      video::-webkit-media-controls-current-time-display{display:none !important;}
-      video::-webkit-media-controls-time-remaining-display{display:none !important;}
-      video::-webkit-media-controls-timeline{display:none !important;}
-      video::-webkit-media-controls-mute-button{display:none !important;}
-      video::-webkit-media-controls-volume-slider{display:none !important;}
-      video::-webkit-media-controls-fullscreen-button{display:none !important;}
-      video::-internal-media-controls-download-button{display:none !important;}
-      *::-moz-list-bullet,*::-moz-list-number{display:none !important;}
-      *::-moz-meter-bar{display:none !important;}
-      :-moz-full-screen:not(:root)::backdrop{display:none !important;}
-      *::backdrop{display:none !important;}
-      :fullscreen:not(:root){display:none !important;}
-      video::-webkit-media-controls-enclosure{display:none !important;}
-      @media screen and (max-width:500px){button{font-size:0.8em;width:calc(33% - 5px);}}
-      @media screen and (max-width:720px){video{height:calc((50vw - 48px) * 3 / 4);margin:0 10px 10px 0;width:calc(50vw - 48px);}}
-    </style>
-  </div>
-</div>
-`;
-
-exports[`Storyshots Video player full screen button 1`] = `
-<div
-  style={
-    Object {
-      "padding": "24px",
-    }
-  }
->
-  <button
-    className="fullscreen_button undefined"
-    onClick={undefined}
-  >
-    <svg
-      aria-label="expand"
-      className="grommetux-control-icon grommetux-control-icon-expand expand-icon grommetux-control-icon--responsive"
-      height="24px"
-      role="img"
-      version="1.1"
-      viewBox="0 0 24 24"
-      width="24px"
-    >
-      <path
-        d="M10,14 L2,22 M1,15 L1,23 L9,23 M22,2 L14,10 M15,1 L23,1 L23,9"
-        fill="none"
-        stroke="#000"
-        strokeWidth="2"
-      />
-    </svg>
-     Fullscreen
-    <style>
-      .fullscreen_button{border-radius:8px;background-color:black;opacity:0.5;width:120px;text-align:center;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:space-around;-webkit-justify-content:space-around;-ms-flex-pack:space-around;justify-content:space-around;padding:3px;color:white;padding:5px 10px;color:white;background-color:black;border:0.2px solid white;webkit-transition:opacity .5s ease-in-out;-moz-transition:opacity .5s ease-in-out;-ms-transition:opacity .5s ease-in-out;-o-transition:opacity .5s ease-in-out;-webkit-transition:opacity .5s ease-in-out;transition:opacity .5s ease-in-out;}
-      .fullscreen_button:hover{zoom:1;-webkit-filter:alpha(opacity=50);filter:alpha(opacity=50);opacity:0.85;}
-      .expand-icon{width:14px;height:14px;fill:white;stroke:white;}
-    </style>
-  </button>
-</div>
-`;
-
-exports[`Storyshots Video player play-pause button 1`] = `
-<div
-  style={
-    Object {
-      "padding": "24px",
-    }
-  }
->
-  <div
-    styles="background-color:  black;padding:  100px;"
-  >
-    <div>
-      <button
-        className="playpause"
-      >
-        <input
-          id="playpause"
-          name="check"
-          onClick={undefined}
-          type="checkbox"
-          value="None"
-        />
-        <label
-          htmlFor="playpause"
-          tabIndex={1}
-        />
-        <style>
-          .playpause{background-color:white;opacity:0.6;position:absolute;width:100px;height:100px;border-radius:50%;border:0;webkit-transition:opacity .5s ease-in-out;-moz-transition:opacity .5s ease-in-out;-ms-transition:opacity .5s ease-in-out;-o-transition:opacity .5s ease-in-out;-webkit-transition:opacity .5s ease-in-out;transition:opacity .5s ease-in-out;}
-          .playpause label{display:block;box-sizing:border-box;width:0;height:50px;border-color:transparent transparent transparent #202020;-webkit-transition:100ms all ease;transition:100ms all ease;cursor:pointer;border-style:double;border-width:0px 0 0px 50px;left:25px;top:25px;position:absolute;}
-          .playpause input[type="checkbox"]{position:absolute;left:-9999px;}
-          .playpause input[type="checkbox"]:checked+label{border-style:solid;border-width:25px 0 25px 50px;}
-          .playpause input[type="checkbox"]:focus+label{box-shadow:0 0 5px lightblue;}
-        </style>
-      </button>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`Storyshots Video player slider 1`] = `
-<div
-  style={
-    Object {
-      "padding": "24px",
-    }
-  }
->
-  <div>
-    <div
+      className="video-react-controls-enabled video-react-paused video-react-fluid video-react-user-active video-react-workinghover video-react video-player"
+      onBlur={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      onMouseDown={[Function]}
+      onMouseMove={[Function]}
+      onTouchStart={[Function]}
       style={
         Object {
-          "width": "60%",
+          "paddingTop": "56.25%",
         }
       }
+      tabIndex="-1"
     >
+      <video
+        autoPlay={undefined}
+        className="video-react-video video-player"
+        crossOrigin={undefined}
+        id={undefined}
+        loop={undefined}
+        muted={false}
+        onAbort={[Function]}
+        onCanPlay={[Function]}
+        onCanPlayThrough={[Function]}
+        onDurationChange={[Function]}
+        onEmptied={[Function]}
+        onEnded={[Function]}
+        onError={[Function]}
+        onLoadStart={[Function]}
+        onLoadedData={[Function]}
+        onLoadedMetadata={[Function]}
+        onPause={[Function]}
+        onPlay={[Function]}
+        onPlaying={[Function]}
+        onProgress={[Function]}
+        onRateChange={[Function]}
+        onSeeked={[Function]}
+        onSeeking={[Function]}
+        onStalled={[Function]}
+        onSuspend={[Function]}
+        onTimeUpdate={[Function]}
+        onVolumeChange={[Function]}
+        onWaiting={[Function]}
+        playsInline={true}
+        poster={undefined}
+        preload="auto"
+        src={undefined}
+      />
+      <button
+        aria-live="polite"
+        className="video-react-big-play-button video-react-big-play-button-center video-player__big-play-button big-play-button-hide"
+        onClick={[Function]}
+        tabIndex="0"
+        type="button"
+      >
+        <span
+          className="video-react-control-text"
+        >
+          Play Video
+        </span>
+      </button>
       <div
-        className="rc-slider"
-        onBlur={[Function]}
-        onFocus={[Function]}
-        onKeyDown={[Function]}
-        onMouseDown={[Function]}
-        onTouchStart={[Function]}
-        style={undefined}
+        className="video-react-loading-spinner video-player"
+      />
+      <div
+        className="video-react-control-bar video-react-control-bar-auto-hide video-player__control-bar"
       >
         <div
-          className="rc-slider-rail"
-          style={
-            Object {
-              "backgroundColor": "#dee9ef",
-            }
-          }
-        />
-        <div
-          className="rc-slider-track"
-          style={
-            Object {
-              "backgroundColor": "#bfdef2",
-              "left": "0%",
-              "width": "50%",
-            }
-          }
-        />
-        <div
-          className="rc-slider-step"
-        />
-        <div
-          aria-disabled={false}
-          aria-valuemax={100}
-          aria-valuemin={0}
-          aria-valuenow={50}
-          className="rc-slider-handle"
-          role="slider"
-          style={
-            Object {
-              "backgroundColor": "#dee9ef",
-              "borderColor": "#bfdef2",
-              "left": "50%",
-            }
-          }
-          tabIndex={0}
-        />
-        <div
-          className="rc-slider-mark"
-        />
+          className="video-react-progress-control video-react-control video-player__progress"
+          onMouseMove={[Function]}
+        >
+          <div
+            aria-label="video progress bar"
+            aria-valuemax={100}
+            aria-valuemin={0}
+            aria-valuenow="NaN"
+            aria-valuetext="0:00"
+            className="video-react-progress-holder video-player__progress video-react-slider-horizontal video-react-slider"
+            onBlur={[Function]}
+            onClick={[Function]}
+            onFocus={[Function]}
+            onMouseDown={[Function]}
+            onTouchStart={[Function]}
+            tabIndex="0"
+          >
+            <div
+              className="video-react-play-progress video-react-slider-bar"
+              data-current-time="0:00"
+              style={
+                Object {
+                  "width": "NaN%",
+                }
+              }
+            >
+              <span
+                className="video-react-control-text"
+              >
+                <span>
+                  Progress
+                </span>
+                : 
+                NaN%
+              </span>
+            </div>
+          </div>
+        </div>
+        <button
+          className="video-player__fullscreen-button video-react-icon-fullscreen video-react-fullscreen-control video-react-control video-react-button video-react-icon"
+          onClick={[Function]}
+          tabIndex="0"
+          type="button"
+        >
+          <span
+            className="video-react-control-text"
+          >
+            Non-Fullscreen
+          </span>
+        </button>
       </div>
     </div>
+    <style>
+      .video-player:hover .video-player__big-play-button.video-react-big-play-button{background-color:rgba(255,255,255,0.4);}
+      .video-player__big-play-button.video-react-big-play-button{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;width:76px;height:76px;padding:0;margin-top:-38px;margin-left:-38px;border-width:0;border-radius:50%;background-color:rgba(255,255,255,0.4);cursor:pointer;}
+      .video-player__big-play-button.video-react-big-play-button:focus{outline:none;}
+      .video-player__big-play-button.video-react-big-play-button:before{font-size:3rem;color:#ffffff;position:static;}
+      .video-player__control-bar.video-react-control-bar{position:static;height:0;}
+      .video-player__progress.video-react-progress-control{position:absolute;bottom:30px;left:50%;height:30px;width:300px;margin-left:-150px;}
+      .video-player__progress.video-react-progress-control .video-react-load-progress,.video-player__progress.video-react-progress-control .video-react-progress-holder{height:3px;border-radius:3px;}
+      .video-player__progress.video-react-progress-control .video-react-progress-holder .video-react-play-progress{border-radius:3px;}
+      .video-player__fullscreen-button.video-react-fullscreen-control{position:absolute;top:24px;right:24px;height:30px;padding:6px 12px;background-color:rgba(42,42,48,0.5);border-radius:6px;}
+    </style>
   </div>
 </div>
 `;
