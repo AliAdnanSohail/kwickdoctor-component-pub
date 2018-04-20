@@ -1425,20 +1425,20 @@ exports[`Storyshots Notification default 1`] = `
     style={Object {}}
   >
     <div
-      className="jsx-449624016 jsx-1245880828 notification__time"
+      className="jsx-3375289435 jsx-1245880828 notification__time"
     >
       12:00 AM, Jun 20
     </div>
     <div
-      className="jsx-449624016 jsx-1245880828 notification__message"
+      className="jsx-3375289435 jsx-1245880828 notification__message"
     >
       <span
-        className="jsx-449624016 jsx-1245880828 notification__dot"
+        className="jsx-3375289435 jsx-1245880828 notification__dot"
       />
       New message
     </div>
     <div
-      className="jsx-449624016 jsx-1245880828 notification__actions"
+      className="jsx-3375289435 jsx-1245880828 notification__actions"
     >
       <button
         className="jsx-149966548 button button--s button--flat button--rounded"
@@ -1491,20 +1491,20 @@ exports[`Storyshots Notification default 1`] = `
     style={Object {}}
   >
     <div
-      className="jsx-449624016 jsx-1245880828 notification__time"
+      className="jsx-3375289435 jsx-1245880828 notification__time"
     >
       12:00 AM, Jun 20
     </div>
     <div
-      className="jsx-449624016 jsx-1245880828 notification__message"
+      className="jsx-3375289435 jsx-1245880828 notification__message"
     >
       <span
-        className="jsx-449624016 jsx-1245880828 notification__dot"
+        className="jsx-3375289435 jsx-1245880828 notification__dot"
       />
       New message
     </div>
     <div
-      className="jsx-449624016 jsx-1245880828 notification__actions"
+      className="jsx-3375289435 jsx-1245880828 notification__actions"
     >
       <button
         className="jsx-149966548 button button--s button--flat button--rounded"
