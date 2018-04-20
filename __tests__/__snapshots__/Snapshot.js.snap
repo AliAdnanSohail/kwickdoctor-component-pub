@@ -1943,8 +1943,8 @@ exports[`Storyshots RadioButtons default 1`] = `
       .radio__icon{margin-right:18px;}
       .radio__icon svg path{stroke:#b8b9cc !important;}
       .radio__icon_active svg path{stroke:white !important;}
-      .radio__box{box-shadow:0px 0px 33px 0px rgba(0,0,0,0.12);border-radius:6px;color:#b8b9cc;font-size:0.8rem;text-transform:uppercase;padding:13px 16px 13px 23px;margin-bottom:20px;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-flex-basis:39%;-ms-flex-preferred-size:39%;flex-basis:39%;cursor:pointer;position:relative;}
-      .radio__box input[type="radio"]{cursor:pointer;}
+      .radio__box{box-shadow:0px 0px 10px 0px rgba(0,0,0,0.12);border-radius:6px;color:#b8b9cc;font-size:0.8rem;text-transform:uppercase;padding:13px 16px 13px 23px;margin-bottom:20px;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-flex-basis:39%;-ms-flex-preferred-size:39%;flex-basis:39%;cursor:pointer;position:relative;}
+      .radio__box input[type='radio']{cursor:pointer;}
       .radio__box_active{background-color:#1f93f4;color:white;}
       .radio__column{-webkit-flex-basis:47%;-ms-flex-preferred-size:47%;flex-basis:47%;}
     </style>
@@ -2541,6 +2541,45 @@ exports[`Storyshots Video Player default 1`] = `
       .video-player__progress.video-react-progress-control .video-react-progress-holder .video-react-play-progress{border-radius:3px;}
       .video-player__fullscreen-button.video-react-fullscreen-control{position:absolute;top:24px;right:24px;height:30px;padding:6px 12px;background-color:rgba(42,42,48,0.5);border-radius:6px;}
     </style>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Video Recorder default 1`] = `
+<div
+  style={
+    Object {
+      "alignItems": "center",
+      "display": "flex",
+      "flexDirection": "column",
+      "justifyContent": "center",
+      "padding": "24px",
+    }
+  }
+>
+  <div
+    className="jsx-1676162044 jsx-4132344403 video-recorder"
+  >
+    <video
+      autoPlay={true}
+      className="jsx-436993235"
+      muted={true}
+    >
+      Your browser does not support the video tag.
+    </video>
+    <div
+      className="jsx-436993235 video-recorder-controls"
+    >
+      <p
+        className="jsx-436993235"
+      >
+        Start recording
+      </p>
+      <button
+        className="jsx-2729577650 record-button record-button--start"
+        onClick={[Function]}
+      />
+    </div>
   </div>
 </div>
 `;

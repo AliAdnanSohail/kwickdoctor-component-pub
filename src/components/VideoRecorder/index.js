@@ -24,25 +24,27 @@ export default class VideoRecorder extends Component {
   componentDidMount() {
     console.log('componentDidMount');
 
-    const handleSuccess = (stream) => {
-      this.video.srcObject = stream;
-      this.stream = stream;
+    if (navigator.mediaDevices) {
+      const handleSuccess = (stream) => {
+        this.video.srcObject = stream;
+        this.stream = stream;
 
-      this.chunk = [];
+        this.chunk = [];
 
-      this.initMediaRecorder();
+        this.initMediaRecorder();
 
-      this.props.onGranted();
-    };
+        this.props.onGranted();
+      };
 
-    const handleFailed = (error) => {
-      this.props.onDenied(error);
-    };
+      const handleFailed = (error) => {
+        this.props.onDenied(error);
+      };
 
-    navigator.mediaDevices
-      .getUserMedia({ audio: true, video: true })
-      .then(handleSuccess)
-      .catch(handleFailed);
+      navigator.mediaDevices
+        .getUserMedia({ audio: true, video: true })
+        .then(handleSuccess)
+        .catch(handleFailed);
+    }
   }
 
   componentWillUnmount() {

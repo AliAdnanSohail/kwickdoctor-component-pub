@@ -6,7 +6,7 @@ import { Select } from '../src';
 const defaultProps = {
   name: 'gender',
   selected: 'any',
-  options: [{ value: 'male' }, { value: 'any' }, { value: 'female' }],
+  options: [{ value: 'one' }, { value: 'two' }, { value: 'three' }, { value: 'four' }],
   label: 'Label',
 };
 

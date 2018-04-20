@@ -9,19 +9,6 @@ import { withTests } from '@storybook/addon-jest';
 import { Navigation, NavigationItem } from '../src';
 import results from '../.jest-test-results.json';
 
-const links = [
-  {
-    route: '/dashboard',
-    icon: DashboardIcon,
-    label: 'Dashboards',
-  },
-  {
-    route: '/notifications',
-    icon: NotificationIcon,
-    label: 'Notifications',
-  },
-];
-
 const Dashboard = () => <div>Dashboard component</div>;
 const Notifications = () => <div>Notifications component</div>;
 
@@ -31,7 +18,8 @@ class NavigationWrapper extends Component {
       <BrowserRouter>
         <main style={{ minHeight: '100vh', display: 'flex' }}>
           <Navigation>
-            {links.map(item => <NavigationItem key={item.route} {...item} />)}
+            <NavigationItem route="/dashboard" icon={DashboardIcon} label="Dashboards" />
+            <NavigationItem route="/notifications" icon={NotificationIcon} label="Notifications" />
           </Navigation>
           <Switch>
             <Route path="/dashboard" component={Dashboard} exact />
