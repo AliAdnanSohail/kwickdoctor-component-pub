@@ -8,12 +8,16 @@ import { DatePicker } from '../src';
 const testDate = '2018-03-15';
 const baseProps = {
   id: 'datepicker-id',
-  name: 'datepicker-name',
-  onChange() {},
-  value: moment(testDate),
   label: 'datepicker-label',
-  error: '',
   dateFormat: 'DD MMM, YYYY',
+  input: {
+    name: 'datepicker-name',
+    onChange: () => undefined,
+    value: moment(testDate),
+  },
+  meta: {
+    error: '',
+  },
 };
 
 it('Datepicker renders correctly', () => {
@@ -32,27 +36,26 @@ it('Datepicker set id correctly', () => {
 it('Datepicker set name correctly', () => {
   const element = mount(<DatePicker {...baseProps} />);
 
-  expect(element.find(`input[name="${baseProps.name}"]`)).toHaveLength(1);
+  expect(element.find(`input[name="${baseProps.input.name}"]`)).toHaveLength(1);
 });
 
-it('Datepicker set value correctly', () => {
+it('Datepicker set value works correctly', () => {
   const element = mount(<DatePicker {...baseProps} />);
 
-  expect(element.find('input').instance().value).toEqual(baseProps.value.format(baseProps.dateFormat));
+  expect(element.find('input').instance().value).toEqual(baseProps.input.value.format(baseProps.dateFormat));
 });
 
-it('Datepicker set label correctly', () => {
+it('Datepicker set label works correctly', () => {
   const element = mount(<DatePicker {...baseProps} />);
 
   expect(element.find('label').text()).toEqual(baseProps.label);
 });
 
-it('Datepicker input correctly', () => {
-  const props = Object.assign({}, baseProps);
+it('Datepicker input works correctly', () => {
   const inputValue = '31 Jan, 2017';
-  let value;
-  props.onChange = (date) => {
-    value = date;
+  const props = {
+    ...baseProps,
+    input: { ...baseProps.input, onChange(date) { this.value = date; } },
   };
 
   const element = mount(<DatePicker {...props} />);
@@ -60,26 +63,25 @@ it('Datepicker input correctly', () => {
   input.simulate('focus');
   input.simulate('change', { target: { value: inputValue } });
 
-  expect(inputValue === value.format('DD MMM, YYYY')).toEqual(true);
+  expect(inputValue).toEqual(props.input.value.format('DD MMM, YYYY'));
 });
 
 it('Datepicker show error correctly', () => {
-  const props = Object.assign({}, baseProps);
-  props.error = 'error-text';
+  const props = { ...baseProps, meta: { ...baseProps.meta, error: 'some error' } };
   const element = mount(<DatePicker {...props} />);
 
-  expect(element.find('.input-error').text()).toEqual(props.error);
+  expect(element.find('.input-error').text()).toEqual(props.meta.error);
 });
 
-it('Datepicker click by day correctly', () => {
-  const props = Object.assign({}, baseProps);
-  let value = props.value.clone();
-  props.onChange = (date) => {
-    value = date;
+it('Datepicker click by day works correctly', () => {
+  const props = {
+    ...baseProps,
+    input: { ...baseProps.input, onChange(date) { this.value = date; } },
   };
+
   const element = mount(<DatePicker {...props} />);
   element.find('input').simulate('focus');
   element.find('[aria-label="day-16"]').simulate('click');
 
-  expect(props.value.isSame(value, 'day')).toEqual(false);
+  expect(props.input.value.isSame(moment(testDate).add(1, 'day'), 'day')).toEqual(true);
 });

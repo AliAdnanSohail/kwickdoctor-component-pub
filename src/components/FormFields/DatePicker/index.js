@@ -4,8 +4,6 @@ import ReactDatePicker from 'react-datepicker';
 import moment from 'moment';
 import classnames from 'classnames';
 import uuidv4 from 'uuid/v4';
-import shallowEqualArrays from 'shallow-equal/arrays';
-import shallowEqualObjects from 'shallow-equal/objects';
 
 import 'react-datepicker/dist/react-datepicker.css';
 import {
@@ -23,7 +21,7 @@ export default class DatePicker extends Component {
 
     this.id = uuidv4();
     this.state = {
-      value: moment(props.value),
+      value: moment(props.input.value),
     };
   }
 
@@ -36,20 +34,25 @@ export default class DatePicker extends Component {
     }
 
     this.setState({ value: date });
-    this.props.onChange(date);
+    this.props.input.onChange(date);
   };
 
   render() {
     const {
-      id, label, name, dateFormat, containerClassName, error
+      id, label, dateFormat, containerClassName,
     } = this.props;
+    const { input: { name } } = this.props;
+    const { meta: { error } } = this.props;
+
     const blockClasses = classnames('form-field', containerClassName, {
       'has-error': !!error,
     });
 
     return (
       <div className={blockClasses}>
-        <label htmlFor={id}>{label}</label>
+        <label htmlFor={id}>
+          {label}
+        </label>
 
         <ReactDatePicker
           id={id}
@@ -77,20 +80,19 @@ export default class DatePicker extends Component {
 
 DatePicker.propTypes = {
   id: PropTypes.string.isRequired,
-  name: PropTypes.string,
   label: PropTypes.string,
-  value: PropTypes.object,
+  meta: PropTypes.object,
+  input: PropTypes.object,
   dateFormat: PropTypes.string,
-  onChange: PropTypes.func.isRequired,
   containerClassName: PropTypes.string,
-  error: PropTypes.string,
 };
 
 DatePicker.defaultProps = {
-  name: '',
-  label: '',
-  value: moment(),
+  input: {
+    value: moment(),
+  },
+  meta: {},
+  label: undefined,
   dateFormat: 'DD MMM, YYYY',
-  containerClassName: null,
-  error: '',
+  containerClassName: undefined,
 };
