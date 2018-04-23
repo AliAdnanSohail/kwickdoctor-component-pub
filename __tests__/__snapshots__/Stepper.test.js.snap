@@ -8,7 +8,7 @@ exports[`renders correctly 1`] = `
     <div>
       <StepperHeader
         active={0}
-        total={6}
+        total={3}
       >
         <ul
           className="jsx-291528123 stepper-header"
@@ -60,77 +60,8 @@ exports[`renders correctly 1`] = `
             />
           </li>
           <li
-            className="jsx-1340858167 step-icon step-icon--next"
-            key="2"
-          >
-            <span
-              className="jsx-1340858167"
-            />
-            <JSXStyle
-              css={
-                Array [
-                  ".step-icon.jsx-1340858167{width:34px;height:34px;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;z-index:1;}",
-                  ".step-icon.jsx-1340858167 span.jsx-1340858167{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;background:#eff0f4;border-radius:50%;-webkit-transition:all 0.3s ease-in-out;transition:all 0.3s ease-in-out;}",
-                  ".step-icon--completed.jsx-1340858167 span.jsx-1340858167{width:34px;height:34px;}",
-                  ".step-icon--completed.jsx-1340858167 span.jsx-1340858167 svg{height:16px;width:16px;}",
-                  ".step-icon--completed.jsx-1340858167 span.jsx-1340858167 svg polyline{stroke:#6fcb83 !important;stroke-width:5;}",
-                  ".step-icon--current.jsx-1340858167 span.jsx-1340858167{width:24px;height:24px;}",
-                  ".step-icon--current.jsx-1340858167 span.jsx-1340858167:before{content:'';height:10px;width:10px;background-color:#0c97f9;border-radius:50%;-webkit-transition:all 0.3s ease-in-out;transition:all 0.3s ease-in-out;}",
-                  ".step-icon--next.jsx-1340858167 span.jsx-1340858167{width:12px;height:12px;}",
-                ]
-              }
-              styleId="1340858167"
-            />
-          </li>
-          <li
-            className="jsx-1340858167 step-icon step-icon--next"
-            key="3"
-          >
-            <span
-              className="jsx-1340858167"
-            />
-            <JSXStyle
-              css={
-                Array [
-                  ".step-icon.jsx-1340858167{width:34px;height:34px;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;z-index:1;}",
-                  ".step-icon.jsx-1340858167 span.jsx-1340858167{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;background:#eff0f4;border-radius:50%;-webkit-transition:all 0.3s ease-in-out;transition:all 0.3s ease-in-out;}",
-                  ".step-icon--completed.jsx-1340858167 span.jsx-1340858167{width:34px;height:34px;}",
-                  ".step-icon--completed.jsx-1340858167 span.jsx-1340858167 svg{height:16px;width:16px;}",
-                  ".step-icon--completed.jsx-1340858167 span.jsx-1340858167 svg polyline{stroke:#6fcb83 !important;stroke-width:5;}",
-                  ".step-icon--current.jsx-1340858167 span.jsx-1340858167{width:24px;height:24px;}",
-                  ".step-icon--current.jsx-1340858167 span.jsx-1340858167:before{content:'';height:10px;width:10px;background-color:#0c97f9;border-radius:50%;-webkit-transition:all 0.3s ease-in-out;transition:all 0.3s ease-in-out;}",
-                  ".step-icon--next.jsx-1340858167 span.jsx-1340858167{width:12px;height:12px;}",
-                ]
-              }
-              styleId="1340858167"
-            />
-          </li>
-          <li
-            className="jsx-1340858167 step-icon step-icon--next"
-            key="4"
-          >
-            <span
-              className="jsx-1340858167"
-            />
-            <JSXStyle
-              css={
-                Array [
-                  ".step-icon.jsx-1340858167{width:34px;height:34px;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;z-index:1;}",
-                  ".step-icon.jsx-1340858167 span.jsx-1340858167{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;background:#eff0f4;border-radius:50%;-webkit-transition:all 0.3s ease-in-out;transition:all 0.3s ease-in-out;}",
-                  ".step-icon--completed.jsx-1340858167 span.jsx-1340858167{width:34px;height:34px;}",
-                  ".step-icon--completed.jsx-1340858167 span.jsx-1340858167 svg{height:16px;width:16px;}",
-                  ".step-icon--completed.jsx-1340858167 span.jsx-1340858167 svg polyline{stroke:#6fcb83 !important;stroke-width:5;}",
-                  ".step-icon--current.jsx-1340858167 span.jsx-1340858167{width:24px;height:24px;}",
-                  ".step-icon--current.jsx-1340858167 span.jsx-1340858167:before{content:'';height:10px;width:10px;background-color:#0c97f9;border-radius:50%;-webkit-transition:all 0.3s ease-in-out;transition:all 0.3s ease-in-out;}",
-                  ".step-icon--next.jsx-1340858167 span.jsx-1340858167{width:12px;height:12px;}",
-                ]
-              }
-              styleId="1340858167"
-            />
-          </li>
-          <li
             className="jsx-1340858167 step-icon step-icon--last step-icon--next"
-            key="5"
+            key="2"
           >
             <span
               className="jsx-1340858167"
@@ -191,10 +122,7 @@ exports[`renders correctly 1`] = `
               }
             }
           >
-            <StepContent
-              active={true}
-              index={0}
-              key=".0"
+            <StepOneContent
               onChangeActiveStep={[Function]}
             >
               <Button
@@ -267,8 +195,8 @@ exports[`renders correctly 1`] = `
                 </button>
               </Button>
               <br />
-              current step 1
-            </StepContent>
+              Step one
+            </StepOneContent>
             <JSXStyle
               css={
                 Array [
@@ -305,69 +233,6 @@ exports[`renders correctly 1`] = `
         active={false}
         index={2}
         key=".2"
-      >
-        <Transition
-          appear={false}
-          enter={true}
-          exit={true}
-          in={false}
-          mountOnEnter={false}
-          onEnter={[Function]}
-          onEntered={[Function]}
-          onEntering={[Function]}
-          onExit={[Function]}
-          onExited={[Function]}
-          onExiting={[Function]}
-          timeout={300}
-          unmountOnExit={true}
-        />
-      </Step>
-      <Step
-        active={false}
-        index={3}
-        key=".3"
-      >
-        <Transition
-          appear={false}
-          enter={true}
-          exit={true}
-          in={false}
-          mountOnEnter={false}
-          onEnter={[Function]}
-          onEntered={[Function]}
-          onEntering={[Function]}
-          onExit={[Function]}
-          onExited={[Function]}
-          onExiting={[Function]}
-          timeout={300}
-          unmountOnExit={true}
-        />
-      </Step>
-      <Step
-        active={false}
-        index={4}
-        key=".4"
-      >
-        <Transition
-          appear={false}
-          enter={true}
-          exit={true}
-          in={false}
-          mountOnEnter={false}
-          onEnter={[Function]}
-          onEntered={[Function]}
-          onEntering={[Function]}
-          onExit={[Function]}
-          onExited={[Function]}
-          onExiting={[Function]}
-          timeout={300}
-          unmountOnExit={true}
-        />
-      </Step>
-      <Step
-        active={false}
-        index={5}
-        key=".5"
       >
         <Transition
           appear={false}

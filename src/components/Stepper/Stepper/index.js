@@ -4,10 +4,8 @@ import PropTypes from 'prop-types';
 import StepperHeader from '../StepperHeader';
 
 export default class Stepper extends Component {
-  static getDerivedStateFromProps(nextProps, prevState) {
-    return nextProps.activeStep !== prevState.activeStep
-      ? { activeStep: nextProps.activeStep }
-      : null;
+  static getDerivedStateFromProps(props) {
+    return { activeStep: props.activeStep };
   }
 
   constructor(props) {

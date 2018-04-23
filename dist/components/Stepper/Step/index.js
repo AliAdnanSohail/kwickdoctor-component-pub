@@ -52,8 +52,6 @@ var Step = function (_Component) {
   _createClass(Step, [{
     key: 'render',
     value: function render() {
-      var _this2 = this;
-
       var _props = this.props,
           active = _props.active,
           children = _props.children;
@@ -67,9 +65,7 @@ var Step = function (_Component) {
             'div',
             { style: _extends({}, transitionStyles[state]), className: 'jsx-' + _styles2.default.__scopedHash + ' ' + 'step'
             },
-            _react2.default.Children.map(children, function (child) {
-              return _react2.default.cloneElement(child, _extends({}, _this2.props, child.props));
-            }),
+            children,
             _react2.default.createElement(_style2.default, {
               styleId: _styles2.default.__scopedHash,
               css: _styles2.default.__scoped

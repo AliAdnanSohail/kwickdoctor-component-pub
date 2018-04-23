@@ -553,7 +553,7 @@ exports[`Storyshots Calendar default 1`] = `
         className="jsx-3270423735"
       >
         <button
-          className="jsx-1990659263 day day--selected--without-events day--date--2018-04-21"
+          className="jsx-1990659263 day day--disabled day--date--2018-04-21"
           onClick={[Function]}
           type="button"
         >
@@ -568,7 +568,7 @@ exports[`Storyshots Calendar default 1`] = `
         className="jsx-3270423735"
       >
         <button
-          className="jsx-1990659263 day day--date--2018-04-22"
+          className="jsx-1990659263 day day--disabled day--date--2018-04-22"
           onClick={[Function]}
           type="button"
         >
@@ -583,7 +583,7 @@ exports[`Storyshots Calendar default 1`] = `
         className="jsx-3270423735"
       >
         <button
-          className="jsx-1990659263 day day--date--2018-04-23"
+          className="jsx-1990659263 day day--selected--without-events day--date--2018-04-23"
           onClick={[Function]}
           type="button"
         >
@@ -930,7 +930,7 @@ exports[`Storyshots Date Picker defauld 1`] = `
               tabIndex={undefined}
               title={undefined}
               type="text"
-              value="21 Apr, 2018"
+              value="23 Apr, 2018"
             />
           </div>
         </div>
@@ -2287,7 +2287,7 @@ exports[`Storyshots Stepper Stepper 1`] = `
         </span>
       </button>
       <br />
-      current step 1
+      current step NaN
     </div>
   </div>
 </div>
