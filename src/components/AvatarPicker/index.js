@@ -24,7 +24,6 @@ export default class AvatarPicker extends Component {
     event.preventDefault();
   };
 
-<<<<<<< HEAD
   render() {
     const {
       id,
@@ -43,56 +42,6 @@ export default class AvatarPicker extends Component {
       'avatar',
       { 'avatar--circle': !squared },
     );
-=======
-  renderBig = () => {
-    const { id, name } = this.props;
-    const { image } = this.state;
-
-    const thumbStyle = {
-      backgroundImage: image ? `url(${image})` : 'none',
-    };
-
-    return (
-      <div className="avatar">
-        <label className="avatar__container" htmlFor={id} aria-label="Edit image">
-          <input
-            id={id}
-            type="file"
-            name={name}
-            className="file-input"
-            ref={(input) => {
-              this.fileUpload = input;
-            }}
-            onChange={this.handleUpload}
-          />
-
-          <div className="avatar__thumb" style={thumbStyle}>
-            {!image && <CameraIcon />}
-          </div>
-        </label>
-
-        {image && (
-          <div className="avatar__button-container">
-            <Button onClick={this.handleRemove} icon={<TrashIcon />} size={90} rounded danger />
-            <Button onClick={this.handleEdit} icon={<EditIcon />} size={90} rounded />
-          </div>
-        )}
-
-        <style jsx>{avatarBig}</style>
-        <style jsx>{fileInput}</style>
-      </div>
-    );
-  };
-
-  renderMedium = () => {
-    const { id, name } = this.props;
-    const { image } = this.state;
-
-    const thumbStyle = { backgroundImage: image ? `url(${image})` : 'none' };
-
-    const classes = classnames('avatar__thumb', 'avatar__thumb_medium');
-
->>>>>>> a092ab6161ae70b89a47cb0e6ae48fcec9c354d4
     return (
       <div className={avatar}>
         <div className="avatar__button--remove">
@@ -121,20 +70,6 @@ export default class AvatarPicker extends Component {
         <style jsx>{fileInput}</style>
       </div>
     );
-<<<<<<< HEAD
-=======
-  };
-
-  render() {
-    const { size } = this.props;
-
-    switch (size) {
-    case 'big':
-      return this.renderBig();
-    default:
-      return this.renderMedium();
-    }
->>>>>>> a092ab6161ae70b89a47cb0e6ae48fcec9c354d4
   }
 }
 
@@ -142,18 +77,10 @@ AvatarPicker.propTypes = {
   id: PropTypes.string.isRequired,
   name: PropTypes.string,
   onChange: PropTypes.func.isRequired,
-<<<<<<< HEAD
   squared: PropTypes.oneOf([false, true]),
-=======
-  size: PropTypes.oneOf(['big', 'small', '']),
->>>>>>> a092ab6161ae70b89a47cb0e6ae48fcec9c354d4
 };
 
 AvatarPicker.defaultProps = {
   name: 'input-avatar',
-<<<<<<< HEAD
   squared: false,
-=======
-  size: '',
->>>>>>> a092ab6161ae70b89a47cb0e6ae48fcec9c354d4
 };
