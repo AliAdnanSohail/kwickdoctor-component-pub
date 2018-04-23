@@ -5,6 +5,8 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = undefined;
 
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 var _style = require('styled-jsx/style');
@@ -42,18 +44,15 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 var FilePicker = function (_Component) {
   _inherits(FilePicker, _Component);
 
-  function FilePicker() {
-    var _ref;
-
-    var _temp, _this, _ret;
-
+  function FilePicker(props) {
     _classCallCheck(this, FilePicker);
 
-    for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
-      args[_key] = arguments[_key];
-    }
+    var _this = _possibleConstructorReturn(this, (FilePicker.__proto__ || Object.getPrototypeOf(FilePicker)).call(this, props));
 
-    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = FilePicker.__proto__ || Object.getPrototypeOf(FilePicker)).call.apply(_ref, [this].concat(args))), _this), _this.handleChange = function (event) {
+    _this.handleChange = function (event) {
+      var onChange = _this.props.input.onChange;
+
+
       if (event.target.files && event.target.files[0]) {
         var reader = new FileReader();
 
@@ -65,33 +64,37 @@ var FilePicker = function (_Component) {
         reader.onload = function (e) {
           var blob = new Blob([e.target.result], { type: type });
 
-          _this.props.onChange(blob, name);
+          _this.setState({ filename: name });
+          onChange(blob);
         };
 
         reader.readAsArrayBuffer(event.target.files[0]);
       }
-    }, _this.handleRemove = function (event) {
+    };
+
+    _this.handleRemove = function (event) {
       event.stopPropagation();
       event.preventDefault();
 
       _this.input.value = '';
       _this.props.onChange();
-    }, _temp), _possibleConstructorReturn(_this, _ret);
+    };
+
+    _this.state = { filename: '' };
+    return _this;
   }
 
   _createClass(FilePicker, [{
     key: 'render',
     value: function render() {
-      var _this2 = this;
-
       var _props = this.props,
           id = _props.id,
-          fileName = _props.fileName,
-          name = _props.name,
+          input = _props.input,
           placeholder = _props.placeholder;
+      var filename = this.state.filename;
 
 
-      var classes = (0, _classnames2.default)('upload-file', { 'upload-file--selected': fileName });
+      var classes = (0, _classnames2.default)('upload-file', { 'upload-file--selected': input && input.value });
 
       return _react2.default.createElement(
         _react.Fragment,
@@ -105,16 +108,16 @@ var FilePicker = function (_Component) {
             {
               className: 'jsx-' + _styles2.default.__scopedHash + ' ' + 'upload-file__label-container'
             },
-            fileName ? _react2.default.createElement(_base.DocumentIcon, null) : _react2.default.createElement(_base.UploadIcon, null),
+            input && input.value ? _react2.default.createElement(_base.DocumentIcon, null) : _react2.default.createElement(_base.UploadIcon, null),
             _react2.default.createElement(
               'div',
               {
                 className: 'jsx-' + _styles2.default.__scopedHash + ' ' + 'upload-file__label'
               },
-              fileName || placeholder
+              filename || placeholder
             )
           ),
-          fileName && _react2.default.createElement(_.Button, {
+          input && input.value && _react2.default.createElement(_.Button, {
             className: 'upload-file__close-icon',
             flat: true,
             icon: _react2.default.createElement(_base.CloseIcon, null),
@@ -122,16 +125,12 @@ var FilePicker = function (_Component) {
             rounded: true,
             size: 'xs'
           }),
-          _react2.default.createElement('input', {
+          _react2.default.createElement('input', _extends({}, input, {
             id: id,
-            name: name,
             onChange: this.handleChange,
             type: 'file',
-            ref: function ref(input) {
-              _this2.input = input;
-            },
             className: 'jsx-' + _styles2.default.__scopedHash + ' ' + 'input-file'
-          })
+          }))
         ),
         _react2.default.createElement(_style2.default, {
           styleId: _styles2.default.__scopedHash,
@@ -149,12 +148,9 @@ exports.default = FilePicker;
 
 FilePicker.propTypes = {
   id: _propTypes2.default.string.isRequired,
-  fileName: _propTypes2.default.string,
-  name: _propTypes2.default.string.isRequired,
   placeholder: _propTypes2.default.string
 };
 
 FilePicker.defaultProps = {
-  fileName: '',
   placeholder: 'Upload file'
 };

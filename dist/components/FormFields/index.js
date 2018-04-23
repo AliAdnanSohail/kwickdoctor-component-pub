@@ -4,6 +4,15 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
+var _FilePicker = require('./FilePicker');
+
+Object.defineProperty(exports, 'FilePicker', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_FilePicker).default;
+  }
+});
+
 var _Input = require('./Input');
 
 Object.defineProperty(exports, 'Input', {

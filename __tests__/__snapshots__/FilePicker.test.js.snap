@@ -3,7 +3,7 @@
 exports[`renders correctly 1`] = `
 <label
   className="jsx-3393071880 upload-file"
-  htmlFor="file-input"
+  htmlFor="file-picker"
 >
   <div
     className="jsx-3393071880 upload-file__label-container"
@@ -27,14 +27,12 @@ exports[`renders correctly 1`] = `
     <div
       className="jsx-3393071880 upload-file__label"
     >
-      Upload license
+      file-picker
     </div>
   </div>
-  
   <input
     className="jsx-3393071880 input-file"
-    id="file-input"
-    name="name"
+    id="file-picker"
     onChange={[Function]}
     type="file"
   />

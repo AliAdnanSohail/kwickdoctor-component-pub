@@ -7,7 +7,17 @@ import styles from './styles';
 import { Button } from '../';
 
 export default class FilePicker extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = { filename: '' };
+  }
+
   handleChange = (event) => {
+    const {
+      input: { onChange },
+    } = this.props;
+
     if (event.target.files && event.target.files[0]) {
       const reader = new FileReader();
 
@@ -16,7 +26,8 @@ export default class FilePicker extends Component {
       reader.onload = (e) => {
         const blob = new Blob([e.target.result], { type });
 
-        this.props.onChange(blob, name);
+        this.setState({ filename: name });
+        onChange(blob);
       };
 
       reader.readAsArrayBuffer(event.target.files[0]);
@@ -32,22 +43,23 @@ export default class FilePicker extends Component {
   };
 
   render() {
-    const {
-      id, fileName, name, placeholder,
-    } = this.props;
+    const { id, input, placeholder } = this.props;
 
-    const classes = classnames('upload-file', { 'upload-file--selected': fileName });
+    const { filename } = this.state;
+
+    const classes = classnames('upload-file', { 'upload-file--selected': input && input.value });
 
     return (
       <Fragment>
         <label className={classes} htmlFor={id}>
           <div className="upload-file__label-container">
-            {fileName ? <DocumentIcon /> : <UploadIcon />}
+            {input && input.value ? <DocumentIcon /> : <UploadIcon />}
 
-            <div className="upload-file__label">{fileName || placeholder}</div>
+            <div className="upload-file__label">{filename || placeholder}</div>
           </div>
 
-          {fileName && (
+          {input &&
+            input.value && (
             <Button
               className="upload-file__close-icon"
               flat
@@ -59,14 +71,11 @@ export default class FilePicker extends Component {
           )}
 
           <input
+            {...input}
             className="input-file"
             id={id}
-            name={name}
             onChange={this.handleChange}
             type="file"
-            ref={(input) => {
-              this.input = input;
-            }}
           />
         </label>
 
@@ -78,12 +87,9 @@ export default class FilePicker extends Component {
 
 FilePicker.propTypes = {
   id: PropTypes.string.isRequired,
-  fileName: PropTypes.string,
-  name: PropTypes.string.isRequired,
   placeholder: PropTypes.string,
 };
 
 FilePicker.defaultProps = {
-  fileName: '',
   placeholder: 'Upload file',
 };
