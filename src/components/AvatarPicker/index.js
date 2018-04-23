@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { EditIcon, CameraIcon, TrashIcon } from 'grommet/components/icons';
 import classnames from 'classnames';
+
 import { avatarBig, fileInput } from './styles';
 import { Button } from '../../';
 
@@ -50,7 +51,6 @@ export default class AvatarPicker extends Component {
 
     return (
       <div className="avatar">
-
         <label className="avatar__container" htmlFor={id} aria-label="Edit image">
           <input
             id={id}
@@ -79,21 +79,16 @@ export default class AvatarPicker extends Component {
         <style jsx>{fileInput}</style>
       </div>
     );
-  }
+  };
 
-  renderMedium= () => {
-    const {
-      id, name,
-    } = this.props;
+  renderMedium = () => {
+    const { id, name } = this.props;
     const { image } = this.state;
 
-    const thumbStyle = {
-      backgroundImage: image ? `url(${image})` : 'none',
-    };
-    const classes = classnames(
-      'avatar__thumb',
-      'avatar__thumb_medium',
-    );
+    const thumbStyle = { backgroundImage: image ? `url(${image})` : 'none' };
+
+    const classes = classnames('avatar__thumb', 'avatar__thumb_medium');
+
     return (
       <div className="avatar">
         <div className="avatar__button">
@@ -127,7 +122,7 @@ export default class AvatarPicker extends Component {
         <style jsx>{fileInput}</style>
       </div>
     );
-  }
+  };
 
   render() {
     const { size } = this.props;
@@ -145,10 +140,10 @@ AvatarPicker.propTypes = {
   id: PropTypes.string.isRequired,
   name: PropTypes.string,
   onChange: PropTypes.func.isRequired,
-  size: PropTypes.oneOf(['medium', 'big', 'small']),
+  size: PropTypes.oneOf(['big', 'small', '']),
 };
 
 AvatarPicker.defaultProps = {
   name: 'input-avatar',
-  size: 'medium',
+  size: '',
 };
