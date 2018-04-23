@@ -38,5 +38,6 @@ storiesOf('Avatar Picker', module)
       id={text('id', 'avatar')}
       name={text('name', 'name')}
       squared={boolean('squared', false)}
+      onChange={action('')}
     />
   ));

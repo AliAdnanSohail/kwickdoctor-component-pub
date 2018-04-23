@@ -12,7 +12,7 @@ export default class AvatarPicker extends Component {
       const reader = new FileReader();
 
       reader.onload = (e) => {
-        const blob = new Blob([e.target.result], { type: 'image/jpg' });
+        const blob = new Blob([e.target.result], { type: 'image/jpeg' });
         this.props.onChange(blob);
       };
 

@@ -56,7 +56,7 @@ var AvatarPicker = function (_Component) {
         var reader = new FileReader();
 
         reader.onload = function (e) {
-          var blob = new Blob([e.target.result], { type: 'image/jpg' });
+          var blob = new Blob([e.target.result], { type: 'image/jpeg' });
           _this.props.onChange(blob);
         };
 
