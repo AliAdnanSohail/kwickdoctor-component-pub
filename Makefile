@@ -6,7 +6,7 @@ develop:
 	-yarn run storybook
 
 test:
-	yarn run test
+	yarn run test -u
 
 build:
 	yarn run clean
