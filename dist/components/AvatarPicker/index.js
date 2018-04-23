@@ -64,9 +64,8 @@ var AvatarPicker = function (_Component) {
       }
     }, _this.handleRemove = function (event) {
       event.preventDefault();
-      event.stopPropaganation();
 
-      _this.avatar.value = null;
+      _this.avatar.value = '';
       _this.props.onChange();
     }, _temp), _possibleConstructorReturn(_this, _ret);
   }

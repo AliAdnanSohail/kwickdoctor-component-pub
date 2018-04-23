@@ -6,16 +6,18 @@ exports[`renders correctly 1`] = `
 >
   <div
     className="jsx-3617741812 jsx-2165763448 avatar__button--remove"
-  />
+  >
+    
+  </div>
   <label
     aria-label="Edit image"
     className="jsx-3617741812 jsx-2165763448 avatar__container"
-    htmlFor="test-id"
+    htmlFor="avatar"
   >
     <input
       className="jsx-3617741812 jsx-2165763448 file-input"
-      id="test-id"
-      name="input-avatar-picker"
+      id="avatar"
+      name="name"
       onChange={[Function]}
       type="file"
     />
