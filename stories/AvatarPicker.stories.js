@@ -16,20 +16,14 @@ class AvatarPickerWrapper extends Component {
 
   handleChange = (blob) => {
     this.setState({ src: window.URL.createObjectURL(blob) });
-  }
+  };
 
   render() {
+    const { id, name, squared } = this.props;
     const { src } = this.state;
 
     return (
-      <AvatarPicker
-        id="avatar"
-        squared={boolean('squared', false)}
-        name={text('name', 'name')}
-
-        src={src}
-        onChange={this.handleChange}
-      />
+      <AvatarPicker id={id} name={name} squared={squared} src={src} onChange={this.handleChange} />
     );
   }
 }
@@ -39,5 +33,10 @@ storiesOf('Avatar Picker', module)
   .addDecorator(checkA11y)
   .addDecorator(withTests({ results })('AvatarPicker'))
   .addDecorator(getStory => <div style={{ padding: '24px' }}>{getStory()}</div>)
-  .add('default', () => <AvatarPickerWrapper />);
-
+  .add('default', () => (
+    <AvatarPickerWrapper
+      id={text('id', 'avatar')}
+      name={text('name', 'name')}
+      squared={boolean('squared', false)}
+    />
+  ));

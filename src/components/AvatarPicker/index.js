@@ -21,8 +21,8 @@ export default class AvatarPicker extends Component {
   };
 
   handleRemove = (event) => {
-    event.stopPropaganation();
     event.preventDefault();
+    event.stopPropaganation();
 
     this.avatar.value = null;
     this.props.onChange();
