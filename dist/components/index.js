@@ -58,12 +58,12 @@ Object.defineProperty(exports, 'DatePicker', {
   }
 });
 
-var _FileInput = require('./FileInput');
+var _FilePicker = require('./FilePicker');
 
-Object.defineProperty(exports, 'FileInput', {
+Object.defineProperty(exports, 'FilePicker', {
   enumerable: true,
   get: function get() {
-    return _interopRequireDefault(_FileInput).default;
+    return _interopRequireDefault(_FilePicker).default;
   }
 });
 

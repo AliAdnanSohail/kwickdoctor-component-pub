@@ -986,35 +986,43 @@ exports[`Storyshots File Input default 1`] = `
     }
   }
 >
-  <input
-    className="jsx-1181367161 inputFile"
-    id="text-input"
-    name="name"
-    onChange={[Function]}
-    type="file"
-  />
   <label
-    className="jsx-1181367161 upload-license-copy"
-    htmlFor="text-input"
+    className="jsx-3393071880 upload-file"
+    htmlFor="file-input"
   >
-    <svg
-      className="jsx-1181367161 icon-upload"
-      fill="#4695ef"
-      height="17"
-      viewBox="0 0 20 17"
-      width="20"
-      xmlns="http://www.w3.org/2000/svg"
+    <div
+      className="jsx-3393071880 upload-file__label-container"
     >
-      <path
-        className="jsx-1181367161"
-        d="M10 0l-5.2 4.9h3.3v5.1h3.8v-5.1h3.3l-5.2-4.9zm9.3 11.5l-3.2-2.1h-2l3.4 2.6h-3.5c-.1 0-.2.1-.2.1l-.8 2.3h-6l-.8-2.2c-.1-.1-.1-.2-.2-.2h-3.6l3.4-2.6h-2l-3.2 2.1c-.4.3-.7 1-.6 1.5l.6 3.1c.1.5.7.9 1.2.9h16.3c.6 0 1.1-.4 1.3-.9l.6-3.1c.1-.5-.2-1.2-.7-1.5z"
-      />
-    </svg>
-    <span
-      className="jsx-1181367161"
-    >
-      Upload license
-    </span>
+      <svg
+        aria-label="upload"
+        className="grommetux-control-icon grommetux-control-icon-upload grommetux-control-icon--responsive"
+        height="24px"
+        role="img"
+        version="1.1"
+        viewBox="0 0 24 24"
+        width="24px"
+      >
+        <path
+          d="M1,17 L1,23 L23,23 L23,17 M12,2 L12,19 M5,9 L12,2 L19,9"
+          fill="none"
+          stroke="#000"
+          strokeWidth="2"
+        />
+      </svg>
+      <div
+        className="jsx-3393071880 upload-file__label"
+      >
+        Upload license
+      </div>
+    </div>
+    
+    <input
+      className="jsx-3393071880 input-file"
+      id="file-input"
+      name="name"
+      onChange={[Function]}
+      type="file"
+    />
   </label>
 </div>
 `;
