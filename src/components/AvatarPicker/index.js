@@ -1,99 +1,50 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { EditIcon, CameraIcon, TrashIcon } from 'grommet/components/icons';
+import { CameraIcon, TrashIcon } from 'grommet/components/icons';
+import classnames from 'classnames';
 
-import { avatarMedium, avatarBig, fileInput } from './styles';
+import { avatarCircle, fileInput } from './styles';
 import { Button } from '../../';
 
 export default class AvatarPicker extends Component {
-  constructor(props) {
-    super(props);
-
-    this.state = { image: null };
-  }
-
-  handleRemove = (event) => {
-    this.setState({ image: null });
-
-    this.fileUpload.value = null;
-
-    this.props.onChange(event);
-  };
-
-  handleUpload = (event) => {
+  handleChange = (event) => {
     if (event.target.files && event.target.files[0]) {
       const reader = new FileReader();
 
       reader.onload = (e) => {
-        this.setState({ image: e.target.result });
+        const blob = new Blob([e.target.result], { type: 'image/jpg' });
+        this.props.onChange(blob);
       };
 
-      reader.readAsDataURL(event.target.files[0]);
+      reader.readAsArrayBuffer(event.target.files[0]);
     }
-
-    this.props.onChange(event);
   };
 
-  handleEdit = (event) => {
-    this.fileUpload.click();
+  handleRemove = (event) => {
+    event.preventDefault();
+    event.stopPropaganation();
 
-    this.props.onChange(event);
+    this.avatar.value = null;
+    this.props.onChange();
   };
 
-  renderBig = () => {
-    const { id, name } = this.props;
-    const { image } = this.state;
+  render() {
+    const {
+      id, name, src, squared,
+    } = this.props;
 
     const thumbStyle = {
-      backgroundImage: image ? `url(${image})` : 'none',
+      backgroundImage: src ? `url(${src})` : 'none',
     };
 
-    return (
-      <div className="avatar">
-
-        <label className="avatar__container" htmlFor={id} aria-label="Edit image">
-          <input
-            id={id}
-            type="file"
-            name={name}
-            className="file-input"
-            ref={(input) => {
-              this.fileUpload = input;
-            }}
-            onChange={this.handleUpload}
-          />
-
-          <div className="avatar__thumb" style={thumbStyle}>
-            {!image && <CameraIcon />}
-          </div>
-        </label>
-
-        {image && (
-          <div className="avatar__button-container">
-            <Button onClick={this.handleRemove} icon={<TrashIcon />} size={90} rounded danger />
-            <Button onClick={this.handleEdit} icon={<EditIcon />} size={90} rounded />
-          </div>
-        )}
-
-        <style jsx>{avatarBig}</style>
-        <style jsx>{fileInput}</style>
-      </div>
-    );
-  }
-
-  renderMedium= () => {
-    const { id, name } = this.props;
-    const { image } = this.state;
-
-    const thumbStyle = {
-      backgroundImage: image ? `url(${image})` : 'none',
-    };
+    const classes = classnames('avatar__thumb', { 'avatar__thumb--circle': !squared });
+    const avatar = classnames('avatar', { 'avatar--circle': !squared });
 
     return (
-      <div className="avatar">
-        <div className="avatar__button">
-          {image && (
-            <Button onClick={this.handleRemove} icon={<TrashIcon />} size={32} rounded danger />
+      <div className={avatar}>
+        <div className="avatar__button--remove">
+          {src && (
+            <Button onClick={this.handleRemove} icon={<TrashIcon />} size="xs" rounded danger />
           )}
         </div>
 
@@ -104,35 +55,19 @@ export default class AvatarPicker extends Component {
             name={name}
             className="file-input"
             ref={(input) => {
-              this.fileUpload = input;
+              this.avatar = input;
             }}
-            onChange={this.handleUpload}
+            onChange={this.handleChange}
           />
 
-          <div className="avatar__thumb" style={thumbStyle}>
-            {!image && <CameraIcon />}
+          <div className={classes} style={thumbStyle}>
+            {!src && <CameraIcon />}
           </div>
         </label>
-
-        <div className="avatar__button">
-          {image && <Button onClick={this.handleEdit} icon={<EditIcon />} size={32} rounded />}
-        </div>
-
-        <style jsx>{avatarMedium}</style>
+        <style jsx>{avatarCircle}</style>
         <style jsx>{fileInput}</style>
       </div>
     );
-  }
-
-  render() {
-    const { size } = this.props;
-
-    switch (size) {
-    case 'big':
-      return this.renderBig();
-    default:
-      return this.renderMedium();
-    }
   }
 }
 
@@ -140,10 +75,10 @@ AvatarPicker.propTypes = {
   id: PropTypes.string.isRequired,
   name: PropTypes.string,
   onChange: PropTypes.func.isRequired,
-  size: PropTypes.oneOf(['medium', 'big', 'small']),
+  squared: PropTypes.bool,
 };
 
 AvatarPicker.defaultProps = {
   name: 'input-avatar',
-  size: 'medium',
+  squared: false,
 };

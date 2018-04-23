@@ -13,52 +13,15 @@ export const fileInput = css`
   }
 `;
 
-export const avatarMedium = css`
+export const avatarCircle = css`
   .avatar {
-    display: grid;
-    align-items: center;
-    grid-template-columns: 32px 1fr 32px;
-    grid-gap: 12px;
-
-    width: 226px;
-
-    &__container {
-      cursor: pointer;
-      color: #c1c2cf;
-    }
-
-    &__thumb {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      justify-content: center;
-
-      height: 138px;
-      width: 138px;
-      border-radius: 50%;
-
-      background: {
-        color: #e7e7f0;
-        position: center;
-        size: cover;
-      }
-
-      :global(svg) {
-        width: 42px;
-        height: 42px;
-
-        fill: #bbbccd;
-        stroke: #bbbccd;
-      }
-    }
-  }
-`;
-
-export const avatarBig = css`
-  .avatar {
-    width: 600px;
-    height: 600px;
+    width: 300px;
+    height: 300px;
     position: relative;
+    &--circle {
+      width: 138px;
+      height: 138px;
+    }
 
     &__container {
       cursor: pointer;
@@ -70,10 +33,9 @@ export const avatarBig = css`
       flex-direction: row;
       align-items: center;
       justify-content: center;
-
-      height: 100%;
-      width: 100%;
-      border-radius: 22px;
+      height: 300px;
+      width: 300px;
+      border-radius:22px;
 
       background: {
         color: #e7e7f0;
@@ -84,21 +46,30 @@ export const avatarBig = css`
       :global(svg) {
         width: 80px;
         height: 80px;
-
         fill: #bbbccd;
         stroke: #bbbccd;
       }
+      &--circle {
+        width: 138px;
+        height: 138px;
+        border-radius: 50%;
+        :global(svg) {
+          width: 40px;
+          height: 40px;
+        }
+      }
     }
 
-    &__button-container {
-      position: absolute;
-      width: 100%;
-      bottom: 0;
-
-      display: flex;
-      align-items: center;
-      justify-content: space-around;
-      bottom: 20px;
+    &__button {
+      &--remove {
+        position: absolute;
+        width: 100%;
+        bottom: 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        bottom: 10px;
+      }
     }
   }
 `;
