@@ -17,7 +17,7 @@ exports[`renders correctly 1`] = `
     <input
       className="jsx-3617741812 jsx-2165763448 file-input"
       id="avatar"
-      name="name"
+      onBlur={[Function]}
       onChange={[Function]}
       type="file"
     />

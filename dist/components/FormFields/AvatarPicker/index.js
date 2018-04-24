@@ -5,6 +5,8 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = undefined;
 
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 var _style = require('styled-jsx/style');
@@ -31,6 +33,8 @@ var _ = require('../../');
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
@@ -52,21 +56,28 @@ var AvatarPicker = function (_Component) {
     }
 
     return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = AvatarPicker.__proto__ || Object.getPrototypeOf(AvatarPicker)).call.apply(_ref, [this].concat(args))), _this), _this.handleChange = function (event) {
-      if (event.target.files && event.target.files[0]) {
+      var input = _this.props.input;
+
+
+      var file = event.target.files[0];
+
+      if (file) {
         var reader = new FileReader();
 
         reader.onload = function (e) {
           var blob = new Blob([e.target.result], { type: 'image/jpeg' });
-          _this.props.onChange(blob);
+
+          input.onChange(blob);
         };
 
-        reader.readAsArrayBuffer(event.target.files[0]);
+        reader.readAsArrayBuffer(file);
       }
     }, _this.handleRemove = function (event) {
       event.preventDefault();
 
-      _this.avatar.value = '';
-      _this.props.onChange();
+      _this.input.value = null;
+
+      _this.props.input.onChange(null);
     }, _temp), _possibleConstructorReturn(_this, _ret);
   }
 
@@ -77,10 +88,12 @@ var AvatarPicker = function (_Component) {
 
       var _props = this.props,
           id = _props.id,
-          name = _props.name,
+          _props$input = _props.input,
+          value = _props$input.value,
+          inputProps = _objectWithoutProperties(_props$input, ['value']),
+          resetKey = _props.resetKey,
           src = _props.src,
           squared = _props.squared;
-
 
       var thumbStyle = {
         backgroundImage: src ? 'url(' + src + ')' : 'none'
@@ -105,17 +118,16 @@ var AvatarPicker = function (_Component) {
           'label',
           { htmlFor: id, 'aria-label': 'Edit image', className: 'jsx-' + _styles.avatarCircle.__scopedHash + ' jsx-' + _styles.fileInput.__scopedHash + ' ' + 'avatar__container'
           },
-          _react2.default.createElement('input', {
+          _react2.default.createElement('input', _extends({}, inputProps, {
             id: id,
-            type: 'file',
-            name: name,
-
+            key: resetKey,
+            onBlur: function onBlur() {},
             ref: function ref(input) {
-              _this2.avatar = input;
+              _this2.input = input;
             },
-            onChange: this.handleChange,
+            type: 'file',
             className: 'jsx-' + _styles.avatarCircle.__scopedHash + ' jsx-' + _styles.fileInput.__scopedHash + ' ' + 'file-input'
-          }),
+          })),
           _react2.default.createElement(
             'div',
             { style: thumbStyle, className: 'jsx-' + _styles.avatarCircle.__scopedHash + ' jsx-' + _styles.fileInput.__scopedHash + ' ' + (classes || '')
@@ -143,12 +155,14 @@ exports.default = AvatarPicker;
 
 AvatarPicker.propTypes = {
   id: _propTypes2.default.string.isRequired,
-  name: _propTypes2.default.string,
-  onChange: _propTypes2.default.func.isRequired,
+  input: _propTypes2.default.object,
   squared: _propTypes2.default.bool
 };
 
 AvatarPicker.defaultProps = {
-  name: 'input-avatar',
+  input: {
+    onChange: function onChange() {},
+    value: ''
+  },
   squared: false
 };

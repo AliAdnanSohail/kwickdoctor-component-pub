@@ -1,4 +1,3 @@
-export { default as AvatarPicker } from './AvatarPicker';
 export { default as Button } from './Button';
 export { default as Calendar } from './Calendar';
 export { default as Card } from './Card';

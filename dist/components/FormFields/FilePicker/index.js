@@ -54,18 +54,30 @@ var FilePicker = function (_Component) {
     _this.handleChange = function (event) {
       var input = _this.props.input;
 
+
       var file = event.target.files[0];
 
-      _this.setState({ filename: file.name });
+      if (file) {
+        var reader = new FileReader();
 
-      input.onChange(file);
+        reader.onload = function (e) {
+          var blob = new Blob([e.target.result], { type: 'image/jpeg' });
+
+          input.onChange(blob);
+        };
+
+        reader.readAsArrayBuffer(file);
+
+        _this.setState({ filename: file.name });
+      }
     };
 
     _this.handleRemove = function (event) {
       event.preventDefault();
 
       _this.input.value = null;
-      _this.setState({ filename: null });
+
+      _this.props.input.onChange(null);
     };
 
     _this.state = { filename: '' };

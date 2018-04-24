@@ -4,6 +4,15 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
+var _AvatarPicker = require('./AvatarPicker');
+
+Object.defineProperty(exports, 'AvatarPicker', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_AvatarPicker).default;
+  }
+});
+
 var _FilePicker = require('./FilePicker');
 
 Object.defineProperty(exports, 'FilePicker', {

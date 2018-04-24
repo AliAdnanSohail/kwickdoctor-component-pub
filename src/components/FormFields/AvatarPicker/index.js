@@ -8,28 +8,38 @@ import { Button } from '../../';
 
 export default class AvatarPicker extends Component {
   handleChange = (event) => {
-    if (event.target.files && event.target.files[0]) {
+    const { input } = this.props;
+
+    const file = event.target.files[0];
+
+    if (file) {
       const reader = new FileReader();
 
       reader.onload = (e) => {
         const blob = new Blob([e.target.result], { type: 'image/jpeg' });
-        this.props.onChange(blob);
+
+        input.onChange(blob);
       };
 
-      reader.readAsArrayBuffer(event.target.files[0]);
+      reader.readAsArrayBuffer(file);
     }
   };
 
   handleRemove = (event) => {
     event.preventDefault();
 
-    this.avatar.value = '';
-    this.props.onChange();
+    this.input.value = null;
+
+    this.props.input.onChange(null);
   };
 
   render() {
     const {
-      id, name, src, squared,
+      id,
+      input: { value, ...inputProps },
+      resetKey,
+      src,
+      squared,
     } = this.props;
 
     const thumbStyle = {
@@ -49,20 +59,22 @@ export default class AvatarPicker extends Component {
 
         <label className="avatar__container" htmlFor={id} aria-label="Edit image">
           <input
-            id={id}
-            type="file"
-            name={name}
+            {...inputProps}
             className="file-input"
+            id={id}
+            key={resetKey}
+            onBlur={() => {}}
             ref={(input) => {
-              this.avatar = input;
+              this.input = input;
             }}
-            onChange={this.handleChange}
+            type="file"
           />
 
           <div className={classes} style={thumbStyle}>
             {!src && <CameraIcon />}
           </div>
         </label>
+
         <style jsx>{avatarCircle}</style>
         <style jsx>{fileInput}</style>
       </div>
@@ -72,12 +84,14 @@ export default class AvatarPicker extends Component {
 
 AvatarPicker.propTypes = {
   id: PropTypes.string.isRequired,
-  name: PropTypes.string,
-  onChange: PropTypes.func.isRequired,
+  input: PropTypes.object,
   squared: PropTypes.bool,
 };
 
 AvatarPicker.defaultProps = {
-  name: 'input-avatar',
+  input: {
+    onChange: () => {},
+    value: '',
+  },
   squared: false,
 };
