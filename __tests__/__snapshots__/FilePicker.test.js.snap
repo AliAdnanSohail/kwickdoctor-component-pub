@@ -34,9 +34,9 @@ exports[`renders correctly 1`] = `
   <input
     className="jsx-3393071880 input-file"
     id="file-picker"
+    onBlur={[Function]}
     onChange={[Function]}
     type="file"
-    value=""
   />
 </label>
 `;

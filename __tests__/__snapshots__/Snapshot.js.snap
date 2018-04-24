@@ -1059,9 +1059,9 @@ exports[`Storyshots Form Fields FilePicker 1`] = `
     <input
       className="jsx-3393071880 input-file"
       id="id"
+      onBlur={[Function]}
       onChange={[Function]}
       type="file"
-      value=""
     />
   </label>
 </div>

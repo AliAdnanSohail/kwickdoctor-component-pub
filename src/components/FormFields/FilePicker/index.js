@@ -13,28 +13,32 @@ export default class FilePicker extends Component {
     this.state = { filename: '' };
   }
 
-  handleChange = delegate => event => delegate(event.target.files[0]);
+  handleChange = (event) => {
+    const { input } = this.props;
+    input.onChange(event.target.files[0]);
+  };
 
   render() {
     const {
       id,
-      input: { onChange, ...props },
+      input: { value, ...inputProps },
       placeholder,
+      resetKey,
     } = this.props;
 
     const { filename } = this.state;
 
-    const classes = classnames('upload-file', { 'upload-file--selected': props && props.value });
+    const classes = classnames('upload-file', { 'upload-file--selected': value });
 
     return (
       <label className={classes} htmlFor={id}>
         <div className="upload-file__label-container">
-          {props && props.value ? <DocumentIcon /> : <UploadIcon />}
+          {value ? <DocumentIcon /> : <UploadIcon />}
 
           <div className="upload-file__label">{filename || placeholder}</div>
         </div>
 
-        {props.value && (
+        {value && (
           <Button
             className="upload-file__close-icon"
             flat
@@ -46,10 +50,12 @@ export default class FilePicker extends Component {
         )}
 
         <input
-          {...props}
-          id={id}
+          {...inputProps}
           className="input-file"
-          onChange={this.handleChange(onChange)}
+          id={id}
+          key={resetKey}
+          onBlur={() => {}}
+          onChange={this.handleChange}
           type="file"
         />
 
