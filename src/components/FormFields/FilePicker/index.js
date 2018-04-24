@@ -4,7 +4,7 @@ import classnames from 'classnames';
 import { CloseIcon, DocumentIcon, UploadIcon } from 'grommet/components/icons/base';
 
 import styles from './styles';
-import { Button } from '../';
+import { Button } from '../../';
 
 export default class FilePicker extends Component {
   constructor(props) {
@@ -13,13 +13,19 @@ export default class FilePicker extends Component {
     this.state = { filename: '' };
   }
 
-  componentDidCatch(error, errorInfo) {
-    console.log(error, errorInfo);
-  }
-
   handleChange = (event) => {
     const { input } = this.props;
-    input.onChange(event.target.files[0]);
+    const file = event.target.files[0];
+
+    this.setState({ filename: file.name });
+
+    input.onChange(file);
+  };
+
+  handleRemove = (event) => {
+    event.preventDefault();
+
+    this.input.value = null;
   };
 
   render() {
@@ -60,6 +66,9 @@ export default class FilePicker extends Component {
           key={resetKey}
           onBlur={() => {}}
           onChange={this.handleChange}
+          ref={(input) => {
+            this.input = input;
+          }}
           type="file"
         />
 

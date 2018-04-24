@@ -31,7 +31,7 @@ var _styles = require('./styles');
 
 var _styles2 = _interopRequireDefault(_styles);
 
-var _ = require('../');
+var _ = require('../../');
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -54,7 +54,17 @@ var FilePicker = function (_Component) {
     _this.handleChange = function (event) {
       var input = _this.props.input;
 
-      input.onChange(event.target.files[0]);
+      var file = event.target.files[0];
+
+      _this.setState({ filename: file.name });
+
+      input.onChange(file);
+    };
+
+    _this.handleRemove = function (event) {
+      event.preventDefault();
+
+      _this.input.value = null;
     };
 
     _this.state = { filename: '' };
@@ -62,13 +72,10 @@ var FilePicker = function (_Component) {
   }
 
   _createClass(FilePicker, [{
-    key: 'componentDidCatch',
-    value: function componentDidCatch(error, errorInfo) {
-      console.log(error, errorInfo);
-    }
-  }, {
     key: 'render',
     value: function render() {
+      var _this2 = this;
+
       var _props = this.props,
           id = _props.id,
           _props$input = _props.input,
@@ -113,6 +120,9 @@ var FilePicker = function (_Component) {
           key: resetKey,
           onBlur: function onBlur() {},
           onChange: this.handleChange,
+          ref: function ref(input) {
+            _this2.input = input;
+          },
           type: 'file',
           className: 'jsx-' + _styles2.default.__scopedHash + ' ' + 'input-file'
         })),
