@@ -4,7 +4,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _styleHelper = require('../../utils/style-helper');
+var _styleHelper = require('../../../utils/style-helper');
 
 var _styleHelper2 = _interopRequireDefault(_styleHelper);
 

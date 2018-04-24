@@ -529,7 +529,7 @@ exports[`Storyshots Calendar default 1`] = `
         className="jsx-3270423735"
       >
         <button
-          className="jsx-1990659263 day day--selected--without-events day--date--2018-04-23"
+          className="jsx-1990659263 day day--disabled day--date--2018-04-23"
           onClick={[Function]}
           type="button"
         >
@@ -544,7 +544,7 @@ exports[`Storyshots Calendar default 1`] = `
         className="jsx-3270423735"
       >
         <button
-          className="jsx-1990659263 day day--date--2018-04-24"
+          className="jsx-1990659263 day day--selected--without-events day--date--2018-04-24"
           onClick={[Function]}
           type="button"
         >
@@ -834,55 +834,6 @@ exports[`Storyshots Card default 1`] = `
 </div>
 `;
 
-exports[`Storyshots File Input default 1`] = `
-<div
-  style={
-    Object {
-      "padding": "24px",
-    }
-  }
->
-  <label
-    className="jsx-3393071880 upload-file"
-    htmlFor="file-input"
-  >
-    <div
-      className="jsx-3393071880 upload-file__label-container"
-    >
-      <svg
-        aria-label="upload"
-        className="grommetux-control-icon grommetux-control-icon-upload grommetux-control-icon--responsive"
-        height="24px"
-        role="img"
-        version="1.1"
-        viewBox="0 0 24 24"
-        width="24px"
-      >
-        <path
-          d="M1,17 L1,23 L23,23 L23,17 M12,2 L12,19 M5,9 L12,2 L19,9"
-          fill="none"
-          stroke="#000"
-          strokeWidth="2"
-        />
-      </svg>
-      <div
-        className="jsx-3393071880 upload-file__label"
-      >
-        Upload license
-      </div>
-    </div>
-    
-    <input
-      className="jsx-3393071880 input-file"
-      id="file-input"
-      name="name"
-      onChange={[Function]}
-      type="file"
-    />
-  </label>
-</div>
-`;
-
 exports[`Storyshots FileViewer simple PDF viewer 1`] = `
 <div
   style={
@@ -1019,7 +970,7 @@ exports[`Storyshots Form Fields Date Picker 1`] = `
             tabIndex={undefined}
             title={undefined}
             type="text"
-            value="23 Apr, 2018"
+            value="24 Apr, 2018"
           />
         </div>
       </div>
@@ -1063,6 +1014,53 @@ exports[`Storyshots Form Fields Date Picker 1`] = `
       .form-field .input-error:before{content:'';position:absolute;top:0;left:32px;width:0;height:0;-webkit-transform-origin:0 0;-ms-transform-origin:0 0;transform-origin:0 0;-webkit-transform:rotate(135deg);-ms-transform:rotate(135deg);transform:rotate(135deg);box-sizing:border-box;box-shadow:-4px 4px 14px 0 rgba(0,0,0,0.05);border-width:6px;border-style:solid;border-color:transparent transparent #ffffff #ffffff;}
     </style>
   </div>
+</div>
+`;
+
+exports[`Storyshots Form Fields FilePicker 1`] = `
+<div
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
+>
+  <label
+    className="jsx-3393071880 upload-file"
+    htmlFor="id"
+  >
+    <div
+      className="jsx-3393071880 upload-file__label-container"
+    >
+      <svg
+        aria-label="upload"
+        className="grommetux-control-icon grommetux-control-icon-upload grommetux-control-icon--responsive"
+        height="24px"
+        role="img"
+        version="1.1"
+        viewBox="0 0 24 24"
+        width="24px"
+      >
+        <path
+          d="M1,17 L1,23 L23,23 L23,17 M12,2 L12,19 M5,9 L12,2 L19,9"
+          fill="none"
+          stroke="#000"
+          strokeWidth="2"
+        />
+      </svg>
+      <div
+        className="jsx-3393071880 upload-file__label"
+      >
+        placeholder
+      </div>
+    </div>
+    <input
+      className="jsx-3393071880 input-file"
+      id="id"
+      onChange={[Function]}
+      type="file"
+    />
+  </label>
 </div>
 `;
 
