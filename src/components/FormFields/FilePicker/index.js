@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
-import { CloseIcon } from 'grommet/components/icons';
+import { CloseIcon, DocumentIcon, UploadIcon } from 'grommet/components/icons/base';
 
 import styles from './styles';
 import { Button } from '../';
@@ -15,7 +15,6 @@ export default class FilePicker extends Component {
 
   handleChange = (event) => {
     const { input } = this.props;
-    this.setState({ filename: event.target.files[0].name });
     input.onChange(event.target.files[0]);
   };
 
@@ -34,7 +33,7 @@ export default class FilePicker extends Component {
     return (
       <label className={classes} htmlFor={id}>
         <div className="upload-file__label-container">
-          {/* {value ? <DocumentIcon /> : <UploadIcon />} */}
+          {value ? <DocumentIcon /> : <UploadIcon />}
 
           <div className="upload-file__label">{filename || placeholder}</div>
         </div>
