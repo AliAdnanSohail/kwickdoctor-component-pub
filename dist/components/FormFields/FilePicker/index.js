@@ -65,6 +65,7 @@ var FilePicker = function (_Component) {
       event.preventDefault();
 
       _this.input.value = null;
+      _this.setState({ filename: null });
     };
 
     _this.state = { filename: '' };

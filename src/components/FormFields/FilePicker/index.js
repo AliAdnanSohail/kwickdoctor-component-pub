@@ -26,6 +26,7 @@ export default class FilePicker extends Component {
     event.preventDefault();
 
     this.input.value = null;
+    this.setState({ filename: null });
   };
 
   render() {
