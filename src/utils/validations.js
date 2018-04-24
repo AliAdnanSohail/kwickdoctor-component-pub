@@ -19,7 +19,7 @@ const date = value =>
  */
 const email = value =>
   (value && !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(value)
-    ? 'This doesn’t look like a valid email. Check up, please!'
+    ? 'This doesn’t look like a valid email address. Please check your email address.'
     : undefined);
 
 /**
@@ -47,7 +47,7 @@ const equals = (targetValue, name) => value =>
  */
 const maxLength = max => value =>
   (value && value.length > max
-    ? `Should be ${max} characters or less. Check up, please!`
+    ? `This field needs to be a maximum of ${max} characters. Please retype value of this field.`
     : undefined);
 
 /**
@@ -61,7 +61,7 @@ const maxLength = max => value =>
  */
 const minLength = min => value =>
   (value && value.length < min
-    ? `Should be ${min} characters or more. Check up, please!`
+    ? `This field needs to be a minimum of ${min} characters. Please retype value of this field.`
     : undefined);
 
 /**
@@ -83,7 +83,8 @@ const number = value =>
  *
  * @return {String|Null} [description]
  */
-const required = value => (value ? undefined : 'This field is required. Check up, please!');
+const required = value =>
+  (value ? undefined : 'This field is required. Please complete the field.');
 
 export default {
   date,
