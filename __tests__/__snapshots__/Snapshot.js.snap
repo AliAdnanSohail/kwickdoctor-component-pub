@@ -1033,22 +1033,6 @@ exports[`Storyshots Form Fields FilePicker 1`] = `
     <div
       className="jsx-3393071880 upload-file__label-container"
     >
-      <svg
-        aria-label="upload"
-        className="grommetux-control-icon grommetux-control-icon-upload grommetux-control-icon--responsive"
-        height="24px"
-        role="img"
-        version="1.1"
-        viewBox="0 0 24 24"
-        width="24px"
-      >
-        <path
-          d="M1,17 L1,23 L23,23 L23,17 M12,2 L12,19 M5,9 L12,2 L19,9"
-          fill="none"
-          stroke="#000"
-          strokeWidth="2"
-        />
-      </svg>
       <div
         className="jsx-3393071880 upload-file__label"
       >

@@ -25,7 +25,7 @@ var _classnames = require('classnames');
 
 var _classnames2 = _interopRequireDefault(_classnames);
 
-var _base = require('grommet/components/icons/base');
+var _icons = require('grommet/components/icons');
 
 var _styles = require('./styles');
 
@@ -54,6 +54,7 @@ var FilePicker = function (_Component) {
     _this.handleChange = function (event) {
       var input = _this.props.input;
 
+      _this.setState({ filename: event.target.files[0].name });
       input.onChange(event.target.files[0]);
     };
 
@@ -86,7 +87,6 @@ var FilePicker = function (_Component) {
           {
             className: 'jsx-' + _styles2.default.__scopedHash + ' ' + 'upload-file__label-container'
           },
-          value ? _react2.default.createElement(_base.DocumentIcon, null) : _react2.default.createElement(_base.UploadIcon, null),
           _react2.default.createElement(
             'div',
             {
@@ -98,7 +98,7 @@ var FilePicker = function (_Component) {
         value && _react2.default.createElement(_.Button, {
           className: 'upload-file__close-icon',
           flat: true,
-          icon: _react2.default.createElement(_base.CloseIcon, null),
+          icon: _react2.default.createElement(_icons.CloseIcon, null),
           onClick: this.handleRemove,
           rounded: true,
           size: 'xs'
