@@ -13,6 +13,10 @@ export default class FilePicker extends Component {
     this.state = { filename: '' };
   }
 
+  componentDidCatch(error, errorInfo) {
+    console.log(error, errorInfo);
+  }
+
   handleChange = (event) => {
     const { input } = this.props;
     input.onChange(event.target.files[0]);

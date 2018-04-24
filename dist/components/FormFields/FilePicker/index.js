@@ -62,6 +62,11 @@ var FilePicker = function (_Component) {
   }
 
   _createClass(FilePicker, [{
+    key: 'componentDidCatch',
+    value: function componentDidCatch(error, errorInfo) {
+      console.log(error, errorInfo);
+    }
+  }, {
     key: 'render',
     value: function render() {
       var _props = this.props,
