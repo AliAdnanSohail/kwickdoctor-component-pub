@@ -30,11 +30,13 @@ exports[`renders correctly 1`] = `
       file-picker
     </div>
   </div>
+  
   <input
     className="jsx-3393071880 input-file"
     id="file-picker"
     onChange={[Function]}
     type="file"
+    value=""
   />
 </label>
 `;

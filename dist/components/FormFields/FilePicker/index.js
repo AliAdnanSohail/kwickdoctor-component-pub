@@ -88,42 +88,33 @@ var FilePicker = function (_Component) {
       var classes = (0, _classnames2.default)('upload-file', { 'upload-file--selected': input && input.value });
 
       return _react2.default.createElement(
-        _react.Fragment,
-        null,
+        'label',
+        { htmlFor: id, className: 'jsx-' + _styles2.default.__scopedHash + ' ' + (classes || '')
+        },
         _react2.default.createElement(
-          'label',
-          { htmlFor: id, className: 'jsx-' + _styles2.default.__scopedHash + ' ' + (classes || '')
+          'div',
+          {
+            className: 'jsx-' + _styles2.default.__scopedHash + ' ' + 'upload-file__label-container'
           },
+          input && input.value ? _react2.default.createElement(_base.DocumentIcon, null) : _react2.default.createElement(_base.UploadIcon, null),
           _react2.default.createElement(
             'div',
             {
-              className: 'jsx-' + _styles2.default.__scopedHash + ' ' + 'upload-file__label-container'
+              className: 'jsx-' + _styles2.default.__scopedHash + ' ' + 'upload-file__label'
             },
-            input && input.value ? _react2.default.createElement(_base.DocumentIcon, null) : _react2.default.createElement(_base.UploadIcon, null),
-            _react2.default.createElement(
-              'div',
-              {
-                className: 'jsx-' + _styles2.default.__scopedHash + ' ' + 'upload-file__label'
-              },
-              filename || placeholder
-            )
-          ),
-          input && input.value && _react2.default.createElement(_.Button, {
-            className: 'upload-file__close-icon',
-            flat: true,
-            icon: _react2.default.createElement(_base.CloseIcon, null),
-            onClick: this.handleRemove,
-            rounded: true,
-            size: 'xs'
-          }),
-          _react2.default.createElement('input', _extends({}, input, {
-            id: id,
-
-            onChange: this.handleChange,
-            type: 'file',
-            className: 'jsx-' + _styles2.default.__scopedHash + ' ' + 'input-file'
-          }))
+            filename || placeholder
+          )
         ),
+        input && input.value && _react2.default.createElement(_.Button, {
+          className: 'upload-file__close-icon',
+          flat: true,
+          icon: _react2.default.createElement(_base.CloseIcon, null),
+          onClick: this.handleRemove,
+          rounded: true,
+          size: 'xs'
+        }),
+        _react2.default.createElement('input', _extends({}, input, { id: id, onChange: this.handleChange, type: 'file', className: 'jsx-' + _styles2.default.__scopedHash + ' ' + 'input-file'
+        })),
         _react2.default.createElement(_style2.default, {
           styleId: _styles2.default.__scopedHash,
           css: _styles2.default.__scoped
@@ -140,9 +131,14 @@ exports.default = FilePicker;
 
 FilePicker.propTypes = {
   id: _propTypes2.default.string.isRequired,
+  input: _propTypes2.default.object,
   placeholder: _propTypes2.default.string
 };
 
 FilePicker.defaultProps = {
+  input: {
+    onChange: function onChange() {},
+    value: ''
+  },
   placeholder: 'Upload file'
 };

@@ -1055,11 +1055,13 @@ exports[`Storyshots Form Fields FilePicker 1`] = `
         placeholder
       </div>
     </div>
+    
     <input
       className="jsx-3393071880 input-file"
       id="id"
       onChange={[Function]}
       type="file"
+      value=""
     />
   </label>
 </div>

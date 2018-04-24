@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import { CloseIcon, DocumentIcon, UploadIcon } from 'grommet/components/icons/base';
@@ -43,46 +43,43 @@ export default class FilePicker extends Component {
     const classes = classnames('upload-file', { 'upload-file--selected': input && input.value });
 
     return (
-      <Fragment>
-        <label className={classes} htmlFor={id}>
-          <div className="upload-file__label-container">
-            {input && input.value ? <DocumentIcon /> : <UploadIcon />}
+      <label className={classes} htmlFor={id}>
+        <div className="upload-file__label-container">
+          {input && input.value ? <DocumentIcon /> : <UploadIcon />}
 
-            <div className="upload-file__label">{filename || placeholder}</div>
-          </div>
+          <div className="upload-file__label">{filename || placeholder}</div>
+        </div>
 
-          {input &&
-            input.value && (
-            <Button
-              className="upload-file__close-icon"
-              flat
-              icon={<CloseIcon />}
-              onClick={this.handleRemove}
-              rounded
-              size="xs"
-            />
-          )}
-
-          <input
-            {...input}
-            id={id}
-            className="input-file"
-            onChange={this.handleChange}
-            type="file"
+        {input &&
+          input.value && (
+          <Button
+            className="upload-file__close-icon"
+            flat
+            icon={<CloseIcon />}
+            onClick={this.handleRemove}
+            rounded
+            size="xs"
           />
-        </label>
+        )}
+
+        <input {...input} id={id} className="input-file" onChange={this.handleChange} type="file" />
 
         <style jsx>{styles}</style>
-      </Fragment>
+      </label>
     );
   }
 }
 
 FilePicker.propTypes = {
   id: PropTypes.string.isRequired,
+  input: PropTypes.object,
   placeholder: PropTypes.string,
 };
 
 FilePicker.defaultProps = {
+  input: {
+    onChange: () => {},
+    value: '',
+  },
   placeholder: 'Upload file',
 };
