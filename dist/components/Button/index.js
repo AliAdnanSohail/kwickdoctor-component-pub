@@ -115,7 +115,8 @@ var Button = function (_Component) {
           rounded = _props.rounded,
           size = _props.size,
           squared = _props.squared,
-          transparent = _props.transparent;
+          transparent = _props.transparent,
+          type = _props.type;
       var _state = this.state,
           top = _state.top,
           left = _state.left,
@@ -126,6 +127,7 @@ var Button = function (_Component) {
       return _react2.default.createElement(
         'button',
         {
+          type: type,
           ref: function ref(button) {
             _this2.button = button;
           },
@@ -164,6 +166,7 @@ Button.propTypes = {
   rounded: _propTypes2.default.bool,
   squared: _propTypes2.default.bool,
   transparent: _propTypes2.default.bool,
+  type: _propTypes2.default.string,
   onClick: _propTypes2.default.func
 };
 
@@ -180,5 +183,6 @@ Button.defaultProps = {
   rounded: false,
   squared: false,
   transparent: false,
+  type: 'button',
   onClick: null
 };

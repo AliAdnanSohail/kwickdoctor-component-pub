@@ -67,6 +67,7 @@ export default class Button extends Component {
       size,
       squared,
       transparent,
+      type,
     } = this.props;
 
     const { top, left, clicked } = this.state;
@@ -87,6 +88,7 @@ export default class Button extends Component {
     );
     return (
       <button
+        type={type}
         ref={(button) => {
           this.button = button;
         }}
@@ -117,6 +119,7 @@ Button.propTypes = {
   rounded: PropTypes.bool,
   squared: PropTypes.bool,
   transparent: PropTypes.bool,
+  type: PropTypes.string,
   onClick: PropTypes.func,
 };
 
@@ -133,5 +136,6 @@ Button.defaultProps = {
   rounded: false,
   squared: false,
   transparent: false,
+  type: 'button',
   onClick: null,
 };

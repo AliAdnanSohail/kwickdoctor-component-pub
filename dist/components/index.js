@@ -49,15 +49,6 @@ Object.defineProperty(exports, 'CardPicker', {
   }
 });
 
-var _DatePicker = require('./DatePicker');
-
-Object.defineProperty(exports, 'DatePicker', {
-  enumerable: true,
-  get: function get() {
-    return _interopRequireDefault(_DatePicker).default;
-  }
-});
-
 var _FileViewer = require('./FileViewer');
 
 Object.defineProperty(exports, 'FileViewer', {

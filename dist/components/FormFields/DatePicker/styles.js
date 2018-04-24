@@ -5,7 +5,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.error = exports.label = exports.wrapper = exports.datepicker = exports.calendar = exports.datepickerBlock = undefined;
 
-var _styleHelper = require('../../utils/style-helper');
+var _styleHelper = require('../../../utils/style-helper');
 
 var _styleHelper2 = _interopRequireDefault(_styleHelper);
 

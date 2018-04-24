@@ -70,6 +70,7 @@ exports[`Storyshots Button default 1`] = `
     className="jsx-1748154264 button"
     disabled={false}
     onClick={[Function]}
+    type="button"
   >
     <span
       className="button__content"
@@ -1295,6 +1296,7 @@ exports[`Storyshots Modal default 1`] = `
     className="jsx-1748154264 button"
     disabled={false}
     onClick={[Function]}
+    type="button"
   >
     <span
       className="button__content"
@@ -1435,6 +1437,7 @@ exports[`Storyshots Notification default 1`] = `
         className="jsx-1748154264 button button--s button--flat button--rounded"
         disabled={false}
         onClick={[Function]}
+        type="button"
       >
         <svg
           aria-label="checkmark"
@@ -1457,6 +1460,7 @@ exports[`Storyshots Notification default 1`] = `
         className="jsx-1748154264 button button--s button--flat button--rounded"
         disabled={false}
         onClick={[Function]}
+        type="button"
       >
         <svg
           aria-label="trash"
@@ -1501,6 +1505,7 @@ exports[`Storyshots Notification default 1`] = `
         className="jsx-1748154264 button button--s button--flat button--rounded"
         disabled={false}
         onClick={[Function]}
+        type="button"
       >
         <svg
           aria-label="checkmark"
@@ -1523,6 +1528,7 @@ exports[`Storyshots Notification default 1`] = `
         className="jsx-1748154264 button button--s button--flat button--rounded"
         disabled={false}
         onClick={[Function]}
+        type="button"
       >
         <svg
           aria-label="trash"
@@ -2229,6 +2235,7 @@ exports[`Storyshots Stepper Stepper 1`] = `
         className="jsx-1748154264 button"
         disabled={false}
         onClick={[Function]}
+        type="button"
       >
         <span
           className="button__content"
@@ -2314,6 +2321,7 @@ exports[`Storyshots Toast default 1`] = `
     className="jsx-1748154264 button"
     disabled={false}
     onClick={[Function]}
+    type="button"
   >
     <span
       className="button__content"

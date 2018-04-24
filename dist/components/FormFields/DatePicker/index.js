@@ -31,14 +31,6 @@ var _v = require('uuid/v4');
 
 var _v2 = _interopRequireDefault(_v);
 
-var _arrays = require('shallow-equal/arrays');
-
-var _arrays2 = _interopRequireDefault(_arrays);
-
-var _objects = require('shallow-equal/objects');
-
-var _objects2 = _interopRequireDefault(_objects);
-
 require('react-datepicker/dist/react-datepicker.css');
 
 var _styles = require('./styles');
@@ -74,12 +66,12 @@ var DatePicker = function (_Component) {
       }
 
       _this.setState({ value: date });
-      _this.props.onChange(date);
+      _this.props.input.onChange(date);
     };
 
     _this.id = (0, _v2.default)();
     _this.state = {
-      value: (0, _moment2.default)(props.value)
+      value: (0, _moment2.default)(props.input.value)
     };
     return _this;
   }
@@ -90,10 +82,11 @@ var DatePicker = function (_Component) {
       var _props = this.props,
           id = _props.id,
           label = _props.label,
-          name = _props.name,
           dateFormat = _props.dateFormat,
-          containerClassName = _props.containerClassName,
-          error = _props.error;
+          containerClassName = _props.containerClassName;
+      var name = this.props.input.name;
+      var error = this.props.meta.error;
+
 
       var blockClasses = (0, _classnames2.default)('form-field', containerClassName, {
         'has-error': !!error
@@ -161,20 +154,19 @@ exports.default = DatePicker;
 
 DatePicker.propTypes = {
   id: _propTypes2.default.string.isRequired,
-  name: _propTypes2.default.string,
   label: _propTypes2.default.string,
-  value: _propTypes2.default.object,
+  meta: _propTypes2.default.object,
+  input: _propTypes2.default.object,
   dateFormat: _propTypes2.default.string,
-  onChange: _propTypes2.default.func.isRequired,
-  containerClassName: _propTypes2.default.string,
-  error: _propTypes2.default.string
+  containerClassName: _propTypes2.default.string
 };
 
 DatePicker.defaultProps = {
-  name: '',
-  label: '',
-  value: (0, _moment2.default)(),
+  input: {
+    value: (0, _moment2.default)()
+  },
+  meta: {},
+  label: undefined,
   dateFormat: 'DD MMM, YYYY',
-  containerClassName: null,
-  error: ''
+  containerClassName: undefined
 };

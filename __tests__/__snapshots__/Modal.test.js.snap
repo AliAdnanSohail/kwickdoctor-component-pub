@@ -16,11 +16,13 @@ exports[`renders correctly 1`] = `
     rounded={false}
     squared={false}
     transparent={false}
+    type="button"
   >
     <button
       className="jsx-1748154264 button"
       disabled={false}
       onClick={[Function]}
+      type="button"
     >
       <span
         className="button__content"

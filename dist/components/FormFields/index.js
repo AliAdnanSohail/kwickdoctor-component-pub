@@ -49,6 +49,15 @@ Object.defineProperty(exports, 'TextArea', {
   }
 });
 
+var _DatePicker = require('./DatePicker');
+
+Object.defineProperty(exports, 'DatePicker', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_DatePicker).default;
+  }
+});
+
 var _Autocomplete = require('./Autocomplete');
 
 Object.keys(_Autocomplete).forEach(function (key) {
