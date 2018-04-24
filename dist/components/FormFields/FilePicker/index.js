@@ -54,21 +54,12 @@ var FilePicker = function (_Component) {
 
 
       if (event.target.files && event.target.files[0]) {
-        var reader = new FileReader();
-
-        var _event$target$files$ = event.target.files[0],
-            name = _event$target$files$.name,
-            type = _event$target$files$.type;
+        var name = event.target.files[0].name;
 
 
-        reader.onload = function (e) {
-          var blob = new Blob([e.target.result], { type: type });
+        _this.setState({ filename: name });
 
-          _this.setState({ filename: name });
-          onChange(blob);
-        };
-
-        reader.readAsArrayBuffer(event.target.files[0]);
+        onChange(event.target.files[0]);
       }
     };
 
@@ -127,6 +118,7 @@ var FilePicker = function (_Component) {
           }),
           _react2.default.createElement('input', _extends({}, input, {
             id: id,
+
             onChange: this.handleChange,
             type: 'file',
             className: 'jsx-' + _styles2.default.__scopedHash + ' ' + 'input-file'
