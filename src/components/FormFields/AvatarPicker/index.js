@@ -10,19 +10,7 @@ export default class AvatarPicker extends Component {
   handleChange = (event) => {
     const { input } = this.props;
 
-    const file = event.target.files[0];
-
-    if (file) {
-      const reader = new FileReader();
-
-      reader.onload = (e) => {
-        const blob = new Blob([e.target.result], { type: 'image/jpeg' });
-
-        input.onChange(blob);
-      };
-
-      reader.readAsArrayBuffer(file);
-    }
+    input.onChange(event.target.files[0]);
   };
 
   handleRemove = (event) => {
@@ -64,6 +52,7 @@ export default class AvatarPicker extends Component {
             id={id}
             key={resetKey}
             onBlur={() => {}}
+            onChange={this.handleChange}
             ref={(input) => {
               this.input = input;
             }}

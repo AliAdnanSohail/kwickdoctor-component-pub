@@ -18,19 +18,9 @@ export default class FilePicker extends Component {
 
     const file = event.target.files[0];
 
-    if (file) {
-      const reader = new FileReader();
+    input.onChange(file);
 
-      reader.onload = (e) => {
-        const blob = new Blob([e.target.result], { type: 'image/jpeg' });
-
-        input.onChange(blob);
-      };
-
-      reader.readAsArrayBuffer(file);
-
-      this.setState({ filename: file.name });
-    }
+    this.setState({ filename: file.name });
   };
 
   handleRemove = (event) => {

@@ -59,19 +59,7 @@ var AvatarPicker = function (_Component) {
       var input = _this.props.input;
 
 
-      var file = event.target.files[0];
-
-      if (file) {
-        var reader = new FileReader();
-
-        reader.onload = function (e) {
-          var blob = new Blob([e.target.result], { type: 'image/jpeg' });
-
-          input.onChange(blob);
-        };
-
-        reader.readAsArrayBuffer(file);
-      }
+      input.onChange(event.target.files[0]);
     }, _this.handleRemove = function (event) {
       event.preventDefault();
 
@@ -122,6 +110,7 @@ var AvatarPicker = function (_Component) {
             id: id,
             key: resetKey,
             onBlur: function onBlur() {},
+            onChange: this.handleChange,
             ref: function ref(input) {
               _this2.input = input;
             },

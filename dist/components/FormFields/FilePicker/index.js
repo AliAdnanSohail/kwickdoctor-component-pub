@@ -57,19 +57,9 @@ var FilePicker = function (_Component) {
 
       var file = event.target.files[0];
 
-      if (file) {
-        var reader = new FileReader();
+      input.onChange(file);
 
-        reader.onload = function (e) {
-          var blob = new Blob([e.target.result], { type: 'image/jpeg' });
-
-          input.onChange(blob);
-        };
-
-        reader.readAsArrayBuffer(file);
-
-        _this.setState({ filename: file.name });
-      }
+      _this.setState({ filename: file.name });
     };
 
     _this.handleRemove = function (event) {
