@@ -23,10 +23,6 @@ var _classnames2 = require('classnames');
 
 var _classnames3 = _interopRequireDefault(_classnames2);
 
-var _css = require('styled-jsx/css');
-
-var _css2 = _interopRequireDefault(_css);
-
 var _icons = require('grommet/components/icons');
 
 var _styles = require('./styles');
@@ -57,8 +53,8 @@ var Button = function (_Component) {
           left = _this$button$getBound.left;
 
       _this.setState({
-        top: event ? event.pageY - top : top,
-        left: event ? event.pageX - left : left,
+        top: event && event.pageY ? event.pageY - top : top,
+        left: event && event.pageX ? event.pageX - left : left,
         clicked: true
       }, function () {
         _this.timeout = setTimeout(function () {
@@ -95,7 +91,7 @@ var Button = function (_Component) {
       );
     };
 
-    _this.state = { top: '50%', left: '50%', clicked: false };
+    _this.state = { top: 0, left: 0, clicked: false };
     return _this;
   }
 
@@ -119,7 +115,8 @@ var Button = function (_Component) {
           rounded = _props.rounded,
           size = _props.size,
           squared = _props.squared,
-          transparent = _props.transparent;
+          transparent = _props.transparent,
+          type = _props.type;
       var _state = this.state,
           top = _state.top,
           left = _state.left,
@@ -130,6 +127,7 @@ var Button = function (_Component) {
       return _react2.default.createElement(
         'button',
         {
+          type: type,
           ref: function ref(button) {
             _this2.button = button;
           },
@@ -168,6 +166,7 @@ Button.propTypes = {
   rounded: _propTypes2.default.bool,
   squared: _propTypes2.default.bool,
   transparent: _propTypes2.default.bool,
+  type: _propTypes2.default.string,
   onClick: _propTypes2.default.func
 };
 
@@ -184,5 +183,6 @@ Button.defaultProps = {
   rounded: false,
   squared: false,
   transparent: false,
+  type: 'button',
   onClick: null
 };

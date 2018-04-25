@@ -3,7 +3,6 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.minLength = undefined;
 
 var _moment = require('moment');
 
@@ -30,7 +29,7 @@ var date = function date(value) {
  * @return {String|undefined} [description]
  */
 var email = function email(value) {
-  return value && !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(value) ? 'This doesn’t look like a valid email. Check up, please!' : undefined;
+  return value && !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(value) ? 'This doesn’t look like a valid email address. Please check your email address.' : undefined;
 };
 
 /**
@@ -59,7 +58,7 @@ var equals = function equals(targetValue, name) {
  */
 var maxLength = function maxLength(max) {
   return function (value) {
-    return value && value.length > max ? 'Should be ' + max + ' characters or less. Check up, please!' : undefined;
+    return value && value.length > max ? 'This field needs to be a maximum of ' + max + ' characters. Please retype value of this field.' : undefined;
   };
 };
 
@@ -72,9 +71,9 @@ var maxLength = function maxLength(max) {
  *
  * @return {String|Null} [description]
  */
-var minLength = exports.minLength = function minLength(min) {
+var minLength = function minLength(min) {
   return function (value) {
-    return value && value.length < min ? 'Should be ' + min + ' characters or more. Check up, please!' : undefined;
+    return value && value.length < min ? 'This field needs to be a minimum of ' + min + ' characters. Please retype value of this field.' : undefined;
   };
 };
 
@@ -97,7 +96,7 @@ var number = function number(value) {
  * @return {String|Null} [description]
  */
 var required = function required(value) {
-  return value ? undefined : 'This field is required. Check up, please!';
+  return value ? undefined : 'This field is required. Please complete the field.';
 };
 
 exports.default = {

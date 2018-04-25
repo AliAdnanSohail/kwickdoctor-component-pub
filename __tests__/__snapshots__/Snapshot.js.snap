@@ -1,58 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Storyshots Avatar Picker big 1`] = `
-<div
-  style={
-    Object {
-      "padding": "24px",
-    }
-  }
->
-  <div
-    className="jsx-779310772 jsx-2165763448 avatar"
-  >
-    <label
-      aria-label="Edit image"
-      className="jsx-779310772 jsx-2165763448 avatar__container"
-      htmlFor="avatar"
-    >
-      <input
-        className="jsx-779310772 jsx-2165763448 file-input"
-        id="avatar"
-        name="name"
-        onChange={[Function]}
-        type="file"
-      />
-      <div
-        className="jsx-779310772 jsx-2165763448 avatar__thumb"
-        style={
-          Object {
-            "backgroundImage": "none",
-          }
-        }
-      >
-        <svg
-          aria-label="camera"
-          className="grommetux-control-icon grommetux-control-icon-camera grommetux-control-icon--responsive"
-          height="24px"
-          role="img"
-          version="1.1"
-          viewBox="0 0 24 24"
-          width="24px"
-        >
-          <path
-            d="M1,21 L1,7 L6,7 L8,3 L16,3 L18,7 L23,7 L23,21 L1,21 Z M12,18 C14.7614237,18 17,15.7614237 17,13 C17,10.2385763 14.7614237,8 12,8 C9.23857625,8 7,10.2385763 7,13 C7,15.7614237 9.23857625,18 12,18 Z"
-            fill="none"
-            stroke="#000"
-            strokeWidth="2"
-          />
-        </svg>
-      </div>
-    </label>
-  </div>
-</div>
-`;
-
 exports[`Storyshots Avatar Picker default 1`] = `
 <div
   style={
@@ -62,25 +9,27 @@ exports[`Storyshots Avatar Picker default 1`] = `
   }
 >
   <div
-    className="jsx-3385526183 jsx-2165763448 avatar"
+    className="jsx-3617741812 jsx-2165763448 avatar avatar--circle"
   >
     <div
-      className="jsx-3385526183 jsx-2165763448 avatar__button"
-    />
+      className="jsx-3617741812 jsx-2165763448 avatar__button--remove"
+    >
+      
+    </div>
     <label
       aria-label="Edit image"
-      className="jsx-3385526183 jsx-2165763448 avatar__container"
+      className="jsx-3617741812 jsx-2165763448 avatar__container"
       htmlFor="avatar"
     >
       <input
-        className="jsx-3385526183 jsx-2165763448 file-input"
+        className="jsx-3617741812 jsx-2165763448 file-input"
         id="avatar"
-        name="name"
+        onBlur={[Function]}
         onChange={[Function]}
         type="file"
       />
       <div
-        className="jsx-3385526183 jsx-2165763448 avatar__thumb"
+        className="jsx-3617741812 jsx-2165763448 avatar__thumb avatar__thumb--circle"
         style={
           Object {
             "backgroundImage": "none",
@@ -105,9 +54,6 @@ exports[`Storyshots Avatar Picker default 1`] = `
         </svg>
       </div>
     </label>
-    <div
-      className="jsx-3385526183 jsx-2165763448 avatar__button"
-    />
   </div>
 </div>
 `;
@@ -121,9 +67,10 @@ exports[`Storyshots Button default 1`] = `
   }
 >
   <button
-    className="jsx-149966548 button"
+    className="jsx-1748154264 button"
     disabled={false}
     onClick={[Function]}
+    type="button"
   >
     <span
       className="button__content"
@@ -508,7 +455,7 @@ exports[`Storyshots Calendar default 1`] = `
         className="jsx-3270423735"
       >
         <button
-          className="jsx-1990659263 day day--selected--without-events day--date--2018-04-18"
+          className="jsx-1990659263 day day--disabled day--date--2018-04-18"
           onClick={[Function]}
           type="button"
         >
@@ -523,7 +470,7 @@ exports[`Storyshots Calendar default 1`] = `
         className="jsx-3270423735"
       >
         <button
-          className="jsx-1990659263 day day--date--2018-04-19"
+          className="jsx-1990659263 day day--disabled day--date--2018-04-19"
           onClick={[Function]}
           type="button"
         >
@@ -538,7 +485,7 @@ exports[`Storyshots Calendar default 1`] = `
         className="jsx-3270423735"
       >
         <button
-          className="jsx-1990659263 day day--date--2018-04-20"
+          className="jsx-1990659263 day day--disabled day--date--2018-04-20"
           onClick={[Function]}
           type="button"
         >
@@ -553,7 +500,7 @@ exports[`Storyshots Calendar default 1`] = `
         className="jsx-3270423735"
       >
         <button
-          className="jsx-1990659263 day day--date--2018-04-21"
+          className="jsx-1990659263 day day--disabled day--date--2018-04-21"
           onClick={[Function]}
           type="button"
         >
@@ -568,7 +515,7 @@ exports[`Storyshots Calendar default 1`] = `
         className="jsx-3270423735"
       >
         <button
-          className="jsx-1990659263 day day--date--2018-04-22"
+          className="jsx-1990659263 day day--disabled day--date--2018-04-22"
           onClick={[Function]}
           type="button"
         >
@@ -583,7 +530,7 @@ exports[`Storyshots Calendar default 1`] = `
         className="jsx-3270423735"
       >
         <button
-          className="jsx-1990659263 day day--date--2018-04-23"
+          className="jsx-1990659263 day day--disabled day--date--2018-04-23"
           onClick={[Function]}
           type="button"
         >
@@ -598,7 +545,7 @@ exports[`Storyshots Calendar default 1`] = `
         className="jsx-3270423735"
       >
         <button
-          className="jsx-1990659263 day day--date--2018-04-24"
+          className="jsx-1990659263 day day--disabled day--date--2018-04-24"
           onClick={[Function]}
           type="button"
         >
@@ -613,7 +560,7 @@ exports[`Storyshots Calendar default 1`] = `
         className="jsx-3270423735"
       >
         <button
-          className="jsx-1990659263 day day--date--2018-04-25"
+          className="jsx-1990659263 day day--selected--without-events day--date--2018-04-25"
           onClick={[Function]}
           type="button"
         >
@@ -888,133 +835,43 @@ exports[`Storyshots Card default 1`] = `
 </div>
 `;
 
-exports[`Storyshots Date Picker defauld 1`] = `
+exports[`Storyshots FileViewer simple PDF viewer 1`] = `
 <div
   style={
     Object {
+      "backgroundColor": "#666666",
+      "height": "500px",
       "padding": "24px",
     }
   }
 >
-  <form>
+  <div
+    className="react-pdf__Document"
+  >
     <div
-      className="form-field"
+      className="react-pdf__message react-pdf__message--loading"
     >
-      <label
-        htmlFor="datepicker"
-      >
-        Date Picker
-      </label>
-      <div>
-        <div
-          className="react-datepicker-wrapper"
-        >
-          <div
-            className="react-datepicker__input-container"
-          >
-            <input
-              autoComplete={undefined}
-              autoFocus={undefined}
-              className="datepicker"
-              disabled={false}
-              id="datepicker"
-              name="name"
-              onBlur={[Function]}
-              onChange={[Function]}
-              onClick={[Function]}
-              onFocus={[Function]}
-              onKeyDown={[Function]}
-              placeholder={undefined}
-              readOnly={undefined}
-              required={undefined}
-              tabIndex={undefined}
-              title={undefined}
-              type="text"
-              value="18 Apr, 2018"
-            />
-          </div>
-        </div>
-      </div>
-      <style>
-        .form-field{position:relative;}
-      </style>
-      <style>
-        .form-field .calendar{background-color:#ffffff;border:none;border-radius:6px;box-shadow:0 2px 40px 0 rgba(0,0,0,0.05);}
-        .form-field .calendar .react-datepicker__header{border:none;background-color:#ffffff;}
-        .form-field .calendar .react-datepicker__month{margin-top:0;}
-        .form-field .calendar .react-datepicker__month-container{padding:10px 20px 20px 20px;}
-        .form-field .calendar .react-datepicker__current-month{font-size:1rem;margin-bottom:20px;}
-        .form-field .calendar .react-datepicker__triangle{position:absolute;top:0 !important;left:36px !important;width:0;height:0;margin:0 !important;-webkit-transform-origin:0 0;-ms-transform-origin:0 0;transform-origin:0 0;-webkit-transform:rotate(135deg);-ms-transform:rotate(135deg);transform:rotate(135deg);box-sizing:border-box !important;box-shadow:-4px 4px 14px 0 rgba(0,0,0,0.05) !important;border-width:6px !important;border-style:solid !important;border-color:transparent transparent #ffffff #ffffff !important;}
-        .form-field .calendar .react-datepicker__triangle:before{content:none !important;}
-        .form-field .calendar .react-datepicker__navigation{border:none;top:17px;}
-        .form-field .calendar .react-datepicker__navigation:before{content:'';display:block;width:24px;height:24px;position:absolute;left:-39px;color:#222328;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' version='1.1' viewBox='0 0 24 24' width='24px' height='24px' role='img' class='grommetux-control-icon grommetux-control-icon-form-next grommetux-control-icon--responsive' aria-label='form-next'%3E%3Cpolyline fill='none' stroke='%23000' stroke-width='2' points='9 6 15 12 9 18'%3E%3C/polyline%3E%3C/svg%3E");background-repeat:no-repeat;font-weight:bold;font-size:1.3rem;}
-        .form-field .calendar .react-datepicker__navigation--next{right:16px;}
-        .form-field .calendar .react-datepicker__navigation--previous{left:16px;}
-        .form-field .calendar .react-datepicker__navigation--previous:before{-webkit-transform:rotate(180deg);-ms-transform:rotate(180deg);transform:rotate(180deg);left:18px;}
-        .form-field .calendar .react-datepicker__day{margin:6px;border-radius:50%;width:24px;height:24px;line-height:24px;color:#2A2A30;font-size:0.75rem;font-weight:400;}
-        .form-field .calendar .react-datepicker__day:hover:not(.react-datepicker__day--selected){color:#2A2A30;background-color:#eff0f4;}
-        .form-field .calendar .react-datepicker__day--selected{color:#ffffff;background-color:#0c97f9;}
-        .form-field .calendar .react-datepicker__day--outside-month{color:#bbbccd;}
-        .form-field .calendar .react-datepicker__day-name{margin:0 6px;color:#bbbccd;width:24px;height:24px;line-height:24px;text-transform:uppercase;font-size:0.75rem;font-weight:400;}
-      </style>
-      <style>
-        .form-field .datepicker{width:100%;padding:12px 16px 12px 52px;color:#2A2A30;font-size:0.875rem;box-sizing:border-box;background-color:#ffffff;background-repeat:no-repeat;background-position:17px center;background-image:url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3Csvg width='19px' height='20px' viewBox='0 0 19 20' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3C!-- Generator: Sketch 48 %2847235%29 - http://www.bohemiancoding.com/sketch --%3E%3Ctitle%3Ecalendar%3C/title%3E%3Cdesc%3ECreated with Sketch.%3C/desc%3E%3Cdefs%3E%3Cpath d='M4,4 C3.44771525,4 3,4.44771525 3,5 L3,17 C3,17.5522847 3.44771525,18 4,18 L17,18 C17.5522847,18 18,17.5522847 18,17 L18,5 C18,4.44771525 17.5522847,4 17,4 L4,4 Z M4,2 L17,2 C18.6568542,2 20,3.34314575 20,5 L20,17 C20,18.6568542 18.6568542,20 17,20 L4,20 C2.34314575,20 1,18.6568542 1,17 L1,5 C1,3.34314575 2.34314575,2 4,2 Z M3,7 L18,7 L18,9 L3,9 L3,7 Z M6,0.5 L6,0.5 C6.55228475,0.5 7,0.94771525 7,1.5 L7,5 C7,5.55228475 6.55228475,6 6,6 L6,6 C5.44771525,6 5,5.55228475 5,5 L5,1.5 C5,0.94771525 5.44771525,0.5 6,0.5 Z M15,0.5 L15,0.5 C15.5522847,0.5 16,0.94771525 16,1.5 L16,5 C16,5.55228475 15.5522847,6 15,6 L15,6 C14.4477153,6 14,5.55228475 14,5 L14,1.5 C14,0.94771525 14.4477153,0.5 15,0.5 Z M15.25,13 C15.9403559,13 16.5,12.4403559 16.5,11.75 C16.5,11.0596441 15.9403559,10.5 15.25,10.5 C14.5596441,10.5 14,11.0596441 14,11.75 C14,12.4403559 14.5596441,13 15.25,13 Z M15.25,16.8000002 C15.9403559,16.8000002 16.5,16.2403561 16.5,15.5500002 C16.5,14.8596443 15.9403559,14.3000002 15.25,14.3000002 C14.5596441,14.3000002 14,14.8596443 14,15.5500002 C14,16.2403561 14.5596441,16.8000002 15.25,16.8000002 Z M10.5500002,13 C11.2403561,13 11.8000002,12.4403559 11.8000002,11.75 C11.8000002,11.0596441 11.2403561,10.5 10.5500002,10.5 C9.85964425,10.5 9.30000019,11.0596441 9.30000019,11.75 C9.30000019,12.4403559 9.85964425,13 10.5500002,13 Z M10.5500002,16.8000002 C11.2403561,16.8000002 11.8000002,16.2403561 11.8000002,15.5500002 C11.8000002,14.8596443 11.2403561,14.3000002 10.5500002,14.3000002 C9.85964425,14.3000002 9.30000019,14.8596443 9.30000019,15.5500002 C9.30000019,16.2403561 9.85964425,16.8000002 10.5500002,16.8000002 Z M5.75,13 C6.44035594,13 7,12.4403559 7,11.75 C7,11.0596441 6.44035594,10.5 5.75,10.5 C5.05964406,10.5 4.5,11.0596441 4.5,11.75 C4.5,12.4403559 5.05964406,13 5.75,13 Z M5.75,16.8000002 C6.44035594,16.8000002 7,16.2403561 7,15.5500002 C7,14.8596443 6.44035594,14.3000002 5.75,14.3000002 C5.05964406,14.3000002 4.5,14.8596443 4.5,15.5500002 C4.5,16.2403561 5.05964406,16.8000002 5.75,16.8000002 Z' id='path-1'%3E%3C/path%3E%3C/defs%3E%3Cg id='Icons/Calendar' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd' transform='translate%28-1.000000, 0.000000%29'%3E%3Cg id='icon'%3E%3Cmask id='mask-2' fill='white'%3E%3Cuse xlink:href='%23path-1'%3E%3C/use%3E%3C/mask%3E%3Cuse id='calendar' fill='%23cccccc' fill-rule='nonzero' xlink:href='%23path-1'%3E%3C/use%3E%3C/g%3E%3C/g%3E%3C/svg%3E");border-width:2px;border-style:solid;border-color:#E7E7F0;border-radius:4px;}
-        .form-field .datepicker:focus{outline:none;border-color:#0c97f9;}
-        .form-field.has-error .datepicker,.form-field.has-error .datepicker:focus{border-color:#FF5572;}
-      </style>
-      <style>
-        .form-field label{color:#2A2A30;display:block;margin-bottom:6px;font-weight:500;font-size:1rem;}
-      </style>
-      <style>
-        .form-field .react-datepicker-wrapper,.form-field .react-datepicker__input-container{width:100%;}
-      </style>
-      <style>
-        .form-field .input-error{position:absolute;left:4px;width:auto;max-width:100%;box-sizing:border-box;word-wrap:break-word;padding:12px 16px;margin-top:-6px;border-radius:3px;background-color:#ffffff;box-shadow:0 2px 14px 0 rgba(0,0,0,0.14);color:#FF5572;font-size:0.875rem;font-weight:500;}
-        .form-field .input-error:before{content:'';position:absolute;top:0;left:32px;width:0;height:0;-webkit-transform-origin:0 0;-ms-transform-origin:0 0;transform-origin:0 0;-webkit-transform:rotate(135deg);-ms-transform:rotate(135deg);transform:rotate(135deg);box-sizing:border-box;box-shadow:-4px 4px 14px 0 rgba(0,0,0,0.05);border-width:6px;border-style:solid;border-color:transparent transparent #ffffff #ffffff;}
-      </style>
+      Loading PDF…
     </div>
-  </form>
+  </div>
 </div>
 `;
 
-exports[`Storyshots File Input default 1`] = `
+exports[`Storyshots FileViewer simple img viewer 1`] = `
 <div
   style={
     Object {
+      "backgroundColor": "#666666",
+      "height": "500px",
       "padding": "24px",
     }
   }
 >
-  <input
-    className="jsx-1181367161 inputFile"
-    id="text-input"
-    name="name"
-    onChange={[Function]}
-    type="file"
+  <img
+    alt="This document can't be displayed"
+    className="jsx-2199625982 image"
+    src={undefined}
   />
-  <label
-    className="jsx-1181367161 upload-license-copy"
-    htmlFor="text-input"
-  >
-    <svg
-      className="jsx-1181367161 icon-upload"
-      fill="#4695ef"
-      height="17"
-      viewBox="0 0 20 17"
-      width="20"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <path
-        className="jsx-1181367161"
-        d="M10 0l-5.2 4.9h3.3v5.1h3.8v-5.1h3.3l-5.2-4.9zm9.3 11.5l-3.2-2.1h-2l3.4 2.6h-3.5c-.1 0-.2.1-.2.1l-.8 2.3h-6l-.8-2.2c-.1-.1-.1-.2-.2-.2h-3.6l3.4-2.6h-2l-3.2 2.1c-.4.3-.7 1-.6 1.5l.6 3.1c.1.5.7.9 1.2.9h16.3c.6 0 1.1-.4 1.3-.9l.6-3.1c.1-.5-.2-1.2-.7-1.5z"
-      />
-    </svg>
-    <span
-      className="jsx-1181367161"
-    >
-      Upload license
-    </span>
-  </label>
 </div>
 `;
 
@@ -1070,6 +927,143 @@ exports[`Storyshots Form Fields Autocomplete 1`] = `
       .autocomplete__input input:focus{outline:none;}
     </style>
   </div>
+</div>
+`;
+
+exports[`Storyshots Form Fields Date Picker 1`] = `
+<div
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
+>
+  <div
+    className="form-field"
+  >
+    <label
+      htmlFor="datepicker"
+    >
+      Date Picker
+    </label>
+    <div>
+      <div
+        className="react-datepicker-wrapper"
+      >
+        <div
+          className="react-datepicker__input-container"
+        >
+          <input
+            autoComplete={undefined}
+            autoFocus={undefined}
+            className="datepicker"
+            disabled={false}
+            id="datepicker"
+            name={undefined}
+            onBlur={[Function]}
+            onChange={[Function]}
+            onClick={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            placeholder={undefined}
+            readOnly={undefined}
+            required={undefined}
+            tabIndex={undefined}
+            title={undefined}
+            type="text"
+            value="25 Apr, 2018"
+          />
+        </div>
+      </div>
+    </div>
+    
+    <style>
+      .form-field{position:relative;}
+    </style>
+    <style>
+      .form-field .calendar{background-color:#ffffff;border:none;border-radius:6px;box-shadow:0 2px 40px 0 rgba(0,0,0,0.05);}
+      .form-field .calendar .react-datepicker__header{border:none;background-color:#ffffff;}
+      .form-field .calendar .react-datepicker__month{margin-top:0;}
+      .form-field .calendar .react-datepicker__month-container{padding:10px 20px 20px 20px;}
+      .form-field .calendar .react-datepicker__current-month{font-size:1rem;margin-bottom:20px;}
+      .form-field .calendar .react-datepicker__triangle{position:absolute;top:0 !important;left:36px !important;width:0;height:0;margin:0 !important;-webkit-transform-origin:0 0;-ms-transform-origin:0 0;transform-origin:0 0;-webkit-transform:rotate(135deg);-ms-transform:rotate(135deg);transform:rotate(135deg);box-sizing:border-box !important;box-shadow:-4px 4px 14px 0 rgba(0,0,0,0.05) !important;border-width:6px !important;border-style:solid !important;border-color:transparent transparent #ffffff #ffffff !important;}
+      .form-field .calendar .react-datepicker__triangle:before{content:none !important;}
+      .form-field .calendar .react-datepicker__navigation{border:none;top:17px;}
+      .form-field .calendar .react-datepicker__navigation:before{content:'';display:block;width:24px;height:24px;position:absolute;left:-39px;color:#222328;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' version='1.1' viewBox='0 0 24 24' width='24px' height='24px' role='img' class='grommetux-control-icon grommetux-control-icon-form-next grommetux-control-icon--responsive' aria-label='form-next'%3E%3Cpolyline fill='none' stroke='%23000' stroke-width='2' points='9 6 15 12 9 18'%3E%3C/polyline%3E%3C/svg%3E");background-repeat:no-repeat;font-weight:bold;font-size:1.3rem;}
+      .form-field .calendar .react-datepicker__navigation--next{right:16px;}
+      .form-field .calendar .react-datepicker__navigation--previous{left:16px;}
+      .form-field .calendar .react-datepicker__navigation--previous:before{-webkit-transform:rotate(180deg);-ms-transform:rotate(180deg);transform:rotate(180deg);left:18px;}
+      .form-field .calendar .react-datepicker__day{margin:6px;border-radius:50%;width:24px;height:24px;line-height:24px;color:#2A2A30;font-size:0.75rem;font-weight:400;}
+      .form-field .calendar .react-datepicker__day:hover:not(.react-datepicker__day--selected){color:#2A2A30;background-color:#eff0f4;}
+      .form-field .calendar .react-datepicker__day--selected{color:#ffffff;background-color:#0c97f9;}
+      .form-field .calendar .react-datepicker__day--outside-month{color:#bbbccd;}
+      .form-field .calendar .react-datepicker__day-name{margin:0 6px;color:#bbbccd;width:24px;height:24px;line-height:24px;text-transform:uppercase;font-size:0.75rem;font-weight:400;}
+    </style>
+    <style>
+      .form-field .datepicker{width:100%;padding:12px 16px 12px 52px;color:#2A2A30;font-size:0.875rem;box-sizing:border-box;background-color:#ffffff;background-repeat:no-repeat;background-position:17px center;background-image:url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3Csvg width='19px' height='20px' viewBox='0 0 19 20' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3C!-- Generator: Sketch 48 %2847235%29 - http://www.bohemiancoding.com/sketch --%3E%3Ctitle%3Ecalendar%3C/title%3E%3Cdesc%3ECreated with Sketch.%3C/desc%3E%3Cdefs%3E%3Cpath d='M4,4 C3.44771525,4 3,4.44771525 3,5 L3,17 C3,17.5522847 3.44771525,18 4,18 L17,18 C17.5522847,18 18,17.5522847 18,17 L18,5 C18,4.44771525 17.5522847,4 17,4 L4,4 Z M4,2 L17,2 C18.6568542,2 20,3.34314575 20,5 L20,17 C20,18.6568542 18.6568542,20 17,20 L4,20 C2.34314575,20 1,18.6568542 1,17 L1,5 C1,3.34314575 2.34314575,2 4,2 Z M3,7 L18,7 L18,9 L3,9 L3,7 Z M6,0.5 L6,0.5 C6.55228475,0.5 7,0.94771525 7,1.5 L7,5 C7,5.55228475 6.55228475,6 6,6 L6,6 C5.44771525,6 5,5.55228475 5,5 L5,1.5 C5,0.94771525 5.44771525,0.5 6,0.5 Z M15,0.5 L15,0.5 C15.5522847,0.5 16,0.94771525 16,1.5 L16,5 C16,5.55228475 15.5522847,6 15,6 L15,6 C14.4477153,6 14,5.55228475 14,5 L14,1.5 C14,0.94771525 14.4477153,0.5 15,0.5 Z M15.25,13 C15.9403559,13 16.5,12.4403559 16.5,11.75 C16.5,11.0596441 15.9403559,10.5 15.25,10.5 C14.5596441,10.5 14,11.0596441 14,11.75 C14,12.4403559 14.5596441,13 15.25,13 Z M15.25,16.8000002 C15.9403559,16.8000002 16.5,16.2403561 16.5,15.5500002 C16.5,14.8596443 15.9403559,14.3000002 15.25,14.3000002 C14.5596441,14.3000002 14,14.8596443 14,15.5500002 C14,16.2403561 14.5596441,16.8000002 15.25,16.8000002 Z M10.5500002,13 C11.2403561,13 11.8000002,12.4403559 11.8000002,11.75 C11.8000002,11.0596441 11.2403561,10.5 10.5500002,10.5 C9.85964425,10.5 9.30000019,11.0596441 9.30000019,11.75 C9.30000019,12.4403559 9.85964425,13 10.5500002,13 Z M10.5500002,16.8000002 C11.2403561,16.8000002 11.8000002,16.2403561 11.8000002,15.5500002 C11.8000002,14.8596443 11.2403561,14.3000002 10.5500002,14.3000002 C9.85964425,14.3000002 9.30000019,14.8596443 9.30000019,15.5500002 C9.30000019,16.2403561 9.85964425,16.8000002 10.5500002,16.8000002 Z M5.75,13 C6.44035594,13 7,12.4403559 7,11.75 C7,11.0596441 6.44035594,10.5 5.75,10.5 C5.05964406,10.5 4.5,11.0596441 4.5,11.75 C4.5,12.4403559 5.05964406,13 5.75,13 Z M5.75,16.8000002 C6.44035594,16.8000002 7,16.2403561 7,15.5500002 C7,14.8596443 6.44035594,14.3000002 5.75,14.3000002 C5.05964406,14.3000002 4.5,14.8596443 4.5,15.5500002 C4.5,16.2403561 5.05964406,16.8000002 5.75,16.8000002 Z' id='path-1'%3E%3C/path%3E%3C/defs%3E%3Cg id='Icons/Calendar' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd' transform='translate%28-1.000000, 0.000000%29'%3E%3Cg id='icon'%3E%3Cmask id='mask-2' fill='white'%3E%3Cuse xlink:href='%23path-1'%3E%3C/use%3E%3C/mask%3E%3Cuse id='calendar' fill='%23cccccc' fill-rule='nonzero' xlink:href='%23path-1'%3E%3C/use%3E%3C/g%3E%3C/g%3E%3C/svg%3E");border-width:2px;border-style:solid;border-color:#E7E7F0;border-radius:4px;}
+      .form-field .datepicker:focus{outline:none;border-color:#0c97f9;}
+      .form-field.has-error .datepicker,.form-field.has-error .datepicker:focus{border-color:#FF5572;}
+    </style>
+    <style>
+      .form-field label{color:#2A2A30;display:block;margin-bottom:6px;font-weight:500;font-size:1rem;}
+    </style>
+    <style>
+      .form-field .react-datepicker-wrapper,.form-field .react-datepicker__input-container{width:100%;}
+    </style>
+    <style>
+      .form-field .input-error{position:absolute;left:4px;width:auto;max-width:100%;box-sizing:border-box;word-wrap:break-word;padding:12px 16px;margin-top:-6px;border-radius:3px;background-color:#ffffff;box-shadow:0 2px 14px 0 rgba(0,0,0,0.14);color:#FF5572;font-size:0.875rem;font-weight:500;}
+      .form-field .input-error:before{content:'';position:absolute;top:0;left:32px;width:0;height:0;-webkit-transform-origin:0 0;-ms-transform-origin:0 0;transform-origin:0 0;-webkit-transform:rotate(135deg);-ms-transform:rotate(135deg);transform:rotate(135deg);box-sizing:border-box;box-shadow:-4px 4px 14px 0 rgba(0,0,0,0.05);border-width:6px;border-style:solid;border-color:transparent transparent #ffffff #ffffff;}
+    </style>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Form Fields FilePicker 1`] = `
+<div
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
+>
+  <label
+    className="jsx-3393071880 upload-file"
+    htmlFor="id"
+  >
+    <div
+      className="jsx-3393071880 upload-file__label-container"
+    >
+      <svg
+        aria-label="upload"
+        className="grommetux-control-icon grommetux-control-icon-upload grommetux-control-icon--responsive"
+        height="24px"
+        role="img"
+        version="1.1"
+        viewBox="0 0 24 24"
+        width="24px"
+      >
+        <path
+          d="M1,17 L1,23 L23,23 L23,17 M12,2 L12,19 M5,9 L12,2 L19,9"
+          fill="none"
+          stroke="#000"
+          strokeWidth="2"
+        />
+      </svg>
+      <div
+        className="jsx-3393071880 upload-file__label"
+      >
+        placeholder
+      </div>
+    </div>
+    
+    <input
+      className="jsx-3393071880 input-file"
+      id="id"
+      onBlur={[Function]}
+      onChange={[Function]}
+      type="file"
+    />
+  </label>
 </div>
 `;
 
@@ -1301,9 +1295,10 @@ exports[`Storyshots Modal default 1`] = `
   }
 >
   <button
-    className="jsx-149966548 button"
+    className="jsx-1748154264 button"
     disabled={false}
     onClick={[Function]}
+    type="button"
   >
     <span
       className="button__content"
@@ -1425,25 +1420,26 @@ exports[`Storyshots Notification default 1`] = `
     style={Object {}}
   >
     <div
-      className="jsx-449624016 jsx-1245880828 notification__time"
+      className="jsx-3375289435 jsx-1245880828 notification__time"
     >
       12:00 AM, Jun 20
     </div>
     <div
-      className="jsx-449624016 jsx-1245880828 notification__message"
+      className="jsx-3375289435 jsx-1245880828 notification__message"
     >
       <span
-        className="jsx-449624016 jsx-1245880828 notification__dot"
+        className="jsx-3375289435 jsx-1245880828 notification__dot"
       />
       New message
     </div>
     <div
-      className="jsx-449624016 jsx-1245880828 notification__actions"
+      className="jsx-3375289435 jsx-1245880828 notification__actions"
     >
       <button
-        className="jsx-149966548 button button--s button--flat button--rounded"
+        className="jsx-1748154264 button button--s button--flat button--rounded"
         disabled={false}
         onClick={[Function]}
+        type="button"
       >
         <svg
           aria-label="checkmark"
@@ -1463,9 +1459,10 @@ exports[`Storyshots Notification default 1`] = `
         </svg>
       </button>
       <button
-        className="jsx-149966548 button button--s button--flat button--rounded"
+        className="jsx-1748154264 button button--s button--flat button--rounded"
         disabled={false}
         onClick={[Function]}
+        type="button"
       >
         <svg
           aria-label="trash"
@@ -1491,25 +1488,26 @@ exports[`Storyshots Notification default 1`] = `
     style={Object {}}
   >
     <div
-      className="jsx-449624016 jsx-1245880828 notification__time"
+      className="jsx-3375289435 jsx-1245880828 notification__time"
     >
       12:00 AM, Jun 20
     </div>
     <div
-      className="jsx-449624016 jsx-1245880828 notification__message"
+      className="jsx-3375289435 jsx-1245880828 notification__message"
     >
       <span
-        className="jsx-449624016 jsx-1245880828 notification__dot"
+        className="jsx-3375289435 jsx-1245880828 notification__dot"
       />
       New message
     </div>
     <div
-      className="jsx-449624016 jsx-1245880828 notification__actions"
+      className="jsx-3375289435 jsx-1245880828 notification__actions"
     >
       <button
-        className="jsx-149966548 button button--s button--flat button--rounded"
+        className="jsx-1748154264 button button--s button--flat button--rounded"
         disabled={false}
         onClick={[Function]}
+        type="button"
       >
         <svg
           aria-label="checkmark"
@@ -1529,9 +1527,10 @@ exports[`Storyshots Notification default 1`] = `
         </svg>
       </button>
       <button
-        className="jsx-149966548 button button--s button--flat button--rounded"
+        className="jsx-1748154264 button button--s button--flat button--rounded"
         disabled={false}
         onClick={[Function]}
+        type="button"
       >
         <svg
           aria-label="trash"
@@ -1749,6 +1748,425 @@ exports[`Storyshots Paginator default 1`] = `
 </div>
 `;
 
+exports[`Storyshots RadioButtons default 1`] = `
+<div
+  style={
+    Object {
+      "maxWidth": "443px",
+      "padding": "24px",
+    }
+  }
+>
+  <fieldset>
+    <div
+      className="radio__wrapper"
+    >
+      <div
+        className="radio__box"
+      >
+        <div
+          className="radio__icon"
+        >
+          <svg
+            aria-label="tools"
+            className="grommetux-control-icon grommetux-control-icon-tools grommetux-control-icon--responsive"
+            height="24px"
+            role="img"
+            version="1.1"
+            viewBox="0 0 24 24"
+            width="24px"
+          >
+            <path
+              d="M11,2 L22,13 L17.5,17.5 L6.5,6.5 L11,2 Z M16,6 L17,5 L19,7 L18,8 M13,13 L4,22 L2,20 L11,11 M5,18 L6,19"
+              fill="none"
+              stroke="#000"
+              strokeWidth="2"
+            />
+          </svg>
+        </div>
+        <input
+          className="radio__select"
+          defaultChecked={false}
+          name="group"
+          onChange={[Function]}
+          type="radio"
+          value="Medical record"
+        />
+        Medical record
+      </div>
+      <div
+        className="radio__box"
+      >
+        <div
+          className="radio__icon"
+        >
+          <svg
+            aria-label="tools"
+            className="grommetux-control-icon grommetux-control-icon-tools grommetux-control-icon--responsive"
+            height="24px"
+            role="img"
+            version="1.1"
+            viewBox="0 0 24 24"
+            width="24px"
+          >
+            <path
+              d="M11,2 L22,13 L17.5,17.5 L6.5,6.5 L11,2 Z M16,6 L17,5 L19,7 L18,8 M13,13 L4,22 L2,20 L11,11 M5,18 L6,19"
+              fill="none"
+              stroke="#000"
+              strokeWidth="2"
+            />
+          </svg>
+        </div>
+        <input
+          className="radio__select"
+          defaultChecked={false}
+          name="group"
+          onChange={[Function]}
+          type="radio"
+          value="Prescription"
+        />
+        Prescription
+      </div>
+      <div
+        className="radio__box"
+      >
+        <div
+          className="radio__icon"
+        >
+          <svg
+            aria-label="tools"
+            className="grommetux-control-icon grommetux-control-icon-tools grommetux-control-icon--responsive"
+            height="24px"
+            role="img"
+            version="1.1"
+            viewBox="0 0 24 24"
+            width="24px"
+          >
+            <path
+              d="M11,2 L22,13 L17.5,17.5 L6.5,6.5 L11,2 Z M16,6 L17,5 L19,7 L18,8 M13,13 L4,22 L2,20 L11,11 M5,18 L6,19"
+              fill="none"
+              stroke="#000"
+              strokeWidth="2"
+            />
+          </svg>
+        </div>
+        <input
+          className="radio__select"
+          defaultChecked={false}
+          name="group"
+          onChange={[Function]}
+          type="radio"
+          value="Lab analysis"
+        />
+        Lab analysis
+      </div>
+      <div
+        className="radio__box"
+      >
+        <div
+          className="radio__icon"
+        >
+          <svg
+            aria-label="tools"
+            className="grommetux-control-icon grommetux-control-icon-tools grommetux-control-icon--responsive"
+            height="24px"
+            role="img"
+            version="1.1"
+            viewBox="0 0 24 24"
+            width="24px"
+          >
+            <path
+              d="M11,2 L22,13 L17.5,17.5 L6.5,6.5 L11,2 Z M16,6 L17,5 L19,7 L18,8 M13,13 L4,22 L2,20 L11,11 M5,18 L6,19"
+              fill="none"
+              stroke="#000"
+              strokeWidth="2"
+            />
+          </svg>
+        </div>
+        <input
+          className="radio__select"
+          defaultChecked={false}
+          name="group"
+          onChange={[Function]}
+          type="radio"
+          value="Sick list"
+        />
+        Sick list
+      </div>
+    </div>
+    <style>
+      fieldset{border:none;}
+      .radio__wrapper{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;}
+      .radio__select{opacity:0;width:100%;height:46px;position:absolute;left:0px;}
+      .radio__icon{margin-right:18px;}
+      .radio__icon svg path{stroke:#b8b9cc !important;}
+      .radio__icon_active svg path{stroke:white !important;}
+      .radio__box{box-shadow:0px 0px 10px 0px rgba(0,0,0,0.12);border-radius:6px;color:#b8b9cc;font-size:0.8rem;text-transform:uppercase;padding:13px 16px 13px 23px;margin-bottom:20px;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-flex-basis:39%;-ms-flex-preferred-size:39%;flex-basis:39%;cursor:pointer;position:relative;}
+      .radio__box input[type='radio']{cursor:pointer;}
+      .radio__box_active{background-color:#1f93f4;color:white;}
+      .radio__column{-webkit-flex-basis:47%;-ms-flex-preferred-size:47%;flex-basis:47%;}
+    </style>
+  </fieldset>
+</div>
+`;
+
+exports[`Storyshots StarPicker simple start picker 1`] = `
+<div
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
+>
+  <label
+    className="jsx-1428835773 star"
+    htmlFor="1-star1"
+  >
+    <input
+      checked={false}
+      className="jsx-1428835773"
+      id="1-star1"
+      name={1}
+      onChange={[Function]}
+      onClick={[Function]}
+      type="radio"
+      value={1}
+    />
+    <svg
+      aria-label="star"
+      className="grommetux-control-icon grommetux-control-icon-star grommetux-control-icon--large grommetux-control-icon--responsive"
+      height="24px"
+      role="img"
+      theme={
+        Object {
+          "icon": Object {
+            "color": "#70c983",
+            "size": Object {
+              "large": "40px",
+            },
+          },
+        }
+      }
+      version="1.1"
+      viewBox="0 0 24 24"
+      width="24px"
+    >
+      <polygon
+        fill="none"
+        points="5 21 8 14 3 9 9 9 12 3 15 9 21 9 16 14 19 21 12 17"
+        stroke="#000"
+        strokeWidth="2"
+      />
+    </svg>
+  </label>
+  <label
+    className="jsx-1428835773 star"
+    htmlFor="2-star2"
+  >
+    <input
+      checked={false}
+      className="jsx-1428835773"
+      id="2-star2"
+      name={2}
+      onChange={[Function]}
+      onClick={[Function]}
+      type="radio"
+      value={2}
+    />
+    <svg
+      aria-label="star"
+      className="grommetux-control-icon grommetux-control-icon-star grommetux-control-icon--large grommetux-control-icon--responsive"
+      height="24px"
+      role="img"
+      theme={
+        Object {
+          "icon": Object {
+            "color": "#70c983",
+            "size": Object {
+              "large": "40px",
+            },
+          },
+        }
+      }
+      version="1.1"
+      viewBox="0 0 24 24"
+      width="24px"
+    >
+      <polygon
+        fill="none"
+        points="5 21 8 14 3 9 9 9 12 3 15 9 21 9 16 14 19 21 12 17"
+        stroke="#000"
+        strokeWidth="2"
+      />
+    </svg>
+  </label>
+  <label
+    className="jsx-1428835773 star"
+    htmlFor="3-star3"
+  >
+    <input
+      checked={true}
+      className="jsx-1428835773"
+      id="3-star3"
+      name={3}
+      onChange={[Function]}
+      onClick={[Function]}
+      type="radio"
+      value={3}
+    />
+    <svg
+      aria-label="star"
+      className="grommetux-control-icon grommetux-control-icon-star grommetux-control-icon--large grommetux-control-icon--responsive"
+      height="24px"
+      role="img"
+      theme={
+        Object {
+          "icon": Object {
+            "color": "#70c983",
+            "size": Object {
+              "large": "40px",
+            },
+          },
+        }
+      }
+      version="1.1"
+      viewBox="0 0 24 24"
+      width="24px"
+    >
+      <polygon
+        fill="none"
+        points="5 21 8 14 3 9 9 9 12 3 15 9 21 9 16 14 19 21 12 17"
+        stroke="#000"
+        strokeWidth="2"
+      />
+    </svg>
+  </label>
+  <label
+    className="jsx-1428835773 star"
+    htmlFor="4-star4"
+  >
+    <input
+      checked={false}
+      className="jsx-1428835773"
+      id="4-star4"
+      name={4}
+      onChange={[Function]}
+      onClick={[Function]}
+      type="radio"
+      value={4}
+    />
+    <svg
+      aria-label="star"
+      className="grommetux-control-icon grommetux-control-icon-star grommetux-control-icon--large grommetux-control-icon--responsive"
+      height="24px"
+      role="img"
+      theme={
+        Object {
+          "icon": Object {
+            "color": "#bcbecf",
+            "size": Object {
+              "large": "40px",
+            },
+          },
+        }
+      }
+      version="1.1"
+      viewBox="0 0 24 24"
+      width="24px"
+    >
+      <polygon
+        fill="none"
+        points="5 21 8 14 3 9 9 9 12 3 15 9 21 9 16 14 19 21 12 17"
+        stroke="#000"
+        strokeWidth="2"
+      />
+    </svg>
+  </label>
+  <label
+    className="jsx-1428835773 star"
+    htmlFor="5-star5"
+  >
+    <input
+      checked={false}
+      className="jsx-1428835773"
+      id="5-star5"
+      name={5}
+      onChange={[Function]}
+      onClick={[Function]}
+      type="radio"
+      value={5}
+    />
+    <svg
+      aria-label="star"
+      className="grommetux-control-icon grommetux-control-icon-star grommetux-control-icon--large grommetux-control-icon--responsive"
+      height="24px"
+      role="img"
+      theme={
+        Object {
+          "icon": Object {
+            "color": "#bcbecf",
+            "size": Object {
+              "large": "40px",
+            },
+          },
+        }
+      }
+      version="1.1"
+      viewBox="0 0 24 24"
+      width="24px"
+    >
+      <polygon
+        fill="none"
+        points="5 21 8 14 3 9 9 9 12 3 15 9 21 9 16 14 19 21 12 17"
+        stroke="#000"
+        strokeWidth="2"
+      />
+    </svg>
+  </label>
+  <label
+    className="jsx-1428835773 star"
+    htmlFor="6-star6"
+  >
+    <input
+      checked={false}
+      className="jsx-1428835773"
+      id="6-star6"
+      name={6}
+      onChange={[Function]}
+      onClick={[Function]}
+      type="radio"
+      value={6}
+    />
+    <svg
+      aria-label="star"
+      className="grommetux-control-icon grommetux-control-icon-star grommetux-control-icon--large grommetux-control-icon--responsive"
+      height="24px"
+      role="img"
+      theme={
+        Object {
+          "icon": Object {
+            "color": "#bcbecf",
+            "size": Object {
+              "large": "40px",
+            },
+          },
+        }
+      }
+      version="1.1"
+      viewBox="0 0 24 24"
+      width="24px"
+    >
+      <polygon
+        fill="none"
+        points="5 21 8 14 3 9 9 9 12 3 15 9 21 9 16 14 19 21 12 17"
+        stroke="#000"
+        strokeWidth="2"
+      />
+    </svg>
+  </label>
+</div>
+`;
+
 exports[`Storyshots Stepper Stepper 1`] = `
 <div
   style={
@@ -1816,9 +2234,10 @@ exports[`Storyshots Stepper Stepper 1`] = `
       }
     >
       <button
-        className="jsx-149966548 button"
+        className="jsx-1748154264 button"
         disabled={false}
         onClick={[Function]}
+        type="button"
       >
         <span
           className="button__content"
@@ -1827,9 +2246,68 @@ exports[`Storyshots Stepper Stepper 1`] = `
         </span>
       </button>
       <br />
-      current step 1
+      current step NaN
     </div>
   </div>
+</div>
+`;
+
+exports[`Storyshots TimePicker TimePicker 1`] = `
+<div
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
+>
+  <section
+    className="jsx-3947417489 b-time-picker"
+  >
+    <div
+      className="jsx-3947417489 b-time-picker__wrapper"
+    >
+      <div
+        className="jsx-3947417489 b-time-picker__title"
+      >
+        Appointment time
+      </div>
+      <div
+        className="jsx-3947417489 b-time-picker__input"
+        onClick={[Function]}
+        onKeyPress={[Function]}
+        role="button"
+        tabIndex="0"
+      >
+        <div
+          className="jsx-3947417489 b-time-picker__logo"
+        >
+          <svg
+            aria-label="clock"
+            className="grommetux-control-icon grommetux-control-icon-clock grommetux-control-icon--responsive"
+            height="24px"
+            role="img"
+            version="1.1"
+            viewBox="0 0 24 24"
+            width="24px"
+          >
+            <path
+              d="M12,22 C17.5228475,22 22,17.5228475 22,12 C22,6.4771525 17.5228475,2 12,2 C6.4771525,2 2,6.4771525 2,12 C2,17.5228475 6.4771525,22 12,22 Z M12,5 L12,12 L17,12"
+              fill="none"
+              stroke="#000"
+              strokeWidth="2"
+            />
+          </svg>
+        </div>
+        <input
+          className="jsx-3947417489 b-input"
+          onChange={[Function]}
+          type="text"
+          value="Pick time"
+        />
+      </div>
+      
+    </div>
+  </section>
 </div>
 `;
 
@@ -1842,9 +2320,10 @@ exports[`Storyshots Toast default 1`] = `
   }
 >
   <button
-    className="jsx-149966548 button"
+    className="jsx-1748154264 button"
     disabled={false}
     onClick={[Function]}
+    type="button"
   >
     <span
       className="button__content"
@@ -1888,7 +2367,7 @@ exports[`Storyshots Video Player default 1`] = `
   }
 >
   <div
-    className="jsx-3816864822 video-player-container"
+    className="jsx-1622707451 video-player-container"
   >
     <div
       className="video-react-controls-enabled video-react-paused video-react-fluid video-react-user-active video-react-workinghover video-react video-player"
@@ -2022,6 +2501,45 @@ exports[`Storyshots Video Player default 1`] = `
       .video-player__progress.video-react-progress-control .video-react-progress-holder .video-react-play-progress{border-radius:3px;}
       .video-player__fullscreen-button.video-react-fullscreen-control{position:absolute;top:24px;right:24px;height:30px;padding:6px 12px;background-color:rgba(42,42,48,0.5);border-radius:6px;}
     </style>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Video Recorder default 1`] = `
+<div
+  style={
+    Object {
+      "alignItems": "center",
+      "display": "flex",
+      "flexDirection": "column",
+      "justifyContent": "center",
+      "padding": "24px",
+    }
+  }
+>
+  <div
+    className="jsx-1676162044 jsx-4132344403 video-recorder"
+  >
+    <video
+      autoPlay={true}
+      className="jsx-436993235"
+      muted={true}
+    >
+      Your browser does not support the video tag.
+    </video>
+    <div
+      className="jsx-436993235 video-recorder-controls"
+    >
+      <p
+        className="jsx-436993235"
+      >
+        Start recording
+      </p>
+      <button
+        className="jsx-2729577650 record-button record-button--start"
+        onClick={[Function]}
+      />
+    </div>
   </div>
 </div>
 `;

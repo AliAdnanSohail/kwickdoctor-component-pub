@@ -4,12 +4,6 @@ import EnzymeToJson from 'enzyme-to-json';
 
 import { Modal, Button } from '../src';
 
-const baseProps = {
-  active: true,
-  rootId: 'modalRoot',
-  onExit: () => {},
-};
-
 const modalProps = {
   className: 'test-modal-content',
   text: 'test modal content',
@@ -56,16 +50,8 @@ class ModalWrapper extends React.Component {
 
 const ModalContent = props => <div className={props.className}>{props.text}</div>;
 
-const TestModal = () => (
-  <div id={baseProps.rootId}>
-    <Modal {...baseProps}>
-      <ModalContent {...modalProps} />
-    </Modal>
-  </div>
-);
-
 it('renders correctly', () => {
-  const element = mount(<TestModal />);
+  const element = mount(<ModalWrapper active={false} />);
 
   expect(EnzymeToJson(element)).toMatchSnapshot();
 });

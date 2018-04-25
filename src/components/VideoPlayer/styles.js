@@ -1,14 +1,26 @@
 import css from 'styled-jsx/css';
-
-// import settings from '../../utils/style-helper';
 import 'video-react/dist/video-react.css';
+
+import settings from '../../utils/style-helper';
 
 export default css`
   .video-player-container {
     position: relative;
-    width: 100%;
 
-    :global(.video-player) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    overflow: hidden;
+
+    width: 100%;
+    min-height: 480px;
+
+    background-color: ${settings.borderColor};
+
+    @media (min-width: 700px) {
+      width: 640px;
     }
   }
 `;

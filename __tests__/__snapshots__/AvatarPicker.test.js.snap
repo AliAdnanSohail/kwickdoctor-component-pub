@@ -2,25 +2,27 @@
 
 exports[`renders correctly 1`] = `
 <div
-  className="jsx-3385526183 jsx-2165763448 avatar"
+  className="jsx-3617741812 jsx-2165763448 avatar avatar--circle"
 >
   <div
-    className="jsx-3385526183 jsx-2165763448 avatar__button"
-  />
+    className="jsx-3617741812 jsx-2165763448 avatar__button--remove"
+  >
+    
+  </div>
   <label
     aria-label="Edit image"
-    className="jsx-3385526183 jsx-2165763448 avatar__container"
-    htmlFor="test-id"
+    className="jsx-3617741812 jsx-2165763448 avatar__container"
+    htmlFor="avatar"
   >
     <input
-      className="jsx-3385526183 jsx-2165763448 file-input"
-      id="test-id"
-      name="input-avatar-picker"
+      className="jsx-3617741812 jsx-2165763448 file-input"
+      id="avatar"
+      onBlur={[Function]}
       onChange={[Function]}
       type="file"
     />
     <div
-      className="jsx-3385526183 jsx-2165763448 avatar__thumb"
+      className="jsx-3617741812 jsx-2165763448 avatar__thumb avatar__thumb--circle"
       style={
         Object {
           "backgroundImage": "none",
@@ -45,8 +47,5 @@ exports[`renders correctly 1`] = `
       </svg>
     </div>
   </label>
-  <div
-    className="jsx-3385526183 jsx-2165763448 avatar__button"
-  />
 </div>
 `;

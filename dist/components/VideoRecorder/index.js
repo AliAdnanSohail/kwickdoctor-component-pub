@@ -27,10 +27,6 @@ var _VideoRecorderButton = require('./VideoRecorderButton');
 
 var _VideoRecorderButton2 = _interopRequireDefault(_VideoRecorderButton);
 
-var _VideoPlayer = require('../VideoPlayer');
-
-var _VideoPlayer2 = _interopRequireDefault(_VideoPlayer);
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -94,9 +90,10 @@ var VideoRecorder = function (_Component) {
 
         _this.setState({ countdownValue: countdownValue - 1 }, function () {
           if (_this.state.countdownValue === 0) {
-            _this.props.onStart(_this.stream);
+            clearInterval(_this.countdown);
 
             _this.chunk = [];
+
             _this.recorder.start(10);
 
             _this.setState({ countingdown: false, recording: true }, function () {
@@ -107,8 +104,6 @@ var VideoRecorder = function (_Component) {
               }, 1000);
 
               _this.props.onStart(_this.stream);
-
-              clearInterval(_this.countdown);
             });
           }
         });
@@ -122,17 +117,13 @@ var VideoRecorder = function (_Component) {
         return;
       }
 
+      clearInterval(_this.timer);
+
       _this.recorder.stop();
 
       var blob = new Blob(_this.chunk, { type: 'video/webm' });
 
-      _this.setState({ recording: false, stoped: true, url: window.URL.createObjectURL(blob) });
-
-      clearInterval(_this.timer);
-
-      _this.stream.getTracks().forEach(function (track) {
-        return track.stop();
-      });
+      _this.setState({ recording: false, countdownValue: 5, time: 0 });
 
       _this.props.onStop(blob);
     };
@@ -152,10 +143,7 @@ var VideoRecorder = function (_Component) {
         var minutes = parseInt(time / 60, 10);
         var seconds = parseInt(time % 60, 10);
 
-        minutes = minutes < 10 ? '0' + minutes : minutes;
-        seconds = seconds < 10 ? '0' + seconds : seconds;
-
-        return minutes + ':' + seconds;
+        return (minutes < 10 ? '0' + minutes : minutes) + ':' + (seconds < 10 ? '0' + seconds : seconds);
       }
 
       return 'Start recording';
@@ -187,13 +175,10 @@ var VideoRecorder = function (_Component) {
     };
 
     _this.renderRecorder = function () {
-      var _this$state2 = _this.state,
-          countingdown = _this$state2.countingdown,
-          stoped = _this$state2.stoped,
-          url = _this$state2.url;
+      var countingdown = _this.state.countingdown;
 
 
-      return stoped ? _react2.default.createElement(_VideoPlayer2.default, { src: url }) : _react2.default.createElement(
+      return _react2.default.createElement(
         _react.Fragment,
         null,
         _react2.default.createElement(
@@ -230,16 +215,11 @@ var VideoRecorder = function (_Component) {
     };
 
     _this.state = {
-      asked: false,
       available: true,
       countingdown: false,
       countdownValue: 5,
-      // paused: false,
-      permission: false,
       recording: false,
-      stoped: false,
-      time: 0,
-      url: ''
+      time: 0
     };
 
     _this.stream = null;
@@ -255,25 +235,24 @@ var VideoRecorder = function (_Component) {
 
       console.log('componentDidMount');
 
-      var handleSuccess = function handleSuccess(stream) {
-        _this2.stream = stream;
-        _this2.chunk = [];
+      if (navigator.mediaDevices) {
+        var handleSuccess = function handleSuccess(stream) {
+          _this2.video.srcObject = stream;
+          _this2.stream = stream;
 
-        _this2.setState({ permission: true, asked: true });
+          _this2.chunk = [];
 
-        _this2.video.srcObject = stream;
+          _this2.initMediaRecorder();
 
-        _this2.initMediaRecorder();
+          _this2.props.onGranted();
+        };
 
-        _this2.props.onGranted();
-      };
+        var handleFailed = function handleFailed(error) {
+          _this2.props.onDenied(error);
+        };
 
-      var handleFailed = function handleFailed(error) {
-        _this2.setState({ asked: false });
-        _this2.props.onDenied(error);
-      };
-
-      navigator.mediaDevices.getUserMedia({ audio: true, video: true }).then(handleSuccess).catch(handleFailed);
+        navigator.mediaDevices.getUserMedia({ audio: true, video: true }).then(handleSuccess).catch(handleFailed);
+      }
     }
   }, {
     key: 'componentWillUnmount',
@@ -332,8 +311,6 @@ exports.default = VideoRecorder;
 VideoRecorder.propTypes = {
   onDenied: _propTypes2.default.func,
   onGranted: _propTypes2.default.func,
-  // onPause,
-  // onResume,
   onStart: _propTypes2.default.func,
   onStop: _propTypes2.default.func
 };

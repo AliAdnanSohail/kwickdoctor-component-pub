@@ -17,8 +17,7 @@ export default class Step extends Component {
       <Transition in={active} timeout={300} unmountOnExit>
         {state => (
           <div className="step" style={{ ...transitionStyles[state] }}>
-            {React.Children.map(children, child =>
-              React.cloneElement(child, { ...this.props, ...child.props }))}
+            {children}
 
             <style jsx>{styles}</style>
           </div>

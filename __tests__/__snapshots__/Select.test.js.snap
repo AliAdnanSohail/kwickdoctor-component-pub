@@ -23,21 +23,27 @@ exports[`renders correctly 1`] = `
     >
       <option
         className="jsx-792907225"
-        value="male"
+        value="one"
       >
-        male
+        one
       </option>
       <option
         className="jsx-792907225"
-        value="any"
+        value="two"
       >
-        any
+        two
       </option>
       <option
         className="jsx-792907225"
-        value="female"
+        value="three"
       >
-        female
+        three
+      </option>
+      <option
+        className="jsx-792907225"
+        value="four"
+      >
+        four
       </option>
     </select>
     <svg

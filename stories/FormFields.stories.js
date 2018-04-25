@@ -1,10 +1,11 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { withKnobs, text, array } from '@storybook/addon-knobs/react';
+import { withKnobs, text, array, object } from '@storybook/addon-knobs/react';
 import { checkA11y } from '@storybook/addon-a11y';
 import { withTests } from '@storybook/addon-jest';
+import { action } from '@storybook/addon-actions';
 
-import { Autocomplete, Input, RadioButtonGroup, Select, TextArea } from '../src';
+import { Autocomplete, FilePicker, Input, RadioButtonGroup, Select, TextArea, DatePicker } from '../src';
 import results from '../.jest-test-results.json';
 
 storiesOf('Form Fields', module)
@@ -28,6 +29,15 @@ storiesOf('Form Fields', module)
         'selectors',
       ])}
     />
+  ));
+
+storiesOf('Form Fields', module)
+  .addDecorator(withKnobs)
+  .addDecorator(checkA11y)
+  .addDecorator(withTests({ results })('FilePicker'))
+  .addDecorator(getStory => <div style={{ padding: '24px' }}>{getStory()}</div>)
+  .add('FilePicker', () => (
+    <FilePicker id={text('id', 'id')} placeholder={text('placeholder', 'placeholder')} />
   ));
 
 storiesOf('Form Fields', module)
@@ -84,3 +94,26 @@ storiesOf('Form Fields', module)
       placeholder={text('placeholder', 'Start typing')}
     />
   ));
+
+storiesOf('Form Fields', module)
+  .addDecorator(withKnobs)
+  .addDecorator(checkA11y)
+  .addDecorator(withTests({ results })('DatePicker'))
+  .addDecorator(getStory => <div style={{ padding: '24px' }}>{getStory()}</div>)
+  .add('Date Picker', () => {
+    const metaValues = { error: '' };
+    const metaObj = object('meta', metaValues);
+
+    const inputValues = { onChange: action('changed') };
+    const inputObj = object('input', inputValues);
+
+    return (
+      <DatePicker
+        id={text('id', 'datepicker')}
+        label={text('label', 'Date Picker')}
+        dateFormat={text('date format', 'DD MMM, YYYY')}
+        meta={metaObj}
+        input={inputObj}
+      />
+    );
+  });

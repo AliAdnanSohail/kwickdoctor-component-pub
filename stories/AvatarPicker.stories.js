@@ -15,7 +15,7 @@ class AvatarPickerWrapper extends Component {
   }
 
   handleChange = (blob) => {
-    this.setState({ src: window.URL.createObjectURL(blob) });
+    this.setState({ src: blob ? window.URL.createObjectURL(blob) : '' });
   };
 
   render() {
@@ -38,5 +38,6 @@ storiesOf('Avatar Picker', module)
       id={text('id', 'avatar')}
       name={text('name', 'name')}
       squared={boolean('squared', false)}
+      onChange={action('')}
     />
   ));

@@ -1,7 +1,6 @@
 import React, { Component, Fragment } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
-import css from 'styled-jsx/css';
 
 import { SpinningIcon } from 'grommet/components/icons';
 
@@ -11,7 +10,7 @@ export default class Button extends Component {
   constructor(props) {
     super(props);
 
-    this.state = { top: '50%', left: '50%', clicked: false };
+    this.state = { top: 0, left: 0, clicked: false };
   }
 
   componentWillUnmount() {
@@ -23,8 +22,8 @@ export default class Button extends Component {
 
     this.setState(
       {
-        top: event ? event.pageY - top : top,
-        left: event ? event.pageX - left : left,
+        top: event && event.pageY ? event.pageY - top : top,
+        left: event && event.pageX ? event.pageX - left : left,
         clicked: true,
       },
       () => {
@@ -68,6 +67,7 @@ export default class Button extends Component {
       size,
       squared,
       transparent,
+      type,
     } = this.props;
 
     const { top, left, clicked } = this.state;
@@ -88,6 +88,7 @@ export default class Button extends Component {
     );
     return (
       <button
+        type={type}
         ref={(button) => {
           this.button = button;
         }}
@@ -118,6 +119,7 @@ Button.propTypes = {
   rounded: PropTypes.bool,
   squared: PropTypes.bool,
   transparent: PropTypes.bool,
+  type: PropTypes.string,
   onClick: PropTypes.func,
 };
 
@@ -134,5 +136,6 @@ Button.defaultProps = {
   rounded: false,
   squared: false,
   transparent: false,
+  type: 'button',
   onClick: null,
 };

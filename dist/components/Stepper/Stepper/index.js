@@ -34,8 +34,8 @@ var Stepper = function (_Component) {
 
   _createClass(Stepper, null, [{
     key: 'getDerivedStateFromProps',
-    value: function getDerivedStateFromProps(nextProps, prevState) {
-      return nextProps.activeStep !== prevState.activeStep ? { activeStep: nextProps.activeStep } : null;
+    value: function getDerivedStateFromProps(props) {
+      return { activeStep: props.activeStep };
     }
   }]);
 

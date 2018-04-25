@@ -19,9 +19,7 @@ var _classnames = require('classnames');
 
 var _classnames2 = _interopRequireDefault(_classnames);
 
-var _Close = require('grommet/components/icons/base/Close');
-
-var _Close2 = _interopRequireDefault(_Close);
+var _base = require('grommet/components/icons/base');
 
 var _Manager = require('./../Manager');
 
@@ -142,7 +140,7 @@ var Toast = function (_Component) {
           _react2.default.createElement(
             'button',
             { className: 'icon', onClick: this.closeToast },
-            _react2.default.createElement(_Close2.default, null)
+            _react2.default.createElement(_base.CloseIcon, null)
           )
         ),
         _react2.default.createElement('div', { className: 'clear' })

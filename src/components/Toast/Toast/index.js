@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
-import CloseIcon from 'grommet/components/icons/base/Close';
+import { CloseIcon } from 'grommet/components/icons/base';
 import Manager from './../Manager';
 
 export default class Toast extends Component {

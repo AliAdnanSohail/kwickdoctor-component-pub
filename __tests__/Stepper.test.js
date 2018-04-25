@@ -4,6 +4,34 @@ import EnzymeToJson from 'enzyme-to-json';
 
 import { Button, Stepper, Step } from '../src';
 
+const StepOneContent = props => (
+  <Fragment>
+    <Button
+      onClick={() => {
+        props.onChangeActiveStep();
+      }}
+    >
+      Next
+    </Button>
+    <br />
+    Step one
+  </Fragment>
+);
+
+const StepTwoContent = props => (
+  <Fragment>
+    <Button
+      onClick={() => {
+        props.onChangeActiveStep();
+      }}
+    >
+      Next
+    </Button>
+    <br />
+    Step two
+  </Fragment>
+);
+
 const StepContent = props => (
   <Fragment>
     <Button
@@ -14,7 +42,7 @@ const StepContent = props => (
       Next
     </Button>
     <br />
-    {`current step ${props.index + 1}`}
+    Step one
   </Fragment>
 );
 
@@ -35,19 +63,10 @@ class StepperWrapper extends Component {
     return (
       <Stepper activeStep={activeStep}>
         <Step>
-          <StepContent onChangeActiveStep={() => this.handleChangeActiveStep(1)} />
+          <StepOneContent onChangeActiveStep={() => this.handleChangeActiveStep(1)} />
         </Step>
         <Step>
-          <StepContent onChangeActiveStep={() => this.handleChangeActiveStep(2)} />
-        </Step>
-        <Step>
-          <StepContent onChangeActiveStep={() => this.handleChangeActiveStep(3)} />
-        </Step>
-        <Step>
-          <StepContent onChangeActiveStep={() => this.handleChangeActiveStep(4)} />
-        </Step>
-        <Step>
-          <StepContent onChangeActiveStep={() => this.handleChangeActiveStep(5)} />
+          <StepTwoContent onChangeActiveStep={() => this.handleChangeActiveStep(2)} />
         </Step>
         <Step>
           <StepContent onChangeActiveStep={() => this.handleChangeActiveStep(0)} />
@@ -66,7 +85,7 @@ it('renders correctly', () => {
 it('changing step works correctly', () => {
   const element = mount(<StepperWrapper />);
 
-  expect(element.find('.step').text()).toEqual('Nextcurrent step 1');
+  expect(element.find('.step').text()).toEqual('NextStep one');
 
   element.find('.button').simulate('click');
 
@@ -81,7 +100,7 @@ it('changing step works correctly', () => {
       .childAt(1)
       .hasClass('.step-icon--current')).toEqual(true);
 
-    expect(element.find('.step').text()).toEqual('Nextcurrent step 2');
+    expect(element.find('.step').text()).toEqual('NextStep two');
   }, 300);
 
   clearTimeout(timeout);
