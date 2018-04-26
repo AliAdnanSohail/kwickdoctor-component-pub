@@ -82,7 +82,8 @@ export const notification = css`
     }
     @media (max-width: 960px) {
       &__time {
-        padding: 24px 15px;
+        font-size: 14px;
+        padding: 15px;
       }
     }
 
@@ -91,6 +92,7 @@ export const notification = css`
         width: 100%;
         border-bottom: 2px solid rgb(231, 231, 240);
         border-right: none;
+        
       }
       &__message {
         width: 100%;
