@@ -6,7 +6,7 @@ export const notificationCard = css`
   :global(.notification-card) {
     display: flex;
     flex-direction: row;
-
+    flex-wrap: wrap;
     border-radius: 6px;
 
     &:not(:last-child) {
@@ -34,7 +34,8 @@ export const notification = css`
     &__dot {
       height: 8px;
       width: 8px;
-
+      flex-basis: 8px;
+      flex-shrink: 0;
       margin-right: 8px;
 
       border-radius: 50px;
@@ -77,6 +78,35 @@ export const notification = css`
           fill: none;
           stroke: ${settings.textLightColor}!important;
         }
+      }
+    }
+    @media (max-width: 960px) {
+      &__time {
+        padding: 24px 15px;
+      }
+    }
+
+    @media (max-width: 790px) {
+      &__time {
+        width: 100%;
+        border-bottom: 2px solid rgb(231, 231, 240);
+        border-right: none;
+      }
+      &__message {
+        width: 100%;
+        min-width: 100%;
+        padding: 24px;
+        text-align: center;
+        display: block;
+        box-sizing: border-box;
+        border-bottom: 2px solid rgb(231, 231, 240);
+      }
+      &__dot {
+        display: none;
+      }
+      &__actions {
+        width: 100%;
+        justify-content: space-around;
       }
     }
   }

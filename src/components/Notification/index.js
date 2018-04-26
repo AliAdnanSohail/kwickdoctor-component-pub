@@ -16,10 +16,12 @@ export default class Notification extends Component {
 
   handleClickComplete = () => {
     this.props.onComplete();
+    console.log('check');
   };
 
   handleClickDelete = () => {
     this.props.onDelete();
+    console.log('delete');
   };
 
   render() {
@@ -38,8 +40,8 @@ export default class Notification extends Component {
           {message}
         </div>
         <div className="notification__actions">
-          <Button icon={<CheckmarkIcon />} size="s" rounded flat />
-          <Button icon={<TrashIcon />} size="s" rounded flat />
+          <Button icon={<CheckmarkIcon />} size="s" rounded flat onClick={this.handleClickComplete} />
+          <Button icon={<TrashIcon />} size="s" rounded flat onClick={this.handleClickDelete} />
         </div>
 
         <style jsx>{notification}</style>
