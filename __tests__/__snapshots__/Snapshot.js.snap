@@ -560,7 +560,7 @@ exports[`Storyshots Calendar default 1`] = `
         className="jsx-3270423735"
       >
         <button
-          className="jsx-1990659263 day day--selected--without-events day--date--2018-04-25"
+          className="jsx-1990659263 day day--disabled day--date--2018-04-25"
           onClick={[Function]}
           type="button"
         >
@@ -575,7 +575,7 @@ exports[`Storyshots Calendar default 1`] = `
         className="jsx-3270423735"
       >
         <button
-          className="jsx-1990659263 day day--date--2018-04-26"
+          className="jsx-1990659263 day day--selected--without-events day--date--2018-04-26"
           onClick={[Function]}
           type="button"
         >
@@ -971,7 +971,7 @@ exports[`Storyshots Form Fields Date Picker 1`] = `
             tabIndex={undefined}
             title={undefined}
             type="text"
-            value="25 Apr, 2018"
+            value="26 Apr, 2018"
           />
         </div>
       </div>
@@ -1420,20 +1420,20 @@ exports[`Storyshots Notification default 1`] = `
     style={Object {}}
   >
     <div
-      className="jsx-3375289435 jsx-1245880828 notification__time"
+      className="jsx-2999748855 jsx-3539143060 notification__time"
     >
       12:00 AM, Jun 20
     </div>
     <div
-      className="jsx-3375289435 jsx-1245880828 notification__message"
+      className="jsx-2999748855 jsx-3539143060 notification__message"
     >
       <span
-        className="jsx-3375289435 jsx-1245880828 notification__dot"
+        className="jsx-2999748855 jsx-3539143060 notification__dot"
       />
       New message
     </div>
     <div
-      className="jsx-3375289435 jsx-1245880828 notification__actions"
+      className="jsx-2999748855 jsx-3539143060 notification__actions"
     >
       <button
         className="jsx-1748154264 button button--s button--flat button--rounded"
@@ -1488,20 +1488,20 @@ exports[`Storyshots Notification default 1`] = `
     style={Object {}}
   >
     <div
-      className="jsx-3375289435 jsx-1245880828 notification__time"
+      className="jsx-2999748855 jsx-3539143060 notification__time"
     >
       12:00 AM, Jun 20
     </div>
     <div
-      className="jsx-3375289435 jsx-1245880828 notification__message"
+      className="jsx-2999748855 jsx-3539143060 notification__message"
     >
       <span
-        className="jsx-3375289435 jsx-1245880828 notification__dot"
+        className="jsx-2999748855 jsx-3539143060 notification__dot"
       />
       New message
     </div>
     <div
-      className="jsx-3375289435 jsx-1245880828 notification__actions"
+      className="jsx-2999748855 jsx-3539143060 notification__actions"
     >
       <button
         className="jsx-1748154264 button button--s button--flat button--rounded"

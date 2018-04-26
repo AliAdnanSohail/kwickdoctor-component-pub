@@ -60,10 +60,6 @@ var Notification = function (_Component) {
 
 
       return (0, _moment2.default)(date).format('h:mm A, MMM D');
-    }, _this.handleClickComplete = function () {
-      _this.props.onComplete();
-    }, _this.handleClickDelete = function () {
-      _this.props.onDelete();
     }, _temp), _possibleConstructorReturn(_this, _ret);
   }
 
@@ -73,7 +69,9 @@ var Notification = function (_Component) {
       var _props = this.props,
           message = _props.message,
           primary = _props.primary,
-          read = _props.read;
+          read = _props.read,
+          onComplete = _props.onComplete,
+          onDelete = _props.onDelete;
 
 
       var dotClasses = (0, _classnames2.default)('notification__dot', {
@@ -106,8 +104,8 @@ var Notification = function (_Component) {
           {
             className: 'jsx-' + _styles.notification.__scopedHash + ' jsx-' + _styles.notificationCard.__scopedHash + ' ' + 'notification__actions'
           },
-          _react2.default.createElement(_.Button, { icon: _react2.default.createElement(_icons.CheckmarkIcon, null), size: 's', rounded: true, flat: true }),
-          _react2.default.createElement(_.Button, { icon: _react2.default.createElement(_icons.TrashIcon, null), size: 's', rounded: true, flat: true })
+          _react2.default.createElement(_.Button, { icon: _react2.default.createElement(_icons.CheckmarkIcon, null), size: 's', rounded: true, flat: true, onClick: onComplete }),
+          _react2.default.createElement(_.Button, { icon: _react2.default.createElement(_icons.TrashIcon, null), size: 's', rounded: true, flat: true, onClick: onDelete })
         ),
         _react2.default.createElement(_style2.default, {
           styleId: _styles.notification.__scopedHash,
