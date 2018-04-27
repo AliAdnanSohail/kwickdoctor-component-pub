@@ -40,7 +40,7 @@ export default class AvatarPicker extends Component {
     return (
       <div className={avatar}>
         <div className="avatar__button--remove">
-          {value && (
+          {(value || defaultValue) && (
             <Button onClick={this.handleRemove} icon={<TrashIcon />} size="xs" rounded danger />
           )}
         </div>
@@ -60,7 +60,7 @@ export default class AvatarPicker extends Component {
           />
 
           <div className={classes} style={thumbStyle}>
-            {!value && <CameraIcon />}
+            {!(value || defaultValue) && <CameraIcon />}
           </div>
         </label>
 

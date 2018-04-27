@@ -100,7 +100,7 @@ var AvatarPicker = function (_Component) {
           {
             className: 'jsx-' + _styles.avatarCircle.__scopedHash + ' jsx-' + _styles.fileInput.__scopedHash + ' ' + 'avatar__button--remove'
           },
-          value && _react2.default.createElement(_.Button, { onClick: this.handleRemove, icon: _react2.default.createElement(_icons.TrashIcon, null), size: 'xs', rounded: true, danger: true })
+          (value || defaultValue) && _react2.default.createElement(_.Button, { onClick: this.handleRemove, icon: _react2.default.createElement(_icons.TrashIcon, null), size: 'xs', rounded: true, danger: true })
         ),
         _react2.default.createElement(
           'label',
@@ -121,7 +121,7 @@ var AvatarPicker = function (_Component) {
             'div',
             { style: thumbStyle, className: 'jsx-' + _styles.avatarCircle.__scopedHash + ' jsx-' + _styles.fileInput.__scopedHash + ' ' + (classes || '')
             },
-            !value && _react2.default.createElement(_icons.CameraIcon, null)
+            !(value || defaultValue) && _react2.default.createElement(_icons.CameraIcon, null)
           )
         ),
         _react2.default.createElement(_style2.default, {
