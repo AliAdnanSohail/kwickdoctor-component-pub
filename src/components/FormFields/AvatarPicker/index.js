@@ -26,12 +26,12 @@ export default class AvatarPicker extends Component {
       id,
       input: { value, ...inputProps },
       resetKey,
-      src,
       squared,
+      defaultValue,
     } = this.props;
 
     const thumbStyle = {
-      backgroundImage: src ? `url(${src})` : 'none',
+      backgroundImage: value || defaultValue ? `url(${value || defaultValue})` : 'none',
     };
 
     const classes = classnames('avatar__thumb', { 'avatar__thumb--circle': !squared });
@@ -40,7 +40,7 @@ export default class AvatarPicker extends Component {
     return (
       <div className={avatar}>
         <div className="avatar__button--remove">
-          {src && (
+          {value && (
             <Button onClick={this.handleRemove} icon={<TrashIcon />} size="xs" rounded danger />
           )}
         </div>
@@ -60,7 +60,7 @@ export default class AvatarPicker extends Component {
           />
 
           <div className={classes} style={thumbStyle}>
-            {!src && <CameraIcon />}
+            {!value && <CameraIcon />}
           </div>
         </label>
 
@@ -72,12 +72,14 @@ export default class AvatarPicker extends Component {
 }
 
 AvatarPicker.propTypes = {
+  defaultValue: PropTypes.string,
   id: PropTypes.string.isRequired,
   input: PropTypes.object,
   squared: PropTypes.bool,
 };
 
 AvatarPicker.defaultProps = {
+  defaultValue: '',
   input: {
     onChange: () => {},
     value: '',

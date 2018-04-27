@@ -80,11 +80,11 @@ var AvatarPicker = function (_Component) {
           value = _props$input.value,
           inputProps = _objectWithoutProperties(_props$input, ['value']),
           resetKey = _props.resetKey,
-          src = _props.src,
-          squared = _props.squared;
+          squared = _props.squared,
+          defaultValue = _props.defaultValue;
 
       var thumbStyle = {
-        backgroundImage: src ? 'url(' + src + ')' : 'none'
+        backgroundImage: value || defaultValue ? 'url(' + (value || defaultValue) + ')' : 'none'
       };
 
       var classes = (0, _classnames2.default)('avatar__thumb', { 'avatar__thumb--circle': !squared });
@@ -100,7 +100,7 @@ var AvatarPicker = function (_Component) {
           {
             className: 'jsx-' + _styles.avatarCircle.__scopedHash + ' jsx-' + _styles.fileInput.__scopedHash + ' ' + 'avatar__button--remove'
           },
-          src && _react2.default.createElement(_.Button, { onClick: this.handleRemove, icon: _react2.default.createElement(_icons.TrashIcon, null), size: 'xs', rounded: true, danger: true })
+          value && _react2.default.createElement(_.Button, { onClick: this.handleRemove, icon: _react2.default.createElement(_icons.TrashIcon, null), size: 'xs', rounded: true, danger: true })
         ),
         _react2.default.createElement(
           'label',
@@ -121,7 +121,7 @@ var AvatarPicker = function (_Component) {
             'div',
             { style: thumbStyle, className: 'jsx-' + _styles.avatarCircle.__scopedHash + ' jsx-' + _styles.fileInput.__scopedHash + ' ' + (classes || '')
             },
-            !src && _react2.default.createElement(_icons.CameraIcon, null)
+            !value && _react2.default.createElement(_icons.CameraIcon, null)
           )
         ),
         _react2.default.createElement(_style2.default, {
@@ -143,12 +143,14 @@ exports.default = AvatarPicker;
 
 
 AvatarPicker.propTypes = {
+  defaultValue: _propTypes2.default.string,
   id: _propTypes2.default.string.isRequired,
   input: _propTypes2.default.object,
   squared: _propTypes2.default.bool
 };
 
 AvatarPicker.defaultProps = {
+  defaultValue: '',
   input: {
     onChange: function onChange() {},
     value: ''
