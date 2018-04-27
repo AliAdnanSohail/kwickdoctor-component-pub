@@ -575,7 +575,7 @@ exports[`Storyshots Calendar default 1`] = `
         className="jsx-3270423735"
       >
         <button
-          className="jsx-1990659263 day day--selected--without-events day--date--2018-04-26"
+          className="jsx-1990659263 day day--disabled day--date--2018-04-26"
           onClick={[Function]}
           type="button"
         >
@@ -590,7 +590,7 @@ exports[`Storyshots Calendar default 1`] = `
         className="jsx-3270423735"
       >
         <button
-          className="jsx-1990659263 day day--date--2018-04-27"
+          className="jsx-1990659263 day day--selected--without-events day--date--2018-04-27"
           onClick={[Function]}
           type="button"
         >
@@ -971,7 +971,7 @@ exports[`Storyshots Form Fields Date Picker 1`] = `
             tabIndex={undefined}
             title={undefined}
             type="text"
-            value="26 Apr, 2018"
+            value="27 Apr, 2018"
           />
         </div>
       </div>
@@ -1086,6 +1086,7 @@ exports[`Storyshots Form Fields Input 1`] = `
     </label>
     <input
       className=""
+      defaultValue={undefined}
       id="input"
       name="Name"
       placeholder="Start typing"
