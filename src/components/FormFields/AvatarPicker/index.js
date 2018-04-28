@@ -28,9 +28,13 @@ export default class AvatarPicker extends Component {
       defaultValue,
     } = this.props;
 
-    const thumbStyle = {
-      backgroundImage: value || defaultValue ? `url(${URL.createObjectURL(value) || defaultValue})` : 'none',
-    };
+    let src = 'none';
+
+    if (value) {
+      src = `url(${URL.createObjectURL(value)})`;
+    } else {
+      src = `url(${defaultValue})`;
+    }
 
     const classes = classnames('avatar__thumb', { 'avatar__thumb--circle': !squared });
     const avatar = classnames('avatar', { 'avatar--circle': !squared });
@@ -57,7 +61,7 @@ export default class AvatarPicker extends Component {
             type="file"
           />
 
-          <div className={classes} style={thumbStyle}>
+          <div className={classes} style={{ backgroundImage: src }}>
             {!(value || defaultValue) && <CameraIcon />}
           </div>
         </label>

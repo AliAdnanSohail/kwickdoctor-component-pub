@@ -32,7 +32,7 @@ exports[`Storyshots Avatar Picker default 1`] = `
         className="jsx-3617741812 jsx-2165763448 avatar__thumb avatar__thumb--circle"
         style={
           Object {
-            "backgroundImage": "none",
+            "backgroundImage": "url()",
           }
         }
       >

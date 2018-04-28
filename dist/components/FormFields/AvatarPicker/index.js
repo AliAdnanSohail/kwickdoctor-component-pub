@@ -81,9 +81,13 @@ var AvatarPicker = function (_Component) {
           squared = _props.squared,
           defaultValue = _props.defaultValue;
 
-      var thumbStyle = {
-        backgroundImage: value || defaultValue ? 'url(' + (URL.createObjectURL(value) || defaultValue) + ')' : 'none'
-      };
+      var src = 'none';
+
+      if (value) {
+        src = 'url(' + URL.createObjectURL(value) + ')';
+      } else {
+        src = 'url(' + defaultValue + ')';
+      }
 
       var classes = (0, _classnames2.default)('avatar__thumb', { 'avatar__thumb--circle': !squared });
       var avatar = (0, _classnames2.default)('avatar', { 'avatar--circle': !squared });
@@ -117,7 +121,7 @@ var AvatarPicker = function (_Component) {
           })),
           _react2.default.createElement(
             'div',
-            { style: thumbStyle, className: 'jsx-' + _styles.avatarCircle.__scopedHash + ' jsx-' + _styles.fileInput.__scopedHash + ' ' + (classes || '')
+            { style: { backgroundImage: src }, className: 'jsx-' + _styles.avatarCircle.__scopedHash + ' jsx-' + _styles.fileInput.__scopedHash + ' ' + (classes || '')
             },
             !(value || defaultValue) && _react2.default.createElement(_icons.CameraIcon, null)
           )
