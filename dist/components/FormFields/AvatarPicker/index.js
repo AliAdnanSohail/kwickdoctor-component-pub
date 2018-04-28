@@ -63,8 +63,6 @@ var AvatarPicker = function (_Component) {
     }, _this.handleRemove = function (event) {
       event.preventDefault();
 
-      _this.input.value = null;
-
       _this.props.input.onChange(null);
     }, _temp), _possibleConstructorReturn(_this, _ret);
   }
@@ -84,7 +82,7 @@ var AvatarPicker = function (_Component) {
           defaultValue = _props.defaultValue;
 
       var thumbStyle = {
-        backgroundImage: value || defaultValue ? 'url(' + (value || defaultValue) + ')' : 'none'
+        backgroundImage: value || defaultValue ? 'url(' + (URL.createObjectURL(value) || defaultValue) + ')' : 'none'
       };
 
       var classes = (0, _classnames2.default)('avatar__thumb', { 'avatar__thumb--circle': !squared });

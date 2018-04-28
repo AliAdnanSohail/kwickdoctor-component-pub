@@ -58,6 +58,26 @@ exports[`Storyshots Avatar Picker default 1`] = `
 </div>
 `;
 
+exports[`Storyshots Avatar default 1`] = `
+<div
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
+>
+  <div
+    className="jsx-1651412002 avatar-container avatar-container--circle"
+    squared={false}
+    style={
+      Object {
+        "backgroundImage": "url(undefined)",
+      }
+    }
+  />
+</div>
+`;
+
 exports[`Storyshots Button default 1`] = `
 <div
   style={

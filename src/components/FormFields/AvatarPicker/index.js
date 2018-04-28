@@ -16,8 +16,6 @@ export default class AvatarPicker extends Component {
   handleRemove = (event) => {
     event.preventDefault();
 
-    this.input.value = null;
-
     this.props.input.onChange(null);
   };
 
@@ -31,7 +29,7 @@ export default class AvatarPicker extends Component {
     } = this.props;
 
     const thumbStyle = {
-      backgroundImage: value || defaultValue ? `url(${value || defaultValue})` : 'none',
+      backgroundImage: value || defaultValue ? `url(${URL.createObjectURL(value) || defaultValue})` : 'none',
     };
 
     const classes = classnames('avatar__thumb', { 'avatar__thumb--circle': !squared });
