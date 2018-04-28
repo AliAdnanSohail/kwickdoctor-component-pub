@@ -67,7 +67,7 @@ exports[`Storyshots Button default 1`] = `
   }
 >
   <button
-    className="jsx-1748154264 button"
+    className="jsx-2250006430 button"
     disabled={false}
     onClick={[Function]}
     type="button"
@@ -9838,7 +9838,7 @@ exports[`Storyshots Modal default 1`] = `
   }
 >
   <button
-    className="jsx-1748154264 button"
+    className="jsx-2250006430 button"
     disabled={false}
     onClick={[Function]}
     type="button"
@@ -9979,14 +9979,14 @@ exports[`Storyshots Notification default 1`] = `
       className="jsx-2999748855 jsx-3539143060 notification__actions"
     >
       <button
-        className="jsx-1748154264 button button--s button--flat button--rounded"
+        className="jsx-2250006430 button button--s button--flat button--with-icon button--rounded"
         disabled={false}
         onClick={[Function]}
         type="button"
       >
         <svg
           aria-label="checkmark"
-          className="grommetux-control-icon grommetux-control-icon-checkmark grommetux-control-icon--responsive"
+          className="grommetux-control-icon grommetux-control-icon-checkmark button__icon grommetux-control-icon--responsive"
           height="24px"
           role="img"
           version="1.1"
@@ -10002,14 +10002,14 @@ exports[`Storyshots Notification default 1`] = `
         </svg>
       </button>
       <button
-        className="jsx-1748154264 button button--s button--flat button--rounded"
+        className="jsx-2250006430 button button--s button--flat button--with-icon button--rounded"
         disabled={false}
         onClick={[Function]}
         type="button"
       >
         <svg
           aria-label="trash"
-          className="grommetux-control-icon grommetux-control-icon-trash grommetux-control-icon--responsive"
+          className="grommetux-control-icon grommetux-control-icon-trash button__icon grommetux-control-icon--responsive"
           height="24px"
           role="img"
           version="1.1"
@@ -10047,14 +10047,14 @@ exports[`Storyshots Notification default 1`] = `
       className="jsx-2999748855 jsx-3539143060 notification__actions"
     >
       <button
-        className="jsx-1748154264 button button--s button--flat button--rounded"
+        className="jsx-2250006430 button button--s button--flat button--with-icon button--rounded"
         disabled={false}
         onClick={[Function]}
         type="button"
       >
         <svg
           aria-label="checkmark"
-          className="grommetux-control-icon grommetux-control-icon-checkmark grommetux-control-icon--responsive"
+          className="grommetux-control-icon grommetux-control-icon-checkmark button__icon grommetux-control-icon--responsive"
           height="24px"
           role="img"
           version="1.1"
@@ -10070,14 +10070,14 @@ exports[`Storyshots Notification default 1`] = `
         </svg>
       </button>
       <button
-        className="jsx-1748154264 button button--s button--flat button--rounded"
+        className="jsx-2250006430 button button--s button--flat button--with-icon button--rounded"
         disabled={false}
         onClick={[Function]}
         type="button"
       >
         <svg
           aria-label="trash"
-          className="grommetux-control-icon grommetux-control-icon-trash grommetux-control-icon--responsive"
+          className="grommetux-control-icon grommetux-control-icon-trash button__icon grommetux-control-icon--responsive"
           height="24px"
           role="img"
           version="1.1"
@@ -10777,7 +10777,7 @@ exports[`Storyshots Stepper Stepper 1`] = `
       }
     >
       <button
-        className="jsx-1748154264 button"
+        className="jsx-2250006430 button"
         disabled={false}
         onClick={[Function]}
         type="button"
@@ -10863,7 +10863,7 @@ exports[`Storyshots Toast default 1`] = `
   }
 >
   <button
-    className="jsx-1748154264 button"
+    className="jsx-2250006430 button"
     disabled={false}
     onClick={[Function]}
     type="button"

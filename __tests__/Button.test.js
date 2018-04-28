@@ -64,11 +64,21 @@ it('transparent button renders correctly', () => {
 it('button with loading prop renders correctly', () => {
   const element = mount(<Button loading>Hello!</Button>);
 
-  expect(element.find('button').hasClass('button--loading')).toEqual(true);
+  expect(element.find('button').hasClass('button--with-icon')).toEqual(true);
   expect(element
     .find('button')
     .childAt(0)
     .type()).toEqual(SpinningIcon);
+});
+
+it('button with icon renders correctly', () => {
+  const element = mount(<Button icon={<EditIcon />} >Hello!</Button>);
+
+  expect(element.find('button').hasClass('button--with-icon')).toEqual(true);
+  expect(element
+    .find('button')
+    .childAt(0)
+    .type()).toEqual(EditIcon);
 });
 
 it('wave effect shows correctly', () => {
