@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { storiesOf } from '@storybook/react';
-import { withKnobs } from '@storybook/addon-knobs/react';
+import { withKnobs, boolean } from '@storybook/addon-knobs/react';
 import { checkA11y } from '@storybook/addon-a11y';
 import { withTests } from '@storybook/addon-jest';
 
@@ -8,16 +8,10 @@ import { Avatar } from '../src';
 import results from '../.jest-test-results.json';
 
 class AvatarWrapper extends Component {
-  constructor(props) {
-    super(props);
-    this.state = { src: '' };
-  }
-
   render() {
-    const { src } = this.state;
-
+    const { src, squared } = this.props;
     return (
-      <Avatar src={src} />
+      <Avatar src={src} squared={squared} />
     );
   }
 }
@@ -28,5 +22,7 @@ storiesOf('Avatar', module)
   .addDecorator(withTests({ results })('Avatar'))
   .addDecorator(getStory => <div style={{ padding: '24px' }}>{getStory()}</div>)
   .add('default', () => (
-    <AvatarWrapper />
+    <AvatarWrapper
+      squared={boolean('squared', false)}
+    />
   ));

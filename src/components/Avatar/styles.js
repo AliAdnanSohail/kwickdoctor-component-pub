@@ -9,5 +9,10 @@ export default css`
   background-size: cover;
   border-radius: 22px;
   background-position: center center;
+  &--circle {
+    border-radius: 50%;
+    width: 138px;
+    height: 138px;
+  }
 }
 `;
