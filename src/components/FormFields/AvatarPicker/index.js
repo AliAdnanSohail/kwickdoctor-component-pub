@@ -7,17 +7,31 @@ import { avatarCircle, fileInput } from './styles';
 import { Button } from '../../';
 
 export default class AvatarPicker extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      imgUrl: '',
+    };
+  }
   handleChange = (event) => {
     const { input } = this.props;
-
+    const img = event.target.files[0];
+    const reader = new FileReader();
+    reader.onloadend = () => {
+      this.setState({
+        imgUrl: reader.result,
+      });
+    };
+    reader.readAsDataURL(img);
     input.onChange(event.target.files[0]);
   };
 
   handleRemove = (event) => {
     event.preventDefault();
-
     this.input.value = null;
-
+    this.setState({
+      imgUrl: null,
+    });
     this.props.input.onChange(null);
   };
 
@@ -31,7 +45,7 @@ export default class AvatarPicker extends Component {
     } = this.props;
 
     const thumbStyle = {
-      backgroundImage: src ? `url(${src})` : 'none',
+      backgroundImage: src ? `url(${src})` : `url(${this.state.imgUrl})`,
     };
 
     const classes = classnames('avatar__thumb', { 'avatar__thumb--circle': !squared });
@@ -40,7 +54,7 @@ export default class AvatarPicker extends Component {
     return (
       <div className={avatar}>
         <div className="avatar__button--remove">
-          {src && (
+          {this.state.imgUrl && (
             <Button onClick={this.handleRemove} icon={<TrashIcon />} size="xs" rounded danger />
           )}
         </div>
@@ -60,7 +74,7 @@ export default class AvatarPicker extends Component {
           />
 
           <div className={classes} style={thumbStyle}>
-            {!src && <CameraIcon />}
+            {!this.state.imgUrl && <CameraIcon />}
           </div>
         </label>
 
