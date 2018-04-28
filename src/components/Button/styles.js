@@ -74,7 +74,7 @@ export default css`
       transform: translate(-50%, -50%);
     }
 
-    &--loading :global(&__content) {
+    &--with-icon :global(&__content) {
       transform: translateX(16px);
     }
 
@@ -169,7 +169,7 @@ export default css`
     }
 
     &:not(&--rounded) {
-      :global(.button__loading-icon) {
+      :global(.button__icon) {
         position: absolute;
         top: calc(50% - 12px);
         left: 32px;
@@ -222,7 +222,7 @@ export default css`
       }
 
       &:not(&--rounded) {
-        :global(.button__loading-icon) {
+        :global(.button__icon) {
           left: 16px;
           top: calc(50% - 9px);
         }
@@ -248,7 +248,7 @@ export default css`
       }
 
       &:not(&--rounded) {
-        :global(.button__loading-icon) {
+        :global(.button__icon) {
           left: 21px;
           top: calc(50% - 9px);
         }

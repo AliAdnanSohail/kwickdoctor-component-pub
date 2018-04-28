@@ -43,14 +43,11 @@ export default class Button extends Component {
       children, icon, loading, rounded,
     } = this.props;
 
-    return rounded && icon ? (
+    return (
       <Fragment>
-        {loading ? <SpinningIcon size="small" className="button__loading-icon" /> : icon}
-      </Fragment>
-    ) : (
-      <Fragment>
-        {loading ? <SpinningIcon size="small" className="button__loading-icon" /> : undefined}
-        <span className="button__content">{children}</span>
+        {loading && <SpinningIcon size="small" className="button__icon" />}
+        {!loading && icon && React.cloneElement(icon, { className: 'button__icon' })}
+        {!rounded && <span className="button__content">{children}</span>}
       </Fragment>
     );
   };
@@ -62,6 +59,7 @@ export default class Button extends Component {
       danger,
       disabled,
       flat,
+      icon,
       loading,
       rounded,
       size,
@@ -80,7 +78,7 @@ export default class Button extends Component {
       { 'button--danger': danger },
       { 'button--disabled': disabled },
       { 'button--flat': flat },
-      { 'button--loading': loading },
+      { 'button--with-icon': icon || loading },
       { 'button--rounded': rounded },
       { 'button--squared': squared },
       { 'button--transparent': transparent },
