@@ -1,20 +1,11 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { withKnobs, boolean } from '@storybook/addon-knobs/react';
+import { withKnobs, text, boolean } from '@storybook/addon-knobs/react';
 import { checkA11y } from '@storybook/addon-a11y';
 import { withTests } from '@storybook/addon-jest';
 
 import { Avatar } from '../src';
 import results from '../.jest-test-results.json';
-
-class AvatarWrapper extends Component {
-  render() {
-    const { src, squared } = this.props;
-    return (
-      <Avatar src={src} squared={squared} />
-    );
-  }
-}
 
 storiesOf('Avatar', module)
   .addDecorator(withKnobs)
@@ -22,7 +13,11 @@ storiesOf('Avatar', module)
   .addDecorator(withTests({ results })('Avatar'))
   .addDecorator(getStory => <div style={{ padding: '24px' }}>{getStory()}</div>)
   .add('default', () => (
-    <AvatarWrapper
+    <Avatar
+      src={text(
+        'src',
+        'https://cdn.pixabay.com/photo/2017/08/30/01/05/milky-way-2695569_960_720.jpg',
+      )}
       squared={boolean('squared', false)}
     />
   ));

@@ -48,19 +48,19 @@ var Avatar = function (_Component) {
     key: 'render',
     value: function render() {
       var _props = this.props,
-          imgSrc = _props.imgSrc,
+          src = _props.src,
           squared = _props.squared;
 
+
       var thumbStyle = {
-        backgroundImage: 'url(' + imgSrc.src + ')'
+        backgroundImage: 'url(' + src + ')'
       };
 
       var classes = (0, _classnames2.default)('avatar-container', { 'avatar-container--circle': !squared });
       return _react2.default.createElement(
-        _react.Fragment,
-        null,
-        _react2.default.createElement('div', { style: thumbStyle, squared: squared, className: 'jsx-' + _styles2.default.__scopedHash + ' ' + (classes || '')
-        }),
+        'div',
+        { style: thumbStyle, squared: squared, className: 'jsx-' + _styles2.default.__scopedHash + ' ' + (classes || '')
+        },
         _react2.default.createElement(_style2.default, {
           styleId: _styles2.default.__scopedHash,
           css: _styles2.default.__scoped
@@ -76,11 +76,11 @@ exports.default = Avatar;
 
 
 Avatar.propTypes = {
-  imgSrc: _propTypes2.default.string,
+  src: _propTypes2.default.string,
   squared: _propTypes2.default.bool
 };
 
 Avatar.defaultProps = {
-  imgSrc: '',
+  src: '',
   squared: false
 };
