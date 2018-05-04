@@ -75,12 +75,15 @@ var Button = function (_Component) {
           rounded = _this$props.rounded;
 
 
-      return _react2.default.createElement(
+      return rounded && icon ? _react2.default.createElement(
         _react.Fragment,
         null,
-        loading && _react2.default.createElement(_icons.SpinningIcon, { size: 'small', className: 'button__icon' }),
-        !loading && icon && _react2.default.cloneElement(icon, { className: 'button__icon' }),
-        !rounded && _react2.default.createElement(
+        loading ? _react2.default.createElement(_icons.SpinningIcon, { size: 'small', className: 'button__loading-icon' }) : icon
+      ) : _react2.default.createElement(
+        _react.Fragment,
+        null,
+        loading ? _react2.default.createElement(_icons.SpinningIcon, { size: 'small', className: 'button__loading-icon' }) : undefined,
+        _react2.default.createElement(
           'span',
           { className: 'button__content' },
           children
@@ -108,7 +111,6 @@ var Button = function (_Component) {
           danger = _props.danger,
           disabled = _props.disabled,
           flat = _props.flat,
-          icon = _props.icon,
           loading = _props.loading,
           rounded = _props.rounded,
           size = _props.size,
@@ -121,7 +123,7 @@ var Button = function (_Component) {
           clicked = _state.clicked;
 
 
-      var classes = (0, _classnames3.default)('button', className, _defineProperty({}, 'button--' + size, size), { 'button--accent': accent }, { 'button--danger': danger }, { 'button--disabled': disabled }, { 'button--flat': flat }, { 'button--with-icon': icon || loading }, { 'button--rounded': rounded }, { 'button--squared': squared }, { 'button--transparent': transparent }, { 'has-clicked': clicked });
+      var classes = (0, _classnames3.default)('button', className, _defineProperty({}, 'button--' + size, size), { 'button--accent': accent }, { 'button--danger': danger }, { 'button--disabled': disabled }, { 'button--flat': flat }, { 'button--loading': loading }, { 'button--rounded': rounded }, { 'button--squared': squared }, { 'button--transparent': transparent }, { 'has-clicked': clicked });
       return _react2.default.createElement(
         'button',
         {

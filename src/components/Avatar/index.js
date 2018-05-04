@@ -6,13 +6,17 @@ import styles from './styles';
 
 export default class Avatar extends Component {
   render() {
-    const { src, squared } = this.props;
+    const { src, squared, size } = this.props;
 
     const thumbStyle = {
       backgroundImage: `url(${src})`,
     };
 
-    const classes = classnames('avatar-container', { 'avatar-container--circle': !squared });
+    const classes = classnames(
+      'avatar-container',
+      { 'avatar-container--circle': !squared },
+      { [`avatar-container--${size}`]: size },
+    );
     return (
       <div className={classes} style={thumbStyle} squared={squared}>
         <style jsx>{styles}</style>
@@ -23,10 +27,12 @@ export default class Avatar extends Component {
 
 Avatar.propTypes = {
   src: PropTypes.string,
+  size: PropTypes.string,
   squared: PropTypes.bool,
 };
 
 Avatar.defaultProps = {
   src: '',
+  size: '',
   squared: false,
 };
