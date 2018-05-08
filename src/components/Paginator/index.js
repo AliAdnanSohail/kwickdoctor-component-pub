@@ -9,6 +9,7 @@ export default class Paginator extends Component {
   render() {
     return (
       <Fragment>
+        
         <ReactPaginate
           {...this.props}
           previousLabel={<FormPreviousLinkIcon size="small" />}

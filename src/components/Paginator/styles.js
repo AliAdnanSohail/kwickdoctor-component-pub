@@ -6,8 +6,8 @@ export default css`
   .pagination {
     display: flex;
     flex-direction: row;
-
-    width: 672px;
+    justify-content: center;
+    width: 100%;
 
     margin: 0;
     padding: 0;
