@@ -58,6 +58,15 @@ Object.defineProperty(exports, 'FileViewer', {
   }
 });
 
+var _Loader = require('./Loader');
+
+Object.defineProperty(exports, 'Loader', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_Loader).default;
+  }
+});
+
 var _Modal = require('./Modal');
 
 Object.defineProperty(exports, 'Modal', {
