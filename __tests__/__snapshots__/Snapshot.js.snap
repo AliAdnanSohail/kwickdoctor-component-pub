@@ -295,7 +295,7 @@ exports[`Storyshots Calendar default 1`] = `
         className="jsx-3270423735"
       >
         <button
-          className="jsx-1990659263 day day--selected--without-events day--date--2018-05-04"
+          className="jsx-1990659263 day day--disabled day--date--2018-05-04"
           onClick={[Function]}
           type="button"
         >
@@ -310,7 +310,7 @@ exports[`Storyshots Calendar default 1`] = `
         className="jsx-3270423735"
       >
         <button
-          className="jsx-1990659263 day day--date--2018-05-05"
+          className="jsx-1990659263 day day--disabled day--date--2018-05-05"
           onClick={[Function]}
           type="button"
         >
@@ -325,7 +325,7 @@ exports[`Storyshots Calendar default 1`] = `
         className="jsx-3270423735"
       >
         <button
-          className="jsx-1990659263 day day--date--2018-05-06"
+          className="jsx-1990659263 day day--disabled day--date--2018-05-06"
           onClick={[Function]}
           type="button"
         >
@@ -340,7 +340,7 @@ exports[`Storyshots Calendar default 1`] = `
         className="jsx-3270423735"
       >
         <button
-          className="jsx-1990659263 day day--date--2018-05-07"
+          className="jsx-1990659263 day day--disabled day--date--2018-05-07"
           onClick={[Function]}
           type="button"
         >
@@ -355,7 +355,7 @@ exports[`Storyshots Calendar default 1`] = `
         className="jsx-3270423735"
       >
         <button
-          className="jsx-1990659263 day day--date--2018-05-08"
+          className="jsx-1990659263 day day--selected--without-events day--date--2018-05-08"
           onClick={[Function]}
           type="button"
         >
@@ -991,7 +991,7 @@ exports[`Storyshots Form Fields Date Picker 1`] = `
             tabIndex={undefined}
             title={undefined}
             type="text"
-            value="04 May, 2018"
+            value="08 May, 2018"
           />
         </div>
       </div>
@@ -9849,6 +9849,37 @@ exports[`Storyshots Icons other 1`] = `
 </div>
 `;
 
+exports[`Storyshots Loader default 1`] = `
+<div
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
+>
+  <div
+    className="jsx-2263050525 loader-container"
+  >
+    <svg
+      aria-label="Spinning"
+      className="grommetux-icon-spinning grommetux-icon-spinning--large grommetux-icon-spinning--responsive button__icon"
+      role="img"
+      version="1.1"
+      viewBox="0 0 48 48"
+    >
+      <circle
+        cx="24"
+        cy="24"
+        fill="none"
+        r="21"
+        stroke="#979797"
+        strokeWidth="6"
+      />
+    </svg>
+  </div>
+</div>
+`;
+
 exports[`Storyshots Modal default 1`] = `
 <div
   style={
@@ -10297,7 +10328,7 @@ exports[`Storyshots Paginator default 1`] = `
     </li>
   </ul>
   <style>
-    .pagination{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;width:672px;margin:0;padding:0;list-style:none;}
+    .pagination{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;width:100%;margin:0;padding:0;list-style:none;}
     .pagination li{padding:0;margin:3px;background-color:transparent;color:#BBBCCD;border-radius:50%;box-sizing:border-box;cursor:pointer;-webkit-transition:all 0.2s ease;transition:all 0.2s ease;font-size:0.875rem;}
     .pagination li:hover:not(.break){background-color:#eff0f4;}
     .pagination li.break{cursor:initial;}
