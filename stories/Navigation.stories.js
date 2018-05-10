@@ -6,7 +6,7 @@ import { withKnobs } from '@storybook/addon-knobs/react';
 import { checkA11y } from '@storybook/addon-a11y';
 import { withTests } from '@storybook/addon-jest';
 
-import { Navigation, NavigationItem } from '../src';
+import { Navigation, NavigationItem, NavigationAction } from '../src';
 import results from '../.jest-test-results.json';
 
 const Dashboard = () => <div>Dashboard component</div>;
@@ -20,6 +20,7 @@ class NavigationWrapper extends Component {
           <Navigation>
             <NavigationItem route="/dashboard" icon={DashboardIcon} label="Dashboards" />
             <NavigationItem route="/notifications" icon={NotificationIcon} label="Notifications" />
+            <NavigationAction icon={NotificationIcon} label="Sign out" />
           </Navigation>
           <Switch>
             <Route path="/dashboard" component={Dashboard} exact />
