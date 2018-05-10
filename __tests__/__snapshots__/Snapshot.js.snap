@@ -355,7 +355,7 @@ exports[`Storyshots Calendar default 1`] = `
         className="jsx-3270423735"
       >
         <button
-          className="jsx-1990659263 day day--selected--without-events day--date--2018-05-08"
+          className="jsx-1990659263 day day--disabled day--date--2018-05-08"
           onClick={[Function]}
           type="button"
         >
@@ -370,7 +370,7 @@ exports[`Storyshots Calendar default 1`] = `
         className="jsx-3270423735"
       >
         <button
-          className="jsx-1990659263 day day--date--2018-05-09"
+          className="jsx-1990659263 day day--disabled day--date--2018-05-09"
           onClick={[Function]}
           type="button"
         >
@@ -385,7 +385,7 @@ exports[`Storyshots Calendar default 1`] = `
         className="jsx-3270423735"
       >
         <button
-          className="jsx-1990659263 day day--date--2018-05-10"
+          className="jsx-1990659263 day day--selected--without-events day--date--2018-05-10"
           onClick={[Function]}
           type="button"
         >
@@ -991,7 +991,7 @@ exports[`Storyshots Form Fields Date Picker 1`] = `
             tabIndex={undefined}
             title={undefined}
             type="text"
-            value="08 May, 2018"
+            value="10 May, 2018"
           />
         </div>
       </div>
@@ -9989,6 +9989,43 @@ exports[`Storyshots Navigation default 1`] = `
         </a>
         <style>
           .nav-item{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;width:53px;height:53px;padding:16px;color:#ffffff;-webkit-text-decoration:none;text-decoration:none;-webkit-letter-spacing:0.15rem;-moz-letter-spacing:0.15rem;-ms-letter-spacing:0.15rem;letter-spacing:0.15rem;text-transform:uppercase;border-radius:50%;box-sizing:border-box;-webkit-transition:all 0.3s ease-in-out;transition:all 0.3s ease-in-out;font-size:0.75rem;font-weight:bold;}
+          .nav-item--active{background-color:#0c97f9;}
+          .nav-item__icon{width:21px;height:21px;fill:#ffffff !important;stroke:#ffffff !important;}
+          .nav-item__icon circle,.nav-item__icon path{stroke:#ffffff !important;}
+          .nav-item__label{display:none;}
+          @media (min-width:960px){.nav-item{width:100%;padding:16px 16px 16px 50px;border-top-left-radius:0;border-bottom-left-radius:0;border-top-right-radius:30px;border-bottom-right-radius:30px;}.nav-item__icon{margin-right:30px;}.nav-item__label{display:inline-block;}}
+        </style>
+      </li>
+      <li>
+        <button
+          activeClassName="nav-item--active"
+          className="nav-item"
+          onClick={undefined}
+        >
+          <svg
+            aria-label="notification"
+            className="grommetux-control-icon grommetux-control-icon-notification nav-item__icon grommetux-control-icon--responsive"
+            height="24px"
+            role="img"
+            version="1.1"
+            viewBox="0 0 24 24"
+            width="24px"
+          >
+            <path
+              d="M4,19 L4,9 C4,4.582 7.582,1 12,1 C16.418,1 20,4.582 20,9 L20,19 M1,19 L23,19 M15,19 L15,20 C15,21.657 13.657,23 12,23 C10.343,23 9,21.657 9,20 L9,19"
+              fill="none"
+              stroke="#000"
+              strokeWidth="2"
+            />
+          </svg>
+          <span
+            className="nav-item__label"
+          >
+            Sign out
+          </span>
+        </button>
+        <style>
+          .nav-item{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;width:53px;height:53px;padding:16px;color:#ffffff;-webkit-text-decoration:none;text-decoration:none;-webkit-letter-spacing:0.15rem;-moz-letter-spacing:0.15rem;-ms-letter-spacing:0.15rem;letter-spacing:0.15rem;text-transform:uppercase;border-radius:50%;box-sizing:border-box;-webkit-transition:all 0.3s ease-in-out;transition:all 0.3s ease-in-out;background:transparent;border:none;outline:none;cursor:pointer;font-size:0.75rem;font-weight:bold;}
           .nav-item--active{background-color:#0c97f9;}
           .nav-item__icon{width:21px;height:21px;fill:#ffffff !important;stroke:#ffffff !important;}
           .nav-item__icon circle,.nav-item__icon path{stroke:#ffffff !important;}

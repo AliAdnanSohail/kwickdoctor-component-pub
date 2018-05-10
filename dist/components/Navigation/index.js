@@ -22,4 +22,13 @@ Object.defineProperty(exports, 'NavigationItem', {
   }
 });
 
+var _NavigationAction = require('./NavigationAction');
+
+Object.defineProperty(exports, 'NavigationAction', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_NavigationAction).default;
+  }
+});
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
