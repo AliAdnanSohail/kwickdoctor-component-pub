@@ -1,5 +1,6 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import classnames from 'classnames';
+import { UserIcon } from 'grommet/components/icons';
 import PropTypes from 'prop-types';
 
 import styles from './styles';
@@ -18,9 +19,14 @@ export default class Avatar extends Component {
       { [`avatar-container--${size}`]: size },
     );
     return (
-      <div className={classes} style={thumbStyle} squared={squared}>
+      <Fragment>
+        <div className={classes} style={thumbStyle} squared={squared}>
+          <div className="avatar-icon" style={{ backgroundImage: src }}>
+            {!src && <UserIcon size="large" />}
+          </div>
+        </div>
         <style jsx>{styles}</style>
-      </div>
+      </Fragment>
     );
   }
 }
