@@ -67,14 +67,23 @@ exports[`Storyshots Avatar default 1`] = `
   }
 >
   <div
-    className="jsx-3818615288 avatar-container avatar-container--circle"
+    className="jsx-1927130780 avatar-container avatar-container--circle"
     squared={false}
     style={
       Object {
         "backgroundImage": "url(https://cdn.pixabay.com/photo/2017/08/30/01/05/milky-way-2695569_960_720.jpg)",
       }
     }
-  />
+  >
+    <div
+      className="jsx-1927130780 avatar-icon"
+      style={
+        Object {
+          "backgroundImage": "https://cdn.pixabay.com/photo/2017/08/30/01/05/milky-way-2695569_960_720.jpg",
+        }
+      }
+    />
+  </div>
 </div>
 `;
 
@@ -385,7 +394,7 @@ exports[`Storyshots Calendar default 1`] = `
         className="jsx-3270423735"
       >
         <button
-          className="jsx-1990659263 day day--selected--without-events day--date--2018-05-10"
+          className="jsx-1990659263 day day--disabled day--date--2018-05-10"
           onClick={[Function]}
           type="button"
         >
@@ -400,7 +409,7 @@ exports[`Storyshots Calendar default 1`] = `
         className="jsx-3270423735"
       >
         <button
-          className="jsx-1990659263 day day--date--2018-05-11"
+          className="jsx-1990659263 day day--disabled day--date--2018-05-11"
           onClick={[Function]}
           type="button"
         >
@@ -415,7 +424,7 @@ exports[`Storyshots Calendar default 1`] = `
         className="jsx-3270423735"
       >
         <button
-          className="jsx-1990659263 day day--date--2018-05-12"
+          className="jsx-1990659263 day day--disabled day--date--2018-05-12"
           onClick={[Function]}
           type="button"
         >
@@ -430,7 +439,7 @@ exports[`Storyshots Calendar default 1`] = `
         className="jsx-3270423735"
       >
         <button
-          className="jsx-1990659263 day day--date--2018-05-13"
+          className="jsx-1990659263 day day--disabled day--date--2018-05-13"
           onClick={[Function]}
           type="button"
         >
@@ -445,7 +454,7 @@ exports[`Storyshots Calendar default 1`] = `
         className="jsx-3270423735"
       >
         <button
-          className="jsx-1990659263 day day--date--2018-05-14"
+          className="jsx-1990659263 day day--selected--without-events day--date--2018-05-14"
           onClick={[Function]}
           type="button"
         >
@@ -991,7 +1000,7 @@ exports[`Storyshots Form Fields Date Picker 1`] = `
             tabIndex={undefined}
             title={undefined}
             type="text"
-            value="10 May, 2018"
+            value="14 May, 2018"
           />
         </div>
       </div>
@@ -10374,7 +10383,7 @@ exports[`Storyshots Paginator default 1`] = `
     .pagination li.previous{margin-right:30px;}
     .pagination li.next{margin-left:30px;}
     .pagination li svg{fill:#BBBCCD;stroke:#BBBCCD;}
-    .pagination a{position:relative;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;height:30px;width:30px;}
+    .pagination a{position:relative;outline:none;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;height:30px;width:30px;}
   </style>
 </div>
 `;

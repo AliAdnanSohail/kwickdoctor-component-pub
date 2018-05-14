@@ -19,6 +19,8 @@ var _classnames2 = require('classnames');
 
 var _classnames3 = _interopRequireDefault(_classnames2);
 
+var _icons = require('grommet/components/icons');
+
 var _propTypes = require('prop-types');
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
@@ -61,9 +63,19 @@ var Avatar = function (_Component) {
 
       var classes = (0, _classnames3.default)('avatar-container', { 'avatar-container--circle': !squared }, _defineProperty({}, 'avatar-container--' + size, size));
       return _react2.default.createElement(
-        'div',
-        { style: thumbStyle, squared: squared, className: 'jsx-' + _styles2.default.__scopedHash + ' ' + (classes || '')
-        },
+        _react.Fragment,
+        null,
+        _react2.default.createElement(
+          'div',
+          { style: thumbStyle, squared: squared, className: 'jsx-' + _styles2.default.__scopedHash + ' ' + (classes || '')
+          },
+          _react2.default.createElement(
+            'div',
+            { style: { backgroundImage: src }, className: 'jsx-' + _styles2.default.__scopedHash + ' ' + 'avatar-icon'
+            },
+            !src && _react2.default.createElement(_icons.UserIcon, { size: 'large' })
+          )
+        ),
         _react2.default.createElement(_style2.default, {
           styleId: _styles2.default.__scopedHash,
           css: _styles2.default.__scoped
