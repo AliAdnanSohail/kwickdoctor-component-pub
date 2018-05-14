@@ -26,7 +26,7 @@ export default css`
       box-sizing: border-box;
 
       cursor: pointer;
-
+      
       transition: all 0.2s ease;
 
       font: {
@@ -69,7 +69,7 @@ export default css`
 
     a {
       position: relative;
-
+      outline: none;
       display: flex;
       flex-direction: row;
       align-items: center;
