@@ -47,6 +47,7 @@ export default css`
       color: #222328;
       font-weight: 500;
       line-height: 18px;
+      word-break: break-all;
     }
     .icons-close {
 
