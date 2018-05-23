@@ -5,7 +5,15 @@ import { checkA11y } from '@storybook/addon-a11y';
 import { withTests } from '@storybook/addon-jest';
 import { action } from '@storybook/addon-actions';
 
-import { Autocomplete, FilePicker, Input, RadioButtonGroup, Select, TextArea, DatePicker } from '../src';
+import {
+  Autocomplete,
+  FilePicker,
+  Input,
+  RadioButtonGroup,
+  Select,
+  TextArea,
+  DatePicker,
+} from '../src';
 import results from '../.jest-test-results.json';
 
 storiesOf('Form Fields', module)

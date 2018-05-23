@@ -62,9 +62,11 @@ var RadioButtons = function (_Component) {
             var classes = (0, _classnames2.default)('radio__box', {
               radio__box_active: selected.toLowerCase() === option.value.toLowerCase()
             });
+
             var iconClasses = (0, _classnames2.default)('radio__icon', {
               radio__icon_active: selected.toLowerCase() === option.value.toLowerCase()
             });
+
             return _react2.default.createElement(
               'div',
               { className: classes, key: option.value },

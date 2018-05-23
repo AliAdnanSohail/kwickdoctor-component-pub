@@ -6,6 +6,7 @@ export default css`
     margin: 0;
     list-style: none;
     font-size: 1rem;
+
     li {
       float: left;
       width: 14.2857143%;

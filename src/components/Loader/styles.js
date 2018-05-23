@@ -5,10 +5,12 @@ export default css`
     display: flex;
     justify-content: space-between;
     text-align: center;
+
     :global(svg) {
       margin: 0 auto;
+
       :global(circle, path) {
-        stroke: rgb(12, 151, 249)!important;
+        stroke: rgb(12, 151, 249) !important;
       }
     }
   }

@@ -92,7 +92,6 @@ export const notification = css`
         width: 100%;
         border-bottom: 2px solid rgb(231, 231, 240);
         border-right: none;
-        
       }
       &__message {
         width: 100%;

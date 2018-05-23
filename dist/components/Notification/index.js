@@ -55,11 +55,8 @@ var Notification = function (_Component) {
       args[_key] = arguments[_key];
     }
 
-    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Notification.__proto__ || Object.getPrototypeOf(Notification)).call.apply(_ref, [this].concat(args))), _this), _this.getDate = function () {
-      var date = _this.props.date;
-
-
-      return (0, _moment2.default)(date).format('h:mm A, MMM D');
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Notification.__proto__ || Object.getPrototypeOf(Notification)).call.apply(_ref, [this].concat(args))), _this), _this.renderDate = function () {
+      return (0, _moment2.default)(_this.props.date).format('h:mm A, MMM D');
     }, _temp), _possibleConstructorReturn(_this, _ret);
   }
 
@@ -87,7 +84,7 @@ var Notification = function (_Component) {
           {
             className: 'jsx-' + _styles.notification.__scopedHash + ' jsx-' + _styles.notificationCard.__scopedHash + ' ' + 'notification__time'
           },
-          this.getDate()
+          this.renderDate()
         ),
         _react2.default.createElement(
           'div',

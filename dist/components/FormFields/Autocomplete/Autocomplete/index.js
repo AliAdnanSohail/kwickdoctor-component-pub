@@ -267,7 +267,11 @@ var Autocomplete = function (_Component) {
               onBlur: this.handleBlurInput,
               className: 'jsx-' + _styles4.default.__scopedHash + ' jsx-' + _styles3.label.__scopedHash + ' jsx-' + _styles3.error.__scopedHash
             }),
-            _react2.default.createElement(_.Suggestions, { active: focused, items: filteredSuggestions, onClick: this.handleClickSuggestion })
+            _react2.default.createElement(_.Suggestions, {
+              active: focused,
+              items: filteredSuggestions,
+              onClick: this.handleClickSuggestion
+            })
           )
         ),
         meta && meta.error && meta.touched ? _react2.default.createElement(

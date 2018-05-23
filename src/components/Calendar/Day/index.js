@@ -19,9 +19,11 @@ export default class Day extends Component {
       selected &&
       events.length > 0 && (
         <ul className={classes}>
-          {events.slice(0, 3).map(event => (
-            <li key={`${event.date.format('D')}-${Math.random()}`} className="events__item" />
-          ))}
+          {events
+            .slice(0, 3)
+            .map(event => (
+              <li key={`${event.date.format('D')}-${Math.random()}`} className="events__item" />
+            ))}
 
           <style jsx>{eventsStyles}</style>
         </ul>
@@ -44,9 +46,7 @@ export default class Day extends Component {
 
     return (
       <button className={classes} type="button" onClick={this.onSelect}>
-        <span className="day__border">
-          {day.format('D')}
-        </span>
+        <span className="day__border">{day.format('D')}</span>
         {this.getDots()}
 
         <style jsx>{dayStyles}</style>

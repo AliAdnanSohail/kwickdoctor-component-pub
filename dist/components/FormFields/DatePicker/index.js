@@ -51,28 +51,17 @@ var DatePicker = function (_Component) {
 
     var _this = _possibleConstructorReturn(this, (DatePicker.__proto__ || Object.getPrototypeOf(DatePicker)).call(this, props));
 
-    _this.errorMessage = function (error) {
-      return error && _react2.default.createElement(
-        'div',
-        { className: 'input-error' },
-        error
-      );
-    };
+    _this.handleChange = function (date) {
+      var value = (0, _moment2.default)(date.target ? date.target.value : date, _this.props.dateFormat, true);
 
-    _this.handleChange = function (dateOrDateString) {
-      var date = dateOrDateString;
-      if (date.target && typeof date.target.value === 'string') {
-        date = (0, _moment2.default)(date.target.value, _this.props.dateFormat, true);
+      if (_moment2.default.isMoment(value) && value.isValid()) {
+        _this.setState({ value: value });
+        _this.props.input.onChange(value);
       }
-
-      _this.setState({ value: date });
-      _this.props.input.onChange(date);
     };
 
     _this.id = (0, _v2.default)();
-    _this.state = {
-      value: (0, _moment2.default)(props.input.value)
-    };
+    _this.state = { value: (0, _moment2.default)(props.input.value) };
     return _this;
   }
 
@@ -83,13 +72,14 @@ var DatePicker = function (_Component) {
           id = _props.id,
           label = _props.label,
           dateFormat = _props.dateFormat,
-          containerClassName = _props.containerClassName;
-      var name = this.props.input.name;
-      var error = this.props.meta.error;
+          containerClassName = _props.containerClassName,
+          meta = _props.meta,
+          name = _props.input.name;
+      var value = this.state.value;
 
 
       var blockClasses = (0, _classnames2.default)('form-field', containerClassName, {
-        'has-error': !!error
+        'has-error': !!meta.error
       });
 
       return _react2.default.createElement(
@@ -101,17 +91,21 @@ var DatePicker = function (_Component) {
           label
         ),
         _react2.default.createElement(_reactDatepicker2.default, {
+          calendarClassName: 'calendar',
+          className: 'datepicker',
+          dateFormat: dateFormat,
           id: id,
           name: name,
-          selected: this.state.value,
           onChange: this.handleChange,
           onChangeRaw: this.handleChange,
-          className: 'datepicker',
-          calendarClassName: 'calendar',
-          dateFormat: dateFormat,
+          selected: value,
           useWeekdaysShort: true
         }),
-        this.errorMessage(error),
+        meta && meta.error && meta.touched ? _react2.default.createElement(
+          'div',
+          { className: 'error' },
+          meta.error
+        ) : undefined,
         _react2.default.createElement(
           'style',
           null,

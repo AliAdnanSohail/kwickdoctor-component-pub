@@ -47,16 +47,7 @@ var Toast = function (_Component) {
       args[_key] = arguments[_key];
     }
 
-    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Toast.__proto__ || Object.getPrototypeOf(Toast)).call.apply(_ref, [this].concat(args))), _this), _this.componentDidMount = function () {
-      var timeOut = _this.props.timeOut;
-
-
-      if (timeOut !== 0) {
-        _this.timeoutID = setTimeout(_this.requestHide, timeOut);
-      }
-
-      _this.enter();
-    }, _this.enter = function () {
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Toast.__proto__ || Object.getPrototypeOf(Toast)).call.apply(_ref, [this].concat(args))), _this), _this.enter = function () {
       var animationDuration = _this.props.animationDuration;
 
       var baseClassName = _this.element.className;
@@ -108,6 +99,18 @@ var Toast = function (_Component) {
   }
 
   _createClass(Toast, [{
+    key: 'componentDidMount',
+    value: function componentDidMount() {
+      var timeOut = this.props.timeOut;
+
+
+      if (timeOut !== 0) {
+        this.timeoutID = setTimeout(this.requestHide, timeOut);
+      }
+
+      this.enter();
+    }
+  }, {
     key: 'render',
     value: function render() {
       var _this2 = this;

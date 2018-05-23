@@ -14,9 +14,5 @@ storiesOf('StarPicker', module)
   .addDecorator(withTests({ results })('StarPicker'))
   .addDecorator(getStory => <div style={{ padding: '24px' }}>{getStory()}</div>)
   .add('simple start picker', () => (
-    <StarPicker
-      onClick={action('clicked')}
-      rank={number('rank', 3)}
-      amount={number('amount', 6)}
-    />
+    <StarPicker onClick={action('clicked')} rank={number('rank', 3)} amount={number('amount', 6)} />
   ));

@@ -35,7 +35,7 @@ export const avatarCircle = css`
       justify-content: center;
       height: 300px;
       width: 300px;
-      border-radius:22px;
+      border-radius: 22px;
 
       background: {
         color: #e7e7f0;

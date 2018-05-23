@@ -26,7 +26,7 @@ export default css`
       box-sizing: border-box;
 
       cursor: pointer;
-      
+
       transition: all 0.2s ease;
 
       font: {

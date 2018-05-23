@@ -26,6 +26,7 @@ export default css`
     border: none;
     outline: none;
     cursor: pointer;
+
     font: {
       size: 0.75rem;
       weight: bold;

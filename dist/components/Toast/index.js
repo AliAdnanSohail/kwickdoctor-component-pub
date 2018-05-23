@@ -53,14 +53,6 @@ var ToastNotification = function (_Component) {
 
     var _this = _possibleConstructorReturn(this, (ToastNotification.__proto__ || Object.getPrototypeOf(ToastNotification)).call(this, props));
 
-    _this.componentDidMount = function () {
-      _Manager2.default.addChangeListener(_this.handleStoreChange);
-    };
-
-    _this.componentWillUnmount = function () {
-      _Manager2.default.removeChangeListener(_this.handleStoreChange);
-    };
-
     _this.handleStoreChange = function (toasts) {
       _this.setState({
         toasts: toasts
@@ -82,6 +74,16 @@ var ToastNotification = function (_Component) {
   }
 
   _createClass(ToastNotification, [{
+    key: 'componentDidMount',
+    value: function componentDidMount() {
+      _Manager2.default.addChangeListener(this.handleStoreChange);
+    }
+  }, {
+    key: 'componentWillUnmount',
+    value: function componentWillUnmount() {
+      _Manager2.default.removeChangeListener(this.handleStoreChange);
+    }
+  }, {
     key: 'render',
     value: function render() {
       var className = (0, _classnames2.default)('toast-container', {

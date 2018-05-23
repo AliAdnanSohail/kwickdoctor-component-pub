@@ -23,7 +23,8 @@ export default class Calendar extends Component {
 
   onChangeMonth = count => this.setState({ current: this.state.current.add(count, 'month') });
 
-  getEvents = date => (this.props.hasEvents ? this.props.events.filter(event => date.isSame(event.date, 'day')) : []);
+  getEvents = date =>
+    (this.props.hasEvents ? this.props.events.filter(event => date.isSame(event.date, 'day')) : []);
 
   getDays = () => {
     const { min, max } = this.props;

@@ -2,27 +2,27 @@
 
 exports[`renders correctly 1`] = `
 <div
-  className="jsx-3617741812 jsx-2165763448 avatar avatar--circle"
+  className="jsx-4254447966 jsx-2165763448 avatar avatar--circle"
 >
   <div
-    className="jsx-3617741812 jsx-2165763448 avatar__button--remove"
+    className="jsx-4254447966 jsx-2165763448 avatar__button--remove"
   >
     
   </div>
   <label
     aria-label="Edit image"
-    className="jsx-3617741812 jsx-2165763448 avatar__container"
+    className="jsx-4254447966 jsx-2165763448 avatar__container"
     htmlFor="avatar"
   >
     <input
-      className="jsx-3617741812 jsx-2165763448 file-input"
+      className="jsx-4254447966 jsx-2165763448 file-input"
       id="avatar"
       onBlur={[Function]}
       onChange={[Function]}
       type="file"
     />
     <div
-      className="jsx-3617741812 jsx-2165763448 avatar__thumb avatar__thumb--circle"
+      className="jsx-4254447966 jsx-2165763448 avatar__thumb avatar__thumb--circle"
       style={
         Object {
           "backgroundImage": "url()",

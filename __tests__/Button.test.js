@@ -72,7 +72,7 @@ it('button with loading prop renders correctly', () => {
 });
 
 it('button with icon renders correctly', () => {
-  const element = mount(<Button icon={<EditIcon />} >Hello!</Button>);
+  const element = mount(<Button icon={<EditIcon />}>Hello!</Button>);
 
   expect(element.find('button').hasClass('button--with-icon')).toEqual(true);
   expect(element

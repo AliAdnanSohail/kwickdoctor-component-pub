@@ -9,6 +9,7 @@ import styles from './styles';
 export default class TimePicker extends Component {
   constructor(props) {
     super(props);
+
     this.state = {
       defaultInputText: this.props.defaultInputText,
       selectedHours: '01',
@@ -41,6 +42,7 @@ export default class TimePicker extends Component {
   }
 
   componentDidMount() {}
+
   componentWillUnmount() {}
 
   changeTime() {

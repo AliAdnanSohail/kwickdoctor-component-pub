@@ -23,7 +23,7 @@ var _Add = require('grommet/components/icons/base/Add');
 
 var _Add2 = _interopRequireDefault(_Add);
 
-var _keys = require('../../../utils/keys');
+var _keys = require('../../../../utils/keys');
 
 var _keys2 = _interopRequireDefault(_keys);
 

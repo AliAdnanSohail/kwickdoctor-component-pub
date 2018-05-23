@@ -12,6 +12,4 @@ storiesOf('Loader', module)
   .addDecorator(checkA11y)
   .addDecorator(withTests({ results })('Loader'))
   .addDecorator(getStory => <div style={{ padding: '24px' }}>{getStory()}</div>)
-  .add('default', () => (
-    <Loader />
-  ));
+  .add('default', () => <Loader />);

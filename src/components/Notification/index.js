@@ -8,11 +8,7 @@ import { Button, Card } from '../';
 import { notification, notificationCard } from './styles';
 
 export default class Notification extends Component {
-  getDate = () => {
-    const { date } = this.props;
-
-    return moment(date).format('h:mm A, MMM D');
-  };
+  renderDate = () => moment(this.props.date).format('h:mm A, MMM D');
 
   render() {
     const {
@@ -26,11 +22,13 @@ export default class Notification extends Component {
 
     return (
       <Card className="notification-card">
-        <div className="notification__time">{this.getDate()}</div>
+        <div className="notification__time">{this.renderDate()}</div>
+
         <div className="notification__message">
           <span className={dotClasses} />
           {message}
         </div>
+
         <div className="notification__actions">
           <Button icon={<CheckmarkIcon />} size="s" rounded flat onClick={onComplete} />
           <Button icon={<TrashIcon />} size="s" rounded flat onClick={onDelete} />

@@ -5,7 +5,7 @@ import { CloseIcon } from 'grommet/components/icons/base';
 import Manager from './../Manager';
 
 export default class Toast extends Component {
-  componentDidMount = () => {
+  componentDidMount() {
     const { timeOut } = this.props;
 
     if (timeOut !== 0) {
@@ -13,7 +13,7 @@ export default class Toast extends Component {
     }
 
     this.enter();
-  };
+  }
 
   enter = () => {
     const { animationDuration } = this.props;

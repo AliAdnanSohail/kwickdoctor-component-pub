@@ -69,15 +69,9 @@ var FileViewer = function (_Component) {
         null,
         this.state.isPdf ? _react2.default.createElement(
           _entry.Document,
-          {
-            file: file,
-            onLoadSuccess: this.onDocumentLoad
-          },
+          { file: file, onLoadSuccess: this.onDocumentLoad },
           Array.from(new Array(numPages), function (el, index) {
-            return _react2.default.createElement(_entry.Page, {
-              key: 'page_' + (index + 1),
-              pageNumber: index + 1
-            });
+            return _react2.default.createElement(_entry.Page, { key: 'page_' + (index + 1), pageNumber: index + 1 });
           })
         ) : _react2.default.createElement('img', { src: file.src, alt: 'This document can\'t be displayed', className: 'jsx-' + _styles2.default.__scopedHash + ' ' + 'image'
         }),

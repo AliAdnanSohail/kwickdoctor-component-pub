@@ -147,14 +147,20 @@ describe('Calendar', () => {
     };
     const minDate = moment(testDate);
     const disabledDate1 = moment(testDate).add(-1, 'day');
-    const disabledDate2 = moment(testDate).add(1, 'month').add(1, 'day');
+    const disabledDate2 = moment(testDate)
+      .add(1, 'month')
+      .add(1, 'day');
     const element = mount(<Calendar {...props} />);
 
     element.find(`.day--date--${minDate.format('YYYY-MM-DD')}`).simulate('click');
     expect(selectCount === 1).toEqual(true);
-    element.find(`.day--disabled.day--date--${disabledDate1.format('YYYY-MM-DD')}`).simulate('click');
+    element
+      .find(`.day--disabled.day--date--${disabledDate1.format('YYYY-MM-DD')}`)
+      .simulate('click');
     element.find('button.next').simulate('click');
-    element.find(`.day--disabled.day--date--${disabledDate2.format('YYYY-MM-DD')}`).simulate('click');
+    element
+      .find(`.day--disabled.day--date--${disabledDate2.format('YYYY-MM-DD')}`)
+      .simulate('click');
     expect(selectCount === 1).toEqual(true);
   });
 });
