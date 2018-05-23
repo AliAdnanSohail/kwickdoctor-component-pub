@@ -20,52 +20,52 @@ export default class DatePicker extends Component {
     super(props);
 
     this.id = uuidv4();
-    this.state = {
-      value: moment(props.input.value),
-    };
+    this.state = { value: moment(props.input.value) };
   }
 
-  errorMessage = error => error && <div className="input-error">{error}</div>;
+  handleChange = (date) => {
+    const value = moment(date.target ? date.target.value : date, this.props.dateFormat, true);
 
-  handleChange = (dateOrDateString) => {
-    let date = dateOrDateString;
-    if (date.target && typeof date.target.value === 'string') {
-      date = moment(date.target.value, this.props.dateFormat, true);
+    if (moment.isMoment(value) && value.isValid()) {
+      this.setState({ value });
+      this.props.input.onChange(value);
     }
-
-    this.setState({ value: date });
-    this.props.input.onChange(date);
   };
 
   render() {
     const {
-      id, label, dateFormat, containerClassName,
+      id,
+      label,
+      dateFormat,
+      containerClassName,
+
+      meta,
+      input: { name },
     } = this.props;
-    const { input: { name } } = this.props;
-    const { meta: { error } } = this.props;
+
+    const { value } = this.state;
 
     const blockClasses = classnames('form-field', containerClassName, {
-      'has-error': !!error,
+      'has-error': !!meta.error,
     });
 
     return (
       <div className={blockClasses}>
-        <label htmlFor={id}>
-          {label}
-        </label>
+        <label htmlFor={id}>{label}</label>
 
         <ReactDatePicker
+          calendarClassName="calendar"
+          className="datepicker"
+          dateFormat={dateFormat}
           id={id}
           name={name}
-          selected={this.state.value}
           onChange={this.handleChange}
           onChangeRaw={this.handleChange}
-          className="datepicker"
-          calendarClassName="calendar"
-          dateFormat={dateFormat}
+          selected={value}
           useWeekdaysShort
         />
-        {this.errorMessage(error)}
+
+        {meta && meta.error && meta.touched ? <div className="error">{meta.error}</div> : undefined}
 
         <style>{datepickerBlockStyles}</style>
         <style>{calendar}</style>
