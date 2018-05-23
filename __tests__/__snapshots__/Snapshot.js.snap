@@ -469,7 +469,7 @@ exports[`Storyshots Calendar default 1`] = `
         className="jsx-3270423735"
       >
         <button
-          className="jsx-1990659263 day day--selected--without-events day--date--2018-05-15"
+          className="jsx-1990659263 day day--disabled day--date--2018-05-15"
           onClick={[Function]}
           type="button"
         >
@@ -484,7 +484,7 @@ exports[`Storyshots Calendar default 1`] = `
         className="jsx-3270423735"
       >
         <button
-          className="jsx-1990659263 day day--date--2018-05-16"
+          className="jsx-1990659263 day day--disabled day--date--2018-05-16"
           onClick={[Function]}
           type="button"
         >
@@ -499,7 +499,7 @@ exports[`Storyshots Calendar default 1`] = `
         className="jsx-3270423735"
       >
         <button
-          className="jsx-1990659263 day day--date--2018-05-17"
+          className="jsx-1990659263 day day--disabled day--date--2018-05-17"
           onClick={[Function]}
           type="button"
         >
@@ -514,7 +514,7 @@ exports[`Storyshots Calendar default 1`] = `
         className="jsx-3270423735"
       >
         <button
-          className="jsx-1990659263 day day--date--2018-05-18"
+          className="jsx-1990659263 day day--disabled day--date--2018-05-18"
           onClick={[Function]}
           type="button"
         >
@@ -529,7 +529,7 @@ exports[`Storyshots Calendar default 1`] = `
         className="jsx-3270423735"
       >
         <button
-          className="jsx-1990659263 day day--date--2018-05-19"
+          className="jsx-1990659263 day day--disabled day--date--2018-05-19"
           onClick={[Function]}
           type="button"
         >
@@ -544,7 +544,7 @@ exports[`Storyshots Calendar default 1`] = `
         className="jsx-3270423735"
       >
         <button
-          className="jsx-1990659263 day day--date--2018-05-20"
+          className="jsx-1990659263 day day--disabled day--date--2018-05-20"
           onClick={[Function]}
           type="button"
         >
@@ -559,7 +559,7 @@ exports[`Storyshots Calendar default 1`] = `
         className="jsx-3270423735"
       >
         <button
-          className="jsx-1990659263 day day--date--2018-05-21"
+          className="jsx-1990659263 day day--disabled day--date--2018-05-21"
           onClick={[Function]}
           type="button"
         >
@@ -574,7 +574,7 @@ exports[`Storyshots Calendar default 1`] = `
         className="jsx-3270423735"
       >
         <button
-          className="jsx-1990659263 day day--date--2018-05-22"
+          className="jsx-1990659263 day day--disabled day--date--2018-05-22"
           onClick={[Function]}
           type="button"
         >
@@ -589,7 +589,7 @@ exports[`Storyshots Calendar default 1`] = `
         className="jsx-3270423735"
       >
         <button
-          className="jsx-1990659263 day day--date--2018-05-23"
+          className="jsx-1990659263 day day--selected--without-events day--date--2018-05-23"
           onClick={[Function]}
           type="button"
         >
@@ -1000,7 +1000,7 @@ exports[`Storyshots Form Fields Date Picker 1`] = `
             tabIndex={undefined}
             title={undefined}
             type="text"
-            value="15 May, 2018"
+            value="23 May, 2018"
           />
         </div>
       </div>
@@ -10981,7 +10981,7 @@ exports[`Storyshots Toast default 1`] = `
       .toast-box.rectangle-22{padding:21px 18px;width:413px;border-radius:4px;background-color:#FFFFFF;box-shadow:0 2px 40px 0 rgba(0,0,0,0.05);}
       .toast-box .circle{margin:5px 15px 0 0;float:left;display:block;height:7px;width:7px;background-color:#222328;border-radius:50%;}
       .toast-box.primary .circle{background-color:#0c97f9;}
-      .toast-box .message{float:left;width:335px;color:#222328;font-weight:500;line-height:18px;}
+      .toast-box .message{float:left;width:335px;color:#222328;font-weight:500;line-height:18px;word-break:break-all;}
       .toast-box .icons-close{padding-top:2px;width:14px;float:right;}
       .toast-box .clear{clear:both;}
       .toast-box .icon{padding:0;margin:0;height:14px;width:14px;-webkit-transition:all 0.3s;transition:all 0.3s;border:none;outline:none;opacity:0.6;cursor:pointer;background-repeat:no-repeat;background-color:transparent;}
