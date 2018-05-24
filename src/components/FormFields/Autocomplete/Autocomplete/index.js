@@ -32,6 +32,7 @@ export default class Autocomplete extends Component {
     const { values, suggestions } = this.state;
 
     const newValues = values.filter(item => item !== value);
+
     const filtered = suggestions.filter(item => !newValues.some(innerItem => innerItem === item));
 
     this.setState({ values: newValues, filteredSuggestions: filtered });
@@ -50,9 +51,7 @@ export default class Autocomplete extends Component {
   handleChangeInput = (event) => {
     const { value } = event.target;
     const { values, suggestions } = this.state;
-
     const filtered = suggestions.filter(item => item.includes(value) && !values.some(innerItem => innerItem === item));
-
     this.setState({
       value,
       filteredSuggestions: filtered,
@@ -77,11 +76,16 @@ export default class Autocomplete extends Component {
       !values.some(item => item === value)
     ) {
       event.preventDefault();
-
-      this.setState({
-        value: '',
-        values: this.state.values.concat([value]),
-      });
+      if (this.props.notEditable === false) {
+        this.setState({
+          value: '',
+          values: this.state.values.concat([value]),
+        });
+      } else {
+        this.setState({
+          value: '',
+        });
+      }
     }
 
     if (event.keyCode === KEYS.ESCAPE) {
@@ -186,6 +190,7 @@ export default class Autocomplete extends Component {
 Autocomplete.propTypes = {
   containerClassName: PropTypes.string,
   delimiters: PropTypes.array,
+  notEditable: PropTypes.bool,
   id: PropTypes.string.isRequired,
   label: PropTypes.string,
   meta: PropTypes.object,
@@ -198,5 +203,6 @@ Autocomplete.defaultProps = {
   delimiters: [KEYS.ENTER, KEYS.TAB],
   label: undefined,
   meta: {},
+  notEditable: false,
   placeholder: 'Start typing...',
 };

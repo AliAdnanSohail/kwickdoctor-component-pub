@@ -1,6 +1,6 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { withKnobs, text, array, object } from '@storybook/addon-knobs/react';
+import { withKnobs, text, array, object, boolean } from '@storybook/addon-knobs/react';
 import { checkA11y } from '@storybook/addon-a11y';
 import { withTests } from '@storybook/addon-jest';
 import { action } from '@storybook/addon-actions';
@@ -26,8 +26,10 @@ storiesOf('Form Fields', module)
         'bolted',
         'on',
         'to',
-        'selectors',
-      ])}
+        'selectors',])}
+      notEditable={boolean('Not editable?', false)}
+      
+
     />
   ));
 

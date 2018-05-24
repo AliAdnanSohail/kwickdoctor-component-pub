@@ -20,7 +20,7 @@ export default class Avatar extends Component {
     );
     return (
       <Fragment>
-        <div className={classes} style={thumbStyle} squared={squared}>
+        <div className={classes} style={thumbStyle}>
           <div className="avatar-icon" style={{ backgroundImage: src }}>
             {!src && <UserIcon size="large" />}
           </div>

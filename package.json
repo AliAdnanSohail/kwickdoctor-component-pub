@@ -5,7 +5,7 @@
   "description": "",
   "main": "dist/index.js",
   "scripts": {
-    "clean": "rm -rf ./dist",
+    "clean": "rimraf ./dist",
     "build": "yarn clean && NODE_ENV=production `yarn bin`/babel ./src --out-dir ./dist",
     "storybook": "start-storybook -p 6006",
     "storybook:deploy": "storybook-to-ghpages",
@@ -14,12 +14,9 @@
     "test:output": "yarn test --json --outputFile=.jest-test-results.json",
     "test:update": "yarn test --updateSnapshot --json --outputFile=.jest-test-results.json"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/kamiaslam/kwickdoctor-components.git"
-  },
+  "repository": "git+https://github.com/kamiaslam/kwickdoctor-components.git",
   "keywords": [],
-  "author": "",
+  "author": "Diana <d.makerevich@aisnovations.com>",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/kamiaslam/kwickdoctor-components/issues"
@@ -75,7 +72,7 @@
     "extract-text-webpack-plugin": "3.0.2",
     "file-loader": "1.1.11",
     "jest": "22.4.3",
-    "node-sass": "4.8.3",
+    "node-sass": "4.9.0",
     "prop-types": "15.6.1",
     "react": "16.3.1",
     "react-dom": "16.3.1",
@@ -107,6 +104,7 @@
     "react-router-dom": "4.2.2",
     "react-transition-group": "2.3.0",
     "react-validation": "3.0.7",
+    "rimraf": "^2.6.2",
     "shallow-equal": "1.0.0",
     "styled-jsx": "2.2.6",
     "uuid": "3.2.1",
