@@ -96,7 +96,7 @@ var number = function number(value) {
  * @return {String|Null} [description]
  */
 var required = function required(value) {
-  return value ? undefined : 'This field is required. Please complete the field.';
+  return value ? undefined : 'This field is required. Please complete this field.';
 };
 
 exports.default = {
