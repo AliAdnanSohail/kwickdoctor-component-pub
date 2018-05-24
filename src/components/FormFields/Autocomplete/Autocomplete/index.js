@@ -56,6 +56,7 @@ export default class Autocomplete extends Component {
       value,
       filteredSuggestions: filtered,
     });
+    this.props.input.onChange(values);
   };
 
   handleFocusInput = () => {
