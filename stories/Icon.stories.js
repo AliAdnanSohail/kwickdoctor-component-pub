@@ -5,7 +5,7 @@ import { withMarkdownNotes } from '@storybook/addon-notes';
 import { checkA11y } from '@storybook/addon-a11y';
 import { Icons } from '../src';
 
-const getIconsArray = pred => (Object.values(Icons).filter(icon => pred(icon)));
+const getIconsArray = pred => Object.values(Icons).filter(icon => pred(icon));
 
 const baseIconsArray = getIconsArray(icon => Object.getOwnPropertyDescriptors(icon).name.value === 'Icon');
 const otherIconsArray = getIconsArray(icon => Object.getOwnPropertyDescriptors(icon).name.value !== 'Icon');
@@ -19,27 +19,28 @@ storiesOf('Icons', module)
   .addDecorator(withKnobs)
   .addDecorator(checkA11y)
   .addDecorator(getStory => <div style={{ padding: '24px' }}>{getStory()}</div>)
-  .add('base', withMarkdownNotes(notes)(() => {
-    const sizeProps = {
-      label: 'Size',
-      options: ['xsmall', 'small', 'medium', 'large', 'xlarge', 'huge'],
-      defaultValue: 'medium',
-    };
+  .add(
+    'base',
+    withMarkdownNotes(notes)(() => {
+      const sizeProps = {
+        label: 'Size',
+        options: ['xsmall', 'small', 'medium', 'large', 'xlarge', 'huge'],
+        defaultValue: 'medium',
+      };
 
-    const typeProps = {
-      label: 'Type',
-      options: ['control', 'logo', 'status'],
-      defaultValue: 'control',
-    };
+      const typeProps = {
+        label: 'Type',
+        options: ['control', 'logo', 'status'],
+        defaultValue: 'control',
+      };
 
-    const colorIndexProps = {
-      label: 'ColorIndex',
-      options: ['brand', 'accent-2', 'grey-1-a', 'critical', 'warning'],
-      defaultValue: 'grey-1-a',
-    };
+      const colorIndexProps = {
+        label: 'ColorIndex',
+        options: ['brand', 'accent-2', 'grey-1-a', 'critical', 'warning'],
+        defaultValue: 'grey-1-a',
+      };
 
-    return (
-      baseIconsArray.map(Icon => (
+      return baseIconsArray.map(Icon => (
         <Icon
           size={select(sizeProps.label, sizeProps.options, sizeProps.defaultValue)}
           type={select(typeProps.label, typeProps.options, typeProps.defaultValue)}
@@ -49,14 +50,12 @@ storiesOf('Icons', module)
             colorIndexProps.defaultValue,
           )}
         />
-      ))
-    );
-  }));
+      ));
+    }),
+  );
 
 storiesOf('Icons', module)
   .addDecorator(withKnobs)
   .addDecorator(checkA11y)
   .addDecorator(getStory => <div style={{ padding: '24px' }}>{getStory()}</div>)
-  .add('other', () => (
-    otherIconsArray.map(Icon => <Icon />)
-  ));
+  .add('other', () => otherIconsArray.map(Icon => <Icon />));

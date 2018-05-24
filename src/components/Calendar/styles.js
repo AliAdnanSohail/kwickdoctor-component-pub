@@ -40,6 +40,7 @@ export const navigation = css`
       font-weight: bold;
       font-size: 1.1rem;
       padding-top: 5px;
+
       span {
         display: inline-block;
         padding: 0 7px;
@@ -59,6 +60,7 @@ export const navigation = css`
       position: absolute;
       left: 0;
       top: 0;
+
       &.next {
         left: auto;
         right: 0;
@@ -78,4 +80,3 @@ export const calendar = css`
     color: ${settings.textColor};
   }
 `;
-

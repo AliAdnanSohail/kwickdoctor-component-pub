@@ -54,7 +54,6 @@ export const day = css`
           border-radius: 20px;
         }
       }
-      
     }
 
     &--disabled {
@@ -68,7 +67,6 @@ export const day = css`
       height: 40px;
       line-height: 40px;
     }
-    
   }
 `;
 

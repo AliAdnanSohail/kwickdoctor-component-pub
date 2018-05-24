@@ -55,7 +55,12 @@ it('Datepicker input works correctly', () => {
   const inputValue = '31 Jan, 2017';
   const props = {
     ...baseProps,
-    input: { ...baseProps.input, onChange(date) { this.value = date; } },
+    input: {
+      ...baseProps.input,
+      onChange(date) {
+        this.value = date;
+      },
+    },
   };
 
   const element = mount(<DatePicker {...props} />);
@@ -67,16 +72,21 @@ it('Datepicker input works correctly', () => {
 });
 
 it('Datepicker show error correctly', () => {
-  const props = { ...baseProps, meta: { ...baseProps.meta, error: 'some error' } };
+  const props = { ...baseProps, meta: { ...baseProps.meta, error: 'some error', touched: true } };
   const element = mount(<DatePicker {...props} />);
 
-  expect(element.find('.input-error').text()).toEqual(props.meta.error);
+  expect(element.find('.error').text()).toEqual(props.meta.error);
 });
 
 it('Datepicker click by day works correctly', () => {
   const props = {
     ...baseProps,
-    input: { ...baseProps.input, onChange(date) { this.value = date; } },
+    input: {
+      ...baseProps.input,
+      onChange(date) {
+        this.value = date;
+      },
+    },
   };
 
   const element = mount(<DatePicker {...props} />);

@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import AddIcon from 'grommet/components/icons/base/Add';
 
-import KEYS from '../../../utils/keys';
+import KEYS from '../../../../utils/keys';
 import Suggestions from './../Suggestions';
 
 import styles from './styles';

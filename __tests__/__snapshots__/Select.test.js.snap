@@ -2,19 +2,19 @@
 
 exports[`renders correctly 1`] = `
 <div
-  className="jsx-1685083184 jsx-4038665278 jsx-2881818901 form-field"
+  className="jsx-1685083184 jsx-3325440485 jsx-107481942 form-field"
 >
   <label
-    className="jsx-1685083184 jsx-4038665278 jsx-2881818901"
+    className="jsx-1685083184 jsx-3325440485 jsx-107481942"
     htmlFor={undefined}
   >
     Label
   </label>
   <div
-    className="jsx-792907225 select-container"
+    className="jsx-463444649 select-container"
   >
     <select
-      className="jsx-792907225 "
+      className="jsx-463444649 "
       id={undefined}
       name="gender"
       placeholder={undefined}
@@ -22,25 +22,25 @@ exports[`renders correctly 1`] = `
       value={undefined}
     >
       <option
-        className="jsx-792907225"
+        className="jsx-463444649"
         value="one"
       >
         one
       </option>
       <option
-        className="jsx-792907225"
+        className="jsx-463444649"
         value="two"
       >
         two
       </option>
       <option
-        className="jsx-792907225"
+        className="jsx-463444649"
         value="three"
       >
         three
       </option>
       <option
-        className="jsx-792907225"
+        className="jsx-463444649"
         value="four"
       >
         four

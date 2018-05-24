@@ -9,11 +9,7 @@ const toastContentProps = {
 };
 
 function ToastContent(props) {
-  return (
-    <div className={props.className}>
-      {props.text}
-    </div>
-  );
+  return <div className={props.className}>{props.text}</div>;
 }
 
 const initialToasts = [
@@ -34,7 +30,9 @@ function createNodeMock() {
 }
 
 it('Toast renders correctly', () => {
-  const element = renderer.create(<Toast initialToasts={initialToasts} />, { createNodeMock }).toJSON();
+  const element = renderer
+    .create(<Toast initialToasts={initialToasts} />, { createNodeMock })
+    .toJSON();
 
   expect(element).toMatchSnapshot();
 });

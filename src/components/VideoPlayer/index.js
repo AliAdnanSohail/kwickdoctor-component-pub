@@ -32,6 +32,7 @@ export default class VideoPlayer extends Component {
             <ProgressControl className="video-player__progress" order={1.1} />
             <FullscreenToggle className="video-player__fullscreen-button" order={1.2} />
           </ControlBar>
+
           <BigPlayButton position="center" className="video-player__big-play-button" order={2} />
         </Player>
 

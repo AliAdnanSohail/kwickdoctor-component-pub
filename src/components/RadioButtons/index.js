@@ -19,13 +19,13 @@ export default class RadioButtons extends Component {
         <div className="radio__wrapper">
           {options.map((option) => {
             const classes = classnames('radio__box', {
-              radio__box_active:
-                selected.toLowerCase() === option.value.toLowerCase(),
+              radio__box_active: selected.toLowerCase() === option.value.toLowerCase(),
             });
+
             const iconClasses = classnames('radio__icon', {
-              radio__icon_active:
-                selected.toLowerCase() === option.value.toLowerCase(),
+              radio__icon_active: selected.toLowerCase() === option.value.toLowerCase(),
             });
+
             return (
               <div className={classes} key={option.value}>
                 <div className={iconClasses}>{option.icon}</div>

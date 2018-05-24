@@ -172,7 +172,11 @@ export default class Autocomplete extends Component {
               onFocus={this.handleFocusInput}
               onBlur={this.handleBlurInput}
             />
-            <Suggestions active={focused} items={filteredSuggestions} onClick={this.handleClickSuggestion} />
+            <Suggestions
+              active={focused}
+              items={filteredSuggestions}
+              onClick={this.handleClickSuggestion}
+            />
           </div>
         </div>
 

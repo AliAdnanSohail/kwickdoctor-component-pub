@@ -39,7 +39,6 @@ exports[`Datepicker renders correctly 1`] = `
       </div>
     </div>
   </div>
-  
   <style>
     .form-field{position:relative;}
   </style>

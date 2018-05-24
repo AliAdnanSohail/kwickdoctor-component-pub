@@ -15,13 +15,13 @@ export default class ToastNotification extends Component {
     this.state = { toasts: props.initialToasts };
   }
 
-  componentDidMount = () => {
+  componentDidMount() {
     Manager.addChangeListener(this.handleStoreChange);
-  };
+  }
 
-  componentWillUnmount = () => {
+  componentWillUnmount() {
     Manager.removeChangeListener(this.handleStoreChange);
-  };
+  }
 
   handleStoreChange = (toasts) => {
     this.setState({
