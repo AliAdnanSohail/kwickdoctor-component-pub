@@ -35,7 +35,9 @@ export default class Autocomplete extends Component {
 
     const filtered = suggestions.filter(item => !newValues.some(innerItem => innerItem === item));
 
-    this.setState({ values: newValues, filteredSuggestions: filtered });
+    this.setState({ values: newValues, filteredSuggestions: filtered }, () => {
+      this.props.input.onChange(values);
+    });
   };
 
   handleFocusWrapper = (event) => {
@@ -56,7 +58,6 @@ export default class Autocomplete extends Component {
       value,
       filteredSuggestions: filtered,
     });
-    this.props.input.onChange(values);
   };
 
   handleFocusInput = () => {
@@ -78,10 +79,15 @@ export default class Autocomplete extends Component {
     ) {
       event.preventDefault();
       if (this.props.notEditable === false) {
-        this.setState({
-          value: '',
-          values: this.state.values.concat([value]),
-        });
+        this.setState(
+          {
+            value: '',
+            values: this.state.values.concat([value]),
+          },
+          () => {
+            this.props.input.onChange(values);
+          },
+        );
       } else {
         this.setState({
           value: '',
@@ -111,11 +117,16 @@ export default class Autocomplete extends Component {
 
     const filtered = suggestions.filter(item => item !== value && !values.some(innerItem => innerItem === item));
 
-    this.setState({
-      values: this.state.values.concat([value]),
-      filteredSuggestions: filtered,
-      value: '',
-    });
+    this.setState(
+      {
+        values: this.state.values.concat([value]),
+        filteredSuggestions: filtered,
+        value: '',
+      },
+      () => {
+        this.props.input.onChange(values);
+      },
+    );
   };
 
   renderTags = () => {
