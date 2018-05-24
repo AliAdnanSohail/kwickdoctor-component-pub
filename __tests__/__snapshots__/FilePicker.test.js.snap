@@ -2,11 +2,11 @@
 
 exports[`renders correctly 1`] = `
 <label
-  className="jsx-1299449465 upload-file"
+  className="jsx-3393071880 upload-file"
   htmlFor="file-picker"
 >
   <div
-    className="jsx-1299449465 upload-file__label-container"
+    className="jsx-3393071880 upload-file__label-container"
   >
     <svg
       aria-label="upload"
@@ -25,14 +25,14 @@ exports[`renders correctly 1`] = `
       />
     </svg>
     <div
-      className="jsx-1299449465 upload-file__label"
+      className="jsx-3393071880 upload-file__label"
     >
       file-picker
     </div>
   </div>
   
   <input
-    className="jsx-1299449465 input-file"
+    className="jsx-3393071880 input-file"
     id="file-picker"
     onBlur={[Function]}
     onChange={[Function]}
