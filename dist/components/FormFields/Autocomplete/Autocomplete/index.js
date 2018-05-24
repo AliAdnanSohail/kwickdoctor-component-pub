@@ -108,6 +108,7 @@ var Autocomplete = function (_Component) {
         value: value,
         filteredSuggestions: filtered
       });
+      _this.props.input.onChange(values);
     };
 
     _this.handleFocusInput = function () {
