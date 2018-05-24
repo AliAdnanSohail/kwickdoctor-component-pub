@@ -84,7 +84,7 @@ const number = value =>
  * @return {String|Null} [description]
  */
 const required = value =>
-  (value ? undefined : 'This field is required. Please complete the field.');
+  (value ? undefined : 'This field is required. Please complete this field.');
 
 export default {
   date,
