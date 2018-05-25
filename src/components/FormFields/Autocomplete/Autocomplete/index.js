@@ -35,9 +35,7 @@ export default class Autocomplete extends Component {
 
     const filtered = suggestions.filter(item => !newValues.some(innerItem => innerItem === item));
 
-    this.setState({ values: newValues, filteredSuggestions: filtered }, () => {
-      this.props.input.onChange(values);
-    });
+    this.setState({ values: newValues, filteredSuggestions: filtered });
   };
 
   handleFocusWrapper = (event) => {
@@ -79,15 +77,11 @@ export default class Autocomplete extends Component {
     ) {
       event.preventDefault();
       if (this.props.notEditable === false) {
-        this.setState(
-          {
-            value: '',
-            values: this.state.values.concat([value]),
-          },
-          () => {
-            this.props.input.onChange(values);
-          },
-        );
+        this.setState({
+          value: '',
+          values: this.state.values.concat([value]),
+
+        });
       } else {
         this.setState({
           value: '',
@@ -117,16 +111,11 @@ export default class Autocomplete extends Component {
 
     const filtered = suggestions.filter(item => item !== value && !values.some(innerItem => innerItem === item));
 
-    this.setState(
-      {
-        values: this.state.values.concat([value]),
-        filteredSuggestions: filtered,
-        value: '',
-      },
-      () => {
-        this.props.input.onChange(values);
-      },
-    );
+    this.setState({
+      values: this.state.values.concat([value]),
+      filteredSuggestions: filtered,
+      value: '',
+    });
   };
 
   renderTags = () => {
@@ -184,6 +173,7 @@ export default class Autocomplete extends Component {
               onFocus={this.handleFocusInput}
               onBlur={this.handleBlurInput}
             />
+
             <Suggestions
               active={focused}
               items={filteredSuggestions}
