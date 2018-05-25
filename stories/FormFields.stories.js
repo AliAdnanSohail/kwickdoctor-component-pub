@@ -36,8 +36,10 @@ storiesOf('Form Fields', module)
         'to',
         'selectors',])}
       notEditable={boolean('Not editable?', false)}
-      
-
+      defaultValues={array('Default values', [
+        'doctors',
+        'administrators',
+      ])}
     />
   ));
 

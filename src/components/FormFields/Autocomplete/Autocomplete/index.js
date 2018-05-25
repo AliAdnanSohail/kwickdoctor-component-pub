@@ -28,6 +28,16 @@ export default class Autocomplete extends Component {
     };
   }
 
+  componentDidMount() {
+    console.log('hfh');
+    console.log(this.props);
+    if (this.props.defaultValues.length > 0) {
+      this.state.values = this.state.values.concat(this.props.defaultValues);
+    }
+    this.renderTags();
+    console.log(this.state.values);
+  }
+
   removeTag = (value) => {
     const { values, suggestions } = this.state;
 
@@ -202,6 +212,7 @@ Autocomplete.propTypes = {
   meta: PropTypes.object,
   placeholder: PropTypes.string,
   suggestions: PropTypes.array.isRequired,
+  defaultValues: PropTypes.array,
 };
 
 Autocomplete.defaultProps = {
@@ -211,4 +222,5 @@ Autocomplete.defaultProps = {
   meta: {},
   notEditable: false,
   placeholder: 'Start typing...',
+  defaultValues: [],
 };
