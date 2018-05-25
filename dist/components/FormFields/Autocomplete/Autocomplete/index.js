@@ -80,9 +80,7 @@ var Autocomplete = function (_Component) {
         });
       });
 
-      _this.setState({ values: newValues, filteredSuggestions: filtered }, function () {
-        _this.props.input.onChange(values);
-      });
+      _this.setState({ values: newValues, filteredSuggestions: filtered });
     };
 
     _this.handleFocusWrapper = function (event) {
@@ -134,8 +132,7 @@ var Autocomplete = function (_Component) {
           _this.setState({
             value: '',
             values: _this.state.values.concat([value])
-          }, function () {
-            _this.props.input.onChange(values);
+
           });
         } else {
           _this.setState({
@@ -177,8 +174,6 @@ var Autocomplete = function (_Component) {
         values: _this.state.values.concat([value]),
         filteredSuggestions: filtered,
         value: ''
-      }, function () {
-        _this.props.input.onChange(values);
       });
     };
 
