@@ -1,0 +1,12 @@
+diff a/dist/components/FormFields/Autocomplete/Autocomplete/index.js b/dist/components/FormFields/Autocomplete/Autocomplete/index.js	(rejected hunks)
+@@ -80,7 +80,9 @@
+         });
+       });
+ 
+-      _this.setState({ values: newValues, filteredSuggestions: filtered });
++      _this.setState({ values: newValues, filteredSuggestions: filtered }, function () {
++        _this.props.input.onChange(values);
++      });
+     };
+ 
+     _this.handleFocusWrapper = function (event) {
