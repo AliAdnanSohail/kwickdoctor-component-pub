@@ -13,6 +13,15 @@ Object.defineProperty(exports, 'AvatarPicker', {
   }
 });
 
+var _CheckBox = require('./CheckBox');
+
+Object.defineProperty(exports, 'CheckBox', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_CheckBox).default;
+  }
+});
+
 var _FilePicker = require('./FilePicker');
 
 Object.defineProperty(exports, 'FilePicker', {
