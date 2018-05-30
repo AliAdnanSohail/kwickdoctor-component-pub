@@ -7,6 +7,7 @@ import { action } from '@storybook/addon-actions';
 
 import {
   Autocomplete,
+  CheckBox,
   FilePicker,
   Input,
   RadioButtonGroup,
@@ -46,6 +47,22 @@ storiesOf('Form Fields', module)
 storiesOf('Form Fields', module)
   .addDecorator(withKnobs)
   .addDecorator(checkA11y)
+  .addDecorator(withTests({ results })('Input'))
+  .addDecorator(getStory => <div style={{ padding: '24px' }}>{getStory()}</div>)
+  .add('CheckBox', () => (
+    <CheckBox
+      id="input"
+      name={text('name', 'Name')}
+      label={text('label', 'Label')}
+      defaultChecked={boolean('DefaultChecked', true)}
+      type={text('Type', 'text')}
+      placeholder={text('placeholder', 'Start typing')}
+    />
+  ));
+
+storiesOf('Form Fields', module)
+  .addDecorator(withKnobs)
+  .addDecorator(checkA11y)
   .addDecorator(withTests({ results })('FilePicker'))
   .addDecorator(getStory => <div style={{ padding: '24px' }}>{getStory()}</div>)
   .add('FilePicker', () => (
@@ -62,8 +79,6 @@ storiesOf('Form Fields', module)
       id="input"
       name={text('name', 'Name')}
       label={text('label', 'Label')}
-      defaultChecked={boolean('DefaultChecked', true)}
-      type={text('Type', 'text')}
       placeholder={text('placeholder', 'Start typing')}
     />
   ));

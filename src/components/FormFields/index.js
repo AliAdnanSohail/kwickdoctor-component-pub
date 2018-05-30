@@ -1,4 +1,5 @@
 export { default as AvatarPicker } from './AvatarPicker';
+export { default as CheckBox } from './CheckBox';
 export { default as FilePicker } from './FilePicker';
 export { default as Input } from './Input';
 export { default as RadioButtonGroup } from './RadioButtonGroup';

@@ -4,7 +4,7 @@ import renderer from '../renderer';
 import { textInput } from '../styles';
 
 export default renderer((input, label, {
-  className, defaultValue, id, name, placeholder, type, value,
+  className, defaultValue, id, name, placeholder, type, value, defaultChecked,
 }) => (
   <Fragment>
     <input
@@ -16,6 +16,7 @@ export default renderer((input, label, {
       type={type}
       value={value}
       defaultValue={defaultValue}
+      defaultChecked={defaultChecked}
     />
 
     <style>{textInput}</style>
