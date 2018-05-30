@@ -62,6 +62,8 @@ storiesOf('Form Fields', module)
       id="input"
       name={text('name', 'Name')}
       label={text('label', 'Label')}
+      defaultChecked={boolean('DefaultChecked', true)}
+      type={text('Type', 'text')}
       placeholder={text('placeholder', 'Start typing')}
     />
   ));
