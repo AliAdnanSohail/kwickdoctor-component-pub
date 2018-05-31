@@ -24,18 +24,8 @@ export default class Autocomplete extends Component {
       filteredSuggestions: list,
       suggestions: list,
       value: '',
-      values: [],
+      values: props.defaultValues,
     };
-  }
-
-  componentDidMount() {
-    console.log('hfh');
-    console.log(this.props);
-    if (this.props.defaultValues.length > 0) {
-      this.state.values = this.state.values.concat(this.props.defaultValues);
-    }
-    this.renderTags();
-    console.log(this.state.values);
   }
 
   removeTag = (value) => {
@@ -43,9 +33,10 @@ export default class Autocomplete extends Component {
 
     const newValues = values.filter(item => item !== value);
 
-    const filtered = suggestions.filter(item => !newValues.some(innerItem => innerItem === item));
-
-    this.setState({ values: newValues, filteredSuggestions: filtered });
+    this.setState({
+      values: newValues,
+      filteredSuggestions: suggestions.filter(item => !newValues.some(innerItem => innerItem === item)),
+    });
   };
 
   handleFocusWrapper = (event) => {
@@ -61,10 +52,9 @@ export default class Autocomplete extends Component {
   handleChangeInput = (event) => {
     const { value } = event.target;
     const { values, suggestions } = this.state;
-    const filtered = suggestions.filter(item => item.includes(value) && !values.some(innerItem => innerItem === item));
+
     this.setState({
-      value,
-      filteredSuggestions: filtered,
+      filteredSuggestions: suggestions.filter(item => item.includes(value) && !values.some(innerItem => innerItem === item)),
     });
   };
 
@@ -86,16 +76,11 @@ export default class Autocomplete extends Component {
       !values.some(item => item === value)
     ) {
       event.preventDefault();
-      if (this.props.notEditable === false) {
-        this.setState({
-          value: '',
-          values: this.state.values.concat([value]),
 
-        });
+      if (this.props.notEditable === false) {
+        this.setState({ value: '', values: this.state.values.concat([value]) });
       } else {
-        this.setState({
-          value: '',
-        });
+        this.setState({ value: '' });
       }
     }
 
@@ -119,11 +104,9 @@ export default class Autocomplete extends Component {
   handleClickSuggestion = (value) => {
     const { values, suggestions } = this.state;
 
-    const filtered = suggestions.filter(item => item !== value && !values.some(innerItem => innerItem === item));
-
     this.setState({
       values: this.state.values.concat([value]),
-      filteredSuggestions: filtered,
+      filteredSuggestions: suggestions.filter(item => item !== value && !values.some(innerItem => innerItem === item)),
       value: '',
     });
   };

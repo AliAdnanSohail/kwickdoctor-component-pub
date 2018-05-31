@@ -66,14 +66,13 @@ var Notification = function (_Component) {
       var _props = this.props,
           message = _props.message,
           primary = _props.primary,
-          read = _props.read,
           onComplete = _props.onComplete,
           onDelete = _props.onDelete;
 
 
       var dotClasses = (0, _classnames2.default)('notification__dot', {
         'notification__dot--primary': primary,
-        'notification__dot--read': read
+        'notification__dot--read': onComplete !== null
       });
 
       return _react2.default.createElement(
@@ -127,13 +126,11 @@ Notification.propTypes = {
   message: _propTypes2.default.string.isRequired,
   onComplete: _propTypes2.default.func,
   onDelete: _propTypes2.default.func,
-  primary: _propTypes2.default.bool,
-  read: _propTypes2.default.bool
+  primary: _propTypes2.default.bool
 };
 
 Notification.defaultProps = {
-  onComplete: function onComplete() {},
+  onComplete: null,
   onDelete: function onDelete() {},
-  primary: false,
-  read: false
+  primary: false
 };

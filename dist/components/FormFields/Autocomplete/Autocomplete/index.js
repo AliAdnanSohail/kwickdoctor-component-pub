@@ -74,13 +74,14 @@ var Autocomplete = function (_Component) {
         return item !== value;
       });
 
-      var filtered = suggestions.filter(function (item) {
-        return !newValues.some(function (innerItem) {
-          return innerItem === item;
-        });
+      _this.setState({
+        values: newValues,
+        filteredSuggestions: suggestions.filter(function (item) {
+          return !newValues.some(function (innerItem) {
+            return innerItem === item;
+          });
+        })
       });
-
-      _this.setState({ values: newValues, filteredSuggestions: filtered });
     };
 
     _this.handleFocusWrapper = function (event) {
@@ -99,14 +100,13 @@ var Autocomplete = function (_Component) {
           values = _this$state2.values,
           suggestions = _this$state2.suggestions;
 
-      var filtered = suggestions.filter(function (item) {
-        return item.includes(value) && !values.some(function (innerItem) {
-          return innerItem === item;
-        });
-      });
+
       _this.setState({
-        value: value,
-        filteredSuggestions: filtered
+        filteredSuggestions: suggestions.filter(function (item) {
+          return item.includes(value) && !values.some(function (innerItem) {
+            return innerItem === item;
+          });
+        })
       });
     };
 
@@ -128,16 +128,11 @@ var Autocomplete = function (_Component) {
         return item === value;
       })) {
         event.preventDefault();
-        if (_this.props.notEditable === false) {
-          _this.setState({
-            value: '',
-            values: _this.state.values.concat([value])
 
-          });
+        if (_this.props.notEditable === false) {
+          _this.setState({ value: '', values: _this.state.values.concat([value]) });
         } else {
-          _this.setState({
-            value: ''
-          });
+          _this.setState({ value: '' });
         }
       }
 
@@ -164,15 +159,13 @@ var Autocomplete = function (_Component) {
           suggestions = _this$state4.suggestions;
 
 
-      var filtered = suggestions.filter(function (item) {
-        return item !== value && !values.some(function (innerItem) {
-          return innerItem === item;
-        });
-      });
-
       _this.setState({
         values: _this.state.values.concat([value]),
-        filteredSuggestions: filtered,
+        filteredSuggestions: suggestions.filter(function (item) {
+          return item !== value && !values.some(function (innerItem) {
+            return innerItem === item;
+          });
+        }),
         value: ''
       });
     };
@@ -201,23 +194,12 @@ var Autocomplete = function (_Component) {
       filteredSuggestions: list,
       suggestions: list,
       value: '',
-      values: []
+      values: props.defaultValues
     };
     return _this;
   }
 
   _createClass(Autocomplete, [{
-    key: 'componentDidMount',
-    value: function componentDidMount() {
-      console.log('hfh');
-      console.log(this.props);
-      if (this.props.defaultValues.length > 0) {
-        this.state.values = this.state.values.concat(this.props.defaultValues);
-      }
-      this.renderTags();
-      console.log(this.state.values);
-    }
-  }, {
     key: 'render',
     value: function render() {
       var _this2 = this;

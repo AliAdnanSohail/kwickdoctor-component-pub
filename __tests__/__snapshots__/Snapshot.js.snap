@@ -927,6 +927,66 @@ exports[`Storyshots Form Fields Autocomplete 1`] = `
       tabIndex={0}
     >
       <div
+        className="jsx-2860290615 tag"
+      >
+        <div
+          className="jsx-2860290615 tag__text"
+        >
+          doctors
+        </div>
+        <button
+          className="jsx-2860290615 tag__button"
+          onClick={[Function]}
+        >
+          <svg
+            aria-label="close"
+            className="grommetux-control-icon grommetux-control-icon-close grommetux-control-icon--responsive"
+            height="24px"
+            role="img"
+            version="1.1"
+            viewBox="0 0 24 24"
+            width="24px"
+          >
+            <path
+              d="M3,3 L21,21 M3,21 L21,3"
+              fill="none"
+              stroke="#000"
+              strokeWidth="2"
+            />
+          </svg>
+        </button>
+      </div>
+      <div
+        className="jsx-2860290615 tag"
+      >
+        <div
+          className="jsx-2860290615 tag__text"
+        >
+          administrators
+        </div>
+        <button
+          className="jsx-2860290615 tag__button"
+          onClick={[Function]}
+        >
+          <svg
+            aria-label="close"
+            className="grommetux-control-icon grommetux-control-icon-close grommetux-control-icon--responsive"
+            height="24px"
+            role="img"
+            version="1.1"
+            viewBox="0 0 24 24"
+            width="24px"
+          >
+            <path
+              d="M3,3 L21,21 M3,21 L21,3"
+              fill="none"
+              stroke="#000"
+              strokeWidth="2"
+            />
+          </svg>
+        </button>
+      </div>
+      <div
         className="jsx-1685083184 jsx-4038665278 jsx-2881818901 autocomplete__input"
       >
         <input
