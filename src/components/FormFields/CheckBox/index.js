@@ -4,7 +4,7 @@ import renderer from '../renderer';
 import { textInput } from '../styles';
 
 export default renderer((input, label, {
-  className, defaultValue, id, name, placeholder, type, value, defaultChecked,
+  className, id, name, defaultChecked,
 }) => (
   <Fragment>
     <input
@@ -12,10 +12,7 @@ export default renderer((input, label, {
       className={className}
       id={id}
       name={name}
-      placeholder={placeholder}
-      type={type}
-      value={value}
-      defaultValue={defaultValue}
+      type="checkbox"
       defaultChecked={defaultChecked}
     />
 
