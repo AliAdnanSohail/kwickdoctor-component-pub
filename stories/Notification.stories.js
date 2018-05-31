@@ -19,11 +19,7 @@ storiesOf('Notification', module)
         date={moment('20120620')}
         message={text('message', 'New message')}
         primary={boolean('primary', false)}
-      />
-      <Notification
-        date={moment('20120620')}
-        message={text('message', 'New message')}
-        primary={boolean('primary', false)}
+        read={boolean('read', false)}
       />
     </Fragment>
   ));

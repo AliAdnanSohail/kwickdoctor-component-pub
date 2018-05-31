@@ -12,12 +12,12 @@ export default class Notification extends Component {
 
   render() {
     const {
-      message, primary, onComplete, onDelete,
+      message, onComplete, onDelete, primary, read,
     } = this.props;
 
     const dotClasses = classnames('notification__dot', {
       'notification__dot--primary': primary,
-      'notification__dot--read': onComplete !== null,
+      'notification__dot--read': read,
     });
 
     return (
@@ -47,10 +47,12 @@ Notification.propTypes = {
   onComplete: PropTypes.func,
   onDelete: PropTypes.func,
   primary: PropTypes.bool,
+  read: PropTypes.bool,
 };
 
 Notification.defaultProps = {
-  onComplete: null,
+  onComplete: () => {},
   onDelete: () => {},
   primary: false,
+  read: false,
 };
