@@ -693,7 +693,7 @@ exports[`Storyshots Calendar default 1`] = `
         className="jsx-4156069232"
       >
         <button
-          className="jsx-1425202002 day day--selected--without-events day--date--2018-05-30"
+          className="jsx-1425202002 day day--disabled day--date--2018-05-30"
           onClick={[Function]}
           type="button"
         >
@@ -708,7 +708,7 @@ exports[`Storyshots Calendar default 1`] = `
         className="jsx-4156069232"
       >
         <button
-          className="jsx-1425202002 day day--date--2018-05-31"
+          className="jsx-1425202002 day day--selected--without-events day--date--2018-05-31"
           onClick={[Function]}
           type="button"
         >
@@ -978,12 +978,9 @@ exports[`Storyshots Form Fields CheckBox 1`] = `
     <input
       className=""
       defaultChecked={true}
-      defaultValue={undefined}
       id="input"
       name="Name"
-      placeholder="Start typing"
-      type="text"
-      value={undefined}
+      type="checkbox"
     />
     <style>
       input,textarea,select{width:100%;min-width:100%;max-width:100%;min-height:44px;padding:12px 16px;background-color:#ffffff;color:#2A2A30;box-sizing:border-box;-webkit-appearance:none;font-style:normal;font-weight:normal;font-size:0.875rem;border-width:2px;border-style:solid;border-color:#E7E7F0;border-radius:4px;}
@@ -1039,7 +1036,7 @@ exports[`Storyshots Form Fields Date Picker 1`] = `
             tabIndex={undefined}
             title={undefined}
             type="text"
-            value="30 May, 2018"
+            value="31 May, 2018"
           />
         </div>
       </div>
