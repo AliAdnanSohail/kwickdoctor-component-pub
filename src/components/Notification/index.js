@@ -30,7 +30,7 @@ export default class Notification extends Component {
         </div>
 
         <div className="notification__actions">
-          <Button icon={<CheckmarkIcon />} size="s" rounded flat onClick={onComplete} />
+          {!read && <Button icon={<CheckmarkIcon />} size="s" rounded flat onClick={onComplete} />}
           <Button icon={<TrashIcon />} size="s" rounded flat onClick={onDelete} />
         </div>
 
