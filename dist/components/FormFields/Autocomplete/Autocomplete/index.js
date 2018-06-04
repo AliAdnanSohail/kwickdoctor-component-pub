@@ -207,6 +207,14 @@ var Autocomplete = function (_Component) {
   }
 
   _createClass(Autocomplete, [{
+    key: 'componentDidMount',
+    value: function componentDidMount() {
+      if (this.props.defaultValues.length > 0) {
+        this.state.values = this.state.values.concat(this.props.defaultValues);
+      }
+      this.renderTags();
+    }
+  }, {
     key: 'render',
     value: function render() {
       var _this2 = this;
@@ -321,7 +329,8 @@ Autocomplete.propTypes = {
   label: _propTypes2.default.string,
   meta: _propTypes2.default.object,
   placeholder: _propTypes2.default.string,
-  suggestions: _propTypes2.default.array.isRequired
+  suggestions: _propTypes2.default.array.isRequired,
+  defaultValues: _propTypes2.default.array
 };
 
 Autocomplete.defaultProps = {
@@ -330,5 +339,6 @@ Autocomplete.defaultProps = {
   label: undefined,
   meta: {},
   notEditable: false,
-  placeholder: 'Start typing...'
+  placeholder: 'Start typing...',
+  defaultValues: []
 };

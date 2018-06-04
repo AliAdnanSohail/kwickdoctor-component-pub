@@ -10,33 +10,37 @@ export default css`
     height: 138px;
     border-radius: 22px;
 
-    background: {
-      color: rgb(231, 231, 240);
-      size: cover;
-      position: center;
-    }
+    overflow: hidden;
+
+    background-color: rgb(231, 231, 240);
 
     &--circle {
       border-radius: 50%;
     }
 
-    &--small {
+    &--s {
       width: 85px;
       height: 85px;
     }
 
-    &--large {
+    &--l {
       height: 300px;
       width: 300px;
     }
   }
 
-  .avatar-icon {
-    :global(svg) {
-      width: 65px;
-      height: 65px;
-      fill: white;
-      stroke: white;
+  .avatar {
+    width: 100%;
+    height: 100%;
+
+    background: {
+      size: cover;
+      position: center;
     }
+  }
+
+  :global(.avatar-icon.grommetux-control-icon) {
+    fill: #ffffff;
+    stroke: #ffffff;
   }
 `;

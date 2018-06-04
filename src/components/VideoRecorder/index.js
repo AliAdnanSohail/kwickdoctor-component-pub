@@ -92,12 +92,14 @@ export default class VideoRecorder extends Component {
     }
   };
 
-  start = () => {
+  handleStart = () => {
     console.log('start');
 
     if (!this.state.available) {
       return;
     }
+
+    const { limit, onStart, onStop } = this.props;
 
     this.setState({ countingdown: true });
 
@@ -118,17 +120,31 @@ export default class VideoRecorder extends Component {
             this.timer = setInterval(() => {
               console.log('timer');
 
-              this.setState({ time: this.state.time + 1 });
+              const { time } = this.state;
+
+              if (limit > 0 && limit - 1 <= time) {
+                this.recorder.stop();
+
+                clearInterval(this.timer);
+
+                const blob = new Blob(this.chunk, { type: 'video/webm' });
+
+                this.setState({ recording: false, countdownValue: 5, time: 0 });
+
+                onStop(blob);
+              } else {
+                this.setState({ time: time + 1 });
+              }
             }, 1000);
 
-            this.props.onStart(this.stream);
+            onStart(this.stream);
           });
         }
       });
     }, 1000);
   };
 
-  stop = () => {
+  handleStop = () => {
     console.log('stop');
 
     if (!this.state.available) {
@@ -175,10 +191,10 @@ export default class VideoRecorder extends Component {
 
   renderControls = () => {
     if (this.state.recording) {
-      return <VideoRecorderButton state="stop" onClick={this.stop} />;
+      return <VideoRecorderButton state="stop" onClick={this.handleStop} />;
     }
 
-    return <VideoRecorderButton state="start" onClick={this.start} />;
+    return <VideoRecorderButton state="start" onClick={this.handleStart} />;
   };
 
   renderRecorder = () => {
@@ -225,6 +241,7 @@ export default class VideoRecorder extends Component {
 }
 
 VideoRecorder.propTypes = {
+  limit: PropTypes.number,
   onDenied: PropTypes.func,
   onGranted: PropTypes.func,
   onStart: PropTypes.func,
@@ -232,6 +249,7 @@ VideoRecorder.propTypes = {
 };
 
 VideoRecorder.defaultProps = {
+  limit: null,
   onDenied: () => {},
   onGranted: () => {},
   onStart: () => {},

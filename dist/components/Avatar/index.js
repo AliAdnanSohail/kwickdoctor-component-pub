@@ -52,30 +52,21 @@ var Avatar = function (_Component) {
     key: 'render',
     value: function render() {
       var _props = this.props,
+          className = _props.className,
           src = _props.src,
           squared = _props.squared,
           size = _props.size;
 
 
-      var thumbStyle = {
-        backgroundImage: 'url(' + src + ')'
-      };
+      var classes = (0, _classnames3.default)('avatar-container', { 'avatar-container--circle': !squared }, _defineProperty({}, 'avatar-container--' + size, size), className);
 
-      var classes = (0, _classnames3.default)('avatar-container', { 'avatar-container--circle': !squared }, _defineProperty({}, 'avatar-container--' + size, size));
       return _react2.default.createElement(
-        _react.Fragment,
-        null,
-        _react2.default.createElement(
-          'div',
-          { style: thumbStyle, className: 'jsx-' + _styles2.default.__scopedHash + ' ' + (classes || '')
-          },
-          _react2.default.createElement(
-            'div',
-            { style: { backgroundImage: src }, className: 'jsx-' + _styles2.default.__scopedHash + ' ' + 'avatar-icon'
-            },
-            !src && _react2.default.createElement(_icons.UserIcon, { size: 'large' })
-          )
-        ),
+        'div',
+        {
+          className: 'jsx-' + _styles2.default.__scopedHash + ' ' + (classes || '')
+        },
+        src ? _react2.default.createElement('div', { style: { backgroundImage: 'url(' + src + ')' }, className: 'jsx-' + _styles2.default.__scopedHash + ' ' + 'avatar'
+        }) : _react2.default.createElement(_icons.UserIcon, { className: 'avatar-icon', size: 'large' }),
         _react2.default.createElement(_style2.default, {
           styleId: _styles2.default.__scopedHash,
           css: _styles2.default.__scoped
@@ -91,12 +82,14 @@ exports.default = Avatar;
 
 
 Avatar.propTypes = {
+  className: _propTypes2.default.string,
   src: _propTypes2.default.string,
-  size: _propTypes2.default.string,
+  size: _propTypes2.default.oneOf(['s', 'l', '']),
   squared: _propTypes2.default.bool
 };
 
 Avatar.defaultProps = {
+  className: null,
   src: '',
   size: '',
   squared: false
