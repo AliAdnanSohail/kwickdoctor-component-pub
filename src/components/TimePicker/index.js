@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 
-import { ClockIcon, NextIcon, PreviousIcon } from 'grommet/components/icons/base';
-
+import { ClockIcon, PreviousIcon } from 'grommet/components/icons/base';
+import { hours, minutes } from './data';
 import styles from './styles';
 
 export default class TimePicker extends Component {
@@ -19,31 +19,14 @@ export default class TimePicker extends Component {
       visibleHoursList: false,
       visibleMinutsList: false,
       visibleTimeBlock: false,
-      hours: [
-        { value: '01' },
-        { value: '02' },
-        { value: '03' },
-        { value: '04' },
-        { value: '05' },
-        { value: '06' },
-        { value: '07' },
-        { value: '08' },
-        { value: '09' },
-        { value: '10' },
-        { value: '11' },
-        { value: '12' },
-      ],
-      minuts: [{ value: '00' }, { value: '30' }],
+      hours,
+      minutes,
     };
 
     this.classnames = classnames({
       'b-select__option_selected': true,
     });
   }
-
-  componentDidMount() {}
-
-  componentWillUnmount() {}
 
   changeTime() {
     this.setState({ defaultInputText: `${this.state.selectedHours}:${this.state.selectedMin}` });
@@ -119,8 +102,8 @@ export default class TimePicker extends Component {
     if (this.state.visibleMinutsList) {
       return (
         <React.Fragment>
-          <div className="b-select__options-wrap b-select__options-wrap_size_small">
-            {this.state.minuts.map(time => (
+          <div className="b-select__options-wrap">
+            {this.state.minutes.map(time => (
               <div
                 role="button"
                 tabIndex="0"
@@ -172,7 +155,7 @@ export default class TimePicker extends Component {
               <div className="b-select__field">
                 {this.state.selectedMin}
                 <div className="b-select__arrow">
-                  <NextIcon />
+                  <PreviousIcon />
                 </div>
                 {this.renderMinuntsList()}
               </div>
