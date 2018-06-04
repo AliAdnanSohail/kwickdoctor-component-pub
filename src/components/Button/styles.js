@@ -184,7 +184,7 @@ export default css`
       background-color: transparent;
       box-shadow: 0px 0px 10px rgba(12, 151, 249, 0.15);
 
-      color: ${settings.textColor};
+      color: ${settings.primaryColor};
 
       &:not(.button--disabled) {
         &:hover,
