@@ -117,27 +117,27 @@ export default class VideoRecorder extends Component {
           this.recorder.start(10);
 
           this.setState({ countingdown: false, recording: true }, () => {
+            onStart(this.stream);
+
             this.timer = setInterval(() => {
               console.log('timer');
 
               const { time } = this.state;
 
               if (limit > 0 && limit - 1 <= time) {
-                this.recorder.stop();
-
                 clearInterval(this.timer);
+
+                this.recorder.stop();
 
                 const blob = new Blob(this.chunk, { type: 'video/webm' });
 
                 this.setState({ recording: false, countdownValue: 5, time: 0 });
 
-                onStop(blob);
+                this.props.onStop(blob);
               } else {
                 this.setState({ time: time + 1 });
               }
             }, 1000);
-
-            onStart(this.stream);
           });
         }
       });

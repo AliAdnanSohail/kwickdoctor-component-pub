@@ -17,7 +17,7 @@ export default css`
 
     line-height: 26px;
 
-    transition: all 0.4s ease-in-out;
+    transition: background-color 0.4s ease-in-out, border-color 0.4s ease-in-out;
 
     overflow: hidden;
 

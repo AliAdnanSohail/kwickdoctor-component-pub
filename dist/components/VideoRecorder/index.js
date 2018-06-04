@@ -103,6 +103,8 @@ var VideoRecorder = function (_Component) {
             _this.recorder.start(10);
 
             _this.setState({ countingdown: false, recording: true }, function () {
+              onStart(_this.stream);
+
               _this.timer = setInterval(function () {
                 console.log('timer');
 
@@ -110,21 +112,19 @@ var VideoRecorder = function (_Component) {
 
 
                 if (limit > 0 && limit - 1 <= time) {
-                  _this.recorder.stop();
-
                   clearInterval(_this.timer);
+
+                  _this.recorder.stop();
 
                   var blob = new Blob(_this.chunk, { type: 'video/webm' });
 
                   _this.setState({ recording: false, countdownValue: 5, time: 0 });
 
-                  onStop(blob);
+                  _this.props.onStop(blob);
                 } else {
                   _this.setState({ time: time + 1 });
                 }
               }, 1000);
-
-              onStart(_this.stream);
             });
           }
         });
