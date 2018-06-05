@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from 'react';
+import React, { Component } from 'react';
 import classnames from 'classnames';
 import { UserIcon } from 'grommet/components/icons';
 import PropTypes from 'prop-types';
@@ -7,7 +7,12 @@ import styles from './styles';
 
 export default class Avatar extends Component {
   render() {
-    const { src, squared, size } = this.props;
+    const {
+      className,
+      src,
+      squared,
+      size,
+    } = this.props;
 
     const thumbStyle = {
       backgroundImage: `url(${src})`,
@@ -18,29 +23,33 @@ export default class Avatar extends Component {
 
     const classes = classnames(
       'avatar-container',
-      { 'avatar-container--circle': !squared },
-      { [`avatar-container--${size}`]: size },
+      !src && 'avatar-container--gray',
+      className,
     );
+
     return (
-      <Fragment>
-        <div className={classes} style={thumbStyle}>
-          <div className="avatar-icon" style={{ backgroundImage: src }}>
-            {!src && <UserIcon size="large" />}
-          </div>
-        </div>
+      <div className={classes} style={{ width: `${size}px` }}>
+        {src ? (
+          <div className="avatar" style={thumbStyle} />
+        ) : (
+          <UserIcon className="avatar-icon" size="large" />
+        )}
+
         <style jsx>{styles}</style>
-      </Fragment>
+      </div>
     );
   }
 }
 
 Avatar.propTypes = {
+  className: PropTypes.string,
   src: PropTypes.string,
   size: PropTypes.number,
   squared: PropTypes.number,
 };
 
 Avatar.defaultProps = {
+  className: null,
   src: '',
   size: '',
   squared: '',

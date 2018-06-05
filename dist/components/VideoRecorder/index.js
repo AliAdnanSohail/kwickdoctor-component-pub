@@ -73,12 +73,18 @@ var VideoRecorder = function (_Component) {
       }
     };
 
-    _this.start = function () {
+    _this.handleStart = function () {
       console.log('start');
 
       if (!_this.state.available) {
         return;
       }
+
+      var _this$props = _this.props,
+          limit = _this$props.limit,
+          onStart = _this$props.onStart,
+          onStop = _this$props.onStop;
+
 
       _this.setState({ countingdown: true });
 
@@ -97,20 +103,35 @@ var VideoRecorder = function (_Component) {
             _this.recorder.start(10);
 
             _this.setState({ countingdown: false, recording: true }, function () {
+              onStart(_this.stream);
+
               _this.timer = setInterval(function () {
                 console.log('timer');
 
-                _this.setState({ time: _this.state.time + 1 });
-              }, 1000);
+                var time = _this.state.time;
 
-              _this.props.onStart(_this.stream);
+
+                if (limit > 0 && limit - 1 <= time) {
+                  clearInterval(_this.timer);
+
+                  _this.recorder.stop();
+
+                  var blob = new Blob(_this.chunk, { type: 'video/webm' });
+
+                  _this.setState({ recording: false, countdownValue: 5, time: 0 });
+
+                  _this.props.onStop(blob);
+                } else {
+                  _this.setState({ time: time + 1 });
+                }
+              }, 1000);
             });
           }
         });
       }, 1000);
     };
 
-    _this.stop = function () {
+    _this.handleStop = function () {
       console.log('stop');
 
       if (!_this.state.available) {
@@ -168,10 +189,10 @@ var VideoRecorder = function (_Component) {
 
     _this.renderControls = function () {
       if (_this.state.recording) {
-        return _react2.default.createElement(_VideoRecorderButton2.default, { state: 'stop', onClick: _this.stop });
+        return _react2.default.createElement(_VideoRecorderButton2.default, { state: 'stop', onClick: _this.handleStop });
       }
 
-      return _react2.default.createElement(_VideoRecorderButton2.default, { state: 'start', onClick: _this.start });
+      return _react2.default.createElement(_VideoRecorderButton2.default, { state: 'start', onClick: _this.handleStart });
     };
 
     _this.renderRecorder = function () {
@@ -309,6 +330,7 @@ exports.default = VideoRecorder;
 
 
 VideoRecorder.propTypes = {
+  limit: _propTypes2.default.number,
   onDenied: _propTypes2.default.func,
   onGranted: _propTypes2.default.func,
   onStart: _propTypes2.default.func,
@@ -316,6 +338,7 @@ VideoRecorder.propTypes = {
 };
 
 VideoRecorder.defaultProps = {
+  limit: null,
   onDenied: function onDenied() {},
   onGranted: function onGranted() {},
   onStart: function onStart() {},

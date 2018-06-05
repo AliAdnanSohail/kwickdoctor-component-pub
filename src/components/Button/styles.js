@@ -17,7 +17,7 @@ export default css`
 
     line-height: 26px;
 
-    transition: all 0.4s ease-in-out;
+    transition: background-color 0.4s ease-in-out, border-color 0.4s ease-in-out;
 
     overflow: hidden;
 
@@ -184,7 +184,7 @@ export default css`
       background-color: transparent;
       box-shadow: 0px 0px 10px rgba(12, 151, 249, 0.15);
 
-      color: ${settings.textColor};
+      color: ${settings.primaryColor};
 
       &:not(.button--disabled) {
         &:hover,

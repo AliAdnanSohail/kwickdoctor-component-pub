@@ -5,38 +5,25 @@ export default css`
     display: flex;
     justify-content: center;
     align-items: center;
-
-    width: 138px;
-    height: 138px;
-    border-radius: 22px;
-
-    background: {
-      color: rgb(231, 231, 240);
-      size: cover;
-      position: center;
-    }
-
-    &--circle {
-      border-radius: 50%;
-    }
-
-    &--small {
-      width: 85px;
-      height: 85px;
-    }
-
-    &--large {
-      height: 300px;
-      width: 300px;
+    overflow: hidden;
+    &--gray {
+      border-radius: 22px;
+      background-color: rgb(231, 231, 240);
     }
   }
 
-  .avatar-icon {
-    :global(svg) {
-      width: 65px;
-      height: 65px;
-      fill: white;
-      stroke: white;
+  .avatar {
+    width: 100%;
+    height: 100%;
+
+    background: {
+      size: cover;
+      position: center;
     }
+  }
+
+  :global(.avatar-icon.grommetux-control-icon) {
+    fill: #ffffff;
+    stroke: #ffffff;
   }
 `;

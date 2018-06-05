@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from 'react';
 import { storiesOf } from '@storybook/react';
-import { withKnobs } from '@storybook/addon-knobs/react';
+import { withKnobs, number } from '@storybook/addon-knobs/react';
 import { checkA11y } from '@storybook/addon-a11y';
 import { withTests } from '@storybook/addon-jest';
 
@@ -35,6 +35,7 @@ class VideRecorderWrapper extends Component {
   };
 
   render() {
+    const { limit } = this.props;
     const { src } = this.state;
 
     return (
@@ -46,7 +47,7 @@ class VideRecorderWrapper extends Component {
             <Button onClick={this.handleReset}>reset</Button>
           </div>
         ) : (
-          <VideoRecorder onStop={this.handleStop} src={src} />
+          <VideoRecorder limit={limit} onStop={this.handleStop} src={src} />
         )}
       </Fragment>
     );
@@ -70,4 +71,4 @@ storiesOf('Video Recorder', module)
       {getStory()}
     </div>
   ))
-  .add('default', () => <VideRecorderWrapper />);
+  .add('default', () => <VideRecorderWrapper limit={number('limit', 0)} />);

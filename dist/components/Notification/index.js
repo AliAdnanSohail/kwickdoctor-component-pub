@@ -101,8 +101,8 @@ var Notification = function (_Component) {
           {
             className: 'jsx-' + _styles.notification.__scopedHash + ' jsx-' + _styles.notificationCard.__scopedHash + ' ' + 'notification__actions'
           },
-          _react2.default.createElement(_.Button, { icon: _react2.default.createElement(_icons.CheckmarkIcon, null), size: 's', rounded: true, flat: true, onClick: onComplete }),
-          _react2.default.createElement(_.Button, { icon: _react2.default.createElement(_icons.TrashIcon, null), size: 's', rounded: true, flat: true, onClick: onDelete })
+          _react2.default.createElement(_.Button, { flat: true, icon: _react2.default.createElement(_icons.CheckmarkIcon, null), onClick: onComplete, rounded: true, size: 's' }),
+          _react2.default.createElement(_.Button, { flat: true, icon: _react2.default.createElement(_icons.TrashIcon, null), onClick: onDelete, rounded: true, size: 's' })
         ),
         _react2.default.createElement(_style2.default, {
           styleId: _styles.notification.__scopedHash,
