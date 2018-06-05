@@ -11,6 +11,9 @@ export default class Avatar extends Component {
 
     const thumbStyle = {
       backgroundImage: `url(${src})`,
+      borderRadius: `${squared}px`,
+      width: `${size}px`,
+      height: `${size}px`,
     };
 
     const classes = classnames(
@@ -33,12 +36,12 @@ export default class Avatar extends Component {
 
 Avatar.propTypes = {
   src: PropTypes.string,
-  size: PropTypes.string,
-  squared: PropTypes.bool,
+  size: PropTypes.number,
+  squared: PropTypes.number,
 };
 
 Avatar.defaultProps = {
   src: '',
   size: '',
-  squared: false,
+  squared: '',
 };

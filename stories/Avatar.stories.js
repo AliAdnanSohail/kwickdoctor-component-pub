@@ -1,6 +1,6 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { withKnobs, text, boolean } from '@storybook/addon-knobs/react';
+import { text, number, withKnobs } from '@storybook/addon-knobs/react';
 import { checkA11y } from '@storybook/addon-a11y';
 import { withTests } from '@storybook/addon-jest';
 
@@ -18,7 +18,7 @@ storiesOf('Avatar', module)
         'src',
         'https://cdn.pixabay.com/photo/2017/08/30/01/05/milky-way-2695569_960_720.jpg',
       )}
-      squared={boolean('squared', false)}
-      size={text('size', '')}
+      squared={number('squared', 15)}
+      size={number('size', 150)}
     />
   ));
