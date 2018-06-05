@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
 import classnames from 'classnames';
-
 import { ClockIcon, PreviousIcon } from 'grommet/components/icons/base';
-import { hours, minutes } from './data';
+import PropTypes from 'prop-types';
+
 import styles from './styles';
 
 export default class TimePicker extends Component {
@@ -19,15 +18,14 @@ export default class TimePicker extends Component {
       visibleHoursList: false,
       visibleMinutsList: false,
       visibleTimeBlock: false,
-      hours,
-      minutes,
+      hours: [...Array(24).keys()],
+      minutes: [...Array(60).keys()],
     };
 
     this.classnames = classnames({
       'b-select__option_selected': true,
     });
   }
-
   changeTime() {
     this.setState({ defaultInputText: `${this.state.selectedHours}:${this.state.selectedMin}` });
     this.props.onChange();
@@ -87,7 +85,7 @@ export default class TimePicker extends Component {
                 })}
                 key={time.value}
               >
-                {time.value}
+                {time}
               </div>
             ))}
           </div>
@@ -114,7 +112,7 @@ export default class TimePicker extends Component {
                 onClick={e => this.changeMin(e)}
                 onKeyPress={e => this.changeMin(e)}
               >
-                {time.value}
+                {time}
               </div>
             ))}
           </div>

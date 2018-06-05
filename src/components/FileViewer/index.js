@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import { Document, Page } from 'react-pdf/dist/entry.webpack';
 import PropTypes from 'prop-types';
+import { Document, Page } from 'react-pdf/dist/entry.webpack';
+
 import styles from './styles';
 
 function FileExtension(filename) {
