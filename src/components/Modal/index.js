@@ -8,7 +8,7 @@ import { modal, underlay } from './styles';
 
 export default class Modal extends Component {
   static getDerivedStateFromProps(nextProps, prevState) {
-    return nextProps.active !== prevState.active ? { active: nextProps.show } : null;
+    return nextProps.active !== prevState.active ? { active: nextProps.active } : null;
   }
 
   constructor(props) {

@@ -38,6 +38,13 @@ class ModalWrapper extends React.Component {
             this.toggleModal(false);
           }}
         >
+          <Button
+            onClick={() => {
+              this.toggleModal(false);
+            }}
+          >
+            Close modal
+          </Button>
           {text('content', 'Modal content')}
         </Modal>
       </Fragment>
