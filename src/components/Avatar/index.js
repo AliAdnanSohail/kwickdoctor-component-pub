@@ -10,13 +10,13 @@ export default class Avatar extends Component {
     const {
       className,
       src,
-      squared,
+      borderRadius,
       size,
     } = this.props;
 
     const thumbStyle = {
       backgroundImage: `url(${src})`,
-      borderRadius: `${squared}px`,
+      borderRadius: `${borderRadius}px`,
       width: `${size}px`,
       height: `${size}px`,
     };
@@ -45,12 +45,12 @@ Avatar.propTypes = {
   className: PropTypes.string,
   src: PropTypes.string,
   size: PropTypes.number,
-  squared: PropTypes.number,
+  borderRadius: PropTypes.number,
 };
 
 Avatar.defaultProps = {
   className: null,
   src: '',
   size: '',
-  squared: '',
+  borderRadius: 3,
 };
