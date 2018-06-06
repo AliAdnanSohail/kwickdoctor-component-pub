@@ -8,31 +8,21 @@ import styles from './styles';
 export default class Avatar extends Component {
   render() {
     const {
-      borderRadius,
-      className,
-      size,
-      src,
+      borderRadius, className, size, src,
     } = this.props;
 
-    const thumbStyle = {
+    const avatarStyle = {
       backgroundImage: `url(${src})`,
       borderRadius: `${borderRadius}px`,
       height: `${size}px`,
       width: `${size}px`,
     };
 
-    const classes = classnames(
-      'avatar-container',
-      className,
-    );
+    const classes = classnames('avatar', className);
 
     return (
-      <div className={classes} style={thumbStyle}>
-        {src ? (
-          <div className="avatar" />
-        ) : (
-          <UserIcon className="avatar-icon" size="large" />
-        )}
+      <div className={classes} style={avatarStyle}>
+        {!src && <UserIcon className="avatar-icon" size="large" />}
 
         <style jsx>{styles}</style>
       </div>

@@ -1,21 +1,16 @@
 import css from 'styled-jsx/css';
 
 export default css`
-  .avatar-container {
+  .avatar {
     display: flex;
     justify-content: center;
     align-items: center;
     overflow: hidden;
-    background-color: rgb(231, 231, 240);
-  }
-
-  .avatar {
-    width: 100%;
-    height: 100%;
 
     background: {
-      size: cover;
+      color: rgb(231, 231, 240);
       position: center;
+      size: cover;
     }
   }
 
