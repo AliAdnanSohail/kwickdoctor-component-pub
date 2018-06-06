@@ -45,7 +45,7 @@ var Modal = function (_Component) {
   _createClass(Modal, null, [{
     key: 'getDerivedStateFromProps',
     value: function getDerivedStateFromProps(nextProps, prevState) {
-      return nextProps.active !== prevState.active ? { active: nextProps.show } : null;
+      return nextProps.active !== prevState.active ? { active: nextProps.active } : null;
     }
   }]);
 

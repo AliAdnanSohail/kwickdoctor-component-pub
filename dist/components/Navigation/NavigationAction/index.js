@@ -46,7 +46,7 @@ var NavigationAction = function (_Component) {
         null,
         _react2.default.createElement(
           'button',
-          { onClick: onClick, className: 'nav-item', activeClassName: 'nav-item--active' },
+          { onClick: onClick, className: 'nav-item' },
           _react2.default.createElement(Icon, { className: 'nav-item__icon' }),
           _react2.default.createElement(
             'span',
