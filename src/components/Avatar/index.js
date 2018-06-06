@@ -8,29 +8,28 @@ import styles from './styles';
 export default class Avatar extends Component {
   render() {
     const {
-      className,
-      src,
       borderRadius,
+      className,
       size,
+      src,
     } = this.props;
 
     const thumbStyle = {
       backgroundImage: `url(${src})`,
       borderRadius: `${borderRadius}px`,
-      width: `${size}px`,
       height: `${size}px`,
+      width: `${size}px`,
     };
 
     const classes = classnames(
       'avatar-container',
-      !src && 'avatar-container--gray',
       className,
     );
 
     return (
-      <div className={classes} style={{ width: `${size}px` }}>
+      <div className={classes} style={thumbStyle}>
         {src ? (
-          <div className="avatar" style={thumbStyle} />
+          <div className="avatar" />
         ) : (
           <UserIcon className="avatar-icon" size="large" />
         )}
@@ -42,15 +41,15 @@ export default class Avatar extends Component {
 }
 
 Avatar.propTypes = {
-  className: PropTypes.string,
-  src: PropTypes.string,
-  size: PropTypes.number,
   borderRadius: PropTypes.number,
+  className: PropTypes.string,
+  size: PropTypes.number,
+  src: PropTypes.string,
 };
 
 Avatar.defaultProps = {
-  className: null,
-  src: '',
-  size: '',
   borderRadius: 3,
+  className: null,
+  size: '',
+  src: '',
 };

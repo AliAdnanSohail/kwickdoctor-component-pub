@@ -6,10 +6,7 @@ export default css`
     justify-content: center;
     align-items: center;
     overflow: hidden;
-    &--gray {
-      border-radius: 22px;
-      background-color: rgb(231, 231, 240);
-    }
+    background-color: rgb(231, 231, 240);
   }
 
   .avatar {
