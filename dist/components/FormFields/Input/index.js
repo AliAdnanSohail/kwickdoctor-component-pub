@@ -20,12 +20,10 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 exports.default = (0, _renderer2.default)(function (input, label, _ref) {
   var className = _ref.className,
-      defaultValue = _ref.defaultValue,
       id = _ref.id,
       name = _ref.name,
       placeholder = _ref.placeholder,
-      type = _ref.type,
-      value = _ref.value;
+      type = _ref.type;
   return _react2.default.createElement(
     _react.Fragment,
     null,
@@ -34,9 +32,7 @@ exports.default = (0, _renderer2.default)(function (input, label, _ref) {
       id: id,
       name: name,
       placeholder: placeholder,
-      type: type,
-      value: value,
-      defaultValue: defaultValue
+      type: type
     })),
     _react2.default.createElement(
       'style',

@@ -12,12 +12,10 @@ exports[`renders correctly 1`] = `
   </label>
   <input
     className=""
-    defaultValue={undefined}
     id="input-id"
     name="input-name"
     placeholder="input-placeholder"
     type={undefined}
-    value={undefined}
   />
   <style>
     input,textarea,select{width:100%;min-width:100%;max-width:100%;min-height:44px;padding:12px 16px;background-color:#ffffff;color:#2A2A30;box-sizing:border-box;-webkit-appearance:none;font-style:normal;font-weight:normal;font-size:0.875rem;border-width:2px;border-style:solid;border-color:#E7E7F0;border-radius:4px;}
