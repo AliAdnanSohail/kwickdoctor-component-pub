@@ -8,23 +8,21 @@ import styles from './styles';
 export default class Avatar extends Component {
   render() {
     const {
-      className, src, squared, size,
+      borderRadius, className, size, src,
     } = this.props;
 
-    const classes = classnames(
-      'avatar-container',
-      { 'avatar-container--circle': !squared },
-      { [`avatar-container--${size}`]: size },
-      className,
-    );
+    const avatarStyle = {
+      backgroundImage: `url(${src})`,
+      borderRadius: `${borderRadius}px`,
+      height: `${size}px`,
+      width: `${size}px`,
+    };
+
+    const classes = classnames('avatar', className);
 
     return (
-      <div className={classes}>
-        {src ? (
-          <div className="avatar" style={{ backgroundImage: `url(${src})` }} />
-        ) : (
-          <UserIcon className="avatar-icon" size="large" />
-        )}
+      <div className={classes} style={avatarStyle}>
+        {!src && <UserIcon className="avatar-icon" size="large" />}
 
         <style jsx>{styles}</style>
       </div>
@@ -33,15 +31,15 @@ export default class Avatar extends Component {
 }
 
 Avatar.propTypes = {
+  borderRadius: PropTypes.number,
   className: PropTypes.string,
+  size: PropTypes.number,
   src: PropTypes.string,
-  size: PropTypes.oneOf(['s', 'l', '']),
-  squared: PropTypes.bool,
 };
 
 Avatar.defaultProps = {
+  borderRadius: 3,
   className: null,
-  src: '',
   size: '',
-  squared: false,
+  src: '',
 };
