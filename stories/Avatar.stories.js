@@ -14,11 +14,11 @@ storiesOf('Avatar', module)
   .addDecorator(getStory => <div style={{ padding: '24px' }}>{getStory()}</div>)
   .add('default', () => (
     <Avatar
+      borderRadius={number('border-radius', 3)}
       src={text(
         'src',
         'https://cdn.pixabay.com/photo/2017/08/30/01/05/milky-way-2695569_960_720.jpg',
       )}
-      borderRadius={number('border-radius', 3)}
       size={number('size', 150)}
     />
   ));

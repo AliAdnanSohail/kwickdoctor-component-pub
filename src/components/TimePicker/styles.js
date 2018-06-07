@@ -7,7 +7,7 @@ export default css`
     stroke: #babbcc;
   }
 
-  .b-time-picker {
+  .time-picker {
     &__get-time {
       position: absolute;
       left: 0;
@@ -51,7 +51,7 @@ export default css`
       align-items: center;
     }
   }
-  .b-input {
+  .input {
     border: 1px solid #e7e7f0;
     border-radius: 6px;
     position: relative;
@@ -65,7 +65,7 @@ export default css`
       text-align: center;
     }
   }
-  .b-select {
+  .select {
     &__field {
       background-color: white;
       border-radius: 6px;

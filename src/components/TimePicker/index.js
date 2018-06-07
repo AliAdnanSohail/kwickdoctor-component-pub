@@ -23,7 +23,7 @@ export default class TimePicker extends Component {
     };
 
     this.classnames = classnames({
-      'b-select__option_selected': true,
+      select__option_selected: true,
     });
   }
   changeTime() {
@@ -73,15 +73,15 @@ export default class TimePicker extends Component {
     if (this.state.visibleHoursList) {
       return (
         <React.Fragment>
-          <div className="b-select__options-wrap">
+          <div className="select__options-wrap">
             {this.state.hours.map(time => (
               <div
                 role="button"
                 tabIndex="0"
                 onClick={e => this.changeHours(e)}
                 onKeyPress={e => this.changeHours(e)}
-                className={classnames('b-select__option', {
-                  'b-select__option_selected': this.state.selectedHours === time.value,
+                className={classnames('select__option', {
+                  select__option_selected: this.state.selectedHours === time.value,
                 })}
                 key={time.value}
               >
@@ -100,13 +100,13 @@ export default class TimePicker extends Component {
     if (this.state.visibleMinutsList) {
       return (
         <React.Fragment>
-          <div className="b-select__options-wrap">
+          <div className="select__options-wrap">
             {this.state.minutes.map(time => (
               <div
                 role="button"
                 tabIndex="0"
-                className={classnames('b-select__option', {
-                  'b-select__option_selected': this.state.selectedMin === time.value,
+                className={classnames('select__option', {
+                  select__option_selected: this.state.selectedMin === time.value,
                 })}
                 key={time.value}
                 onClick={e => this.changeMin(e)}
@@ -126,33 +126,33 @@ export default class TimePicker extends Component {
   renderTimeBlock() {
     if (this.state.visibleTimeBlock) {
       return (
-        <div className="b-time-picker__get-time">
-          <div className="b-time-picker__get-time-wrap">
+        <div className="time-picker__get-time">
+          <div className="time-picker__get-time-wrap">
             <div
-              className="b-select"
+              className="select"
               role="button"
               tabIndex="0"
               onClick={e => this.switchHoursList(e)}
               onKeyPress={e => this.switchHoursList(e)}
             >
-              <div className="b-select__field">
+              <div className="select__field">
                 {this.state.selectedHours}
-                <div className="b-select__arrow">
+                <div className="select__arrow">
                   <PreviousIcon />
                 </div>
                 {this.renderHoursList()}
               </div>
             </div>
             <div
-              className="b-select"
+              className="select"
               role="button"
               tabIndex="0"
               onClick={e => this.switchMinutsList(e)}
               onKeyPress={e => this.switchMinutsList(e)}
             >
-              <div className="b-select__field">
+              <div className="select__field">
                 {this.state.selectedMin}
-                <div className="b-select__arrow">
+                <div className="select__arrow">
                   <PreviousIcon />
                 </div>
                 {this.renderMinuntsList()}
@@ -168,25 +168,25 @@ export default class TimePicker extends Component {
 
   render() {
     const { title, onChange } = this.props;
-    const classes = classnames('b-time-picker');
+    const classes = classnames('time-picker');
 
     return (
       <section className={classes}>
-        <div className="b-time-picker__wrapper">
-          <div className="b-time-picker__title">{title}</div>
+        <div className="time-picker__wrapper">
+          <div className="time-picker__title">{title}</div>
           <div
-            className="b-time-picker__input"
+            className="time-picker__input"
             role="button"
             tabIndex="0"
             onClick={e => this.switchTimeBlock(e)}
             onKeyPress={e => this.switchTimeBlock(e)}
           >
-            <div className="b-time-picker__logo">
+            <div className="time-picker__logo">
               <ClockIcon />
             </div>
             <input
               type="text"
-              className="b-input"
+              className="input"
               onChange={onChange}
               value={this.state.defaultInputText}
             />
