@@ -112,7 +112,8 @@ exports[`Calendar renders correctly 1`] = `
       className="jsx-4156069232"
     >
       <button
-        className="jsx-1425202002 day day--disabled day--date--2018-02-25"
+        className="jsx-1425202002 day day--disabled"
+        data-day="2018-02-25"
         onClick={[Function]}
         type="button"
       >
@@ -127,7 +128,8 @@ exports[`Calendar renders correctly 1`] = `
       className="jsx-4156069232"
     >
       <button
-        className="jsx-1425202002 day day--disabled day--date--2018-02-26"
+        className="jsx-1425202002 day day--disabled"
+        data-day="2018-02-26"
         onClick={[Function]}
         type="button"
       >
@@ -142,7 +144,8 @@ exports[`Calendar renders correctly 1`] = `
       className="jsx-4156069232"
     >
       <button
-        className="jsx-1425202002 day day--disabled day--date--2018-02-27"
+        className="jsx-1425202002 day day--disabled"
+        data-day="2018-02-27"
         onClick={[Function]}
         type="button"
       >
@@ -157,7 +160,8 @@ exports[`Calendar renders correctly 1`] = `
       className="jsx-4156069232"
     >
       <button
-        className="jsx-1425202002 day day--disabled day--date--2018-02-28"
+        className="jsx-1425202002 day day--disabled"
+        data-day="2018-02-28"
         onClick={[Function]}
         type="button"
       >
@@ -172,7 +176,8 @@ exports[`Calendar renders correctly 1`] = `
       className="jsx-4156069232"
     >
       <button
-        className="jsx-1425202002 day day--disabled day--date--2018-03-01"
+        className="jsx-1425202002 day day--disabled"
+        data-day="2018-03-01"
         onClick={[Function]}
         type="button"
       >
@@ -187,7 +192,8 @@ exports[`Calendar renders correctly 1`] = `
       className="jsx-4156069232"
     >
       <button
-        className="jsx-1425202002 day day--disabled day--date--2018-03-02"
+        className="jsx-1425202002 day day--disabled"
+        data-day="2018-03-02"
         onClick={[Function]}
         type="button"
       >
@@ -202,7 +208,8 @@ exports[`Calendar renders correctly 1`] = `
       className="jsx-4156069232"
     >
       <button
-        className="jsx-1425202002 day day--disabled day--date--2018-03-03"
+        className="jsx-1425202002 day day--disabled"
+        data-day="2018-03-03"
         onClick={[Function]}
         type="button"
       >
@@ -217,7 +224,8 @@ exports[`Calendar renders correctly 1`] = `
       className="jsx-4156069232"
     >
       <button
-        className="jsx-1425202002 day day--disabled day--date--2018-03-04"
+        className="jsx-1425202002 day day--disabled"
+        data-day="2018-03-04"
         onClick={[Function]}
         type="button"
       >
@@ -232,7 +240,8 @@ exports[`Calendar renders correctly 1`] = `
       className="jsx-4156069232"
     >
       <button
-        className="jsx-1425202002 day day--disabled day--date--2018-03-05"
+        className="jsx-1425202002 day day--disabled"
+        data-day="2018-03-05"
         onClick={[Function]}
         type="button"
       >
@@ -247,7 +256,8 @@ exports[`Calendar renders correctly 1`] = `
       className="jsx-4156069232"
     >
       <button
-        className="jsx-1425202002 day day--disabled day--date--2018-03-06"
+        className="jsx-1425202002 day day--disabled"
+        data-day="2018-03-06"
         onClick={[Function]}
         type="button"
       >
@@ -262,7 +272,8 @@ exports[`Calendar renders correctly 1`] = `
       className="jsx-4156069232"
     >
       <button
-        className="jsx-1425202002 day day--disabled day--date--2018-03-07"
+        className="jsx-1425202002 day day--disabled"
+        data-day="2018-03-07"
         onClick={[Function]}
         type="button"
       >
@@ -277,7 +288,8 @@ exports[`Calendar renders correctly 1`] = `
       className="jsx-4156069232"
     >
       <button
-        className="jsx-1425202002 day day--disabled day--date--2018-03-08"
+        className="jsx-1425202002 day day--disabled"
+        data-day="2018-03-08"
         onClick={[Function]}
         type="button"
       >
@@ -292,7 +304,8 @@ exports[`Calendar renders correctly 1`] = `
       className="jsx-4156069232"
     >
       <button
-        className="jsx-1425202002 day day--disabled day--date--2018-03-09"
+        className="jsx-1425202002 day day--disabled"
+        data-day="2018-03-09"
         onClick={[Function]}
         type="button"
       >
@@ -307,7 +320,8 @@ exports[`Calendar renders correctly 1`] = `
       className="jsx-4156069232"
     >
       <button
-        className="jsx-1425202002 day day--disabled day--date--2018-03-10"
+        className="jsx-1425202002 day day--disabled"
+        data-day="2018-03-10"
         onClick={[Function]}
         type="button"
       >
@@ -322,7 +336,8 @@ exports[`Calendar renders correctly 1`] = `
       className="jsx-4156069232"
     >
       <button
-        className="jsx-1425202002 day day--disabled day--date--2018-03-11"
+        className="jsx-1425202002 day day--disabled"
+        data-day="2018-03-11"
         onClick={[Function]}
         type="button"
       >
@@ -337,7 +352,8 @@ exports[`Calendar renders correctly 1`] = `
       className="jsx-4156069232"
     >
       <button
-        className="jsx-1425202002 day day--disabled day--date--2018-03-12"
+        className="jsx-1425202002 day day--disabled"
+        data-day="2018-03-12"
         onClick={[Function]}
         type="button"
       >
@@ -352,7 +368,8 @@ exports[`Calendar renders correctly 1`] = `
       className="jsx-4156069232"
     >
       <button
-        className="jsx-1425202002 day day--disabled day--date--2018-03-13"
+        className="jsx-1425202002 day day--disabled"
+        data-day="2018-03-13"
         onClick={[Function]}
         type="button"
       >
@@ -367,7 +384,8 @@ exports[`Calendar renders correctly 1`] = `
       className="jsx-4156069232"
     >
       <button
-        className="jsx-1425202002 day day--disabled day--date--2018-03-14"
+        className="jsx-1425202002 day day--disabled"
+        data-day="2018-03-14"
         onClick={[Function]}
         type="button"
       >
@@ -382,7 +400,8 @@ exports[`Calendar renders correctly 1`] = `
       className="jsx-4156069232"
     >
       <button
-        className="jsx-1425202002 day day--selected--with-events day--date--2018-03-15"
+        className="jsx-1425202002 day day--selected--with-events"
+        data-day="2018-03-15"
         onClick={[Function]}
         type="button"
       >
@@ -410,7 +429,8 @@ exports[`Calendar renders correctly 1`] = `
       className="jsx-4156069232"
     >
       <button
-        className="jsx-1425202002 day day--date--2018-03-16"
+        className="jsx-1425202002 day"
+        data-day="2018-03-16"
         onClick={[Function]}
         type="button"
       >
@@ -425,7 +445,8 @@ exports[`Calendar renders correctly 1`] = `
       className="jsx-4156069232"
     >
       <button
-        className="jsx-1425202002 day day--date--2018-03-17"
+        className="jsx-1425202002 day"
+        data-day="2018-03-17"
         onClick={[Function]}
         type="button"
       >
@@ -440,7 +461,8 @@ exports[`Calendar renders correctly 1`] = `
       className="jsx-4156069232"
     >
       <button
-        className="jsx-1425202002 day day--date--2018-03-18"
+        className="jsx-1425202002 day"
+        data-day="2018-03-18"
         onClick={[Function]}
         type="button"
       >
@@ -455,7 +477,8 @@ exports[`Calendar renders correctly 1`] = `
       className="jsx-4156069232"
     >
       <button
-        className="jsx-1425202002 day day--date--2018-03-19"
+        className="jsx-1425202002 day"
+        data-day="2018-03-19"
         onClick={[Function]}
         type="button"
       >
@@ -470,7 +493,8 @@ exports[`Calendar renders correctly 1`] = `
       className="jsx-4156069232"
     >
       <button
-        className="jsx-1425202002 day day--date--2018-03-20"
+        className="jsx-1425202002 day"
+        data-day="2018-03-20"
         onClick={[Function]}
         type="button"
       >
@@ -485,7 +509,8 @@ exports[`Calendar renders correctly 1`] = `
       className="jsx-4156069232"
     >
       <button
-        className="jsx-1425202002 day day--date--2018-03-21"
+        className="jsx-1425202002 day"
+        data-day="2018-03-21"
         onClick={[Function]}
         type="button"
       >
@@ -500,7 +525,8 @@ exports[`Calendar renders correctly 1`] = `
       className="jsx-4156069232"
     >
       <button
-        className="jsx-1425202002 day day--date--2018-03-22"
+        className="jsx-1425202002 day"
+        data-day="2018-03-22"
         onClick={[Function]}
         type="button"
       >
@@ -515,7 +541,8 @@ exports[`Calendar renders correctly 1`] = `
       className="jsx-4156069232"
     >
       <button
-        className="jsx-1425202002 day day--date--2018-03-23"
+        className="jsx-1425202002 day"
+        data-day="2018-03-23"
         onClick={[Function]}
         type="button"
       >
@@ -530,7 +557,8 @@ exports[`Calendar renders correctly 1`] = `
       className="jsx-4156069232"
     >
       <button
-        className="jsx-1425202002 day day--date--2018-03-24"
+        className="jsx-1425202002 day"
+        data-day="2018-03-24"
         onClick={[Function]}
         type="button"
       >
@@ -545,7 +573,8 @@ exports[`Calendar renders correctly 1`] = `
       className="jsx-4156069232"
     >
       <button
-        className="jsx-1425202002 day day--date--2018-03-25"
+        className="jsx-1425202002 day"
+        data-day="2018-03-25"
         onClick={[Function]}
         type="button"
       >
@@ -560,7 +589,8 @@ exports[`Calendar renders correctly 1`] = `
       className="jsx-4156069232"
     >
       <button
-        className="jsx-1425202002 day day--date--2018-03-26"
+        className="jsx-1425202002 day"
+        data-day="2018-03-26"
         onClick={[Function]}
         type="button"
       >
@@ -575,7 +605,8 @@ exports[`Calendar renders correctly 1`] = `
       className="jsx-4156069232"
     >
       <button
-        className="jsx-1425202002 day day--date--2018-03-27"
+        className="jsx-1425202002 day"
+        data-day="2018-03-27"
         onClick={[Function]}
         type="button"
       >
@@ -590,7 +621,8 @@ exports[`Calendar renders correctly 1`] = `
       className="jsx-4156069232"
     >
       <button
-        className="jsx-1425202002 day day--date--2018-03-28"
+        className="jsx-1425202002 day"
+        data-day="2018-03-28"
         onClick={[Function]}
         type="button"
       >
@@ -605,7 +637,8 @@ exports[`Calendar renders correctly 1`] = `
       className="jsx-4156069232"
     >
       <button
-        className="jsx-1425202002 day day--date--2018-03-29"
+        className="jsx-1425202002 day"
+        data-day="2018-03-29"
         onClick={[Function]}
         type="button"
       >
@@ -620,7 +653,8 @@ exports[`Calendar renders correctly 1`] = `
       className="jsx-4156069232"
     >
       <button
-        className="jsx-1425202002 day day--date--2018-03-30"
+        className="jsx-1425202002 day"
+        data-day="2018-03-30"
         onClick={[Function]}
         type="button"
       >
@@ -635,7 +669,8 @@ exports[`Calendar renders correctly 1`] = `
       className="jsx-4156069232"
     >
       <button
-        className="jsx-1425202002 day day--date--2018-03-31"
+        className="jsx-1425202002 day"
+        data-day="2018-03-31"
         onClick={[Function]}
         type="button"
       >

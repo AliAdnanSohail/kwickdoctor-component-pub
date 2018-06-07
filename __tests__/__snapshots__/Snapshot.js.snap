@@ -223,7 +223,8 @@ exports[`Storyshots Calendar default 1`] = `
         className="jsx-4156069232"
       >
         <button
-          className="jsx-1425202002 day day--disabled day--date--2018-05-27"
+          className="jsx-1425202002 day day--disabled"
+          data-day="2018-05-27"
           onClick={[Function]}
           type="button"
         >
@@ -238,7 +239,8 @@ exports[`Storyshots Calendar default 1`] = `
         className="jsx-4156069232"
       >
         <button
-          className="jsx-1425202002 day day--disabled day--date--2018-05-28"
+          className="jsx-1425202002 day day--disabled"
+          data-day="2018-05-28"
           onClick={[Function]}
           type="button"
         >
@@ -253,7 +255,8 @@ exports[`Storyshots Calendar default 1`] = `
         className="jsx-4156069232"
       >
         <button
-          className="jsx-1425202002 day day--disabled day--date--2018-05-29"
+          className="jsx-1425202002 day day--disabled"
+          data-day="2018-05-29"
           onClick={[Function]}
           type="button"
         >
@@ -268,7 +271,8 @@ exports[`Storyshots Calendar default 1`] = `
         className="jsx-4156069232"
       >
         <button
-          className="jsx-1425202002 day day--disabled day--date--2018-05-30"
+          className="jsx-1425202002 day day--disabled"
+          data-day="2018-05-30"
           onClick={[Function]}
           type="button"
         >
@@ -283,7 +287,8 @@ exports[`Storyshots Calendar default 1`] = `
         className="jsx-4156069232"
       >
         <button
-          className="jsx-1425202002 day day--disabled day--date--2018-05-31"
+          className="jsx-1425202002 day day--disabled"
+          data-day="2018-05-31"
           onClick={[Function]}
           type="button"
         >
@@ -298,7 +303,8 @@ exports[`Storyshots Calendar default 1`] = `
         className="jsx-4156069232"
       >
         <button
-          className="jsx-1425202002 day day--disabled day--date--2018-06-01"
+          className="jsx-1425202002 day day--disabled"
+          data-day="2018-06-01"
           onClick={[Function]}
           type="button"
         >
@@ -313,7 +319,8 @@ exports[`Storyshots Calendar default 1`] = `
         className="jsx-4156069232"
       >
         <button
-          className="jsx-1425202002 day day--disabled day--date--2018-06-02"
+          className="jsx-1425202002 day day--disabled"
+          data-day="2018-06-02"
           onClick={[Function]}
           type="button"
         >
@@ -328,7 +335,8 @@ exports[`Storyshots Calendar default 1`] = `
         className="jsx-4156069232"
       >
         <button
-          className="jsx-1425202002 day day--disabled day--date--2018-06-03"
+          className="jsx-1425202002 day day--disabled"
+          data-day="2018-06-03"
           onClick={[Function]}
           type="button"
         >
@@ -343,7 +351,8 @@ exports[`Storyshots Calendar default 1`] = `
         className="jsx-4156069232"
       >
         <button
-          className="jsx-1425202002 day day--disabled day--date--2018-06-04"
+          className="jsx-1425202002 day day--disabled"
+          data-day="2018-06-04"
           onClick={[Function]}
           type="button"
         >
@@ -358,7 +367,8 @@ exports[`Storyshots Calendar default 1`] = `
         className="jsx-4156069232"
       >
         <button
-          className="jsx-1425202002 day day--disabled day--date--2018-06-05"
+          className="jsx-1425202002 day day--disabled"
+          data-day="2018-06-05"
           onClick={[Function]}
           type="button"
         >
@@ -373,7 +383,8 @@ exports[`Storyshots Calendar default 1`] = `
         className="jsx-4156069232"
       >
         <button
-          className="jsx-1425202002 day day--selected--without-events day--date--2018-06-06"
+          className="jsx-1425202002 day day--disabled"
+          data-day="2018-06-06"
           onClick={[Function]}
           type="button"
         >
@@ -388,7 +399,8 @@ exports[`Storyshots Calendar default 1`] = `
         className="jsx-4156069232"
       >
         <button
-          className="jsx-1425202002 day day--date--2018-06-07"
+          className="jsx-1425202002 day day--selected--without-events"
+          data-day="2018-06-07"
           onClick={[Function]}
           type="button"
         >
@@ -403,7 +415,8 @@ exports[`Storyshots Calendar default 1`] = `
         className="jsx-4156069232"
       >
         <button
-          className="jsx-1425202002 day day--date--2018-06-08"
+          className="jsx-1425202002 day"
+          data-day="2018-06-08"
           onClick={[Function]}
           type="button"
         >
@@ -418,7 +431,8 @@ exports[`Storyshots Calendar default 1`] = `
         className="jsx-4156069232"
       >
         <button
-          className="jsx-1425202002 day day--date--2018-06-09"
+          className="jsx-1425202002 day"
+          data-day="2018-06-09"
           onClick={[Function]}
           type="button"
         >
@@ -433,7 +447,8 @@ exports[`Storyshots Calendar default 1`] = `
         className="jsx-4156069232"
       >
         <button
-          className="jsx-1425202002 day day--date--2018-06-10"
+          className="jsx-1425202002 day"
+          data-day="2018-06-10"
           onClick={[Function]}
           type="button"
         >
@@ -448,7 +463,8 @@ exports[`Storyshots Calendar default 1`] = `
         className="jsx-4156069232"
       >
         <button
-          className="jsx-1425202002 day day--date--2018-06-11"
+          className="jsx-1425202002 day"
+          data-day="2018-06-11"
           onClick={[Function]}
           type="button"
         >
@@ -463,7 +479,8 @@ exports[`Storyshots Calendar default 1`] = `
         className="jsx-4156069232"
       >
         <button
-          className="jsx-1425202002 day day--date--2018-06-12"
+          className="jsx-1425202002 day"
+          data-day="2018-06-12"
           onClick={[Function]}
           type="button"
         >
@@ -478,7 +495,8 @@ exports[`Storyshots Calendar default 1`] = `
         className="jsx-4156069232"
       >
         <button
-          className="jsx-1425202002 day day--date--2018-06-13"
+          className="jsx-1425202002 day"
+          data-day="2018-06-13"
           onClick={[Function]}
           type="button"
         >
@@ -493,7 +511,8 @@ exports[`Storyshots Calendar default 1`] = `
         className="jsx-4156069232"
       >
         <button
-          className="jsx-1425202002 day day--date--2018-06-14"
+          className="jsx-1425202002 day"
+          data-day="2018-06-14"
           onClick={[Function]}
           type="button"
         >
@@ -508,7 +527,8 @@ exports[`Storyshots Calendar default 1`] = `
         className="jsx-4156069232"
       >
         <button
-          className="jsx-1425202002 day day--date--2018-06-15"
+          className="jsx-1425202002 day"
+          data-day="2018-06-15"
           onClick={[Function]}
           type="button"
         >
@@ -523,7 +543,8 @@ exports[`Storyshots Calendar default 1`] = `
         className="jsx-4156069232"
       >
         <button
-          className="jsx-1425202002 day day--date--2018-06-16"
+          className="jsx-1425202002 day"
+          data-day="2018-06-16"
           onClick={[Function]}
           type="button"
         >
@@ -538,7 +559,8 @@ exports[`Storyshots Calendar default 1`] = `
         className="jsx-4156069232"
       >
         <button
-          className="jsx-1425202002 day day--date--2018-06-17"
+          className="jsx-1425202002 day"
+          data-day="2018-06-17"
           onClick={[Function]}
           type="button"
         >
@@ -553,7 +575,8 @@ exports[`Storyshots Calendar default 1`] = `
         className="jsx-4156069232"
       >
         <button
-          className="jsx-1425202002 day day--date--2018-06-18"
+          className="jsx-1425202002 day"
+          data-day="2018-06-18"
           onClick={[Function]}
           type="button"
         >
@@ -568,7 +591,8 @@ exports[`Storyshots Calendar default 1`] = `
         className="jsx-4156069232"
       >
         <button
-          className="jsx-1425202002 day day--date--2018-06-19"
+          className="jsx-1425202002 day"
+          data-day="2018-06-19"
           onClick={[Function]}
           type="button"
         >
@@ -583,7 +607,8 @@ exports[`Storyshots Calendar default 1`] = `
         className="jsx-4156069232"
       >
         <button
-          className="jsx-1425202002 day day--date--2018-06-20"
+          className="jsx-1425202002 day"
+          data-day="2018-06-20"
           onClick={[Function]}
           type="button"
         >
@@ -598,7 +623,8 @@ exports[`Storyshots Calendar default 1`] = `
         className="jsx-4156069232"
       >
         <button
-          className="jsx-1425202002 day day--date--2018-06-21"
+          className="jsx-1425202002 day"
+          data-day="2018-06-21"
           onClick={[Function]}
           type="button"
         >
@@ -613,7 +639,8 @@ exports[`Storyshots Calendar default 1`] = `
         className="jsx-4156069232"
       >
         <button
-          className="jsx-1425202002 day day--date--2018-06-22"
+          className="jsx-1425202002 day"
+          data-day="2018-06-22"
           onClick={[Function]}
           type="button"
         >
@@ -628,7 +655,8 @@ exports[`Storyshots Calendar default 1`] = `
         className="jsx-4156069232"
       >
         <button
-          className="jsx-1425202002 day day--date--2018-06-23"
+          className="jsx-1425202002 day"
+          data-day="2018-06-23"
           onClick={[Function]}
           type="button"
         >
@@ -643,7 +671,8 @@ exports[`Storyshots Calendar default 1`] = `
         className="jsx-4156069232"
       >
         <button
-          className="jsx-1425202002 day day--date--2018-06-24"
+          className="jsx-1425202002 day"
+          data-day="2018-06-24"
           onClick={[Function]}
           type="button"
         >
@@ -658,7 +687,8 @@ exports[`Storyshots Calendar default 1`] = `
         className="jsx-4156069232"
       >
         <button
-          className="jsx-1425202002 day day--date--2018-06-25"
+          className="jsx-1425202002 day"
+          data-day="2018-06-25"
           onClick={[Function]}
           type="button"
         >
@@ -673,7 +703,8 @@ exports[`Storyshots Calendar default 1`] = `
         className="jsx-4156069232"
       >
         <button
-          className="jsx-1425202002 day day--date--2018-06-26"
+          className="jsx-1425202002 day"
+          data-day="2018-06-26"
           onClick={[Function]}
           type="button"
         >
@@ -688,7 +719,8 @@ exports[`Storyshots Calendar default 1`] = `
         className="jsx-4156069232"
       >
         <button
-          className="jsx-1425202002 day day--date--2018-06-27"
+          className="jsx-1425202002 day"
+          data-day="2018-06-27"
           onClick={[Function]}
           type="button"
         >
@@ -703,7 +735,8 @@ exports[`Storyshots Calendar default 1`] = `
         className="jsx-4156069232"
       >
         <button
-          className="jsx-1425202002 day day--date--2018-06-28"
+          className="jsx-1425202002 day"
+          data-day="2018-06-28"
           onClick={[Function]}
           type="button"
         >
@@ -718,7 +751,8 @@ exports[`Storyshots Calendar default 1`] = `
         className="jsx-4156069232"
       >
         <button
-          className="jsx-1425202002 day day--date--2018-06-29"
+          className="jsx-1425202002 day"
+          data-day="2018-06-29"
           onClick={[Function]}
           type="button"
         >
@@ -733,7 +767,8 @@ exports[`Storyshots Calendar default 1`] = `
         className="jsx-4156069232"
       >
         <button
-          className="jsx-1425202002 day day--date--2018-06-30"
+          className="jsx-1425202002 day"
+          data-day="2018-06-30"
           onClick={[Function]}
           type="button"
         >
@@ -1031,7 +1066,7 @@ exports[`Storyshots Form Fields Date Picker 1`] = `
             tabIndex={undefined}
             title={undefined}
             type="text"
-            value="06 Jun, 2018"
+            value="07 Jun, 2018"
           />
         </div>
       </div>
@@ -2575,7 +2610,7 @@ exports[`Storyshots Video Recorder default 1`] = `
   }
 >
   <div
-    className="jsx-1676162044 jsx-4132344403 video-recorder"
+    className="jsx-3895914587 jsx-4132344403 video-recorder"
   >
     <video
       autoPlay={true}
