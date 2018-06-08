@@ -34,10 +34,13 @@ export default class VideoRecorder extends Component {
         this.initMediaRecorder();
 
         this.props.onGranted();
+
+        this.setState({ available: true });
       };
 
       const handleFailed = (error) => {
         this.props.onDenied(error);
+        this.setState({ available: false });
       };
 
       navigator.mediaDevices
@@ -199,7 +202,6 @@ export default class VideoRecorder extends Component {
 
   renderRecorder = () => {
     const { countingdown } = this.state;
-
     return (
       <Fragment>
         {/* eslint-disable-next-line */}

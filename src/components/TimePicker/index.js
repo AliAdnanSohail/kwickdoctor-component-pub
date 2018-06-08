@@ -26,6 +26,7 @@ export default class TimePicker extends Component {
       select__option_selected: true,
     });
   }
+
   changeTime() {
     this.setState({ defaultInputText: `${this.state.selectedHours}:${this.state.selectedMin}` });
     this.props.onChange();
@@ -193,6 +194,7 @@ export default class TimePicker extends Component {
           </div>
           {this.renderTimeBlock()}
         </div>
+
         <style jsx>{styles}</style>
       </section>
     );
@@ -200,8 +202,8 @@ export default class TimePicker extends Component {
 }
 
 TimePicker.propTypes = {
-  title: PropTypes.string.isRequired,
   defaultInputText: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
 };
 
 TimePicker.defaultProps = {};
