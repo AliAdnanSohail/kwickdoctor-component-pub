@@ -198,7 +198,6 @@ var VideoRecorder = function (_Component) {
     _this.renderRecorder = function () {
       var countingdown = _this.state.countingdown;
 
-
       return _react2.default.createElement(
         _react.Fragment,
         null,
@@ -266,10 +265,13 @@ var VideoRecorder = function (_Component) {
           _this2.initMediaRecorder();
 
           _this2.props.onGranted();
+
+          _this2.setState({ available: true });
         };
 
         var handleFailed = function handleFailed(error) {
           _this2.props.onDenied(error);
+          _this2.setState({ available: false });
         };
 
         navigator.mediaDevices.getUserMedia({ audio: true, video: true }).then(handleSuccess).catch(handleFailed);

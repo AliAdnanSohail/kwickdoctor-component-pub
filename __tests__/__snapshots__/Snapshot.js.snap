@@ -398,7 +398,7 @@ exports[`Storyshots Calendar default 1`] = `
         className="jsx-4156069232"
       >
         <button
-          className="jsx-1425202002 day day--selected--without-events"
+          className="jsx-1425202002 day day--disabled"
           data-day="2018-06-07"
           onClick={[Function]}
           type="button"
@@ -414,7 +414,7 @@ exports[`Storyshots Calendar default 1`] = `
         className="jsx-4156069232"
       >
         <button
-          className="jsx-1425202002 day"
+          className="jsx-1425202002 day day--selected--without-events"
           data-day="2018-06-08"
           onClick={[Function]}
           type="button"
@@ -927,7 +927,7 @@ exports[`Storyshots FileViewer simple img viewer 1`] = `
   <img
     alt="This document can't be displayed"
     className="jsx-3222015831 image"
-    src="https://s00.yaplakal.com/pics/pics_original/6/3/5/10515536.jpg"
+    src="https://www.stihi.ru/pics/2013/03/09/12023.jpg"
   />
 </div>
 `;
@@ -1065,7 +1065,7 @@ exports[`Storyshots Form Fields Date Picker 1`] = `
             tabIndex={undefined}
             title={undefined}
             type="text"
-            value="07 Jun, 2018"
+            value="08 Jun, 2018"
           />
         </div>
       </div>
@@ -1579,20 +1579,20 @@ exports[`Storyshots Notification default 1`] = `
     style={Object {}}
   >
     <div
-      className="jsx-1618737947 jsx-3539143060 notification__time"
+      className="jsx-3217774364 jsx-4293144411 notification__time"
     >
       12:00 AM, Jun 20
     </div>
     <div
-      className="jsx-1618737947 jsx-3539143060 notification__message"
+      className="jsx-3217774364 jsx-4293144411 notification__message"
     >
       <span
-        className="jsx-1618737947 jsx-3539143060 notification__dot"
+        className="jsx-3217774364 jsx-4293144411 notification__dot"
       />
       New message
     </div>
     <div
-      className="jsx-1618737947 jsx-3539143060 notification__actions"
+      className="jsx-3217774364 jsx-4293144411 notification__actions"
     >
       <button
         className="jsx-744565053 button button--s button--flat button--with-icon button--rounded"
@@ -1639,6 +1639,24 @@ exports[`Storyshots Notification default 1`] = `
             strokeWidth="2"
           />
         </svg>
+      </button>
+    </div>
+    <div
+      className="jsx-3217774364 jsx-4293144411 notification__actions--mobile"
+    >
+      <button
+        className="jsx-3217774364 jsx-4293144411 notification__points"
+        onClick={[Function]}
+      >
+        <span
+          className="jsx-3217774364 jsx-4293144411 notification__point"
+        />
+        <span
+          className="jsx-3217774364 jsx-4293144411 notification__point"
+        />
+        <span
+          className="jsx-3217774364 jsx-4293144411 notification__point"
+        />
       </button>
     </div>
   </div>
@@ -2352,25 +2370,25 @@ exports[`Storyshots TimePicker TimePicker 1`] = `
   }
 >
   <section
-    className="jsx-2882456536 time-picker"
+    className="jsx-3462367854 time-picker"
   >
     <div
-      className="jsx-2882456536 time-picker__wrapper"
+      className="jsx-3462367854 time-picker__wrapper"
     >
       <div
-        className="jsx-2882456536 time-picker__title"
+        className="jsx-3462367854 time-picker__title"
       >
         Appointment time
       </div>
       <div
-        className="jsx-2882456536 time-picker__input"
+        className="jsx-3462367854 time-picker__input"
         onClick={[Function]}
         onKeyPress={[Function]}
         role="button"
         tabIndex="0"
       >
         <div
-          className="jsx-2882456536 time-picker__logo"
+          className="jsx-3462367854 time-picker__logo"
         >
           <svg
             aria-label="clock"
@@ -2390,7 +2408,7 @@ exports[`Storyshots TimePicker TimePicker 1`] = `
           </svg>
         </div>
         <input
-          className="jsx-2882456536 input"
+          className="jsx-3462367854 input"
           onChange={[Function]}
           type="text"
           value="Pick time"

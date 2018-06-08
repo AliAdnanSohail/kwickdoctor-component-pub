@@ -374,8 +374,8 @@ exports.default = TimePicker;
 
 
 TimePicker.propTypes = {
-  title: _propTypes2.default.string.isRequired,
-  defaultInputText: _propTypes2.default.string.isRequired
+  defaultInputText: _propTypes2.default.string.isRequired,
+  title: _propTypes2.default.string.isRequired
 };
 
 TimePicker.defaultProps = {};

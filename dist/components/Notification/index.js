@@ -15,9 +15,7 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
-var _propTypes = require('prop-types');
-
-var _propTypes2 = _interopRequireDefault(_propTypes);
+var _icons = require('grommet/components/icons');
 
 var _classnames = require('classnames');
 
@@ -27,11 +25,13 @@ var _moment = require('moment');
 
 var _moment2 = _interopRequireDefault(_moment);
 
-var _icons = require('grommet/components/icons');
+var _propTypes = require('prop-types');
 
-var _ = require('../');
+var _propTypes2 = _interopRequireDefault(_propTypes);
 
 var _styles = require('./styles');
+
+var _ = require('../');
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -44,20 +44,23 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 var Notification = function (_Component) {
   _inherits(Notification, _Component);
 
-  function Notification() {
-    var _ref;
-
-    var _temp, _this, _ret;
-
+  function Notification(props) {
     _classCallCheck(this, Notification);
 
-    for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
-      args[_key] = arguments[_key];
-    }
+    var _this = _possibleConstructorReturn(this, (Notification.__proto__ || Object.getPrototypeOf(Notification)).call(this, props));
 
-    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Notification.__proto__ || Object.getPrototypeOf(Notification)).call.apply(_ref, [this].concat(args))), _this), _this.renderDate = function () {
+    _this.handleShowButtons = function () {
+      _this.setState({ buttonsVisible: !_this.state.buttonsVisible });
+    };
+
+    _this.renderDate = function () {
       return (0, _moment2.default)(_this.props.date).format('h:mm A, MMM D');
-    }, _temp), _possibleConstructorReturn(_this, _ret);
+    };
+
+    _this.state = {
+      buttonsVisible: false
+    };
+    return _this;
   }
 
   _createClass(Notification, [{
@@ -101,8 +104,66 @@ var Notification = function (_Component) {
           {
             className: 'jsx-' + _styles.notification.__scopedHash + ' jsx-' + _styles.notificationCard.__scopedHash + ' ' + 'notification__actions'
           },
-          _react2.default.createElement(_.Button, { flat: true, icon: _react2.default.createElement(_icons.CheckmarkIcon, null), onClick: onComplete, rounded: true, size: 's' }),
-          _react2.default.createElement(_.Button, { flat: true, icon: _react2.default.createElement(_icons.TrashIcon, null), onClick: onDelete, rounded: true, size: 's' })
+          _react2.default.createElement(_.Button, {
+            flat: true,
+            icon: _react2.default.createElement(_icons.CheckmarkIcon, null),
+            onClick: onComplete,
+            rounded: true,
+            size: 's'
+          }),
+          _react2.default.createElement(_.Button, {
+            flat: true,
+            icon: _react2.default.createElement(_icons.TrashIcon, null),
+            onClick: onDelete,
+            rounded: true,
+            size: 's'
+          })
+        ),
+        _react2.default.createElement(
+          'div',
+          {
+            className: 'jsx-' + _styles.notification.__scopedHash + ' jsx-' + _styles.notificationCard.__scopedHash + ' ' + 'notification__actions--mobile'
+          },
+          _react2.default.createElement(
+            'button',
+            { onClick: this.handleShowButtons, className: 'jsx-' + _styles.notification.__scopedHash + ' jsx-' + _styles.notificationCard.__scopedHash + ' ' + 'notification__points'
+            },
+            _react2.default.createElement('span', {
+              className: 'jsx-' + _styles.notification.__scopedHash + ' jsx-' + _styles.notificationCard.__scopedHash + ' ' + 'notification__point'
+            }),
+            _react2.default.createElement('span', {
+              className: 'jsx-' + _styles.notification.__scopedHash + ' jsx-' + _styles.notificationCard.__scopedHash + ' ' + 'notification__point'
+            }),
+            _react2.default.createElement('span', {
+              className: 'jsx-' + _styles.notification.__scopedHash + ' jsx-' + _styles.notificationCard.__scopedHash + ' ' + 'notification__point'
+            })
+          ),
+          this.state.buttonsVisible && _react2.default.createElement(
+            'div',
+            {
+              className: 'jsx-' + _styles.notification.__scopedHash + ' jsx-' + _styles.notificationCard.__scopedHash + ' ' + 'notification__buttons'
+            },
+            _react2.default.createElement(
+              _.Button,
+              {
+                flat: true,
+                icon: _react2.default.createElement(_icons.CheckmarkIcon, null),
+                onClick: onComplete,
+                size: 's'
+              },
+              'Read'
+            ),
+            _react2.default.createElement(
+              _.Button,
+              {
+                flat: true,
+                icon: _react2.default.createElement(_icons.TrashIcon, null),
+                onClick: onDelete,
+                size: 's'
+              },
+              'Delete'
+            )
+          )
         ),
         _react2.default.createElement(_style2.default, {
           styleId: _styles.notification.__scopedHash,
