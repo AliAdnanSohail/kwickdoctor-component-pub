@@ -8,7 +8,7 @@ import { withTests } from '@storybook/addon-jest';
 import { FileViewer } from '../src';
 import results from '../.jest-test-results.json';
 
-const srcImg = { name: 'testpdf.jpg', src: 'http://via.placeholder.com/600x850' };
+const srcImg = { name: 'testpdf.jpg', src: 'https://www.stihi.ru/pics/2013/03/09/12023.jpg' };
 const srcPdf = {
   name: 'testimage.pdf',
   src: 'http://mozilla.github.io/pdf.js/web/compressed.tracemonkey-pldi-09.pdf',

@@ -29,7 +29,7 @@ export default class FileViewer extends Component {
             ))}
           </Document>
         ) : (
-          <img className="image" src={file.src} alt="This document can't be displayed" />
+          <img className="image" src={file} alt="This document can't be displayed" />
         )}
         <style jsx>{styles}</style>
       </React.Fragment>
