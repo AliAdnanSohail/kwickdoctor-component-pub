@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
 import classnames from 'classnames';
-
-import { ClockIcon, NextIcon, PreviousIcon } from 'grommet/components/icons/base';
+import { ClockIcon, PreviousIcon } from 'grommet/components/icons/base';
+import PropTypes from 'prop-types';
 
 import styles from './styles';
 
@@ -19,31 +18,14 @@ export default class TimePicker extends Component {
       visibleHoursList: false,
       visibleMinutsList: false,
       visibleTimeBlock: false,
-      hours: [
-        { value: '01' },
-        { value: '02' },
-        { value: '03' },
-        { value: '04' },
-        { value: '05' },
-        { value: '06' },
-        { value: '07' },
-        { value: '08' },
-        { value: '09' },
-        { value: '10' },
-        { value: '11' },
-        { value: '12' },
-      ],
-      minuts: [{ value: '00' }, { value: '30' }],
+      hours: [...Array(24).keys()],
+      minutes: [...Array(60).keys()],
     };
 
     this.classnames = classnames({
       'b-select__option_selected': true,
     });
   }
-
-  componentDidMount() {}
-
-  componentWillUnmount() {}
 
   changeTime() {
     this.setState({ defaultInputText: `${this.state.selectedHours}:${this.state.selectedMin}` });
@@ -104,7 +86,7 @@ export default class TimePicker extends Component {
                 })}
                 key={time.value}
               >
-                {time.value}
+                {time}
               </div>
             ))}
           </div>
@@ -119,8 +101,8 @@ export default class TimePicker extends Component {
     if (this.state.visibleMinutsList) {
       return (
         <React.Fragment>
-          <div className="b-select__options-wrap b-select__options-wrap_size_small">
-            {this.state.minuts.map(time => (
+          <div className="b-select__options-wrap">
+            {this.state.minutes.map(time => (
               <div
                 role="button"
                 tabIndex="0"
@@ -131,7 +113,7 @@ export default class TimePicker extends Component {
                 onClick={e => this.changeMin(e)}
                 onKeyPress={e => this.changeMin(e)}
               >
-                {time.value}
+                {time}
               </div>
             ))}
           </div>
@@ -172,7 +154,7 @@ export default class TimePicker extends Component {
               <div className="b-select__field">
                 {this.state.selectedMin}
                 <div className="b-select__arrow">
-                  <NextIcon />
+                  <PreviousIcon />
                 </div>
                 {this.renderMinuntsList()}
               </div>
@@ -212,6 +194,7 @@ export default class TimePicker extends Component {
           </div>
           {this.renderTimeBlock()}
         </div>
+
         <style jsx>{styles}</style>
       </section>
     );
@@ -219,8 +202,8 @@ export default class TimePicker extends Component {
 }
 
 TimePicker.propTypes = {
-  title: PropTypes.string.isRequired,
   defaultInputText: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
 };
 
 TimePicker.defaultProps = {};
