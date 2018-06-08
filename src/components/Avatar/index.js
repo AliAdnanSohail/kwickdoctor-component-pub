@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from 'react';
+import React, { Component } from 'react';
 import classnames from 'classnames';
 import { UserIcon } from 'grommet/components/icons';
 import PropTypes from 'prop-types';
@@ -7,38 +7,39 @@ import styles from './styles';
 
 export default class Avatar extends Component {
   render() {
-    const { src, squared, size } = this.props;
+    const {
+      borderRadius, className, size, src,
+    } = this.props;
 
-    const thumbStyle = {
+    const avatarStyle = {
       backgroundImage: `url(${src})`,
+      borderRadius: `${borderRadius}px`,
+      height: `${size}px`,
+      width: `${size}px`,
     };
 
-    const classes = classnames(
-      'avatar-container',
-      { 'avatar-container--circle': !squared },
-      { [`avatar-container--${size}`]: size },
-    );
+    const classes = classnames('avatar', className);
+
     return (
-      <Fragment>
-        <div className={classes} style={thumbStyle}>
-          <div className="avatar-icon" style={{ backgroundImage: src }}>
-            {!src && <UserIcon size="large" />}
-          </div>
-        </div>
+      <div className={classes} style={avatarStyle}>
+        {!src && <UserIcon className="avatar-icon" size="large" />}
+
         <style jsx>{styles}</style>
-      </Fragment>
+      </div>
     );
   }
 }
 
 Avatar.propTypes = {
+  borderRadius: PropTypes.number,
+  className: PropTypes.string,
+  size: PropTypes.number,
   src: PropTypes.string,
-  size: PropTypes.string,
-  squared: PropTypes.bool,
 };
 
 Avatar.defaultProps = {
-  src: '',
+  borderRadius: 3,
+  className: null,
   size: '',
-  squared: false,
+  src: '',
 };

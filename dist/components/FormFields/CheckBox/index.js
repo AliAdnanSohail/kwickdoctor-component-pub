@@ -20,12 +20,8 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 exports.default = (0, _renderer2.default)(function (input, label, _ref) {
   var className = _ref.className,
-      defaultValue = _ref.defaultValue,
       id = _ref.id,
       name = _ref.name,
-      placeholder = _ref.placeholder,
-      type = _ref.type,
-      value = _ref.value,
       defaultChecked = _ref.defaultChecked;
   return _react2.default.createElement(
     _react.Fragment,
@@ -34,10 +30,7 @@ exports.default = (0, _renderer2.default)(function (input, label, _ref) {
       className: className,
       id: id,
       name: name,
-      placeholder: placeholder,
-      type: type,
-      value: value,
-      defaultValue: defaultValue,
+      type: 'checkbox',
       defaultChecked: defaultChecked
     })),
     _react2.default.createElement(

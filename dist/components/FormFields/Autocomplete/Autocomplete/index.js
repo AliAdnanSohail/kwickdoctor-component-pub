@@ -209,13 +209,10 @@ var Autocomplete = function (_Component) {
   _createClass(Autocomplete, [{
     key: 'componentDidMount',
     value: function componentDidMount() {
-      console.log('hfh');
-      console.log(this.props);
       if (this.props.defaultValues.length > 0) {
         this.state.values = this.state.values.concat(this.props.defaultValues);
       }
       this.renderTags();
-      console.log(this.state.values);
     }
   }, {
     key: 'render',

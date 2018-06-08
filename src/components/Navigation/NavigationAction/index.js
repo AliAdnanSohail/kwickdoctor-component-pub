@@ -8,7 +8,7 @@ export default class NavigationAction extends Component {
 
     return (
       <li>
-        <button onClick={onClick} className="nav-item" activeClassName="nav-item--active">
+        <button onClick={onClick} className="nav-item">
           <Icon className="nav-item__icon" />
           <span className="nav-item__label">{label}</span>
         </button>

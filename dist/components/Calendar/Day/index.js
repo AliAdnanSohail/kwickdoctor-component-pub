@@ -85,11 +85,15 @@ var Day = function (_Component) {
           events = _props.events;
 
 
-      var classes = (0, _classnames2.default)('day', { 'day--selected--without-events': selected && !events.length }, { 'day--selected--with-events': selected && !!events.length }, { 'day--disabled': disabled }, 'day--date--' + day.format('YYYY-MM-DD'));
+      var classes = (0, _classnames2.default)('day', { 'day--selected--without-events': selected && !events.length }, { 'day--selected--with-events': selected && !!events.length }, { 'day--disabled': disabled });
 
       return _react2.default.createElement(
         'button',
-        { type: 'button', onClick: this.onSelect, className: 'jsx-' + _styles.day.__scopedHash + ' ' + (classes || '')
+        {
+          'data-day': day.format('YYYY-MM-DD'),
+          onClick: this.onSelect,
+          type: 'button',
+          className: 'jsx-' + _styles.day.__scopedHash + ' ' + (classes || '')
         },
         _react2.default.createElement(
           'span',
