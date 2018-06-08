@@ -14,7 +14,7 @@ export default css`
     overflow: hidden;
 
     width: 100%;
-    min-height: 480px;
+    height: 480px;
 
     background-color: ${settings.borderColor};
 

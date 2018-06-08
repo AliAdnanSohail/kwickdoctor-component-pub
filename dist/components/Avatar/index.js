@@ -15,9 +15,9 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
-var _classnames2 = require('classnames');
+var _classnames = require('classnames');
 
-var _classnames3 = _interopRequireDefault(_classnames2);
+var _classnames2 = _interopRequireDefault(_classnames);
 
 var _icons = require('grommet/components/icons');
 
@@ -30,8 +30,6 @@ var _styles = require('./styles');
 var _styles2 = _interopRequireDefault(_styles);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -52,30 +50,26 @@ var Avatar = function (_Component) {
     key: 'render',
     value: function render() {
       var _props = this.props,
-          src = _props.src,
-          squared = _props.squared,
-          size = _props.size;
+          borderRadius = _props.borderRadius,
+          className = _props.className,
+          size = _props.size,
+          src = _props.src;
 
 
-      var thumbStyle = {
-        backgroundImage: 'url(' + src + ')'
+      var avatarStyle = {
+        backgroundImage: 'url(' + src + ')',
+        borderRadius: borderRadius + 'px',
+        height: size + 'px',
+        width: size + 'px'
       };
 
-      var classes = (0, _classnames3.default)('avatar-container', { 'avatar-container--circle': !squared }, _defineProperty({}, 'avatar-container--' + size, size));
+      var classes = (0, _classnames2.default)('avatar', className);
+
       return _react2.default.createElement(
-        _react.Fragment,
-        null,
-        _react2.default.createElement(
-          'div',
-          { style: thumbStyle, className: 'jsx-' + _styles2.default.__scopedHash + ' ' + (classes || '')
-          },
-          _react2.default.createElement(
-            'div',
-            { style: { backgroundImage: src }, className: 'jsx-' + _styles2.default.__scopedHash + ' ' + 'avatar-icon'
-            },
-            !src && _react2.default.createElement(_icons.UserIcon, { size: 'large' })
-          )
-        ),
+        'div',
+        { style: avatarStyle, className: 'jsx-' + _styles2.default.__scopedHash + ' ' + (classes || '')
+        },
+        !src && _react2.default.createElement(_icons.UserIcon, { className: 'avatar-icon', size: 'large' }),
         _react2.default.createElement(_style2.default, {
           styleId: _styles2.default.__scopedHash,
           css: _styles2.default.__scoped
@@ -91,13 +85,15 @@ exports.default = Avatar;
 
 
 Avatar.propTypes = {
-  src: _propTypes2.default.string,
-  size: _propTypes2.default.string,
-  squared: _propTypes2.default.bool
+  borderRadius: _propTypes2.default.number,
+  className: _propTypes2.default.string,
+  size: _propTypes2.default.number,
+  src: _propTypes2.default.string
 };
 
 Avatar.defaultProps = {
-  src: '',
+  borderRadius: 3,
+  className: null,
   size: '',
-  squared: false
+  src: ''
 };

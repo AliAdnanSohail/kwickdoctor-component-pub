@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Document, Page } from 'react-pdf/dist/entry.webpack';
+
 import styles from './styles';
 
 function FileExtension(filename) {
@@ -20,6 +21,7 @@ export default class FileViewer extends Component {
 
   render() {
     const { file, numPages } = this.state;
+
     return (
       <React.Fragment>
         {this.state.isPdf ? (

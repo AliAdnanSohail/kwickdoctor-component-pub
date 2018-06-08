@@ -41,11 +41,15 @@ export default class Day extends Component {
       { 'day--selected--without-events': selected && !events.length },
       { 'day--selected--with-events': selected && !!events.length },
       { 'day--disabled': disabled },
-      `day--date--${day.format('YYYY-MM-DD')}`,
     );
 
     return (
-      <button className={classes} type="button" onClick={this.onSelect}>
+      <button
+        className={classes}
+        data-day={day.format('YYYY-MM-DD')}
+        onClick={this.onSelect}
+        type="button"
+      >
         <span className="day__border">{day.format('D')}</span>
         {this.getDots()}
 

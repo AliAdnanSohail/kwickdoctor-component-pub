@@ -64,6 +64,7 @@ var FileViewer = function (_Component) {
           file = _state.file,
           numPages = _state.numPages;
 
+
       return _react2.default.createElement(
         _react2.default.Fragment,
         null,
@@ -73,7 +74,7 @@ var FileViewer = function (_Component) {
           Array.from(new Array(numPages), function (el, index) {
             return _react2.default.createElement(_entry.Page, { key: 'page_' + (index + 1), pageNumber: index + 1 });
           })
-        ) : _react2.default.createElement('img', { src: file.src, alt: 'This document can\'t be displayed', className: 'jsx-' + _styles2.default.__scopedHash + ' ' + 'image'
+        ) : _react2.default.createElement('img', { src: file, alt: 'This document can\'t be displayed', className: 'jsx-' + _styles2.default.__scopedHash + ' ' + 'image'
         }),
         _react2.default.createElement(_style2.default, {
           styleId: _styles2.default.__scopedHash,
