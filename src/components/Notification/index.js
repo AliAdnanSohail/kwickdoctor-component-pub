@@ -23,7 +23,6 @@ export default class Notification extends Component {
     return (
       <Card className="notification-card">
         <div className="notification__time">{this.renderDate()}</div>
-
         <div className="notification__message">
           <span className={dotClasses} />
           {message}
