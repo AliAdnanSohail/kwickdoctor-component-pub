@@ -4,8 +4,8 @@ import classnames from 'classnames';
 import moment from 'moment';
 import PropTypes from 'prop-types';
 
-import { Button, Card } from '../';
 import { notification, notificationCard } from './styles';
+import { Button, Card } from '../';
 
 export default class Notification extends Component {
   constructor(props) {
@@ -93,7 +93,7 @@ export default class Notification extends Component {
     );
   }
 }
- 
+
 Notification.propTypes = {
   date: PropTypes.object.isRequired,
   message: PropTypes.string.isRequired,
