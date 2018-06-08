@@ -1,13 +1,24 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
+import { CheckmarkIcon, TrashIcon } from 'grommet/components/icons';
 import classnames from 'classnames';
 import moment from 'moment';
-import { CheckmarkIcon, TrashIcon } from 'grommet/components/icons';
+import PropTypes from 'prop-types';
 
 import { Button, Card } from '../';
 import { notification, notificationCard } from './styles';
 
 export default class Notification extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      buttonsVisible: false,
+    };
+  }
+
+  handleShowButtons = () => {
+    this.setState({ buttonsVisible: !this.state.buttonsVisible });
+  };
+
   renderDate = () => moment(this.props.date).format('h:mm A, MMM D');
 
   render() {
@@ -30,8 +41,51 @@ export default class Notification extends Component {
         </div>
 
         <div className="notification__actions">
-          <Button flat icon={<CheckmarkIcon />} onClick={onComplete} rounded size="s" />
-          <Button flat icon={<TrashIcon />} onClick={onDelete} rounded size="s" />
+          <Button
+            flat
+            icon={<CheckmarkIcon />}
+            onClick={onComplete}
+            rounded
+            size="s"
+          />
+
+          <Button
+            flat
+            icon={<TrashIcon />}
+            onClick={onDelete}
+            rounded
+            size="s"
+          />
+
+        </div>
+
+        <div className="notification__actions--mobile">
+          <button className="notification__points" onClick={this.handleShowButtons}>
+            <span className="notification__point" />
+            <span className="notification__point" />
+            <span className="notification__point" />
+          </button>
+          {this.state.buttonsVisible && (
+            <div className="notification__buttons">
+              <Button
+                flat
+                icon={<CheckmarkIcon />}
+                onClick={onComplete}
+                size="s"
+              >
+                Read
+              </Button>
+
+              <Button
+                flat
+                icon={<TrashIcon />}
+                onClick={onDelete}
+                size="s"
+              >
+                Delete
+              </Button>
+            </div>
+          )}
         </div>
 
         <style jsx>{notification}</style>
@@ -40,7 +94,7 @@ export default class Notification extends Component {
     );
   }
 }
-
+ 
 Notification.propTypes = {
   date: PropTypes.object.isRequired,
   message: PropTypes.string.isRequired,
