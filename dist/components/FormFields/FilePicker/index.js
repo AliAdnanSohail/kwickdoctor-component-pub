@@ -89,7 +89,7 @@ var FilePicker = function (_Component) {
           placeholder = _props.placeholder,
           resetKey = _props.resetKey;
 
-      var classes = (0, _classnames2.default)('upload-file', { 'upload-file--selected': value });
+      var classes = (0, _classnames2.default)('upload-file', { 'upload-file--selected': value.name });
 
       return _react2.default.createElement(
         'label',

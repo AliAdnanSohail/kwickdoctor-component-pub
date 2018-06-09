@@ -33,7 +33,7 @@ export default class FilePicker extends Component {
       resetKey,
     } = this.props;
 
-    const classes = classnames('upload-file', { 'upload-file--selected': value });
+    const classes = classnames('upload-file', { 'upload-file--selected': value.name });
 
     return (
       <label className={classes} htmlFor={id}>

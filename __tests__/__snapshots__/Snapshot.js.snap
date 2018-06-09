@@ -1120,7 +1120,7 @@ exports[`Storyshots Form Fields FilePicker 1`] = `
   }
 >
   <label
-    className="jsx-1336855819 jsx-2881818901 upload-file upload-file--selected"
+    className="jsx-1336855819 jsx-2881818901 upload-file"
     htmlFor="id"
   >
     <div
