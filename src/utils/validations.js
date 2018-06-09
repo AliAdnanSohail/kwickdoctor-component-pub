@@ -85,7 +85,7 @@ const number = value =>
  */
 const required = (value) => {
   if (typeof value === 'object') {
-    return value && Object.keys(value).length > 0
+    return value && typeof value.name === 'string'
       ? undefined
       : 'This field is required. Please complete this field.';
   }

@@ -99,7 +99,7 @@ var number = function number(value) {
  */
 var required = function required(value) {
   if ((typeof value === 'undefined' ? 'undefined' : _typeof(value)) === 'object') {
-    return value && Object.keys(value).length > 0 ? undefined : 'This field is required. Please complete this field.';
+    return value && typeof value.name === 'string' ? undefined : 'This field is required. Please complete this field.';
   }
 
   return value ? undefined : 'This field is required. Please complete this field.';
