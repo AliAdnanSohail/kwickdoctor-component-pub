@@ -38,12 +38,12 @@ export default class FilePicker extends Component {
     return (
       <label className={classes} htmlFor={id}>
         <div className="upload-file__label-container">
-          {value ? <DocumentIcon /> : <UploadIcon />}
+          {value.name ? <DocumentIcon /> : <UploadIcon />}
 
           <div className="upload-file__label">{value.name || placeholder}</div>
         </div>
 
-        {value && (
+        {value.name && (
           <Button
             className="upload-file__close-icon"
             flat

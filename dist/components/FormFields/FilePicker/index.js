@@ -100,7 +100,7 @@ var FilePicker = function (_Component) {
           {
             className: 'jsx-' + _styles2.default.__scopedHash + ' jsx-' + _styles3.error.__scopedHash + ' ' + 'upload-file__label-container'
           },
-          value ? _react2.default.createElement(_base.DocumentIcon, null) : _react2.default.createElement(_base.UploadIcon, null),
+          value.name ? _react2.default.createElement(_base.DocumentIcon, null) : _react2.default.createElement(_base.UploadIcon, null),
           _react2.default.createElement(
             'div',
             {
@@ -109,7 +109,7 @@ var FilePicker = function (_Component) {
             value.name || placeholder
           )
         ),
-        value && _react2.default.createElement(_.Button, {
+        value.name && _react2.default.createElement(_.Button, {
           className: 'upload-file__close-icon',
           flat: true,
           icon: _react2.default.createElement(_base.CloseIcon, null),
