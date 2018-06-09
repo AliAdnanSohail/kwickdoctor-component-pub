@@ -1118,11 +1118,11 @@ exports[`Storyshots Form Fields FilePicker 1`] = `
   }
 >
   <label
-    className="jsx-3901050128 jsx-2881818901 upload-file"
+    className="jsx-1682990104 jsx-2881818901 upload-file"
     htmlFor="id"
   >
     <div
-      className="jsx-3901050128 jsx-2881818901 upload-file__label-container"
+      className="jsx-1682990104 jsx-2881818901 upload-file__label-container"
     >
       <svg
         aria-label="upload"
@@ -1141,13 +1141,13 @@ exports[`Storyshots Form Fields FilePicker 1`] = `
         />
       </svg>
       <div
-        className="jsx-3901050128 jsx-2881818901 upload-file__label"
+        className="jsx-1682990104 jsx-2881818901 upload-file__label"
       >
         placeholder
       </div>
     </div>
     <input
-      className="jsx-3901050128 jsx-2881818901 input-file"
+      className="jsx-1682990104 jsx-2881818901 input-file"
       id="id"
       onBlur={[Function]}
       onChange={[Function]}

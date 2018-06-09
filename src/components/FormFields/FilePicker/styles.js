@@ -41,7 +41,7 @@ export default css`
         color: ${settings.textLightColor};
       }
 
-      .error {
+      div.error {
         top: 100%;
       }
     }
