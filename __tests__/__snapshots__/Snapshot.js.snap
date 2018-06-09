@@ -1475,7 +1475,7 @@ exports[`Storyshots Navigation default 1`] = `
           </span>
         </a>
         <style>
-          .nav-item{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;width:53px;height:53px;padding:16px;color:#ffffff;-webkit-text-decoration:none;text-decoration:none;-webkit-letter-spacing:0.15rem;-moz-letter-spacing:0.15rem;-ms-letter-spacing:0.15rem;letter-spacing:0.15rem;text-transform:uppercase;border-radius:50%;box-sizing:border-box;-webkit-transition:all 0.3s ease-in-out;transition:all 0.3s ease-in-out;font-size:0.75rem;font-weight:bold;}
+          .nav-item{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;width:53px;height:53px;padding:16px;color:#ffffff;-webkit-text-decoration:none;text-decoration:none;-webkit-letter-spacing:0.15rem;-moz-letter-spacing:0.15rem;-ms-letter-spacing:0.15rem;letter-spacing:0.15rem;text-transform:uppercase;border-radius:50%;box-sizing:border-box;-webkit-transition:background-color 0.3s ease-in-out;transition:background-color 0.3s ease-in-out;font-size:0.75rem;font-weight:bold;}
           .nav-item--active{background-color:#0c97f9;}
           .nav-item__icon{width:21px;height:21px;fill:#ffffff !important;stroke:#ffffff !important;}
           .nav-item__icon circle,.nav-item__icon path{stroke:#ffffff !important;}
@@ -1514,7 +1514,7 @@ exports[`Storyshots Navigation default 1`] = `
           </span>
         </a>
         <style>
-          .nav-item{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;width:53px;height:53px;padding:16px;color:#ffffff;-webkit-text-decoration:none;text-decoration:none;-webkit-letter-spacing:0.15rem;-moz-letter-spacing:0.15rem;-ms-letter-spacing:0.15rem;letter-spacing:0.15rem;text-transform:uppercase;border-radius:50%;box-sizing:border-box;-webkit-transition:all 0.3s ease-in-out;transition:all 0.3s ease-in-out;font-size:0.75rem;font-weight:bold;}
+          .nav-item{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;width:53px;height:53px;padding:16px;color:#ffffff;-webkit-text-decoration:none;text-decoration:none;-webkit-letter-spacing:0.15rem;-moz-letter-spacing:0.15rem;-ms-letter-spacing:0.15rem;letter-spacing:0.15rem;text-transform:uppercase;border-radius:50%;box-sizing:border-box;-webkit-transition:background-color 0.3s ease-in-out;transition:background-color 0.3s ease-in-out;font-size:0.75rem;font-weight:bold;}
           .nav-item--active{background-color:#0c97f9;}
           .nav-item__icon{width:21px;height:21px;fill:#ffffff !important;stroke:#ffffff !important;}
           .nav-item__icon circle,.nav-item__icon path{stroke:#ffffff !important;}
@@ -1550,7 +1550,7 @@ exports[`Storyshots Navigation default 1`] = `
           </span>
         </button>
         <style>
-          .nav-item{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;width:53px;height:53px;padding:16px;color:#ffffff;-webkit-text-decoration:none;text-decoration:none;-webkit-letter-spacing:0.15rem;-moz-letter-spacing:0.15rem;-ms-letter-spacing:0.15rem;letter-spacing:0.15rem;text-transform:uppercase;border-radius:50%;box-sizing:border-box;-webkit-transition:all 0.3s ease-in-out;transition:all 0.3s ease-in-out;background:transparent;border:none;outline:none;cursor:pointer;font-size:0.75rem;font-weight:bold;}
+          .nav-item{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;width:53px;height:53px;padding:16px;color:#ffffff;-webkit-text-decoration:none;text-decoration:none;-webkit-letter-spacing:0.15rem;-moz-letter-spacing:0.15rem;-ms-letter-spacing:0.15rem;letter-spacing:0.15rem;text-transform:uppercase;border-radius:50%;box-sizing:border-box;-webkit-transition:background-color 0.3s ease-in-out;transition:background-color 0.3s ease-in-out;background-color:transparent;border:none;outline:none;cursor:pointer;font-size:0.75rem;font-weight:bold;}
           .nav-item--active{background-color:#0c97f9;}
           .nav-item__icon{width:21px;height:21px;fill:#ffffff !important;stroke:#ffffff !important;}
           .nav-item__icon circle,.nav-item__icon path{stroke:#ffffff !important;}

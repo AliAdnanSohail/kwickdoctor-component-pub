@@ -21,7 +21,7 @@ export default css`
     border-radius: 50%;
     box-sizing: border-box;
 
-    transition: all 0.3s ease-in-out;
+    transition: background-color 0.3s ease-in-out;
 
     font: {
       size: 0.75rem;

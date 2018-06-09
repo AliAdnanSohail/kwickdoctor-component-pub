@@ -21,8 +21,8 @@ export default css`
     border-radius: 50%;
     box-sizing: border-box;
 
-    transition: all 0.3s ease-in-out;
-    background: transparent;
+    transition: background-color 0.3s ease-in-out;
+    background-color: transparent;
     border: none;
     outline: none;
     cursor: pointer;
