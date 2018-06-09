@@ -46,7 +46,7 @@ export default css`
       display: flex;
       flex-direction: row;
       align-items: center;
-      width: 100%;
+      width: calc(100% - 32px);
 
       :global(svg) {
         margin-right: 12px;
@@ -83,6 +83,10 @@ export default css`
       height: 1px !important;
       width: 1px !important;
       overflow: hidden;
+    }
+
+    .error {
+      top: 32px;
     }
   }
 `;
