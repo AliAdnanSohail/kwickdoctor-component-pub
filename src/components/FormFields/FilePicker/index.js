@@ -7,20 +7,12 @@ import styles from './styles';
 import { Button } from '../../';
 
 export default class FilePicker extends Component {
-  constructor(props) {
-    super(props);
-
-    this.state = { filename: '' };
-  }
-
   handleChange = (event) => {
     const { input } = this.props;
 
     const file = event.target.files[0];
 
     input.onChange(file);
-
-    this.setState({ filename: file.name });
   };
 
   handleRemove = (event) => {
@@ -39,8 +31,6 @@ export default class FilePicker extends Component {
       resetKey,
     } = this.props;
 
-    const { filename } = this.state;
-
     const classes = classnames('upload-file', { 'upload-file--selected': value });
 
     return (
@@ -48,7 +38,7 @@ export default class FilePicker extends Component {
         <div className="upload-file__label-container">
           {value ? <DocumentIcon /> : <UploadIcon />}
 
-          <div className="upload-file__label">{filename || placeholder}</div>
+          <div className="upload-file__label">{value.name || placeholder}</div>
         </div>
 
         {value && (
@@ -90,7 +80,7 @@ FilePicker.propTypes = {
 FilePicker.defaultProps = {
   input: {
     onChange: () => {},
-    value: '',
+    value: {},
   },
   placeholder: 'Upload file',
 };

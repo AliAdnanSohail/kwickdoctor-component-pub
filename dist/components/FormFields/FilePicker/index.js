@@ -46,32 +46,31 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 var FilePicker = function (_Component) {
   _inherits(FilePicker, _Component);
 
-  function FilePicker(props) {
+  function FilePicker() {
+    var _ref;
+
+    var _temp, _this, _ret;
+
     _classCallCheck(this, FilePicker);
 
-    var _this = _possibleConstructorReturn(this, (FilePicker.__proto__ || Object.getPrototypeOf(FilePicker)).call(this, props));
+    for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
 
-    _this.handleChange = function (event) {
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = FilePicker.__proto__ || Object.getPrototypeOf(FilePicker)).call.apply(_ref, [this].concat(args))), _this), _this.handleChange = function (event) {
       var input = _this.props.input;
 
 
       var file = event.target.files[0];
 
       input.onChange(file);
-
-      _this.setState({ filename: file.name });
-    };
-
-    _this.handleRemove = function (event) {
+    }, _this.handleRemove = function (event) {
       event.preventDefault();
 
       _this.input.value = null;
 
       _this.props.input.onChange(null);
-    };
-
-    _this.state = { filename: '' };
-    return _this;
+    }, _temp), _possibleConstructorReturn(_this, _ret);
   }
 
   _createClass(FilePicker, [{
@@ -86,9 +85,6 @@ var FilePicker = function (_Component) {
           inputProps = _objectWithoutProperties(_props$input, ['value']),
           placeholder = _props.placeholder,
           resetKey = _props.resetKey;
-
-      var filename = this.state.filename;
-
 
       var classes = (0, _classnames2.default)('upload-file', { 'upload-file--selected': value });
 
@@ -107,7 +103,7 @@ var FilePicker = function (_Component) {
             {
               className: 'jsx-' + _styles2.default.__scopedHash + ' ' + 'upload-file__label'
             },
-            filename || placeholder
+            value.name || placeholder
           )
         ),
         value && _react2.default.createElement(_.Button, {
@@ -152,7 +148,7 @@ FilePicker.propTypes = {
 FilePicker.defaultProps = {
   input: {
     onChange: function onChange() {},
-    value: ''
+    value: {}
   },
   placeholder: 'Upload file'
 };

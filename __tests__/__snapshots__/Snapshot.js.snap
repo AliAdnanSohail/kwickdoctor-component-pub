@@ -414,7 +414,7 @@ exports[`Storyshots Calendar default 1`] = `
         className="jsx-4156069232"
       >
         <button
-          className="jsx-1425202002 day day--selected--without-events"
+          className="jsx-1425202002 day day--disabled"
           data-day="2018-06-08"
           onClick={[Function]}
           type="button"
@@ -430,7 +430,7 @@ exports[`Storyshots Calendar default 1`] = `
         className="jsx-4156069232"
       >
         <button
-          className="jsx-1425202002 day"
+          className="jsx-1425202002 day day--selected--without-events"
           data-day="2018-06-09"
           onClick={[Function]}
           type="button"
@@ -1065,7 +1065,7 @@ exports[`Storyshots Form Fields Date Picker 1`] = `
             tabIndex={undefined}
             title={undefined}
             type="text"
-            value="08 Jun, 2018"
+            value="09 Jun, 2018"
           />
         </div>
       </div>
@@ -1120,15 +1120,15 @@ exports[`Storyshots Form Fields FilePicker 1`] = `
   }
 >
   <label
-    className="jsx-3393071880 upload-file"
+    className="jsx-3393071880 upload-file upload-file--selected"
     htmlFor="id"
   >
     <div
       className="jsx-3393071880 upload-file__label-container"
     >
       <svg
-        aria-label="upload"
-        className="grommetux-control-icon grommetux-control-icon-upload grommetux-control-icon--responsive"
+        aria-label="document"
+        className="grommetux-control-icon grommetux-control-icon-document grommetux-control-icon--responsive"
         height="24px"
         role="img"
         version="1.1"
@@ -1136,7 +1136,7 @@ exports[`Storyshots Form Fields FilePicker 1`] = `
         width="24px"
       >
         <path
-          d="M1,17 L1,23 L23,23 L23,17 M12,2 L12,19 M5,9 L12,2 L19,9"
+          d="M14,1 L14,8 L21,8 M21,23 L3,23 L3,1 L15,1 L18,4 L21,7 L21,23 L21,23 L21,23 Z"
           fill="none"
           stroke="#000"
           strokeWidth="2"
@@ -1148,7 +1148,29 @@ exports[`Storyshots Form Fields FilePicker 1`] = `
         placeholder
       </div>
     </div>
-    
+    <button
+      className="jsx-744565053 button upload-file__close-icon button--xs button--flat button--with-icon button--rounded"
+      disabled={false}
+      onClick={[Function]}
+      type="button"
+    >
+      <svg
+        aria-label="close"
+        className="grommetux-control-icon grommetux-control-icon-close button__icon grommetux-control-icon--responsive"
+        height="24px"
+        role="img"
+        version="1.1"
+        viewBox="0 0 24 24"
+        width="24px"
+      >
+        <path
+          d="M3,3 L21,21 M3,21 L21,3"
+          fill="none"
+          stroke="#000"
+          strokeWidth="2"
+        />
+      </svg>
+    </button>
     <input
       className="jsx-3393071880 input-file"
       id="id"
