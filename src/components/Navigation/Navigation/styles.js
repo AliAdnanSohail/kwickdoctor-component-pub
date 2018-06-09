@@ -11,7 +11,7 @@ export default css`
     padding: 40px 0 80px 0;
     box-sizing: border-box;
 
-    background: linear-gradient(#0d264a, #000c25);
+    background-color: #354151;
 
     &__list {
       flex: 1;

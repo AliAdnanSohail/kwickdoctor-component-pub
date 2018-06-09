@@ -1439,10 +1439,10 @@ exports[`Storyshots Navigation default 1`] = `
   }
 >
   <nav
-    className="jsx-970676680 nav"
+    className="jsx-3540150986 nav"
   >
     <ul
-      className="jsx-970676680 nav__list"
+      className="jsx-3540150986 nav__list"
     >
       <li>
         <a
