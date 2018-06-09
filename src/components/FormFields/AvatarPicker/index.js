@@ -14,9 +14,12 @@ export default class AvatarPicker extends Component {
   };
 
   handleRemove = (event) => {
+    const { input } = this.props;
+
     event.preventDefault();
 
-    this.props.input.onChange(null);
+    input.onChange(null);
+    this.input.value = '';
   };
 
   render() {

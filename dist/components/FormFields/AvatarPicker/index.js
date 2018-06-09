@@ -61,9 +61,13 @@ var AvatarPicker = function (_Component) {
 
       input.onChange(event.target.files[0]);
     }, _this.handleRemove = function (event) {
+      var input = _this.props.input;
+
+
       event.preventDefault();
 
-      _this.props.input.onChange(null);
+      input.onChange(null);
+      _this.input.value = '';
     }, _temp), _possibleConstructorReturn(_this, _ret);
   }
 
