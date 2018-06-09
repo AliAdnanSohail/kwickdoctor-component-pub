@@ -31,6 +31,8 @@ var _styles = require('./styles');
 
 var _styles2 = _interopRequireDefault(_styles);
 
+var _styles3 = require('../styles');
+
 var _ = require('../../');
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
@@ -83,6 +85,7 @@ var FilePicker = function (_Component) {
           _props$input = _props.input,
           value = _props$input.value,
           inputProps = _objectWithoutProperties(_props$input, ['value']),
+          meta = _props.meta,
           placeholder = _props.placeholder,
           resetKey = _props.resetKey;
 
@@ -90,18 +93,18 @@ var FilePicker = function (_Component) {
 
       return _react2.default.createElement(
         'label',
-        { htmlFor: id, className: 'jsx-' + _styles2.default.__scopedHash + ' ' + (classes || '')
+        { htmlFor: id, className: 'jsx-' + _styles2.default.__scopedHash + ' jsx-' + _styles3.error.__scopedHash + ' ' + (classes || '')
         },
         _react2.default.createElement(
           'div',
           {
-            className: 'jsx-' + _styles2.default.__scopedHash + ' ' + 'upload-file__label-container'
+            className: 'jsx-' + _styles2.default.__scopedHash + ' jsx-' + _styles3.error.__scopedHash + ' ' + 'upload-file__label-container'
           },
           value ? _react2.default.createElement(_base.DocumentIcon, null) : _react2.default.createElement(_base.UploadIcon, null),
           _react2.default.createElement(
             'div',
             {
-              className: 'jsx-' + _styles2.default.__scopedHash + ' ' + 'upload-file__label'
+              className: 'jsx-' + _styles2.default.__scopedHash + ' jsx-' + _styles3.error.__scopedHash + ' ' + 'upload-file__label'
             },
             value.name || placeholder
           )
@@ -123,11 +126,22 @@ var FilePicker = function (_Component) {
             _this2.input = input;
           },
           type: 'file',
-          className: 'jsx-' + _styles2.default.__scopedHash + ' ' + 'input-file'
+          className: 'jsx-' + _styles2.default.__scopedHash + ' jsx-' + _styles3.error.__scopedHash + ' ' + 'input-file'
         })),
+        meta && meta.error && meta.touched ? _react2.default.createElement(
+          'div',
+          {
+            className: 'jsx-' + _styles2.default.__scopedHash + ' jsx-' + _styles3.error.__scopedHash + ' ' + 'error'
+          },
+          meta.error
+        ) : undefined,
         _react2.default.createElement(_style2.default, {
           styleId: _styles2.default.__scopedHash,
           css: _styles2.default.__scoped
+        }),
+        _react2.default.createElement(_style2.default, {
+          styleId: _styles3.error.__scopedHash,
+          css: _styles3.error.__scoped
         })
       );
     }

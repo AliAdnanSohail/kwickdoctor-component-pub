@@ -4,6 +4,7 @@ import classnames from 'classnames';
 import { CloseIcon, DocumentIcon, UploadIcon } from 'grommet/components/icons/base';
 
 import styles from './styles';
+import { error as errorStyles } from '../styles';
 import { Button } from '../../';
 
 export default class FilePicker extends Component {
@@ -27,6 +28,7 @@ export default class FilePicker extends Component {
     const {
       id,
       input: { value, ...inputProps },
+      meta,
       placeholder,
       resetKey,
     } = this.props;
@@ -65,7 +67,10 @@ export default class FilePicker extends Component {
           type="file"
         />
 
+        {meta && meta.error && meta.touched ? <div className="error">{meta.error}</div> : undefined}
+
         <style jsx>{styles}</style>
+        <style jsx>{errorStyles}</style>
       </label>
     );
   }

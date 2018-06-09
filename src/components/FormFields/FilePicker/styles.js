@@ -4,6 +4,8 @@ import settings from '../../../utils/style-helper';
 
 export default css`
   .upload-file {
+    position: relative;
+
     color: ${settings.primaryColor};
     line-height: 16px;
     letter-spacing: 0.15rem;
@@ -33,6 +35,9 @@ export default css`
       box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.1);
 
       .upload-file__label {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
         color: ${settings.textLightColor};
       }
     }
@@ -41,6 +46,7 @@ export default css`
       display: flex;
       flex-direction: row;
       align-items: center;
+      width: 100%;
 
       :global(svg) {
         margin-right: 12px;
