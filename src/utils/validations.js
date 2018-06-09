@@ -105,7 +105,7 @@ const required = (value) => {
 const fileType = (types = []) => file =>
   (file && file.type && types.includes(file.type)
     ? undefined
-    : `This file's type should should be one of valid types (${types.join(', ')}).`);
+    : `This file's type should be one of valid types (${types.join(', ')}).`);
 
 export default {
   date,

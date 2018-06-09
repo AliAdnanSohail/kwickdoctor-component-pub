@@ -120,7 +120,6 @@ var FilePicker = function (_Component) {
         _react2.default.createElement('input', _extends({}, inputProps, {
           id: id,
           key: resetKey,
-          onBlur: function onBlur() {},
           onChange: this.handleChange,
           ref: function ref(input) {
             _this2.input = input;

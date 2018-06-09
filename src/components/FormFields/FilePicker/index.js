@@ -59,7 +59,6 @@ export default class FilePicker extends Component {
           className="input-file"
           id={id}
           key={resetKey}
-          onBlur={() => {}}
           onChange={this.handleChange}
           ref={(input) => {
             this.input = input;

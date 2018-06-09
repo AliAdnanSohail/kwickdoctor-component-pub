@@ -117,7 +117,7 @@ var required = function required(value) {
 var fileType = function fileType() {
   var types = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : [];
   return function (file) {
-    return file && file.type && types.includes(file.type) ? undefined : 'This file\'s type should should be one of valid types (' + types.join(', ') + ').';
+    return file && file.type && types.includes(file.type) ? undefined : 'This file\'s type should be one of valid types (' + types.join(', ') + ').';
   };
 };
 
