@@ -42,7 +42,7 @@ export default class AvatarPicker extends Component {
     return (
       <div className={avatar}>
         <div className="avatar__button--remove">
-          {(value || defaultValue) && (
+          {(value.name || defaultValue) && (
             <Button onClick={this.handleRemove} icon={<TrashIcon />} size="xs" rounded danger />
           )}
         </div>
@@ -62,7 +62,7 @@ export default class AvatarPicker extends Component {
           />
 
           <div className={classes} style={{ backgroundImage: src }}>
-            {!(value || defaultValue) && <CameraIcon />}
+            {!(value.name || defaultValue) && <CameraIcon />}
           </div>
         </label>
 
@@ -81,7 +81,7 @@ AvatarPicker.propTypes = {
 };
 
 AvatarPicker.defaultProps = {
-  defaultValue: '',
+  defaultValue: null,
   input: {
     onChange: () => {},
     value: {},

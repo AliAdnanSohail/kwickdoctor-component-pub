@@ -102,7 +102,7 @@ var AvatarPicker = function (_Component) {
           {
             className: 'jsx-' + _styles.avatarCircle.__scopedHash + ' jsx-' + _styles.fileInput.__scopedHash + ' ' + 'avatar__button--remove'
           },
-          (value || defaultValue) && _react2.default.createElement(_.Button, { onClick: this.handleRemove, icon: _react2.default.createElement(_icons.TrashIcon, null), size: 'xs', rounded: true, danger: true })
+          (value.name || defaultValue) && _react2.default.createElement(_.Button, { onClick: this.handleRemove, icon: _react2.default.createElement(_icons.TrashIcon, null), size: 'xs', rounded: true, danger: true })
         ),
         _react2.default.createElement(
           'label',
@@ -123,7 +123,7 @@ var AvatarPicker = function (_Component) {
             'div',
             { style: { backgroundImage: src }, className: 'jsx-' + _styles.avatarCircle.__scopedHash + ' jsx-' + _styles.fileInput.__scopedHash + ' ' + (classes || '')
             },
-            !(value || defaultValue) && _react2.default.createElement(_icons.CameraIcon, null)
+            !(value.name || defaultValue) && _react2.default.createElement(_icons.CameraIcon, null)
           )
         ),
         _react2.default.createElement(_style2.default, {
@@ -152,7 +152,7 @@ AvatarPicker.propTypes = {
 };
 
 AvatarPicker.defaultProps = {
-  defaultValue: '',
+  defaultValue: null,
   input: {
     onChange: function onChange() {},
     value: {}
