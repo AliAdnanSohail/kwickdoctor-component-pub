@@ -1149,6 +1149,7 @@ exports[`Storyshots Form Fields FilePicker 1`] = `
     <input
       className="jsx-1336855819 jsx-2881818901 input-file"
       id="id"
+      onBlur={[Function]}
       onChange={[Function]}
       type="file"
     />
