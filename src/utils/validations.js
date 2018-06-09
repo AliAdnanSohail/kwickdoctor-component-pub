@@ -83,8 +83,15 @@ const number = value =>
  *
  * @return {String|Null} [description]
  */
-const required = value =>
-  (value ? undefined : 'This field is required. Please complete this field.');
+const required = (value) => {
+  if (typeof value === 'object') {
+    return Object.keys(value) > 0
+      ? undefined
+      : 'This field is required. Please complete this field.';
+  }
+
+  return value ? undefined : 'This field is required. Please complete this field.';
+};
 
 export default {
   date,

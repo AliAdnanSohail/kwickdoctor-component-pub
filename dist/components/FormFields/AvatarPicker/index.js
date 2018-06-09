@@ -83,7 +83,7 @@ var AvatarPicker = function (_Component) {
 
       var src = 'none';
 
-      if (value) {
+      if (value.name) {
         src = 'url(' + URL.createObjectURL(value) + ')';
       } else {
         src = 'url(' + defaultValue + ')';
@@ -155,7 +155,7 @@ AvatarPicker.defaultProps = {
   defaultValue: '',
   input: {
     onChange: function onChange() {},
-    value: ''
+    value: {}
   },
   squared: false
 };

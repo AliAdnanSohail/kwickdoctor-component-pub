@@ -30,7 +30,7 @@ export default class AvatarPicker extends Component {
 
     let src = 'none';
 
-    if (value) {
+    if (value.name) {
       src = `url(${URL.createObjectURL(value)})`;
     } else {
       src = `url(${defaultValue})`;
@@ -84,7 +84,7 @@ AvatarPicker.defaultProps = {
   defaultValue: '',
   input: {
     onChange: () => {},
-    value: '',
+    value: {},
   },
   squared: false,
 };

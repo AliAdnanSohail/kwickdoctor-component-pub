@@ -4,6 +4,8 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+
 var _moment = require('moment');
 
 var _moment2 = _interopRequireDefault(_moment);
@@ -96,6 +98,10 @@ var number = function number(value) {
  * @return {String|Null} [description]
  */
 var required = function required(value) {
+  if ((typeof value === 'undefined' ? 'undefined' : _typeof(value)) === 'object') {
+    return Object.keys(value) > 0 ? undefined : 'This field is required. Please complete this field.';
+  }
+
   return value ? undefined : 'This field is required. Please complete this field.';
 };
 
