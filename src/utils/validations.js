@@ -93,6 +93,20 @@ const required = (value) => {
   return value ? undefined : 'This field is required. Please complete this field.';
 };
 
+/**
+ * Returns error message if file's type isn't compatible
+ *
+ * @param {Array} types Array of valid types
+ *
+ * @param {Object} value File for validation
+ *
+ * @return {String|Null} [description]
+ */
+const fileType = (types = []) => file =>
+  (file && file.type && types.includes(file.type)
+    ? undefined
+    : `This file's type should should be one of valid types (${types.join(', ')}).`);
+
 export default {
   date,
   email,
@@ -101,4 +115,5 @@ export default {
   minLength,
   number,
   required,
+  fileType,
 };

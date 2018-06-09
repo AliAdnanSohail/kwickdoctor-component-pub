@@ -105,6 +105,22 @@ var required = function required(value) {
   return value ? undefined : 'This field is required. Please complete this field.';
 };
 
+/**
+ * Returns error message if file's type isn't compatible
+ *
+ * @param {Array} types Array of valid types
+ *
+ * @param {Object} value File for validation
+ *
+ * @return {String|Null} [description]
+ */
+var fileType = function fileType() {
+  var types = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : [];
+  return function (file) {
+    return file && file.type && types.includes(file.type) ? undefined : 'This file\'s type should should be one of valid types (' + types.join(', ') + ').';
+  };
+};
+
 exports.default = {
   date: date,
   email: email,
@@ -112,5 +128,6 @@ exports.default = {
   maxLength: maxLength,
   minLength: minLength,
   number: number,
-  required: required
+  required: required,
+  fileType: fileType
 };
