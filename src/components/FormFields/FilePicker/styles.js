@@ -40,6 +40,10 @@ export default css`
         white-space: nowrap;
         color: ${settings.textLightColor};
       }
+
+      .error {
+        top: 100%;
+      }
     }
 
     &__label-container {
