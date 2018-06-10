@@ -81,7 +81,7 @@ var Notification = function (_Component) {
 
       return _react2.default.createElement(
         _.Card,
-        { className: 'notification-card' },
+        { className: 'notification' },
         _react2.default.createElement(
           'div',
           {
@@ -104,63 +104,28 @@ var Notification = function (_Component) {
           {
             className: 'jsx-' + _styles.notification.__scopedHash + ' jsx-' + _styles.notificationCard.__scopedHash + ' ' + 'notification__actions'
           },
-          _react2.default.createElement(_.Button, {
-            flat: true,
-            icon: _react2.default.createElement(_icons.CheckmarkIcon, null),
-            onClick: onComplete,
-            rounded: true,
-            size: 's'
-          }),
-          _react2.default.createElement(_.Button, {
-            flat: true,
-            icon: _react2.default.createElement(_icons.TrashIcon, null),
-            onClick: onDelete,
-            rounded: true,
-            size: 's'
-          })
+          !read && _react2.default.createElement(_.Button, { flat: true, icon: _react2.default.createElement(_icons.CheckmarkIcon, null), onClick: onComplete, rounded: true, size: 's' }),
+          _react2.default.createElement(_.Button, { flat: true, icon: _react2.default.createElement(_icons.TrashIcon, null), onClick: onDelete, rounded: true, size: 's' })
         ),
         _react2.default.createElement(
           'div',
           {
             className: 'jsx-' + _styles.notification.__scopedHash + ' jsx-' + _styles.notificationCard.__scopedHash + ' ' + 'notification__actions--mobile'
           },
-          _react2.default.createElement(
-            'button',
-            { onClick: this.handleShowButtons, className: 'jsx-' + _styles.notification.__scopedHash + ' jsx-' + _styles.notificationCard.__scopedHash + ' ' + 'notification__points'
-            },
-            _react2.default.createElement('span', {
-              className: 'jsx-' + _styles.notification.__scopedHash + ' jsx-' + _styles.notificationCard.__scopedHash + ' ' + 'notification__point'
-            }),
-            _react2.default.createElement('span', {
-              className: 'jsx-' + _styles.notification.__scopedHash + ' jsx-' + _styles.notificationCard.__scopedHash + ' ' + 'notification__point'
-            }),
-            _react2.default.createElement('span', {
-              className: 'jsx-' + _styles.notification.__scopedHash + ' jsx-' + _styles.notificationCard.__scopedHash + ' ' + 'notification__point'
-            })
-          ),
+          _react2.default.createElement(_.Button, { flat: true, icon: _react2.default.createElement(_icons.MoreIcon, null), onClick: this.handleShowButtons, rounded: true }),
           this.state.buttonsVisible && _react2.default.createElement(
             'div',
             {
               className: 'jsx-' + _styles.notification.__scopedHash + ' jsx-' + _styles.notificationCard.__scopedHash + ' ' + 'notification__buttons'
             },
-            _react2.default.createElement(
+            !read && _react2.default.createElement(
               _.Button,
-              {
-                flat: true,
-                icon: _react2.default.createElement(_icons.CheckmarkIcon, null),
-                onClick: onComplete,
-                size: 's'
-              },
+              { flat: true, onClick: onComplete, size: 's' },
               'Read'
             ),
             _react2.default.createElement(
               _.Button,
-              {
-                flat: true,
-                icon: _react2.default.createElement(_icons.TrashIcon, null),
-                onClick: onDelete,
-                size: 's'
-              },
+              { flat: true, onClick: onDelete, size: 's' },
               'Delete'
             )
           )

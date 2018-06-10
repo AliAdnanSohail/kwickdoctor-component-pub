@@ -3,7 +3,8 @@ import css from 'styled-jsx/css';
 import settings from '../../utils/style-helper';
 
 export const notificationCard = css`
-  :global(.notification-card) {
+  :global(.notification) {
+    position: relative;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -21,6 +22,15 @@ export const notificationCard = css`
 
 export const notification = css`
   .notification {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    border-radius: 6px;
+
+    &:not(:last-child) {
+      margin-bottom: 12px;
+    }
+
     &__time {
       display: flex;
       flex-direction: row;
@@ -89,29 +99,10 @@ export const notification = css`
     }
 
     @media (max-width: 790px) {
+      flex-direction: column-reverse;
+
       :global(.button--flat) {
         color: #bbbccd;
-      }
-
-      &__points {
-        border: none;
-        background: none;
-        outline: none;
-        display: flex;
-        justify-content: flex-end;
-        padding: 10px;
-        position: absolute;
-        right: 15px;
-        top: 15px;
-      }
-
-      &__point {
-        display: block;
-        width: 8px;
-        height: 8px;
-        background-color: #bbbccd;
-        border-radius: 50%;
-        margin: 3px;
       }
 
       &__buttons {
@@ -123,10 +114,6 @@ export const notification = css`
         box-shadow: rgba(0, 0, 0, 0.1) 0px 12px 34px;
         background: rgb(255, 255, 255);
         border-radius: 4px;
-      }
-
-      &-card {
-        flex-direction: column-reverse;
       }
 
       &__time {
@@ -157,9 +144,12 @@ export const notification = css`
 
       &__actions {
         display: none;
+
         &--mobile {
           display: block;
-          position: relative;
+          position: absolute;
+          top: 0;
+          right: 0;
         }
       }
     }

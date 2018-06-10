@@ -1572,24 +1572,24 @@ exports[`Storyshots Notification default 1`] = `
   }
 >
   <div
-    className="jsx-3439448312 card notification-card"
+    className="jsx-3439448312 card notification"
     style={Object {}}
   >
     <div
-      className="jsx-3217774364 jsx-4293144411 notification__time"
+      className="jsx-1946100563 jsx-3014010845 notification__time"
     >
       12:00 AM, Jun 20
     </div>
     <div
-      className="jsx-3217774364 jsx-4293144411 notification__message"
+      className="jsx-1946100563 jsx-3014010845 notification__message"
     >
       <span
-        className="jsx-3217774364 jsx-4293144411 notification__dot"
+        className="jsx-1946100563 jsx-3014010845 notification__dot"
       />
       New message
     </div>
     <div
-      className="jsx-3217774364 jsx-4293144411 notification__actions"
+      className="jsx-1946100563 jsx-3014010845 notification__actions"
     >
       <button
         className="jsx-744565053 button button--s button--flat button--with-icon button--rounded"
@@ -1639,21 +1639,30 @@ exports[`Storyshots Notification default 1`] = `
       </button>
     </div>
     <div
-      className="jsx-3217774364 jsx-4293144411 notification__actions--mobile"
+      className="jsx-1946100563 jsx-3014010845 notification__actions--mobile"
     >
       <button
-        className="jsx-3217774364 jsx-4293144411 notification__points"
+        className="jsx-744565053 button button--flat button--with-icon button--rounded"
+        disabled={false}
         onClick={[Function]}
+        type="button"
       >
-        <span
-          className="jsx-3217774364 jsx-4293144411 notification__point"
-        />
-        <span
-          className="jsx-3217774364 jsx-4293144411 notification__point"
-        />
-        <span
-          className="jsx-3217774364 jsx-4293144411 notification__point"
-        />
+        <svg
+          aria-label="more"
+          className="grommetux-control-icon grommetux-control-icon-more button__icon grommetux-control-icon--responsive"
+          height="24px"
+          role="img"
+          version="1.1"
+          viewBox="0 0 24 24"
+          width="24px"
+        >
+          <path
+            d="M3,13 L3,11 L5,11 L5,13 L3,13 Z M11,12.9995001 L11,11 L12.9995001,11 L12.9995001,12.9995001 L11,12.9995001 Z M19,12.9995001 L19,11 L20.9995001,11 L20.9995001,12.9995001 L19,12.9995001 Z"
+            fill="none"
+            stroke="#000"
+            strokeWidth="2"
+          />
+        </svg>
       </button>
     </div>
   </div>
