@@ -77,6 +77,7 @@ var AvatarPicker = function (_Component) {
       var _this2 = this;
 
       var _props = this.props,
+          containerClassName = _props.containerClassName,
           id = _props.id,
           _props$input = _props.input,
           value = _props$input.value,
@@ -94,7 +95,7 @@ var AvatarPicker = function (_Component) {
       }
 
       var classes = (0, _classnames2.default)('avatar__thumb', { 'avatar__thumb--circle': !squared });
-      var avatar = (0, _classnames2.default)('avatar', { 'avatar--circle': !squared });
+      var avatar = (0, _classnames2.default)('avatar', { 'avatar--circle': !squared }, containerClassName);
 
       return _react2.default.createElement(
         'div',
@@ -149,6 +150,7 @@ exports.default = AvatarPicker;
 
 
 AvatarPicker.propTypes = {
+  containerClassName: _propTypes2.default.string,
   defaultValue: _propTypes2.default.string,
   id: _propTypes2.default.string.isRequired,
   input: _propTypes2.default.object,
@@ -156,6 +158,7 @@ AvatarPicker.propTypes = {
 };
 
 AvatarPicker.defaultProps = {
+  containerClassName: '',
   defaultValue: null,
   input: {
     onChange: function onChange() {},

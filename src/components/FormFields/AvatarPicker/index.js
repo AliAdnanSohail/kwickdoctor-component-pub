@@ -24,6 +24,7 @@ export default class AvatarPicker extends Component {
 
   render() {
     const {
+      containerClassName,
       id,
       input: { value, ...inputProps },
       resetKey,
@@ -40,7 +41,7 @@ export default class AvatarPicker extends Component {
     }
 
     const classes = classnames('avatar__thumb', { 'avatar__thumb--circle': !squared });
-    const avatar = classnames('avatar', { 'avatar--circle': !squared });
+    const avatar = classnames('avatar', { 'avatar--circle': !squared }, containerClassName);
 
     return (
       <div className={avatar}>
@@ -77,6 +78,7 @@ export default class AvatarPicker extends Component {
 }
 
 AvatarPicker.propTypes = {
+  containerClassName: PropTypes.string,
   defaultValue: PropTypes.string,
   id: PropTypes.string.isRequired,
   input: PropTypes.object,
@@ -84,6 +86,7 @@ AvatarPicker.propTypes = {
 };
 
 AvatarPicker.defaultProps = {
+  containerClassName: '',
   defaultValue: null,
   input: {
     onChange: () => {},

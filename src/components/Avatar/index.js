@@ -40,6 +40,6 @@ Avatar.propTypes = {
 Avatar.defaultProps = {
   borderRadius: 3,
   className: null,
-  size: '',
+  size: 40,
   src: '',
 };
