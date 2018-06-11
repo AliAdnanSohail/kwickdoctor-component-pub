@@ -2,7 +2,7 @@
 
 exports[`renders correctly 1`] = `
 <div
-  className="jsx-3439448312 card"
+  className="jsx-1319528125 card"
   style={Object {}}
 >
   test

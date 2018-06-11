@@ -877,7 +877,7 @@ exports[`Storyshots Card default 1`] = `
   }
 >
   <div
-    className="jsx-3439448312 card"
+    className="jsx-1319528125 card"
     style={
       Object {
         "padding": "50px",
@@ -1572,7 +1572,7 @@ exports[`Storyshots Notification default 1`] = `
   }
 >
   <div
-    className="jsx-3439448312 card notification"
+    className="jsx-1319528125 card notification"
     style={Object {}}
   >
     <div
