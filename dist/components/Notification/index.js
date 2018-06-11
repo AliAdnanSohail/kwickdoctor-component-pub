@@ -114,18 +114,22 @@ var Notification = function (_Component) {
           },
           _react2.default.createElement(_.Button, { flat: true, icon: _react2.default.createElement(_icons.MoreIcon, null), onClick: this.handleShowButtons, rounded: true }),
           this.state.buttonsVisible && _react2.default.createElement(
-            'div',
+            'ul',
             {
               className: 'jsx-' + _styles.notification.__scopedHash + ' jsx-' + _styles.notificationCard.__scopedHash + ' ' + 'notification__buttons'
             },
             !read && _react2.default.createElement(
-              _.Button,
-              { flat: true, onClick: onComplete, size: 's' },
+              'button',
+              { onClick: onComplete, type: 'button', className: 'jsx-' + _styles.notification.__scopedHash + ' jsx-' + _styles.notificationCard.__scopedHash
+              },
+              _react2.default.createElement(_icons.CheckmarkIcon, null),
               'Read'
             ),
             _react2.default.createElement(
-              _.Button,
-              { flat: true, onClick: onDelete, size: 's' },
+              'button',
+              { onClick: onDelete, type: 'button', className: 'jsx-' + _styles.notification.__scopedHash + ' jsx-' + _styles.notificationCard.__scopedHash
+              },
+              _react2.default.createElement(_icons.TrashIcon, null),
               'Delete'
             )
           )

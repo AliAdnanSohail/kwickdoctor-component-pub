@@ -444,7 +444,7 @@ exports[`Storyshots Calendar default 1`] = `
         className="jsx-4156069232"
       >
         <button
-          className="jsx-1425202002 day day--selected--without-events"
+          className="jsx-1425202002 day day--disabled"
           data-day="2018-06-10"
           onClick={[Function]}
           type="button"
@@ -460,7 +460,7 @@ exports[`Storyshots Calendar default 1`] = `
         className="jsx-4156069232"
       >
         <button
-          className="jsx-1425202002 day"
+          className="jsx-1425202002 day day--selected--without-events"
           data-day="2018-06-11"
           onClick={[Function]}
           type="button"
@@ -1063,7 +1063,7 @@ exports[`Storyshots Form Fields Date Picker 1`] = `
             tabIndex={undefined}
             title={undefined}
             type="text"
-            value="10 Jun, 2018"
+            value="11 Jun, 2018"
           />
         </div>
       </div>
@@ -1576,20 +1576,20 @@ exports[`Storyshots Notification default 1`] = `
     style={Object {}}
   >
     <div
-      className="jsx-1946100563 jsx-3014010845 notification__time"
+      className="jsx-3980672098 jsx-3014010845 notification__time"
     >
       12:00 AM, Jun 20
     </div>
     <div
-      className="jsx-1946100563 jsx-3014010845 notification__message"
+      className="jsx-3980672098 jsx-3014010845 notification__message"
     >
       <span
-        className="jsx-1946100563 jsx-3014010845 notification__dot"
+        className="jsx-3980672098 jsx-3014010845 notification__dot"
       />
       New message
     </div>
     <div
-      className="jsx-1946100563 jsx-3014010845 notification__actions"
+      className="jsx-3980672098 jsx-3014010845 notification__actions"
     >
       <button
         className="jsx-744565053 button button--s button--flat button--with-icon button--rounded"
@@ -1639,7 +1639,7 @@ exports[`Storyshots Notification default 1`] = `
       </button>
     </div>
     <div
-      className="jsx-1946100563 jsx-3014010845 notification__actions--mobile"
+      className="jsx-3980672098 jsx-3014010845 notification__actions--mobile"
     >
       <button
         className="jsx-744565053 button button--flat button--with-icon button--rounded"

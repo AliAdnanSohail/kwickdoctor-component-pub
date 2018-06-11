@@ -108,12 +108,40 @@ export const notification = css`
       &__buttons {
         display: flex;
         flex-direction: column;
+
         position: absolute;
         right: 0;
         top: 40px;
+
+        padding: 6px 0;
+
         box-shadow: rgba(0, 0, 0, 0.1) 0px 12px 34px;
         background: rgb(255, 255, 255);
-        border-radius: 4px;
+        border-radius: 6px;
+
+        button {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+
+          min-width: 115px;
+
+          padding: 8px 20px;
+
+          border: none;
+
+          font-size: 0.75rem;
+          text-align: left;
+
+          cursor: pointer;
+
+          :global(svg) {
+            width: 18px;
+            height: 18px;
+            margin-right: 12px;
+            color: #030303;
+          }
+        }
       }
 
       &__time {

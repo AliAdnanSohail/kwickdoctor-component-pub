@@ -49,17 +49,17 @@ export default class Notification extends Component {
         <div className="notification__actions--mobile">
           <Button flat icon={<MoreIcon />} onClick={this.handleShowButtons} rounded />
           {this.state.buttonsVisible && (
-            <div className="notification__buttons">
+            <ul className="notification__buttons">
               {!read && (
-                <Button flat onClick={onComplete} size="s">
-                  Read
-                </Button>
+                <button onClick={onComplete} type="button">
+                  <CheckmarkIcon />Read
+                </button>
               )}
 
-              <Button flat onClick={onDelete} size="s">
-                Delete
-              </Button>
-            </div>
+              <button onClick={onDelete} type="button">
+                <TrashIcon />Delete
+              </button>
+            </ul>
           )}
         </div>
 
