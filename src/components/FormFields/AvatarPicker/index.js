@@ -1,14 +1,21 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
-import { CameraIcon, TrashIcon } from 'grommet/components/icons';
 import classnames from 'classnames';
+import { CameraIcon, TrashIcon } from 'grommet/components/icons';
+import PropTypes from 'prop-types';
 
 import { avatarCircle, fileInput } from './styles';
 import { Button } from '../../';
 
 export default class AvatarPicker extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = { avatar: {} };
+  }
   handleChange = (event) => {
     const { input } = this.props;
+
+    this.setState({ avatar: event.target.files[0] });
 
     input.onChange(event.target.files[0]);
   };
@@ -24,32 +31,31 @@ export default class AvatarPicker extends Component {
 
   render() {
     const {
+      borderRadius,
       containerClassName,
       id,
       input: { value, ...inputProps },
       resetKey,
-      squared,
-      defaultValue,
+      size,
     } = this.props;
 
     let src = 'none';
 
-    if (value.name) {
-      src = `url(${URL.createObjectURL(value)})`;
-    } else {
-      src = `url(${defaultValue})`;
+    if (this.state.avatar.name) {
+      src = URL.createObjectURL(this.state.avatar);
     }
 
-    const classes = classnames('avatar__thumb', { 'avatar__thumb--circle': !squared });
-    const avatar = classnames('avatar', { 'avatar--circle': !squared }, containerClassName);
+    const avatarContainer = classnames('avatar', containerClassName);
+
+    const avatarStyle = {
+      backgroundImage: `url(${src})`,
+      borderRadius: `${borderRadius}px`,
+      height: `${size}px`,
+      width: `${size}px`,
+    };
 
     return (
-      <div className={avatar}>
-        <div className="avatar__button--remove">
-          {(value.name || defaultValue) && (
-            <Button onClick={this.handleRemove} icon={<TrashIcon />} size="xs" rounded danger />
-          )}
-        </div>
+      <div className={avatarContainer}>
 
         <label className="avatar__container" htmlFor={id} aria-label="Edit image">
           <input
@@ -65,8 +71,14 @@ export default class AvatarPicker extends Component {
             type="file"
           />
 
-          <div className={classes} style={{ backgroundImage: src }}>
-            {!(value.name || defaultValue) && <CameraIcon />}
+          <div className="avatar__thumb" style={avatarStyle}>
+            {!(this.state.avatar.name) && <CameraIcon />}
+
+            <div className="avatar__button--remove">
+              {(this.state.avatar.name) && (
+                <Button onClick={this.handleRemove} icon={<TrashIcon />} size="xs" rounded danger />
+              )}
+            </div>
           </div>
         </label>
 
@@ -78,19 +90,19 @@ export default class AvatarPicker extends Component {
 }
 
 AvatarPicker.propTypes = {
+  borderRadius: PropTypes.number,
   containerClassName: PropTypes.string,
-  defaultValue: PropTypes.string,
   id: PropTypes.string.isRequired,
   input: PropTypes.object,
-  squared: PropTypes.bool,
+  size: PropTypes.number,
 };
 
 AvatarPicker.defaultProps = {
+  borderRadius: 3,
   containerClassName: '',
-  defaultValue: null,
   input: {
     onChange: () => {},
     value: {},
   },
-  squared: false,
+  size: 40,
 };
