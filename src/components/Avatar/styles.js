@@ -17,5 +17,8 @@ export default css`
   :global(.avatar-icon.grommetux-control-icon) {
     fill: #ffffff;
     stroke: #ffffff;
+
+    width: 50%;
+    height: 50%;
   }
 `;
