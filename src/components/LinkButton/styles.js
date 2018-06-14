@@ -60,7 +60,7 @@ export default css`
       transition: all 0.3s ease-in-out;
     }
 
-    &__wave {
+    :global(&__wave) {
       position: absolute;
       display: block;
       width: 0;

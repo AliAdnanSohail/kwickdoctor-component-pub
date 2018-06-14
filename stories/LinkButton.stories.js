@@ -1,5 +1,5 @@
 import React from 'react';
-import { Router, browserHistory } from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom'
 import { storiesOf } from '@storybook/react';
 import { withKnobs, text, boolean, select } from '@storybook/addon-knobs/react';
 import { checkA11y } from '@storybook/addon-a11y';
@@ -35,7 +35,7 @@ storiesOf('LinkButton', module)
     };
 
     return (
-      <Router history={browserHistory}>
+      <BrowserRouter>
         <LinkButton
           accent={boolean('accent', false)}
           danger={boolean('danger', false)}
@@ -50,6 +50,6 @@ storiesOf('LinkButton', module)
         >
           {text('title', 'Hello!')}
         </LinkButton>
-      </Router>
+      </BrowserRouter>
     );
   });

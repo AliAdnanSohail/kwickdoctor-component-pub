@@ -1,7 +1,8 @@
 import React, { Component, Fragment } from 'react';
-import PropTypes from 'prop-types';
 import classnames from 'classnames';
+import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
+
 import styles from './styles';
 
 export default class LinkButton extends Component {
@@ -60,40 +61,39 @@ export default class LinkButton extends Component {
           disabled={disabled}
         >
           {this.renderContent()}
-
+          <style jsx global>{styles}</style>
         </Link>
-        <style jsx>{styles}</style>
       </Fragment>
     );
   }
 }
 
 LinkButton.propTypes = {
-  className: PropTypes.string,
-  children: PropTypes.any,
-  icon: PropTypes.element,
-  size: PropTypes.oneOf(['s', 'xs', '']),
   accent: PropTypes.bool,
+  children: PropTypes.any,
+  className: PropTypes.string,
   danger: PropTypes.bool,
   disabled: PropTypes.bool,
   flat: PropTypes.bool,
+  icon: PropTypes.element,
+  link: PropTypes.string,
   rounded: PropTypes.bool,
+  size: PropTypes.oneOf(['s', 'xs', '']),
   squared: PropTypes.bool,
   transparent: PropTypes.bool,
-  link: PropTypes.string,
 };
 
 LinkButton.defaultProps = {
-  className: '',
-  children: null,
-  icon: null,
-  size: undefined,
   accent: false,
+  children: null,
+  className: '',
   danger: false,
   disabled: false,
   flat: false,
-  link: 'пппп',
+  icon: null,
+  link: '/',
   rounded: false,
+  size: undefined,
   squared: false,
   transparent: false,
 };
