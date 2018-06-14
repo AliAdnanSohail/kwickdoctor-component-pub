@@ -12,6 +12,7 @@ export default class AvatarPicker extends Component {
 
     this.state = { avatar: {} };
   }
+
   handleChange = (event) => {
     const { input } = this.props;
 
@@ -26,7 +27,7 @@ export default class AvatarPicker extends Component {
     event.preventDefault();
 
     input.onChange(null);
-    this.input.value = '';
+    this.setState({ avatar: '' });
   };
 
   render() {
