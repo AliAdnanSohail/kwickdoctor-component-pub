@@ -120,7 +120,7 @@ var VideoRecorder = function (_Component) {
 
                   _this.setState({ recording: false, countdownValue: 5, time: 0 });
 
-                  _this.props.onStop(blob);
+                  onStop(blob);
                 } else {
                   _this.setState({ time: time + 1 });
                 }

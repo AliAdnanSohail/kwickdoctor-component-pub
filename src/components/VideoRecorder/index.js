@@ -136,7 +136,7 @@ export default class VideoRecorder extends Component {
 
                 this.setState({ recording: false, countdownValue: 5, time: 0 });
 
-                this.props.onStop(blob);
+                onStop(blob);
               } else {
                 this.setState({ time: time + 1 });
               }
