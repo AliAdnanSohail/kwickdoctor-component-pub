@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
-import { withKnobs, text, boolean } from '@storybook/addon-knobs/react';
+import { text, number, withKnobs } from '@storybook/addon-knobs/react';
 import { checkA11y } from '@storybook/addon-a11y';
 import { withTests } from '@storybook/addon-jest';
 
@@ -19,11 +19,20 @@ class AvatarPickerWrapper extends Component {
   };
 
   render() {
-    const { id, name, squared } = this.props;
+    const {
+      borderRadius, id, name, size,
+    } = this.props;
     const { src } = this.state;
 
     return (
-      <AvatarPicker id={id} name={name} squared={squared} src={src} onChange={this.handleChange} />
+      <AvatarPicker
+        borderRadius={borderRadius}
+        id={id}
+        name={name}
+        src={src}
+        size={size}
+        onChange={this.handleChange}
+      />
     );
   }
 }
@@ -35,9 +44,10 @@ storiesOf('Avatar Picker', module)
   .addDecorator(getStory => <div style={{ padding: '24px' }}>{getStory()}</div>)
   .add('default', () => (
     <AvatarPickerWrapper
+      borderRadius={number('border-radius', 3)}
       id={text('id', 'avatar')}
       name={text('name', 'name')}
-      squared={boolean('squared', false)}
       onChange={action('')}
+      size={number('size', 150)}
     />
   ));

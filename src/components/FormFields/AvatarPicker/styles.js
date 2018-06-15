@@ -15,13 +15,7 @@ export const fileInput = css`
 
 export const avatarCircle = css`
   .avatar {
-    width: 300px;
-    height: 300px;
     position: relative;
-    &--circle {
-      width: 138px;
-      height: 138px;
-    }
 
     &__container {
       cursor: pointer;
@@ -29,13 +23,11 @@ export const avatarCircle = css`
     }
 
     &__thumb {
+      position: relative;
       display: flex;
       flex-direction: row;
       align-items: center;
       justify-content: center;
-      height: 300px;
-      width: 300px;
-      border-radius: 22px;
 
       background: {
         color: #e7e7f0;
@@ -44,19 +36,10 @@ export const avatarCircle = css`
       }
 
       :global(svg) {
-        width: 80px;
-        height: 80px;
+        width: 50%;
+        height: 50%;
         fill: #bbbccd;
         stroke: #bbbccd;
-      }
-      &--circle {
-        width: 138px;
-        height: 138px;
-        border-radius: 50%;
-        :global(svg) {
-          width: 40px;
-          height: 40px;
-        }
       }
     }
 
@@ -64,11 +47,11 @@ export const avatarCircle = css`
       &--remove {
         position: absolute;
         width: 100%;
-        bottom: 0;
+        bottom: 15px;
+        top: 0;
         display: flex;
-        align-items: center;
-        justify-content: space-around;
-        bottom: 10px;
+        align-items: flex-end;
+        justify-content: center;
       }
     }
   }

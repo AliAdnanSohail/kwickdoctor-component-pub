@@ -2,25 +2,25 @@
 
 exports[`renders correctly 1`] = `
 <div
-  className="jsx-1685083184 jsx-4038665278 jsx-2881818901 form-field"
+  className="jsx-1685083184 jsx-3325440485 jsx-107481942 form-field"
 >
   <label
-    className="jsx-1685083184 jsx-4038665278 jsx-2881818901"
+    className="jsx-1685083184 jsx-3325440485 jsx-107481942"
     htmlFor="autocomplete"
   >
     Label
   </label>
   <div
-    className="jsx-1685083184 jsx-4038665278 jsx-2881818901 autocomplete"
+    className="jsx-1685083184 jsx-3325440485 jsx-107481942 autocomplete"
     onFocus={[Function]}
     role="textbox"
     tabIndex={0}
   >
     <div
-      className="jsx-1685083184 jsx-4038665278 jsx-2881818901 autocomplete__input"
+      className="jsx-1685083184 jsx-3325440485 jsx-107481942 autocomplete__input"
     >
       <input
-        className="jsx-1685083184 jsx-4038665278 jsx-2881818901"
+        className="jsx-1685083184 jsx-3325440485 jsx-107481942"
         id="autocomplete"
         onBlur={[Function]}
         onChange={[Function]}
