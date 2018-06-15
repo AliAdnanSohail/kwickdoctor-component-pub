@@ -1360,6 +1360,29 @@ exports[`Storyshots Form Fields TextArea 1`] = `
 </div>
 `;
 
+exports[`Storyshots LinkButton default 1`] = `
+<div
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
+>
+  <a
+    className="button"
+    disabled={false}
+    href="/"
+    onClick={[Function]}
+  >
+    <span
+      className="button__content"
+    >
+      Hello!
+    </span>
+  </a>
+</div>
+`;
+
 exports[`Storyshots Loader default 1`] = `
 <div
   style={
