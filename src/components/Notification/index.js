@@ -51,12 +51,12 @@ export default class Notification extends Component {
           {this.state.buttonsVisible && (
             <ul className="notification__buttons">
               {!read && (
-                <button onClick={onComplete} type="button">
+                <button onClick={onComplete} type="button" className="notification__button--mobile">
                   <CheckmarkIcon />Read
                 </button>
               )}
 
-              <button onClick={onDelete} type="button">
+              <button onClick={onDelete} type="button" className="notification__button--mobile">
                 <TrashIcon />Delete
               </button>
             </ul>

@@ -31,6 +31,12 @@ export const notification = css`
       margin-bottom: 12px;
     }
 
+    &__button {
+      &--mobile {
+        background: white;
+      }
+    }
+
     &__time {
       display: flex;
       flex-direction: row;
