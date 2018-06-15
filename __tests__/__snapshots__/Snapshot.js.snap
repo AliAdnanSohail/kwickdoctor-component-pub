@@ -9,28 +9,28 @@ exports[`Storyshots Avatar Picker default 1`] = `
   }
 >
   <div
-    className="jsx-4254447966 jsx-2165763448 avatar avatar--circle"
+    className="jsx-3916257684 jsx-2165763448 avatar"
   >
-    <div
-      className="jsx-4254447966 jsx-2165763448 avatar__button--remove"
-    />
     <label
       aria-label="Edit image"
-      className="jsx-4254447966 jsx-2165763448 avatar__container"
+      className="jsx-3916257684 jsx-2165763448 avatar__container"
       htmlFor="avatar"
     >
       <input
-        className="jsx-4254447966 jsx-2165763448 file-input"
+        className="jsx-3916257684 jsx-2165763448 file-input"
         id="avatar"
         onBlur={[Function]}
         onChange={[Function]}
         type="file"
       />
       <div
-        className="jsx-4254447966 jsx-2165763448 avatar__thumb avatar__thumb--circle"
+        className="jsx-3916257684 jsx-2165763448 avatar__thumb"
         style={
           Object {
-            "backgroundImage": "url(null)",
+            "backgroundImage": "url(none)",
+            "borderRadius": "3px",
+            "height": "150px",
+            "width": "150px",
           }
         }
       >
@@ -50,6 +50,9 @@ exports[`Storyshots Avatar Picker default 1`] = `
             strokeWidth="2"
           />
         </svg>
+        <div
+          className="jsx-3916257684 jsx-2165763448 avatar__button--remove"
+        />
       </div>
     </label>
   </div>
@@ -65,7 +68,7 @@ exports[`Storyshots Avatar default 1`] = `
   }
 >
   <div
-    className="jsx-3941227576 avatar"
+    className="jsx-3751328689 avatar"
     style={
       Object {
         "backgroundImage": "url(https://cdn.pixabay.com/photo/2017/08/30/01/05/milky-way-2695569_960_720.jpg)",
@@ -87,7 +90,7 @@ exports[`Storyshots Button default 1`] = `
   }
 >
   <button
-    className="jsx-3831438812 button"
+    className="jsx-744565053 button"
     disabled={false}
     onClick={[Function]}
     type="button"
@@ -110,7 +113,7 @@ exports[`Storyshots Calendar default 1`] = `
   }
 >
   <div
-    className="jsx-1398186111 calendar"
+    className="jsx-3268505078 calendar"
   >
     <div
       className="jsx-3590812337"
@@ -220,13 +223,13 @@ exports[`Storyshots Calendar default 1`] = `
         className="jsx-4156069232"
       >
         <button
-          className="jsx-4204414756 day day--disabled"
+          className="jsx-1425202002 day day--disabled"
           data-day="2018-05-27"
           onClick={[Function]}
           type="button"
         >
           <span
-            className="jsx-4204414756 day__border"
+            className="jsx-1425202002 day__border"
           >
             27
           </span>
@@ -236,13 +239,13 @@ exports[`Storyshots Calendar default 1`] = `
         className="jsx-4156069232"
       >
         <button
-          className="jsx-4204414756 day day--disabled"
+          className="jsx-1425202002 day day--disabled"
           data-day="2018-05-28"
           onClick={[Function]}
           type="button"
         >
           <span
-            className="jsx-4204414756 day__border"
+            className="jsx-1425202002 day__border"
           >
             28
           </span>
@@ -252,13 +255,13 @@ exports[`Storyshots Calendar default 1`] = `
         className="jsx-4156069232"
       >
         <button
-          className="jsx-4204414756 day day--disabled"
+          className="jsx-1425202002 day day--disabled"
           data-day="2018-05-29"
           onClick={[Function]}
           type="button"
         >
           <span
-            className="jsx-4204414756 day__border"
+            className="jsx-1425202002 day__border"
           >
             29
           </span>
@@ -268,13 +271,13 @@ exports[`Storyshots Calendar default 1`] = `
         className="jsx-4156069232"
       >
         <button
-          className="jsx-4204414756 day day--disabled"
+          className="jsx-1425202002 day day--disabled"
           data-day="2018-05-30"
           onClick={[Function]}
           type="button"
         >
           <span
-            className="jsx-4204414756 day__border"
+            className="jsx-1425202002 day__border"
           >
             30
           </span>
@@ -284,13 +287,13 @@ exports[`Storyshots Calendar default 1`] = `
         className="jsx-4156069232"
       >
         <button
-          className="jsx-4204414756 day day--disabled"
+          className="jsx-1425202002 day day--disabled"
           data-day="2018-05-31"
           onClick={[Function]}
           type="button"
         >
           <span
-            className="jsx-4204414756 day__border"
+            className="jsx-1425202002 day__border"
           >
             31
           </span>
@@ -300,13 +303,13 @@ exports[`Storyshots Calendar default 1`] = `
         className="jsx-4156069232"
       >
         <button
-          className="jsx-4204414756 day day--disabled"
+          className="jsx-1425202002 day day--disabled"
           data-day="2018-06-01"
           onClick={[Function]}
           type="button"
         >
           <span
-            className="jsx-4204414756 day__border"
+            className="jsx-1425202002 day__border"
           >
             1
           </span>
@@ -316,13 +319,13 @@ exports[`Storyshots Calendar default 1`] = `
         className="jsx-4156069232"
       >
         <button
-          className="jsx-4204414756 day day--disabled"
+          className="jsx-1425202002 day day--disabled"
           data-day="2018-06-02"
           onClick={[Function]}
           type="button"
         >
           <span
-            className="jsx-4204414756 day__border"
+            className="jsx-1425202002 day__border"
           >
             2
           </span>
@@ -332,13 +335,13 @@ exports[`Storyshots Calendar default 1`] = `
         className="jsx-4156069232"
       >
         <button
-          className="jsx-4204414756 day day--disabled"
+          className="jsx-1425202002 day day--disabled"
           data-day="2018-06-03"
           onClick={[Function]}
           type="button"
         >
           <span
-            className="jsx-4204414756 day__border"
+            className="jsx-1425202002 day__border"
           >
             3
           </span>
@@ -348,13 +351,13 @@ exports[`Storyshots Calendar default 1`] = `
         className="jsx-4156069232"
       >
         <button
-          className="jsx-4204414756 day day--disabled"
+          className="jsx-1425202002 day day--disabled"
           data-day="2018-06-04"
           onClick={[Function]}
           type="button"
         >
           <span
-            className="jsx-4204414756 day__border"
+            className="jsx-1425202002 day__border"
           >
             4
           </span>
@@ -364,13 +367,13 @@ exports[`Storyshots Calendar default 1`] = `
         className="jsx-4156069232"
       >
         <button
-          className="jsx-4204414756 day day--disabled"
+          className="jsx-1425202002 day day--disabled"
           data-day="2018-06-05"
           onClick={[Function]}
           type="button"
         >
           <span
-            className="jsx-4204414756 day__border"
+            className="jsx-1425202002 day__border"
           >
             5
           </span>
@@ -380,13 +383,13 @@ exports[`Storyshots Calendar default 1`] = `
         className="jsx-4156069232"
       >
         <button
-          className="jsx-4204414756 day day--disabled"
+          className="jsx-1425202002 day day--disabled"
           data-day="2018-06-06"
           onClick={[Function]}
           type="button"
         >
           <span
-            className="jsx-4204414756 day__border"
+            className="jsx-1425202002 day__border"
           >
             6
           </span>
@@ -396,13 +399,13 @@ exports[`Storyshots Calendar default 1`] = `
         className="jsx-4156069232"
       >
         <button
-          className="jsx-4204414756 day day--disabled"
+          className="jsx-1425202002 day day--disabled"
           data-day="2018-06-07"
           onClick={[Function]}
           type="button"
         >
           <span
-            className="jsx-4204414756 day__border"
+            className="jsx-1425202002 day__border"
           >
             7
           </span>
@@ -412,13 +415,13 @@ exports[`Storyshots Calendar default 1`] = `
         className="jsx-4156069232"
       >
         <button
-          className="jsx-4204414756 day day--disabled"
+          className="jsx-1425202002 day day--disabled"
           data-day="2018-06-08"
           onClick={[Function]}
           type="button"
         >
           <span
-            className="jsx-4204414756 day__border"
+            className="jsx-1425202002 day__border"
           >
             8
           </span>
@@ -428,13 +431,13 @@ exports[`Storyshots Calendar default 1`] = `
         className="jsx-4156069232"
       >
         <button
-          className="jsx-4204414756 day day--disabled"
+          className="jsx-1425202002 day day--disabled"
           data-day="2018-06-09"
           onClick={[Function]}
           type="button"
         >
           <span
-            className="jsx-4204414756 day__border"
+            className="jsx-1425202002 day__border"
           >
             9
           </span>
@@ -444,13 +447,13 @@ exports[`Storyshots Calendar default 1`] = `
         className="jsx-4156069232"
       >
         <button
-          className="jsx-4204414756 day day--disabled"
+          className="jsx-1425202002 day day--disabled"
           data-day="2018-06-10"
           onClick={[Function]}
           type="button"
         >
           <span
-            className="jsx-4204414756 day__border"
+            className="jsx-1425202002 day__border"
           >
             10
           </span>
@@ -460,13 +463,13 @@ exports[`Storyshots Calendar default 1`] = `
         className="jsx-4156069232"
       >
         <button
-          className="jsx-4204414756 day day--disabled"
+          className="jsx-1425202002 day day--disabled"
           data-day="2018-06-11"
           onClick={[Function]}
           type="button"
         >
           <span
-            className="jsx-4204414756 day__border"
+            className="jsx-1425202002 day__border"
           >
             11
           </span>
@@ -482,7 +485,7 @@ exports[`Storyshots Calendar default 1`] = `
           type="button"
         >
           <span
-            className="jsx-4204414756 day__border"
+            className="jsx-1425202002 day__border"
           >
             12
           </span>
@@ -498,7 +501,7 @@ exports[`Storyshots Calendar default 1`] = `
           type="button"
         >
           <span
-            className="jsx-4204414756 day__border"
+            className="jsx-1425202002 day__border"
           >
             13
           </span>
@@ -508,13 +511,13 @@ exports[`Storyshots Calendar default 1`] = `
         className="jsx-4156069232"
       >
         <button
-          className="jsx-1425202002 day day--selected--without-events"
+          className="jsx-1425202002 day day--disabled"
           data-day="2018-06-14"
           onClick={[Function]}
           type="button"
         >
           <span
-            className="jsx-4204414756 day__border"
+            className="jsx-1425202002 day__border"
           >
             14
           </span>
@@ -524,13 +527,13 @@ exports[`Storyshots Calendar default 1`] = `
         className="jsx-4156069232"
       >
         <button
-          className="jsx-4204414756 day"
+          className="jsx-1425202002 day day--selected--without-events"
           data-day="2018-06-15"
           onClick={[Function]}
           type="button"
         >
           <span
-            className="jsx-4204414756 day__border"
+            className="jsx-1425202002 day__border"
           >
             15
           </span>
@@ -540,13 +543,13 @@ exports[`Storyshots Calendar default 1`] = `
         className="jsx-4156069232"
       >
         <button
-          className="jsx-4204414756 day"
+          className="jsx-1425202002 day"
           data-day="2018-06-16"
           onClick={[Function]}
           type="button"
         >
           <span
-            className="jsx-4204414756 day__border"
+            className="jsx-1425202002 day__border"
           >
             16
           </span>
@@ -556,13 +559,13 @@ exports[`Storyshots Calendar default 1`] = `
         className="jsx-4156069232"
       >
         <button
-          className="jsx-4204414756 day"
+          className="jsx-1425202002 day"
           data-day="2018-06-17"
           onClick={[Function]}
           type="button"
         >
           <span
-            className="jsx-4204414756 day__border"
+            className="jsx-1425202002 day__border"
           >
             17
           </span>
@@ -572,13 +575,13 @@ exports[`Storyshots Calendar default 1`] = `
         className="jsx-4156069232"
       >
         <button
-          className="jsx-4204414756 day"
+          className="jsx-1425202002 day"
           data-day="2018-06-18"
           onClick={[Function]}
           type="button"
         >
           <span
-            className="jsx-4204414756 day__border"
+            className="jsx-1425202002 day__border"
           >
             18
           </span>
@@ -588,13 +591,13 @@ exports[`Storyshots Calendar default 1`] = `
         className="jsx-4156069232"
       >
         <button
-          className="jsx-4204414756 day"
+          className="jsx-1425202002 day"
           data-day="2018-06-19"
           onClick={[Function]}
           type="button"
         >
           <span
-            className="jsx-4204414756 day__border"
+            className="jsx-1425202002 day__border"
           >
             19
           </span>
@@ -604,13 +607,13 @@ exports[`Storyshots Calendar default 1`] = `
         className="jsx-4156069232"
       >
         <button
-          className="jsx-4204414756 day"
+          className="jsx-1425202002 day"
           data-day="2018-06-20"
           onClick={[Function]}
           type="button"
         >
           <span
-            className="jsx-4204414756 day__border"
+            className="jsx-1425202002 day__border"
           >
             20
           </span>
@@ -620,13 +623,13 @@ exports[`Storyshots Calendar default 1`] = `
         className="jsx-4156069232"
       >
         <button
-          className="jsx-4204414756 day"
+          className="jsx-1425202002 day"
           data-day="2018-06-21"
           onClick={[Function]}
           type="button"
         >
           <span
-            className="jsx-4204414756 day__border"
+            className="jsx-1425202002 day__border"
           >
             21
           </span>
@@ -636,13 +639,13 @@ exports[`Storyshots Calendar default 1`] = `
         className="jsx-4156069232"
       >
         <button
-          className="jsx-4204414756 day"
+          className="jsx-1425202002 day"
           data-day="2018-06-22"
           onClick={[Function]}
           type="button"
         >
           <span
-            className="jsx-4204414756 day__border"
+            className="jsx-1425202002 day__border"
           >
             22
           </span>
@@ -652,13 +655,13 @@ exports[`Storyshots Calendar default 1`] = `
         className="jsx-4156069232"
       >
         <button
-          className="jsx-4204414756 day"
+          className="jsx-1425202002 day"
           data-day="2018-06-23"
           onClick={[Function]}
           type="button"
         >
           <span
-            className="jsx-4204414756 day__border"
+            className="jsx-1425202002 day__border"
           >
             23
           </span>
@@ -668,13 +671,13 @@ exports[`Storyshots Calendar default 1`] = `
         className="jsx-4156069232"
       >
         <button
-          className="jsx-4204414756 day"
+          className="jsx-1425202002 day"
           data-day="2018-06-24"
           onClick={[Function]}
           type="button"
         >
           <span
-            className="jsx-4204414756 day__border"
+            className="jsx-1425202002 day__border"
           >
             24
           </span>
@@ -684,13 +687,13 @@ exports[`Storyshots Calendar default 1`] = `
         className="jsx-4156069232"
       >
         <button
-          className="jsx-4204414756 day"
+          className="jsx-1425202002 day"
           data-day="2018-06-25"
           onClick={[Function]}
           type="button"
         >
           <span
-            className="jsx-4204414756 day__border"
+            className="jsx-1425202002 day__border"
           >
             25
           </span>
@@ -700,13 +703,13 @@ exports[`Storyshots Calendar default 1`] = `
         className="jsx-4156069232"
       >
         <button
-          className="jsx-4204414756 day"
+          className="jsx-1425202002 day"
           data-day="2018-06-26"
           onClick={[Function]}
           type="button"
         >
           <span
-            className="jsx-4204414756 day__border"
+            className="jsx-1425202002 day__border"
           >
             26
           </span>
@@ -716,13 +719,13 @@ exports[`Storyshots Calendar default 1`] = `
         className="jsx-4156069232"
       >
         <button
-          className="jsx-4204414756 day"
+          className="jsx-1425202002 day"
           data-day="2018-06-27"
           onClick={[Function]}
           type="button"
         >
           <span
-            className="jsx-4204414756 day__border"
+            className="jsx-1425202002 day__border"
           >
             27
           </span>
@@ -732,13 +735,13 @@ exports[`Storyshots Calendar default 1`] = `
         className="jsx-4156069232"
       >
         <button
-          className="jsx-4204414756 day"
+          className="jsx-1425202002 day"
           data-day="2018-06-28"
           onClick={[Function]}
           type="button"
         >
           <span
-            className="jsx-4204414756 day__border"
+            className="jsx-1425202002 day__border"
           >
             28
           </span>
@@ -748,13 +751,13 @@ exports[`Storyshots Calendar default 1`] = `
         className="jsx-4156069232"
       >
         <button
-          className="jsx-4204414756 day"
+          className="jsx-1425202002 day"
           data-day="2018-06-29"
           onClick={[Function]}
           type="button"
         >
           <span
-            className="jsx-4204414756 day__border"
+            className="jsx-1425202002 day__border"
           >
             29
           </span>
@@ -764,13 +767,13 @@ exports[`Storyshots Calendar default 1`] = `
         className="jsx-4156069232"
       >
         <button
-          className="jsx-4204414756 day"
+          className="jsx-1425202002 day"
           data-day="2018-06-30"
           onClick={[Function]}
           type="button"
         >
           <span
-            className="jsx-4204414756 day__border"
+            className="jsx-1425202002 day__border"
           >
             30
           </span>
@@ -939,25 +942,25 @@ exports[`Storyshots Form Fields Autocomplete 1`] = `
   }
 >
   <div
-    className="jsx-1685083184 jsx-3325440485 jsx-107481942 form-field"
+    className="jsx-1685083184 jsx-4038665278 jsx-2881818901 form-field"
   >
     <label
-      className="jsx-1685083184 jsx-3325440485 jsx-107481942"
+      className="jsx-1685083184 jsx-4038665278 jsx-2881818901"
       htmlFor="autocomplete"
     >
       Label
     </label>
     <div
-      className="jsx-1685083184 jsx-3325440485 jsx-107481942 autocomplete"
+      className="jsx-1685083184 jsx-4038665278 jsx-2881818901 autocomplete"
       onFocus={[Function]}
       role="textbox"
       tabIndex={0}
     >
       <div
-        className="jsx-1685083184 jsx-3325440485 jsx-107481942 autocomplete__input"
+        className="jsx-1685083184 jsx-4038665278 jsx-2881818901 autocomplete__input"
       >
         <input
-          className="jsx-1685083184 jsx-3325440485 jsx-107481942"
+          className="jsx-1685083184 jsx-4038665278 jsx-2881818901"
           id="autocomplete"
           onBlur={[Function]}
           onChange={[Function]}
@@ -994,10 +997,10 @@ exports[`Storyshots Form Fields CheckBox 1`] = `
   }
 >
   <div
-    className="jsx-1685083184 jsx-3325440485 jsx-107481942 form-field"
+    className="jsx-1685083184 jsx-4038665278 jsx-2881818901 form-field"
   >
     <label
-      className="jsx-1685083184 jsx-3325440485 jsx-107481942"
+      className="jsx-1685083184 jsx-4038665278 jsx-2881818901"
       htmlFor="input"
     >
       Label
@@ -1046,16 +1049,24 @@ exports[`Storyshots Form Fields Date Picker 1`] = `
           className="react-datepicker__input-container"
         >
           <input
+            autoComplete={undefined}
+            autoFocus={undefined}
             className="datepicker"
             disabled={false}
             id="datepicker"
+            name={undefined}
             onBlur={[Function]}
             onChange={[Function]}
             onClick={[Function]}
             onFocus={[Function]}
             onKeyDown={[Function]}
+            placeholder={undefined}
+            readOnly={undefined}
+            required={undefined}
+            tabIndex={undefined}
+            title={undefined}
             type="text"
-            value="14 Jun, 2018"
+            value="15 Jun, 2018"
           />
         </div>
       </div>
@@ -1110,11 +1121,11 @@ exports[`Storyshots Form Fields FilePicker 1`] = `
   }
 >
   <label
-    className="jsx-2454471422 jsx-107481942 upload-file"
+    className="jsx-1682990104 jsx-2881818901 upload-file"
     htmlFor="id"
   >
     <div
-      className="jsx-2454471422 jsx-107481942 upload-file__label-container"
+      className="jsx-1682990104 jsx-2881818901 upload-file__label-container"
     >
       <svg
         aria-label="upload"
@@ -1133,13 +1144,13 @@ exports[`Storyshots Form Fields FilePicker 1`] = `
         />
       </svg>
       <div
-        className="jsx-2454471422 jsx-107481942 upload-file__label"
+        className="jsx-1682990104 jsx-2881818901 upload-file__label"
       >
         placeholder
       </div>
     </div>
     <input
-      className="jsx-2454471422 jsx-107481942 input-file"
+      className="jsx-1682990104 jsx-2881818901 input-file"
       id="id"
       onBlur={[Function]}
       onChange={[Function]}
@@ -1158,10 +1169,10 @@ exports[`Storyshots Form Fields Input 1`] = `
   }
 >
   <div
-    className="jsx-1685083184 jsx-3325440485 jsx-107481942 form-field"
+    className="jsx-1685083184 jsx-4038665278 jsx-2881818901 form-field"
   >
     <label
-      className="jsx-1685083184 jsx-3325440485 jsx-107481942"
+      className="jsx-1685083184 jsx-4038665278 jsx-2881818901"
       htmlFor="input"
     >
       Label
@@ -1171,6 +1182,7 @@ exports[`Storyshots Form Fields Input 1`] = `
       id="input"
       name="Name"
       placeholder="Start typing"
+      type={undefined}
     />
     <style>
       input,textarea,select{width:100%;min-width:100%;max-width:100%;min-height:44px;padding:12px 16px;background-color:#ffffff;color:#2A2A30;box-sizing:border-box;-webkit-appearance:none;font-style:normal;font-weight:normal;font-size:0.875rem;border-width:2px;border-style:solid;border-color:#E7E7F0;border-radius:4px;}
@@ -1194,22 +1206,22 @@ exports[`Storyshots Form Fields RadioButtonGroup 1`] = `
   }
 >
   <div
-    className="jsx-1685083184 jsx-3325440485 jsx-107481942 jsx-904933394 jsx-3011064315 form-field"
+    className="jsx-1685083184 jsx-4038665278 jsx-2881818901 jsx-904933394 jsx-1324491324 form-field"
   >
     <fieldset
-      className="jsx-1685083184 jsx-3325440485 jsx-107481942 jsx-904933394 jsx-3011064315"
+      className="jsx-1685083184 jsx-4038665278 jsx-2881818901 jsx-904933394 jsx-1324491324"
     >
       <legend
-        className="jsx-1685083184 jsx-3325440485 jsx-107481942 jsx-904933394 jsx-3011064315"
+        className="jsx-1685083184 jsx-4038665278 jsx-2881818901 jsx-904933394 jsx-1324491324"
       >
         Label
       </legend>
       <label
-        className="jsx-1685083184 jsx-3325440485 jsx-107481942 jsx-904933394 jsx-3011064315 radio-button radio-button--active"
+        className="jsx-1685083184 jsx-4038665278 jsx-2881818901 jsx-904933394 jsx-1324491324 radio-button radio-button--active"
       >
         male
         <input
-          className="jsx-1685083184 jsx-3325440485 jsx-107481942 jsx-904933394 jsx-3011064315 "
+          className="jsx-1685083184 jsx-4038665278 jsx-2881818901 jsx-904933394 jsx-1324491324 "
           defaultChecked={true}
           name="Gender"
           type="radio"
@@ -1217,11 +1229,11 @@ exports[`Storyshots Form Fields RadioButtonGroup 1`] = `
         />
       </label>
       <label
-        className="jsx-1685083184 jsx-3325440485 jsx-107481942 jsx-904933394 jsx-3011064315 radio-button"
+        className="jsx-1685083184 jsx-4038665278 jsx-2881818901 jsx-904933394 jsx-1324491324 radio-button"
       >
         any
         <input
-          className="jsx-1685083184 jsx-3325440485 jsx-107481942 jsx-904933394 jsx-3011064315 "
+          className="jsx-1685083184 jsx-4038665278 jsx-2881818901 jsx-904933394 jsx-1324491324 "
           defaultChecked={false}
           name="Gender"
           type="radio"
@@ -1229,11 +1241,11 @@ exports[`Storyshots Form Fields RadioButtonGroup 1`] = `
         />
       </label>
       <label
-        className="jsx-1685083184 jsx-3325440485 jsx-107481942 jsx-904933394 jsx-3011064315 radio-button"
+        className="jsx-1685083184 jsx-4038665278 jsx-2881818901 jsx-904933394 jsx-1324491324 radio-button"
       >
         female
         <input
-          className="jsx-1685083184 jsx-3325440485 jsx-107481942 jsx-904933394 jsx-3011064315 "
+          className="jsx-1685083184 jsx-4038665278 jsx-2881818901 jsx-904933394 jsx-1324491324 "
           defaultChecked={false}
           name="Gender"
           type="radio"
@@ -1254,40 +1266,45 @@ exports[`Storyshots Form Fields Select 1`] = `
   }
 >
   <div
-    className="jsx-1685083184 jsx-3325440485 jsx-107481942 form-field"
+    className="jsx-1685083184 jsx-4038665278 jsx-2881818901 form-field"
   >
     <label
-      className="jsx-1685083184 jsx-3325440485 jsx-107481942"
+      className="jsx-1685083184 jsx-4038665278 jsx-2881818901"
+      htmlFor={undefined}
     >
       Label
     </label>
     <div
-      className="jsx-463444649 select-container"
+      className="jsx-792907225 select-container"
     >
       <select
-        className="jsx-463444649 "
+        className="jsx-792907225 "
+        id={undefined}
         name="Name"
+        placeholder={undefined}
+        type={undefined}
+        value={undefined}
       >
         <option
-          className="jsx-463444649"
+          className="jsx-792907225"
           value="one"
         >
           one
         </option>
         <option
-          className="jsx-463444649"
+          className="jsx-792907225"
           value="two"
         >
           two
         </option>
         <option
-          className="jsx-463444649"
+          className="jsx-792907225"
           value="three"
         >
           three
         </option>
         <option
-          className="jsx-463444649"
+          className="jsx-792907225"
           value="four"
         >
           four
@@ -1333,10 +1350,10 @@ exports[`Storyshots Form Fields TextArea 1`] = `
   }
 >
   <div
-    className="jsx-1685083184 jsx-3325440485 jsx-107481942 form-field"
+    className="jsx-1685083184 jsx-4038665278 jsx-2881818901 form-field"
   >
     <label
-      className="jsx-1685083184 jsx-3325440485 jsx-107481942"
+      className="jsx-1685083184 jsx-4038665278 jsx-2881818901"
       htmlFor="textarea"
     >
       Label
@@ -1346,6 +1363,7 @@ exports[`Storyshots Form Fields TextArea 1`] = `
       id="textarea"
       name="Name"
       placeholder="Start typing"
+      value={undefined}
     />
     <style>
       input,textarea,select{width:100%;min-width:100%;max-width:100%;min-height:44px;padding:12px 16px;background-color:#ffffff;color:#2A2A30;box-sizing:border-box;-webkit-appearance:none;font-style:normal;font-weight:normal;font-size:0.875rem;border-width:2px;border-style:solid;border-color:#E7E7F0;border-radius:4px;}
@@ -1423,7 +1441,7 @@ exports[`Storyshots Modal default 1`] = `
   }
 >
   <button
-    className="jsx-3831438812 button"
+    className="jsx-744565053 button"
     disabled={false}
     onClick={[Function]}
     type="button"
@@ -1458,6 +1476,7 @@ exports[`Storyshots Navigation default 1`] = `
           className="nav-item"
           href="/dashboard"
           onClick={[Function]}
+          style={undefined}
         >
           <svg
             aria-label="dashboard"
@@ -1496,6 +1515,7 @@ exports[`Storyshots Navigation default 1`] = `
           className="nav-item"
           href="/notifications"
           onClick={[Function]}
+          style={undefined}
         >
           <svg
             aria-label="notification"
@@ -1531,6 +1551,7 @@ exports[`Storyshots Navigation default 1`] = `
       <li>
         <button
           className="nav-item"
+          onClick={undefined}
         >
           <svg
             aria-label="notification"
@@ -1581,23 +1602,23 @@ exports[`Storyshots Notification default 1`] = `
     style={Object {}}
   >
     <div
-      className="jsx-1050045553 jsx-3014010845 notification__time"
+      className="jsx-3980672098 jsx-3014010845 notification__time"
     >
       12:00 AM, Jun 20
     </div>
     <div
-      className="jsx-1050045553 jsx-3014010845 notification__message"
+      className="jsx-3980672098 jsx-3014010845 notification__message"
     >
       <span
-        className="jsx-1050045553 jsx-3014010845 notification__dot"
+        className="jsx-3980672098 jsx-3014010845 notification__dot"
       />
       New message
     </div>
     <div
-      className="jsx-1050045553 jsx-3014010845 notification__actions"
+      className="jsx-3980672098 jsx-3014010845 notification__actions"
     >
       <button
-        className="jsx-3831438812 button button--s button--flat button--with-icon button--rounded"
+        className="jsx-744565053 button button--s button--flat button--with-icon button--rounded"
         disabled={false}
         onClick={[Function]}
         type="button"
@@ -1620,7 +1641,7 @@ exports[`Storyshots Notification default 1`] = `
         </svg>
       </button>
       <button
-        className="jsx-3831438812 button button--s button--flat button--with-icon button--rounded"
+        className="jsx-744565053 button button--s button--flat button--with-icon button--rounded"
         disabled={false}
         onClick={[Function]}
         type="button"
@@ -1644,10 +1665,10 @@ exports[`Storyshots Notification default 1`] = `
       </button>
     </div>
     <div
-      className="jsx-1050045553 jsx-3014010845 notification__actions--mobile"
+      className="jsx-3980672098 jsx-3014010845 notification__actions--mobile"
     >
       <button
-        className="jsx-3831438812 button button--flat button--with-icon button--rounded"
+        className="jsx-744565053 button button--flat button--with-icon button--rounded"
         disabled={false}
         onClick={[Function]}
         type="button"
@@ -1689,6 +1710,8 @@ exports[`Storyshots Paginator default 1`] = `
       className="previous disabled"
     >
       <a
+        className={undefined}
+        href={undefined}
         onClick={[Function]}
         onKeyPress={[Function]}
         tabIndex="0"
@@ -1718,6 +1741,8 @@ exports[`Storyshots Paginator default 1`] = `
       <a
         aria-current="page"
         aria-label="Page 1 is your current page"
+        className={undefined}
+        href={undefined}
         onClick={[Function]}
         onKeyPress={[Function]}
         tabIndex="0"
@@ -1725,10 +1750,14 @@ exports[`Storyshots Paginator default 1`] = `
         1
       </a>
     </li>
-    <li>
+    <li
+      className={undefined}
+    >
       <a
         aria-current={null}
         aria-label="Page 2"
+        className={undefined}
+        href={undefined}
         onClick={[Function]}
         onKeyPress={[Function]}
         tabIndex="0"
@@ -1736,10 +1765,14 @@ exports[`Storyshots Paginator default 1`] = `
         2
       </a>
     </li>
-    <li>
+    <li
+      className={undefined}
+    >
       <a
         aria-current={null}
         aria-label="Page 3"
+        className={undefined}
+        href={undefined}
         onClick={[Function]}
         onKeyPress={[Function]}
         tabIndex="0"
@@ -1747,10 +1780,14 @@ exports[`Storyshots Paginator default 1`] = `
         3
       </a>
     </li>
-    <li>
+    <li
+      className={undefined}
+    >
       <a
         aria-current={null}
         aria-label="Page 4"
+        className={undefined}
+        href={undefined}
         onClick={[Function]}
         onKeyPress={[Function]}
         tabIndex="0"
@@ -1758,10 +1795,14 @@ exports[`Storyshots Paginator default 1`] = `
         4
       </a>
     </li>
-    <li>
+    <li
+      className={undefined}
+    >
       <a
         aria-current={null}
         aria-label="Page 5"
+        className={undefined}
+        href={undefined}
         onClick={[Function]}
         onKeyPress={[Function]}
         tabIndex="0"
@@ -1774,10 +1815,14 @@ exports[`Storyshots Paginator default 1`] = `
     >
       ...
     </li>
-    <li>
+    <li
+      className={undefined}
+    >
       <a
         aria-current={null}
         aria-label="Page 9"
+        className={undefined}
+        href={undefined}
         onClick={[Function]}
         onKeyPress={[Function]}
         tabIndex="0"
@@ -1785,10 +1830,14 @@ exports[`Storyshots Paginator default 1`] = `
         9
       </a>
     </li>
-    <li>
+    <li
+      className={undefined}
+    >
       <a
         aria-current={null}
         aria-label="Page 10"
+        className={undefined}
+        href={undefined}
         onClick={[Function]}
         onKeyPress={[Function]}
         tabIndex="0"
@@ -1800,6 +1849,8 @@ exports[`Storyshots Paginator default 1`] = `
       className="next"
     >
       <a
+        className={undefined}
+        href={undefined}
         onClick={[Function]}
         onKeyPress={[Function]}
         tabIndex="0"
@@ -2301,7 +2352,9 @@ exports[`Storyshots Stepper Stepper 1`] = `
     }
   }
 >
-  <div>
+  <div
+    className={undefined}
+  >
     <ul
       className="jsx-291528123 stepper-header"
     >
@@ -2358,7 +2411,7 @@ exports[`Storyshots Stepper Stepper 1`] = `
       }
     >
       <button
-        className="jsx-3831438812 button"
+        className="jsx-744565053 button"
         disabled={false}
         onClick={[Function]}
         type="button"
@@ -2444,7 +2497,7 @@ exports[`Storyshots Toast default 1`] = `
   }
 >
   <button
-    className="jsx-3831438812 button"
+    className="jsx-744565053 button"
     disabled={false}
     onClick={[Function]}
     type="button"
@@ -2491,7 +2544,7 @@ exports[`Storyshots Video Player default 1`] = `
   }
 >
   <div
-    className="jsx-3627904323 video-player-container"
+    className="jsx-1622707451 video-player-container"
   >
     <div
       className="video-react-controls-enabled video-react-paused video-react-fluid video-react-user-active video-react-workinghover video-react video-player"
@@ -2509,7 +2562,11 @@ exports[`Storyshots Video Player default 1`] = `
       tabIndex="-1"
     >
       <video
+        autoPlay={undefined}
         className="video-react-video video-player"
+        crossOrigin={undefined}
+        id={undefined}
+        loop={undefined}
         muted={false}
         onAbort={[Function]}
         onCanPlay={[Function]}
@@ -2534,7 +2591,9 @@ exports[`Storyshots Video Player default 1`] = `
         onVolumeChange={[Function]}
         onWaiting={[Function]}
         playsInline={true}
+        poster={undefined}
         preload="auto"
+        src={undefined}
       />
       <button
         aria-live="polite"
@@ -2636,7 +2695,7 @@ exports[`Storyshots Video Recorder default 1`] = `
   }
 >
   <div
-    className="jsx-1166752729 jsx-760928758 video-recorder"
+    className="jsx-3895914587 jsx-4132344403 video-recorder"
   >
     <video
       autoPlay={true}
@@ -2654,7 +2713,7 @@ exports[`Storyshots Video Recorder default 1`] = `
         Start recording
       </p>
       <button
-        className="jsx-2296759800 record-button record-button--start"
+        className="jsx-2729577650 record-button record-button--start"
         onClick={[Function]}
       />
     </div>

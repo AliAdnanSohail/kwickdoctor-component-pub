@@ -19,7 +19,7 @@ exports[`renders correctly 1`] = `
     type="button"
   >
     <button
-      className="jsx-3831438812 button"
+      className="jsx-744565053 button"
       disabled={false}
       onClick={[Function]}
       type="button"
@@ -32,46 +32,46 @@ exports[`renders correctly 1`] = `
       <JSXStyle
         css={
           Array [
-            ".button.jsx-3831438812{position:relative;padding:13px 64px;height:52px;background-color:#0c97f9;box-sizing:border-box;cursor:pointer;color:#ffffff;line-height:26px;-webkit-transition:background-color 0.4s ease-in-out,border-color 0.4s ease-in-out;transition:background-color 0.4s ease-in-out,border-color 0.4s ease-in-out;overflow:hidden;border-width:1px;border-style:solid;border-color:#0c97f9;border-radius:26px;font-style:normal;font-weight:500;font-size:1rem;text-align:center;text-transform:uppercase;}",
-            ".button.jsx-3831438812:focus{outline:none;}",
-            ".button.jsx-3831438812 svg{fill:#ffffff;stroke:#ffffff;width:24px;height:24px;}",
-            ".button.jsx-3831438812 svg circle,path{stroke:#ffffff;}",
+            ".button.jsx-744565053{position:relative;padding:13px 64px;height:52px;background-color:#0c97f9;box-sizing:border-box;cursor:pointer;color:#ffffff;line-height:26px;-webkit-transition:background-color 0.4s ease-in-out,border-color 0.4s ease-in-out;transition:background-color 0.4s ease-in-out,border-color 0.4s ease-in-out;overflow:hidden;border-width:1px;border-style:solid;border-color:#0c97f9;border-radius:26px;font-style:normal;font-weight:500;font-size:1rem;text-align:center;text-transform:uppercase;}",
+            ".button.jsx-744565053:focus{outline:none;}",
+            ".button.jsx-744565053 svg{fill:#ffffff;stroke:#ffffff;width:24px;height:24px;}",
+            ".button.jsx-744565053 svg circle,path{stroke:#ffffff;}",
             ".button__content{display:inline-block;-webkit-transition:all 0.3s ease-in-out;transition:all 0.3s ease-in-out;}",
-            ".button__wave.jsx-3831438812{position:absolute;display:block;width:0;height:0;border-radius:50%;background-color:#ffffff;opacity:0.5;-webkit-transform:translate(-50%,-50%);-ms-transform:translate(-50%,-50%);transform:translate(-50%,-50%);}",
-            ".button--with-icon.jsx-3831438812 .button__content{-webkit-transform:translateX(16px);-ms-transform:translateX(16px);transform:translateX(16px);}",
-            ".button--disabled.jsx-3831438812{opacity:0.7;cursor:not-allowed;}",
-            ".button.jsx-3831438812:not(.button--disabled):hover,.button.jsx-3831438812:not(.button--disabled):focus{background-color:#38a9fa;border-color:#38a9fa;box-shadow:2px 2px 10px rgba(0,0,0,0.1);}",
-            ".button--flat.jsx-3831438812{color:#0c97f9;background-color:transparent;border-color:transparent;}",
-            ".button--flat.jsx-3831438812 svg{stroke:#2A2A30;fill:#2A2A30;}",
-            ".button--flat.jsx-3831438812 svg path,circle{stroke:#2A2A30;}",
-            ".button--flat.jsx-3831438812:not(.button--disabled):hover,.button--flat.jsx-3831438812:not(.button--disabled):focus{color:#0c97f9;background-color:transparent;border-color:transparent;box-shadow:none;}",
-            ".button--accent.jsx-3831438812{color:#0c97f9;background-color:transparent;border-color:transparent;}",
-            ".button--accent.jsx-3831438812 svg{stroke:#2A2A30;fill:#2A2A30;}",
-            ".button--accent.jsx-3831438812 svg path,circle{stroke:#2A2A30;}",
-            ".button--accent.jsx-3831438812:not(.button--disabled):hover,.button--accent.jsx-3831438812:not(.button--disabled):focus{color:#0c97f9;background-color:transparent;border-color:transparent;}",
-            ".button--danger.jsx-3831438812{color:#ffffff;background-color:#ea6577;border-color:#ea6577;}",
-            ".button--danger.jsx-3831438812:not(.button--disabled):hover,.button--danger.jsx-3831438812:not(.button--disabled):focus{background-color:#ed7888;border-color:#ed7888;}",
-            ".button--rounded.jsx-3831438812{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;width:52px;height:52px;padding:0 !important;border-radius:50%;}",
-            ".button.jsx-3831438812:not(.button--rounded) .button__icon{position:absolute;top:calc(50% - 12px);left:32px;}",
-            ".button--squared.jsx-3831438812{border-radius:12px;}",
-            ".button--transparent.jsx-3831438812{background-color:transparent;box-shadow:0px 0px 10px rgba(12,151,249,0.15);color:#0c97f9;}",
-            ".button--transparent.jsx-3831438812:not(.button--disabled):hover,.button--transparent.jsx-3831438812:not(.button--disabled):focus{color:#ffffff;}",
-            ".button--transparent.jsx-3831438812 svg{stroke:#2A2A30;fill:#2A2A30;}",
-            ".button--transparent.jsx-3831438812 svg path,circle{stroke:#2A2A30;}",
-            ".button--xs.jsx-3831438812{height:32px;line-height:1;padding:0 32px;font-size:0.75rem;}",
-            ".button--xs.button--rounded.jsx-3831438812{width:32px;height:32px;}",
-            ".button--xs.jsx-3831438812 svg{width:18px;height:18px;}",
-            ".button--xs.jsx-3831438812:not(.button--xs--rounded) .button__icon{left:16px;top:calc(50% - 9px);}",
-            ".button--s.jsx-3831438812{height:42px;line-height:1;padding:0 42px;font-size:0.875rem;}",
-            ".button--s.button--rounded.jsx-3831438812{width:42px;height:42px;}",
-            ".button--s.jsx-3831438812 svg{width:18px;height:18px;}",
-            ".button--s.jsx-3831438812:not(.button--s--rounded) .button__icon{left:21px;top:calc(50% - 9px);}",
-            ".button.has-clicked.jsx-3831438812 .button__wave.jsx-3831438812{-webkit-animation:wave-jsx-3831438812 0.8s;animation:wave-jsx-3831438812 0.8s;}",
-            "@-webkit-keyframes wave-jsx-3831438812{0%{opacity:0.5;width:0;height:0;}100%{opacity:0;width:300px;height:300px;}}",
-            "@keyframes wave-jsx-3831438812{0%{opacity:0.5;width:0;height:0;}100%{opacity:0;width:300px;height:300px;}}",
+            ".button__wave.jsx-744565053{position:absolute;display:block;width:0;height:0;border-radius:50%;background-color:#ffffff;opacity:0.5;-webkit-transform:translate(-50%,-50%);-ms-transform:translate(-50%,-50%);transform:translate(-50%,-50%);}",
+            ".button--with-icon.jsx-744565053 .button__content{-webkit-transform:translateX(16px);-ms-transform:translateX(16px);transform:translateX(16px);}",
+            ".button--disabled.jsx-744565053{opacity:0.7;cursor:not-allowed;}",
+            ".button.jsx-744565053:not(.button--disabled):hover,.button.jsx-744565053:not(.button--disabled):focus{background-color:#38a9fa;border-color:#38a9fa;box-shadow:2px 2px 10px rgba(0,0,0,0.1);}",
+            ".button--flat.jsx-744565053{color:#0c97f9;background-color:transparent;border-color:transparent;}",
+            ".button--flat.jsx-744565053 svg{stroke:#2A2A30;fill:#2A2A30;}",
+            ".button--flat.jsx-744565053 svg path,circle{stroke:#2A2A30;}",
+            ".button--flat.jsx-744565053:not(.button--disabled):hover,.button--flat.jsx-744565053:not(.button--disabled):focus{color:#0c97f9;background-color:transparent;border-color:transparent;box-shadow:none;}",
+            ".button--accent.jsx-744565053{color:#0c97f9;background-color:transparent;border-color:transparent;}",
+            ".button--accent.jsx-744565053 svg{stroke:#2A2A30;fill:#2A2A30;}",
+            ".button--accent.jsx-744565053 svg path,circle{stroke:#2A2A30;}",
+            ".button--accent.jsx-744565053:not(.button--disabled):hover,.button--accent.jsx-744565053:not(.button--disabled):focus{color:#0c97f9;background-color:transparent;border-color:transparent;}",
+            ".button--danger.jsx-744565053{color:#ffffff;background-color:#ea6577;border-color:#ea6577;}",
+            ".button--danger.jsx-744565053:not(.button--disabled):hover,.button--danger.jsx-744565053:not(.button--disabled):focus{background-color:#ed7888;border-color:#ed7888;}",
+            ".button--rounded.jsx-744565053{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;width:52px;height:52px;padding:0 !important;border-radius:50%;}",
+            ".button.jsx-744565053:not(.button--rounded) .button__icon{position:absolute;top:calc(50% - 12px);left:32px;}",
+            ".button--squared.jsx-744565053{border-radius:12px;}",
+            ".button--transparent.jsx-744565053{background-color:transparent;box-shadow:0px 0px 10px rgba(12,151,249,0.15);color:#0c97f9;}",
+            ".button--transparent.jsx-744565053:not(.button--disabled):hover,.button--transparent.jsx-744565053:not(.button--disabled):focus{color:#ffffff;}",
+            ".button--transparent.jsx-744565053 svg{stroke:#2A2A30;fill:#2A2A30;}",
+            ".button--transparent.jsx-744565053 svg path,circle{stroke:#2A2A30;}",
+            ".button--xs.jsx-744565053{height:32px;line-height:1;padding:0 32px;font-size:0.75rem;}",
+            ".button--xs.button--rounded.jsx-744565053{width:32px;height:32px;}",
+            ".button--xs.jsx-744565053 svg{width:18px;height:18px;}",
+            ".button--xs.jsx-744565053:not(.button--xs--rounded) .button__icon{left:16px;top:calc(50% - 9px);}",
+            ".button--s.jsx-744565053{height:42px;line-height:1;padding:0 42px;font-size:0.875rem;}",
+            ".button--s.button--rounded.jsx-744565053{width:42px;height:42px;}",
+            ".button--s.jsx-744565053 svg{width:18px;height:18px;}",
+            ".button--s.jsx-744565053:not(.button--s--rounded) .button__icon{left:21px;top:calc(50% - 9px);}",
+            ".button.has-clicked.jsx-744565053 .button__wave.jsx-744565053{-webkit-animation:wave-jsx-744565053 0.8s;animation:wave-jsx-744565053 0.8s;}",
+            "@-webkit-keyframes wave-jsx-744565053{0%{opacity:0.5;width:0;height:0;}100%{opacity:0;width:300px;height:300px;}}",
+            "@keyframes wave-jsx-744565053{0%{opacity:0.5;width:0;height:0;}100%{opacity:0;width:300px;height:300px;}}",
           ]
         }
-        styleId="3831438812"
+        styleId="744565053"
       />
     </button>
   </Button>
