@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { CameraIcon, TrashIcon } from 'grommet/components/icons';
 import classnames from 'classnames';
-
+import MaterialIcon from 'material-icons-react';
 import { avatarCircle, fileInput } from './styles';
 import { Button } from '../../';
 
