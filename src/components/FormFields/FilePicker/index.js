@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
+import MaterialIcon from 'material-icons-react';
 import { CloseIcon, DocumentIcon, UploadIcon } from 'grommet/components/icons/base';
 
 import styles from './styles';
@@ -38,7 +39,7 @@ export default class FilePicker extends Component {
     return (
       <label className={classes} htmlFor={id}>
         <div className="upload-file__label-container">
-          {value.name ? <DocumentIcon /> : <UploadIcon />}
+          {value.name ? <DocumentIcon /> : <MaterialIcon icon="cloud_upload" color="#0c97f9" size={28} />}
 
           <div className="upload-file__label">{value.name || placeholder}</div>
         </div>
@@ -47,7 +48,7 @@ export default class FilePicker extends Component {
           <Button
             className="upload-file__close-icon"
             flat
-            icon={<CloseIcon />}
+            icon={<MaterialIcon icon="close" color="#828282" size={16} />}
             onClick={this.handleRemove}
             rounded
             size="xs"

@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
-import { CameraIcon, TrashIcon } from 'grommet/components/icons';
 import classnames from 'classnames';
 import MaterialIcon from 'material-icons-react';
+import PropTypes from 'prop-types';
+
 import { avatarCircle, fileInput } from './styles';
 import { Button } from '../../';
 
@@ -47,7 +47,7 @@ export default class AvatarPicker extends Component {
       <div className={avatar}>
         <div className="avatar__button--remove">
           {(value.name || defaultValue) && (
-            <Button onClick={this.handleRemove} icon={<TrashIcon />} size="xs" rounded danger />
+            <Button onClick={this.handleRemove} icon={<MaterialIcon icon="delete_outline" color="white" size="50%" />} size="xs" rounded danger />
           )}
         </div>
 
@@ -66,7 +66,7 @@ export default class AvatarPicker extends Component {
           />
 
           <div className={classes} style={{ backgroundImage: src }}>
-            {!(value.name || defaultValue) && <CameraIcon />}
+            {!(value.name || defaultValue) && <MaterialIcon icon="photo_camera" color="#bbbccd" size="50%" />}
           </div>
         </label>
 

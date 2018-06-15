@@ -1,11 +1,11 @@
 import React from 'react';
+import MaterialIcon from 'material-icons-react';
 import PropTypes from 'prop-types';
-import AddIcon from 'grommet/components/icons/base/Add';
-
-import KEYS from '../../../../utils/keys';
-import Suggestions from './../Suggestions';
 
 import styles from './styles';
+import Suggestions from './../Suggestions';
+import KEYS from '../../../../utils/keys';
+
 
 export default class ExistingTags extends React.Component {
   constructor(props) {
@@ -76,7 +76,7 @@ export default class ExistingTags extends React.Component {
       !!existingTags.length && (
         <li className="tag-input__add-existing-tag">
           <button onClick={this.handleClick} onKeyDown={this.handleKeyDown}>
-            <AddIcon />
+            <MaterialIcon icon="add" color="#ffffff" size={12} />
             Add existing tag
           </button>
           <Suggestions

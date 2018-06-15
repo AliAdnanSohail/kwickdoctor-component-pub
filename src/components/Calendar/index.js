@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
+import MaterialIcon from 'material-icons-react';
 import Moment from 'moment';
 import { extendMoment } from 'moment-range';
-import { NextIcon, PreviousIcon } from 'grommet/components/icons/base';
+import PropTypes from 'prop-types';
 
 import Month from './Month';
 import { header, navigation, calendar as calendarStyles } from './styles';
@@ -65,7 +65,7 @@ export default class Calendar extends Component {
     return (
       <div className="navigation">
         <button className="prev" onClick={() => this.onChangeMonth(-1)}>
-          <PreviousIcon />
+          <MaterialIcon icon="navigate_before" size={36} color="#666" />
         </button>
 
         <div className="navigation__month">
@@ -75,7 +75,7 @@ export default class Calendar extends Component {
         </div>
 
         <button className="next" onClick={() => this.onChangeMonth(1)}>
-          <NextIcon />
+          <MaterialIcon icon="navigate_next" size={36} color="#666" />
         </button>
 
         <style jsx>{navigation}</style>
