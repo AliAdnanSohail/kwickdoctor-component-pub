@@ -86,7 +86,7 @@ export default class TimePicker extends Component {
                 })}
                 key={time.value}
               >
-                {time}
+                { time < 10 ? (`0${time}`) : time }
               </div>
             ))}
           </div>
@@ -113,7 +113,7 @@ export default class TimePicker extends Component {
                 onClick={e => this.changeMin(e)}
                 onKeyPress={e => this.changeMin(e)}
               >
-                {time}
+                { time < 10 ? (`0${time}`) : time }
               </div>
             ))}
           </div>
