@@ -13,7 +13,7 @@ export const fileInput = css`
   }
 `;
 
-export const avatarCircle = css`
+export const avatar = css`
   .avatar {
     position: relative;
 

@@ -1,8 +1,7 @@
 import React, { Component, Fragment } from 'react';
-import PropTypes from 'prop-types';
 import classnames from 'classnames';
-
-import { SpinningIcon } from 'grommet/components/icons';
+import MaterialIcon from 'material-icons-react';
+import PropTypes from 'prop-types';
 
 import styles from './styles';
 
@@ -45,7 +44,7 @@ export default class Button extends Component {
 
     return (
       <Fragment>
-        {loading && <SpinningIcon size="small" className="button__icon" />}
+        {loading && <MaterialIcon icon="loop" color="white" size="small" className="button__icon" />}
         {!loading && icon && React.cloneElement(icon, { className: 'button__icon' })}
         {!rounded && <span className="button__content">{children}</span>}
       </Fragment>

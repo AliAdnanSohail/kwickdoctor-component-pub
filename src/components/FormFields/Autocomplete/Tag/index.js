@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
+import MaterialIcon from 'material-icons-react';
 import PropTypes from 'prop-types';
-import { CloseIcon } from 'grommet/components/icons/base';
 
 import styles from './styles';
 
@@ -12,7 +12,7 @@ export default class Tag extends Component {
       <div className="tag">
         <div className="tag__text">{name}</div>
         <button className="tag__button" onClick={onRemove}>
-          <CloseIcon />
+          <MaterialIcon icon="close" color="#000000" size={14} />
         </button>
 
         <style jsx>{styles}</style>

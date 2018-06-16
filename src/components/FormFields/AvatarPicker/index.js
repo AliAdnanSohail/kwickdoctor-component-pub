@@ -1,33 +1,72 @@
 import React, { Component } from 'react';
 import classnames from 'classnames';
-import { CameraIcon, TrashIcon } from 'grommet/components/icons';
+import MaterialIcon from 'material-icons-react';
 import PropTypes from 'prop-types';
 
-import { avatarCircle, fileInput } from './styles';
-import { Button } from '../../';
+import { avatar as avatarStyles, fileInput } from './styles';
+import Button from '../../Button';
 
 export default class AvatarPicker extends Component {
-  constructor(props) {
-    super(props);
+  constructor() {
+    super();
 
-    this.state = { avatar: {} };
+    this.state = { avatar: null };
+  }
+
+  componentWillMount() {
+    const {
+      baseURL,
+      input: { value, onChange },
+    } = this.props;
+
+    if (value && typeof value === 'string') {
+      fetch(`${baseURL}${value}`, { method: 'GET' })
+        .then(response => response.blob())
+        .then((avatar) => {
+          this.setState({ avatar }, () => {
+            onChange(this.state.avatar);
+          });
+        });
+    }
+  }
+
+  componentDidUpdate(props) {
+    const {
+      baseURL,
+      input: { value, onChange },
+    } = this.props;
+
+    if (props.input.value !== value && value && typeof value === 'string') {
+      fetch(`${baseURL}${value}`, { method: 'GET' })
+        .then(response => response.blob())
+        .then((avatar) => {
+          this.setState({ avatar }, () => {
+            onChange(this.state.avatar);
+          });
+        });
+    }
   }
 
   handleChange = (event) => {
-    const { input } = this.props;
+    const {
+      input: { onChange },
+    } = this.props;
 
     this.setState({ avatar: event.target.files[0] });
 
-    input.onChange(event.target.files[0]);
+    onChange(event.target.files[0]);
   };
 
   handleRemove = (event) => {
-    const { input } = this.props;
+    const {
+      input: { onChange },
+    } = this.props;
 
     event.preventDefault();
 
-    input.onChange(null);
-    this.setState({ avatar: '' });
+    this.setState({ avatar: null });
+
+    onChange(null);
   };
 
   render() {
@@ -36,34 +75,39 @@ export default class AvatarPicker extends Component {
       containerClassName,
       id,
       input: { value, ...inputProps },
-      resetKey,
       size,
     } = this.props;
-
-    let src = 'none';
-
-    if (this.state.avatar.name) {
-      src = URL.createObjectURL(this.state.avatar);
-    }
+    const { avatar } = this.state;
 
     const avatarContainer = classnames('avatar', containerClassName);
-
-    const avatarStyle = {
-      backgroundImage: `url(${src})`,
+    const classes = {
+      backgroundImage: `url(${avatar ? URL.createObjectURL(avatar) : ''})`,
       borderRadius: `${borderRadius}px`,
       height: `${size}px`,
       width: `${size}px`,
     };
 
+    const isSelected = avatar && (avatar instanceof Blob || avatar.name);
+
     return (
       <div className={avatarContainer}>
+        <div className="avatar__button--remove">
+          {isSelected && (
+            <Button
+              onClick={this.handleRemove}
+              icon={<MaterialIcon icon="delete_outline" color="white" size="50%" />}
+              size="xs"
+              rounded
+              danger
+            />
+          )}
+        </div>
 
         <label className="avatar__container" htmlFor={id} aria-label="Edit image">
           <input
             {...inputProps}
             className="file-input"
             id={id}
-            key={resetKey}
             onBlur={() => {}}
             onChange={this.handleChange}
             ref={(input) => {
@@ -72,18 +116,12 @@ export default class AvatarPicker extends Component {
             type="file"
           />
 
-          <div className="avatar__thumb" style={avatarStyle}>
-            {!(this.state.avatar.name) && <CameraIcon />}
-
-            <div className="avatar__button--remove">
-              {(this.state.avatar.name) && (
-                <Button onClick={this.handleRemove} icon={<TrashIcon />} size="xs" rounded danger />
-              )}
-            </div>
+          <div className={classes}>
+            {!isSelected && <MaterialIcon icon="photo_camera" color="#bbbccd" size="50%" />}
           </div>
         </label>
 
-        <style jsx>{avatarCircle}</style>
+        <style jsx>{avatarStyles}</style>
         <style jsx>{fileInput}</style>
       </div>
     );
