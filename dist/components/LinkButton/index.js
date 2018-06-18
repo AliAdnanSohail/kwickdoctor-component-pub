@@ -19,6 +19,10 @@ var _classnames2 = require('classnames');
 
 var _classnames3 = _interopRequireDefault(_classnames2);
 
+var _materialIconsReact = require('material-icons-react');
+
+var _materialIconsReact2 = _interopRequireDefault(_materialIconsReact);
+
 var _propTypes = require('prop-types');
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
@@ -73,7 +77,7 @@ var LinkButton = function (_Component) {
         icon && _react2.default.createElement(
           'span',
           { className: 'button__icon' },
-          icon
+          _react2.default.createElement(_materialIconsReact2.default, { icon: icon })
         ),
         !rounded && _react2.default.createElement(
           'span',

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import classnames from 'classnames';
+import MaterialIcon from 'material-icons-react';
 import PropTypes from 'prop-types';
 import { NavLink } from 'react-router-dom';
 
@@ -36,7 +37,11 @@ export default class LinkButton extends Component {
 
     return (
       <NavLink className={classes} to={link}>
-        {icon && <span className="button__icon">{icon}</span>}
+        {icon && (
+          <span className="button__icon">
+            <MaterialIcon icon={icon} />
+          </span>
+        )}
         {!rounded && <span className="button__content">{children}</span>}
 
         <style jsx global>{styles}</style>
