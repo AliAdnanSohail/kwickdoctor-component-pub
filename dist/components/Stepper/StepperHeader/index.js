@@ -23,7 +23,9 @@ var _classnames = require('classnames');
 
 var _classnames2 = _interopRequireDefault(_classnames);
 
-var _base = require('grommet/components/icons/base');
+var _materialIconsReact = require('material-icons-react');
+
+var _materialIconsReact2 = _interopRequireDefault(_materialIconsReact);
 
 var _styles = require('./styles');
 
@@ -71,7 +73,7 @@ var StepperHeader = function (_Component) {
             {
               className: 'jsx-' + _styles.stepIcon.__scopedHash
             },
-            completed ? _react2.default.createElement(_base.CheckmarkIcon, null) : undefined
+            completed ? _react2.default.createElement(_materialIconsReact2.default, { icon: 'done' }) : undefined
           ),
           _react2.default.createElement(_style2.default, {
             styleId: _styles.stepIcon.__scopedHash,

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
 import classnames from 'classnames';
+import PropTypes from 'prop-types';
 
 import styles from './styles';
 
@@ -25,14 +25,14 @@ export default class Navigation extends Component {
 }
 
 Navigation.propTypes = {
+  after: PropTypes.element,
   before: PropTypes.element,
   children: PropTypes.node.isRequired,
   className: PropTypes.string,
-  after: PropTypes.element,
 };
 
 Navigation.defaultProps = {
+  after: undefined,
   before: undefined,
   className: undefined,
-  after: undefined,
 };

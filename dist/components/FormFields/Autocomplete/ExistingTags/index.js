@@ -15,25 +15,25 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
+var _materialIconsReact = require('material-icons-react');
+
+var _materialIconsReact2 = _interopRequireDefault(_materialIconsReact);
+
 var _propTypes = require('prop-types');
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
 
-var _Add = require('grommet/components/icons/base/Add');
+var _styles = require('./styles');
 
-var _Add2 = _interopRequireDefault(_Add);
-
-var _keys = require('../../../../utils/keys');
-
-var _keys2 = _interopRequireDefault(_keys);
+var _styles2 = _interopRequireDefault(_styles);
 
 var _Suggestions = require('./../Suggestions');
 
 var _Suggestions2 = _interopRequireDefault(_Suggestions);
 
-var _styles = require('./styles');
+var _keys = require('../../../../utils/keys');
 
-var _styles2 = _interopRequireDefault(_styles);
+var _keys2 = _interopRequireDefault(_keys);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -136,7 +136,7 @@ var ExistingTags = function (_React$Component) {
           'button',
           { onClick: this.handleClick, onKeyDown: this.handleKeyDown, className: 'jsx-' + _styles2.default.__scopedHash
           },
-          _react2.default.createElement(_Add2.default, null),
+          _react2.default.createElement(_materialIconsReact2.default, { icon: 'add', color: '#ffffff', size: 12 }),
           'Add existing tag'
         ),
         _react2.default.createElement(_Suggestions2.default, {

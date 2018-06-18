@@ -15,8 +15,6 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
-var _icons = require('grommet/components/icons');
-
 var _styles = require('./styles');
 
 var _styles2 = _interopRequireDefault(_styles);
@@ -44,9 +42,23 @@ var Loader = function (_Component) {
       return _react2.default.createElement(
         'div',
         {
-          className: 'jsx-' + _styles2.default.__scopedHash + ' ' + 'loader-container'
+          className: 'jsx-' + _styles2.default.__scopedHash + ' ' + 'loader'
         },
-        _react2.default.createElement(_icons.SpinningIcon, { size: 'large', className: 'button__icon' }),
+        _react2.default.createElement(
+          'svg',
+          {
+            className: 'jsx-' + _styles2.default.__scopedHash + ' ' + 'circular'
+          },
+          _react2.default.createElement('circle', {
+            cx: '50',
+            cy: '50',
+            r: '20',
+            fill: 'none',
+            strokeWidth: '2',
+            strokeMiterlimit: '10',
+            className: 'jsx-' + _styles2.default.__scopedHash + ' ' + 'path'
+          })
+        ),
         _react2.default.createElement(_style2.default, {
           styleId: _styles2.default.__scopedHash,
           css: _styles2.default.__scoped

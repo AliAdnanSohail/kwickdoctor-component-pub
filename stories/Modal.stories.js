@@ -1,16 +1,16 @@
 import React, { Fragment } from 'react';
-import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
-import { withKnobs, text } from '@storybook/addon-knobs/react';
 import { checkA11y } from '@storybook/addon-a11y';
 import { withTests } from '@storybook/addon-jest';
+import { withKnobs, text } from '@storybook/addon-knobs/react';
+import { storiesOf } from '@storybook/react';
 
 import { Button, Modal } from '../src';
 import results from '../.jest-test-results.json';
 
 class ModalWrapper extends React.Component {
-  constructor(props) {
-    super(props);
+  constructor() {
+    super();
 
     this.state = { active: false };
   }

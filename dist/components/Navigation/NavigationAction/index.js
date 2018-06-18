@@ -11,6 +11,10 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
+var _materialIconsReact = require('material-icons-react');
+
+var _materialIconsReact2 = _interopRequireDefault(_materialIconsReact);
+
 var _styles = require('./styles');
 
 var _styles2 = _interopRequireDefault(_styles);
@@ -38,7 +42,7 @@ var NavigationAction = function (_Component) {
       var _props = this.props,
           onClick = _props.onClick,
           label = _props.label,
-          Icon = _props.icon;
+          icon = _props.icon;
 
 
       return _react2.default.createElement(
@@ -47,7 +51,7 @@ var NavigationAction = function (_Component) {
         _react2.default.createElement(
           'button',
           { onClick: onClick, className: 'nav-item' },
-          _react2.default.createElement(Icon, { className: 'nav-item__icon' }),
+          _react2.default.createElement(_materialIconsReact2.default, { color: '#ffffff', icon: icon, size: 24 }),
           _react2.default.createElement(
             'span',
             { className: 'nav-item__label' },

@@ -1,6 +1,6 @@
 import React from 'react';
 import { mount } from 'enzyme';
-import { EditIcon, SpinningIcon } from 'grommet/components/icons';
+import MaterialIcon from 'material-icons-react';
 
 import { Button } from '../src';
 
@@ -40,13 +40,13 @@ it('flat button renders correctly', () => {
 });
 
 it('rounded button renders correctly', () => {
-  const element = mount(<Button icon={<EditIcon />} rounded>Hello!</Button>);
+  const element = mount(<Button icon="edit" rounded>Hello!</Button>);
 
   expect(element.find('button').hasClass('button--rounded')).toEqual(true);
   expect(element
     .find('button')
     .childAt(0)
-    .type()).toEqual(EditIcon);
+    .text()).toEqual('edit');
 });
 
 it('squared button renders correctly', () => {
@@ -68,17 +68,17 @@ it('button with loading prop renders correctly', () => {
   expect(element
     .find('button')
     .childAt(0)
-    .type()).toEqual(SpinningIcon);
+    .text()).toEqual('loop');
 });
 
 it('button with icon renders correctly', () => {
-  const element = mount(<Button icon={<EditIcon />}>Hello!</Button>);
+  const element = mount(<Button icon="edit">Hello!</Button>);
 
   expect(element.find('button').hasClass('button--with-icon')).toEqual(true);
   expect(element
     .find('button')
     .childAt(0)
-    .type()).toEqual(EditIcon);
+    .text()).toEqual('edit');
 });
 
 it('wave effect shows correctly', () => {
@@ -95,14 +95,14 @@ it('wave effect shows correctly', () => {
   clearTimeout(timeout);
 });
 
-it('xs button renders correctly', () => {
-  const element = mount(<Button size="xs">Hello!</Button>);
+it('xsmall button renders correctly', () => {
+  const element = mount(<Button size="xsmall">Hello!</Button>);
 
-  expect(element.find('button').hasClass('button--xs')).toEqual(true);
+  expect(element.find('button').hasClass('button--xsmall')).toEqual(true);
 });
 
-it('s button renders correctly', () => {
-  const element = mount(<Button size="s">Hello!</Button>);
+it('small button renders correctly', () => {
+  const element = mount(<Button size="small">Hello!</Button>);
 
-  expect(element.find('button').hasClass('button--s')).toEqual(true);
+  expect(element.find('button').hasClass('button--small')).toEqual(true);
 });

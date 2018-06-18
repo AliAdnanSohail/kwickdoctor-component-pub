@@ -15,15 +15,17 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
-var _propTypes = require('prop-types');
-
-var _propTypes2 = _interopRequireDefault(_propTypes);
-
 var _classnames2 = require('classnames');
 
 var _classnames3 = _interopRequireDefault(_classnames2);
 
-var _icons = require('grommet/components/icons');
+var _materialIconsReact = require('material-icons-react');
+
+var _materialIconsReact2 = _interopRequireDefault(_materialIconsReact);
+
+var _propTypes = require('prop-types');
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
 
 var _styles = require('./styles');
 
@@ -42,10 +44,10 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 var Button = function (_Component) {
   _inherits(Button, _Component);
 
-  function Button(props) {
+  function Button() {
     _classCallCheck(this, Button);
 
-    var _this = _possibleConstructorReturn(this, (Button.__proto__ || Object.getPrototypeOf(Button)).call(this, props));
+    var _this = _possibleConstructorReturn(this, (Button.__proto__ || Object.getPrototypeOf(Button)).call(this));
 
     _this.handleClick = function (event) {
       var _this$button$getBound = _this.button.getBoundingClientRect(),
@@ -62,30 +64,12 @@ var Button = function (_Component) {
         }, 300);
       });
 
-      if (_this.props.onClick) {
-        _this.props.onClick(event);
+      var onClick = _this.props.onClick;
+
+
+      if (onClick) {
+        onClick(event);
       }
-    };
-
-    _this.renderContent = function () {
-      var _this$props = _this.props,
-          children = _this$props.children,
-          icon = _this$props.icon,
-          loading = _this$props.loading,
-          rounded = _this$props.rounded;
-
-
-      return _react2.default.createElement(
-        _react.Fragment,
-        null,
-        loading && _react2.default.createElement(_icons.SpinningIcon, { size: 'small', className: 'button__icon' }),
-        !loading && icon && _react2.default.cloneElement(icon, { className: 'button__icon' }),
-        !rounded && _react2.default.createElement(
-          'span',
-          { className: 'button__content' },
-          children
-        )
-      );
     };
 
     _this.state = { top: 0, left: 0, clicked: false };
@@ -105,6 +89,7 @@ var Button = function (_Component) {
       var _props = this.props,
           accent = _props.accent,
           className = _props.className,
+          children = _props.children,
           danger = _props.danger,
           disabled = _props.disabled,
           flat = _props.flat,
@@ -134,7 +119,27 @@ var Button = function (_Component) {
           disabled: disabled,
           className: 'jsx-' + _styles2.default.__scopedHash + ' ' + (classes || '')
         },
-        this.renderContent(),
+        loading && _react2.default.createElement(
+          'div',
+          {
+            className: 'jsx-' + _styles2.default.__scopedHash + ' ' + 'button__icon button__loading-icon'
+          },
+          _react2.default.createElement(_materialIconsReact2.default, { icon: 'loop' })
+        ),
+        !loading && icon && _react2.default.createElement(
+          'div',
+          {
+            className: 'jsx-' + _styles2.default.__scopedHash + ' ' + 'button__icon'
+          },
+          _react2.default.createElement(_materialIconsReact2.default, { icon: icon })
+        ),
+        !rounded && _react2.default.createElement(
+          'span',
+          {
+            className: 'jsx-' + _styles2.default.__scopedHash + ' ' + 'button__content'
+          },
+          children
+        ),
         clicked && _react2.default.createElement('span', { style: { top: top, left: left }, className: 'jsx-' + _styles2.default.__scopedHash + ' ' + 'button__wave'
         }),
         _react2.default.createElement(_style2.default, {
@@ -154,8 +159,8 @@ exports.default = Button;
 Button.propTypes = {
   className: _propTypes2.default.string,
   children: _propTypes2.default.any,
-  icon: _propTypes2.default.element,
-  size: _propTypes2.default.oneOf(['s', 'xs', '']),
+  icon: _propTypes2.default.string,
+  size: _propTypes2.default.oneOf(['small', 'xsmall', '']),
   accent: _propTypes2.default.bool,
   danger: _propTypes2.default.bool,
   disabled: _propTypes2.default.bool,
@@ -171,7 +176,7 @@ Button.propTypes = {
 Button.defaultProps = {
   className: '',
   children: null,
-  icon: null,
+  icon: '',
   size: undefined,
   accent: false,
   danger: false,

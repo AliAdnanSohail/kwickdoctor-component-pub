@@ -10,20 +10,15 @@ export default css`
       padding-right: 30px;
     }
 
-    :global(svg) {
+    :global(.material-icons) {
       position: absolute;
       right: 15px;
-      top: calc(50% - 6px);
+      top: calc(50% - 12px);
 
       height: 12px;
       width: 12px;
 
-      fill: ${settings.borderColor};
-      stroke: ${settings.borderColor};
-
-      :global(polyline) {
-        stroke-width: 5;
-      }
+      color: ${settings.borderColor};
     }
   }
 `;

@@ -66,71 +66,69 @@ export default class AvatarPicker extends Component {
 
     this.setState({ avatar: null });
 
+    this.input.value = null;
+
     onChange(null);
   };
 
   render() {
     const {
       borderRadius,
-      containerClassName,
+      className,
       id,
       input: { value, ...inputProps },
       size,
     } = this.props;
     const { avatar } = this.state;
 
-    const avatarContainer = classnames('avatar', containerClassName);
-    const classes = {
-      backgroundImage: `url(${avatar ? URL.createObjectURL(avatar) : ''})`,
+    const styles = {
+      backgroundImage: avatar ? `url(${URL.createObjectURL(avatar)})` : '',
       borderRadius: `${borderRadius}px`,
       height: `${size}px`,
       width: `${size}px`,
     };
 
     const isSelected = avatar && (avatar instanceof Blob || avatar.name);
+    const classes = classnames('avatar', className);
 
     return (
-      <div className={avatarContainer}>
-        <div className="avatar__button--remove">
-          {isSelected && (
+      <label aria-label="Edit image" className={classes} htmlFor={id} style={styles}>
+        {isSelected && (
+          <div className="avatar__button">
             <Button
               onClick={this.handleRemove}
-              icon={<MaterialIcon icon="delete_outline" color="white" size="50%" />}
-              size="xs"
+              icon="delete_outline"
+              size="xsmall"
               rounded
               danger
             />
-          )}
-        </div>
-
-        <label className="avatar__container" htmlFor={id} aria-label="Edit image">
-          <input
-            {...inputProps}
-            className="file-input"
-            id={id}
-            onBlur={() => {}}
-            onChange={this.handleChange}
-            ref={(input) => {
-              this.input = input;
-            }}
-            type="file"
-          />
-
-          <div className={classes}>
-            {!isSelected && <MaterialIcon icon="photo_camera" color="#bbbccd" size="50%" />}
           </div>
-        </label>
+        )}
+
+        <input
+          {...inputProps}
+          className="file-input"
+          id={id}
+          onBlur={() => {}}
+          onChange={this.handleChange}
+          ref={(input) => {
+            this.input = input;
+          }}
+          type="file"
+        />
+
+        {!isSelected && <MaterialIcon color="#BBBCCD" icon="photo_camera" size={size / 2} />}
 
         <style jsx>{avatarStyles}</style>
         <style jsx>{fileInput}</style>
-      </div>
+      </label>
     );
   }
 }
 
 AvatarPicker.propTypes = {
   borderRadius: PropTypes.number,
-  containerClassName: PropTypes.string,
+  className: PropTypes.string,
   id: PropTypes.string.isRequired,
   input: PropTypes.object,
   size: PropTypes.number,
@@ -138,7 +136,7 @@ AvatarPicker.propTypes = {
 
 AvatarPicker.defaultProps = {
   borderRadius: 3,
-  containerClassName: '',
+  className: '',
   input: {
     onChange: () => {},
     value: {},

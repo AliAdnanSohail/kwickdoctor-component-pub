@@ -1,25 +1,8 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { StarIcon } from 'grommet/components/icons/base';
+import MaterialIcon from 'material-icons-react';
 
 import styles from './styles';
-
-const greyTheme = {
-  icon: {
-    size: {
-      large: '40px',
-    },
-    color: '#bcbecf',
-  },
-};
-const greenTheme = {
-  icon: {
-    size: {
-      large: '40px',
-    },
-    color: '#70c983',
-  },
-};
 
 export default class StarPicker extends Component {
   constructor(props) {
@@ -53,10 +36,7 @@ export default class StarPicker extends Component {
               onChange={e => this.handleChange(e)}
               onClick={this.props.onClick}
             />
-            <StarIcon
-              theme={this.state.selectedOption >= star.value ? greenTheme : greyTheme}
-              size="large"
-            />
+            <MaterialIcon icon="star" />
           </label>
         ))}
         <style jsx>{styles}</style>

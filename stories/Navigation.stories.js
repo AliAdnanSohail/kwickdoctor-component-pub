@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
-import { DashboardIcon, NotificationIcon } from 'grommet/components/icons/base';
-import { storiesOf } from '@storybook/react';
-import { withKnobs } from '@storybook/addon-knobs/react';
 import { checkA11y } from '@storybook/addon-a11y';
 import { withTests } from '@storybook/addon-jest';
+import { withKnobs } from '@storybook/addon-knobs/react';
+import { storiesOf } from '@storybook/react';
 
 import { Navigation, NavigationItem, NavigationAction } from '../src';
 import results from '../.jest-test-results.json';
@@ -18,10 +17,15 @@ class NavigationWrapper extends Component {
       <BrowserRouter>
         <main style={{ minHeight: '100vh', display: 'flex' }}>
           <Navigation>
-            <NavigationItem route="/dashboard" icon={DashboardIcon} label="Dashboards" />
-            <NavigationItem route="/notifications" icon={NotificationIcon} label="Notifications" />
-            <NavigationAction icon={NotificationIcon} label="Sign out" />
+            <NavigationItem route="/dashboard" icon="dashboard" label="Dashboards" />
+            <NavigationItem
+              route="/notifications"
+              icon="assignment_outline"
+              label="Notifications"
+            />
+            <NavigationAction icon="photo_camera_outline" label="Sign out" />
           </Navigation>
+
           <Switch>
             <Route path="/dashboard" component={Dashboard} exact />
             <Route path="/notifications" component={Notifications} exact />

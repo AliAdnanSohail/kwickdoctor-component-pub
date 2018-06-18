@@ -11,6 +11,14 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
+var _classnames = require('classnames');
+
+var _classnames2 = _interopRequireDefault(_classnames);
+
+var _moment = require('moment');
+
+var _moment2 = _interopRequireDefault(_moment);
+
 var _propTypes = require('prop-types');
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
@@ -18,18 +26,6 @@ var _propTypes2 = _interopRequireDefault(_propTypes);
 var _reactDatepicker = require('react-datepicker');
 
 var _reactDatepicker2 = _interopRequireDefault(_reactDatepicker);
-
-var _moment = require('moment');
-
-var _moment2 = _interopRequireDefault(_moment);
-
-var _classnames = require('classnames');
-
-var _classnames2 = _interopRequireDefault(_classnames);
-
-var _v = require('uuid/v4');
-
-var _v2 = _interopRequireDefault(_v);
 
 require('react-datepicker/dist/react-datepicker.css');
 
@@ -56,11 +52,11 @@ var DatePicker = function (_Component) {
 
       if (_moment2.default.isMoment(value) && value.isValid()) {
         _this.setState({ value: value });
+
         _this.props.input.onChange(value);
       }
     };
 
-    _this.id = (0, _v2.default)();
     _this.state = { value: (0, _moment2.default)(props.input.value) };
     return _this;
   }
@@ -69,12 +65,12 @@ var DatePicker = function (_Component) {
     key: 'render',
     value: function render() {
       var _props = this.props,
-          id = _props.id,
-          label = _props.label,
-          dateFormat = _props.dateFormat,
           containerClassName = _props.containerClassName,
-          meta = _props.meta,
-          name = _props.input.name;
+          dateFormat = _props.dateFormat,
+          id = _props.id,
+          name = _props.input.name,
+          label = _props.label,
+          meta = _props.meta;
       var value = this.state.value;
 
 
@@ -101,11 +97,11 @@ var DatePicker = function (_Component) {
           selected: value,
           useWeekdaysShort: true
         }),
-        meta && meta.error && meta.touched ? _react2.default.createElement(
+        meta && meta.error && meta.touched && _react2.default.createElement(
           'div',
           { className: 'error' },
           meta.error
-        ) : undefined,
+        ),
         _react2.default.createElement(
           'style',
           null,
@@ -147,20 +143,20 @@ exports.default = DatePicker;
 
 
 DatePicker.propTypes = {
-  id: _propTypes2.default.string.isRequired,
-  label: _propTypes2.default.string,
-  meta: _propTypes2.default.object,
-  input: _propTypes2.default.object,
+  containerClassName: _propTypes2.default.string,
   dateFormat: _propTypes2.default.string,
-  containerClassName: _propTypes2.default.string
+  id: _propTypes2.default.string.isRequired,
+  input: _propTypes2.default.object,
+  label: _propTypes2.default.string,
+  meta: _propTypes2.default.object
 };
 
 DatePicker.defaultProps = {
+  containerClassName: undefined,
+  dateFormat: 'DD MMM, YYYY',
   input: {
     value: (0, _moment2.default)()
   },
-  meta: {},
   label: undefined,
-  dateFormat: 'DD MMM, YYYY',
-  containerClassName: undefined
+  meta: {}
 };

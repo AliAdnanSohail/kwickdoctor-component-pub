@@ -25,7 +25,9 @@ var _classnames = require('classnames');
 
 var _classnames2 = _interopRequireDefault(_classnames);
 
-var _base = require('grommet/components/icons/base');
+var _materialIconsReact = require('material-icons-react');
+
+var _materialIconsReact2 = _interopRequireDefault(_materialIconsReact);
 
 var _styles = require('./styles');
 
@@ -33,7 +35,9 @@ var _styles2 = _interopRequireDefault(_styles);
 
 var _styles3 = require('../styles');
 
-var _ = require('../../');
+var _Button = require('../../Button');
+
+var _Button2 = _interopRequireDefault(_Button);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -100,7 +104,7 @@ var FilePicker = function (_Component) {
           {
             className: 'jsx-' + _styles2.default.__scopedHash + ' jsx-' + _styles3.error.__scopedHash + ' ' + 'upload-file__label-container'
           },
-          value.name ? _react2.default.createElement(_base.DocumentIcon, null) : _react2.default.createElement(_base.UploadIcon, null),
+          value.name ? _react2.default.createElement(_materialIconsReact2.default, { icon: 'outline_assignment', color: '#0c97f9', size: 28 }) : _react2.default.createElement(_materialIconsReact2.default, { icon: 'outline_cloud_upload', color: '#0c97f9', size: 28 }),
           _react2.default.createElement(
             'div',
             {
@@ -109,10 +113,10 @@ var FilePicker = function (_Component) {
             value.name || placeholder
           )
         ),
-        value.name && _react2.default.createElement(_.Button, {
+        value.name && _react2.default.createElement(_Button2.default, {
           className: 'upload-file__close-icon',
           flat: true,
-          icon: _react2.default.createElement(_base.CloseIcon, null),
+          icon: 'close',
           onClick: this.handleRemove,
           rounded: true,
           size: 'xs'

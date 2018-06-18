@@ -19,7 +19,9 @@ var _classnames = require('classnames');
 
 var _classnames2 = _interopRequireDefault(_classnames);
 
-var _base = require('grommet/components/icons/base');
+var _materialIconsReact = require('material-icons-react');
+
+var _materialIconsReact2 = _interopRequireDefault(_materialIconsReact);
 
 var _propTypes = require('prop-types');
 
@@ -162,7 +164,7 @@ var TimePicker = function (_Component) {
                     select__option_selected: _this4.state.selectedHours === time.value
                   }) || '')
                 },
-                time
+                time < 10 ? '0' + time : time
               );
             })
           ),
@@ -206,7 +208,7 @@ var TimePicker = function (_Component) {
                     select__option_selected: _this5.state.selectedMin === time.value
                   }) || '')
                 },
-                time
+                time < 10 ? '0' + time : time
               );
             })
           ),
@@ -258,7 +260,7 @@ var TimePicker = function (_Component) {
                   {
                     className: 'jsx-' + _styles2.default.__scopedHash + ' ' + 'select__arrow'
                   },
-                  _react2.default.createElement(_base.PreviousIcon, null)
+                  _react2.default.createElement(_materialIconsReact2.default, { icon: 'keyboard_arrow_left' })
                 ),
                 this.renderHoursList()
               )
@@ -287,7 +289,7 @@ var TimePicker = function (_Component) {
                   {
                     className: 'jsx-' + _styles2.default.__scopedHash + ' ' + 'select__arrow'
                   },
-                  _react2.default.createElement(_base.PreviousIcon, null)
+                  _react2.default.createElement(_materialIconsReact2.default, { icon: 'keyboard_arrow_left' })
                 ),
                 this.renderMinuntsList()
               )
@@ -347,7 +349,7 @@ var TimePicker = function (_Component) {
               {
                 className: 'jsx-' + _styles2.default.__scopedHash + ' ' + 'time-picker__logo'
               },
-              _react2.default.createElement(_base.ClockIcon, null)
+              _react2.default.createElement(_materialIconsReact2.default, { icon: 'access_time' })
             ),
             _react2.default.createElement('input', {
               type: 'text',

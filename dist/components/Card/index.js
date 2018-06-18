@@ -15,13 +15,13 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
-var _propTypes = require('prop-types');
-
-var _propTypes2 = _interopRequireDefault(_propTypes);
-
 var _classnames = require('classnames');
 
 var _classnames2 = _interopRequireDefault(_classnames);
+
+var _propTypes = require('prop-types');
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
 
 var _styles = require('./styles');
 
@@ -49,16 +49,15 @@ var Card = function (_Component) {
     value: function render() {
       var _props = this.props,
           children = _props.children,
-          rounded = _props.rounded,
-          style = _props.style,
           className = _props.className;
 
 
-      var classes = (0, _classnames2.default)('card', className, { 'card--rounded': rounded });
+      var classes = (0, _classnames2.default)('card', className);
 
       return _react2.default.createElement(
         'div',
-        { style: style, className: 'jsx-' + _styles2.default.__scopedHash + ' ' + (classes || '')
+        {
+          className: 'jsx-' + _styles2.default.__scopedHash + ' ' + (classes || '')
         },
         children,
         _react2.default.createElement(_style2.default, {
@@ -77,13 +76,9 @@ exports.default = Card;
 
 Card.propTypes = {
   children: _propTypes2.default.node.isRequired,
-  className: _propTypes2.default.string,
-  rounded: _propTypes2.default.bool,
-  style: _propTypes2.default.object
+  className: _propTypes2.default.string
 };
 
 Card.defaultProps = {
-  className: '',
-  rounded: false,
-  style: {}
+  className: ''
 };

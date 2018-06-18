@@ -15,11 +15,13 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
+var _materialIconsReact = require('material-icons-react');
+
+var _materialIconsReact2 = _interopRequireDefault(_materialIconsReact);
+
 var _propTypes = require('prop-types');
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
-
-var _base = require('grommet/components/icons/base');
 
 var _styles = require('./styles');
 
@@ -66,7 +68,7 @@ var Tag = function (_Component) {
           'button',
           { onClick: onRemove, className: 'jsx-' + _styles2.default.__scopedHash + ' ' + 'tag__button'
           },
-          _react2.default.createElement(_base.CloseIcon, null)
+          _react2.default.createElement(_materialIconsReact2.default, { icon: 'close', color: '#000000', size: 14 })
         ),
         _react2.default.createElement(_style2.default, {
           styleId: _styles2.default.__scopedHash,

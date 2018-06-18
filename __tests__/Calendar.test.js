@@ -88,15 +88,15 @@ describe('Calendar', () => {
     });
   });
 
-  describe('Dots', () => {
+  describe('dots', () => {
     it('should show 3 dots if there are more than 3 events', () => {
       const clickDate = moment(testDate).add(1, 'day');
       const element = mount(<Calendar {...baseProps} />);
       const button = element.find(`[data-day='${clickDate.format('YYYY-MM-DD')}']`);
       button.simulate('click');
 
-      expect(element.find(`.day--selected--with-events[data-day='${clickDate.format('YYYY-MM-DD')}']`)).toHaveLength(1);
-      expect(element.find(`.day--selected--with-events[data-day='${clickDate.format('YYYY-MM-DD')}'] .events__item`)).toHaveLength(3);
+      expect(element.find(`.day--selected.day--has-events[data-day='${clickDate.format('YYYY-MM-DD')}']`)).toHaveLength(1);
+      expect(element.find(`.day--selected.day--has-events[data-day='${clickDate.format('YYYY-MM-DD')}'] .events__item`)).toHaveLength(3);
     });
 
     it('should show 3 dots if there are 3 events', () => {
@@ -105,8 +105,8 @@ describe('Calendar', () => {
       const button = element.find(`[data-day='${clickDate.format('YYYY-MM-DD')}']`);
       button.simulate('click');
 
-      expect(element.find(`.day--selected--with-events[data-day='${clickDate.format('YYYY-MM-DD')}']`)).toHaveLength(1);
-      expect(element.find(`.day--selected--with-events[data-day='${clickDate.format('YYYY-MM-DD')}'] .events__item`)).toHaveLength(3);
+      expect(element.find(`.day--selected.day--has-events[data-day='${clickDate.format('YYYY-MM-DD')}']`)).toHaveLength(1);
+      expect(element.find(`.day--selected.day--has-events[data-day='${clickDate.format('YYYY-MM-DD')}'] .events__item`)).toHaveLength(3);
     });
 
     it('should show 2 dots if there are 2 events', () => {
@@ -115,8 +115,8 @@ describe('Calendar', () => {
       const button = element.find(`[data-day='${clickDate.format('YYYY-MM-DD')}']`);
       button.simulate('click');
 
-      expect(element.find(`.day--selected--with-events[data-day='${clickDate.format('YYYY-MM-DD')}']`)).toHaveLength(1);
-      expect(element.find(`.day--selected--with-events[data-day='${clickDate.format('YYYY-MM-DD')}'] .events__item`)).toHaveLength(2);
+      expect(element.find(`.day--selected.day--has-events[data-day='${clickDate.format('YYYY-MM-DD')}']`)).toHaveLength(1);
+      expect(element.find(`.day--selected.day--has-events[data-day='${clickDate.format('YYYY-MM-DD')}'] .events__item`)).toHaveLength(2);
     });
 
     it('should show 1 dot if there is 1 event', () => {
@@ -125,8 +125,8 @@ describe('Calendar', () => {
       const button = element.find(`[data-day='${clickDate.format('YYYY-MM-DD')}']`);
       button.simulate('click');
 
-      expect(element.find(`.day--selected--with-events[data-day='${clickDate.format('YYYY-MM-DD')}']`)).toHaveLength(1);
-      expect(element.find(`.day--selected--with-events[data-day='${clickDate.format('YYYY-MM-DD')}'] .events__item`)).toHaveLength(1);
+      expect(element.find(`.day--selected.day--has-events[data-day='${clickDate.format('YYYY-MM-DD')}']`)).toHaveLength(1);
+      expect(element.find(`.day--selected.day--has-events[data-day='${clickDate.format('YYYY-MM-DD')}'] .events__item`)).toHaveLength(1);
     });
 
     it('does not show any dots if there are no events', () => {
@@ -135,8 +135,8 @@ describe('Calendar', () => {
       const button = element.find(`[data-day='${clickDate.format('YYYY-MM-DD')}']`);
       button.simulate('click');
 
-      expect(element.find(`.day--selected--with-events[data-day='${clickDate.format('YYYY-MM-DD')}']`)).toHaveLength(0);
-      expect(element.find(`.day--selected--without-events[data-day='${clickDate.format('YYYY-MM-DD')}']`)).toHaveLength(1);
+      expect(element.find(`.day--selected.day--has-events[data-day='${clickDate.format('YYYY-MM-DD')}']`)).toHaveLength(0);
+      expect(element.find(`.day--selected[data-day='${clickDate.format('YYYY-MM-DD')}']`)).toHaveLength(1);
     });
   });
 

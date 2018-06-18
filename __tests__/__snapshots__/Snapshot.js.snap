@@ -1,64 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Storyshots Avatar Picker default 1`] = `
-<div
-  style={
-    Object {
-      "padding": "24px",
-    }
-  }
->
-  <div
-    className="jsx-3916257684 jsx-2165763448 avatar"
-  >
-    <label
-      aria-label="Edit image"
-      className="jsx-3916257684 jsx-2165763448 avatar__container"
-      htmlFor="avatar"
-    >
-      <input
-        className="jsx-3916257684 jsx-2165763448 file-input"
-        id="avatar"
-        onBlur={[Function]}
-        onChange={[Function]}
-        type="file"
-      />
-      <div
-        className="jsx-3916257684 jsx-2165763448 avatar__thumb"
-        style={
-          Object {
-            "backgroundImage": "url(none)",
-            "borderRadius": "3px",
-            "height": "150px",
-            "width": "150px",
-          }
-        }
-      >
-        <svg
-          aria-label="camera"
-          className="grommetux-control-icon grommetux-control-icon-camera grommetux-control-icon--responsive"
-          height="24px"
-          role="img"
-          version="1.1"
-          viewBox="0 0 24 24"
-          width="24px"
-        >
-          <path
-            d="M1,21 L1,7 L6,7 L8,3 L16,3 L18,7 L23,7 L23,21 L1,21 Z M12,18 C14.7614237,18 17,15.7614237 17,13 C17,10.2385763 14.7614237,8 12,8 C9.23857625,8 7,10.2385763 7,13 C7,15.7614237 9.23857625,18 12,18 Z"
-            fill="none"
-            stroke="#000"
-            strokeWidth="2"
-          />
-        </svg>
-        <div
-          className="jsx-3916257684 jsx-2165763448 avatar__button--remove"
-        />
-      </div>
-    </label>
-  </div>
-</div>
-`;
-
 exports[`Storyshots Avatar default 1`] = `
 <div
   style={
@@ -68,10 +9,10 @@ exports[`Storyshots Avatar default 1`] = `
   }
 >
   <div
-    className="jsx-3751328689 avatar"
+    className="jsx-2204262328 avatar"
     style={
       Object {
-        "backgroundImage": "url(https://cdn.pixabay.com/photo/2017/08/30/01/05/milky-way-2695569_960_720.jpg)",
+        "backgroundImage": "url(https://wallup.net/wp-content/uploads/2017/03/29/493007-Mac_OS_X-Mac_Sierra-748x421.jpg)",
         "borderRadius": "3px",
         "height": "150px",
         "width": "150px",
@@ -90,13 +31,14 @@ exports[`Storyshots Button default 1`] = `
   }
 >
   <button
-    className="jsx-744565053 button"
+    className="jsx-3836532461 button"
     disabled={false}
     onClick={[Function]}
     type="button"
   >
+    
     <span
-      className="button__content"
+      className="jsx-3836532461 button__content"
     >
       Hello!
     </span>
@@ -125,23 +67,17 @@ exports[`Storyshots Calendar default 1`] = `
           className="jsx-1167149914 prev"
           onClick={[Function]}
         >
-          <svg
-            aria-label="previous"
-            className="grommetux-control-icon grommetux-control-icon-previous grommetux-control-icon--responsive"
-            height="24px"
-            role="img"
-            version="1.1"
-            viewBox="0 0 24 24"
-            width="24px"
+          <i
+            className="material-icons 36 md-dark "
+            style={
+              Object {
+                "color": "#666",
+                "fontSize": 36,
+              }
+            }
           >
-            <polyline
-              fill="none"
-              points="7 2 17 12 7 22"
-              stroke="#000"
-              strokeWidth="2"
-              transform="matrix(-1 0 0 1 24 0)"
-            />
-          </svg>
+            navigate_before
+          </i>
         </button>
         <div
           className="jsx-1167149914 navigation__month"
@@ -158,22 +94,17 @@ exports[`Storyshots Calendar default 1`] = `
           className="jsx-1167149914 next"
           onClick={[Function]}
         >
-          <svg
-            aria-label="next"
-            className="grommetux-control-icon grommetux-control-icon-next grommetux-control-icon--responsive"
-            height="24px"
-            role="img"
-            version="1.1"
-            viewBox="0 0 24 24"
-            width="24px"
+          <i
+            className="material-icons 36 md-dark "
+            style={
+              Object {
+                "color": "#666",
+                "fontSize": 36,
+              }
+            }
           >
-            <polyline
-              fill="none"
-              points="7 2 17 12 7 22"
-              stroke="#000"
-              strokeWidth="2"
-            />
-          </svg>
+            navigate_next
+          </i>
         </button>
       </div>
       <ul
@@ -217,656 +148,569 @@ exports[`Storyshots Calendar default 1`] = `
       </ul>
     </div>
     <ul
-      className="jsx-4156069232 month"
+      className="jsx-1983106999 month"
     >
       <li
-        className="jsx-4156069232"
+        className="jsx-1983106999"
       >
         <button
-          className="jsx-1425202002 day day--disabled"
+          className="jsx-3065497712 day day--disabled"
           data-day="2018-05-27"
           onClick={[Function]}
           type="button"
         >
           <span
-            className="jsx-1425202002 day__border"
+            className="jsx-3065497712 day__border"
           >
             27
           </span>
         </button>
       </li>
       <li
-        className="jsx-4156069232"
+        className="jsx-1983106999"
       >
         <button
-          className="jsx-1425202002 day day--disabled"
+          className="jsx-3065497712 day day--disabled"
           data-day="2018-05-28"
           onClick={[Function]}
           type="button"
         >
           <span
-            className="jsx-1425202002 day__border"
+            className="jsx-3065497712 day__border"
           >
             28
           </span>
         </button>
       </li>
       <li
-        className="jsx-4156069232"
+        className="jsx-1983106999"
       >
         <button
-          className="jsx-1425202002 day day--disabled"
+          className="jsx-3065497712 day day--disabled"
           data-day="2018-05-29"
           onClick={[Function]}
           type="button"
         >
           <span
-            className="jsx-1425202002 day__border"
+            className="jsx-3065497712 day__border"
           >
             29
           </span>
         </button>
       </li>
       <li
-        className="jsx-4156069232"
+        className="jsx-1983106999"
       >
         <button
-          className="jsx-1425202002 day day--disabled"
+          className="jsx-3065497712 day day--disabled"
           data-day="2018-05-30"
           onClick={[Function]}
           type="button"
         >
           <span
-            className="jsx-1425202002 day__border"
+            className="jsx-3065497712 day__border"
           >
             30
           </span>
         </button>
       </li>
       <li
-        className="jsx-4156069232"
+        className="jsx-1983106999"
       >
         <button
-          className="jsx-1425202002 day day--disabled"
+          className="jsx-3065497712 day day--disabled"
           data-day="2018-05-31"
           onClick={[Function]}
           type="button"
         >
           <span
-            className="jsx-1425202002 day__border"
+            className="jsx-3065497712 day__border"
           >
             31
           </span>
         </button>
       </li>
       <li
-        className="jsx-4156069232"
+        className="jsx-1983106999"
       >
         <button
-          className="jsx-1425202002 day day--disabled"
+          className="jsx-3065497712 day day--disabled"
           data-day="2018-06-01"
           onClick={[Function]}
           type="button"
         >
           <span
-            className="jsx-1425202002 day__border"
+            className="jsx-3065497712 day__border"
           >
             1
           </span>
         </button>
       </li>
       <li
-        className="jsx-4156069232"
+        className="jsx-1983106999"
       >
         <button
-          className="jsx-1425202002 day day--disabled"
+          className="jsx-3065497712 day day--disabled"
           data-day="2018-06-02"
           onClick={[Function]}
           type="button"
         >
           <span
-            className="jsx-1425202002 day__border"
+            className="jsx-3065497712 day__border"
           >
             2
           </span>
         </button>
       </li>
       <li
-        className="jsx-4156069232"
+        className="jsx-1983106999"
       >
         <button
-          className="jsx-1425202002 day day--disabled"
+          className="jsx-3065497712 day day--disabled"
           data-day="2018-06-03"
           onClick={[Function]}
           type="button"
         >
           <span
-            className="jsx-1425202002 day__border"
+            className="jsx-3065497712 day__border"
           >
             3
           </span>
         </button>
       </li>
       <li
-        className="jsx-4156069232"
+        className="jsx-1983106999"
       >
         <button
-          className="jsx-1425202002 day day--disabled"
+          className="jsx-3065497712 day day--disabled"
           data-day="2018-06-04"
           onClick={[Function]}
           type="button"
         >
           <span
-            className="jsx-1425202002 day__border"
+            className="jsx-3065497712 day__border"
           >
             4
           </span>
         </button>
       </li>
       <li
-        className="jsx-4156069232"
+        className="jsx-1983106999"
       >
         <button
-          className="jsx-1425202002 day day--disabled"
+          className="jsx-3065497712 day day--disabled"
           data-day="2018-06-05"
           onClick={[Function]}
           type="button"
         >
           <span
-            className="jsx-1425202002 day__border"
+            className="jsx-3065497712 day__border"
           >
             5
           </span>
         </button>
       </li>
       <li
-        className="jsx-4156069232"
+        className="jsx-1983106999"
       >
         <button
-          className="jsx-1425202002 day day--disabled"
+          className="jsx-3065497712 day day--disabled"
           data-day="2018-06-06"
           onClick={[Function]}
           type="button"
         >
           <span
-            className="jsx-1425202002 day__border"
+            className="jsx-3065497712 day__border"
           >
             6
           </span>
         </button>
       </li>
       <li
-        className="jsx-4156069232"
+        className="jsx-1983106999"
       >
         <button
-          className="jsx-1425202002 day day--disabled"
+          className="jsx-3065497712 day day--disabled"
           data-day="2018-06-07"
           onClick={[Function]}
           type="button"
         >
           <span
-            className="jsx-1425202002 day__border"
+            className="jsx-3065497712 day__border"
           >
             7
           </span>
         </button>
       </li>
       <li
-        className="jsx-4156069232"
+        className="jsx-1983106999"
       >
         <button
-          className="jsx-1425202002 day day--disabled"
+          className="jsx-3065497712 day day--disabled"
           data-day="2018-06-08"
           onClick={[Function]}
           type="button"
         >
           <span
-            className="jsx-1425202002 day__border"
+            className="jsx-3065497712 day__border"
           >
             8
           </span>
         </button>
       </li>
       <li
-        className="jsx-4156069232"
+        className="jsx-1983106999"
       >
         <button
-          className="jsx-1425202002 day day--disabled"
+          className="jsx-3065497712 day day--disabled"
           data-day="2018-06-09"
           onClick={[Function]}
           type="button"
         >
           <span
-            className="jsx-1425202002 day__border"
+            className="jsx-3065497712 day__border"
           >
             9
           </span>
         </button>
       </li>
       <li
-        className="jsx-4156069232"
+        className="jsx-1983106999"
       >
         <button
-          className="jsx-1425202002 day day--disabled"
+          className="jsx-3065497712 day day--disabled"
           data-day="2018-06-10"
           onClick={[Function]}
           type="button"
         >
           <span
-            className="jsx-1425202002 day__border"
+            className="jsx-3065497712 day__border"
           >
             10
           </span>
         </button>
       </li>
       <li
-        className="jsx-4156069232"
+        className="jsx-1983106999"
       >
         <button
-          className="jsx-1425202002 day day--disabled"
+          className="jsx-3065497712 day day--disabled"
           data-day="2018-06-11"
           onClick={[Function]}
           type="button"
         >
           <span
-            className="jsx-1425202002 day__border"
+            className="jsx-3065497712 day__border"
           >
             11
           </span>
         </button>
       </li>
       <li
-        className="jsx-4156069232"
+        className="jsx-1983106999"
       >
         <button
-          className="jsx-1425202002 day day--disabled"
+          className="jsx-3065497712 day day--disabled"
           data-day="2018-06-12"
           onClick={[Function]}
           type="button"
         >
           <span
-            className="jsx-1425202002 day__border"
+            className="jsx-3065497712 day__border"
           >
             12
           </span>
         </button>
       </li>
       <li
-        className="jsx-4156069232"
+        className="jsx-1983106999"
       >
         <button
-          className="jsx-1425202002 day day--disabled"
+          className="jsx-3065497712 day day--disabled"
           data-day="2018-06-13"
           onClick={[Function]}
           type="button"
         >
           <span
-            className="jsx-1425202002 day__border"
+            className="jsx-3065497712 day__border"
           >
             13
           </span>
         </button>
       </li>
       <li
-        className="jsx-4156069232"
+        className="jsx-1983106999"
       >
         <button
-          className="jsx-1425202002 day day--disabled"
+          className="jsx-3065497712 day day--disabled"
           data-day="2018-06-14"
           onClick={[Function]}
           type="button"
         >
           <span
-            className="jsx-1425202002 day__border"
+            className="jsx-3065497712 day__border"
           >
             14
           </span>
         </button>
       </li>
       <li
-        className="jsx-4156069232"
+        className="jsx-1983106999"
       >
         <button
-          className="jsx-1425202002 day day--selected--without-events"
+          className="jsx-3065497712 day day--disabled"
           data-day="2018-06-15"
           onClick={[Function]}
           type="button"
         >
           <span
-            className="jsx-1425202002 day__border"
+            className="jsx-3065497712 day__border"
           >
             15
           </span>
         </button>
       </li>
       <li
-        className="jsx-4156069232"
+        className="jsx-1983106999"
       >
         <button
-          className="jsx-1425202002 day"
+          className="jsx-3065497712 day day--disabled"
           data-day="2018-06-16"
           onClick={[Function]}
           type="button"
         >
           <span
-            className="jsx-1425202002 day__border"
+            className="jsx-3065497712 day__border"
           >
             16
           </span>
         </button>
       </li>
       <li
-        className="jsx-4156069232"
+        className="jsx-1983106999"
       >
         <button
-          className="jsx-1425202002 day"
+          className="jsx-3065497712 day day--disabled"
           data-day="2018-06-17"
           onClick={[Function]}
           type="button"
         >
           <span
-            className="jsx-1425202002 day__border"
+            className="jsx-3065497712 day__border"
           >
             17
           </span>
         </button>
       </li>
       <li
-        className="jsx-4156069232"
+        className="jsx-1983106999"
       >
         <button
-          className="jsx-1425202002 day"
+          className="jsx-3065497712 day day--selected"
           data-day="2018-06-18"
           onClick={[Function]}
           type="button"
         >
           <span
-            className="jsx-1425202002 day__border"
+            className="jsx-3065497712 day__border"
           >
             18
           </span>
         </button>
       </li>
       <li
-        className="jsx-4156069232"
+        className="jsx-1983106999"
       >
         <button
-          className="jsx-1425202002 day"
+          className="jsx-3065497712 day"
           data-day="2018-06-19"
           onClick={[Function]}
           type="button"
         >
           <span
-            className="jsx-1425202002 day__border"
+            className="jsx-3065497712 day__border"
           >
             19
           </span>
         </button>
       </li>
       <li
-        className="jsx-4156069232"
+        className="jsx-1983106999"
       >
         <button
-          className="jsx-1425202002 day"
+          className="jsx-3065497712 day"
           data-day="2018-06-20"
           onClick={[Function]}
           type="button"
         >
           <span
-            className="jsx-1425202002 day__border"
+            className="jsx-3065497712 day__border"
           >
             20
           </span>
         </button>
       </li>
       <li
-        className="jsx-4156069232"
+        className="jsx-1983106999"
       >
         <button
-          className="jsx-1425202002 day"
+          className="jsx-3065497712 day"
           data-day="2018-06-21"
           onClick={[Function]}
           type="button"
         >
           <span
-            className="jsx-1425202002 day__border"
+            className="jsx-3065497712 day__border"
           >
             21
           </span>
         </button>
       </li>
       <li
-        className="jsx-4156069232"
+        className="jsx-1983106999"
       >
         <button
-          className="jsx-1425202002 day"
+          className="jsx-3065497712 day"
           data-day="2018-06-22"
           onClick={[Function]}
           type="button"
         >
           <span
-            className="jsx-1425202002 day__border"
+            className="jsx-3065497712 day__border"
           >
             22
           </span>
         </button>
       </li>
       <li
-        className="jsx-4156069232"
+        className="jsx-1983106999"
       >
         <button
-          className="jsx-1425202002 day"
+          className="jsx-3065497712 day"
           data-day="2018-06-23"
           onClick={[Function]}
           type="button"
         >
           <span
-            className="jsx-1425202002 day__border"
+            className="jsx-3065497712 day__border"
           >
             23
           </span>
         </button>
       </li>
       <li
-        className="jsx-4156069232"
+        className="jsx-1983106999"
       >
         <button
-          className="jsx-1425202002 day"
+          className="jsx-3065497712 day"
           data-day="2018-06-24"
           onClick={[Function]}
           type="button"
         >
           <span
-            className="jsx-1425202002 day__border"
+            className="jsx-3065497712 day__border"
           >
             24
           </span>
         </button>
       </li>
       <li
-        className="jsx-4156069232"
+        className="jsx-1983106999"
       >
         <button
-          className="jsx-1425202002 day"
+          className="jsx-3065497712 day"
           data-day="2018-06-25"
           onClick={[Function]}
           type="button"
         >
           <span
-            className="jsx-1425202002 day__border"
+            className="jsx-3065497712 day__border"
           >
             25
           </span>
         </button>
       </li>
       <li
-        className="jsx-4156069232"
+        className="jsx-1983106999"
       >
         <button
-          className="jsx-1425202002 day"
+          className="jsx-3065497712 day"
           data-day="2018-06-26"
           onClick={[Function]}
           type="button"
         >
           <span
-            className="jsx-1425202002 day__border"
+            className="jsx-3065497712 day__border"
           >
             26
           </span>
         </button>
       </li>
       <li
-        className="jsx-4156069232"
+        className="jsx-1983106999"
       >
         <button
-          className="jsx-1425202002 day"
+          className="jsx-3065497712 day"
           data-day="2018-06-27"
           onClick={[Function]}
           type="button"
         >
           <span
-            className="jsx-1425202002 day__border"
+            className="jsx-3065497712 day__border"
           >
             27
           </span>
         </button>
       </li>
       <li
-        className="jsx-4156069232"
+        className="jsx-1983106999"
       >
         <button
-          className="jsx-1425202002 day"
+          className="jsx-3065497712 day"
           data-day="2018-06-28"
           onClick={[Function]}
           type="button"
         >
           <span
-            className="jsx-1425202002 day__border"
+            className="jsx-3065497712 day__border"
           >
             28
           </span>
         </button>
       </li>
       <li
-        className="jsx-4156069232"
+        className="jsx-1983106999"
       >
         <button
-          className="jsx-1425202002 day"
+          className="jsx-3065497712 day"
           data-day="2018-06-29"
           onClick={[Function]}
           type="button"
         >
           <span
-            className="jsx-1425202002 day__border"
+            className="jsx-3065497712 day__border"
           >
             29
           </span>
         </button>
       </li>
       <li
-        className="jsx-4156069232"
+        className="jsx-1983106999"
       >
         <button
-          className="jsx-1425202002 day"
+          className="jsx-3065497712 day"
           data-day="2018-06-30"
           onClick={[Function]}
           type="button"
         >
           <span
-            className="jsx-1425202002 day__border"
+            className="jsx-3065497712 day__border"
           >
             30
           </span>
         </button>
       </li>
     </ul>
-  </div>
-</div>
-`;
-
-exports[`Storyshots Card Picker default 1`] = `
-<div
-  style={
-    Object {
-      "padding": "24px",
-    }
-  }
->
-  <div
-    className="jsx-1526560949 card-picker"
-  >
-    <label
-      className="jsx-1526560949 card card--active"
-      htmlFor="male"
-    >
-      <input
-        checked={true}
-        className="jsx-1526560949"
-        id="male"
-        name="male"
-        onChange={[Function]}
-        type="radio"
-        value="male"
-      />
-      <img
-        alt="Male"
-        className="jsx-1526560949"
-        src="http://via.placeholder.com/240x240"
-      />
-      <p
-        className="jsx-1526560949 content"
-      >
-        Male
-      </p>
-    </label>
-    <label
-      className="jsx-1526560949 card"
-      htmlFor="any"
-    >
-      <input
-        checked={false}
-        className="jsx-1526560949"
-        id="any"
-        name="any"
-        onChange={[Function]}
-        type="radio"
-        value="any"
-      />
-      <img
-        alt="Any"
-        className="jsx-1526560949"
-        src="http://via.placeholder.com/240x240"
-      />
-      <p
-        className="jsx-1526560949 content"
-      >
-        Any
-      </p>
-    </label>
-    <label
-      className="jsx-1526560949 card"
-      htmlFor="female"
-    >
-      <input
-        checked={false}
-        className="jsx-1526560949"
-        id="female"
-        name="female"
-        onChange={[Function]}
-        type="radio"
-        value="female"
-      />
-      <img
-        alt="Female"
-        className="jsx-1526560949"
-        src="http://via.placeholder.com/240x240"
-      />
-      <p
-        className="jsx-1526560949 content"
-      >
-        Female
-      </p>
-    </label>
   </div>
 </div>
 `;
@@ -880,13 +724,7 @@ exports[`Storyshots Card default 1`] = `
   }
 >
   <div
-    className="jsx-3439448312 card"
-    style={
-      Object {
-        "padding": "50px",
-        "width": "200px",
-      }
-    }
+    className="jsx-714432891 card"
   >
     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos libero deserunt soluta.
   </div>
@@ -988,6 +826,136 @@ exports[`Storyshots Form Fields Autocomplete 1`] = `
 </div>
 `;
 
+exports[`Storyshots Form Fields AvatarPicker 1`] = `
+<div
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
+>
+  <label
+    aria-label="Edit image"
+    className="jsx-1206862728 jsx-2165763448 avatar"
+    htmlFor="avatar"
+    style={
+      Object {
+        "backgroundImage": "",
+        "borderRadius": "3px",
+        "height": "150px",
+        "width": "150px",
+      }
+    }
+  >
+    <input
+      className="jsx-1206862728 jsx-2165763448 file-input"
+      id="avatar"
+      onBlur={[Function]}
+      onChange={[Function]}
+      type="file"
+    />
+    <i
+      className="material-icons 75 md-dark "
+      style={
+        Object {
+          "color": "#BBBCCD",
+          "fontSize": 75,
+        }
+      }
+    >
+      photo_camera
+    </i>
+  </label>
+</div>
+`;
+
+exports[`Storyshots Form Fields CardPicker 1`] = `
+<div
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
+>
+  <div
+    className="jsx-1526560949 card-picker"
+  >
+    <label
+      className="jsx-1526560949 card card--active"
+      htmlFor="male"
+    >
+      <input
+        checked={true}
+        className="jsx-1526560949"
+        id="male"
+        name="male"
+        onChange={[Function]}
+        type="radio"
+        value="male"
+      />
+      <img
+        alt="Male"
+        className="jsx-1526560949"
+        src="http://via.placeholder.com/240x240"
+      />
+      <p
+        className="jsx-1526560949 content"
+      >
+        Male
+      </p>
+    </label>
+    <label
+      className="jsx-1526560949 card"
+      htmlFor="any"
+    >
+      <input
+        checked={false}
+        className="jsx-1526560949"
+        id="any"
+        name="any"
+        onChange={[Function]}
+        type="radio"
+        value="any"
+      />
+      <img
+        alt="Any"
+        className="jsx-1526560949"
+        src="http://via.placeholder.com/240x240"
+      />
+      <p
+        className="jsx-1526560949 content"
+      >
+        Any
+      </p>
+    </label>
+    <label
+      className="jsx-1526560949 card"
+      htmlFor="female"
+    >
+      <input
+        checked={false}
+        className="jsx-1526560949"
+        id="female"
+        name="female"
+        onChange={[Function]}
+        type="radio"
+        value="female"
+      />
+      <img
+        alt="Female"
+        className="jsx-1526560949"
+        src="http://via.placeholder.com/240x240"
+      />
+      <p
+        className="jsx-1526560949 content"
+      >
+        Female
+      </p>
+    </label>
+  </div>
+</div>
+`;
+
 exports[`Storyshots Form Fields CheckBox 1`] = `
 <div
   style={
@@ -1025,7 +993,7 @@ exports[`Storyshots Form Fields CheckBox 1`] = `
 </div>
 `;
 
-exports[`Storyshots Form Fields Date Picker 1`] = `
+exports[`Storyshots Form Fields DatePicker 1`] = `
 <div
   style={
     Object {
@@ -1049,28 +1017,21 @@ exports[`Storyshots Form Fields Date Picker 1`] = `
           className="react-datepicker__input-container"
         >
           <input
-            autoComplete={undefined}
-            autoFocus={undefined}
             className="datepicker"
             disabled={false}
             id="datepicker"
-            name={undefined}
             onBlur={[Function]}
             onChange={[Function]}
             onClick={[Function]}
             onFocus={[Function]}
             onKeyDown={[Function]}
-            placeholder={undefined}
-            readOnly={undefined}
-            required={undefined}
-            tabIndex={undefined}
-            title={undefined}
             type="text"
-            value="15 Jun, 2018"
+            value="18 Jun, 2018"
           />
         </div>
       </div>
     </div>
+    
     <style>
       .form-field{position:relative;}
     </style>
@@ -1127,22 +1088,17 @@ exports[`Storyshots Form Fields FilePicker 1`] = `
     <div
       className="jsx-1682990104 jsx-2881818901 upload-file__label-container"
     >
-      <svg
-        aria-label="upload"
-        className="grommetux-control-icon grommetux-control-icon-upload grommetux-control-icon--responsive"
-        height="24px"
-        role="img"
-        version="1.1"
-        viewBox="0 0 24 24"
-        width="24px"
+      <i
+        className="material-icons 28 md-dark "
+        style={
+          Object {
+            "color": "#0c97f9",
+            "fontSize": 28,
+          }
+        }
       >
-        <path
-          d="M1,17 L1,23 L23,23 L23,17 M12,2 L12,19 M5,9 L12,2 L19,9"
-          fill="none"
-          stroke="#000"
-          strokeWidth="2"
-        />
-      </svg>
+        outline_cloud_upload
+      </i>
       <div
         className="jsx-1682990104 jsx-2881818901 upload-file__label"
       >
@@ -1182,7 +1138,6 @@ exports[`Storyshots Form Fields Input 1`] = `
       id="input"
       name="Name"
       placeholder="Start typing"
-      type={undefined}
     />
     <style>
       input,textarea,select{width:100%;min-width:100%;max-width:100%;min-height:44px;padding:12px 16px;background-color:#ffffff;color:#2A2A30;box-sizing:border-box;-webkit-appearance:none;font-style:normal;font-weight:normal;font-size:0.875rem;border-width:2px;border-style:solid;border-color:#E7E7F0;border-radius:4px;}
@@ -1257,639 +1212,7 @@ exports[`Storyshots Form Fields RadioButtonGroup 1`] = `
 </div>
 `;
 
-exports[`Storyshots Form Fields Select 1`] = `
-<div
-  style={
-    Object {
-      "padding": "24px",
-    }
-  }
->
-  <div
-    className="jsx-1685083184 jsx-4038665278 jsx-2881818901 form-field"
-  >
-    <label
-      className="jsx-1685083184 jsx-4038665278 jsx-2881818901"
-      htmlFor={undefined}
-    >
-      Label
-    </label>
-    <div
-      className="jsx-792907225 select-container"
-    >
-      <select
-        className="jsx-792907225 "
-        id={undefined}
-        name="Name"
-        placeholder={undefined}
-        type={undefined}
-        value={undefined}
-      >
-        <option
-          className="jsx-792907225"
-          value="one"
-        >
-          one
-        </option>
-        <option
-          className="jsx-792907225"
-          value="two"
-        >
-          two
-        </option>
-        <option
-          className="jsx-792907225"
-          value="three"
-        >
-          three
-        </option>
-        <option
-          className="jsx-792907225"
-          value="four"
-        >
-          four
-        </option>
-      </select>
-      <svg
-        aria-label="down"
-        className="grommetux-control-icon grommetux-control-icon-down grommetux-control-icon--responsive"
-        height="24px"
-        role="img"
-        version="1.1"
-        viewBox="0 0 24 24"
-        width="24px"
-      >
-        <polyline
-          fill="none"
-          points="7.086 3.174 17.086 13.174 7.086 23.174"
-          stroke="#000"
-          strokeWidth="2"
-          transform="scale(1 -1) rotate(-89 -1.32 0)"
-        />
-      </svg>
-    </div>
-    <style>
-      input,textarea,select{width:100%;min-width:100%;max-width:100%;min-height:44px;padding:12px 16px;background-color:#ffffff;color:#2A2A30;box-sizing:border-box;-webkit-appearance:none;font-style:normal;font-weight:normal;font-size:0.875rem;border-width:2px;border-style:solid;border-color:#E7E7F0;border-radius:4px;}
-      input::-webkit-input-placeholder,textarea::-webkit-input-placeholder,select::-webkit-input-placeholder{color:#828393;}
-      input::-moz-placeholder,textarea::-moz-placeholder,select::-moz-placeholder{color:#828393;}
-      input:-ms-input-placeholder,textarea:-ms-input-placeholder,select:-ms-input-placeholder{color:#828393;}
-      input:-moz-placeholder,textarea:-moz-placeholder,select:-moz-placeholder{color:#828393;}
-      input:focus,textarea:focus,select:focus{outline:none;padding:12px 16px;border-color:#0c97f9;}
-      input.invalid,input.invalid:focus,textarea.invalid,textarea.invalid:focus,select.invalid,select.invalid:focus{border-color:#FF5572;}
-    </style>
-  </div>
-</div>
-`;
-
-exports[`Storyshots Form Fields TextArea 1`] = `
-<div
-  style={
-    Object {
-      "padding": "24px",
-    }
-  }
->
-  <div
-    className="jsx-1685083184 jsx-4038665278 jsx-2881818901 form-field"
-  >
-    <label
-      className="jsx-1685083184 jsx-4038665278 jsx-2881818901"
-      htmlFor="textarea"
-    >
-      Label
-    </label>
-    <textarea
-      className=""
-      id="textarea"
-      name="Name"
-      placeholder="Start typing"
-      value={undefined}
-    />
-    <style>
-      input,textarea,select{width:100%;min-width:100%;max-width:100%;min-height:44px;padding:12px 16px;background-color:#ffffff;color:#2A2A30;box-sizing:border-box;-webkit-appearance:none;font-style:normal;font-weight:normal;font-size:0.875rem;border-width:2px;border-style:solid;border-color:#E7E7F0;border-radius:4px;}
-      input::-webkit-input-placeholder,textarea::-webkit-input-placeholder,select::-webkit-input-placeholder{color:#828393;}
-      input::-moz-placeholder,textarea::-moz-placeholder,select::-moz-placeholder{color:#828393;}
-      input:-ms-input-placeholder,textarea:-ms-input-placeholder,select:-ms-input-placeholder{color:#828393;}
-      input:-moz-placeholder,textarea:-moz-placeholder,select:-moz-placeholder{color:#828393;}
-      input:focus,textarea:focus,select:focus{outline:none;padding:12px 16px;border-color:#0c97f9;}
-      input.invalid,input.invalid:focus,textarea.invalid,textarea.invalid:focus,select.invalid,select.invalid:focus{border-color:#FF5572;}
-    </style>
-  </div>
-</div>
-`;
-
-exports[`Storyshots LinkButton default 1`] = `
-<div
-  style={
-    Object {
-      "padding": "24px",
-    }
-  }
->
-  <a
-    className="button"
-    disabled={false}
-    href="/"
-    onClick={[Function]}
-  >
-    <span
-      className="button__content"
-    >
-      Hello!
-    </span>
-  </a>
-</div>
-`;
-
-exports[`Storyshots Loader default 1`] = `
-<div
-  style={
-    Object {
-      "padding": "24px",
-    }
-  }
->
-  <div
-    className="jsx-1676540694 loader-container"
-  >
-    <svg
-      aria-label="Spinning"
-      className="grommetux-icon-spinning grommetux-icon-spinning--large grommetux-icon-spinning--responsive button__icon"
-      role="img"
-      version="1.1"
-      viewBox="0 0 48 48"
-    >
-      <circle
-        cx="24"
-        cy="24"
-        fill="none"
-        r="21"
-        stroke="#979797"
-        strokeWidth="6"
-      />
-    </svg>
-  </div>
-</div>
-`;
-
-exports[`Storyshots Modal default 1`] = `
-<div
-  style={
-    Object {
-      "padding": "24px",
-    }
-  }
->
-  <button
-    className="jsx-744565053 button"
-    disabled={false}
-    onClick={[Function]}
-    type="button"
-  >
-    <span
-      className="button__content"
-    >
-      Open modal
-    </span>
-  </button>
-</div>
-`;
-
-exports[`Storyshots Navigation default 1`] = `
-<main
-  style={
-    Object {
-      "display": "flex",
-      "minHeight": "100vh",
-    }
-  }
->
-  <nav
-    className="jsx-3540150986 nav"
-  >
-    <ul
-      className="jsx-3540150986 nav__list"
-    >
-      <li>
-        <a
-          aria-current={false}
-          className="nav-item"
-          href="/dashboard"
-          onClick={[Function]}
-          style={undefined}
-        >
-          <svg
-            aria-label="dashboard"
-            className="grommetux-control-icon grommetux-control-icon-dashboard nav-item__icon grommetux-control-icon--responsive"
-            height="24px"
-            role="img"
-            version="1.1"
-            viewBox="0 0 24 24"
-            width="24px"
-          >
-            <path
-              d="M12,22 C17.5228475,22 22,17.5228475 22,12 C22,6.4771525 17.5228475,2 12,2 C6.4771525,2 2,6.4771525 2,12 C2,17.5228475 6.4771525,22 12,22 Z M15,16 C15,14.3431458 13.6568542,13 12,13 C10.3431458,13 9,14.3431458 9,16 M5,5 L7,7 M12,7 L12,13 M12,3 L12,5 M19,12 L21,12 M3,12 L5,12 M17,7 L19,5 M3,17 L21,17"
-              fill="none"
-              stroke="#000"
-              strokeWidth="2"
-            />
-          </svg>
-          <span
-            className="nav-item__label"
-          >
-            Dashboards
-          </span>
-        </a>
-        <style>
-          .nav-item{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;width:53px;height:53px;padding:16px;color:#ffffff;-webkit-text-decoration:none;text-decoration:none;-webkit-letter-spacing:0.15rem;-moz-letter-spacing:0.15rem;-ms-letter-spacing:0.15rem;letter-spacing:0.15rem;text-transform:uppercase;border-radius:50%;box-sizing:border-box;-webkit-transition:background-color 0.3s ease-in-out;transition:background-color 0.3s ease-in-out;font-size:0.75rem;font-weight:bold;}
-          .nav-item--active{background-color:#0c97f9;}
-          .nav-item__icon{width:21px;height:21px;fill:#ffffff !important;stroke:#ffffff !important;}
-          .nav-item__icon circle,.nav-item__icon path{stroke:#ffffff !important;}
-          .nav-item__label{display:none;}
-          @media (min-width:960px){.nav-item{width:100%;padding:16px 16px 16px 50px;border-top-left-radius:0;border-bottom-left-radius:0;border-top-right-radius:30px;border-bottom-right-radius:30px;}.nav-item__icon{margin-right:30px;}.nav-item__label{display:inline-block;}}
-        </style>
-      </li>
-      <li>
-        <a
-          aria-current={false}
-          className="nav-item"
-          href="/notifications"
-          onClick={[Function]}
-          style={undefined}
-        >
-          <svg
-            aria-label="notification"
-            className="grommetux-control-icon grommetux-control-icon-notification nav-item__icon grommetux-control-icon--responsive"
-            height="24px"
-            role="img"
-            version="1.1"
-            viewBox="0 0 24 24"
-            width="24px"
-          >
-            <path
-              d="M4,19 L4,9 C4,4.582 7.582,1 12,1 C16.418,1 20,4.582 20,9 L20,19 M1,19 L23,19 M15,19 L15,20 C15,21.657 13.657,23 12,23 C10.343,23 9,21.657 9,20 L9,19"
-              fill="none"
-              stroke="#000"
-              strokeWidth="2"
-            />
-          </svg>
-          <span
-            className="nav-item__label"
-          >
-            Notifications
-          </span>
-        </a>
-        <style>
-          .nav-item{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;width:53px;height:53px;padding:16px;color:#ffffff;-webkit-text-decoration:none;text-decoration:none;-webkit-letter-spacing:0.15rem;-moz-letter-spacing:0.15rem;-ms-letter-spacing:0.15rem;letter-spacing:0.15rem;text-transform:uppercase;border-radius:50%;box-sizing:border-box;-webkit-transition:background-color 0.3s ease-in-out;transition:background-color 0.3s ease-in-out;font-size:0.75rem;font-weight:bold;}
-          .nav-item--active{background-color:#0c97f9;}
-          .nav-item__icon{width:21px;height:21px;fill:#ffffff !important;stroke:#ffffff !important;}
-          .nav-item__icon circle,.nav-item__icon path{stroke:#ffffff !important;}
-          .nav-item__label{display:none;}
-          @media (min-width:960px){.nav-item{width:100%;padding:16px 16px 16px 50px;border-top-left-radius:0;border-bottom-left-radius:0;border-top-right-radius:30px;border-bottom-right-radius:30px;}.nav-item__icon{margin-right:30px;}.nav-item__label{display:inline-block;}}
-        </style>
-      </li>
-      <li>
-        <button
-          className="nav-item"
-          onClick={undefined}
-        >
-          <svg
-            aria-label="notification"
-            className="grommetux-control-icon grommetux-control-icon-notification nav-item__icon grommetux-control-icon--responsive"
-            height="24px"
-            role="img"
-            version="1.1"
-            viewBox="0 0 24 24"
-            width="24px"
-          >
-            <path
-              d="M4,19 L4,9 C4,4.582 7.582,1 12,1 C16.418,1 20,4.582 20,9 L20,19 M1,19 L23,19 M15,19 L15,20 C15,21.657 13.657,23 12,23 C10.343,23 9,21.657 9,20 L9,19"
-              fill="none"
-              stroke="#000"
-              strokeWidth="2"
-            />
-          </svg>
-          <span
-            className="nav-item__label"
-          >
-            Sign out
-          </span>
-        </button>
-        <style>
-          .nav-item{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;width:53px;height:53px;padding:16px;color:#ffffff;-webkit-text-decoration:none;text-decoration:none;-webkit-letter-spacing:0.15rem;-moz-letter-spacing:0.15rem;-ms-letter-spacing:0.15rem;letter-spacing:0.15rem;text-transform:uppercase;border-radius:50%;box-sizing:border-box;-webkit-transition:background-color 0.3s ease-in-out;transition:background-color 0.3s ease-in-out;background-color:transparent;border:none;outline:none;cursor:pointer;font-size:0.75rem;font-weight:bold;}
-          .nav-item--active{background-color:#0c97f9;}
-          .nav-item__icon{width:21px;height:21px;fill:#ffffff !important;stroke:#ffffff !important;}
-          .nav-item__icon circle,.nav-item__icon path{stroke:#ffffff !important;}
-          .nav-item__label{display:none;}
-          @media (min-width:960px){.nav-item{width:100%;padding:16px 16px 16px 50px;border-top-left-radius:0;border-bottom-left-radius:0;border-top-right-radius:30px;border-bottom-right-radius:30px;}.nav-item__icon{margin-right:30px;}.nav-item__label{display:inline-block;}}
-        </style>
-      </li>
-    </ul>
-  </nav>
-</main>
-`;
-
-exports[`Storyshots Notification default 1`] = `
-<div
-  style={
-    Object {
-      "padding": "24px",
-    }
-  }
->
-  <div
-    className="jsx-3439448312 card notification"
-    style={Object {}}
-  >
-    <div
-      className="jsx-3980672098 jsx-3014010845 notification__time"
-    >
-      12:00 AM, Jun 20
-    </div>
-    <div
-      className="jsx-3980672098 jsx-3014010845 notification__message"
-    >
-      <span
-        className="jsx-3980672098 jsx-3014010845 notification__dot"
-      />
-      New message
-    </div>
-    <div
-      className="jsx-3980672098 jsx-3014010845 notification__actions"
-    >
-      <button
-        className="jsx-744565053 button button--s button--flat button--with-icon button--rounded"
-        disabled={false}
-        onClick={[Function]}
-        type="button"
-      >
-        <svg
-          aria-label="checkmark"
-          className="grommetux-control-icon grommetux-control-icon-checkmark button__icon grommetux-control-icon--responsive"
-          height="24px"
-          role="img"
-          version="1.1"
-          viewBox="0 0 24 24"
-          width="24px"
-        >
-          <polyline
-            fill="none"
-            points="2 14 9 20 22 4"
-            stroke="#000"
-            strokeWidth="2"
-          />
-        </svg>
-      </button>
-      <button
-        className="jsx-744565053 button button--s button--flat button--with-icon button--rounded"
-        disabled={false}
-        onClick={[Function]}
-        type="button"
-      >
-        <svg
-          aria-label="trash"
-          className="grommetux-control-icon grommetux-control-icon-trash button__icon grommetux-control-icon--responsive"
-          height="24px"
-          role="img"
-          version="1.1"
-          viewBox="0 0 24 24"
-          width="24px"
-        >
-          <path
-            d="M4,5 L20,5 L20,23 L4,23 L4,5 Z M1,5 L23,5 M9,1 L15,1 L15,5 L9,5 L9,1 Z M9,1 L15,1 L15,5 L9,5 L9,1 Z M15,9 L15,19 M9,9 L9,19"
-            fill="none"
-            stroke="#000"
-            strokeWidth="2"
-          />
-        </svg>
-      </button>
-    </div>
-    <div
-      className="jsx-3980672098 jsx-3014010845 notification__actions--mobile"
-    >
-      <button
-        className="jsx-744565053 button button--flat button--with-icon button--rounded"
-        disabled={false}
-        onClick={[Function]}
-        type="button"
-      >
-        <svg
-          aria-label="more"
-          className="grommetux-control-icon grommetux-control-icon-more button__icon grommetux-control-icon--responsive"
-          height="24px"
-          role="img"
-          version="1.1"
-          viewBox="0 0 24 24"
-          width="24px"
-        >
-          <path
-            d="M3,13 L3,11 L5,11 L5,13 L3,13 Z M11,12.9995001 L11,11 L12.9995001,11 L12.9995001,12.9995001 L11,12.9995001 Z M19,12.9995001 L19,11 L20.9995001,11 L20.9995001,12.9995001 L19,12.9995001 Z"
-            fill="none"
-            stroke="#000"
-            strokeWidth="2"
-          />
-        </svg>
-      </button>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`Storyshots Paginator default 1`] = `
-<div
-  style={
-    Object {
-      "padding": "24px",
-    }
-  }
->
-  <ul
-    className="pagination"
-  >
-    <li
-      className="previous disabled"
-    >
-      <a
-        className={undefined}
-        href={undefined}
-        onClick={[Function]}
-        onKeyPress={[Function]}
-        tabIndex="0"
-      >
-        <svg
-          aria-label="form-previous-link"
-          className="grommetux-control-icon grommetux-control-icon-form-previous-link grommetux-control-icon--small grommetux-control-icon--responsive"
-          height="24px"
-          role="img"
-          version="1.1"
-          viewBox="0 0 24 24"
-          width="24px"
-        >
-          <path
-            d="M6,12.4 L18,12.4 M12.6,7 L18,12.4 L12.6,17.8"
-            fill="none"
-            stroke="#000"
-            strokeWidth="2"
-            transform="matrix(-1 0 0 1 24 0)"
-          />
-        </svg>
-      </a>
-    </li>
-    <li
-      className="active"
-    >
-      <a
-        aria-current="page"
-        aria-label="Page 1 is your current page"
-        className={undefined}
-        href={undefined}
-        onClick={[Function]}
-        onKeyPress={[Function]}
-        tabIndex="0"
-      >
-        1
-      </a>
-    </li>
-    <li
-      className={undefined}
-    >
-      <a
-        aria-current={null}
-        aria-label="Page 2"
-        className={undefined}
-        href={undefined}
-        onClick={[Function]}
-        onKeyPress={[Function]}
-        tabIndex="0"
-      >
-        2
-      </a>
-    </li>
-    <li
-      className={undefined}
-    >
-      <a
-        aria-current={null}
-        aria-label="Page 3"
-        className={undefined}
-        href={undefined}
-        onClick={[Function]}
-        onKeyPress={[Function]}
-        tabIndex="0"
-      >
-        3
-      </a>
-    </li>
-    <li
-      className={undefined}
-    >
-      <a
-        aria-current={null}
-        aria-label="Page 4"
-        className={undefined}
-        href={undefined}
-        onClick={[Function]}
-        onKeyPress={[Function]}
-        tabIndex="0"
-      >
-        4
-      </a>
-    </li>
-    <li
-      className={undefined}
-    >
-      <a
-        aria-current={null}
-        aria-label="Page 5"
-        className={undefined}
-        href={undefined}
-        onClick={[Function]}
-        onKeyPress={[Function]}
-        tabIndex="0"
-      >
-        5
-      </a>
-    </li>
-    <li
-      className="break"
-    >
-      ...
-    </li>
-    <li
-      className={undefined}
-    >
-      <a
-        aria-current={null}
-        aria-label="Page 9"
-        className={undefined}
-        href={undefined}
-        onClick={[Function]}
-        onKeyPress={[Function]}
-        tabIndex="0"
-      >
-        9
-      </a>
-    </li>
-    <li
-      className={undefined}
-    >
-      <a
-        aria-current={null}
-        aria-label="Page 10"
-        className={undefined}
-        href={undefined}
-        onClick={[Function]}
-        onKeyPress={[Function]}
-        tabIndex="0"
-      >
-        10
-      </a>
-    </li>
-    <li
-      className="next"
-    >
-      <a
-        className={undefined}
-        href={undefined}
-        onClick={[Function]}
-        onKeyPress={[Function]}
-        tabIndex="0"
-      >
-        <svg
-          aria-label="form-next-link"
-          className="grommetux-control-icon grommetux-control-icon-form-next-link grommetux-control-icon--small grommetux-control-icon--responsive"
-          height="24px"
-          role="img"
-          version="1.1"
-          viewBox="0 0 24 24"
-          width="24px"
-        >
-          <path
-            d="M6,12.4 L18,12.4 M12.6,7 L18,12.4 L12.6,17.8"
-            fill="none"
-            stroke="#000"
-            strokeWidth="2"
-          />
-        </svg>
-      </a>
-    </li>
-  </ul>
-  <style>
-    .pagination{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;width:100%;margin:0;padding:0;list-style:none;}
-    .pagination li{padding:0;margin:3px;background-color:transparent;color:#BBBCCD;border-radius:50%;box-sizing:border-box;cursor:pointer;-webkit-transition:all 0.2s ease;transition:all 0.2s ease;font-size:0.875rem;}
-    .pagination li:hover:not(.break){background-color:#eff0f4;}
-    .pagination li.break{cursor:initial;}
-    .pagination li.active,.pagination li.active:hover{background-color:#0c97f9;color:#fff;cursor:initial;}
-    .pagination li.previous,.pagination li.next{background-color:#eff0f4;}
-    .pagination li.previous{margin-right:30px;}
-    .pagination li.next{margin-left:30px;}
-    .pagination li svg{fill:#BBBCCD;stroke:#BBBCCD;}
-    .pagination a{position:relative;outline:none;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;height:30px;width:30px;}
-  </style>
-</div>
-`;
-
-exports[`Storyshots RadioButtons default 1`] = `
+exports[`Storyshots Form Fields RadioButtons 1`] = `
 <div
   style={
     Object {
@@ -1908,22 +1231,15 @@ exports[`Storyshots RadioButtons default 1`] = `
         <div
           className="radio__icon"
         >
-          <svg
-            aria-label="tools"
-            className="grommetux-control-icon grommetux-control-icon-tools grommetux-control-icon--responsive"
-            height="24px"
-            role="img"
-            version="1.1"
-            viewBox="0 0 24 24"
-            width="24px"
-          >
-            <path
-              d="M11,2 L22,13 L17.5,17.5 L6.5,6.5 L11,2 Z M16,6 L17,5 L19,7 L18,8 M13,13 L4,22 L2,20 L11,11 M5,18 L6,19"
-              fill="none"
-              stroke="#000"
-              strokeWidth="2"
-            />
-          </svg>
+          <i
+            className="material-icons md-24 md-dark "
+            style={
+              Object {
+                "color": "",
+                "fontSize": "md-24",
+              }
+            }
+          />
         </div>
         <input
           className="radio__select"
@@ -1941,22 +1257,15 @@ exports[`Storyshots RadioButtons default 1`] = `
         <div
           className="radio__icon"
         >
-          <svg
-            aria-label="tools"
-            className="grommetux-control-icon grommetux-control-icon-tools grommetux-control-icon--responsive"
-            height="24px"
-            role="img"
-            version="1.1"
-            viewBox="0 0 24 24"
-            width="24px"
-          >
-            <path
-              d="M11,2 L22,13 L17.5,17.5 L6.5,6.5 L11,2 Z M16,6 L17,5 L19,7 L18,8 M13,13 L4,22 L2,20 L11,11 M5,18 L6,19"
-              fill="none"
-              stroke="#000"
-              strokeWidth="2"
-            />
-          </svg>
+          <i
+            className="material-icons md-24 md-dark "
+            style={
+              Object {
+                "color": "",
+                "fontSize": "md-24",
+              }
+            }
+          />
         </div>
         <input
           className="radio__select"
@@ -1974,22 +1283,15 @@ exports[`Storyshots RadioButtons default 1`] = `
         <div
           className="radio__icon"
         >
-          <svg
-            aria-label="tools"
-            className="grommetux-control-icon grommetux-control-icon-tools grommetux-control-icon--responsive"
-            height="24px"
-            role="img"
-            version="1.1"
-            viewBox="0 0 24 24"
-            width="24px"
-          >
-            <path
-              d="M11,2 L22,13 L17.5,17.5 L6.5,6.5 L11,2 Z M16,6 L17,5 L19,7 L18,8 M13,13 L4,22 L2,20 L11,11 M5,18 L6,19"
-              fill="none"
-              stroke="#000"
-              strokeWidth="2"
-            />
-          </svg>
+          <i
+            className="material-icons md-24 md-dark "
+            style={
+              Object {
+                "color": "",
+                "fontSize": "md-24",
+              }
+            }
+          />
         </div>
         <input
           className="radio__select"
@@ -2007,22 +1309,15 @@ exports[`Storyshots RadioButtons default 1`] = `
         <div
           className="radio__icon"
         >
-          <svg
-            aria-label="tools"
-            className="grommetux-control-icon grommetux-control-icon-tools grommetux-control-icon--responsive"
-            height="24px"
-            role="img"
-            version="1.1"
-            viewBox="0 0 24 24"
-            width="24px"
-          >
-            <path
-              d="M11,2 L22,13 L17.5,17.5 L6.5,6.5 L11,2 Z M16,6 L17,5 L19,7 L18,8 M13,13 L4,22 L2,20 L11,11 M5,18 L6,19"
-              fill="none"
-              stroke="#000"
-              strokeWidth="2"
-            />
-          </svg>
+          <i
+            className="material-icons md-24 md-dark "
+            style={
+              Object {
+                "color": "",
+                "fontSize": "md-24",
+              }
+            }
+          />
         </div>
         <input
           className="radio__select"
@@ -2051,7 +1346,7 @@ exports[`Storyshots RadioButtons default 1`] = `
 </div>
 `;
 
-exports[`Storyshots SearchBar default 1`] = `
+exports[`Storyshots Form Fields Select 1`] = `
 <div
   style={
     Object {
@@ -2064,16 +1359,53 @@ exports[`Storyshots SearchBar default 1`] = `
   >
     <label
       className="jsx-1685083184 jsx-4038665278 jsx-2881818901"
-      htmlFor={undefined}
-    />
-    <input
-      className=""
-      id={undefined}
-      name={undefined}
-      onChange={[Function]}
-      placeholder="Search...."
-      type={undefined}
-    />
+    >
+      Label
+    </label>
+    <div
+      className="jsx-2653998143 select-container"
+    >
+      <select
+        className="jsx-2653998143 "
+        name="Name"
+      >
+        <option
+          className="jsx-2653998143"
+          value="one"
+        >
+          one
+        </option>
+        <option
+          className="jsx-2653998143"
+          value="two"
+        >
+          two
+        </option>
+        <option
+          className="jsx-2653998143"
+          value="three"
+        >
+          three
+        </option>
+        <option
+          className="jsx-2653998143"
+          value="four"
+        >
+          four
+        </option>
+      </select>
+      <i
+        className="material-icons md-24 md-dark "
+        style={
+          Object {
+            "color": "",
+            "fontSize": "md-24",
+          }
+        }
+      >
+        expand_more
+      </i>
+    </div>
     <style>
       input,textarea,select{width:100%;min-width:100%;max-width:100%;min-height:44px;padding:12px 16px;background-color:#ffffff;color:#2A2A30;box-sizing:border-box;-webkit-appearance:none;font-style:normal;font-weight:normal;font-size:0.875rem;border-width:2px;border-style:solid;border-color:#E7E7F0;border-radius:4px;}
       input::-webkit-input-placeholder,textarea::-webkit-input-placeholder,select::-webkit-input-placeholder{color:#828393;}
@@ -2087,7 +1419,7 @@ exports[`Storyshots SearchBar default 1`] = `
 </div>
 `;
 
-exports[`Storyshots StarPicker simple start picker 1`] = `
+exports[`Storyshots Form Fields StarPicker 1`] = `
 <div
   style={
     Object {
@@ -2109,32 +1441,17 @@ exports[`Storyshots StarPicker simple start picker 1`] = `
       type="radio"
       value={1}
     />
-    <svg
-      aria-label="star"
-      className="grommetux-control-icon grommetux-control-icon-star grommetux-control-icon--large grommetux-control-icon--responsive"
-      height="24px"
-      role="img"
-      theme={
+    <i
+      className="material-icons md-24 md-dark "
+      style={
         Object {
-          "icon": Object {
-            "color": "#70c983",
-            "size": Object {
-              "large": "40px",
-            },
-          },
+          "color": "",
+          "fontSize": "md-24",
         }
       }
-      version="1.1"
-      viewBox="0 0 24 24"
-      width="24px"
     >
-      <polygon
-        fill="none"
-        points="5 21 8 14 3 9 9 9 12 3 15 9 21 9 16 14 19 21 12 17"
-        stroke="#000"
-        strokeWidth="2"
-      />
-    </svg>
+      star
+    </i>
   </label>
   <label
     className="jsx-1505936054 star"
@@ -2150,32 +1467,17 @@ exports[`Storyshots StarPicker simple start picker 1`] = `
       type="radio"
       value={2}
     />
-    <svg
-      aria-label="star"
-      className="grommetux-control-icon grommetux-control-icon-star grommetux-control-icon--large grommetux-control-icon--responsive"
-      height="24px"
-      role="img"
-      theme={
+    <i
+      className="material-icons md-24 md-dark "
+      style={
         Object {
-          "icon": Object {
-            "color": "#70c983",
-            "size": Object {
-              "large": "40px",
-            },
-          },
+          "color": "",
+          "fontSize": "md-24",
         }
       }
-      version="1.1"
-      viewBox="0 0 24 24"
-      width="24px"
     >
-      <polygon
-        fill="none"
-        points="5 21 8 14 3 9 9 9 12 3 15 9 21 9 16 14 19 21 12 17"
-        stroke="#000"
-        strokeWidth="2"
-      />
-    </svg>
+      star
+    </i>
   </label>
   <label
     className="jsx-1505936054 star"
@@ -2191,32 +1493,17 @@ exports[`Storyshots StarPicker simple start picker 1`] = `
       type="radio"
       value={3}
     />
-    <svg
-      aria-label="star"
-      className="grommetux-control-icon grommetux-control-icon-star grommetux-control-icon--large grommetux-control-icon--responsive"
-      height="24px"
-      role="img"
-      theme={
+    <i
+      className="material-icons md-24 md-dark "
+      style={
         Object {
-          "icon": Object {
-            "color": "#70c983",
-            "size": Object {
-              "large": "40px",
-            },
-          },
+          "color": "",
+          "fontSize": "md-24",
         }
       }
-      version="1.1"
-      viewBox="0 0 24 24"
-      width="24px"
     >
-      <polygon
-        fill="none"
-        points="5 21 8 14 3 9 9 9 12 3 15 9 21 9 16 14 19 21 12 17"
-        stroke="#000"
-        strokeWidth="2"
-      />
-    </svg>
+      star
+    </i>
   </label>
   <label
     className="jsx-1505936054 star"
@@ -2232,32 +1519,17 @@ exports[`Storyshots StarPicker simple start picker 1`] = `
       type="radio"
       value={4}
     />
-    <svg
-      aria-label="star"
-      className="grommetux-control-icon grommetux-control-icon-star grommetux-control-icon--large grommetux-control-icon--responsive"
-      height="24px"
-      role="img"
-      theme={
+    <i
+      className="material-icons md-24 md-dark "
+      style={
         Object {
-          "icon": Object {
-            "color": "#bcbecf",
-            "size": Object {
-              "large": "40px",
-            },
-          },
+          "color": "",
+          "fontSize": "md-24",
         }
       }
-      version="1.1"
-      viewBox="0 0 24 24"
-      width="24px"
     >
-      <polygon
-        fill="none"
-        points="5 21 8 14 3 9 9 9 12 3 15 9 21 9 16 14 19 21 12 17"
-        stroke="#000"
-        strokeWidth="2"
-      />
-    </svg>
+      star
+    </i>
   </label>
   <label
     className="jsx-1505936054 star"
@@ -2273,32 +1545,17 @@ exports[`Storyshots StarPicker simple start picker 1`] = `
       type="radio"
       value={5}
     />
-    <svg
-      aria-label="star"
-      className="grommetux-control-icon grommetux-control-icon-star grommetux-control-icon--large grommetux-control-icon--responsive"
-      height="24px"
-      role="img"
-      theme={
+    <i
+      className="material-icons md-24 md-dark "
+      style={
         Object {
-          "icon": Object {
-            "color": "#bcbecf",
-            "size": Object {
-              "large": "40px",
-            },
-          },
+          "color": "",
+          "fontSize": "md-24",
         }
       }
-      version="1.1"
-      viewBox="0 0 24 24"
-      width="24px"
     >
-      <polygon
-        fill="none"
-        points="5 21 8 14 3 9 9 9 12 3 15 9 21 9 16 14 19 21 12 17"
-        stroke="#000"
-        strokeWidth="2"
-      />
-    </svg>
+      star
+    </i>
   </label>
   <label
     className="jsx-1505936054 star"
@@ -2314,33 +1571,583 @@ exports[`Storyshots StarPicker simple start picker 1`] = `
       type="radio"
       value={6}
     />
-    <svg
-      aria-label="star"
-      className="grommetux-control-icon grommetux-control-icon-star grommetux-control-icon--large grommetux-control-icon--responsive"
-      height="24px"
-      role="img"
-      theme={
+    <i
+      className="material-icons md-24 md-dark "
+      style={
         Object {
-          "icon": Object {
-            "color": "#bcbecf",
-            "size": Object {
-              "large": "40px",
-            },
-          },
+          "color": "",
+          "fontSize": "md-24",
         }
       }
-      version="1.1"
-      viewBox="0 0 24 24"
-      width="24px"
     >
-      <polygon
+      star
+    </i>
+  </label>
+</div>
+`;
+
+exports[`Storyshots Form Fields TextArea 1`] = `
+<div
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
+>
+  <div
+    className="jsx-1685083184 jsx-4038665278 jsx-2881818901 form-field"
+  >
+    <label
+      className="jsx-1685083184 jsx-4038665278 jsx-2881818901"
+      htmlFor="textarea"
+    >
+      Label
+    </label>
+    <textarea
+      className=""
+      id="textarea"
+      name="Name"
+      placeholder="Start typing"
+    />
+    <style>
+      input,textarea,select{width:100%;min-width:100%;max-width:100%;min-height:44px;padding:12px 16px;background-color:#ffffff;color:#2A2A30;box-sizing:border-box;-webkit-appearance:none;font-style:normal;font-weight:normal;font-size:0.875rem;border-width:2px;border-style:solid;border-color:#E7E7F0;border-radius:4px;}
+      input::-webkit-input-placeholder,textarea::-webkit-input-placeholder,select::-webkit-input-placeholder{color:#828393;}
+      input::-moz-placeholder,textarea::-moz-placeholder,select::-moz-placeholder{color:#828393;}
+      input:-ms-input-placeholder,textarea:-ms-input-placeholder,select:-ms-input-placeholder{color:#828393;}
+      input:-moz-placeholder,textarea:-moz-placeholder,select:-moz-placeholder{color:#828393;}
+      input:focus,textarea:focus,select:focus{outline:none;padding:12px 16px;border-color:#0c97f9;}
+      input.invalid,input.invalid:focus,textarea.invalid,textarea.invalid:focus,select.invalid,select.invalid:focus{border-color:#FF5572;}
+    </style>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Form Fields TimePicker 1`] = `
+<div
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
+>
+  <section
+    className="jsx-3462367854 time-picker"
+  >
+    <div
+      className="jsx-3462367854 time-picker__wrapper"
+    >
+      <div
+        className="jsx-3462367854 time-picker__title"
+      >
+        Appointment time
+      </div>
+      <div
+        className="jsx-3462367854 time-picker__input"
+        onClick={[Function]}
+        onKeyPress={[Function]}
+        role="button"
+        tabIndex="0"
+      >
+        <div
+          className="jsx-3462367854 time-picker__logo"
+        >
+          <i
+            className="material-icons md-24 md-dark "
+            style={
+              Object {
+                "color": "",
+                "fontSize": "md-24",
+              }
+            }
+          >
+            access_time
+          </i>
+        </div>
+        <input
+          className="jsx-3462367854 input"
+          onChange={[Function]}
+          type="text"
+          value="Pick time"
+        />
+      </div>
+      
+    </div>
+  </section>
+</div>
+`;
+
+exports[`Storyshots LinkButton default 1`] = `
+<div
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
+>
+  <a
+    aria-current={false}
+    className="button"
+    href="/"
+    onClick={[Function]}
+  >
+    <span
+      className="button__content"
+    >
+      Hello!
+    </span>
+  </a>
+</div>
+`;
+
+exports[`Storyshots Loader default 1`] = `
+<div
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
+>
+  <div
+    className="jsx-1462383989 loader"
+  >
+    <svg
+      className="jsx-1462383989 circular"
+    >
+      <circle
+        className="jsx-1462383989 path"
+        cx="50"
+        cy="50"
         fill="none"
-        points="5 21 8 14 3 9 9 9 12 3 15 9 21 9 16 14 19 21 12 17"
-        stroke="#000"
+        r="20"
+        strokeMiterlimit="10"
         strokeWidth="2"
       />
     </svg>
-  </label>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Modal default 1`] = `
+<div
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
+>
+  <button
+    className="jsx-3836532461 button"
+    disabled={false}
+    onClick={[Function]}
+    type="button"
+  >
+    
+    <span
+      className="jsx-3836532461 button__content"
+    >
+      Open modal
+    </span>
+  </button>
+</div>
+`;
+
+exports[`Storyshots Navigation default 1`] = `
+<main
+  style={
+    Object {
+      "display": "flex",
+      "minHeight": "100vh",
+    }
+  }
+>
+  <nav
+    className="jsx-3540150986 nav"
+  >
+    <ul
+      className="jsx-3540150986 nav__list"
+    >
+      <li>
+        <a
+          aria-current={false}
+          className="nav-item"
+          href="/dashboard"
+          onClick={[Function]}
+        >
+          <i
+            className="material-icons 24 md-dark "
+            style={
+              Object {
+                "color": "#ffffff",
+                "fontSize": 24,
+              }
+            }
+          >
+            dashboard
+          </i>
+          <span
+            className="nav-item__label"
+          >
+            Dashboards
+          </span>
+        </a>
+        <style>
+          .nav-item{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;width:53px;height:53px;padding:16px;color:#ffffff;-webkit-text-decoration:none;text-decoration:none;-webkit-letter-spacing:0.15rem;-moz-letter-spacing:0.15rem;-ms-letter-spacing:0.15rem;letter-spacing:0.15rem;text-transform:uppercase;border-radius:50%;box-sizing:border-box;-webkit-transition:background-color 0.3s ease-in-out;transition:background-color 0.3s ease-in-out;font-size:0.75rem;font-weight:bold;}
+          .nav-item--active{background-color:#0c97f9;}
+          .nav-item .material-icons{width:21px;height:21px;}
+          .nav-item__label{display:none;}
+          @media (min-width:960px){.nav-item{width:100%;padding:16px 16px 16px 50px;border-top-left-radius:0;border-bottom-left-radius:0;border-top-right-radius:30px;border-bottom-right-radius:30px;}.nav-item .material-icons{margin-right:30px;}.nav-item__label{display:inline-block;}}
+        </style>
+      </li>
+      <li>
+        <a
+          aria-current={false}
+          className="nav-item"
+          href="/notifications"
+          onClick={[Function]}
+        >
+          <i
+            className="material-icons 24 md-dark "
+            style={
+              Object {
+                "color": "#ffffff",
+                "fontSize": 24,
+              }
+            }
+          >
+            assignment_outline
+          </i>
+          <span
+            className="nav-item__label"
+          >
+            Notifications
+          </span>
+        </a>
+        <style>
+          .nav-item{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;width:53px;height:53px;padding:16px;color:#ffffff;-webkit-text-decoration:none;text-decoration:none;-webkit-letter-spacing:0.15rem;-moz-letter-spacing:0.15rem;-ms-letter-spacing:0.15rem;letter-spacing:0.15rem;text-transform:uppercase;border-radius:50%;box-sizing:border-box;-webkit-transition:background-color 0.3s ease-in-out;transition:background-color 0.3s ease-in-out;font-size:0.75rem;font-weight:bold;}
+          .nav-item--active{background-color:#0c97f9;}
+          .nav-item .material-icons{width:21px;height:21px;}
+          .nav-item__label{display:none;}
+          @media (min-width:960px){.nav-item{width:100%;padding:16px 16px 16px 50px;border-top-left-radius:0;border-bottom-left-radius:0;border-top-right-radius:30px;border-bottom-right-radius:30px;}.nav-item .material-icons{margin-right:30px;}.nav-item__label{display:inline-block;}}
+        </style>
+      </li>
+      <li>
+        <button
+          className="nav-item"
+        >
+          <i
+            className="material-icons 24 md-dark "
+            style={
+              Object {
+                "color": "#ffffff",
+                "fontSize": 24,
+              }
+            }
+          >
+            photo_camera_outline
+          </i>
+          <span
+            className="nav-item__label"
+          >
+            Sign out
+          </span>
+        </button>
+        <style>
+          .nav-item{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;width:53px;height:53px;padding:16px;color:#ffffff;-webkit-text-decoration:none;text-decoration:none;-webkit-letter-spacing:0.15rem;-moz-letter-spacing:0.15rem;-ms-letter-spacing:0.15rem;letter-spacing:0.15rem;text-transform:uppercase;border-radius:50%;box-sizing:border-box;-webkit-transition:background-color 0.3s ease-in-out;transition:background-color 0.3s ease-in-out;background-color:transparent;border:none;outline:none;cursor:pointer;font-size:0.75rem;font-weight:bold;}
+          .nav-item--active{background-color:#0c97f9;}
+          .nav-item .material-icons{width:21px;height:21px;}
+          .nav-item__label{display:none;}
+          @media (min-width:960px){.nav-item{width:100%;padding:16px 16px 16px 50px;border-top-left-radius:0;border-bottom-left-radius:0;border-top-right-radius:30px;border-bottom-right-radius:30px;}.nav-item .material-icons{margin-right:30px;}.nav-item__label{display:inline-block;}}
+        </style>
+      </li>
+    </ul>
+  </nav>
+</main>
+`;
+
+exports[`Storyshots Notification default 1`] = `
+<div
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
+>
+  <div
+    className="jsx-714432891 card notification"
+  >
+    <div
+      className="jsx-2608401401 jsx-3014010845 notification__time"
+    >
+      12:00 AM, Jun 20
+    </div>
+    <div
+      className="jsx-2608401401 jsx-3014010845 notification__message"
+    >
+      <span
+        className="jsx-2608401401 jsx-3014010845 notification__dot"
+      />
+      New message
+    </div>
+    <div
+      className="jsx-2608401401 jsx-3014010845 notification__actions"
+    >
+      <button
+        className="jsx-3836532461 button button--small button--flat button--with-icon button--rounded"
+        disabled={false}
+        onClick={[Function]}
+        type="button"
+      >
+        <div
+          className="jsx-3836532461 button__icon"
+        >
+          <i
+            className="material-icons md-24 md-dark "
+            style={
+              Object {
+                "color": "",
+                "fontSize": "md-24",
+              }
+            }
+          >
+            done
+          </i>
+        </div>
+      </button>
+      <button
+        className="jsx-3836532461 button button--small button--flat button--with-icon button--rounded"
+        disabled={false}
+        onClick={[Function]}
+        type="button"
+      >
+        <div
+          className="jsx-3836532461 button__icon"
+        >
+          <i
+            className="material-icons md-24 md-dark "
+            style={
+              Object {
+                "color": "",
+                "fontSize": "md-24",
+              }
+            }
+          >
+            delete
+          </i>
+        </div>
+      </button>
+    </div>
+    <div
+      className="jsx-2608401401 jsx-3014010845 notification__actions--mobile"
+    >
+      <button
+        className="jsx-3836532461 button button--flat button--with-icon button--rounded"
+        disabled={false}
+        onClick={[Function]}
+        type="button"
+      >
+        <div
+          className="jsx-3836532461 button__icon"
+        >
+          <i
+            className="material-icons md-24 md-dark "
+            style={
+              Object {
+                "color": "",
+                "fontSize": "md-24",
+              }
+            }
+          >
+            more_horiz
+          </i>
+        </div>
+      </button>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Paginator default 1`] = `
+<div
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
+>
+  <ul
+    className="pagination"
+  >
+    <li
+      className="previous disabled"
+    >
+      <a
+        onClick={[Function]}
+        onKeyPress={[Function]}
+        tabIndex="0"
+      >
+        <i
+          className="material-icons md-24 md-dark "
+          style={
+            Object {
+              "color": "",
+              "fontSize": "md-24",
+            }
+          }
+        >
+          chevron_left
+        </i>
+      </a>
+    </li>
+    <li
+      className="active"
+    >
+      <a
+        aria-current="page"
+        aria-label="Page 1 is your current page"
+        onClick={[Function]}
+        onKeyPress={[Function]}
+        tabIndex="0"
+      >
+        1
+      </a>
+    </li>
+    <li>
+      <a
+        aria-current={null}
+        aria-label="Page 2"
+        onClick={[Function]}
+        onKeyPress={[Function]}
+        tabIndex="0"
+      >
+        2
+      </a>
+    </li>
+    <li>
+      <a
+        aria-current={null}
+        aria-label="Page 3"
+        onClick={[Function]}
+        onKeyPress={[Function]}
+        tabIndex="0"
+      >
+        3
+      </a>
+    </li>
+    <li>
+      <a
+        aria-current={null}
+        aria-label="Page 4"
+        onClick={[Function]}
+        onKeyPress={[Function]}
+        tabIndex="0"
+      >
+        4
+      </a>
+    </li>
+    <li>
+      <a
+        aria-current={null}
+        aria-label="Page 5"
+        onClick={[Function]}
+        onKeyPress={[Function]}
+        tabIndex="0"
+      >
+        5
+      </a>
+    </li>
+    <li
+      className="break"
+    >
+      ...
+    </li>
+    <li>
+      <a
+        aria-current={null}
+        aria-label="Page 9"
+        onClick={[Function]}
+        onKeyPress={[Function]}
+        tabIndex="0"
+      >
+        9
+      </a>
+    </li>
+    <li>
+      <a
+        aria-current={null}
+        aria-label="Page 10"
+        onClick={[Function]}
+        onKeyPress={[Function]}
+        tabIndex="0"
+      >
+        10
+      </a>
+    </li>
+    <li
+      className="next"
+    >
+      <a
+        onClick={[Function]}
+        onKeyPress={[Function]}
+        tabIndex="0"
+      >
+        <i
+          className="material-icons md-24 md-dark "
+          style={
+            Object {
+              "color": "",
+              "fontSize": "md-24",
+            }
+          }
+        >
+          chevron_right
+        </i>
+      </a>
+    </li>
+  </ul>
+  <style>
+    .pagination{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;width:100%;margin:0;padding:0;list-style:none;}
+    .pagination li{padding:0;margin:3px;background-color:transparent;color:#BBBCCD;border-radius:50%;box-sizing:border-box;cursor:pointer;-webkit-transition:all 0.2s ease;transition:all 0.2s ease;font-size:0.875rem;}
+    .pagination li:hover:not(.break){background-color:#eff0f4;}
+    .pagination li.break{cursor:initial;}
+    .pagination li.active,.pagination li.active:hover{background-color:#0c97f9;color:#fff;cursor:initial;}
+    .pagination li.previous,.pagination li.next{background-color:#eff0f4;}
+    .pagination li.previous{margin-right:30px;}
+    .pagination li.next{margin-left:30px;}
+    .pagination li svg{fill:#BBBCCD;stroke:#BBBCCD;}
+    .pagination a{position:relative;outline:none;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;height:30px;width:30px;}
+  </style>
+</div>
+`;
+
+exports[`Storyshots SearchBar default 1`] = `
+<div
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
+>
+  <div
+    className="jsx-1685083184 jsx-4038665278 jsx-2881818901 form-field"
+  >
+    <label
+      className="jsx-1685083184 jsx-4038665278 jsx-2881818901"
+    />
+    <input
+      className=""
+      onChange={[Function]}
+      placeholder="Search...."
+    />
+    <style>
+      input,textarea,select{width:100%;min-width:100%;max-width:100%;min-height:44px;padding:12px 16px;background-color:#ffffff;color:#2A2A30;box-sizing:border-box;-webkit-appearance:none;font-style:normal;font-weight:normal;font-size:0.875rem;border-width:2px;border-style:solid;border-color:#E7E7F0;border-radius:4px;}
+      input::-webkit-input-placeholder,textarea::-webkit-input-placeholder,select::-webkit-input-placeholder{color:#828393;}
+      input::-moz-placeholder,textarea::-moz-placeholder,select::-moz-placeholder{color:#828393;}
+      input:-ms-input-placeholder,textarea:-ms-input-placeholder,select:-ms-input-placeholder{color:#828393;}
+      input:-moz-placeholder,textarea:-moz-placeholder,select:-moz-placeholder{color:#828393;}
+      input:focus,textarea:focus,select:focus{outline:none;padding:12px 16px;border-color:#0c97f9;}
+      input.invalid,input.invalid:focus,textarea.invalid,textarea.invalid:focus,select.invalid,select.invalid:focus{border-color:#FF5572;}
+    </style>
+  </div>
 </div>
 `;
 
@@ -2352,9 +2159,7 @@ exports[`Storyshots Stepper Stepper 1`] = `
     }
   }
 >
-  <div
-    className={undefined}
-  >
+  <div>
     <ul
       className="jsx-291528123 stepper-header"
     >
@@ -2411,13 +2216,14 @@ exports[`Storyshots Stepper Stepper 1`] = `
       }
     >
       <button
-        className="jsx-744565053 button"
+        className="jsx-3836532461 button"
         disabled={false}
         onClick={[Function]}
         type="button"
       >
+        
         <span
-          className="button__content"
+          className="jsx-3836532461 button__content"
         >
           Next
         </span>
@@ -2426,65 +2232,6 @@ exports[`Storyshots Stepper Stepper 1`] = `
       current step NaN
     </div>
   </div>
-</div>
-`;
-
-exports[`Storyshots TimePicker TimePicker 1`] = `
-<div
-  style={
-    Object {
-      "padding": "24px",
-    }
-  }
->
-  <section
-    className="jsx-3462367854 time-picker"
-  >
-    <div
-      className="jsx-3462367854 time-picker__wrapper"
-    >
-      <div
-        className="jsx-3462367854 time-picker__title"
-      >
-        Appointment time
-      </div>
-      <div
-        className="jsx-3462367854 time-picker__input"
-        onClick={[Function]}
-        onKeyPress={[Function]}
-        role="button"
-        tabIndex="0"
-      >
-        <div
-          className="jsx-3462367854 time-picker__logo"
-        >
-          <svg
-            aria-label="clock"
-            className="grommetux-control-icon grommetux-control-icon-clock grommetux-control-icon--responsive"
-            height="24px"
-            role="img"
-            version="1.1"
-            viewBox="0 0 24 24"
-            width="24px"
-          >
-            <path
-              d="M12,22 C17.5228475,22 22,17.5228475 22,12 C22,6.4771525 17.5228475,2 12,2 C6.4771525,2 2,6.4771525 2,12 C2,17.5228475 6.4771525,22 12,22 Z M12,5 L12,12 L17,12"
-              fill="none"
-              stroke="#000"
-              strokeWidth="2"
-            />
-          </svg>
-        </div>
-        <input
-          className="jsx-3462367854 input"
-          onChange={[Function]}
-          type="text"
-          value="Pick time"
-        />
-      </div>
-      
-    </div>
-  </section>
 </div>
 `;
 
@@ -2497,13 +2244,14 @@ exports[`Storyshots Toast default 1`] = `
   }
 >
   <button
-    className="jsx-744565053 button"
+    className="jsx-3836532461 button"
     disabled={false}
     onClick={[Function]}
     type="button"
   >
+    
     <span
-      className="button__content"
+      className="jsx-3836532461 button__content"
     >
       Create toast
     </span>
@@ -2562,11 +2310,7 @@ exports[`Storyshots Video Player default 1`] = `
       tabIndex="-1"
     >
       <video
-        autoPlay={undefined}
         className="video-react-video video-player"
-        crossOrigin={undefined}
-        id={undefined}
-        loop={undefined}
         muted={false}
         onAbort={[Function]}
         onCanPlay={[Function]}
@@ -2591,9 +2335,7 @@ exports[`Storyshots Video Player default 1`] = `
         onVolumeChange={[Function]}
         onWaiting={[Function]}
         playsInline={true}
-        poster={undefined}
         preload="auto"
-        src={undefined}
       />
       <button
         aria-live="polite"

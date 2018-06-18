@@ -1,16 +1,17 @@
 import React, { Component } from 'react';
+import MaterialIcon from 'material-icons-react';
 import { NavLink } from 'react-router-dom';
 
 import styles from './styles';
 
 export default class NavigationItem extends Component {
   render() {
-    const { route, label, icon: Icon } = this.props;
+    const { route, label, icon } = this.props;
 
     return (
       <li>
-        <NavLink to={route} className="nav-item" activeClassName="nav-item--active">
-          <Icon className="nav-item__icon" />
+        <NavLink activeClassName="nav-item--active" className="nav-item" to={route}>
+          <MaterialIcon color="#ffffff" icon={icon} size={24} />
           <span className="nav-item__label">{label}</span>
         </NavLink>
 

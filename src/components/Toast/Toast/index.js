@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
-import { CloseIcon } from 'grommet/components/icons/base';
+import MaterialIcon from 'material-icons-react';
 import Manager from './../Manager';
 
 export default class Toast extends Component {
@@ -83,7 +83,7 @@ export default class Toast extends Component {
         <div className="message">{content}</div>
         <div className="icons-close">
           <button className="icon" onClick={this.closeToast}>
-            <CloseIcon />
+            <MaterialIcon icon="close" />
           </button>
         </div>
         <div className="clear" />

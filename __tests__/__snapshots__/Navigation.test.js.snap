@@ -41,7 +41,7 @@ exports[`renders correctly 1`] = `
               className="jsx-3540150986 nav__list"
             >
               <NavigationItem
-                icon={[Function]}
+                icon="dashboard"
                 label="Dashboards"
                 route="/dashboard"
               >
@@ -67,27 +67,23 @@ exports[`renders correctly 1`] = `
                           href="/dashboard"
                           onClick={[Function]}
                         >
-                          <Dashboard
-                            className="nav-item__icon"
-                            responsive={true}
+                          <MaterialIcon
+                            color="#ffffff"
+                            icon="dashboard"
+                            size={24}
                           >
-                            <svg
-                              aria-label="dashboard"
-                              className="grommetux-control-icon grommetux-control-icon-dashboard nav-item__icon grommetux-control-icon--responsive"
-                              height="24px"
-                              role="img"
-                              version="1.1"
-                              viewBox="0 0 24 24"
-                              width="24px"
+                            <i
+                              className="material-icons 24 md-dark "
+                              style={
+                                Object {
+                                  "color": "#ffffff",
+                                  "fontSize": 24,
+                                }
+                              }
                             >
-                              <path
-                                d="M12,22 C17.5228475,22 22,17.5228475 22,12 C22,6.4771525 17.5228475,2 12,2 C6.4771525,2 2,6.4771525 2,12 C2,17.5228475 6.4771525,22 12,22 Z M15,16 C15,14.3431458 13.6568542,13 12,13 C10.3431458,13 9,14.3431458 9,16 M5,5 L7,7 M12,7 L12,13 M12,3 L12,5 M19,12 L21,12 M3,12 L5,12 M17,7 L19,5 M3,17 L21,17"
-                                fill="none"
-                                stroke="#000"
-                                strokeWidth="2"
-                              />
-                            </svg>
-                          </Dashboard>
+                              dashboard
+                            </i>
+                          </MaterialIcon>
                           <span
                             className="nav-item__label"
                           >
@@ -100,15 +96,14 @@ exports[`renders correctly 1`] = `
                   <style>
                     .nav-item{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;width:53px;height:53px;padding:16px;color:#ffffff;-webkit-text-decoration:none;text-decoration:none;-webkit-letter-spacing:0.15rem;-moz-letter-spacing:0.15rem;-ms-letter-spacing:0.15rem;letter-spacing:0.15rem;text-transform:uppercase;border-radius:50%;box-sizing:border-box;-webkit-transition:background-color 0.3s ease-in-out;transition:background-color 0.3s ease-in-out;font-size:0.75rem;font-weight:bold;}
                     .nav-item--active{background-color:#0c97f9;}
-                    .nav-item__icon{width:21px;height:21px;fill:#ffffff !important;stroke:#ffffff !important;}
-                    .nav-item__icon circle,.nav-item__icon path{stroke:#ffffff !important;}
+                    .nav-item .material-icons{width:21px;height:21px;}
                     .nav-item__label{display:none;}
-                    @media (min-width:960px){.nav-item{width:100%;padding:16px 16px 16px 50px;border-top-left-radius:0;border-bottom-left-radius:0;border-top-right-radius:30px;border-bottom-right-radius:30px;}.nav-item__icon{margin-right:30px;}.nav-item__label{display:inline-block;}}
+                    @media (min-width:960px){.nav-item{width:100%;padding:16px 16px 16px 50px;border-top-left-radius:0;border-bottom-left-radius:0;border-top-right-radius:30px;border-bottom-right-radius:30px;}.nav-item .material-icons{margin-right:30px;}.nav-item__label{display:inline-block;}}
                   </style>
                 </li>
               </NavigationItem>
               <NavigationItem
-                icon={[Function]}
+                icon="notification_important"
                 label="Notifications"
                 route="/notifications"
               >
@@ -134,27 +129,23 @@ exports[`renders correctly 1`] = `
                           href="/notifications"
                           onClick={[Function]}
                         >
-                          <Notification
-                            className="nav-item__icon"
-                            responsive={true}
+                          <MaterialIcon
+                            color="#ffffff"
+                            icon="notification_important"
+                            size={24}
                           >
-                            <svg
-                              aria-label="notification"
-                              className="grommetux-control-icon grommetux-control-icon-notification nav-item__icon grommetux-control-icon--responsive"
-                              height="24px"
-                              role="img"
-                              version="1.1"
-                              viewBox="0 0 24 24"
-                              width="24px"
+                            <i
+                              className="material-icons 24 md-dark "
+                              style={
+                                Object {
+                                  "color": "#ffffff",
+                                  "fontSize": 24,
+                                }
+                              }
                             >
-                              <path
-                                d="M4,19 L4,9 C4,4.582 7.582,1 12,1 C16.418,1 20,4.582 20,9 L20,19 M1,19 L23,19 M15,19 L15,20 C15,21.657 13.657,23 12,23 C10.343,23 9,21.657 9,20 L9,19"
-                                fill="none"
-                                stroke="#000"
-                                strokeWidth="2"
-                              />
-                            </svg>
-                          </Notification>
+                              notification_important
+                            </i>
+                          </MaterialIcon>
                           <span
                             className="nav-item__label"
                           >
@@ -167,10 +158,9 @@ exports[`renders correctly 1`] = `
                   <style>
                     .nav-item{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;width:53px;height:53px;padding:16px;color:#ffffff;-webkit-text-decoration:none;text-decoration:none;-webkit-letter-spacing:0.15rem;-moz-letter-spacing:0.15rem;-ms-letter-spacing:0.15rem;letter-spacing:0.15rem;text-transform:uppercase;border-radius:50%;box-sizing:border-box;-webkit-transition:background-color 0.3s ease-in-out;transition:background-color 0.3s ease-in-out;font-size:0.75rem;font-weight:bold;}
                     .nav-item--active{background-color:#0c97f9;}
-                    .nav-item__icon{width:21px;height:21px;fill:#ffffff !important;stroke:#ffffff !important;}
-                    .nav-item__icon circle,.nav-item__icon path{stroke:#ffffff !important;}
+                    .nav-item .material-icons{width:21px;height:21px;}
                     .nav-item__label{display:none;}
-                    @media (min-width:960px){.nav-item{width:100%;padding:16px 16px 16px 50px;border-top-left-radius:0;border-bottom-left-radius:0;border-top-right-radius:30px;border-bottom-right-radius:30px;}.nav-item__icon{margin-right:30px;}.nav-item__label{display:inline-block;}}
+                    @media (min-width:960px){.nav-item{width:100%;padding:16px 16px 16px 50px;border-top-left-radius:0;border-bottom-left-radius:0;border-top-right-radius:30px;border-bottom-right-radius:30px;}.nav-item .material-icons{margin-right:30px;}.nav-item__label{display:inline-block;}}
                   </style>
                 </li>
               </NavigationItem>

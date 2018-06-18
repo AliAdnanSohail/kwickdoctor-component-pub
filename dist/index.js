@@ -3,7 +3,6 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.Validate = undefined;
 
 var _components = require('./components');
 
@@ -25,7 +24,5 @@ Object.defineProperty(exports, 'Validate', {
     return _interopRequireDefault(_validations).default;
   }
 });
-
-require('grommet/grommet.min.css');
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }

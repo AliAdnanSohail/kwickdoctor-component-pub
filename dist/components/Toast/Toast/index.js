@@ -19,7 +19,9 @@ var _classnames = require('classnames');
 
 var _classnames2 = _interopRequireDefault(_classnames);
 
-var _base = require('grommet/components/icons/base');
+var _materialIconsReact = require('material-icons-react');
+
+var _materialIconsReact2 = _interopRequireDefault(_materialIconsReact);
 
 var _Manager = require('./../Manager');
 
@@ -143,7 +145,7 @@ var Toast = function (_Component) {
           _react2.default.createElement(
             'button',
             { className: 'icon', onClick: this.closeToast },
-            _react2.default.createElement(_base.CloseIcon, null)
+            _react2.default.createElement(_materialIconsReact2.default, { icon: 'close' })
           )
         ),
         _react2.default.createElement('div', { className: 'clear' })

@@ -1,8 +1,8 @@
 import React from 'react';
-import { storiesOf } from '@storybook/react';
-import { text, number, withKnobs } from '@storybook/addon-knobs/react';
 import { checkA11y } from '@storybook/addon-a11y';
+import { text, number, withKnobs } from '@storybook/addon-knobs/react';
 import { withTests } from '@storybook/addon-jest';
+import { storiesOf } from '@storybook/react';
 
 import { Avatar } from '../src';
 import results from '../.jest-test-results.json';
@@ -15,10 +15,10 @@ storiesOf('Avatar', module)
   .add('default', () => (
     <Avatar
       borderRadius={number('border-radius', 3)}
+      size={number('size', 150)}
       src={text(
         'src',
-        'https://cdn.pixabay.com/photo/2017/08/30/01/05/milky-way-2695569_960_720.jpg',
+        'https://wallup.net/wp-content/uploads/2017/03/29/493007-Mac_OS_X-Mac_Sierra-748x421.jpg',
       )}
-      size={number('size', 150)}
     />
   ));

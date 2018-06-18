@@ -1,34 +1,17 @@
-import React, { Component, Fragment } from 'react';
+import React, { Component } from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 import styles from './styles';
 
 export default class LinkButton extends Component {
-  componentWillUnmount() {
-    clearTimeout(this.timeout);
-  }
-
-  renderContent = () => {
-    const {
-      children, icon, rounded,
-    } = this.props;
-
-    return (
-      <Fragment>
-        {icon && React.cloneElement(icon, { className: 'button__icon' })}
-        {!rounded && <span className="button__content">{children}</span>}
-      </Fragment>
-    );
-  };
-
   render() {
     const {
       accent,
       className,
+      children,
       danger,
-      disabled,
       flat,
       icon,
       link,
@@ -44,7 +27,6 @@ export default class LinkButton extends Component {
       { [`button--${size}`]: size },
       { 'button--accent': accent },
       { 'button--danger': danger },
-      { 'button--disabled': disabled },
       { 'button--flat': flat },
       { 'button--with-icon': icon },
       { 'button--rounded': rounded },
@@ -53,17 +35,12 @@ export default class LinkButton extends Component {
     );
 
     return (
-      <Fragment>
-        <Link
-          href
-          to={link}
-          className={classes}
-          disabled={disabled}
-        >
-          {this.renderContent()}
-          <style jsx global>{styles}</style>
-        </Link>
-      </Fragment>
+      <NavLink className={classes} to={link}>
+        {icon && <span className="button__icon">{icon}</span>}
+        {!rounded && <span className="button__content">{children}</span>}
+
+        <style jsx global>{styles}</style>
+      </NavLink>
     );
   }
 }
@@ -73,12 +50,11 @@ LinkButton.propTypes = {
   children: PropTypes.any,
   className: PropTypes.string,
   danger: PropTypes.bool,
-  disabled: PropTypes.bool,
   flat: PropTypes.bool,
   icon: PropTypes.element,
   link: PropTypes.string,
   rounded: PropTypes.bool,
-  size: PropTypes.oneOf(['s', 'xs', '']),
+  size: PropTypes.oneOf(['small', 'xsmall', '']),
   squared: PropTypes.bool,
   transparent: PropTypes.bool,
 };
@@ -88,7 +64,6 @@ LinkButton.defaultProps = {
   children: null,
   className: '',
   danger: false,
-  disabled: false,
   flat: false,
   icon: null,
   link: '/',

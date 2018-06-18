@@ -2,14 +2,14 @@ import css from 'styled-jsx/css';
 
 export default css`
   .month {
-    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+
     margin: 0;
+    padding: 0;
+    width: 100%;
+
     list-style: none;
     font-size: 1rem;
-
-    li {
-      float: left;
-      width: 14.2857143%;
-    }
   }
 `;

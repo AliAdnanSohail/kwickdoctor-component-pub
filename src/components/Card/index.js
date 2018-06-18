@@ -1,19 +1,17 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
 import classnames from 'classnames';
+import PropTypes from 'prop-types';
 
 import styles from './styles';
 
 export default class Card extends Component {
   render() {
-    const {
-      children, rounded, style, className,
-    } = this.props;
+    const { children, className } = this.props;
 
-    const classes = classnames('card', className, { 'card--rounded': rounded });
+    const classes = classnames('card', className);
 
     return (
-      <div className={classes} style={style}>
+      <div className={classes}>
         {children}
 
         <style jsx>{styles}</style>
@@ -25,12 +23,8 @@ export default class Card extends Component {
 Card.propTypes = {
   children: PropTypes.node.isRequired,
   className: PropTypes.string,
-  rounded: PropTypes.bool,
-  style: PropTypes.object,
 };
 
 Card.defaultProps = {
   className: '',
-  rounded: false,
-  style: {},
 };

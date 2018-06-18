@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import Day from './../Day';
 
 import monthStyles from './styles';
+import Day from '../Day';
 
 export default class Month extends Component {
   render() {

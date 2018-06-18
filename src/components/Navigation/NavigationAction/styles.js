@@ -36,17 +36,9 @@ export default css`
       background-color: ${settings.primaryColor};
     }
 
-    &__icon {
+    :global(.material-icons) {
       width: 21px;
       height: 21px;
-
-      fill: #ffffff !important;
-      stroke: #ffffff !important;
-
-      circle,
-      path {
-        stroke: #ffffff !important;
-      }
     }
 
     &__label {
@@ -63,7 +55,7 @@ export default css`
       border-top-right-radius: 30px;
       border-bottom-right-radius: 30px;
 
-      &__icon {
+      :global(.material-icons) {
         margin-right: 30px;
       }
 

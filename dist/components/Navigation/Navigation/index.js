@@ -15,13 +15,13 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
-var _propTypes = require('prop-types');
-
-var _propTypes2 = _interopRequireDefault(_propTypes);
-
 var _classnames = require('classnames');
 
 var _classnames2 = _interopRequireDefault(_classnames);
+
+var _propTypes = require('prop-types');
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
 
 var _styles = require('./styles');
 
@@ -85,14 +85,14 @@ exports.default = Navigation;
 
 
 Navigation.propTypes = {
+  after: _propTypes2.default.element,
   before: _propTypes2.default.element,
   children: _propTypes2.default.node.isRequired,
-  className: _propTypes2.default.string,
-  after: _propTypes2.default.element
+  className: _propTypes2.default.string
 };
 
 Navigation.defaultProps = {
+  after: undefined,
   before: undefined,
-  className: undefined,
-  after: undefined
+  className: undefined
 };

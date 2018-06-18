@@ -19,13 +19,13 @@ var _propTypes = require('prop-types');
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
 
-var _Day = require('./../Day');
-
-var _Day2 = _interopRequireDefault(_Day);
-
 var _styles = require('./styles');
 
 var _styles2 = _interopRequireDefault(_styles);
+
+var _Day = require('../Day');
+
+var _Day2 = _interopRequireDefault(_Day);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 

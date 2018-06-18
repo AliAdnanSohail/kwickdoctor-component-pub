@@ -14,7 +14,9 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
-var _base = require('grommet/components/icons/base');
+var _materialIconsReact = require('material-icons-react');
+
+var _materialIconsReact2 = _interopRequireDefault(_materialIconsReact);
 
 var _renderer = require('../renderer');
 
@@ -33,9 +35,7 @@ exports.default = (0, _renderer2.default)(function (input, label, _ref) {
       id = _ref.id,
       name = _ref.name,
       options = _ref.options,
-      placeholder = _ref.placeholder,
-      type = _ref.type,
-      value = _ref.value;
+      placeholder = _ref.placeholder;
   return _react2.default.createElement(
     _react.Fragment,
     null,
@@ -46,13 +46,7 @@ exports.default = (0, _renderer2.default)(function (input, label, _ref) {
       },
       _react2.default.createElement(
         'select',
-        _extends({}, input, {
-          id: id,
-          name: name,
-          type: type,
-          placeholder: placeholder,
-          value: value,
-          className: 'jsx-' + _styles2.default.__scopedHash + ' ' + (className || '')
+        _extends({}, input, { id: id, name: name, placeholder: placeholder, className: 'jsx-' + _styles2.default.__scopedHash + ' ' + (className || '')
         }),
         options.map(function (option) {
           return _react2.default.createElement(
@@ -63,7 +57,7 @@ exports.default = (0, _renderer2.default)(function (input, label, _ref) {
           );
         })
       ),
-      _react2.default.createElement(_base.DownIcon, null)
+      _react2.default.createElement(_materialIconsReact2.default, { icon: 'expand_more' })
     ),
     _react2.default.createElement(
       'style',

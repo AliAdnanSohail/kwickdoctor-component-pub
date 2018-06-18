@@ -22,8 +22,6 @@ export default class VideoRecorder extends Component {
   }
 
   componentDidMount() {
-    console.log('componentDidMount');
-
     if (navigator.mediaDevices) {
       const handleSuccess = (stream) => {
         this.video.srcObject = stream;
@@ -51,8 +49,6 @@ export default class VideoRecorder extends Component {
   }
 
   componentWillUnmount() {
-    console.log('componentWillUnmount');
-
     this.recorder = null;
     this.chunk = [];
 
@@ -66,8 +62,6 @@ export default class VideoRecorder extends Component {
   }
 
   initMediaRecorder = () => {
-    console.log('initMediaRecorder');
-
     try {
       const options = {};
       const types = ['video/webm;codecs=vp8', 'video/webm', ''];
@@ -96,8 +90,6 @@ export default class VideoRecorder extends Component {
   };
 
   handleStart = () => {
-    console.log('start');
-
     if (!this.state.available) {
       return;
     }
@@ -107,8 +99,6 @@ export default class VideoRecorder extends Component {
     this.setState({ countingdown: true });
 
     this.countdown = setInterval(() => {
-      console.log('countdown');
-
       const { countdownValue } = this.state;
 
       this.setState({ countdownValue: countdownValue - 1 }, () => {
@@ -123,8 +113,6 @@ export default class VideoRecorder extends Component {
             onStart(this.stream);
 
             this.timer = setInterval(() => {
-              console.log('timer');
-
               const { time } = this.state;
 
               if (limit > 0 && limit - 1 <= time) {
@@ -148,8 +136,6 @@ export default class VideoRecorder extends Component {
   };
 
   handleStop = () => {
-    console.log('stop');
-
     if (!this.state.available) {
       return;
     }

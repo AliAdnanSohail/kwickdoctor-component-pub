@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  className="jsx-2204262328 avatar"
+  style={
+    Object {
+      "backgroundImage": "",
+      "borderRadius": "3px",
+      "height": "40px",
+      "width": "40px",
+    }
+  }
+>
+  <i
+    className="material-icons 20 md-dark "
+    style={
+      Object {
+        "color": "#BBBCCD",
+        "fontSize": 20,
+      }
+    }
+  >
+    person_outline
+  </i>
+</div>
+`;

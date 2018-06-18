@@ -27,7 +27,9 @@ var _reactAriaModal = require('react-aria-modal');
 
 var _reactAriaModal2 = _interopRequireDefault(_reactAriaModal);
 
-var _base = require('grommet/components/icons/base');
+var _materialIconsReact = require('material-icons-react');
+
+var _materialIconsReact2 = _interopRequireDefault(_materialIconsReact);
 
 var _styles = require('./styles');
 
@@ -44,8 +46,8 @@ var Modal = function (_Component) {
 
   _createClass(Modal, null, [{
     key: 'getDerivedStateFromProps',
-    value: function getDerivedStateFromProps(nextProps, prevState) {
-      return nextProps.active !== prevState.active ? { active: nextProps.active } : null;
+    value: function getDerivedStateFromProps(props, state) {
+      return props.active !== state.active ? { active: props.active } : null;
     }
   }]);
 
@@ -125,7 +127,7 @@ var Modal = function (_Component) {
             'button',
             { onClick: this.handleExit, className: 'jsx-' + _styles.modal.__scopedHash + ' ' + 'modal__close-button'
             },
-            _react2.default.createElement(_base.CloseIcon, null)
+            _react2.default.createElement(_materialIconsReact2.default, { icon: 'close' })
           ),
           _react2.default.createElement(
             'div',

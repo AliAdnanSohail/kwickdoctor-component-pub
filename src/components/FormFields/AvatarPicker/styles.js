@@ -17,42 +17,29 @@ export const avatar = css`
   .avatar {
     position: relative;
 
-    &__container {
-      cursor: pointer;
-      color: #c1c2cf;
-    }
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
 
-    &__thumb {
-      position: relative;
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      justify-content: center;
+    overflow: hidden;
 
-      background: {
-        color: #e7e7f0;
-        position: center;
-        size: cover;
-      }
+    cursor: pointer;
 
-      :global(svg) {
-        width: 50%;
-        height: 50%;
-        fill: #bbbccd;
-        stroke: #bbbccd;
-      }
+    background: {
+      color: #e7e7f0;
+      position: center;
+      size: cover;
     }
 
     &__button {
-      &--remove {
-        position: absolute;
-        width: 100%;
-        bottom: 15px;
-        top: 0;
-        display: flex;
-        align-items: flex-end;
-        justify-content: center;
-      }
+      position: absolute;
+      width: 100%;
+      bottom: 15px;
+
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
     }
   }
 `;

@@ -43,21 +43,33 @@ export default css`
       outline: none;
     }
 
-    :global(svg) {
-      fill: #ffffff;
-      stroke: #ffffff;
+    &__content {
+      display: inline-block;
+      transition: all 0.3s ease-in-out;
+    }
 
-      width: 24px;
-      height: 24px;
+    &__icon {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
 
-      :global(circle, path) {
-        stroke: #ffffff;
+      :global(.material-icons) {
+        color: #ffffff;
       }
     }
 
-    :global(&__content) {
-      display: inline-block;
-      transition: all 0.3s ease-in-out;
+    &__loading-icon {
+      width: 24px;
+      height: 24px;
+      transform-origin: center;
+
+      animation: {
+        name: rotate;
+        duration: 1s;
+        iteration-count: infinite;
+        timing-function: ease-in-out;
+      }
     }
 
     &__wave {
@@ -74,7 +86,7 @@ export default css`
       transform: translate(-50%, -50%);
     }
 
-    &--with-icon :global(&__content) {
+    &--with-icon &__content {
       transform: translateX(16px);
     }
 
@@ -97,13 +109,8 @@ export default css`
       background-color: transparent;
       border-color: transparent;
 
-      :global(svg) {
-        stroke: ${settings.textColor};
-        fill: ${settings.textColor};
-
-        :global(path, circle) {
-          stroke: ${settings.textColor};
-        }
+      :global(.material-icons) {
+        color: ${settings.textColor};
       }
 
       &:not(.button--disabled) {
@@ -122,13 +129,8 @@ export default css`
       background-color: transparent;
       border-color: transparent;
 
-      :global(svg) {
-        stroke: ${settings.textColor};
-        fill: ${settings.textColor};
-
-        :global(path, circle) {
-          stroke: ${settings.textColor};
-        }
+      :global(.material-icons) {
+        color: ${settings.textColor};
       }
 
       &:not(.button--disabled) {
@@ -168,14 +170,6 @@ export default css`
       border-radius: 50%;
     }
 
-    &:not(&--rounded) {
-      :global(.button__icon) {
-        position: absolute;
-        top: calc(50% - 12px);
-        left: 32px;
-      }
-    }
-
     &--squared {
       border-radius: 12px;
     }
@@ -193,43 +187,12 @@ export default css`
         }
       }
 
-      :global(svg) {
-        stroke: ${settings.textColor};
-        fill: ${settings.textColor};
-
-        :global(path, circle) {
-          stroke: ${settings.textColor};
-        }
+      .button__icon :global(.material-icons) {
+        color: ${settings.textColor};
       }
     }
 
-    &--xs {
-      height: 32px;
-      line-height: 1;
-
-      padding: 0 32px;
-
-      font-size: 0.75rem;
-
-      &.button--rounded {
-        width: 32px;
-        height: 32px;
-      }
-
-      :global(svg) {
-        width: 18px;
-        height: 18px;
-      }
-
-      &:not(&--rounded) {
-        :global(.button__icon) {
-          left: 16px;
-          top: calc(50% - 9px);
-        }
-      }
-    }
-
-    &--s {
+    &--small {
       height: 42px;
       line-height: 1;
 
@@ -242,23 +205,57 @@ export default css`
         height: 42px;
       }
 
-      :global(svg) {
+      .button__icon {
         width: 18px;
         height: 18px;
+
+        :global(.material-icons) {
+          font-size: 18px;
+        }
       }
 
-      &:not(&--rounded) {
-        :global(.button__icon) {
-          left: 21px;
-          top: calc(50% - 9px);
-        }
+      &:not(.button--rounded) .button__icon {
+        left: 21px;
+        top: calc(50% - 9px);
       }
     }
 
-    &.has-clicked {
-      .button__wave {
-        animation: wave 0.8s;
+    &--xsmall {
+      height: 32px;
+      line-height: 1;
+
+      padding: 0 32px;
+
+      font-size: 0.75rem;
+
+      &.button--rounded {
+        width: 32px;
+        height: 32px;
       }
+
+      .button__icon {
+        width: 18px;
+        height: 18px;
+
+        :global(.material-icons) {
+          font-size: 18px;
+        }
+      }
+
+      &:not(.button--rounded) .button__icon {
+        left: 16px;
+        top: calc(50% - 9px);
+      }
+    }
+
+    &:not(&--rounded) .button__icon {
+      position: absolute;
+      top: calc(50% - 12px);
+      left: 32px;
+    }
+
+    &.has-clicked .button__wave {
+      animation: wave 0.8s;
     }
   }
 
@@ -274,6 +271,15 @@ export default css`
 
       width: 300px;
       height: 300px;
+    }
+  }
+
+  @keyframes rotate {
+    0% {
+      transform: rotate(0);
+    }
+    100% {
+      transform: rotate(360deg);
     }
   }
 `;

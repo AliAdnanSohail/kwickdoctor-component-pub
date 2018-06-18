@@ -1,7 +1,7 @@
 import React, { Component, Fragment } from 'react';
 import PropTypes from 'prop-types';
 import ReactPaginate from 'react-paginate';
-import { FormPreviousLinkIcon, FormNextLinkIcon } from 'grommet/components/icons/base';
+import MaterialIcon from 'material-icons-react';
 
 import style from './styles';
 
@@ -11,8 +11,8 @@ export default class Paginator extends Component {
       <Fragment>
         <ReactPaginate
           {...this.props}
-          previousLabel={<FormPreviousLinkIcon size="small" />}
-          nextLabel={<FormNextLinkIcon size="small" />}
+          previousLabel={<MaterialIcon icon="chevron_left" />}
+          nextLabel={<MaterialIcon icon="chevron_right" />}
           breakLabel="..."
           e="break-me"
           containerClassName="pagination"

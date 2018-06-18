@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { CheckmarkIcon, MoreIcon, TrashIcon } from 'grommet/components/icons';
+import MaterialIcon from 'material-icons-react';
 import classnames from 'classnames';
 import moment from 'moment';
 import PropTypes from 'prop-types';
@@ -8,12 +8,10 @@ import { notification, notificationCard } from './styles';
 import { Button, Card } from '../';
 
 export default class Notification extends Component {
-  constructor(props) {
-    super(props);
+  constructor() {
+    super();
 
-    this.state = {
-      buttonsVisible: false,
-    };
+    this.state = { buttonsVisible: false };
   }
 
   handleShowButtons = () => {
@@ -41,23 +39,23 @@ export default class Notification extends Component {
         </div>
 
         <div className="notification__actions">
-          {!read && <Button flat icon={<CheckmarkIcon />} onClick={onComplete} rounded size="s" />}
+          {!read && <Button flat icon="done" onClick={onComplete} rounded size="small" />}
 
-          <Button flat icon={<TrashIcon />} onClick={onDelete} rounded size="s" />
+          <Button flat icon="delete" onClick={onDelete} rounded size="small" />
         </div>
 
         <div className="notification__actions--mobile">
-          <Button flat icon={<MoreIcon />} onClick={this.handleShowButtons} rounded />
+          <Button flat icon="more_horiz" onClick={this.handleShowButtons} rounded />
           {this.state.buttonsVisible && (
             <ul className="notification__buttons">
               {!read && (
                 <button onClick={onComplete} type="button" className="notification__button--mobile">
-                  <CheckmarkIcon />Read
+                  <MaterialIcon icon="done" />Read
                 </button>
               )}
 
               <button onClick={onDelete} type="button" className="notification__button--mobile">
-                <TrashIcon />Delete
+                <MaterialIcon icon="delete" />Delete
               </button>
             </ul>
           )}

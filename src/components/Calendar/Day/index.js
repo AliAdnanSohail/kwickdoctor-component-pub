@@ -1,24 +1,27 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
 import classnames from 'classnames';
+import PropTypes from 'prop-types';
 
 import { day as dayStyles, events as eventsStyles } from './styles';
 
 export default class Day extends Component {
-  onSelect = () => {
-    if (!this.props.disabled) {
-      this.props.onSelect(this.props.day, this.props.events);
+  handleSelect = () => {
+    const {
+      day, disabled, events, onSelect,
+    } = this.props;
+
+    if (!disabled) {
+      onSelect(day, events);
     }
   };
 
-  getDots = () => {
+  renderDots = () => {
     const { events, selected } = this.props;
-    const classes = classnames('events', `events-qty-${events.slice(0, 3).length}`);
 
     return (
       selected &&
       events.length > 0 && (
-        <ul className={classes}>
+        <ul className="events">
           {events
             .slice(0, 3)
             .map(event => (
@@ -36,22 +39,21 @@ export default class Day extends Component {
       day, selected, disabled, events,
     } = this.props;
 
-    const classes = classnames(
-      'day',
-      { 'day--selected--without-events': selected && !events.length },
-      { 'day--selected--with-events': selected && !!events.length },
-      { 'day--disabled': disabled },
-    );
+    const classes = classnames('day', {
+      'day--selected': selected,
+      'day--has-events': selected && events.length > 0,
+      'day--disabled': disabled,
+    });
 
     return (
       <button
         className={classes}
         data-day={day.format('YYYY-MM-DD')}
-        onClick={this.onSelect}
+        onClick={this.handleSelect}
         type="button"
       >
         <span className="day__border">{day.format('D')}</span>
-        {this.getDots()}
+        {this.renderDots()}
 
         <style jsx>{dayStyles}</style>
       </button>

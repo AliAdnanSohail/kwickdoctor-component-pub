@@ -1,8 +1,8 @@
 import React from 'react';
-import { storiesOf } from '@storybook/react';
-import { withKnobs } from '@storybook/addon-knobs/react';
 import { checkA11y } from '@storybook/addon-a11y';
 import { withTests } from '@storybook/addon-jest';
+import { withKnobs } from '@storybook/addon-knobs/react';
+import { storiesOf } from '@storybook/react';
 
 import { Loader } from '../src';
 import results from '../.jest-test-results.json';

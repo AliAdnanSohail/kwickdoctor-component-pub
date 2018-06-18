@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import classnames from 'classnames';
-import { UserIcon } from 'grommet/components/icons';
+import MaterialIcon from 'material-icons-react';
 import PropTypes from 'prop-types';
 
 import styles from './styles';
@@ -12,7 +12,7 @@ export default class Avatar extends Component {
     } = this.props;
 
     const avatarStyle = {
-      backgroundImage: `url(${src})`,
+      backgroundImage: src ? `url(${src})` : '',
       borderRadius: `${borderRadius}px`,
       height: `${size}px`,
       width: `${size}px`,
@@ -22,7 +22,7 @@ export default class Avatar extends Component {
 
     return (
       <div className={classes} style={avatarStyle}>
-        {!src && <UserIcon className="avatar-icon" size="large" />}
+        {!src && <MaterialIcon color="#BBBCCD" icon="person_outline" size={size / 2} />}
 
         <style jsx>{styles}</style>
       </div>

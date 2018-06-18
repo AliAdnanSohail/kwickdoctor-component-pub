@@ -1,12 +1,22 @@
 import React, { Component } from 'react';
-import { SpinningIcon } from 'grommet/components/icons';
+
 import styles from './styles';
 
 export default class Loader extends Component {
   render() {
     return (
-      <div className="loader-container">
-        <SpinningIcon size="large" className="button__icon" />
+      <div className="loader">
+        <svg className="circular">
+          <circle
+            className="path"
+            cx="50"
+            cy="50"
+            r="20"
+            fill="none"
+            strokeWidth="2"
+            strokeMiterlimit="10"
+          />
+        </svg>
 
         <style jsx>{styles}</style>
       </div>

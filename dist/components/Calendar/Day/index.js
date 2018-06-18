@@ -15,13 +15,13 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
-var _propTypes = require('prop-types');
-
-var _propTypes2 = _interopRequireDefault(_propTypes);
-
 var _classnames = require('classnames');
 
 var _classnames2 = _interopRequireDefault(_classnames);
+
+var _propTypes = require('prop-types');
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
 
 var _styles = require('./styles');
 
@@ -47,21 +47,27 @@ var Day = function (_Component) {
       args[_key] = arguments[_key];
     }
 
-    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Day.__proto__ || Object.getPrototypeOf(Day)).call.apply(_ref, [this].concat(args))), _this), _this.onSelect = function () {
-      if (!_this.props.disabled) {
-        _this.props.onSelect(_this.props.day, _this.props.events);
-      }
-    }, _this.getDots = function () {
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Day.__proto__ || Object.getPrototypeOf(Day)).call.apply(_ref, [this].concat(args))), _this), _this.handleSelect = function () {
       var _this$props = _this.props,
+          day = _this$props.day,
+          disabled = _this$props.disabled,
           events = _this$props.events,
-          selected = _this$props.selected;
+          onSelect = _this$props.onSelect;
 
-      var classes = (0, _classnames2.default)('events', 'events-qty-' + events.slice(0, 3).length);
+
+      if (!disabled) {
+        onSelect(day, events);
+      }
+    }, _this.renderDots = function () {
+      var _this$props2 = _this.props,
+          events = _this$props2.events,
+          selected = _this$props2.selected;
+
 
       return selected && events.length > 0 && _react2.default.createElement(
         'ul',
         {
-          className: 'jsx-' + _styles.events.__scopedHash + ' ' + (classes || '')
+          className: 'jsx-' + _styles.events.__scopedHash + ' ' + 'events'
         },
         events.slice(0, 3).map(function (event) {
           return _react2.default.createElement('li', { key: event.date.format('D') + '-' + Math.random(), className: 'jsx-' + _styles.events.__scopedHash + ' ' + 'events__item'
@@ -85,13 +91,17 @@ var Day = function (_Component) {
           events = _props.events;
 
 
-      var classes = (0, _classnames2.default)('day', { 'day--selected--without-events': selected && !events.length }, { 'day--selected--with-events': selected && !!events.length }, { 'day--disabled': disabled });
+      var classes = (0, _classnames2.default)('day', {
+        'day--selected': selected,
+        'day--has-events': selected && events.length > 0,
+        'day--disabled': disabled
+      });
 
       return _react2.default.createElement(
         'button',
         {
           'data-day': day.format('YYYY-MM-DD'),
-          onClick: this.onSelect,
+          onClick: this.handleSelect,
           type: 'button',
           className: 'jsx-' + _styles.day.__scopedHash + ' ' + (classes || '')
         },
@@ -102,7 +112,7 @@ var Day = function (_Component) {
           },
           day.format('D')
         ),
-        this.getDots(),
+        this.renderDots(),
         _react2.default.createElement(_style2.default, {
           styleId: _styles.day.__scopedHash,
           css: _styles.day.__scoped

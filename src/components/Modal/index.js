@@ -2,13 +2,13 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import AriaModal from 'react-aria-modal';
-import { CloseIcon } from 'grommet/components/icons/base';
+import MaterialIcon from 'material-icons-react';
 
 import { modal, underlay } from './styles';
 
 export default class Modal extends Component {
-  static getDerivedStateFromProps(nextProps, prevState) {
-    return nextProps.active !== prevState.active ? { active: nextProps.active } : null;
+  static getDerivedStateFromProps(props, state) {
+    return props.active !== state.active ? { active: props.active } : null;
   }
 
   constructor(props) {
@@ -65,7 +65,7 @@ export default class Modal extends Component {
       >
         <div className={modalContentClass}>
           <button className="modal__close-button" onClick={this.handleExit}>
-            <CloseIcon />
+            <MaterialIcon icon="close" />
           </button>
           <div className="modal__content">{children}</div>
         </div>

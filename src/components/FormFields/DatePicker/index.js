@@ -1,11 +1,10 @@
 import React, { Component } from 'react';
+import classnames from 'classnames';
+import moment from 'moment';
 import PropTypes from 'prop-types';
 import ReactDatePicker from 'react-datepicker';
-import moment from 'moment';
-import classnames from 'classnames';
-import uuidv4 from 'uuid/v4';
-
 import 'react-datepicker/dist/react-datepicker.css';
+
 import {
   calendar,
   datepicker,
@@ -19,7 +18,6 @@ export default class DatePicker extends Component {
   constructor(props) {
     super(props);
 
-    this.id = uuidv4();
     this.state = { value: moment(props.input.value) };
   }
 
@@ -28,19 +26,19 @@ export default class DatePicker extends Component {
 
     if (moment.isMoment(value) && value.isValid()) {
       this.setState({ value });
+
       this.props.input.onChange(value);
     }
   };
 
   render() {
     const {
-      id,
-      label,
-      dateFormat,
       containerClassName,
-
-      meta,
+      dateFormat,
+      id,
       input: { name },
+      label,
+      meta,
     } = this.props;
 
     const { value } = this.state;
@@ -65,7 +63,7 @@ export default class DatePicker extends Component {
           useWeekdaysShort
         />
 
-        {meta && meta.error && meta.touched ? <div className="error">{meta.error}</div> : undefined}
+        {meta && meta.error && meta.touched && <div className="error">{meta.error}</div>}
 
         <style>{datepickerBlockStyles}</style>
         <style>{calendar}</style>
@@ -79,20 +77,20 @@ export default class DatePicker extends Component {
 }
 
 DatePicker.propTypes = {
+  containerClassName: PropTypes.string,
+  dateFormat: PropTypes.string,
   id: PropTypes.string.isRequired,
+  input: PropTypes.object,
   label: PropTypes.string,
   meta: PropTypes.object,
-  input: PropTypes.object,
-  dateFormat: PropTypes.string,
-  containerClassName: PropTypes.string,
 };
 
 DatePicker.defaultProps = {
+  containerClassName: undefined,
+  dateFormat: 'DD MMM, YYYY',
   input: {
     value: moment(),
   },
-  meta: {},
   label: undefined,
-  dateFormat: 'DD MMM, YYYY',
-  containerClassName: undefined,
+  meta: {},
 };

@@ -15,7 +15,9 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
-var _icons = require('grommet/components/icons');
+var _materialIconsReact = require('material-icons-react');
+
+var _materialIconsReact2 = _interopRequireDefault(_materialIconsReact);
 
 var _classnames = require('classnames');
 
@@ -44,10 +46,10 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 var Notification = function (_Component) {
   _inherits(Notification, _Component);
 
-  function Notification(props) {
+  function Notification() {
     _classCallCheck(this, Notification);
 
-    var _this = _possibleConstructorReturn(this, (Notification.__proto__ || Object.getPrototypeOf(Notification)).call(this, props));
+    var _this = _possibleConstructorReturn(this, (Notification.__proto__ || Object.getPrototypeOf(Notification)).call(this));
 
     _this.handleShowButtons = function () {
       _this.setState({ buttonsVisible: !_this.state.buttonsVisible });
@@ -57,9 +59,7 @@ var Notification = function (_Component) {
       return (0, _moment2.default)(_this.props.date).format('h:mm A, MMM D');
     };
 
-    _this.state = {
-      buttonsVisible: false
-    };
+    _this.state = { buttonsVisible: false };
     return _this;
   }
 
@@ -104,15 +104,15 @@ var Notification = function (_Component) {
           {
             className: 'jsx-' + _styles.notification.__scopedHash + ' jsx-' + _styles.notificationCard.__scopedHash + ' ' + 'notification__actions'
           },
-          !read && _react2.default.createElement(_.Button, { flat: true, icon: _react2.default.createElement(_icons.CheckmarkIcon, null), onClick: onComplete, rounded: true, size: 's' }),
-          _react2.default.createElement(_.Button, { flat: true, icon: _react2.default.createElement(_icons.TrashIcon, null), onClick: onDelete, rounded: true, size: 's' })
+          !read && _react2.default.createElement(_.Button, { flat: true, icon: 'done', onClick: onComplete, rounded: true, size: 'small' }),
+          _react2.default.createElement(_.Button, { flat: true, icon: 'delete', onClick: onDelete, rounded: true, size: 'small' })
         ),
         _react2.default.createElement(
           'div',
           {
             className: 'jsx-' + _styles.notification.__scopedHash + ' jsx-' + _styles.notificationCard.__scopedHash + ' ' + 'notification__actions--mobile'
           },
-          _react2.default.createElement(_.Button, { flat: true, icon: _react2.default.createElement(_icons.MoreIcon, null), onClick: this.handleShowButtons, rounded: true }),
+          _react2.default.createElement(_.Button, { flat: true, icon: 'more_horiz', onClick: this.handleShowButtons, rounded: true }),
           this.state.buttonsVisible && _react2.default.createElement(
             'ul',
             {
@@ -120,16 +120,16 @@ var Notification = function (_Component) {
             },
             !read && _react2.default.createElement(
               'button',
-              { onClick: onComplete, type: 'button', className: 'jsx-' + _styles.notification.__scopedHash + ' jsx-' + _styles.notificationCard.__scopedHash
+              { onClick: onComplete, type: 'button', className: 'jsx-' + _styles.notification.__scopedHash + ' jsx-' + _styles.notificationCard.__scopedHash + ' ' + 'notification__button--mobile'
               },
-              _react2.default.createElement(_icons.CheckmarkIcon, null),
+              _react2.default.createElement(_materialIconsReact2.default, { icon: 'done' }),
               'Read'
             ),
             _react2.default.createElement(
               'button',
-              { onClick: onDelete, type: 'button', className: 'jsx-' + _styles.notification.__scopedHash + ' jsx-' + _styles.notificationCard.__scopedHash
+              { onClick: onDelete, type: 'button', className: 'jsx-' + _styles.notification.__scopedHash + ' jsx-' + _styles.notificationCard.__scopedHash + ' ' + 'notification__button--mobile'
               },
-              _react2.default.createElement(_icons.TrashIcon, null),
+              _react2.default.createElement(_materialIconsReact2.default, { icon: 'delete' }),
               'Delete'
             )
           )

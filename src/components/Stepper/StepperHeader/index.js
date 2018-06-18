@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
-import { CheckmarkIcon } from 'grommet/components/icons/base';
+import MaterialIcon from 'material-icons-react';
 
 import { stepHeader, stepIcon } from './styles';
 
@@ -22,7 +22,7 @@ export default class StepperHeader extends Component {
 
       return (
         <li key={index} className={classes}>
-          <span>{completed ? <CheckmarkIcon /> : undefined}</span>
+          <span>{completed ? <MaterialIcon icon="done" /> : undefined}</span>
 
           <style jsx>{stepIcon}</style>
         </li>

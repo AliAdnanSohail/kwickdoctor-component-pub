@@ -11,6 +11,10 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
+var _materialIconsReact = require('material-icons-react');
+
+var _materialIconsReact2 = _interopRequireDefault(_materialIconsReact);
+
 var _reactRouterDom = require('react-router-dom');
 
 var _styles = require('./styles');
@@ -40,7 +44,7 @@ var NavigationItem = function (_Component) {
       var _props = this.props,
           route = _props.route,
           label = _props.label,
-          Icon = _props.icon;
+          icon = _props.icon;
 
 
       return _react2.default.createElement(
@@ -48,8 +52,8 @@ var NavigationItem = function (_Component) {
         null,
         _react2.default.createElement(
           _reactRouterDom.NavLink,
-          { to: route, className: 'nav-item', activeClassName: 'nav-item--active' },
-          _react2.default.createElement(Icon, { className: 'nav-item__icon' }),
+          { activeClassName: 'nav-item--active', className: 'nav-item', to: route },
+          _react2.default.createElement(_materialIconsReact2.default, { color: '#ffffff', icon: icon, size: 24 }),
           _react2.default.createElement(
             'span',
             { className: 'nav-item__label' },

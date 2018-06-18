@@ -1,31 +1,24 @@
 import React, { Fragment } from 'react';
-import { DownIcon } from 'grommet/components/icons/base';
+import MaterialIcon from 'material-icons-react';
 
 import renderer from '../renderer';
 import selectStyles from './styles';
 import { textInput } from '../styles';
 
 export default renderer((input, label, {
-  className, id, name, options, placeholder, type, value,
+  className, id, name, options, placeholder,
 }) => (
   <Fragment>
     <div className="select-container">
-      <select
-        {...input}
-        className={className}
-        id={id}
-        name={name}
-        type={type}
-        placeholder={placeholder}
-        value={value}
-      >
+      <select {...input} className={className} id={id} name={name} placeholder={placeholder}>
         {options.map(option => (
           <option key={option.value} value={option.value}>
             {option.label || option.value}
           </option>
         ))}
       </select>
-      <DownIcon />
+
+      <MaterialIcon icon="expand_more" />
     </div>
 
     <style>{textInput}</style>

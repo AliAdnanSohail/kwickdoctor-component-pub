@@ -15,9 +15,9 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
-var _propTypes = require('prop-types');
+var _materialIconsReact = require('material-icons-react');
 
-var _propTypes2 = _interopRequireDefault(_propTypes);
+var _materialIconsReact2 = _interopRequireDefault(_materialIconsReact);
 
 var _moment = require('moment');
 
@@ -25,7 +25,9 @@ var _moment2 = _interopRequireDefault(_moment);
 
 var _momentRange = require('moment-range');
 
-var _base = require('grommet/components/icons/base');
+var _propTypes = require('prop-types');
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
 
 var _Month = require('./Month');
 
@@ -115,7 +117,7 @@ var Calendar = function (_Component) {
               return _this.onChangeMonth(-1);
             }, className: 'jsx-' + _styles.navigation.__scopedHash + ' ' + 'prev'
           },
-          _react2.default.createElement(_base.PreviousIcon, null)
+          _react2.default.createElement(_materialIconsReact2.default, { icon: 'navigate_before', size: 36, color: '#666' })
         ),
         _react2.default.createElement(
           'div',
@@ -138,7 +140,7 @@ var Calendar = function (_Component) {
               return _this.onChangeMonth(1);
             }, className: 'jsx-' + _styles.navigation.__scopedHash + ' ' + 'next'
           },
-          _react2.default.createElement(_base.NextIcon, null)
+          _react2.default.createElement(_materialIconsReact2.default, { icon: 'navigate_next', size: 36, color: '#666' })
         ),
         _react2.default.createElement(_style2.default, {
           styleId: _styles.navigation.__scopedHash,
@@ -204,19 +206,19 @@ exports.default = Calendar;
 
 
 Calendar.propTypes = {
+  events: _propTypes2.default.array,
+  hasEvents: _propTypes2.default.bool,
   min: _propTypes2.default.object,
   max: _propTypes2.default.object,
-  selected: _propTypes2.default.object,
-  events: _propTypes2.default.array,
   onSelect: _propTypes2.default.func,
-  hasEvents: _propTypes2.default.bool
+  selected: _propTypes2.default.object
 };
 
 Calendar.defaultProps = {
+  events: [],
+  hasEvents: false,
   min: undefined,
   max: undefined,
-  selected: moment(),
-  events: [],
   onSelect: function onSelect() {},
-  hasEvents: false
+  selected: moment()
 };

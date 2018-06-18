@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from 'react';
+import React, { Component } from 'react';
 import classnames from 'classnames';
 import MaterialIcon from 'material-icons-react';
 import PropTypes from 'prop-types';
@@ -6,8 +6,8 @@ import PropTypes from 'prop-types';
 import styles from './styles';
 
 export default class Button extends Component {
-  constructor(props) {
-    super(props);
+  constructor() {
+    super();
 
     this.state = { top: 0, left: 0, clicked: false };
   }
@@ -32,29 +32,18 @@ export default class Button extends Component {
       },
     );
 
-    if (this.props.onClick) {
-      this.props.onClick(event);
+    const { onClick } = this.props;
+
+    if (onClick) {
+      onClick(event);
     }
-  };
-
-  renderContent = () => {
-    const {
-      children, icon, loading, rounded,
-    } = this.props;
-
-    return (
-      <Fragment>
-        {loading && <MaterialIcon icon="loop" color="white" size="small" className="button__icon" />}
-        {!loading && icon && React.cloneElement(icon, { className: 'button__icon' })}
-        {!rounded && <span className="button__content">{children}</span>}
-      </Fragment>
-    );
   };
 
   render() {
     const {
       accent,
       className,
+      children,
       danger,
       disabled,
       flat,
@@ -93,7 +82,18 @@ export default class Button extends Component {
         onClick={this.handleClick}
         disabled={disabled}
       >
-        {this.renderContent()}
+        {loading && (
+          <div className="button__icon button__loading-icon">
+            <MaterialIcon icon="loop" />
+          </div>
+        )}
+        {!loading &&
+          icon && (
+          <div className="button__icon">
+            <MaterialIcon icon={icon} />
+          </div>
+        )}
+        {!rounded && <span className="button__content">{children}</span>}
 
         {clicked && <span className="button__wave" style={{ top, left }} />}
 
@@ -106,8 +106,8 @@ export default class Button extends Component {
 Button.propTypes = {
   className: PropTypes.string,
   children: PropTypes.any,
-  icon: PropTypes.element,
-  size: PropTypes.oneOf(['s', 'xs', '']),
+  icon: PropTypes.string,
+  size: PropTypes.oneOf(['small', 'xsmall', '']),
   accent: PropTypes.bool,
   danger: PropTypes.bool,
   disabled: PropTypes.bool,
@@ -123,7 +123,7 @@ Button.propTypes = {
 Button.defaultProps = {
   className: '',
   children: null,
-  icon: null,
+  icon: '',
   size: undefined,
   accent: false,
   danger: false,

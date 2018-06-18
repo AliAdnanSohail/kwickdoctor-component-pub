@@ -21,7 +21,9 @@ var _classnames = require('classnames');
 
 var _classnames2 = _interopRequireDefault(_classnames);
 
-var _icons = require('grommet/components/icons');
+var _materialIconsReact = require('material-icons-react');
+
+var _materialIconsReact2 = _interopRequireDefault(_materialIconsReact);
 
 var _propTypes = require('prop-types');
 
@@ -29,7 +31,9 @@ var _propTypes2 = _interopRequireDefault(_propTypes);
 
 var _styles = require('./styles');
 
-var _ = require('../../');
+var _Button = require('../../Button');
+
+var _Button2 = _interopRequireDefault(_Button);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -44,101 +48,139 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 var AvatarPicker = function (_Component) {
   _inherits(AvatarPicker, _Component);
 
-  function AvatarPicker(props) {
+  function AvatarPicker() {
     _classCallCheck(this, AvatarPicker);
 
-    var _this = _possibleConstructorReturn(this, (AvatarPicker.__proto__ || Object.getPrototypeOf(AvatarPicker)).call(this, props));
+    var _this = _possibleConstructorReturn(this, (AvatarPicker.__proto__ || Object.getPrototypeOf(AvatarPicker)).call(this));
 
     _this.handleChange = function (event) {
-      var input = _this.props.input;
+      var onChange = _this.props.input.onChange;
 
 
       _this.setState({ avatar: event.target.files[0] });
 
-      input.onChange(event.target.files[0]);
+      onChange(event.target.files[0]);
     };
 
     _this.handleRemove = function (event) {
-      var input = _this.props.input;
+      var onChange = _this.props.input.onChange;
 
 
       event.preventDefault();
 
-      input.onChange(null);
-      _this.setState({ avatar: '' });
+      _this.setState({ avatar: null });
+
+      _this.input.value = null;
+
+      onChange(null);
     };
 
-    _this.state = { avatar: {} };
+    _this.state = { avatar: null };
     return _this;
   }
 
   _createClass(AvatarPicker, [{
-    key: 'render',
-    value: function render() {
+    key: 'componentWillMount',
+    value: function componentWillMount() {
       var _this2 = this;
 
       var _props = this.props,
-          borderRadius = _props.borderRadius,
-          containerClassName = _props.containerClassName,
-          id = _props.id,
+          baseURL = _props.baseURL,
           _props$input = _props.input,
           value = _props$input.value,
-          inputProps = _objectWithoutProperties(_props$input, ['value']),
-          resetKey = _props.resetKey,
-          size = _props.size;
+          onChange = _props$input.onChange;
 
-      var src = 'none';
 
-      if (this.state.avatar.name) {
-        src = URL.createObjectURL(this.state.avatar);
+      if (value && typeof value === 'string') {
+        fetch('' + baseURL + value, { method: 'GET' }).then(function (response) {
+          return response.blob();
+        }).then(function (avatar) {
+          _this2.setState({ avatar: avatar }, function () {
+            onChange(_this2.state.avatar);
+          });
+        });
       }
+    }
+  }, {
+    key: 'componentDidUpdate',
+    value: function componentDidUpdate(props) {
+      var _this3 = this;
 
-      var avatarContainer = (0, _classnames2.default)('avatar', containerClassName);
+      var _props2 = this.props,
+          baseURL = _props2.baseURL,
+          _props2$input = _props2.input,
+          value = _props2$input.value,
+          onChange = _props2$input.onChange;
 
-      var avatarStyle = {
-        backgroundImage: 'url(' + src + ')',
+
+      if (props.input.value !== value && value && typeof value === 'string') {
+        fetch('' + baseURL + value, { method: 'GET' }).then(function (response) {
+          return response.blob();
+        }).then(function (avatar) {
+          _this3.setState({ avatar: avatar }, function () {
+            onChange(_this3.state.avatar);
+          });
+        });
+      }
+    }
+  }, {
+    key: 'render',
+    value: function render() {
+      var _this4 = this;
+
+      var _props3 = this.props,
+          borderRadius = _props3.borderRadius,
+          className = _props3.className,
+          id = _props3.id,
+          _props3$input = _props3.input,
+          value = _props3$input.value,
+          inputProps = _objectWithoutProperties(_props3$input, ['value']),
+          size = _props3.size;
+
+      var avatar = this.state.avatar;
+
+
+      var styles = {
+        backgroundImage: avatar ? 'url(' + URL.createObjectURL(avatar) + ')' : '',
         borderRadius: borderRadius + 'px',
         height: size + 'px',
         width: size + 'px'
       };
 
+      var isSelected = avatar && (avatar instanceof Blob || avatar.name);
+      var classes = (0, _classnames2.default)('avatar', className);
+
       return _react2.default.createElement(
-        'div',
-        {
-          className: 'jsx-' + _styles.avatarCircle.__scopedHash + ' jsx-' + _styles.fileInput.__scopedHash + ' ' + (avatarContainer || '')
+        'label',
+        { 'aria-label': 'Edit image', htmlFor: id, style: styles, className: 'jsx-' + _styles.avatar.__scopedHash + ' jsx-' + _styles.fileInput.__scopedHash + ' ' + (classes || '')
         },
-        _react2.default.createElement(
-          'label',
-          { htmlFor: id, 'aria-label': 'Edit image', className: 'jsx-' + _styles.avatarCircle.__scopedHash + ' jsx-' + _styles.fileInput.__scopedHash + ' ' + 'avatar__container'
+        isSelected && _react2.default.createElement(
+          'div',
+          {
+            className: 'jsx-' + _styles.avatar.__scopedHash + ' jsx-' + _styles.fileInput.__scopedHash + ' ' + 'avatar__button'
           },
-          _react2.default.createElement('input', _extends({}, inputProps, {
-            id: id,
-            key: resetKey,
-            onBlur: function onBlur() {},
-            onChange: this.handleChange,
-            ref: function ref(input) {
-              _this2.input = input;
-            },
-            type: 'file',
-            className: 'jsx-' + _styles.avatarCircle.__scopedHash + ' jsx-' + _styles.fileInput.__scopedHash + ' ' + 'file-input'
-          })),
-          _react2.default.createElement(
-            'div',
-            { style: avatarStyle, className: 'jsx-' + _styles.avatarCircle.__scopedHash + ' jsx-' + _styles.fileInput.__scopedHash + ' ' + 'avatar__thumb'
-            },
-            !this.state.avatar.name && _react2.default.createElement(_icons.CameraIcon, null),
-            _react2.default.createElement(
-              'div',
-              {
-                className: 'jsx-' + _styles.avatarCircle.__scopedHash + ' jsx-' + _styles.fileInput.__scopedHash + ' ' + 'avatar__button--remove'
-              },
-              this.state.avatar.name && _react2.default.createElement(_.Button, { onClick: this.handleRemove, icon: _react2.default.createElement(_icons.TrashIcon, null), size: 'xs', rounded: true, danger: true })
-            )
-          )
+          _react2.default.createElement(_Button2.default, {
+            onClick: this.handleRemove,
+            icon: 'delete_outline',
+            size: 'xsmall',
+            rounded: true,
+            danger: true
+          })
         ),
+        _react2.default.createElement('input', _extends({}, inputProps, {
+          id: id,
+          onBlur: function onBlur() {},
+          onChange: this.handleChange,
+          ref: function ref(input) {
+            _this4.input = input;
+          },
+          type: 'file',
+          className: 'jsx-' + _styles.avatar.__scopedHash + ' jsx-' + _styles.fileInput.__scopedHash + ' ' + 'file-input'
+        })),
+        !isSelected && _react2.default.createElement(_materialIconsReact2.default, { color: '#BBBCCD', icon: 'photo_camera', size: size / 2 }),
         _react2.default.createElement(_style2.default, {
-          styleId: _styles.avatarCircle.__scopedHash,
-          css: _styles.avatarCircle.__scoped
+          styleId: _styles.avatar.__scopedHash,
+          css: _styles.avatar.__scoped
         }),
         _react2.default.createElement(_style2.default, {
           styleId: _styles.fileInput.__scopedHash,
@@ -156,7 +198,7 @@ exports.default = AvatarPicker;
 
 AvatarPicker.propTypes = {
   borderRadius: _propTypes2.default.number,
-  containerClassName: _propTypes2.default.string,
+  className: _propTypes2.default.string,
   id: _propTypes2.default.string.isRequired,
   input: _propTypes2.default.object,
   size: _propTypes2.default.number
@@ -164,7 +206,7 @@ AvatarPicker.propTypes = {
 
 AvatarPicker.defaultProps = {
   borderRadius: 3,
-  containerClassName: '',
+  className: '',
   input: {
     onChange: function onChange() {},
     value: {}

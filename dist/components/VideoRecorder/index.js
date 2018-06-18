@@ -44,8 +44,6 @@ var VideoRecorder = function (_Component) {
     var _this = _possibleConstructorReturn(this, (VideoRecorder.__proto__ || Object.getPrototypeOf(VideoRecorder)).call(this, props));
 
     _this.initMediaRecorder = function () {
-      console.log('initMediaRecorder');
-
       try {
         var options = {};
         var types = ['video/webm;codecs=vp8', 'video/webm', ''];
@@ -74,8 +72,6 @@ var VideoRecorder = function (_Component) {
     };
 
     _this.handleStart = function () {
-      console.log('start');
-
       if (!_this.state.available) {
         return;
       }
@@ -89,8 +85,6 @@ var VideoRecorder = function (_Component) {
       _this.setState({ countingdown: true });
 
       _this.countdown = setInterval(function () {
-        console.log('countdown');
-
         var countdownValue = _this.state.countdownValue;
 
 
@@ -106,8 +100,6 @@ var VideoRecorder = function (_Component) {
               onStart(_this.stream);
 
               _this.timer = setInterval(function () {
-                console.log('timer');
-
                 var time = _this.state.time;
 
 
@@ -132,8 +124,6 @@ var VideoRecorder = function (_Component) {
     };
 
     _this.handleStop = function () {
-      console.log('stop');
-
       if (!_this.state.available) {
         return;
       }
@@ -253,8 +243,6 @@ var VideoRecorder = function (_Component) {
     value: function componentDidMount() {
       var _this2 = this;
 
-      console.log('componentDidMount');
-
       if (navigator.mediaDevices) {
         var handleSuccess = function handleSuccess(stream) {
           _this2.video.srcObject = stream;
@@ -280,8 +268,6 @@ var VideoRecorder = function (_Component) {
   }, {
     key: 'componentWillUnmount',
     value: function componentWillUnmount() {
-      console.log('componentWillUnmount');
-
       this.recorder = null;
       this.chunk = [];
 

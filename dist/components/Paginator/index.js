@@ -21,7 +21,9 @@ var _reactPaginate = require('react-paginate');
 
 var _reactPaginate2 = _interopRequireDefault(_reactPaginate);
 
-var _base = require('grommet/components/icons/base');
+var _materialIconsReact = require('material-icons-react');
+
+var _materialIconsReact2 = _interopRequireDefault(_materialIconsReact);
 
 var _styles = require('./styles');
 
@@ -51,8 +53,8 @@ var Paginator = function (_Component) {
         _react.Fragment,
         null,
         _react2.default.createElement(_reactPaginate2.default, _extends({}, this.props, {
-          previousLabel: _react2.default.createElement(_base.FormPreviousLinkIcon, { size: 'small' }),
-          nextLabel: _react2.default.createElement(_base.FormNextLinkIcon, { size: 'small' }),
+          previousLabel: _react2.default.createElement(_materialIconsReact2.default, { icon: 'chevron_left' }),
+          nextLabel: _react2.default.createElement(_materialIconsReact2.default, { icon: 'chevron_right' }),
           breakLabel: '...',
           e: 'break-me',
           containerClassName: 'pagination',

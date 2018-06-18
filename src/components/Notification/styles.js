@@ -31,10 +31,8 @@ export const notification = css`
       margin-bottom: 12px;
     }
 
-    &__button {
-      &--mobile {
-        background: white;
-      }
+    &__button &--mobile {
+      background: white;
     }
 
     &__time {
@@ -82,14 +80,9 @@ export const notification = css`
       align-items: center;
       padding: 0 24px;
 
-      :global(svg) {
-        fill: ${settings.textLightColor};
-        stroke: ${settings.textLightColor};
-
-        :global(path, circle, polyline) {
-          fill: none;
-          stroke: ${settings.textLightColor}!important;
-        }
+      :global(.material-icons) {
+        font-size: 24px !important;
+        color: ${settings.textLightColor};
       }
 
       &--mobile {
@@ -141,9 +134,10 @@ export const notification = css`
 
           cursor: pointer;
 
-          :global(svg) {
+          :global(.material-icons) {
             width: 18px;
             height: 18px;
+            font-size: 18px !important;
             margin-right: 12px;
             color: #030303;
           }

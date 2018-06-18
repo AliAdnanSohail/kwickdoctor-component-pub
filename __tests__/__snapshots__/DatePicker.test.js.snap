@@ -17,8 +17,6 @@ exports[`Datepicker renders correctly 1`] = `
         className="react-datepicker__input-container"
       >
         <input
-          autoComplete={undefined}
-          autoFocus={undefined}
           className="datepicker"
           disabled={false}
           id="datepicker-id"
@@ -28,17 +26,13 @@ exports[`Datepicker renders correctly 1`] = `
           onClick={[Function]}
           onFocus={[Function]}
           onKeyDown={[Function]}
-          placeholder={undefined}
-          readOnly={undefined}
-          required={undefined}
-          tabIndex={undefined}
-          title={undefined}
           type="text"
           value="15 Mar, 2018"
         />
       </div>
     </div>
   </div>
+  
   <style>
     .form-field{position:relative;}
   </style>

@@ -14,23 +14,17 @@ exports[`Calendar renders correctly 1`] = `
         className="jsx-1167149914 prev"
         onClick={[Function]}
       >
-        <svg
-          aria-label="previous"
-          className="grommetux-control-icon grommetux-control-icon-previous grommetux-control-icon--responsive"
-          height="24px"
-          role="img"
-          version="1.1"
-          viewBox="0 0 24 24"
-          width="24px"
+        <i
+          className="material-icons 36 md-dark "
+          style={
+            Object {
+              "color": "#666",
+              "fontSize": 36,
+            }
+          }
         >
-          <polyline
-            fill="none"
-            points="7 2 17 12 7 22"
-            stroke="#000"
-            strokeWidth="2"
-            transform="matrix(-1 0 0 1 24 0)"
-          />
-        </svg>
+          navigate_before
+        </i>
       </button>
       <div
         className="jsx-1167149914 navigation__month"
@@ -47,22 +41,17 @@ exports[`Calendar renders correctly 1`] = `
         className="jsx-1167149914 next"
         onClick={[Function]}
       >
-        <svg
-          aria-label="next"
-          className="grommetux-control-icon grommetux-control-icon-next grommetux-control-icon--responsive"
-          height="24px"
-          role="img"
-          version="1.1"
-          viewBox="0 0 24 24"
-          width="24px"
+        <i
+          className="material-icons 36 md-dark "
+          style={
+            Object {
+              "color": "#666",
+              "fontSize": 36,
+            }
+          }
         >
-          <polyline
-            fill="none"
-            points="7 2 17 12 7 22"
-            stroke="#000"
-            strokeWidth="2"
-          />
-        </svg>
+          navigate_next
+        </i>
       </button>
     </div>
     <ul
@@ -106,576 +95,576 @@ exports[`Calendar renders correctly 1`] = `
     </ul>
   </div>
   <ul
-    className="jsx-4156069232 month"
+    className="jsx-1983106999 month"
   >
     <li
-      className="jsx-4156069232"
+      className="jsx-1983106999"
     >
       <button
-        className="jsx-1425202002 day day--disabled"
+        className="jsx-3065497712 day day--disabled"
         data-day="2018-02-25"
         onClick={[Function]}
         type="button"
       >
         <span
-          className="jsx-1425202002 day__border"
+          className="jsx-3065497712 day__border"
         >
           25
         </span>
       </button>
     </li>
     <li
-      className="jsx-4156069232"
+      className="jsx-1983106999"
     >
       <button
-        className="jsx-1425202002 day day--disabled"
+        className="jsx-3065497712 day day--disabled"
         data-day="2018-02-26"
         onClick={[Function]}
         type="button"
       >
         <span
-          className="jsx-1425202002 day__border"
+          className="jsx-3065497712 day__border"
         >
           26
         </span>
       </button>
     </li>
     <li
-      className="jsx-4156069232"
+      className="jsx-1983106999"
     >
       <button
-        className="jsx-1425202002 day day--disabled"
+        className="jsx-3065497712 day day--disabled"
         data-day="2018-02-27"
         onClick={[Function]}
         type="button"
       >
         <span
-          className="jsx-1425202002 day__border"
+          className="jsx-3065497712 day__border"
         >
           27
         </span>
       </button>
     </li>
     <li
-      className="jsx-4156069232"
+      className="jsx-1983106999"
     >
       <button
-        className="jsx-1425202002 day day--disabled"
+        className="jsx-3065497712 day day--disabled"
         data-day="2018-02-28"
         onClick={[Function]}
         type="button"
       >
         <span
-          className="jsx-1425202002 day__border"
+          className="jsx-3065497712 day__border"
         >
           28
         </span>
       </button>
     </li>
     <li
-      className="jsx-4156069232"
+      className="jsx-1983106999"
     >
       <button
-        className="jsx-1425202002 day day--disabled"
+        className="jsx-3065497712 day day--disabled"
         data-day="2018-03-01"
         onClick={[Function]}
         type="button"
       >
         <span
-          className="jsx-1425202002 day__border"
+          className="jsx-3065497712 day__border"
         >
           1
         </span>
       </button>
     </li>
     <li
-      className="jsx-4156069232"
+      className="jsx-1983106999"
     >
       <button
-        className="jsx-1425202002 day day--disabled"
+        className="jsx-3065497712 day day--disabled"
         data-day="2018-03-02"
         onClick={[Function]}
         type="button"
       >
         <span
-          className="jsx-1425202002 day__border"
+          className="jsx-3065497712 day__border"
         >
           2
         </span>
       </button>
     </li>
     <li
-      className="jsx-4156069232"
+      className="jsx-1983106999"
     >
       <button
-        className="jsx-1425202002 day day--disabled"
+        className="jsx-3065497712 day day--disabled"
         data-day="2018-03-03"
         onClick={[Function]}
         type="button"
       >
         <span
-          className="jsx-1425202002 day__border"
+          className="jsx-3065497712 day__border"
         >
           3
         </span>
       </button>
     </li>
     <li
-      className="jsx-4156069232"
+      className="jsx-1983106999"
     >
       <button
-        className="jsx-1425202002 day day--disabled"
+        className="jsx-3065497712 day day--disabled"
         data-day="2018-03-04"
         onClick={[Function]}
         type="button"
       >
         <span
-          className="jsx-1425202002 day__border"
+          className="jsx-3065497712 day__border"
         >
           4
         </span>
       </button>
     </li>
     <li
-      className="jsx-4156069232"
+      className="jsx-1983106999"
     >
       <button
-        className="jsx-1425202002 day day--disabled"
+        className="jsx-3065497712 day day--disabled"
         data-day="2018-03-05"
         onClick={[Function]}
         type="button"
       >
         <span
-          className="jsx-1425202002 day__border"
+          className="jsx-3065497712 day__border"
         >
           5
         </span>
       </button>
     </li>
     <li
-      className="jsx-4156069232"
+      className="jsx-1983106999"
     >
       <button
-        className="jsx-1425202002 day day--disabled"
+        className="jsx-3065497712 day day--disabled"
         data-day="2018-03-06"
         onClick={[Function]}
         type="button"
       >
         <span
-          className="jsx-1425202002 day__border"
+          className="jsx-3065497712 day__border"
         >
           6
         </span>
       </button>
     </li>
     <li
-      className="jsx-4156069232"
+      className="jsx-1983106999"
     >
       <button
-        className="jsx-1425202002 day day--disabled"
+        className="jsx-3065497712 day day--disabled"
         data-day="2018-03-07"
         onClick={[Function]}
         type="button"
       >
         <span
-          className="jsx-1425202002 day__border"
+          className="jsx-3065497712 day__border"
         >
           7
         </span>
       </button>
     </li>
     <li
-      className="jsx-4156069232"
+      className="jsx-1983106999"
     >
       <button
-        className="jsx-1425202002 day day--disabled"
+        className="jsx-3065497712 day day--disabled"
         data-day="2018-03-08"
         onClick={[Function]}
         type="button"
       >
         <span
-          className="jsx-1425202002 day__border"
+          className="jsx-3065497712 day__border"
         >
           8
         </span>
       </button>
     </li>
     <li
-      className="jsx-4156069232"
+      className="jsx-1983106999"
     >
       <button
-        className="jsx-1425202002 day day--disabled"
+        className="jsx-3065497712 day day--disabled"
         data-day="2018-03-09"
         onClick={[Function]}
         type="button"
       >
         <span
-          className="jsx-1425202002 day__border"
+          className="jsx-3065497712 day__border"
         >
           9
         </span>
       </button>
     </li>
     <li
-      className="jsx-4156069232"
+      className="jsx-1983106999"
     >
       <button
-        className="jsx-1425202002 day day--disabled"
+        className="jsx-3065497712 day day--disabled"
         data-day="2018-03-10"
         onClick={[Function]}
         type="button"
       >
         <span
-          className="jsx-1425202002 day__border"
+          className="jsx-3065497712 day__border"
         >
           10
         </span>
       </button>
     </li>
     <li
-      className="jsx-4156069232"
+      className="jsx-1983106999"
     >
       <button
-        className="jsx-1425202002 day day--disabled"
+        className="jsx-3065497712 day day--disabled"
         data-day="2018-03-11"
         onClick={[Function]}
         type="button"
       >
         <span
-          className="jsx-1425202002 day__border"
+          className="jsx-3065497712 day__border"
         >
           11
         </span>
       </button>
     </li>
     <li
-      className="jsx-4156069232"
+      className="jsx-1983106999"
     >
       <button
-        className="jsx-1425202002 day day--disabled"
+        className="jsx-3065497712 day day--disabled"
         data-day="2018-03-12"
         onClick={[Function]}
         type="button"
       >
         <span
-          className="jsx-1425202002 day__border"
+          className="jsx-3065497712 day__border"
         >
           12
         </span>
       </button>
     </li>
     <li
-      className="jsx-4156069232"
+      className="jsx-1983106999"
     >
       <button
-        className="jsx-1425202002 day day--disabled"
+        className="jsx-3065497712 day day--disabled"
         data-day="2018-03-13"
         onClick={[Function]}
         type="button"
       >
         <span
-          className="jsx-1425202002 day__border"
+          className="jsx-3065497712 day__border"
         >
           13
         </span>
       </button>
     </li>
     <li
-      className="jsx-4156069232"
+      className="jsx-1983106999"
     >
       <button
-        className="jsx-1425202002 day day--disabled"
+        className="jsx-3065497712 day day--disabled"
         data-day="2018-03-14"
         onClick={[Function]}
         type="button"
       >
         <span
-          className="jsx-1425202002 day__border"
+          className="jsx-3065497712 day__border"
         >
           14
         </span>
       </button>
     </li>
     <li
-      className="jsx-4156069232"
+      className="jsx-1983106999"
     >
       <button
-        className="jsx-1425202002 day day--selected--with-events"
+        className="jsx-3065497712 day day--selected day--has-events"
         data-day="2018-03-15"
         onClick={[Function]}
         type="button"
       >
         <span
-          className="jsx-1425202002 day__border"
+          className="jsx-3065497712 day__border"
         >
           15
         </span>
         <ul
-          className="jsx-4083411445 events events-qty-3"
+          className="jsx-341426170 events"
         >
           <li
-            className="jsx-4083411445 events__item"
+            className="jsx-341426170 events__item"
           />
           <li
-            className="jsx-4083411445 events__item"
+            className="jsx-341426170 events__item"
           />
           <li
-            className="jsx-4083411445 events__item"
+            className="jsx-341426170 events__item"
           />
         </ul>
       </button>
     </li>
     <li
-      className="jsx-4156069232"
+      className="jsx-1983106999"
     >
       <button
-        className="jsx-1425202002 day"
+        className="jsx-3065497712 day"
         data-day="2018-03-16"
         onClick={[Function]}
         type="button"
       >
         <span
-          className="jsx-1425202002 day__border"
+          className="jsx-3065497712 day__border"
         >
           16
         </span>
       </button>
     </li>
     <li
-      className="jsx-4156069232"
+      className="jsx-1983106999"
     >
       <button
-        className="jsx-1425202002 day"
+        className="jsx-3065497712 day"
         data-day="2018-03-17"
         onClick={[Function]}
         type="button"
       >
         <span
-          className="jsx-1425202002 day__border"
+          className="jsx-3065497712 day__border"
         >
           17
         </span>
       </button>
     </li>
     <li
-      className="jsx-4156069232"
+      className="jsx-1983106999"
     >
       <button
-        className="jsx-1425202002 day"
+        className="jsx-3065497712 day"
         data-day="2018-03-18"
         onClick={[Function]}
         type="button"
       >
         <span
-          className="jsx-1425202002 day__border"
+          className="jsx-3065497712 day__border"
         >
           18
         </span>
       </button>
     </li>
     <li
-      className="jsx-4156069232"
+      className="jsx-1983106999"
     >
       <button
-        className="jsx-1425202002 day"
+        className="jsx-3065497712 day"
         data-day="2018-03-19"
         onClick={[Function]}
         type="button"
       >
         <span
-          className="jsx-1425202002 day__border"
+          className="jsx-3065497712 day__border"
         >
           19
         </span>
       </button>
     </li>
     <li
-      className="jsx-4156069232"
+      className="jsx-1983106999"
     >
       <button
-        className="jsx-1425202002 day"
+        className="jsx-3065497712 day"
         data-day="2018-03-20"
         onClick={[Function]}
         type="button"
       >
         <span
-          className="jsx-1425202002 day__border"
+          className="jsx-3065497712 day__border"
         >
           20
         </span>
       </button>
     </li>
     <li
-      className="jsx-4156069232"
+      className="jsx-1983106999"
     >
       <button
-        className="jsx-1425202002 day"
+        className="jsx-3065497712 day"
         data-day="2018-03-21"
         onClick={[Function]}
         type="button"
       >
         <span
-          className="jsx-1425202002 day__border"
+          className="jsx-3065497712 day__border"
         >
           21
         </span>
       </button>
     </li>
     <li
-      className="jsx-4156069232"
+      className="jsx-1983106999"
     >
       <button
-        className="jsx-1425202002 day"
+        className="jsx-3065497712 day"
         data-day="2018-03-22"
         onClick={[Function]}
         type="button"
       >
         <span
-          className="jsx-1425202002 day__border"
+          className="jsx-3065497712 day__border"
         >
           22
         </span>
       </button>
     </li>
     <li
-      className="jsx-4156069232"
+      className="jsx-1983106999"
     >
       <button
-        className="jsx-1425202002 day"
+        className="jsx-3065497712 day"
         data-day="2018-03-23"
         onClick={[Function]}
         type="button"
       >
         <span
-          className="jsx-1425202002 day__border"
+          className="jsx-3065497712 day__border"
         >
           23
         </span>
       </button>
     </li>
     <li
-      className="jsx-4156069232"
+      className="jsx-1983106999"
     >
       <button
-        className="jsx-1425202002 day"
+        className="jsx-3065497712 day"
         data-day="2018-03-24"
         onClick={[Function]}
         type="button"
       >
         <span
-          className="jsx-1425202002 day__border"
+          className="jsx-3065497712 day__border"
         >
           24
         </span>
       </button>
     </li>
     <li
-      className="jsx-4156069232"
+      className="jsx-1983106999"
     >
       <button
-        className="jsx-1425202002 day"
+        className="jsx-3065497712 day"
         data-day="2018-03-25"
         onClick={[Function]}
         type="button"
       >
         <span
-          className="jsx-1425202002 day__border"
+          className="jsx-3065497712 day__border"
         >
           25
         </span>
       </button>
     </li>
     <li
-      className="jsx-4156069232"
+      className="jsx-1983106999"
     >
       <button
-        className="jsx-1425202002 day"
+        className="jsx-3065497712 day"
         data-day="2018-03-26"
         onClick={[Function]}
         type="button"
       >
         <span
-          className="jsx-1425202002 day__border"
+          className="jsx-3065497712 day__border"
         >
           26
         </span>
       </button>
     </li>
     <li
-      className="jsx-4156069232"
+      className="jsx-1983106999"
     >
       <button
-        className="jsx-1425202002 day"
+        className="jsx-3065497712 day"
         data-day="2018-03-27"
         onClick={[Function]}
         type="button"
       >
         <span
-          className="jsx-1425202002 day__border"
+          className="jsx-3065497712 day__border"
         >
           27
         </span>
       </button>
     </li>
     <li
-      className="jsx-4156069232"
+      className="jsx-1983106999"
     >
       <button
-        className="jsx-1425202002 day"
+        className="jsx-3065497712 day"
         data-day="2018-03-28"
         onClick={[Function]}
         type="button"
       >
         <span
-          className="jsx-1425202002 day__border"
+          className="jsx-3065497712 day__border"
         >
           28
         </span>
       </button>
     </li>
     <li
-      className="jsx-4156069232"
+      className="jsx-1983106999"
     >
       <button
-        className="jsx-1425202002 day"
+        className="jsx-3065497712 day"
         data-day="2018-03-29"
         onClick={[Function]}
         type="button"
       >
         <span
-          className="jsx-1425202002 day__border"
+          className="jsx-3065497712 day__border"
         >
           29
         </span>
       </button>
     </li>
     <li
-      className="jsx-4156069232"
+      className="jsx-1983106999"
     >
       <button
-        className="jsx-1425202002 day"
+        className="jsx-3065497712 day"
         data-day="2018-03-30"
         onClick={[Function]}
         type="button"
       >
         <span
-          className="jsx-1425202002 day__border"
+          className="jsx-3065497712 day__border"
         >
           30
         </span>
       </button>
     </li>
     <li
-      className="jsx-4156069232"
+      className="jsx-1983106999"
     >
       <button
-        className="jsx-1425202002 day"
+        className="jsx-3065497712 day"
         data-day="2018-03-31"
         onClick={[Function]}
         type="button"
       >
         <span
-          className="jsx-1425202002 day__border"
+          className="jsx-3065497712 day__border"
         >
           31
         </span>

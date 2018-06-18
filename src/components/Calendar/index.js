@@ -112,19 +112,19 @@ export default class Calendar extends Component {
 }
 
 Calendar.propTypes = {
+  events: PropTypes.array,
+  hasEvents: PropTypes.bool,
   min: PropTypes.object,
   max: PropTypes.object,
-  selected: PropTypes.object,
-  events: PropTypes.array,
   onSelect: PropTypes.func,
-  hasEvents: PropTypes.bool,
+  selected: PropTypes.object,
 };
 
 Calendar.defaultProps = {
+  events: [],
+  hasEvents: false,
   min: undefined,
   max: undefined,
-  selected: moment(),
-  events: [],
   onSelect: () => {},
-  hasEvents: false,
+  selected: moment(),
 };

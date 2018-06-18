@@ -44,15 +44,6 @@ export const modal = css`
       &:hover {
         opacity: 1;
       }
-
-      :global(svg) {
-        height: 14px;
-        width: 14px;
-
-        :global(path) {
-          stroke-width: 5;
-        }
-      }
     }
 
     &.has-entered {

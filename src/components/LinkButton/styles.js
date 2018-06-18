@@ -4,8 +4,9 @@ import settings from '../../utils/style-helper';
 
 export default css`
   .button {
+    display: inline-block;
     position: relative;
-    display: block;
+
     padding: 13px 64px;
     height: 52px;
 
@@ -14,6 +15,7 @@ export default css`
     cursor: pointer;
 
     color: #ffffff;
+    text-decoration: none;
 
     line-height: 26px;
 
@@ -43,24 +45,23 @@ export default css`
       outline: none;
     }
 
-    :global(svg) {
-      fill: #ffffff;
-      stroke: #ffffff;
-
-      width: 24px;
-      height: 24px;
-
-      :global(circle, path) {
-        stroke: #ffffff;
-      }
-    }
-
-    :global(&__content) {
+    &__content {
       display: inline-block;
       transition: all 0.3s ease-in-out;
     }
 
-    :global(&__wave) {
+    &__icon {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+
+      :global(.material-icons) {
+        color: #ffffff;
+      }
+    }
+
+    &__wave {
       position: absolute;
       display: block;
       width: 0;
@@ -74,22 +75,15 @@ export default css`
       transform: translate(-50%, -50%);
     }
 
-    &--with-icon :global(&__content) {
+    &.button--with-icon .button__content {
       transform: translateX(16px);
     }
 
-    &--disabled {
-      opacity: 0.7;
-      cursor: not-allowed;
-    }
-
-    &:not(&--disabled) {
-      &:hover,
-      &:focus {
-        background-color: ${settings.primaryLightColor};
-        border-color: ${settings.primaryLightColor};
-        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
-      }
+    &:hover,
+    &:focus {
+      background-color: ${settings.primaryLightColor};
+      border-color: ${settings.primaryLightColor};
+      box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
     }
 
     &--flat {
@@ -97,23 +91,16 @@ export default css`
       background-color: transparent;
       border-color: transparent;
 
-      :global(svg) {
-        stroke: ${settings.textColor};
-        fill: ${settings.textColor};
-
-        :global(path, circle) {
-          stroke: ${settings.textColor};
-        }
+      :global(.material-icons) {
+        color: ${settings.textColor};
       }
 
-      &:not(.button--disabled) {
-        &:hover,
-        &:focus {
-          color: ${settings.primaryColor};
-          background-color: transparent;
-          border-color: transparent;
-          box-shadow: none;
-        }
+      &:hover,
+      &:focus {
+        color: ${settings.primaryColor};
+        background-color: transparent;
+        border-color: transparent;
+        box-shadow: none;
       }
     }
 
@@ -122,22 +109,15 @@ export default css`
       background-color: transparent;
       border-color: transparent;
 
-      :global(svg) {
-        stroke: ${settings.textColor};
-        fill: ${settings.textColor};
-
-        :global(path, circle) {
-          stroke: ${settings.textColor};
-        }
+      :global(.material-icons) {
+        color: ${settings.textColor};
       }
 
-      &:not(.button--disabled) {
-        &:hover,
-        &:focus {
-          color: ${settings.primaryColor};
-          background-color: transparent;
-          border-color: transparent;
-        }
+      &:hover,
+      &:focus {
+        color: ${settings.primaryColor};
+        background-color: transparent;
+        border-color: transparent;
       }
     }
 
@@ -146,12 +126,10 @@ export default css`
       background-color: ${settings.dangerColor};
       border-color: ${settings.dangerColor};
 
-      &:not(.button--disabled) {
-        &:hover,
-        &:focus {
-          background-color: ${settings.dangerLightColor};
-          border-color: ${settings.dangerLightColor};
-        }
+      &:hover,
+      &:focus {
+        background-color: ${settings.dangerLightColor};
+        border-color: ${settings.dangerLightColor};
       }
     }
 
@@ -168,12 +146,10 @@ export default css`
       border-radius: 50%;
     }
 
-    &:not(&--rounded) {
-      :global(.button__icon) {
-        position: absolute;
-        top: calc(50% - 12px);
-        left: 32px;
-      }
+    &:not(.button--rounded) .button__icon {
+      position: absolute;
+      top: calc(50% - 12px);
+      left: 32px;
     }
 
     &--squared {
@@ -186,26 +162,19 @@ export default css`
 
       color: ${settings.primaryColor};
 
-      &:not(.button--disabled) {
-        &:hover,
-        &:focus {
-          color: #ffffff;
-        }
+      &:hover,
+      &:focus {
+        color: #ffffff;
       }
 
-      :global(svg) {
-        stroke: ${settings.textColor};
-        fill: ${settings.textColor};
-
-        :global(path, circle) {
-          stroke: ${settings.textColor};
-        }
+      :global(.button__icon .material-icons) {
+        color: ${settings.textColor};
       }
     }
 
-    &--xs {
+    &.button--xsmall {
       height: 32px;
-      line-height: 1;
+      line-height: 30px;
 
       padding: 0 32px;
 
@@ -216,22 +185,24 @@ export default css`
         height: 32px;
       }
 
-      :global(svg) {
+      :global(.button__icon) {
         width: 18px;
         height: 18px;
+
+        :global(.material-icons) {
+          font-size: 18px;
+        }
       }
 
-      &:not(&--rounded) {
-        :global(.button__icon) {
-          left: 16px;
-          top: calc(50% - 9px);
-        }
+      &:not(.button--rounded) :global(.button__icon) {
+        left: 16px;
+        top: calc(50% - 9px);
       }
     }
 
-    &--s {
+    &--small {
       height: 42px;
-      line-height: 1;
+      line-height: 40px;
 
       padding: 0 42px;
 
@@ -242,23 +213,23 @@ export default css`
         height: 42px;
       }
 
-      :global(svg) {
+      :global(.button__icon) {
         width: 18px;
         height: 18px;
+
+        :global(.material-icons) {
+          font-size: 18px;
+        }
       }
 
-      &:not(&--rounded) {
-        :global(.button__icon) {
-          left: 21px;
-          top: calc(50% - 9px);
-        }
+      &:not(.button--rounded) :global(.button__icon) {
+        left: 21px;
+        top: calc(50% - 9px);
       }
     }
 
-    &.has-clicked {
-      .button__wave {
-        animation: wave 0.8s;
-      }
+    &.has-clicked .button__wave {
+      animation: wave 0.8s;
     }
   }
 
@@ -274,6 +245,15 @@ export default css`
 
       width: 300px;
       height: 300px;
+    }
+  }
+
+  @keyframes rotate {
+    0% {
+      transform: rotate(0);
+    }
+    100% {
+      transform: rotate(360deg);
     }
   }
 `;

@@ -1,10 +1,10 @@
 import React from 'react';
 import moment from 'moment';
-import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
-import { withKnobs, boolean } from '@storybook/addon-knobs/react';
 import { checkA11y } from '@storybook/addon-a11y';
 import { withTests } from '@storybook/addon-jest';
+import { withKnobs, boolean } from '@storybook/addon-knobs/react';
+import { storiesOf } from '@storybook/react';
 
 import { Calendar } from '../src';
 import results from '../.jest-test-results.json';

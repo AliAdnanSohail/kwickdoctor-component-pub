@@ -23,35 +23,25 @@ export const day = css`
     }
 
     &--selected {
-      &--without-events {
-        padding: 13px 0;
-        line-height: 54px;
-        .day__border {
-          max-width: 100%;
-          width: 54px;
-          height: 54px;
-          display: inline-block;
-          color: #ffffff;
-          background: ${settings.primaryColor};
-          border-radius: 100%;
-          @media all and (max-width: 630px) {
-            width: 40px;
-            height: 40px;
-            line-height: 40px;
-          }
-        }
-      }
-      &--with-events {
-        padding: 13px 0;
-        line-height: 40px;
-        .day__border {
-          max-width: 100%;
-          width: 70px;
+      padding: 13px 0;
+
+      line-height: 54px;
+
+      transition: all 0.3s ease-in-out;
+
+      .day__border {
+        max-width: 100%;
+        width: 54px;
+        height: 54px;
+        display: inline-block;
+        color: #ffffff;
+        background: ${settings.primaryColor};
+        border-radius: 50%;
+
+        @media screen and (max-width: 630px) {
+          width: 40px;
           height: 40px;
-          display: inline-block;
-          color: #ffffff;
-          background: ${settings.primaryColor};
-          border-radius: 20px;
+          line-height: 40px;
         }
       }
     }
@@ -62,8 +52,8 @@ export const day = css`
       cursor: default;
     }
 
-    @media all and (max-width: 630px) {
-      padding: 0 !important;
+    @media screen and (max-width: 630px) {
+      padding: 0;
       height: 40px;
       line-height: 40px;
     }
@@ -72,44 +62,32 @@ export const day = css`
 
 export const events = css`
   .events {
+    position: absolute;
+    bottom: 16px;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    height: 13px;
+
     padding: 0;
     margin: 0;
     list-style: none;
 
-    position: absolute;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    display: block;
-    line-height: 4px;
-    width: 30px;
-    &.events-qty-1 {
-      padding-top: 36px;
-    }
-    &.events-qty-2 {
-      padding-top: 33px;
-    }
-    &.events-qty-3 {
-      padding-top: 31px;
-    }
     &__item {
       display: block;
       width: 4px;
       height: 4px;
-      line-height: 4px;
       margin: 1px;
       background: #ffffff;
       border-radius: 100%;
     }
 
     @media all and (max-width: 630px) {
-      width: 100%;
-      height: 13px;
-      padding-top: 0 !important;
-      top: auto;
-      &__item {
-        display: inline-block;
-      }
+      bottom: 2px;
     }
   }
 `;

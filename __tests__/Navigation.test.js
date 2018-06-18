@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
-import { DashboardIcon, NotificationIcon } from 'grommet/components/icons/base';
 import { mount } from 'enzyme';
 import EnzymeToJson from 'enzyme-to-json';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
 import { Navigation, NavigationItem } from '../src';
 
@@ -15,8 +14,8 @@ class NavigationWrapper extends Component {
       <BrowserRouter>
         <main style={{ minHeight: '100vh', display: 'flex' }}>
           <Navigation>
-            <NavigationItem route="/dashboard" icon={DashboardIcon} label="Dashboards" />
-            <NavigationItem route="/notifications" icon={NotificationIcon} label="Notifications" />
+            <NavigationItem route="/dashboard" icon="dashboard" label="Dashboards" />
+            <NavigationItem route="/notifications" icon="notification_important" label="Notifications" />
           </Navigation>
           <Switch>
             <Route path="/dashboard" component={Dashboard} exact />

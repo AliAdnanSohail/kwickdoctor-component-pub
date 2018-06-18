@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import classnames from 'classnames';
-import { ClockIcon, PreviousIcon } from 'grommet/components/icons/base';
+import MaterialIcon from 'material-icons-react';
 import PropTypes from 'prop-types';
 
 import styles from './styles';
@@ -86,7 +86,7 @@ export default class TimePicker extends Component {
                 })}
                 key={time.value}
               >
-                { time < 10 ? (`0${time}`) : time }
+                {time < 10 ? `0${time}` : time}
               </div>
             ))}
           </div>
@@ -113,7 +113,7 @@ export default class TimePicker extends Component {
                 onClick={e => this.changeMin(e)}
                 onKeyPress={e => this.changeMin(e)}
               >
-                { time < 10 ? (`0${time}`) : time }
+                {time < 10 ? `0${time}` : time}
               </div>
             ))}
           </div>
@@ -139,7 +139,7 @@ export default class TimePicker extends Component {
               <div className="select__field">
                 {this.state.selectedHours}
                 <div className="select__arrow">
-                  <PreviousIcon />
+                  <MaterialIcon icon="keyboard_arrow_left" />
                 </div>
                 {this.renderHoursList()}
               </div>
@@ -154,7 +154,7 @@ export default class TimePicker extends Component {
               <div className="select__field">
                 {this.state.selectedMin}
                 <div className="select__arrow">
-                  <PreviousIcon />
+                  <MaterialIcon icon="keyboard_arrow_left" />
                 </div>
                 {this.renderMinuntsList()}
               </div>
@@ -183,7 +183,7 @@ export default class TimePicker extends Component {
             onKeyPress={e => this.switchTimeBlock(e)}
           >
             <div className="time-picker__logo">
-              <ClockIcon />
+              <MaterialIcon icon="access_time" />
             </div>
             <input
               type="text"
