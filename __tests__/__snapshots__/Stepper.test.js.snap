@@ -14,72 +14,66 @@ exports[`renders correctly 1`] = `
           className="jsx-291528123 stepper-header"
         >
           <li
-            className="jsx-1340858167 step-icon step-icon--current"
+            className="jsx-3902184313 step-icon step-icon--current"
             key="0"
           >
             <span
-              className="jsx-1340858167"
+              className="jsx-3902184313"
             />
             <JSXStyle
               css={
                 Array [
-                  ".step-icon.jsx-1340858167{width:34px;height:34px;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;z-index:1;}",
-                  ".step-icon.jsx-1340858167 span.jsx-1340858167{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;background:#eff0f4;border-radius:50%;-webkit-transition:all 0.3s ease-in-out;transition:all 0.3s ease-in-out;}",
-                  ".step-icon--completed.jsx-1340858167 span.jsx-1340858167{width:34px;height:34px;}",
-                  ".step-icon--completed.jsx-1340858167 span.jsx-1340858167 svg{height:16px;width:16px;}",
-                  ".step-icon--completed.jsx-1340858167 span.jsx-1340858167 svg polyline{stroke:#6fcb83 !important;stroke-width:5;}",
-                  ".step-icon--current.jsx-1340858167 span.jsx-1340858167{width:24px;height:24px;}",
-                  ".step-icon--current.jsx-1340858167 span.jsx-1340858167:before{content:'';height:10px;width:10px;background-color:#0c97f9;border-radius:50%;-webkit-transition:all 0.3s ease-in-out;transition:all 0.3s ease-in-out;}",
-                  ".step-icon--next.jsx-1340858167 span.jsx-1340858167{width:12px;height:12px;}",
+                  ".step-icon.jsx-3902184313{width:34px;height:34px;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;z-index:1;}",
+                  ".step-icon.jsx-3902184313 span.jsx-3902184313{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;background:#eff0f4;border-radius:50%;-webkit-transition:all 0.3s ease-in-out;transition:all 0.3s ease-in-out;}",
+                  ".step-icon--completed.jsx-3902184313 span.jsx-3902184313{width:34px;height:34px;}",
+                  ".step-icon--current.jsx-3902184313 span.jsx-3902184313{width:24px;height:24px;}",
+                  ".step-icon--current.jsx-3902184313 span.jsx-3902184313:before{content:'';height:10px;width:10px;background-color:#0c97f9;border-radius:50%;-webkit-transition:all 0.3s ease-in-out;transition:all 0.3s ease-in-out;}",
+                  ".step-icon--next.jsx-3902184313 span.jsx-3902184313{width:12px;height:12px;}",
                 ]
               }
-              styleId="1340858167"
+              styleId="3902184313"
             />
           </li>
           <li
-            className="jsx-1340858167 step-icon step-icon--next"
+            className="jsx-3902184313 step-icon step-icon--next"
             key="1"
           >
             <span
-              className="jsx-1340858167"
+              className="jsx-3902184313"
             />
             <JSXStyle
               css={
                 Array [
-                  ".step-icon.jsx-1340858167{width:34px;height:34px;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;z-index:1;}",
-                  ".step-icon.jsx-1340858167 span.jsx-1340858167{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;background:#eff0f4;border-radius:50%;-webkit-transition:all 0.3s ease-in-out;transition:all 0.3s ease-in-out;}",
-                  ".step-icon--completed.jsx-1340858167 span.jsx-1340858167{width:34px;height:34px;}",
-                  ".step-icon--completed.jsx-1340858167 span.jsx-1340858167 svg{height:16px;width:16px;}",
-                  ".step-icon--completed.jsx-1340858167 span.jsx-1340858167 svg polyline{stroke:#6fcb83 !important;stroke-width:5;}",
-                  ".step-icon--current.jsx-1340858167 span.jsx-1340858167{width:24px;height:24px;}",
-                  ".step-icon--current.jsx-1340858167 span.jsx-1340858167:before{content:'';height:10px;width:10px;background-color:#0c97f9;border-radius:50%;-webkit-transition:all 0.3s ease-in-out;transition:all 0.3s ease-in-out;}",
-                  ".step-icon--next.jsx-1340858167 span.jsx-1340858167{width:12px;height:12px;}",
+                  ".step-icon.jsx-3902184313{width:34px;height:34px;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;z-index:1;}",
+                  ".step-icon.jsx-3902184313 span.jsx-3902184313{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;background:#eff0f4;border-radius:50%;-webkit-transition:all 0.3s ease-in-out;transition:all 0.3s ease-in-out;}",
+                  ".step-icon--completed.jsx-3902184313 span.jsx-3902184313{width:34px;height:34px;}",
+                  ".step-icon--current.jsx-3902184313 span.jsx-3902184313{width:24px;height:24px;}",
+                  ".step-icon--current.jsx-3902184313 span.jsx-3902184313:before{content:'';height:10px;width:10px;background-color:#0c97f9;border-radius:50%;-webkit-transition:all 0.3s ease-in-out;transition:all 0.3s ease-in-out;}",
+                  ".step-icon--next.jsx-3902184313 span.jsx-3902184313{width:12px;height:12px;}",
                 ]
               }
-              styleId="1340858167"
+              styleId="3902184313"
             />
           </li>
           <li
-            className="jsx-1340858167 step-icon step-icon--last step-icon--next"
+            className="jsx-3902184313 step-icon step-icon--last step-icon--next"
             key="2"
           >
             <span
-              className="jsx-1340858167"
+              className="jsx-3902184313"
             />
             <JSXStyle
               css={
                 Array [
-                  ".step-icon.jsx-1340858167{width:34px;height:34px;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;z-index:1;}",
-                  ".step-icon.jsx-1340858167 span.jsx-1340858167{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;background:#eff0f4;border-radius:50%;-webkit-transition:all 0.3s ease-in-out;transition:all 0.3s ease-in-out;}",
-                  ".step-icon--completed.jsx-1340858167 span.jsx-1340858167{width:34px;height:34px;}",
-                  ".step-icon--completed.jsx-1340858167 span.jsx-1340858167 svg{height:16px;width:16px;}",
-                  ".step-icon--completed.jsx-1340858167 span.jsx-1340858167 svg polyline{stroke:#6fcb83 !important;stroke-width:5;}",
-                  ".step-icon--current.jsx-1340858167 span.jsx-1340858167{width:24px;height:24px;}",
-                  ".step-icon--current.jsx-1340858167 span.jsx-1340858167:before{content:'';height:10px;width:10px;background-color:#0c97f9;border-radius:50%;-webkit-transition:all 0.3s ease-in-out;transition:all 0.3s ease-in-out;}",
-                  ".step-icon--next.jsx-1340858167 span.jsx-1340858167{width:12px;height:12px;}",
+                  ".step-icon.jsx-3902184313{width:34px;height:34px;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;z-index:1;}",
+                  ".step-icon.jsx-3902184313 span.jsx-3902184313{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;background:#eff0f4;border-radius:50%;-webkit-transition:all 0.3s ease-in-out;transition:all 0.3s ease-in-out;}",
+                  ".step-icon--completed.jsx-3902184313 span.jsx-3902184313{width:34px;height:34px;}",
+                  ".step-icon--current.jsx-3902184313 span.jsx-3902184313{width:24px;height:24px;}",
+                  ".step-icon--current.jsx-3902184313 span.jsx-3902184313:before{content:'';height:10px;width:10px;background-color:#0c97f9;border-radius:50%;-webkit-transition:all 0.3s ease-in-out;transition:all 0.3s ease-in-out;}",
+                  ".step-icon--next.jsx-3902184313 span.jsx-3902184313{width:12px;height:12px;}",
                 ]
               }
-              styleId="1340858167"
+              styleId="3902184313"
             />
           </li>
           <JSXStyle

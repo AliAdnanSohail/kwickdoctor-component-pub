@@ -2164,45 +2164,45 @@ exports[`Storyshots Stepper Stepper 1`] = `
       className="jsx-291528123 stepper-header"
     >
       <li
-        className="jsx-1340858167 step-icon step-icon--current"
+        className="jsx-3902184313 step-icon step-icon--current"
       >
         <span
-          className="jsx-1340858167"
+          className="jsx-3902184313"
         />
       </li>
       <li
-        className="jsx-1340858167 step-icon step-icon--next"
+        className="jsx-3902184313 step-icon step-icon--next"
       >
         <span
-          className="jsx-1340858167"
+          className="jsx-3902184313"
         />
       </li>
       <li
-        className="jsx-1340858167 step-icon step-icon--next"
+        className="jsx-3902184313 step-icon step-icon--next"
       >
         <span
-          className="jsx-1340858167"
+          className="jsx-3902184313"
         />
       </li>
       <li
-        className="jsx-1340858167 step-icon step-icon--next"
+        className="jsx-3902184313 step-icon step-icon--next"
       >
         <span
-          className="jsx-1340858167"
+          className="jsx-3902184313"
         />
       </li>
       <li
-        className="jsx-1340858167 step-icon step-icon--next"
+        className="jsx-3902184313 step-icon step-icon--next"
       >
         <span
-          className="jsx-1340858167"
+          className="jsx-3902184313"
         />
       </li>
       <li
-        className="jsx-1340858167 step-icon step-icon--last step-icon--next"
+        className="jsx-3902184313 step-icon step-icon--last step-icon--next"
       >
         <span
-          className="jsx-1340858167"
+          className="jsx-3902184313"
         />
       </li>
     </ul>

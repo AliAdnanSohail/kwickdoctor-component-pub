@@ -59,16 +59,6 @@ export const stepIcon = css`
       span {
         width: 34px;
         height: 34px;
-
-        :global(svg) {
-          height: 16px;
-          width: 16px;
-
-          :global(polyline) {
-            stroke: #6fcb83 !important;
-            stroke-width: 5;
-          }
-        }
       }
     }
 

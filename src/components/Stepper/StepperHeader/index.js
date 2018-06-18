@@ -22,7 +22,7 @@ export default class StepperHeader extends Component {
 
       return (
         <li key={index} className={classes}>
-          <span>{completed ? <MaterialIcon icon="done" /> : undefined}</span>
+          <span>{completed ? <MaterialIcon color="#6fcb83" icon="done" /> : undefined}</span>
 
           <style jsx>{stepIcon}</style>
         </li>

@@ -73,7 +73,7 @@ var StepperHeader = function (_Component) {
             {
               className: 'jsx-' + _styles.stepIcon.__scopedHash
             },
-            completed ? _react2.default.createElement(_materialIconsReact2.default, { icon: 'done' }) : undefined
+            completed ? _react2.default.createElement(_materialIconsReact2.default, { color: '#6fcb83', icon: 'done' }) : undefined
           ),
           _react2.default.createElement(_style2.default, {
             styleId: _styles.stepIcon.__scopedHash,
