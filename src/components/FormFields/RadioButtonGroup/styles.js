@@ -9,11 +9,16 @@ export default css`
   }
 
   .radio-buttons {
-    display: felx;
+    display: flex;
     flex-direction: row;
 
     > label {
       flex-grow: 1;
+
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
     }
   }
 

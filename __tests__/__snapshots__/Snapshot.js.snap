@@ -780,25 +780,25 @@ exports[`Storyshots Form Fields Autocomplete 1`] = `
   }
 >
   <div
-    className="jsx-1685083184 jsx-4038665278 jsx-2881818901 form-field"
+    className="jsx-1685083184 jsx-4038665278 jsx-2062352977 form-field"
   >
     <label
-      className="jsx-1685083184 jsx-4038665278 jsx-2881818901"
+      className="jsx-1685083184 jsx-4038665278 jsx-2062352977"
       htmlFor="autocomplete"
     >
       Label
     </label>
     <div
-      className="jsx-1685083184 jsx-4038665278 jsx-2881818901 autocomplete"
+      className="jsx-1685083184 jsx-4038665278 jsx-2062352977 autocomplete"
       onFocus={[Function]}
       role="textbox"
       tabIndex={0}
     >
       <div
-        className="jsx-1685083184 jsx-4038665278 jsx-2881818901 autocomplete__input"
+        className="jsx-1685083184 jsx-4038665278 jsx-2062352977 autocomplete__input"
       >
         <input
-          className="jsx-1685083184 jsx-4038665278 jsx-2881818901"
+          className="jsx-1685083184 jsx-4038665278 jsx-2062352977"
           id="autocomplete"
           onBlur={[Function]}
           onChange={[Function]}
@@ -965,10 +965,10 @@ exports[`Storyshots Form Fields CheckBox 1`] = `
   }
 >
   <div
-    className="jsx-1685083184 jsx-4038665278 jsx-2881818901 form-field"
+    className="jsx-1685083184 jsx-4038665278 jsx-2062352977 form-field"
   >
     <label
-      className="jsx-1685083184 jsx-4038665278 jsx-2881818901"
+      className="jsx-1685083184 jsx-4038665278 jsx-2062352977"
       htmlFor="input"
     >
       Label
@@ -1082,11 +1082,11 @@ exports[`Storyshots Form Fields FilePicker 1`] = `
   }
 >
   <label
-    className="jsx-1682990104 jsx-2881818901 upload-file"
+    className="jsx-1682990104 jsx-2062352977 upload-file"
     htmlFor="id"
   >
     <div
-      className="jsx-1682990104 jsx-2881818901 upload-file__label-container"
+      className="jsx-1682990104 jsx-2062352977 upload-file__label-container"
     >
       <i
         className="material-icons 28 md-dark "
@@ -1100,13 +1100,13 @@ exports[`Storyshots Form Fields FilePicker 1`] = `
         outline_cloud_upload
       </i>
       <div
-        className="jsx-1682990104 jsx-2881818901 upload-file__label"
+        className="jsx-1682990104 jsx-2062352977 upload-file__label"
       >
         placeholder
       </div>
     </div>
     <input
-      className="jsx-1682990104 jsx-2881818901 input-file"
+      className="jsx-1682990104 jsx-2062352977 input-file"
       id="id"
       onBlur={[Function]}
       onChange={[Function]}
@@ -1125,10 +1125,10 @@ exports[`Storyshots Form Fields Input 1`] = `
   }
 >
   <div
-    className="jsx-1685083184 jsx-4038665278 jsx-2881818901 form-field"
+    className="jsx-1685083184 jsx-4038665278 jsx-2062352977 form-field"
   >
     <label
-      className="jsx-1685083184 jsx-4038665278 jsx-2881818901"
+      className="jsx-1685083184 jsx-4038665278 jsx-2062352977"
       htmlFor="input"
     >
       Label
@@ -1161,25 +1161,25 @@ exports[`Storyshots Form Fields RadioButtonGroup 1`] = `
   }
 >
   <div
-    className="jsx-1685083184 jsx-4038665278 jsx-2881818901 jsx-904933394 jsx-207561400 form-field"
+    className="jsx-1685083184 jsx-4038665278 jsx-2062352977 jsx-904933394 jsx-2140168082 form-field"
   >
     <fieldset
-      className="jsx-1685083184 jsx-4038665278 jsx-2881818901 jsx-904933394 jsx-207561400 fieldset"
+      className="jsx-1685083184 jsx-4038665278 jsx-2062352977 jsx-904933394 jsx-2140168082 fieldset"
     >
       <legend
-        className="jsx-1685083184 jsx-4038665278 jsx-2881818901 jsx-904933394 jsx-207561400 legend"
+        className="jsx-1685083184 jsx-4038665278 jsx-2062352977 jsx-904933394 jsx-2140168082 legend"
       >
         Gender
       </legend>
       <div
-        className="jsx-1685083184 jsx-4038665278 jsx-2881818901 jsx-904933394 jsx-207561400 radio-buttons"
+        className="jsx-1685083184 jsx-4038665278 jsx-2062352977 jsx-904933394 jsx-2140168082 radio-buttons"
       >
         <label
-          className="jsx-1685083184 jsx-4038665278 jsx-2881818901 jsx-904933394 jsx-207561400 radio-button"
+          className="jsx-1685083184 jsx-4038665278 jsx-2062352977 jsx-904933394 jsx-2140168082 radio-button"
         >
           male
           <input
-            className="jsx-1685083184 jsx-4038665278 jsx-2881818901 jsx-904933394 jsx-207561400 "
+            className="jsx-1685083184 jsx-4038665278 jsx-2062352977 jsx-904933394 jsx-2140168082 "
             defaultChecked={false}
             name="gender"
             type="radio"
@@ -1187,11 +1187,11 @@ exports[`Storyshots Form Fields RadioButtonGroup 1`] = `
           />
         </label>
         <label
-          className="jsx-1685083184 jsx-4038665278 jsx-2881818901 jsx-904933394 jsx-207561400 radio-button"
+          className="jsx-1685083184 jsx-4038665278 jsx-2062352977 jsx-904933394 jsx-2140168082 radio-button"
         >
           female
           <input
-            className="jsx-1685083184 jsx-4038665278 jsx-2881818901 jsx-904933394 jsx-207561400 "
+            className="jsx-1685083184 jsx-4038665278 jsx-2062352977 jsx-904933394 jsx-2140168082 "
             defaultChecked={false}
             name="gender"
             type="radio"
@@ -1347,10 +1347,10 @@ exports[`Storyshots Form Fields Select 1`] = `
   }
 >
   <div
-    className="jsx-1685083184 jsx-4038665278 jsx-2881818901 form-field"
+    className="jsx-1685083184 jsx-4038665278 jsx-2062352977 form-field"
   >
     <label
-      className="jsx-1685083184 jsx-4038665278 jsx-2881818901"
+      className="jsx-1685083184 jsx-4038665278 jsx-2062352977"
     >
       Label
     </label>
@@ -1587,10 +1587,10 @@ exports[`Storyshots Form Fields TextArea 1`] = `
   }
 >
   <div
-    className="jsx-1685083184 jsx-4038665278 jsx-2881818901 form-field"
+    className="jsx-1685083184 jsx-4038665278 jsx-2062352977 form-field"
   >
     <label
-      className="jsx-1685083184 jsx-4038665278 jsx-2881818901"
+      className="jsx-1685083184 jsx-4038665278 jsx-2062352977"
       htmlFor="textarea"
     >
       Label
@@ -2121,10 +2121,10 @@ exports[`Storyshots SearchBar default 1`] = `
   }
 >
   <div
-    className="jsx-1685083184 jsx-4038665278 jsx-2881818901 form-field"
+    className="jsx-1685083184 jsx-4038665278 jsx-2062352977 form-field"
   >
     <label
-      className="jsx-1685083184 jsx-4038665278 jsx-2881818901"
+      className="jsx-1685083184 jsx-4038665278 jsx-2062352977"
     />
     <input
       className=""

@@ -2,10 +2,10 @@
 
 exports[`renders correctly 1`] = `
 <div
-  className="jsx-1685083184 jsx-4038665278 jsx-2881818901 form-field"
+  className="jsx-1685083184 jsx-4038665278 jsx-2062352977 form-field"
 >
   <label
-    className="jsx-1685083184 jsx-4038665278 jsx-2881818901"
+    className="jsx-1685083184 jsx-4038665278 jsx-2062352977"
     htmlFor="input-id"
   >
     input-label
