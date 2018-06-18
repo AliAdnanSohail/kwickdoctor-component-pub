@@ -58,7 +58,7 @@ export default css`
 
     .icons-close {
       padding-top: 2px;
-      width: 14px;
+      width: 16px;
       float: right;
     }
 
@@ -83,14 +83,12 @@ export default css`
         opacity: 1;
       }
 
-      .grommetux-control-icon-close {
-        height: 14px;
-        width: 14px;
+      :global(.material-icons) {
+        height: 16px;
+        width: 16px;
         display: inline-block;
 
-        path {
-          stroke-width: 4;
-        }
+        font-size: 1rem;
       }
     }
   }
