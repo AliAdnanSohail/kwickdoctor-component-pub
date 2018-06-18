@@ -12,6 +12,7 @@ export const error = css`
   .error {
     position: absolute;
     left: 16px;
+    top: calc(100% + 4px);
 
     width: auto;
     max-width: calc(100% - 32px);
