@@ -965,16 +965,16 @@ exports[`Storyshots Form Fields CheckBox 1`] = `
   }
 >
   <div
-    className="jsx-4058793500 jsx-2062352977 checkbox"
+    className="jsx-641611979 jsx-2062352977 checkbox"
   >
     <label
-      className="jsx-4058793500 jsx-2062352977 label"
+      className="jsx-641611979 jsx-2062352977 label"
       htmlFor="input"
     >
       Label
     </label>
     <input
-      className="jsx-4058793500 jsx-2062352977 "
+      className="jsx-641611979 jsx-2062352977 "
       id="input"
       name="Name"
       type="checkbox"
