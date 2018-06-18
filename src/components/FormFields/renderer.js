@@ -17,7 +17,7 @@ export default render => ({
       }),
     })}
 
-    {meta && meta.error && meta.touched ? <div className="error">{meta.error}</div> : undefined}
+    {meta && meta.error && meta.touched && <div className="error">{meta.error}</div>}
 
     <style jsx>{styles}</style>
     <style jsx>{labelStyles}</style>

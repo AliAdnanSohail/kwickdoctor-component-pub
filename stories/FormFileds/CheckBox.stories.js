@@ -1,6 +1,6 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { withKnobs, boolean, text } from '@storybook/addon-knobs/react';
+import { withKnobs, text, boolean } from '@storybook/addon-knobs/react';
 import { checkA11y } from '@storybook/addon-a11y';
 import { withTests } from '@storybook/addon-jest';
 
@@ -17,6 +17,6 @@ storiesOf('Form Fields', module)
       id="input"
       name={text('name', 'Name')}
       label={text('label', 'Label')}
-      defaultChecked={boolean('DefaultChecked', true)}
+      input={{ value: boolean('value', false) }}
     />
   ));

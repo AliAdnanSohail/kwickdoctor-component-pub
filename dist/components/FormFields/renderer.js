@@ -50,13 +50,13 @@ exports.default = function (render) {
           active: meta && meta.active
         })
       })),
-      meta && meta.error && meta.touched ? _react2.default.createElement(
+      meta && meta.error && meta.touched && _react2.default.createElement(
         'div',
         {
           className: 'jsx-' + _styles2.default.__scopedHash + ' jsx-' + _styles.label.__scopedHash + ' jsx-' + _styles.error.__scopedHash + ' ' + 'error'
         },
         meta.error
-      ) : undefined,
+      ),
       _react2.default.createElement(_style2.default, {
         styleId: _styles2.default.__scopedHash,
         css: _styles2.default.__scoped

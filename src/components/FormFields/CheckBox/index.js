@@ -1,21 +1,57 @@
-import React, { Fragment } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
+import classnames from 'classnames';
+import MaterialIcon from 'material-icons-react';
 
-import renderer from '../renderer';
-import { textInput } from '../styles';
+import styles from './styles';
+import { error as errorStyles } from '../styles';
 
-export default renderer((input, label, {
-  className, id, name, defaultChecked,
+const CheckBox = ({
+  input, meta, className, id, name, label,
 }) => (
-  <Fragment>
+  <div className={classnames('checkbox', className)}>
+    <label
+      htmlFor={id}
+      className={classnames('label', input.value && 'checked')}
+    >
+      {
+        input.value &&
+        <MaterialIcon icon="check" color="#ffffff" size={20} />
+      }
+      {label}
+    </label>
+
     <input
       {...input}
-      className={className}
       id={id}
       name={name}
       type="checkbox"
-      defaultChecked={defaultChecked}
     />
 
-    <style>{textInput}</style>
-  </Fragment>
-));
+    {meta && meta.error && meta.touched && <div className="error">{meta.error}</div>}
+
+    <style jsx>{styles}</style>
+    <style jsx>{errorStyles}</style>
+  </div>
+);
+
+CheckBox.propTypes = {
+  className: PropTypes.string,
+  id: PropTypes.string.isRequired,
+  input: PropTypes.object,
+  label: PropTypes.string,
+  name: PropTypes.string,
+  meta: PropTypes.object,
+};
+
+CheckBox.defaultProps = {
+  className: undefined,
+  input: {
+    value: false,
+  },
+  label: undefined,
+  name: undefined,
+  meta: {},
+};
+
+export default CheckBox;
