@@ -62,7 +62,7 @@ var LinkButton = function (_Component) {
           danger = _props.danger,
           flat = _props.flat,
           icon = _props.icon,
-          link = _props.link,
+          to = _props.to,
           rounded = _props.rounded,
           size = _props.size,
           squared = _props.squared,
@@ -73,7 +73,7 @@ var LinkButton = function (_Component) {
 
       return _react2.default.createElement(
         _reactRouterDom.NavLink,
-        { className: classes, to: link },
+        { className: classes, to: to },
         icon && _react2.default.createElement(
           'span',
           { className: 'button__icon' },
@@ -105,7 +105,7 @@ LinkButton.propTypes = {
   danger: _propTypes2.default.bool,
   flat: _propTypes2.default.bool,
   icon: _propTypes2.default.element,
-  link: _propTypes2.default.string,
+  to: _propTypes2.default.string,
   rounded: _propTypes2.default.bool,
   size: _propTypes2.default.oneOf(['small', 'xsmall', '']),
   squared: _propTypes2.default.bool,
@@ -119,7 +119,7 @@ LinkButton.defaultProps = {
   danger: false,
   flat: false,
   icon: null,
-  link: '/',
+  to: '/',
   rounded: false,
   size: undefined,
   squared: false,

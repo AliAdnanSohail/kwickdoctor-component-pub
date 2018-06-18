@@ -15,7 +15,7 @@ export default class LinkButton extends Component {
       danger,
       flat,
       icon,
-      link,
+      to,
       rounded,
       size,
       squared,
@@ -36,7 +36,7 @@ export default class LinkButton extends Component {
     );
 
     return (
-      <NavLink className={classes} to={link}>
+      <NavLink className={classes} to={to}>
         {icon && (
           <span className="button__icon">
             <MaterialIcon icon={icon} />
@@ -57,7 +57,7 @@ LinkButton.propTypes = {
   danger: PropTypes.bool,
   flat: PropTypes.bool,
   icon: PropTypes.element,
-  link: PropTypes.string,
+  to: PropTypes.string,
   rounded: PropTypes.bool,
   size: PropTypes.oneOf(['small', 'xsmall', '']),
   squared: PropTypes.bool,
@@ -71,7 +71,7 @@ LinkButton.defaultProps = {
   danger: false,
   flat: false,
   icon: null,
-  link: '/',
+  to: '/',
   rounded: false,
   size: undefined,
   squared: false,
