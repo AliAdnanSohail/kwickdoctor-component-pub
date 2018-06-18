@@ -3,12 +3,26 @@ import css from 'styled-jsx/css';
 import settings from '../../../utils/style-helper';
 
 export default css`
+  .fieldset,
+  .legend {
+    padding: 0;
+  }
+
+  .radio-buttons {
+    display: felx;
+    flex-direction: row;
+
+    > label {
+      flex-grow: 1;
+    }
+  }
+
   .radio-button {
-    display: inline-block;
+    display: block;
 
     position: relative;
 
-    padding: 12px 34px;
+    padding: 12px 0;
     margin-right: -2px;
 
     box-sizing: border-box;
@@ -37,7 +51,7 @@ export default css`
       radius: 0;
     }
 
-    &:nth-child(2) {
+    &:first-child {
       border: {
         top-left-radius: 26px;
         bottom-left-radius: 26px;

@@ -4,10 +4,10 @@ import renderer from 'react-test-renderer';
 import { RadioButtonGroup } from '../src';
 
 const defaultProps = {
-  name: 'gender',
-  selected: 'any',
-  options: [{ value: 'male' }, { value: 'any' }, { value: 'female' }],
+  id: 'gender',
   label: 'Label',
+  name: 'gender',
+  options: [{ value: 'male' }, { value: 'female' }],
 };
 
 it('renders correctly', () => {

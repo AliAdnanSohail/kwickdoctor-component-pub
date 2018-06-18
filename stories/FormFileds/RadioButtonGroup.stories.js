@@ -14,9 +14,9 @@ storiesOf('Form Fields', module)
   .addDecorator(getStory => <div style={{ padding: '24px' }}>{getStory()}</div>)
   .add('RadioButtonGroup', () => (
     <RadioButtonGroup
-      name={text('name', 'Gender')}
-      selected={text('selected', 'male')}
-      options={[{ value: 'male' }, { value: 'any' }, { value: 'female' }]}
-      label={text('label', 'Label')}
+      id={text('id', 'gender')}
+      label={text('label', 'Gender')}
+      name={text('name', 'gender')}
+      options={[{ value: 'male' }, { value: 'female' }]}
     />
   ));
