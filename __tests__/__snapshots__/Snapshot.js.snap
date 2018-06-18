@@ -1690,6 +1690,7 @@ exports[`Storyshots LinkButton default 1`] = `
     href="/"
     onClick={[Function]}
   >
+    
     <span
       className="button__content"
     >
