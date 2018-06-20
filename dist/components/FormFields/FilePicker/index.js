@@ -104,7 +104,7 @@ var FilePicker = function (_Component) {
           {
             className: 'jsx-' + _styles2.default.__scopedHash + ' jsx-' + _styles3.error.__scopedHash + ' ' + 'upload-file__label-container'
           },
-          value.name ? _react2.default.createElement(_materialIconsReact2.default, { icon: 'assignment', color: '#0c97f9', size: 28 }) : _react2.default.createElement(_materialIconsReact2.default, { icon: 'cloud_upload', color: '#0c97f9', size: 28 }),
+          value.name ? _react2.default.createElement(_materialIconsReact2.default, { icon: 'assignment', color: '#0c97f9', size: 16 }) : _react2.default.createElement(_materialIconsReact2.default, { icon: 'cloud_upload', color: '#0c97f9', size: 16 }),
           _react2.default.createElement(
             'div',
             {
@@ -119,7 +119,7 @@ var FilePicker = function (_Component) {
           icon: 'close',
           onClick: this.handleRemove,
           rounded: true,
-          size: 'xs'
+          size: 'xsmall'
         }),
         _react2.default.createElement('input', _extends({}, inputProps, {
           id: id,

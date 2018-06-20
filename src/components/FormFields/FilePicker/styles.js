@@ -54,18 +54,7 @@ export default css`
 
       :global(.material-icons) {
         margin-right: 12px;
-        width: 16px;
-        height: 16px;
-
-        color: ${settings.primaryColor};
       }
-    }
-
-    &__close-icon :globa(.material-icons) {
-      width: 12px;
-      height: 12px;
-
-      color: ${settings.textLightColor};
     }
 
     .input-file {
