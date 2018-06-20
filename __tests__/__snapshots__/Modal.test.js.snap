@@ -80,6 +80,7 @@ exports[`renders correctly 1`] = `
   <Modal
     active={false}
     alert={false}
+    contentClassName={null}
     escapeExits={true}
     onExit={[Function]}
     rootId="root"

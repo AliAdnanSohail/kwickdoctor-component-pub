@@ -84,6 +84,7 @@ var Modal = function (_Component) {
       var _props = this.props,
           alert = _props.alert,
           children = _props.children,
+          contentClassName = _props.contentClassName,
           escapeExits = _props.escapeExits,
           rootId = _props.rootId,
           title = _props.title,
@@ -93,7 +94,7 @@ var Modal = function (_Component) {
           modalHasEntered = _state.modalHasEntered;
 
 
-      var modalContentClass = (0, _classnames2.default)('modal', 'modal--animated', {
+      var modalContentClass = (0, _classnames2.default)('modal', 'modal--animated', contentClassName, {
         'has-entered': modalHasEntered
       });
 
@@ -160,6 +161,7 @@ Modal.propTypes = {
   active: _propTypes2.default.bool.isRequired,
   alert: _propTypes2.default.bool,
   children: _propTypes2.default.node,
+  contentClassName: _propTypes2.default.string,
   escapeExits: _propTypes2.default.bool,
   onExit: _propTypes2.default.func.isRequired,
   rootId: _propTypes2.default.string,
@@ -170,6 +172,7 @@ Modal.propTypes = {
 Modal.defaultProps = {
   alert: false,
   children: null,
+  contentClassName: null,
   escapeExits: true,
   rootId: 'root',
   title: 'dom one',

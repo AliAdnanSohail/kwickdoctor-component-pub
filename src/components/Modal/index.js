@@ -36,12 +36,18 @@ export default class Modal extends Component {
 
   render() {
     const {
-      alert, children, escapeExits, rootId, title, underlayClickExits,
+      alert,
+      children,
+      contentClassName,
+      escapeExits,
+      rootId,
+      title,
+      underlayClickExits,
     } = this.props;
 
     const { active, modalHasEntered } = this.state;
 
-    const modalContentClass = classnames('modal', 'modal--animated', {
+    const modalContentClass = classnames('modal', 'modal--animated', contentClassName, {
       'has-entered': modalHasEntered,
     });
 
@@ -81,6 +87,7 @@ Modal.propTypes = {
   active: PropTypes.bool.isRequired,
   alert: PropTypes.bool,
   children: PropTypes.node,
+  contentClassName: PropTypes.string,
   escapeExits: PropTypes.bool,
   onExit: PropTypes.func.isRequired,
   rootId: PropTypes.string,
@@ -91,6 +98,7 @@ Modal.propTypes = {
 Modal.defaultProps = {
   alert: false,
   children: null,
+  contentClassName: null,
   escapeExits: true,
   rootId: 'root',
   title: 'dom one',
