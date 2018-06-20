@@ -52,7 +52,7 @@ export default css`
       align-items: center;
       width: calc(100% - 32px);
 
-      :global(material-icons) {
+      :global(.material-icons) {
         margin-right: 12px;
         width: 16px;
         height: 16px;
@@ -61,13 +61,11 @@ export default css`
       }
     }
 
-    &__close-icon {
-      :globa(.material-icons) {
-        width: 12px;
-        height: 12px;
+    &__close-icon :globa(.material-icons) {
+      width: 12px;
+      height: 12px;
 
-        color: ${settings.textLightColor};
-      }
+      color: ${settings.textLightColor};
     }
 
     .input-file {

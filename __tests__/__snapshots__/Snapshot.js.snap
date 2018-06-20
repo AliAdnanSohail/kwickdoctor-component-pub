@@ -1073,11 +1073,11 @@ exports[`Storyshots Form Fields FilePicker 1`] = `
   }
 >
   <label
-    className="jsx-2804040086 jsx-2062352977 upload-file"
+    className="jsx-3645479261 jsx-2062352977 upload-file"
     htmlFor="id"
   >
     <div
-      className="jsx-2804040086 jsx-2062352977 upload-file__label-container"
+      className="jsx-3645479261 jsx-2062352977 upload-file__label-container"
     >
       <i
         className="material-icons 28 md-dark "
@@ -1091,13 +1091,13 @@ exports[`Storyshots Form Fields FilePicker 1`] = `
         cloud_upload
       </i>
       <div
-        className="jsx-2804040086 jsx-2062352977 upload-file__label"
+        className="jsx-3645479261 jsx-2062352977 upload-file__label"
       >
         placeholder
       </div>
     </div>
     <input
-      className="jsx-2804040086 jsx-2062352977 input-file"
+      className="jsx-3645479261 jsx-2062352977 input-file"
       id="id"
       onBlur={[Function]}
       onChange={[Function]}
