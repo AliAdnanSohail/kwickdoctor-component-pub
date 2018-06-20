@@ -38,6 +38,7 @@ export default class Modal extends Component {
     const {
       alert,
       children,
+      className,
       contentClassName,
       escapeExits,
       rootId,
@@ -47,13 +48,15 @@ export default class Modal extends Component {
 
     const { active, modalHasEntered } = this.state;
 
-    const modalContentClass = classnames('modal', 'modal--animated', contentClassName, {
+    const modalClasses = classnames('modal', 'modal--animated', className, {
       'has-entered': modalHasEntered,
     });
 
     const underlayClass = classnames('underlay', {
       'has-entered': modalHasEntered,
     });
+
+    const contentClasses = classnames('modal__content', contentClassName);
 
     return (
       <AriaModal
@@ -69,11 +72,11 @@ export default class Modal extends Component {
         underlayClickExits={underlayClickExits}
         verticallyCenter
       >
-        <div className={modalContentClass}>
+        <div className={modalClasses}>
           <button className="modal__close-button" onClick={this.handleExit}>
             <MaterialIcon icon="close" />
           </button>
-          <div className="modal__content">{children}</div>
+          <div className={contentClasses}>{children}</div>
         </div>
 
         <style jsx>{modal}</style>
@@ -87,6 +90,7 @@ Modal.propTypes = {
   active: PropTypes.bool.isRequired,
   alert: PropTypes.bool,
   children: PropTypes.node,
+  className: PropTypes.string,
   contentClassName: PropTypes.string,
   escapeExits: PropTypes.bool,
   onExit: PropTypes.func.isRequired,
@@ -98,6 +102,7 @@ Modal.propTypes = {
 Modal.defaultProps = {
   alert: false,
   children: null,
+  className: null,
   contentClassName: null,
   escapeExits: true,
   rootId: 'root',

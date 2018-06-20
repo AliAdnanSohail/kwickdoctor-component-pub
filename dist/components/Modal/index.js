@@ -84,6 +84,7 @@ var Modal = function (_Component) {
       var _props = this.props,
           alert = _props.alert,
           children = _props.children,
+          className = _props.className,
           contentClassName = _props.contentClassName,
           escapeExits = _props.escapeExits,
           rootId = _props.rootId,
@@ -94,13 +95,15 @@ var Modal = function (_Component) {
           modalHasEntered = _state.modalHasEntered;
 
 
-      var modalContentClass = (0, _classnames2.default)('modal', 'modal--animated', contentClassName, {
+      var modalClasses = (0, _classnames2.default)('modal', 'modal--animated', className, {
         'has-entered': modalHasEntered
       });
 
       var underlayClass = (0, _classnames2.default)('underlay', {
         'has-entered': modalHasEntered
       });
+
+      var contentClasses = (0, _classnames2.default)('modal__content', contentClassName);
 
       return _react2.default.createElement(
         _reactAriaModal2.default,
@@ -122,7 +125,7 @@ var Modal = function (_Component) {
         _react2.default.createElement(
           'div',
           {
-            className: 'jsx-' + _styles.modal.__scopedHash + ' ' + (modalContentClass || '')
+            className: 'jsx-' + _styles.modal.__scopedHash + ' ' + (modalClasses || '')
           },
           _react2.default.createElement(
             'button',
@@ -133,7 +136,7 @@ var Modal = function (_Component) {
           _react2.default.createElement(
             'div',
             {
-              className: 'jsx-' + _styles.modal.__scopedHash + ' ' + 'modal__content'
+              className: 'jsx-' + _styles.modal.__scopedHash + ' ' + (contentClasses || '')
             },
             children
           )
@@ -161,6 +164,7 @@ Modal.propTypes = {
   active: _propTypes2.default.bool.isRequired,
   alert: _propTypes2.default.bool,
   children: _propTypes2.default.node,
+  className: _propTypes2.default.string,
   contentClassName: _propTypes2.default.string,
   escapeExits: _propTypes2.default.bool,
   onExit: _propTypes2.default.func.isRequired,
@@ -172,6 +176,7 @@ Modal.propTypes = {
 Modal.defaultProps = {
   alert: false,
   children: null,
+  className: null,
   contentClassName: null,
   escapeExits: true,
   rootId: 'root',
