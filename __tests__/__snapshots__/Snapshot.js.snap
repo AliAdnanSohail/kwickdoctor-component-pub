@@ -522,7 +522,7 @@ exports[`Storyshots Calendar default 1`] = `
         className="jsx-1983106999"
       >
         <button
-          className="jsx-3065497712 day day--selected"
+          className="jsx-3065497712 day day--disabled"
           data-day="2018-06-19"
           onClick={[Function]}
           type="button"
@@ -538,7 +538,7 @@ exports[`Storyshots Calendar default 1`] = `
         className="jsx-1983106999"
       >
         <button
-          className="jsx-3065497712 day"
+          className="jsx-3065497712 day day--selected"
           data-day="2018-06-20"
           onClick={[Function]}
           type="button"
@@ -1017,7 +1017,7 @@ exports[`Storyshots Form Fields DatePicker 1`] = `
             onFocus={[Function]}
             onKeyDown={[Function]}
             type="text"
-            value="19 Jun, 2018"
+            value="20 Jun, 2018"
           />
         </div>
       </div>
@@ -1073,11 +1073,11 @@ exports[`Storyshots Form Fields FilePicker 1`] = `
   }
 >
   <label
-    className="jsx-1682990104 jsx-2062352977 upload-file"
+    className="jsx-2804040086 jsx-2062352977 upload-file"
     htmlFor="id"
   >
     <div
-      className="jsx-1682990104 jsx-2062352977 upload-file__label-container"
+      className="jsx-2804040086 jsx-2062352977 upload-file__label-container"
     >
       <i
         className="material-icons 28 md-dark "
@@ -1088,16 +1088,16 @@ exports[`Storyshots Form Fields FilePicker 1`] = `
           }
         }
       >
-        outline_cloud_upload
+        cloud_upload
       </i>
       <div
-        className="jsx-1682990104 jsx-2062352977 upload-file__label"
+        className="jsx-2804040086 jsx-2062352977 upload-file__label"
       >
         placeholder
       </div>
     </div>
     <input
-      className="jsx-1682990104 jsx-2062352977 input-file"
+      className="jsx-2804040086 jsx-2062352977 input-file"
       id="id"
       onBlur={[Function]}
       onChange={[Function]}

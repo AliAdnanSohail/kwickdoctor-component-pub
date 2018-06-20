@@ -52,29 +52,21 @@ export default css`
       align-items: center;
       width: calc(100% - 32px);
 
-      :global(svg) {
+      :global(material-icons) {
         margin-right: 12px;
         width: 16px;
         height: 16px;
-        fill: ${settings.primaryColor};
-        stroke: ${settings.primaryColor};
+
+        color: ${settings.primaryColor};
       }
     }
 
     &__close-icon {
-      :globa(svg) {
+      :globa(.material-icons) {
         width: 12px;
         height: 12px;
 
-        fill: ${settings.textLightColor};
-        stroke: ${settings.textLightColor};
-
-        :global(path) {
-          fill: ${settings.textLightColor};
-          stroke: ${settings.textLightColor};
-
-          stroke-width: 5;
-        }
+        color: ${settings.textLightColor};
       }
     }
 

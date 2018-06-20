@@ -39,9 +39,9 @@ export default class FilePicker extends Component {
       <label className={classes} htmlFor={id}>
         <div className="upload-file__label-container">
           {value.name ? (
-            <MaterialIcon icon="outline_assignment" color="#0c97f9" size={28} />
+            <MaterialIcon icon="assignment" color="#0c97f9" size={28} />
           ) : (
-            <MaterialIcon icon="outline_cloud_upload" color="#0c97f9" size={28} />
+            <MaterialIcon icon="cloud_upload" color="#0c97f9" size={28} />
           )}
 
           <div className="upload-file__label">{value.name || placeholder}</div>
