@@ -192,6 +192,12 @@ export default css`
       }
     }
 
+    &:not(&--rounded) .button__icon {
+      position: absolute;
+      top: calc(50% - 12px);
+      left: 32px;
+    }
+
     &--small {
       height: 42px;
       line-height: 1;
@@ -246,12 +252,6 @@ export default css`
         left: 16px;
         top: calc(50% - 9px);
       }
-    }
-
-    &:not(&--rounded) .button__icon {
-      position: absolute;
-      top: calc(50% - 12px);
-      left: 32px;
     }
 
     &.has-clicked .button__wave {
