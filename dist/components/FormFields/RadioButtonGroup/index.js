@@ -101,6 +101,8 @@ var RadioButtonGroup = function (_Component) {
                 _react2.default.createElement('input', _extends({}, input, {
                   id: optionId,
                   name: name,
+                  onBlur: function onBlur() {},
+                  onFocus: function onFocus() {},
                   type: 'radio',
                   value: option.value,
                   className: 'jsx-' + _styles4.default.__scopedHash + ' jsx-' + _styles3.label.__scopedHash + ' jsx-' + _styles3.error.__scopedHash + ' jsx-' + _styles3.fieldset.__scopedHash + ' jsx-' + _styles2.default.__scopedHash + ' ' + (className || '')

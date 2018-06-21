@@ -29,6 +29,7 @@ export default css`
 
     padding: 12px 0;
     margin-right: -2px;
+    width: 100%;
 
     box-sizing: border-box;
 
