@@ -8,7 +8,7 @@ import styles, { label as labelStyles, error as errorStyles, fieldset } from '..
 export default class RadioButtonGroup extends Component {
   render() {
     const {
-      containerClassName, className, id, input, label, meta, name, options,
+      containerClassName, className, id, input, label, meta, options,
     } = this.props;
 
     return (
@@ -32,8 +32,6 @@ export default class RadioButtonGroup extends Component {
                     {...input}
                     className={className}
                     id={optionId}
-                    onBlur={() => {}}
-                    onFocus={() => {}}
                     type="radio"
                     value={option.value}
                   />

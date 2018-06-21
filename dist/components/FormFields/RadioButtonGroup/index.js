@@ -60,7 +60,6 @@ var RadioButtonGroup = function (_Component) {
           input = _props.input,
           label = _props.label,
           meta = _props.meta,
-          name = _props.name,
           options = _props.options;
 
 
@@ -100,8 +99,6 @@ var RadioButtonGroup = function (_Component) {
                 option.label || option.value,
                 _react2.default.createElement('input', _extends({}, input, {
                   id: optionId,
-                  onBlur: function onBlur() {},
-                  onFocus: function onFocus() {},
                   type: 'radio',
                   value: option.value,
                   className: 'jsx-' + _styles4.default.__scopedHash + ' jsx-' + _styles3.label.__scopedHash + ' jsx-' + _styles3.error.__scopedHash + ' jsx-' + _styles3.fieldset.__scopedHash + ' jsx-' + _styles2.default.__scopedHash + ' ' + (className || '')
