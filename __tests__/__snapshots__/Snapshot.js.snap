@@ -538,7 +538,7 @@ exports[`Storyshots Calendar default 1`] = `
         className="jsx-1983106999"
       >
         <button
-          className="jsx-3065497712 day day--selected"
+          className="jsx-3065497712 day day--disabled"
           data-day="2018-06-20"
           onClick={[Function]}
           type="button"
@@ -554,7 +554,7 @@ exports[`Storyshots Calendar default 1`] = `
         className="jsx-1983106999"
       >
         <button
-          className="jsx-3065497712 day"
+          className="jsx-3065497712 day day--selected"
           data-day="2018-06-21"
           onClick={[Function]}
           type="button"
@@ -1017,7 +1017,7 @@ exports[`Storyshots Form Fields DatePicker 1`] = `
             onFocus={[Function]}
             onKeyDown={[Function]}
             type="text"
-            value="20 Jun, 2018"
+            value="21 Jun, 2018"
           />
         </div>
       </div>
@@ -1167,11 +1167,12 @@ exports[`Storyshots Form Fields RadioButtonGroup 1`] = `
       >
         <label
           className="jsx-1685083184 jsx-4038665278 jsx-2062352977 jsx-904933394 jsx-2140168082 radio-button"
+          htmlFor="gender-male"
         >
           male
           <input
             className="jsx-1685083184 jsx-4038665278 jsx-2062352977 jsx-904933394 jsx-2140168082 "
-            defaultChecked={false}
+            id="gender-male"
             name="gender"
             type="radio"
             value="male"
@@ -1179,11 +1180,12 @@ exports[`Storyshots Form Fields RadioButtonGroup 1`] = `
         </label>
         <label
           className="jsx-1685083184 jsx-4038665278 jsx-2062352977 jsx-904933394 jsx-2140168082 radio-button"
+          htmlFor="gender-female"
         >
           female
           <input
             className="jsx-1685083184 jsx-4038665278 jsx-2062352977 jsx-904933394 jsx-2140168082 "
-            defaultChecked={false}
+            id="gender-female"
             name="gender"
             type="radio"
             value="female"

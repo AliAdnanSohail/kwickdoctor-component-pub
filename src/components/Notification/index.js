@@ -25,7 +25,7 @@ export default class Notification extends Component {
       message, primary, read, onComplete, onDelete,
     } = this.props;
 
-    const dotClasses = classnames('notification__dot', {
+    const сlasses = classnames('notification__dot', {
       'notification__dot--primary': primary,
       'notification__dot--read': read,
     });
@@ -34,7 +34,7 @@ export default class Notification extends Component {
       <Card className="notification">
         <div className="notification__time">{this.renderDate()}</div>
         <div className="notification__message">
-          <span className={dotClasses} />
+          <span className={сlasses} />
           {message}
         </div>
 

@@ -25,14 +25,16 @@ export default class LinkButton extends Component {
     const classes = classnames(
       'button',
       className,
-      { [`button--${size}`]: size },
-      { 'button--accent': accent },
-      { 'button--danger': danger },
-      { 'button--flat': flat },
-      { 'button--with-icon': icon },
-      { 'button--rounded': rounded },
-      { 'button--squared': squared },
-      { 'button--transparent': transparent },
+      {
+        [`button--${size}`]: size,
+        'button--accent': accent,
+        'button--danger': danger,
+        'button--flat': flat,
+        'button--with-icon': icon,
+        'button--rounded': rounded,
+        'button--squared': squared,
+        'button--transparent': transparent,
+      },
     );
 
     return (

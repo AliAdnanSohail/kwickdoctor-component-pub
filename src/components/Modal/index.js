@@ -48,15 +48,9 @@ export default class Modal extends Component {
 
     const { active, modalHasEntered } = this.state;
 
-    const modalClasses = classnames('modal', 'modal--animated', className, {
+    const classes = classnames('modal', 'modal--animated', className, {
       'has-entered': modalHasEntered,
     });
-
-    const underlayClass = classnames('underlay', {
-      'has-entered': modalHasEntered,
-    });
-
-    const contentClasses = classnames('modal__content', contentClassName);
 
     return (
       <AriaModal
@@ -68,15 +62,17 @@ export default class Modal extends Component {
         onExit={this.handleExit}
         titleText={title}
         underlayColor={false}
-        underlayClass={underlayClass}
+        underlayClass={classnames('underlay', {
+          'has-entered': modalHasEntered,
+        })}
         underlayClickExits={underlayClickExits}
         verticallyCenter
       >
-        <div className={modalClasses}>
+        <div className={classes}>
           <button className="modal__close-button" onClick={this.handleExit}>
             <MaterialIcon icon="close" />
           </button>
-          <div className={contentClasses}>{children}</div>
+          <div className={classnames('modal__content', contentClassName)}>{children}</div>
         </div>
 
         <style jsx>{modal}</style>

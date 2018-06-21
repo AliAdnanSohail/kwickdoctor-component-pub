@@ -15,6 +15,10 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
+var _classnames = require('classnames');
+
+var _classnames2 = _interopRequireDefault(_classnames);
+
 var _propTypes = require('prop-types');
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
@@ -46,6 +50,7 @@ var VideoPlayer = function (_Component) {
     key: 'render',
     value: function render() {
       var _props = this.props,
+          containerClassName = _props.containerClassName,
           muted = _props.muted,
           src = _props.src;
 
@@ -53,7 +58,7 @@ var VideoPlayer = function (_Component) {
       return _react2.default.createElement(
         'div',
         {
-          className: 'jsx-' + _styles2.default.__scopedHash + ' ' + 'video-player-container'
+          className: 'jsx-' + _styles2.default.__scopedHash + ' ' + ((0, _classnames2.default)('video-player-container', containerClassName) || '')
         },
         _react2.default.createElement(
           _videoReact.Player,
@@ -93,10 +98,12 @@ exports.default = VideoPlayer;
 
 
 VideoPlayer.propTypes = {
+  containerClassName: _propTypes2.default.string,
   muted: _propTypes2.default.bool,
   src: _propTypes2.default.string.isRequired
 };
 
 VideoPlayer.defaultProps = {
+  containerClassName: '',
   muted: false
 };

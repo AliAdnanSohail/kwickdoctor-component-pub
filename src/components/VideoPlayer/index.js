@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import {
   BigPlayButton,
@@ -17,10 +18,10 @@ import styles, { videoPlayer } from './styles';
 
 export default class VideoPlayer extends Component {
   render() {
-    const { muted, src } = this.props;
+    const { containerClassName, muted, src } = this.props;
 
     return (
-      <div className="video-player-container">
+      <div className={classnames('video-player-container', containerClassName)}>
         <Player playsInline fluid muted={muted} className="video-player">
           <source src={src} />
           <ControlBar className="video-player__control-bar">
@@ -44,10 +45,12 @@ export default class VideoPlayer extends Component {
 }
 
 VideoPlayer.propTypes = {
+  containerClassName: PropTypes.string,
   muted: PropTypes.bool,
   src: PropTypes.string.isRequired,
 };
 
 VideoPlayer.defaultProps = {
+  containerClassName: '',
   muted: false,
 };

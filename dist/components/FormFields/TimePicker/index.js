@@ -61,10 +61,6 @@ var TimePicker = function (_Component) {
       hours: [].concat(_toConsumableArray(Array(24).keys())),
       minutes: [].concat(_toConsumableArray(Array(60).keys()))
     };
-
-    _this.classnames = (0, _classnames2.default)({
-      select__option_selected: true
-    });
     return _this;
   }
 
@@ -312,12 +308,11 @@ var TimePicker = function (_Component) {
           title = _props.title,
           onChange = _props.onChange;
 
-      var classes = (0, _classnames2.default)('time-picker');
 
       return _react2.default.createElement(
         'section',
         {
-          className: 'jsx-' + _styles2.default.__scopedHash + ' ' + (classes || '')
+          className: 'jsx-' + _styles2.default.__scopedHash + ' ' + 'time-picker'
         },
         _react2.default.createElement(
           'div',

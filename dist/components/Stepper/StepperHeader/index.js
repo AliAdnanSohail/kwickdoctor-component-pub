@@ -62,7 +62,12 @@ var StepperHeader = function (_Component) {
       return [].concat(_toConsumableArray(Array(total).keys())).map(function (index) {
         var completed = active > index;
 
-        var classes = (0, _classnames2.default)('step-icon', { 'step-icon--completed': completed }, { 'step-icon--current': active === index }, { 'step-icon--last': index === total - 1 }, { 'step-icon--next': active < index });
+        var classes = (0, _classnames2.default)('step-icon', {
+          'step-icon--completed': completed,
+          'step-icon--current': active === index,
+          'step-icon--last': index === total - 1,
+          'step-icon--next': active < index
+        });
 
         return _react2.default.createElement(
           'li',

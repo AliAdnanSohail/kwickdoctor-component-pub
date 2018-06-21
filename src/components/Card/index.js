@@ -8,10 +8,8 @@ export default class Card extends Component {
   render() {
     const { children, className } = this.props;
 
-    const classes = classnames('card', className);
-
     return (
-      <div className={classes}>
+      <div className={classnames('card', className)}>
         {children}
 
         <style jsx>{styles}</style>

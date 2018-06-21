@@ -10,10 +10,8 @@ export default class Navigation extends Component {
       children, className, before, after,
     } = this.props;
 
-    const classes = classnames('nav', className);
-
     return (
-      <nav className={classes}>
+      <nav className={classnames('nav', className)}>
         {before}
         <ul className="nav__list">{children}</ul>
         {after}

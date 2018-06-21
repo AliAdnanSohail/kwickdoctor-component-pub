@@ -12,13 +12,12 @@ export default class StepperHeader extends Component {
     return [...Array(total).keys()].map((index) => {
       const completed = active > index;
 
-      const classes = classnames(
-        'step-icon',
-        { 'step-icon--completed': completed },
-        { 'step-icon--current': active === index },
-        { 'step-icon--last': index === total - 1 },
-        { 'step-icon--next': active < index },
-      );
+      const classes = classnames('step-icon', {
+        'step-icon--completed': completed,
+        'step-icon--current': active === index,
+        'step-icon--last': index === total - 1,
+        'step-icon--next': active < index,
+      });
 
       return (
         <li key={index} className={classes}>

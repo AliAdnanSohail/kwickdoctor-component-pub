@@ -74,7 +74,7 @@ var Notification = function (_Component) {
           onDelete = _props.onDelete;
 
 
-      var dotClasses = (0, _classnames2.default)('notification__dot', {
+      var сlasses = (0, _classnames2.default)('notification__dot', {
         'notification__dot--primary': primary,
         'notification__dot--read': read
       });
@@ -95,7 +95,7 @@ var Notification = function (_Component) {
             className: 'jsx-' + _styles.notification.__scopedHash + ' jsx-' + _styles.notificationCard.__scopedHash + ' ' + 'notification__message'
           },
           _react2.default.createElement('span', {
-            className: 'jsx-' + _styles.notification.__scopedHash + ' jsx-' + _styles.notificationCard.__scopedHash + ' ' + (dotClasses || '')
+            className: 'jsx-' + _styles.notification.__scopedHash + ' jsx-' + _styles.notificationCard.__scopedHash + ' ' + (сlasses || '')
           }),
           message
         ),

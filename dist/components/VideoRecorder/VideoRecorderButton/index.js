@@ -52,11 +52,9 @@ var VideoRecorderButton = function (_Component) {
           state = _props.state;
 
 
-      var classes = (0, _classnames2.default)('record-button', 'record-button--' + state);
-
       return _react2.default.createElement(
         'button',
-        { onClick: onClick, className: 'jsx-' + _styles2.default.__scopedHash + ' ' + (classes || '')
+        { onClick: onClick, className: 'jsx-' + _styles2.default.__scopedHash + ' ' + ((0, _classnames2.default)('record-button', 'record-button--' + state) || '')
         },
         _react2.default.createElement(_style2.default, {
           styleId: _styles2.default.__scopedHash,

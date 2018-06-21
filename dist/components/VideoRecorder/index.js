@@ -188,6 +188,7 @@ var VideoRecorder = function (_Component) {
     _this.renderRecorder = function () {
       var countingdown = _this.state.countingdown;
 
+
       return _react2.default.createElement(
         _react.Fragment,
         null,

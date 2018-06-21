@@ -56,6 +56,7 @@ var RadioButtonGroup = function (_Component) {
       var _props = this.props,
           containerClassName = _props.containerClassName,
           className = _props.className,
+          id = _props.id,
           input = _props.input,
           label = _props.label,
           meta = _props.meta,
@@ -90,13 +91,15 @@ var RadioButtonGroup = function (_Component) {
                 'radio-button--active': input.value === option.value
               });
 
+              var optionId = id + '-' + option.value;
+
               return _react2.default.createElement(
                 'label',
-                { key: option.value, className: 'jsx-' + _styles4.default.__scopedHash + ' jsx-' + _styles3.label.__scopedHash + ' jsx-' + _styles3.error.__scopedHash + ' jsx-' + _styles3.fieldset.__scopedHash + ' jsx-' + _styles2.default.__scopedHash + ' ' + (classes || '')
+                { htmlFor: optionId, key: option.value, className: 'jsx-' + _styles4.default.__scopedHash + ' jsx-' + _styles3.label.__scopedHash + ' jsx-' + _styles3.error.__scopedHash + ' jsx-' + _styles3.fieldset.__scopedHash + ' jsx-' + _styles2.default.__scopedHash + ' ' + (classes || '')
                 },
                 option.label || option.value,
                 _react2.default.createElement('input', _extends({}, input, {
-                  defaultChecked: input.value === option.value,
+                  id: optionId,
                   name: name,
                   type: 'radio',
                   value: option.value,

@@ -89,10 +89,14 @@ export default class AvatarPicker extends Component {
     };
 
     const isSelected = avatar && (avatar instanceof Blob || avatar.name);
-    const classes = classnames('avatar', className);
 
     return (
-      <label aria-label="Edit image" className={classes} htmlFor={id} style={styles}>
+      <label
+        aria-label="Edit image"
+        className={classnames('avatar', className)}
+        htmlFor={id}
+        style={styles}
+      >
         {isSelected && (
           <div className="avatar__button">
             <Button

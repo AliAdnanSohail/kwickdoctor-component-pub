@@ -21,10 +21,6 @@ export default class TimePicker extends Component {
       hours: [...Array(24).keys()],
       minutes: [...Array(60).keys()],
     };
-
-    this.classnames = classnames({
-      select__option_selected: true,
-    });
   }
 
   changeTime() {
@@ -169,10 +165,9 @@ export default class TimePicker extends Component {
 
   render() {
     const { title, onChange } = this.props;
-    const classes = classnames('time-picker');
 
     return (
-      <section className={classes}>
+      <section className="time-picker">
         <div className="time-picker__wrapper">
           <div className="time-picker__title">{title}</div>
           <div

@@ -84,7 +84,8 @@ var Button = function (_Component) {
   }, {
     key: 'render',
     value: function render() {
-      var _this2 = this;
+      var _classnames,
+          _this2 = this;
 
       var _props = this.props,
           accent = _props.accent,
@@ -106,7 +107,8 @@ var Button = function (_Component) {
           clicked = _state.clicked;
 
 
-      var classes = (0, _classnames3.default)('button', className, _defineProperty({}, 'button--' + size, size), { 'button--accent': accent }, { 'button--danger': danger }, { 'button--disabled': disabled }, { 'button--flat': flat }, { 'button--with-icon': icon || loading }, { 'button--rounded': rounded }, { 'button--squared': squared }, { 'button--transparent': transparent }, { 'has-clicked': clicked });
+      var classes = (0, _classnames3.default)('button', className, (_classnames = {}, _defineProperty(_classnames, 'button--' + size, size), _defineProperty(_classnames, 'button--accent', accent), _defineProperty(_classnames, 'button--danger', danger), _defineProperty(_classnames, 'button--disabled', disabled), _defineProperty(_classnames, 'button--flat', flat), _defineProperty(_classnames, 'button--with-icon', icon || loading), _defineProperty(_classnames, 'button--rounded', rounded), _defineProperty(_classnames, 'button--squared', squared), _defineProperty(_classnames, 'button--transparent', transparent), _defineProperty(_classnames, 'has-clicked', clicked), _classnames));
+
       return _react2.default.createElement(
         'button',
         {

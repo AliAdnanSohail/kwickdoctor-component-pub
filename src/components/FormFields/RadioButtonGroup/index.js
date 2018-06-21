@@ -8,7 +8,7 @@ import styles, { label as labelStyles, error as errorStyles, fieldset } from '..
 export default class RadioButtonGroup extends Component {
   render() {
     const {
-      containerClassName, className, input, label, meta, name, options,
+      containerClassName, className, id, input, label, meta, name, options,
     } = this.props;
 
     return (
@@ -22,14 +22,16 @@ export default class RadioButtonGroup extends Component {
                 'radio-button--active': input.value === option.value,
               });
 
+              const optionId = `${id}-${option.value}`;
+
               return (
-                <label key={option.value} className={classes}>
+                <label className={classes} htmlFor={optionId} key={option.value}>
                   {option.label || option.value}
 
                   <input
                     {...input}
                     className={className}
-                    defaultChecked={input.value === option.value}
+                    id={optionId}
                     name={name}
                     type="radio"
                     value={option.value}

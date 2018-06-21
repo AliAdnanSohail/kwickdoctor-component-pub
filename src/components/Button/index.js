@@ -58,20 +58,19 @@ export default class Button extends Component {
 
     const { top, left, clicked } = this.state;
 
-    const classes = classnames(
-      'button',
-      className,
-      { [`button--${size}`]: size },
-      { 'button--accent': accent },
-      { 'button--danger': danger },
-      { 'button--disabled': disabled },
-      { 'button--flat': flat },
-      { 'button--with-icon': icon || loading },
-      { 'button--rounded': rounded },
-      { 'button--squared': squared },
-      { 'button--transparent': transparent },
-      { 'has-clicked': clicked },
-    );
+    const classes = classnames('button', className, {
+      [`button--${size}`]: size,
+      'button--accent': accent,
+      'button--danger': danger,
+      'button--disabled': disabled,
+      'button--flat': flat,
+      'button--with-icon': icon || loading,
+      'button--rounded': rounded,
+      'button--squared': squared,
+      'button--transparent': transparent,
+      'has-clicked': clicked,
+    });
+
     return (
       <button
         type={type}

@@ -132,7 +132,6 @@ var Autocomplete = function (_Component) {
           _this.setState({
             value: '',
             values: _this.state.values.concat([value])
-
           });
         } else {
           _this.setState({
@@ -231,7 +230,6 @@ var Autocomplete = function (_Component) {
           value = _state.value;
 
 
-      var containerClasses = (0, _classnames2.default)('form-field', containerClassName);
       var classes = (0, _classnames2.default)('autocomplete', {
         invalid: meta && meta.error && meta.touched,
         active: meta && meta.active,
@@ -241,7 +239,7 @@ var Autocomplete = function (_Component) {
       return _react2.default.createElement(
         'div',
         {
-          className: 'jsx-' + _styles4.default.__scopedHash + ' jsx-' + _styles3.label.__scopedHash + ' jsx-' + _styles3.error.__scopedHash + ' ' + (containerClasses || '')
+          className: 'jsx-' + _styles4.default.__scopedHash + ' jsx-' + _styles3.label.__scopedHash + ' jsx-' + _styles3.error.__scopedHash + ' ' + ((0, _classnames2.default)('form-field', containerClassName) || '')
         },
         _react2.default.createElement(
           'label',

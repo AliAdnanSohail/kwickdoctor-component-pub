@@ -55,6 +55,8 @@ var LinkButton = function (_Component) {
   _createClass(LinkButton, [{
     key: 'render',
     value: function render() {
+      var _classnames;
+
       var _props = this.props,
           accent = _props.accent,
           className = _props.className,
@@ -69,7 +71,7 @@ var LinkButton = function (_Component) {
           transparent = _props.transparent;
 
 
-      var classes = (0, _classnames3.default)('button', className, _defineProperty({}, 'button--' + size, size), { 'button--accent': accent }, { 'button--danger': danger }, { 'button--flat': flat }, { 'button--with-icon': icon }, { 'button--rounded': rounded }, { 'button--squared': squared }, { 'button--transparent': transparent });
+      var classes = (0, _classnames3.default)('button', className, (_classnames = {}, _defineProperty(_classnames, 'button--' + size, size), _defineProperty(_classnames, 'button--accent', accent), _defineProperty(_classnames, 'button--danger', danger), _defineProperty(_classnames, 'button--flat', flat), _defineProperty(_classnames, 'button--with-icon', icon), _defineProperty(_classnames, 'button--rounded', rounded), _defineProperty(_classnames, 'button--squared', squared), _defineProperty(_classnames, 'button--transparent', transparent), _classnames));
 
       return _react2.default.createElement(
         _reactRouterDom.NavLink,

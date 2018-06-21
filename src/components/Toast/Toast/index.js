@@ -70,14 +70,12 @@ export default class Toast extends Component {
   render() {
     const { primary, boxstyle, content } = this.props;
 
-    const classes = classnames('toast-box', { primary }, boxstyle);
-
     return (
       <div
         ref={(div) => {
           this.element = div;
         }}
-        className={classes}
+        className={classnames('toast-box', { primary }, boxstyle)}
       >
         <div className="circle" />
         <div className="message">{content}</div>

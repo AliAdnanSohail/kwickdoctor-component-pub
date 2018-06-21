@@ -87,7 +87,6 @@ export default class Autocomplete extends Component {
         this.setState({
           value: '',
           values: this.state.values.concat([value]),
-
         });
       } else {
         this.setState({
@@ -145,7 +144,6 @@ export default class Autocomplete extends Component {
     } = this.props;
     const { focused, filteredSuggestions, value } = this.state;
 
-    const containerClasses = classnames('form-field', containerClassName);
     const classes = classnames('autocomplete', {
       invalid: meta && meta.error && meta.touched,
       active: meta && meta.active,
@@ -153,7 +151,7 @@ export default class Autocomplete extends Component {
     });
 
     return (
-      <div className={containerClasses}>
+      <div className={classnames('form-field', containerClassName)}>
         <label htmlFor={id}>{label}</label>
 
         <div

@@ -17,11 +17,12 @@ exports[`renders correctly 1`] = `
     >
       <label
         className="jsx-1685083184 jsx-4038665278 jsx-2062352977 jsx-904933394 jsx-2140168082 radio-button"
+        htmlFor="gender-male"
       >
         male
         <input
           className="jsx-1685083184 jsx-4038665278 jsx-2062352977 jsx-904933394 jsx-2140168082 "
-          defaultChecked={false}
+          id="gender-male"
           name="gender"
           type="radio"
           value="male"
@@ -29,11 +30,12 @@ exports[`renders correctly 1`] = `
       </label>
       <label
         className="jsx-1685083184 jsx-4038665278 jsx-2062352977 jsx-904933394 jsx-2140168082 radio-button"
+        htmlFor="gender-female"
       >
         female
         <input
           className="jsx-1685083184 jsx-4038665278 jsx-2062352977 jsx-904933394 jsx-2140168082 "
-          defaultChecked={false}
+          id="gender-female"
           name="gender"
           type="radio"
           value="female"

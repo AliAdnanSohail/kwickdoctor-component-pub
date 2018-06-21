@@ -188,6 +188,7 @@ export default class VideoRecorder extends Component {
 
   renderRecorder = () => {
     const { countingdown } = this.state;
+
     return (
       <Fragment>
         {/* eslint-disable-next-line */}

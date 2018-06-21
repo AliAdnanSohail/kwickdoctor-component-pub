@@ -123,15 +123,13 @@ var Toast = function (_Component) {
           content = _props.content;
 
 
-      var classes = (0, _classnames2.default)('toast-box', { primary: primary }, boxstyle);
-
       return _react2.default.createElement(
         'div',
         {
           ref: function ref(div) {
             _this2.element = div;
           },
-          className: classes
+          className: (0, _classnames2.default)('toast-box', { primary: primary }, boxstyle)
         },
         _react2.default.createElement('div', { className: 'circle' }),
         _react2.default.createElement(

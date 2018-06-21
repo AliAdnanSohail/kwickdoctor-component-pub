@@ -148,11 +148,15 @@ var AvatarPicker = function (_Component) {
       };
 
       var isSelected = avatar && (avatar instanceof Blob || avatar.name);
-      var classes = (0, _classnames2.default)('avatar', className);
 
       return _react2.default.createElement(
         'label',
-        { 'aria-label': 'Edit image', htmlFor: id, style: styles, className: 'jsx-' + _styles.avatar.__scopedHash + ' jsx-' + _styles.fileInput.__scopedHash + ' ' + (classes || '')
+        {
+          'aria-label': 'Edit image',
+
+          htmlFor: id,
+          style: styles,
+          className: 'jsx-' + _styles.avatar.__scopedHash + ' jsx-' + _styles.fileInput.__scopedHash + ' ' + ((0, _classnames2.default)('avatar', className) || '')
         },
         isSelected && _react2.default.createElement(
           'div',

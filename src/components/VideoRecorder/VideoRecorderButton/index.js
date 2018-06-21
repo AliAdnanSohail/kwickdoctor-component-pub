@@ -8,10 +8,8 @@ export default class VideoRecorderButton extends Component {
   render() {
     const { onClick, state } = this.props;
 
-    const classes = classnames('record-button', `record-button--${state}`);
-
     return (
-      <button onClick={onClick} className={classes}>
+      <button onClick={onClick} className={classnames('record-button', `record-button--${state}`)}>
         <style jsx>{styles}</style>
       </button>
     );

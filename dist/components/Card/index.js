@@ -52,12 +52,10 @@ var Card = function (_Component) {
           className = _props.className;
 
 
-      var classes = (0, _classnames2.default)('card', className);
-
       return _react2.default.createElement(
         'div',
         {
-          className: 'jsx-' + _styles2.default.__scopedHash + ' ' + (classes || '')
+          className: 'jsx-' + _styles2.default.__scopedHash + ' ' + ((0, _classnames2.default)('card', className) || '')
         },
         children,
         _react2.default.createElement(_style2.default, {

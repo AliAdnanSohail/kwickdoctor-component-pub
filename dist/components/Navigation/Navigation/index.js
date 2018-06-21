@@ -54,12 +54,10 @@ var Navigation = function (_Component) {
           after = _props.after;
 
 
-      var classes = (0, _classnames2.default)('nav', className);
-
       return _react2.default.createElement(
         'nav',
         {
-          className: 'jsx-' + _styles2.default.__scopedHash + ' ' + (classes || '')
+          className: 'jsx-' + _styles2.default.__scopedHash + ' ' + ((0, _classnames2.default)('nav', className) || '')
         },
         before,
         _react2.default.createElement(

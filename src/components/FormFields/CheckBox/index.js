@@ -10,23 +10,12 @@ const CheckBox = ({
   input, meta, className, id, name, label,
 }) => (
   <div className={classnames('checkbox', className)}>
-    <label
-      htmlFor={id}
-      className={classnames('label', input.value && 'checked')}
-    >
-      {
-        input.value &&
-        <MaterialIcon icon="check" color="#ffffff" size={20} />
-      }
+    <label className={classnames('label', input.value && 'checked')} htmlFor={id}>
+      {input.value && <MaterialIcon icon="check" color="#ffffff" size={20} />}
       {label}
     </label>
 
-    <input
-      {...input}
-      id={id}
-      name={name}
-      type="checkbox"
-    />
+    <input {...input} id={id} name={name} type="checkbox" />
 
     {meta && meta.error && meta.touched && <div className="error">{meta.error}</div>}
 

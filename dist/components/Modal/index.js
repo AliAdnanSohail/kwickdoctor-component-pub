@@ -95,15 +95,9 @@ var Modal = function (_Component) {
           modalHasEntered = _state.modalHasEntered;
 
 
-      var modalClasses = (0, _classnames2.default)('modal', 'modal--animated', className, {
+      var classes = (0, _classnames2.default)('modal', 'modal--animated', className, {
         'has-entered': modalHasEntered
       });
-
-      var underlayClass = (0, _classnames2.default)('underlay', {
-        'has-entered': modalHasEntered
-      });
-
-      var contentClasses = (0, _classnames2.default)('modal__content', contentClassName);
 
       return _react2.default.createElement(
         _reactAriaModal2.default,
@@ -118,14 +112,16 @@ var Modal = function (_Component) {
           onExit: this.handleExit,
           titleText: title,
           underlayColor: false,
-          underlayClass: underlayClass,
+          underlayClass: (0, _classnames2.default)('underlay', {
+            'has-entered': modalHasEntered
+          }),
           underlayClickExits: underlayClickExits,
           verticallyCenter: true
         },
         _react2.default.createElement(
           'div',
           {
-            className: 'jsx-' + _styles.modal.__scopedHash + ' ' + (modalClasses || '')
+            className: 'jsx-' + _styles.modal.__scopedHash + ' ' + (classes || '')
           },
           _react2.default.createElement(
             'button',
@@ -136,7 +132,7 @@ var Modal = function (_Component) {
           _react2.default.createElement(
             'div',
             {
-              className: 'jsx-' + _styles.modal.__scopedHash + ' ' + (contentClasses || '')
+              className: 'jsx-' + _styles.modal.__scopedHash + ' ' + ((0, _classnames2.default)('modal__content', contentClassName) || '')
             },
             children
           )

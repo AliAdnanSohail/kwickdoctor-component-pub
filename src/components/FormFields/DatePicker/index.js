@@ -43,12 +43,12 @@ export default class DatePicker extends Component {
 
     const { value } = this.state;
 
-    const blockClasses = classnames('form-field', containerClassName, {
+    const classes = classnames('form-field', containerClassName, {
       'has-error': !!meta.error,
     });
 
     return (
-      <div className={blockClasses}>
+      <div className={classes}>
         <label htmlFor={id}>{label}</label>
 
         <ReactDatePicker

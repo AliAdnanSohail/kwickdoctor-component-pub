@@ -74,13 +74,13 @@ var DatePicker = function (_Component) {
       var value = this.state.value;
 
 
-      var blockClasses = (0, _classnames2.default)('form-field', containerClassName, {
+      var classes = (0, _classnames2.default)('form-field', containerClassName, {
         'has-error': !!meta.error
       });
 
       return _react2.default.createElement(
         'div',
-        { className: blockClasses },
+        { className: classes },
         _react2.default.createElement(
           'label',
           { htmlFor: id },
