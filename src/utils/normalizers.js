@@ -20,14 +20,14 @@ const date = (value) => {
     const year = result.slice(0, 4);
     const month = result.slice(4, 6);
 
-    return `${year}/${month <= 12 ? month : 12}`;
+    return `${year}-${month <= 12 ? month : 12}`;
   }
 
   const year = result.slice(0, 4);
   const month = result.slice(4, 6);
   const day = result.slice(6, 8);
 
-  return `${year}/${month <= 12 ? month : 12}/${day <= 31 ? day : 31}`;
+  return `${year}-${month <= 12 ? month : 12}-${day <= 31 ? day : 31}`;
 };
 
 /**
