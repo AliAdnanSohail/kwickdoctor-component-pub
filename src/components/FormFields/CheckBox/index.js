@@ -15,7 +15,13 @@ const CheckBox = ({
       {label}
     </label>
 
-    <input {...input} id={id} name={name} type="checkbox" />
+    <input
+      {...input}
+      id={id}
+      name={name}
+      type="checkbox"
+      checked={input.value}
+    />
 
     {meta && meta.error && meta.touched && <div className="error">{meta.error}</div>}
 

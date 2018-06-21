@@ -53,7 +53,12 @@ var CheckBox = function CheckBox(_ref) {
       input.value && _react2.default.createElement(_materialIconsReact2.default, { icon: 'check', color: '#ffffff', size: 20 }),
       label
     ),
-    _react2.default.createElement('input', _extends({}, input, { id: id, name: name, type: 'checkbox', className: 'jsx-' + _styles2.default.__scopedHash + ' jsx-' + _styles3.error.__scopedHash + ' ' + (input.className != null && input.className || '')
+    _react2.default.createElement('input', _extends({}, input, {
+      id: id,
+      name: name,
+      type: 'checkbox',
+      checked: input.value,
+      className: 'jsx-' + _styles2.default.__scopedHash + ' jsx-' + _styles3.error.__scopedHash + ' ' + (input.className != null && input.className || '')
     })),
     meta && meta.error && meta.touched && _react2.default.createElement(
       'div',
