@@ -17,22 +17,22 @@ var date = function date(value) {
 
   var result = value.replace(/[^\d]/g, '');
 
-  if (result.length <= 2) {
-    return result <= 31 ? result : 31;
+  if (result.length <= 4) {
+    return result;
   }
 
   if (result.length <= 4) {
-    var _day = result.slice(0, 2);
-    var _month = result.slice(2, 4);
+    var _year = result.slice(0, 4);
+    var _month = result.slice(4, 6);
 
-    return (_day <= 31 ? _day : 31) + '/' + (_month <= 12 ? _month : 12);
+    return _year + '/' + (_month <= 12 ? _month : 12);
   }
 
-  var day = result.slice(0, 2);
-  var month = result.slice(2, 4);
-  var year = result.slice(4, 8);
+  var year = result.slice(0, 4);
+  var month = result.slice(4, 6);
+  var day = result.slice(6, 8);
 
-  return (day <= 31 ? day : 31) + '/' + (month <= 12 ? month : 12) + '/' + year;
+  return year + '/' + (month <= 12 ? month : 12) + '/' + (day <= 31 ? day : 31);
 };
 
 /**

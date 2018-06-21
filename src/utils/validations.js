@@ -8,7 +8,7 @@ import moment from 'moment';
  * @return {String|undefined} [description]
  */
 const date = value =>
-  (moment(value, 'DD-MM-YYYY').isValid()
+  (moment(value, 'YYYY-MM-DD').isValid()
     ? undefined
     : 'This doesn’t look like a valid date. Check up, please!');
 
