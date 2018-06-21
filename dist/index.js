@@ -16,6 +16,15 @@ Object.keys(_components).forEach(function (key) {
   });
 });
 
+var _normalizers = require('./utils/normalizers');
+
+Object.defineProperty(exports, 'Normalize', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_normalizers).default;
+  }
+});
+
 var _validations = require('./utils/validations');
 
 Object.defineProperty(exports, 'Validate', {
