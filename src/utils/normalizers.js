@@ -44,7 +44,7 @@ const phone = (value) => {
 
   const result = value.replace(/[^(\d|+)]/g, '');
 
-  if (result.length <= 3) {
+  if (result.length <= 4) {
     if (result[0] === '+') {
       return result;
     }

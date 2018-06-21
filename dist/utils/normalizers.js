@@ -49,7 +49,7 @@ var phone = function phone(value) {
 
   var result = value.replace(/[^(\d|+)]/g, '');
 
-  if (result.length <= 3) {
+  if (result.length <= 4) {
     if (result[0] === '+') {
       return result;
     }
