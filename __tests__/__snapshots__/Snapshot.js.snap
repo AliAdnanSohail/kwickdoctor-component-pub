@@ -1173,7 +1173,6 @@ exports[`Storyshots Form Fields RadioButtonGroup 1`] = `
           <input
             className="jsx-1685083184 jsx-4038665278 jsx-2062352977 jsx-904933394 jsx-3585184402 "
             id="gender-male"
-            name="gender"
             onBlur={[Function]}
             onFocus={[Function]}
             type="radio"
@@ -1188,7 +1187,6 @@ exports[`Storyshots Form Fields RadioButtonGroup 1`] = `
           <input
             className="jsx-1685083184 jsx-4038665278 jsx-2062352977 jsx-904933394 jsx-3585184402 "
             id="gender-female"
-            name="gender"
             onBlur={[Function]}
             onFocus={[Function]}
             type="radio"

@@ -32,7 +32,6 @@ export default class RadioButtonGroup extends Component {
                     {...input}
                     className={className}
                     id={optionId}
-                    name={name}
                     onBlur={() => {}}
                     onFocus={() => {}}
                     type="radio"

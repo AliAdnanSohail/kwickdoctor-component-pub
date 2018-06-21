@@ -100,7 +100,6 @@ var RadioButtonGroup = function (_Component) {
                 option.label || option.value,
                 _react2.default.createElement('input', _extends({}, input, {
                   id: optionId,
-                  name: name,
                   onBlur: function onBlur() {},
                   onFocus: function onFocus() {},
                   type: 'radio',
