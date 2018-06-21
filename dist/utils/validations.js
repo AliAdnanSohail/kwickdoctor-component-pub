@@ -4,8 +4,6 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
-
 var _moment = require('moment');
 
 var _moment2 = _interopRequireDefault(_moment);
@@ -13,18 +11,18 @@ var _moment2 = _interopRequireDefault(_moment);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 /**
- * Returns error message if the value is incorrect date and null if it's ok
+ * Returns error message if the value is incorrect date and undefined if it's ok
  *
  * @param {String|moment|Date} value Value of input for validation
  *
- * @return {String|Null} [description]
+ * @return {String|undefined} [description]
  */
 var date = function date(value) {
-  return (0, _moment2.default)(value).isValid() ? undefined : 'This doesn’t look like a valid date. Check up, please!';
+  return (0, _moment2.default)(value, 'DD-MM-YYYY').isValid() ? undefined : 'This doesn’t look like a valid date. Check up, please!';
 };
 
 /**
- * Returns error message if the value is incorrect email address and null if it's ok
+ * Returns error message if the value is incorrect email address and undefined if it's ok
  *
  * @param {String} value Value of input for validation
  *
@@ -50,6 +48,22 @@ var equals = function equals(targetValue, name) {
 };
 
 /**
+ * Returns error message if file's type isn't compatible
+ *
+ * @param {Array} types Array of valid types
+ *
+ * @param {Object} value File for validation
+ *
+ * @return {String|Null} [description]
+ */
+var fileType = function fileType() {
+  var types = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : [];
+  return function (file) {
+    return file && file.type && types.includes(file.type) ? undefined : 'This file\'s type should be one of valid types (' + types.join(', ') + ').';
+  };
+};
+
+/**
  * Returns error message if the value must be max characters or less
  *
  * @param {Number} max Max length of value
@@ -71,7 +85,7 @@ var maxLength = function maxLength(max) {
  *
  * @param {String|undefined} value Value of input for validation
  *
- * @return {String|Null} [description]
+ * @return {String|undefined} [description]
  */
 var minLength = function minLength(min) {
   return function (value) {
@@ -84,50 +98,46 @@ var minLength = function minLength(min) {
  *
  * @param {Number} value Value of input for validation
  *
- * @return {String|Null} [description]
+ * @return {String|undefined} [description]
  */
 var number = function number(value) {
   return value && Number.isNaN(Number(value)) ? 'This doesn’t look like a valid number. Check up, please!' : undefined;
 };
 
 /**
- * Returns error message if the value is empty and null if it's ok
+ * Returns error message if the value is incorrect phone number and undefined if it's ok
  *
- * @param {String|Number} value Value of input for validation
+ * @param {String} value Value of input for validation
  *
- * @return {String|Null} [description]
+ * @return {String|undefined} [description]
  */
-var required = function required(value) {
-  if ((typeof value === 'undefined' ? 'undefined' : _typeof(value)) === 'object') {
-    return value && typeof value.name === 'string' ? undefined : 'This field is required. Please complete this field.';
-  }
-
-  return value ? undefined : 'This field is required. Please complete this field.';
+var phone = function phone(value) {
+  return value && !/^[+]?[(]?[0-9]{1,3}[)]?[-s.]?[0-9]{3,4}[-s.]?[0-9]{6,7}$/i.test(value) ? 'This doesn’t look like a valid phone number. Please check your phone number.' : undefined;
 };
 
 /**
- * Returns error message if file's type isn't compatible
+ * Returns error message if the value is empty and undefined if it's ok
  *
- * @param {Array} types Array of valid types
+ * @param {String|Number} value Value of input for validation
  *
- * @param {Object} value File for validation
- *
- * @return {String|Null} [description]
+ * @return {String|undefined} [description]
  */
-var fileType = function fileType() {
-  var types = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : [];
-  return function (file) {
-    return file && file.type && types.includes(file.type) ? undefined : 'This file\'s type should be one of valid types (' + types.join(', ') + ').';
-  };
+var required = function required(value) {
+  if (Array.isArray(value)) {
+    return value.length > 0 ? undefined : 'This field is required. Please complete the field.';
+  }
+
+  return value ? undefined : 'This field is required. Please complete the field.';
 };
 
 exports.default = {
   date: date,
   email: email,
   equals: equals,
+  fileType: fileType,
   maxLength: maxLength,
   minLength: minLength,
   number: number,
-  required: required,
-  fileType: fileType
+  phone: phone,
+  required: required
 };

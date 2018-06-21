@@ -1,17 +1,19 @@
 import moment from 'moment';
 
 /**
- * Returns error message if the value is incorrect date and null if it's ok
+ * Returns error message if the value is incorrect date and undefined if it's ok
  *
  * @param {String|moment|Date} value Value of input for validation
  *
- * @return {String|Null} [description]
+ * @return {String|undefined} [description]
  */
 const date = value =>
-  (moment(value).isValid() ? undefined : 'This doesn’t look like a valid date. Check up, please!');
+  (moment(value, 'DD-MM-YYYY').isValid()
+    ? undefined
+    : 'This doesn’t look like a valid date. Check up, please!');
 
 /**
- * Returns error message if the value is incorrect email address and null if it's ok
+ * Returns error message if the value is incorrect email address and undefined if it's ok
  *
  * @param {String} value Value of input for validation
  *
@@ -37,6 +39,20 @@ const equals = (targetValue, name) => value =>
     : `This doesn’t look like value match with ${name}. Check up, please!`);
 
 /**
+ * Returns error message if file's type isn't compatible
+ *
+ * @param {Array} types Array of valid types
+ *
+ * @param {Object} value File for validation
+ *
+ * @return {String|Null} [description]
+ */
+const fileType = (types = []) => file =>
+  (file && file.type && types.includes(file.type)
+    ? undefined
+    : `This file's type should be one of valid types (${types.join(', ')}).`);
+
+/**
  * Returns error message if the value must be max characters or less
  *
  * @param {Number} max Max length of value
@@ -57,7 +73,7 @@ const maxLength = max => value =>
  *
  * @param {String|undefined} value Value of input for validation
  *
- * @return {String|Null} [description]
+ * @return {String|undefined} [description]
  */
 const minLength = min => value =>
   (value && value.length < min
@@ -69,7 +85,7 @@ const minLength = min => value =>
  *
  * @param {Number} value Value of input for validation
  *
- * @return {String|Null} [description]
+ * @return {String|undefined} [description]
  */
 const number = value =>
   (value && Number.isNaN(Number(value))
@@ -77,43 +93,40 @@ const number = value =>
     : undefined);
 
 /**
- * Returns error message if the value is empty and null if it's ok
+ * Returns error message if the value is incorrect phone number and undefined if it's ok
+ *
+ * @param {String} value Value of input for validation
+ *
+ * @return {String|undefined} [description]
+ */
+const phone = value =>
+  (value && !/^[+]?[(]?[0-9]{1,3}[)]?[-s.]?[0-9]{3,4}[-s.]?[0-9]{6,7}$/i.test(value)
+    ? 'This doesn’t look like a valid phone number. Please check your phone number.'
+    : undefined);
+
+/**
+ * Returns error message if the value is empty and undefined if it's ok
  *
  * @param {String|Number} value Value of input for validation
  *
- * @return {String|Null} [description]
+ * @return {String|undefined} [description]
  */
 const required = (value) => {
-  if (typeof value === 'object') {
-    return value && typeof value.name === 'string'
-      ? undefined
-      : 'This field is required. Please complete this field.';
+  if (Array.isArray(value)) {
+    return value.length > 0 ? undefined : 'This field is required. Please complete the field.';
   }
 
-  return value ? undefined : 'This field is required. Please complete this field.';
+  return value ? undefined : 'This field is required. Please complete the field.';
 };
-
-/**
- * Returns error message if file's type isn't compatible
- *
- * @param {Array} types Array of valid types
- *
- * @param {Object} value File for validation
- *
- * @return {String|Null} [description]
- */
-const fileType = (types = []) => file =>
-  (file && file.type && types.includes(file.type)
-    ? undefined
-    : `This file's type should be one of valid types (${types.join(', ')}).`);
 
 export default {
   date,
   email,
   equals,
+  fileType,
   maxLength,
   minLength,
   number,
+  phone,
   required,
-  fileType,
 };
