@@ -21,7 +21,7 @@ var date = function date(value) {
     return result;
   }
 
-  if (result.length <= 4) {
+  if (result.length <= 6) {
     var _year = result.slice(0, 4);
     var _month = result.slice(4, 6);
 
