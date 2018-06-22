@@ -977,7 +977,6 @@ exports[`Storyshots Form Fields CheckBox 1`] = `
       checked={false}
       className="jsx-13877655 jsx-2062352977 "
       id="input"
-      name="Name"
       type="checkbox"
       value={false}
     />

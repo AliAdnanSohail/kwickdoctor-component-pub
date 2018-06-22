@@ -35,12 +35,11 @@ var _styles3 = require('../styles');
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var CheckBox = function CheckBox(_ref) {
-  var input = _ref.input,
-      meta = _ref.meta,
-      className = _ref.className,
+  var className = _ref.className,
       id = _ref.id,
-      name = _ref.name,
-      label = _ref.label;
+      input = _ref.input,
+      label = _ref.label,
+      meta = _ref.meta;
   return _react2.default.createElement(
     'div',
     {
@@ -53,12 +52,7 @@ var CheckBox = function CheckBox(_ref) {
       input.value && _react2.default.createElement(_materialIconsReact2.default, { icon: 'check', color: '#ffffff', size: 20 }),
       label
     ),
-    _react2.default.createElement('input', _extends({}, input, {
-      id: id,
-      name: name,
-      type: 'checkbox',
-      checked: input.value,
-      className: 'jsx-' + _styles2.default.__scopedHash + ' jsx-' + _styles3.error.__scopedHash + ' ' + (input.className != null && input.className || '')
+    _react2.default.createElement('input', _extends({}, input, { id: id, checked: input.value, type: 'checkbox', className: 'jsx-' + _styles2.default.__scopedHash + ' jsx-' + _styles3.error.__scopedHash + ' ' + (input.className != null && input.className || '')
     })),
     meta && meta.error && meta.touched && _react2.default.createElement(
       'div',
@@ -83,8 +77,8 @@ CheckBox.propTypes = {
   id: _propTypes2.default.string.isRequired,
   input: _propTypes2.default.object,
   label: _propTypes2.default.string,
-  name: _propTypes2.default.string,
-  meta: _propTypes2.default.object
+  meta: _propTypes2.default.object,
+  name: _propTypes2.default.string
 };
 
 CheckBox.defaultProps = {
@@ -93,8 +87,8 @@ CheckBox.defaultProps = {
     value: false
   },
   label: undefined,
-  name: undefined,
-  meta: {}
+  meta: {},
+  name: undefined
 };
 
 exports.default = CheckBox;

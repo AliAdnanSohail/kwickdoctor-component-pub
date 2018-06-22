@@ -7,7 +7,7 @@ import styles from './styles';
 import { error as errorStyles } from '../styles';
 
 const CheckBox = ({
-  input, meta, className, id, name, label,
+  className, id, input, label, meta,
 }) => (
   <div className={classnames('checkbox', className)}>
     <label className={classnames('label', input.value && 'checked')} htmlFor={id}>
@@ -15,13 +15,7 @@ const CheckBox = ({
       {label}
     </label>
 
-    <input
-      {...input}
-      id={id}
-      name={name}
-      type="checkbox"
-      checked={input.value}
-    />
+    <input {...input} id={id} checked={input.value} type="checkbox" />
 
     {meta && meta.error && meta.touched && <div className="error">{meta.error}</div>}
 
@@ -35,8 +29,8 @@ CheckBox.propTypes = {
   id: PropTypes.string.isRequired,
   input: PropTypes.object,
   label: PropTypes.string,
-  name: PropTypes.string,
   meta: PropTypes.object,
+  name: PropTypes.string,
 };
 
 CheckBox.defaultProps = {
@@ -45,8 +39,8 @@ CheckBox.defaultProps = {
     value: false,
   },
   label: undefined,
-  name: undefined,
   meta: {},
+  name: undefined,
 };
 
 export default CheckBox;
