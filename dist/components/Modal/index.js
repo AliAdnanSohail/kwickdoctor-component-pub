@@ -160,7 +160,7 @@ Modal.propTypes = {
   active: _propTypes2.default.bool.isRequired,
   alert: _propTypes2.default.bool,
   children: _propTypes2.default.node,
-  className: _propTypes2.default.string,
+  className: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.array]),
   contentClassName: _propTypes2.default.string,
   escapeExits: _propTypes2.default.bool,
   onExit: _propTypes2.default.func.isRequired,
