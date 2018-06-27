@@ -19,7 +19,7 @@ import styles, { videoPlayer } from './styles';
 
 export default class VideoPlayer extends Component {
   render() {
-    const { containerClassName, muted, src, noVideoIconSize } = this.props;
+    const { containerClassName, muted, src } = this.props;
 
     return (
       <div className={classnames('video-player-container', containerClassName)}>
@@ -38,7 +38,7 @@ export default class VideoPlayer extends Component {
           <BigPlayButton position="center" className="video-player__big-play-button" order={2} />
         </Player>}
 
-        {!src && <MaterialIcon color="#BBBCCD" icon="videocam_off" size={noVideoIconSize} />}
+        {!src && <MaterialIcon color="#BBBCCD" icon="videocam_off" size={76} />}
 
         <style jsx>{styles}</style>
         <style>{videoPlayer}</style>

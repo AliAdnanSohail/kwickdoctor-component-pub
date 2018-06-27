@@ -56,8 +56,7 @@ var VideoPlayer = function (_Component) {
       var _props = this.props,
           containerClassName = _props.containerClassName,
           muted = _props.muted,
-          src = _props.src,
-          noVideoIconSize = _props.noVideoIconSize;
+          src = _props.src;
 
 
       return _react2.default.createElement(
@@ -83,7 +82,7 @@ var VideoPlayer = function (_Component) {
           ),
           _react2.default.createElement(_videoReact.BigPlayButton, { position: 'center', className: 'video-player__big-play-button', order: 2 })
         ),
-        !src && _react2.default.createElement(_materialIconsReact2.default, { color: '#BBBCCD', icon: 'videocam_off', size: noVideoIconSize }),
+        !src && _react2.default.createElement(_materialIconsReact2.default, { color: '#BBBCCD', icon: 'videocam_off', size: 76 }),
         _react2.default.createElement(_style2.default, {
           styleId: _styles2.default.__scopedHash,
           css: _styles2.default.__scoped
