@@ -86,7 +86,7 @@ Modal.propTypes = {
   active: PropTypes.bool.isRequired,
   alert: PropTypes.bool,
   children: PropTypes.node,
-  className: PropTypes.string,
+  className: PropTypes.oneOfType([PropTypes.string, PropTypes.array]),
   contentClassName: PropTypes.string,
   escapeExits: PropTypes.bool,
   onExit: PropTypes.func.isRequired,

@@ -12,22 +12,22 @@ const date = (value) => {
 
   const result = value.replace(/[^\d]/g, '');
 
-  if (result.length <= 4) {
+  if (result.length <= 2) {
     return result;
   }
 
-  if (result.length <= 6) {
-    const year = result.slice(0, 4);
-    const month = result.slice(4, 6);
+  if (result.length <= 4) {
+    const day = result.slice(0, 2);
+    const month = result.slice(2, 4);
 
-    return `${year}-${month <= 12 ? month : 12}`;
+    return `${day <= 31 ? day : 31}/${month <= 12 ? month : 12}`;
   }
 
-  const year = result.slice(0, 4);
-  const month = result.slice(4, 6);
-  const day = result.slice(6, 8);
+  const day = result.slice(0, 2);
+  const month = result.slice(2, 4);
+  const year = result.slice(4, 8);
 
-  return `${year}-${month <= 12 ? month : 12}-${day <= 31 ? day : 31}`;
+  return `${day <= 31 ? day : 31}/${month <= 12 ? month : 12}/${year}`;
 };
 
 /**
