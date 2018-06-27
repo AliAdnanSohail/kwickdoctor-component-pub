@@ -19,6 +19,10 @@ var _classnames = require('classnames');
 
 var _classnames2 = _interopRequireDefault(_classnames);
 
+var _materialIconsReact = require('material-icons-react');
+
+var _materialIconsReact2 = _interopRequireDefault(_materialIconsReact);
+
 var _propTypes = require('prop-types');
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
@@ -60,7 +64,7 @@ var VideoPlayer = function (_Component) {
         {
           className: 'jsx-' + _styles2.default.__scopedHash + ' ' + ((0, _classnames2.default)('video-player-container', containerClassName) || '')
         },
-        _react2.default.createElement(
+        src ? _react2.default.createElement(
           _videoReact.Player,
           { playsInline: true, fluid: true, muted: muted, className: 'video-player' },
           _react2.default.createElement('source', { src: src, className: 'jsx-' + _styles2.default.__scopedHash
@@ -77,7 +81,7 @@ var VideoPlayer = function (_Component) {
             _react2.default.createElement(_videoReact.FullscreenToggle, { className: 'video-player__fullscreen-button', order: 1.2 })
           ),
           _react2.default.createElement(_videoReact.BigPlayButton, { position: 'center', className: 'video-player__big-play-button', order: 2 })
-        ),
+        ) : _react2.default.createElement(_materialIconsReact2.default, { color: '#BBBCCD', icon: 'videocam_off', size: 76 }),
         _react2.default.createElement(_style2.default, {
           styleId: _styles2.default.__scopedHash,
           css: _styles2.default.__scoped
