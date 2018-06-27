@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import classnames from 'classnames';
+import MaterialIcon from 'material-icons-react';
 import PropTypes from 'prop-types';
 import {
   BigPlayButton,
@@ -18,11 +19,11 @@ import styles, { videoPlayer } from './styles';
 
 export default class VideoPlayer extends Component {
   render() {
-    const { containerClassName, muted, src } = this.props;
+    const { containerClassName, muted, src, noVideoIconSize } = this.props;
 
     return (
       <div className={classnames('video-player-container', containerClassName)}>
-        <Player playsInline fluid muted={muted} className="video-player">
+        {src && <Player playsInline fluid muted={muted} className="video-player">
           <source src={src} />
           <ControlBar className="video-player__control-bar">
             <PlayToggle disabled />
@@ -35,7 +36,9 @@ export default class VideoPlayer extends Component {
           </ControlBar>
 
           <BigPlayButton position="center" className="video-player__big-play-button" order={2} />
-        </Player>
+        </Player>}
+
+        {!src && <MaterialIcon color="#BBBCCD" icon="videocam_off" size={noVideoIconSize} />}
 
         <style jsx>{styles}</style>
         <style>{videoPlayer}</style>

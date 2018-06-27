@@ -1,6 +1,6 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { withKnobs } from '@storybook/addon-knobs/react';
+import { withKnobs, text } from '@storybook/addon-knobs/react';
 import { checkA11y } from '@storybook/addon-a11y';
 import { withTests } from '@storybook/addon-jest';
 
@@ -24,4 +24,15 @@ storiesOf('Video Player', module)
       {getStory()}
     </div>
   ))
-  .add('default', () => <VideoPlayer src="https://media.w3.org/2010/05/sintel/trailer_hd.mp4" />);
+  .add('default', () => (
+    <VideoPlayer
+      src={text(
+        'src',
+        'https://media.w3.org/2010/05/sintel/trailer_hd.mp4',
+      )}
+      noVideoIconSize={text(
+        'noVideoIconSize',
+        100
+      )}
+    />)
+  );
