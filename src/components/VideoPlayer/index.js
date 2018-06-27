@@ -23,22 +23,22 @@ export default class VideoPlayer extends Component {
 
     return (
       <div className={classnames('video-player-container', containerClassName)}>
-        {src && <Player playsInline fluid muted={muted} className="video-player">
-          <source src={src} />
-          <ControlBar className="video-player__control-bar">
-            <PlayToggle disabled />
-            <VolumeMenuButton disabled />
-            <CurrentTimeDisplay disabled />
-            <TimeDivider disabled />
-            <DurationDisplay disabled />
-            <ProgressControl className="video-player__progress" order={1.1} />
-            <FullscreenToggle className="video-player__fullscreen-button" order={1.2} />
-          </ControlBar>
+        {src ?
+          <Player playsInline fluid muted={muted} className="video-player">
+            <source src={src} />
+            <ControlBar className="video-player__control-bar">
+              <PlayToggle disabled />
+              <VolumeMenuButton disabled />
+              <CurrentTimeDisplay disabled />
+              <TimeDivider disabled />
+              <DurationDisplay disabled />
+              <ProgressControl className="video-player__progress" order={1.1} />
+              <FullscreenToggle className="video-player__fullscreen-button" order={1.2} />
+            </ControlBar>
 
-          <BigPlayButton position="center" className="video-player__big-play-button" order={2} />
-        </Player>}
-
-        {!src && <MaterialIcon color="#BBBCCD" icon="videocam_off" size={76} />}
+            <BigPlayButton position="center" className="video-player__big-play-button" order={2} />
+          </Player> :
+          <MaterialIcon color="#BBBCCD" icon="videocam_off" size={76} />}
 
         <style jsx>{styles}</style>
         <style>{videoPlayer}</style>
