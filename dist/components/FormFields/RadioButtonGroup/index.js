@@ -151,7 +151,6 @@ RadioButtonGroup.propTypes = {
   input: _propTypes2.default.object,
   label: _propTypes2.default.string,
   meta: _propTypes2.default.object,
-  name: _propTypes2.default.string.isRequired,
   options: _propTypes2.default.array.isRequired
 };
 

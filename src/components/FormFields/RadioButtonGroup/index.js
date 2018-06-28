@@ -60,7 +60,6 @@ RadioButtonGroup.propTypes = {
   input: PropTypes.object,
   label: PropTypes.string,
   meta: PropTypes.object,
-  name: PropTypes.string.isRequired,
   options: PropTypes.array.isRequired,
 };
 
