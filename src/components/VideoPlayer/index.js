@@ -23,7 +23,7 @@ export default class VideoPlayer extends Component {
 
     return (
       <div className={classnames('video-player-container', containerClassName)}>
-        {src ?
+        {src ? (
           <Player playsInline fluid muted={muted} className="video-player">
             <source src={src} />
             <ControlBar className="video-player__control-bar">
@@ -37,8 +37,10 @@ export default class VideoPlayer extends Component {
             </ControlBar>
 
             <BigPlayButton position="center" className="video-player__big-play-button" order={2} />
-          </Player> :
-          <MaterialIcon color="#BBBCCD" icon="videocam_off" size={76} />}
+          </Player>
+        ) : (
+          <MaterialIcon color="#BBBCCD" icon="videocam_off" size={76} />
+        )}
 
         <style jsx>{styles}</style>
         <style>{videoPlayer}</style>
@@ -48,7 +50,7 @@ export default class VideoPlayer extends Component {
 }
 
 VideoPlayer.propTypes = {
-  containerClassName: PropTypes.string,
+  containerClassName: PropTypes.oneOfType([PropTypes.string, PropTypes.array]),
   muted: PropTypes.bool,
   src: PropTypes.string.isRequired,
 };

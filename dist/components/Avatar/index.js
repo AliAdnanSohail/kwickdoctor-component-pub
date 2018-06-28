@@ -88,7 +88,7 @@ exports.default = Avatar;
 
 Avatar.propTypes = {
   borderRadius: _propTypes2.default.number,
-  className: _propTypes2.default.string,
+  className: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.array]),
   size: _propTypes2.default.number,
   src: _propTypes2.default.string
 };

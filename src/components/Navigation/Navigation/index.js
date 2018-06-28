@@ -26,7 +26,7 @@ Navigation.propTypes = {
   after: PropTypes.element,
   before: PropTypes.element,
   children: PropTypes.node.isRequired,
-  className: PropTypes.string,
+  className: PropTypes.oneOfType([PropTypes.string, PropTypes.array]),
 };
 
 Navigation.defaultProps = {

@@ -34,7 +34,7 @@ export default class Stepper extends Component {
 
 Stepper.propTypes = {
   activeStep: PropTypes.number,
-  className: PropTypes.string,
+  className: PropTypes.oneOfType([PropTypes.string, PropTypes.array]),
   children: PropTypes.node.isRequired,
 };
 

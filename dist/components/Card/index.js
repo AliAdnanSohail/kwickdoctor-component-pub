@@ -74,7 +74,7 @@ exports.default = Card;
 
 Card.propTypes = {
   children: _propTypes2.default.node.isRequired,
-  className: _propTypes2.default.string
+  className: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.array])
 };
 
 Card.defaultProps = {

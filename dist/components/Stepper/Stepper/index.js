@@ -78,7 +78,7 @@ exports.default = Stepper;
 
 Stepper.propTypes = {
   activeStep: _propTypes2.default.number,
-  className: _propTypes2.default.string,
+  className: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.array]),
   children: _propTypes2.default.node.isRequired
 };
 

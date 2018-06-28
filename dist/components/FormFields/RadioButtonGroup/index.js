@@ -145,8 +145,8 @@ exports.default = RadioButtonGroup;
 
 
 RadioButtonGroup.propTypes = {
-  containerClassName: _propTypes2.default.string,
-  className: _propTypes2.default.string,
+  containerClassName: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.array]),
+  className: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.array]),
   id: _propTypes2.default.string.isRequired,
   input: _propTypes2.default.object,
   label: _propTypes2.default.string,

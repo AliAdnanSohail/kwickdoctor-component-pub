@@ -102,7 +102,7 @@ exports.default = VideoPlayer;
 
 
 VideoPlayer.propTypes = {
-  containerClassName: _propTypes2.default.string,
+  containerClassName: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.array]),
   muted: _propTypes2.default.bool,
   src: _propTypes2.default.string.isRequired
 };

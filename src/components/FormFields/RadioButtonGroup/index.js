@@ -54,8 +54,8 @@ export default class RadioButtonGroup extends Component {
 }
 
 RadioButtonGroup.propTypes = {
-  containerClassName: PropTypes.string,
-  className: PropTypes.string,
+  containerClassName: PropTypes.oneOfType([PropTypes.string, PropTypes.array]),
+  className: PropTypes.oneOfType([PropTypes.string, PropTypes.array]),
   id: PropTypes.string.isRequired,
   input: PropTypes.object,
   label: PropTypes.string,

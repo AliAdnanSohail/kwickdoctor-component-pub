@@ -32,7 +32,7 @@ export default class Avatar extends Component {
 
 Avatar.propTypes = {
   borderRadius: PropTypes.number,
-  className: PropTypes.string,
+  className: PropTypes.oneOfType([PropTypes.string, PropTypes.array]),
   size: PropTypes.number,
   src: PropTypes.string,
 };

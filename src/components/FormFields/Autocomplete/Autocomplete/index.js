@@ -199,7 +199,7 @@ export default class Autocomplete extends Component {
 }
 
 Autocomplete.propTypes = {
-  containerClassName: PropTypes.string,
+  containerClassName: PropTypes.oneOfType([PropTypes.string, PropTypes.array]),
   delimiters: PropTypes.array,
   notEditable: PropTypes.bool,
   id: PropTypes.string.isRequired,

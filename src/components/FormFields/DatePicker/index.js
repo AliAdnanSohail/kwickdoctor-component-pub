@@ -77,7 +77,7 @@ export default class DatePicker extends Component {
 }
 
 DatePicker.propTypes = {
-  containerClassName: PropTypes.string,
+  containerClassName: PropTypes.oneOfType([PropTypes.string, PropTypes.array]),
   dateFormat: PropTypes.string,
   id: PropTypes.string.isRequired,
   input: PropTypes.object,

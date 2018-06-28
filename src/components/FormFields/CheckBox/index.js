@@ -25,7 +25,7 @@ const CheckBox = ({
 );
 
 CheckBox.propTypes = {
-  className: PropTypes.string,
+  className: PropTypes.oneOfType([PropTypes.string, PropTypes.array]),
   id: PropTypes.string.isRequired,
   input: PropTypes.object,
   label: PropTypes.string,

@@ -132,7 +132,7 @@ export default class AvatarPicker extends Component {
 
 AvatarPicker.propTypes = {
   borderRadius: PropTypes.number,
-  className: PropTypes.string,
+  className: PropTypes.oneOfType([PropTypes.string, PropTypes.array]),
   id: PropTypes.string.isRequired,
   input: PropTypes.object,
   size: PropTypes.number,
