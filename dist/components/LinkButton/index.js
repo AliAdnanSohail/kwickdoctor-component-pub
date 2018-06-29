@@ -103,7 +103,7 @@ exports.default = LinkButton;
 LinkButton.propTypes = {
   accent: _propTypes2.default.bool,
   children: _propTypes2.default.any,
-  className: _propTypes2.default.string,
+  className: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.array]),
   danger: _propTypes2.default.bool,
   flat: _propTypes2.default.bool,
   icon: _propTypes2.default.string,

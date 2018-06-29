@@ -159,7 +159,7 @@ exports.default = Button;
 
 
 Button.propTypes = {
-  className: _propTypes2.default.string,
+  className: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.array]),
   children: _propTypes2.default.any,
   icon: _propTypes2.default.string,
   size: _propTypes2.default.oneOf(['small', 'xsmall', '']),

@@ -143,7 +143,7 @@ exports.default = DatePicker;
 
 
 DatePicker.propTypes = {
-  containerClassName: _propTypes2.default.string,
+  containerClassName: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.array]),
   dateFormat: _propTypes2.default.string,
   id: _propTypes2.default.string.isRequired,
   input: _propTypes2.default.object,

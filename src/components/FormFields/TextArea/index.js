@@ -4,7 +4,7 @@ import renderer from '../renderer';
 import { textInput } from '../styles';
 
 export default renderer((input, label, {
-  children, className, id, name, placeholder, value,
+  children, className, id, name, placeholder, row, value,
 }) => (
   <Fragment>
     <textarea
@@ -13,6 +13,7 @@ export default renderer((input, label, {
       id={id}
       name={name}
       placeholder={placeholder}
+      row={row}
       value={value}
     >
       {children}

@@ -103,7 +103,7 @@ export default class Button extends Component {
 }
 
 Button.propTypes = {
-  className: PropTypes.string,
+  className: PropTypes.oneOfType([PropTypes.string, PropTypes.array]),
   children: PropTypes.any,
   icon: PropTypes.string,
   size: PropTypes.oneOf(['small', 'xsmall', '']),

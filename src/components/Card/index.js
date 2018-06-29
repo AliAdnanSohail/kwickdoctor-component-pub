@@ -20,7 +20,7 @@ export default class Card extends Component {
 
 Card.propTypes = {
   children: PropTypes.node.isRequired,
-  className: PropTypes.string,
+  className: PropTypes.oneOfType([PropTypes.string, PropTypes.array]),
 };
 
 Card.defaultProps = {

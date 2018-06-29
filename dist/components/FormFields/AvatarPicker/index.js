@@ -202,7 +202,7 @@ exports.default = AvatarPicker;
 
 AvatarPicker.propTypes = {
   borderRadius: _propTypes2.default.number,
-  className: _propTypes2.default.string,
+  className: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.array]),
   id: _propTypes2.default.string.isRequired,
   input: _propTypes2.default.object,
   size: _propTypes2.default.number

@@ -55,7 +55,7 @@ export default class LinkButton extends Component {
 LinkButton.propTypes = {
   accent: PropTypes.bool,
   children: PropTypes.any,
-  className: PropTypes.string,
+  className: PropTypes.oneOfType([PropTypes.string, PropTypes.array]),
   danger: PropTypes.bool,
   flat: PropTypes.bool,
   icon: PropTypes.string,

@@ -320,7 +320,7 @@ exports.default = Autocomplete;
 
 
 Autocomplete.propTypes = {
-  containerClassName: _propTypes2.default.string,
+  containerClassName: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.array]),
   delimiters: _propTypes2.default.array,
   notEditable: _propTypes2.default.bool,
   id: _propTypes2.default.string.isRequired,
