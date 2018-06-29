@@ -29,6 +29,10 @@ var _propTypes = require('prop-types');
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
 
+var _forOf = require('es6-iterator/for-of');
+
+var _forOf2 = _interopRequireDefault(_forOf);
+
 var _Month = require('./Month');
 
 var _Month2 = _interopRequireDefault(_Month);
@@ -81,7 +85,11 @@ var Calendar = function (_Component) {
 
       var end = current.clone().endOf('month').weekday(6);
 
-      var days = Array.from(moment().range(start, end).by('days'));
+      var days = [];
+
+      (0, _forOf2.default)(moment().range(start, end).by('days'), function (day) {
+        days.push(day);
+      });
 
       return days.map(function (day) {
         return {

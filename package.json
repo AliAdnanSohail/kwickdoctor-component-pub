@@ -92,6 +92,7 @@
     "@storybook/addon-notes": "3.4.0",
     "@storybook/react": "3.4.0",
     "classnames": "2.2.5",
+    "es6-iterator": "^2.0.3",
     "lodash.debounce": "4.0.8",
     "material-icons-react": "1.0.0",
     "moment": "2.22.0",
