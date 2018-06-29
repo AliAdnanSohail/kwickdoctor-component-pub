@@ -15,14 +15,14 @@ export default css`
 
     color: #ffffff;
 
-    line-height: 26px;
+    line-height: 22px;
 
     transition: background-color 0.4s ease-in-out, border-color 0.4s ease-in-out;
 
     overflow: hidden;
 
     border: {
-      width: 1px;
+      width: 2px;
       style: solid;
       color: ${settings.primaryColor};
       radius: 26px;
@@ -176,7 +176,7 @@ export default css`
 
     &--transparent {
       background-color: transparent;
-      box-shadow: 0px 0px 10px rgba(12, 151, 249, 0.15);
+      // box-shadow: 0px 0px 10px rgba(12, 151, 249, 0.15);
 
       color: ${settings.primaryColor};
 
