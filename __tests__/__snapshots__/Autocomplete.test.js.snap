@@ -37,7 +37,7 @@ exports[`renders correctly 1`] = `
     .autocomplete.focused,.autocomplete:focus{outline:none;border-color:#0c97f9;}
     .autocomplete.invalid,.autocomplete.invalid:focus{border-color:#FF5572;}
     .autocomplete__input{position:relative;margin:5px 11px;}
-    .autocomplete__input input{line-height:24px;background:transparent;border:none;border-radius:inherit;font-style:normal;font-weight:normal;font-size:0.875rem;}
+    .autocomplete__input input{line-height:16px;background:transparent;border:none;border-radius:inherit;font-style:normal;font-weight:normal;font-size:0.875rem;}
     .autocomplete__input input::-webkit-input-placeholder{color:#828393;}
     .autocomplete__input input::-moz-placeholder{color:#828393;}
     .autocomplete__input input:-ms-input-placeholder{color:#828393;}
