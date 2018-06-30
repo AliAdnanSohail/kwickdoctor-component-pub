@@ -13,7 +13,7 @@ export default css`
     font-size: 1rem;
   }
 
-  @media all and (-ms-high-contrast: none), (-ms-high-contrast: active), (-ms-ime-align:auto) {
+  @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
     .month {
       display: flex;
       flex-wrap: wrap;
