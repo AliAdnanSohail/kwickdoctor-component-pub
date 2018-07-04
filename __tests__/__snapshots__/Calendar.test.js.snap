@@ -95,10 +95,10 @@ exports[`Calendar renders correctly 1`] = `
     </ul>
   </div>
   <ul
-    className="jsx-2604861073 month"
+    className="jsx-431550909 month"
   >
     <li
-      className="jsx-2604861073"
+      className="jsx-431550909"
     >
       <button
         className="jsx-3065497712 day day--disabled"
@@ -114,7 +114,7 @@ exports[`Calendar renders correctly 1`] = `
       </button>
     </li>
     <li
-      className="jsx-2604861073"
+      className="jsx-431550909"
     >
       <button
         className="jsx-3065497712 day day--disabled"
@@ -130,7 +130,7 @@ exports[`Calendar renders correctly 1`] = `
       </button>
     </li>
     <li
-      className="jsx-2604861073"
+      className="jsx-431550909"
     >
       <button
         className="jsx-3065497712 day day--disabled"
@@ -146,7 +146,7 @@ exports[`Calendar renders correctly 1`] = `
       </button>
     </li>
     <li
-      className="jsx-2604861073"
+      className="jsx-431550909"
     >
       <button
         className="jsx-3065497712 day day--disabled"
@@ -162,7 +162,7 @@ exports[`Calendar renders correctly 1`] = `
       </button>
     </li>
     <li
-      className="jsx-2604861073"
+      className="jsx-431550909"
     >
       <button
         className="jsx-3065497712 day day--disabled"
@@ -178,7 +178,7 @@ exports[`Calendar renders correctly 1`] = `
       </button>
     </li>
     <li
-      className="jsx-2604861073"
+      className="jsx-431550909"
     >
       <button
         className="jsx-3065497712 day day--disabled"
@@ -194,7 +194,7 @@ exports[`Calendar renders correctly 1`] = `
       </button>
     </li>
     <li
-      className="jsx-2604861073"
+      className="jsx-431550909"
     >
       <button
         className="jsx-3065497712 day day--disabled"
@@ -210,7 +210,7 @@ exports[`Calendar renders correctly 1`] = `
       </button>
     </li>
     <li
-      className="jsx-2604861073"
+      className="jsx-431550909"
     >
       <button
         className="jsx-3065497712 day day--disabled"
@@ -226,7 +226,7 @@ exports[`Calendar renders correctly 1`] = `
       </button>
     </li>
     <li
-      className="jsx-2604861073"
+      className="jsx-431550909"
     >
       <button
         className="jsx-3065497712 day day--disabled"
@@ -242,7 +242,7 @@ exports[`Calendar renders correctly 1`] = `
       </button>
     </li>
     <li
-      className="jsx-2604861073"
+      className="jsx-431550909"
     >
       <button
         className="jsx-3065497712 day day--disabled"
@@ -258,7 +258,7 @@ exports[`Calendar renders correctly 1`] = `
       </button>
     </li>
     <li
-      className="jsx-2604861073"
+      className="jsx-431550909"
     >
       <button
         className="jsx-3065497712 day day--disabled"
@@ -274,7 +274,7 @@ exports[`Calendar renders correctly 1`] = `
       </button>
     </li>
     <li
-      className="jsx-2604861073"
+      className="jsx-431550909"
     >
       <button
         className="jsx-3065497712 day day--disabled"
@@ -290,7 +290,7 @@ exports[`Calendar renders correctly 1`] = `
       </button>
     </li>
     <li
-      className="jsx-2604861073"
+      className="jsx-431550909"
     >
       <button
         className="jsx-3065497712 day day--disabled"
@@ -306,7 +306,7 @@ exports[`Calendar renders correctly 1`] = `
       </button>
     </li>
     <li
-      className="jsx-2604861073"
+      className="jsx-431550909"
     >
       <button
         className="jsx-3065497712 day day--disabled"
@@ -322,7 +322,7 @@ exports[`Calendar renders correctly 1`] = `
       </button>
     </li>
     <li
-      className="jsx-2604861073"
+      className="jsx-431550909"
     >
       <button
         className="jsx-3065497712 day day--disabled"
@@ -338,7 +338,7 @@ exports[`Calendar renders correctly 1`] = `
       </button>
     </li>
     <li
-      className="jsx-2604861073"
+      className="jsx-431550909"
     >
       <button
         className="jsx-3065497712 day day--disabled"
@@ -354,7 +354,7 @@ exports[`Calendar renders correctly 1`] = `
       </button>
     </li>
     <li
-      className="jsx-2604861073"
+      className="jsx-431550909"
     >
       <button
         className="jsx-3065497712 day day--disabled"
@@ -370,7 +370,7 @@ exports[`Calendar renders correctly 1`] = `
       </button>
     </li>
     <li
-      className="jsx-2604861073"
+      className="jsx-431550909"
     >
       <button
         className="jsx-3065497712 day day--disabled"
@@ -386,7 +386,7 @@ exports[`Calendar renders correctly 1`] = `
       </button>
     </li>
     <li
-      className="jsx-2604861073"
+      className="jsx-431550909"
     >
       <button
         className="jsx-3065497712 day day--selected day--has-events"
@@ -415,7 +415,7 @@ exports[`Calendar renders correctly 1`] = `
       </button>
     </li>
     <li
-      className="jsx-2604861073"
+      className="jsx-431550909"
     >
       <button
         className="jsx-3065497712 day"
@@ -431,7 +431,7 @@ exports[`Calendar renders correctly 1`] = `
       </button>
     </li>
     <li
-      className="jsx-2604861073"
+      className="jsx-431550909"
     >
       <button
         className="jsx-3065497712 day"
@@ -447,7 +447,7 @@ exports[`Calendar renders correctly 1`] = `
       </button>
     </li>
     <li
-      className="jsx-2604861073"
+      className="jsx-431550909"
     >
       <button
         className="jsx-3065497712 day"
@@ -463,7 +463,7 @@ exports[`Calendar renders correctly 1`] = `
       </button>
     </li>
     <li
-      className="jsx-2604861073"
+      className="jsx-431550909"
     >
       <button
         className="jsx-3065497712 day"
@@ -479,7 +479,7 @@ exports[`Calendar renders correctly 1`] = `
       </button>
     </li>
     <li
-      className="jsx-2604861073"
+      className="jsx-431550909"
     >
       <button
         className="jsx-3065497712 day"
@@ -495,7 +495,7 @@ exports[`Calendar renders correctly 1`] = `
       </button>
     </li>
     <li
-      className="jsx-2604861073"
+      className="jsx-431550909"
     >
       <button
         className="jsx-3065497712 day"
@@ -511,7 +511,7 @@ exports[`Calendar renders correctly 1`] = `
       </button>
     </li>
     <li
-      className="jsx-2604861073"
+      className="jsx-431550909"
     >
       <button
         className="jsx-3065497712 day"
@@ -527,7 +527,7 @@ exports[`Calendar renders correctly 1`] = `
       </button>
     </li>
     <li
-      className="jsx-2604861073"
+      className="jsx-431550909"
     >
       <button
         className="jsx-3065497712 day"
@@ -543,7 +543,7 @@ exports[`Calendar renders correctly 1`] = `
       </button>
     </li>
     <li
-      className="jsx-2604861073"
+      className="jsx-431550909"
     >
       <button
         className="jsx-3065497712 day"
@@ -559,7 +559,7 @@ exports[`Calendar renders correctly 1`] = `
       </button>
     </li>
     <li
-      className="jsx-2604861073"
+      className="jsx-431550909"
     >
       <button
         className="jsx-3065497712 day"
@@ -575,7 +575,7 @@ exports[`Calendar renders correctly 1`] = `
       </button>
     </li>
     <li
-      className="jsx-2604861073"
+      className="jsx-431550909"
     >
       <button
         className="jsx-3065497712 day"
@@ -591,7 +591,7 @@ exports[`Calendar renders correctly 1`] = `
       </button>
     </li>
     <li
-      className="jsx-2604861073"
+      className="jsx-431550909"
     >
       <button
         className="jsx-3065497712 day"
@@ -607,7 +607,7 @@ exports[`Calendar renders correctly 1`] = `
       </button>
     </li>
     <li
-      className="jsx-2604861073"
+      className="jsx-431550909"
     >
       <button
         className="jsx-3065497712 day"
@@ -623,7 +623,7 @@ exports[`Calendar renders correctly 1`] = `
       </button>
     </li>
     <li
-      className="jsx-2604861073"
+      className="jsx-431550909"
     >
       <button
         className="jsx-3065497712 day"
@@ -639,7 +639,7 @@ exports[`Calendar renders correctly 1`] = `
       </button>
     </li>
     <li
-      className="jsx-2604861073"
+      className="jsx-431550909"
     >
       <button
         className="jsx-3065497712 day"
@@ -655,7 +655,7 @@ exports[`Calendar renders correctly 1`] = `
       </button>
     </li>
     <li
-      className="jsx-2604861073"
+      className="jsx-431550909"
     >
       <button
         className="jsx-3065497712 day"

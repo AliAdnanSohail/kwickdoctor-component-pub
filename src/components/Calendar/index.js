@@ -3,7 +3,6 @@ import MaterialIcon from 'material-icons-react';
 import Moment from 'moment';
 import { extendMoment } from 'moment-range';
 import PropTypes from 'prop-types';
-import forOf from 'es6-iterator/for-of';
 
 import Month from './Month';
 import { header, navigation, calendar as calendarStyles } from './styles';
@@ -42,10 +41,11 @@ export default class Calendar extends Component {
       .weekday(6);
 
     const days = [];
+    const momentDays = moment().range(start, end).by('days');
 
-    forOf(moment().range(start, end).by('days'), (day) => {
+    for(const day of momentDays){
       days.push(day);
-    });
+    }
 
     return days.map(day => ({
       day,
