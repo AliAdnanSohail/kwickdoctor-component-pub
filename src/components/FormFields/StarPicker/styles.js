@@ -1,11 +1,24 @@
 import css from 'styled-jsx/css';
 
+import settings from '../../../utils/style-helper';
+
 export default css`
-  .container {
+  .form-field {
     display: grid;
     grid-auto-columns: max-content;
     grid-auto-flow: column;
     grid-column-gap: 12px;
+
+    label {
+      color: ${settings.textColor};
+      display: inline-block;
+      margin-bottom: 6px;
+
+      font: {
+        weight: 500;
+        size: 1rem;
+      }
+    }
   }
 
   .star {

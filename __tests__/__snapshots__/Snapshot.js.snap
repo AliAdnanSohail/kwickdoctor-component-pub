@@ -1411,20 +1411,20 @@ exports[`Storyshots Form Fields StarPicker 1`] = `
   }
 >
   <div
-    className="jsx-1365218298 container"
+    className="jsx-2949786262 form-field"
   >
     <label
-      className="jsx-1365218298"
+      className="jsx-2949786262"
       htmlFor="rate"
     >
       
     </label>
     <label
-      className="jsx-1365218298 star"
+      className="jsx-2949786262 star"
       htmlFor="rate-1"
     >
       <input
-        className="jsx-1365218298 "
+        className="jsx-2949786262 "
         id="rate-1"
         name="rate"
         type="radio"
@@ -1443,11 +1443,11 @@ exports[`Storyshots Form Fields StarPicker 1`] = `
       </i>
     </label>
     <label
-      className="jsx-1365218298 star"
+      className="jsx-2949786262 star"
       htmlFor="rate-2"
     >
       <input
-        className="jsx-1365218298 "
+        className="jsx-2949786262 "
         id="rate-2"
         name="rate"
         type="radio"
@@ -1466,11 +1466,11 @@ exports[`Storyshots Form Fields StarPicker 1`] = `
       </i>
     </label>
     <label
-      className="jsx-1365218298 star"
+      className="jsx-2949786262 star"
       htmlFor="rate-3"
     >
       <input
-        className="jsx-1365218298 "
+        className="jsx-2949786262 "
         id="rate-3"
         name="rate"
         type="radio"
@@ -1489,11 +1489,11 @@ exports[`Storyshots Form Fields StarPicker 1`] = `
       </i>
     </label>
     <label
-      className="jsx-1365218298 star"
+      className="jsx-2949786262 star"
       htmlFor="rate-4"
     >
       <input
-        className="jsx-1365218298 "
+        className="jsx-2949786262 "
         id="rate-4"
         name="rate"
         type="radio"
@@ -1512,11 +1512,11 @@ exports[`Storyshots Form Fields StarPicker 1`] = `
       </i>
     </label>
     <label
-      className="jsx-1365218298 star"
+      className="jsx-2949786262 star"
       htmlFor="rate-5"
     >
       <input
-        className="jsx-1365218298 "
+        className="jsx-2949786262 "
         id="rate-5"
         name="rate"
         type="radio"

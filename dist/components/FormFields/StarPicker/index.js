@@ -17,6 +17,10 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
+var _classnames = require('classnames');
+
+var _classnames2 = _interopRequireDefault(_classnames);
+
 var _propTypes = require('prop-types');
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
@@ -50,6 +54,7 @@ var StarPicker = function (_Component) {
     key: 'render',
     value: function render() {
       var _props = this.props,
+          containerClassName = _props.containerClassName,
           input = _props.input,
           label = _props.label,
           max = _props.max;
@@ -58,7 +63,7 @@ var StarPicker = function (_Component) {
       return _react2.default.createElement(
         'div',
         {
-          className: 'jsx-' + _styles2.default.__scopedHash + ' ' + 'container'
+          className: 'jsx-' + _styles2.default.__scopedHash + ' ' + ((0, _classnames2.default)('form-field', containerClassName) || '')
         },
         _react2.default.createElement(
           'label',
@@ -95,10 +100,12 @@ exports.default = StarPicker;
 
 
 StarPicker.propTypes = {
+  containerClassName: _propTypes2.default.string,
   label: _propTypes2.default.string,
   max: _propTypes2.default.number.isRequired
 };
 
 StarPicker.defaultProps = {
+  containerClassName: '',
   label: ''
 };
