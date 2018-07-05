@@ -33,7 +33,9 @@ export default class StarPicker extends Component {
                   <input
                     {...input}
                     id={`${input.name}-${value}`}
+                    onBlur={() => {}}
                     onChange={this.handleChange}
+                    onFocus={() => {}}
                     type="radio"
                     value={value}
                   />

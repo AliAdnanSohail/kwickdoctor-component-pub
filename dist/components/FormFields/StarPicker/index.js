@@ -104,7 +104,9 @@ var StarPicker = function (_Component) {
                 },
                 _react2.default.createElement('input', _extends({}, input, {
                   id: input.name + '-' + value,
+                  onBlur: function onBlur() {},
                   onChange: _this2.handleChange,
+                  onFocus: function onFocus() {},
                   type: 'radio',
                   value: value,
                   className: 'jsx-' + _styles2.default.__scopedHash + ' jsx-' + _styles3.fieldset.__scopedHash + ' jsx-' + _styles3.label.__scopedHash + ' ' + (input.className != null && input.className || '')
