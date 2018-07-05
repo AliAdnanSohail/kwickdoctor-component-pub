@@ -1411,129 +1411,136 @@ exports[`Storyshots Form Fields StarPicker 1`] = `
   }
 >
   <div
-    className="jsx-2949786262 form-field"
+    className=""
   >
-    <label
-      className="jsx-2949786262"
-      htmlFor="rate"
+    <fieldset
+      className="jsx-2821742674 jsx-904933394 jsx-4038665278 fieldset"
     >
-      
-    </label>
-    <label
-      className="jsx-2949786262 star"
-      htmlFor="rate-1"
-    >
-      <input
-        className="jsx-2949786262 "
-        id="rate-1"
-        name="rate"
-        type="radio"
-        value={1}
-      />
-      <i
-        className="material-icons 36 md-dark "
-        style={
-          Object {
-            "color": "#45cf7a",
-            "fontSize": 36,
-          }
-        }
+      <legend
+        className="jsx-2821742674 jsx-904933394 jsx-4038665278"
       >
-        star
-      </i>
-    </label>
-    <label
-      className="jsx-2949786262 star"
-      htmlFor="rate-2"
-    >
-      <input
-        className="jsx-2949786262 "
-        id="rate-2"
-        name="rate"
-        type="radio"
-        value={2}
-      />
-      <i
-        className="material-icons 36 md-dark "
-        style={
-          Object {
-            "color": "#45cf7a",
-            "fontSize": 36,
-          }
-        }
+        Label
+      </legend>
+      <div
+        className="jsx-2821742674 jsx-904933394 jsx-4038665278 stars"
       >
-        star
-      </i>
-    </label>
-    <label
-      className="jsx-2949786262 star"
-      htmlFor="rate-3"
-    >
-      <input
-        className="jsx-2949786262 "
-        id="rate-3"
-        name="rate"
-        type="radio"
-        value={3}
-      />
-      <i
-        className="material-icons 36 md-dark "
-        style={
-          Object {
-            "color": "#45cf7a",
-            "fontSize": 36,
-          }
-        }
-      >
-        star
-      </i>
-    </label>
-    <label
-      className="jsx-2949786262 star"
-      htmlFor="rate-4"
-    >
-      <input
-        className="jsx-2949786262 "
-        id="rate-4"
-        name="rate"
-        type="radio"
-        value={4}
-      />
-      <i
-        className="material-icons 36 md-dark "
-        style={
-          Object {
-            "color": "#babbd0",
-            "fontSize": 36,
-          }
-        }
-      >
-        star_outline
-      </i>
-    </label>
-    <label
-      className="jsx-2949786262 star"
-      htmlFor="rate-5"
-    >
-      <input
-        className="jsx-2949786262 "
-        id="rate-5"
-        name="rate"
-        type="radio"
-        value={5}
-      />
-      <i
-        className="material-icons 36 md-dark "
-        style={
-          Object {
-            "color": "#babbd0",
-            "fontSize": 36,
-          }
-        }
-      >
-        star_outline
-      </i>
-    </label>
+        <label
+          className="jsx-2821742674 jsx-904933394 jsx-4038665278 star"
+          htmlFor="rate-1"
+        >
+          <input
+            className="jsx-2821742674 jsx-904933394 jsx-4038665278 "
+            id="rate-1"
+            name="rate"
+            type="radio"
+            value={1}
+          />
+          <i
+            className="material-icons 36 md-dark "
+            style={
+              Object {
+                "color": "#45cf7a",
+                "fontSize": 36,
+              }
+            }
+          >
+            star
+          </i>
+        </label>
+        <label
+          className="jsx-2821742674 jsx-904933394 jsx-4038665278 star"
+          htmlFor="rate-2"
+        >
+          <input
+            className="jsx-2821742674 jsx-904933394 jsx-4038665278 "
+            id="rate-2"
+            name="rate"
+            type="radio"
+            value={2}
+          />
+          <i
+            className="material-icons 36 md-dark "
+            style={
+              Object {
+                "color": "#45cf7a",
+                "fontSize": 36,
+              }
+            }
+          >
+            star
+          </i>
+        </label>
+        <label
+          className="jsx-2821742674 jsx-904933394 jsx-4038665278 star"
+          htmlFor="rate-3"
+        >
+          <input
+            className="jsx-2821742674 jsx-904933394 jsx-4038665278 "
+            id="rate-3"
+            name="rate"
+            type="radio"
+            value={3}
+          />
+          <i
+            className="material-icons 36 md-dark "
+            style={
+              Object {
+                "color": "#45cf7a",
+                "fontSize": 36,
+              }
+            }
+          >
+            star
+          </i>
+        </label>
+        <label
+          className="jsx-2821742674 jsx-904933394 jsx-4038665278 star"
+          htmlFor="rate-4"
+        >
+          <input
+            className="jsx-2821742674 jsx-904933394 jsx-4038665278 "
+            id="rate-4"
+            name="rate"
+            type="radio"
+            value={4}
+          />
+          <i
+            className="material-icons 36 md-dark "
+            style={
+              Object {
+                "color": "#babbd0",
+                "fontSize": 36,
+              }
+            }
+          >
+            star_outline
+          </i>
+        </label>
+        <label
+          className="jsx-2821742674 jsx-904933394 jsx-4038665278 star"
+          htmlFor="rate-5"
+        >
+          <input
+            className="jsx-2821742674 jsx-904933394 jsx-4038665278 "
+            id="rate-5"
+            name="rate"
+            type="radio"
+            value={5}
+          />
+          <i
+            className="material-icons 36 md-dark "
+            style={
+              Object {
+                "color": "#babbd0",
+                "fontSize": 36,
+              }
+            }
+          >
+            star_outline
+          </i>
+        </label>
+      </div>
+    </fieldset>
   </div>
 </div>
 `;

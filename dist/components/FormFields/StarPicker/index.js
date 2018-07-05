@@ -17,10 +17,6 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
-var _classnames = require('classnames');
-
-var _classnames2 = _interopRequireDefault(_classnames);
-
 var _propTypes = require('prop-types');
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
@@ -32,6 +28,8 @@ var _materialIconsReact2 = _interopRequireDefault(_materialIconsReact);
 var _styles = require('./styles');
 
 var _styles2 = _interopRequireDefault(_styles);
+
+var _styles3 = require('../styles');
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -62,33 +60,52 @@ var StarPicker = function (_Component) {
 
       return _react2.default.createElement(
         'div',
-        {
-          className: 'jsx-' + _styles2.default.__scopedHash + ' ' + ((0, _classnames2.default)('form-field', containerClassName) || '')
-        },
+        { className: containerClassName },
         _react2.default.createElement(
-          'label',
-          { htmlFor: input.name, className: 'jsx-' + _styles2.default.__scopedHash
+          'fieldset',
+          {
+            className: 'jsx-' + _styles2.default.__scopedHash + ' jsx-' + _styles3.fieldset.__scopedHash + ' jsx-' + _styles3.label.__scopedHash + ' ' + 'fieldset'
           },
-          label
-        ),
-        Array.from(new Array(max), function (value, index) {
-          return index;
-        }).map(function (item) {
-          var value = item + 1;
-
-          return _react2.default.createElement(
-            'label',
-            { key: item, htmlFor: input.name + '-' + value, className: 'jsx-' + _styles2.default.__scopedHash + ' ' + 'star'
+          _react2.default.createElement(
+            'legend',
+            {
+              className: 'jsx-' + _styles2.default.__scopedHash + ' jsx-' + _styles3.fieldset.__scopedHash + ' jsx-' + _styles3.label.__scopedHash
             },
-            _react2.default.createElement('input', _extends({}, input, { id: input.name + '-' + value, type: 'radio', value: value, className: 'jsx-' + _styles2.default.__scopedHash + ' ' + (input.className != null && input.className || '')
-            })),
-            value <= input.value ? _react2.default.createElement(_materialIconsReact2.default, { color: '#45cf7a', icon: 'star', size: 36 }) : _react2.default.createElement(_materialIconsReact2.default, { color: '#babbd0', icon: 'star_outline', size: 36 })
-          );
-        }),
-        _react2.default.createElement(_style2.default, {
-          styleId: _styles2.default.__scopedHash,
-          css: _styles2.default.__scoped
-        })
+            label
+          ),
+          _react2.default.createElement(
+            'div',
+            {
+              className: 'jsx-' + _styles2.default.__scopedHash + ' jsx-' + _styles3.fieldset.__scopedHash + ' jsx-' + _styles3.label.__scopedHash + ' ' + 'stars'
+            },
+            Array.from(new Array(max), function (value, index) {
+              return index;
+            }).map(function (item) {
+              var value = item + 1;
+
+              return _react2.default.createElement(
+                'label',
+                { key: item, htmlFor: input.name + '-' + value, className: 'jsx-' + _styles2.default.__scopedHash + ' jsx-' + _styles3.fieldset.__scopedHash + ' jsx-' + _styles3.label.__scopedHash + ' ' + 'star'
+                },
+                _react2.default.createElement('input', _extends({}, input, { id: input.name + '-' + value, type: 'radio', value: value, className: 'jsx-' + _styles2.default.__scopedHash + ' jsx-' + _styles3.fieldset.__scopedHash + ' jsx-' + _styles3.label.__scopedHash + ' ' + (input.className != null && input.className || '')
+                })),
+                value <= input.value ? _react2.default.createElement(_materialIconsReact2.default, { color: '#45cf7a', icon: 'star', size: 36 }) : _react2.default.createElement(_materialIconsReact2.default, { color: '#babbd0', icon: 'star_outline', size: 36 })
+              );
+            })
+          ),
+          _react2.default.createElement(_style2.default, {
+            styleId: _styles2.default.__scopedHash,
+            css: _styles2.default.__scoped
+          }),
+          _react2.default.createElement(_style2.default, {
+            styleId: _styles3.fieldset.__scopedHash,
+            css: _styles3.fieldset.__scoped
+          }),
+          _react2.default.createElement(_style2.default, {
+            styleId: _styles3.label.__scopedHash,
+            css: _styles3.label.__scoped
+          })
+        )
       );
     }
   }]);
