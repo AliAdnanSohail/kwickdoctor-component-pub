@@ -43,14 +43,29 @@ var StarPicker = function (_Component) {
   _inherits(StarPicker, _Component);
 
   function StarPicker() {
+    var _ref;
+
+    var _temp, _this, _ret;
+
     _classCallCheck(this, StarPicker);
 
-    return _possibleConstructorReturn(this, (StarPicker.__proto__ || Object.getPrototypeOf(StarPicker)).apply(this, arguments));
+    for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = StarPicker.__proto__ || Object.getPrototypeOf(StarPicker)).call.apply(_ref, [this].concat(args))), _this), _this.handleChange = function (event) {
+      var onChange = _this.props.input.onChange;
+
+
+      onChange(parseInt(event.target.value, 10));
+    }, _temp), _possibleConstructorReturn(_this, _ret);
   }
 
   _createClass(StarPicker, [{
     key: 'render',
     value: function render() {
+      var _this2 = this;
+
       var _props = this.props,
           containerClassName = _props.containerClassName,
           input = _props.input,
@@ -87,7 +102,12 @@ var StarPicker = function (_Component) {
                 'label',
                 { key: item, htmlFor: input.name + '-' + value, className: 'jsx-' + _styles2.default.__scopedHash + ' jsx-' + _styles3.fieldset.__scopedHash + ' jsx-' + _styles3.label.__scopedHash + ' ' + 'star'
                 },
-                _react2.default.createElement('input', _extends({}, input, { id: input.name + '-' + value, type: 'radio', value: value, className: 'jsx-' + _styles2.default.__scopedHash + ' jsx-' + _styles3.fieldset.__scopedHash + ' jsx-' + _styles3.label.__scopedHash + ' ' + (input.className != null && input.className || '')
+                _react2.default.createElement('input', _extends({}, input, {
+                  id: input.name + '-' + value,
+                  onChange: _this2.handleChange,
+                  type: 'radio',
+                  value: value,
+                  className: 'jsx-' + _styles2.default.__scopedHash + ' jsx-' + _styles3.fieldset.__scopedHash + ' jsx-' + _styles3.label.__scopedHash + ' ' + (input.className != null && input.className || '')
                 })),
                 value <= input.value ? _react2.default.createElement(_materialIconsReact2.default, { color: '#45cf7a', icon: 'star', size: 36 }) : _react2.default.createElement(_materialIconsReact2.default, { color: '#babbd0', icon: 'star_outline', size: 36 })
               );

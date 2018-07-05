@@ -6,6 +6,14 @@ import starPickerStyles from './styles';
 import { fieldset as fieldsetStyles, label as labelStyles } from '../styles';
 
 export default class StarPicker extends Component {
+  handleChange = (event) => {
+    const {
+      input: { onChange },
+    } = this.props;
+
+    onChange(parseInt(event.target.value, 10));
+  };
+
   render() {
     const {
       containerClassName, input, label, max,
@@ -22,7 +30,13 @@ export default class StarPicker extends Component {
 
               return (
                 <label className="star" key={item} htmlFor={`${input.name}-${value}`}>
-                  <input {...input} id={`${input.name}-${value}`} type="radio" value={value} />
+                  <input
+                    {...input}
+                    id={`${input.name}-${value}`}
+                    onChange={this.handleChange}
+                    type="radio"
+                    value={value}
+                  />
                   {value <= input.value ? (
                     <MaterialIcon color="#45cf7a" icon="star" size={36} />
                   ) : (
