@@ -1,15 +1,27 @@
 import css from 'styled-jsx/css';
 
 export default css`
+  .container {
+    display: grid;
+    grid-auto-columns: max-content;
+    grid-auto-flow: column;
+    grid-column-gap: 12px;
+  }
+
   .star {
-    display: inline-block;
-    position: relative;
-    height: 40px;
-    padding-right: 11px;
+    display: grid;
+
     cursor: pointer;
 
     input {
-      display: none;
+      position: absolute !important;
+      clip: rect(1px 1px 1px 1px);
+      clip: rect(1px, 1px, 1px, 1px);
+      padding: 0 !important;
+      border: 0 !important;
+      height: 1px !important;
+      width: 1px !important;
+      overflow: hidden;
     }
   }
 `;
