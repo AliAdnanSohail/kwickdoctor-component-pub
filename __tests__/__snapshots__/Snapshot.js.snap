@@ -1432,9 +1432,6 @@ exports[`Storyshots Form Fields StarPicker 1`] = `
             className="jsx-2821742674 jsx-904933394 jsx-4038665278 "
             id="rate-1"
             name="rate"
-            onBlur={[Function]}
-            onChange={[Function]}
-            onFocus={[Function]}
             type="radio"
             value={1}
           />
@@ -1458,9 +1455,6 @@ exports[`Storyshots Form Fields StarPicker 1`] = `
             className="jsx-2821742674 jsx-904933394 jsx-4038665278 "
             id="rate-2"
             name="rate"
-            onBlur={[Function]}
-            onChange={[Function]}
-            onFocus={[Function]}
             type="radio"
             value={2}
           />
@@ -1484,9 +1478,6 @@ exports[`Storyshots Form Fields StarPicker 1`] = `
             className="jsx-2821742674 jsx-904933394 jsx-4038665278 "
             id="rate-3"
             name="rate"
-            onBlur={[Function]}
-            onChange={[Function]}
-            onFocus={[Function]}
             type="radio"
             value={3}
           />
@@ -1510,9 +1501,6 @@ exports[`Storyshots Form Fields StarPicker 1`] = `
             className="jsx-2821742674 jsx-904933394 jsx-4038665278 "
             id="rate-4"
             name="rate"
-            onBlur={[Function]}
-            onChange={[Function]}
-            onFocus={[Function]}
             type="radio"
             value={4}
           />
@@ -1536,9 +1524,6 @@ exports[`Storyshots Form Fields StarPicker 1`] = `
             className="jsx-2821742674 jsx-904933394 jsx-4038665278 "
             id="rate-5"
             name="rate"
-            onBlur={[Function]}
-            onChange={[Function]}
-            onFocus={[Function]}
             type="radio"
             value={5}
           />
