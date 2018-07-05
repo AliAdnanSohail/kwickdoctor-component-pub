@@ -50,8 +50,9 @@ var StarPicker = function (_Component) {
     key: 'render',
     value: function render() {
       var _props = this.props,
-          max = _props.max,
-          input = _props.input;
+          input = _props.input,
+          label = _props.label,
+          max = _props.max;
 
 
       return _react2.default.createElement(
@@ -59,6 +60,12 @@ var StarPicker = function (_Component) {
         {
           className: 'jsx-' + _styles2.default.__scopedHash + ' ' + 'container'
         },
+        _react2.default.createElement(
+          'label',
+          { htmlFor: input.name, className: 'jsx-' + _styles2.default.__scopedHash
+          },
+          label
+        ),
         Array.from(new Array(max), function (value, index) {
           return index;
         }).map(function (item) {
@@ -88,5 +95,10 @@ exports.default = StarPicker;
 
 
 StarPicker.propTypes = {
+  label: _propTypes2.default.string,
   max: _propTypes2.default.number.isRequired
+};
+
+StarPicker.defaultProps = {
+  label: ''
 };

@@ -1414,6 +1414,12 @@ exports[`Storyshots Form Fields StarPicker 1`] = `
     className="jsx-1365218298 container"
   >
     <label
+      className="jsx-1365218298"
+      htmlFor="rate"
+    >
+      
+    </label>
+    <label
       className="jsx-1365218298 star"
       htmlFor="rate-1"
     >

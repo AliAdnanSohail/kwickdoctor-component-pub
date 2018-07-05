@@ -6,10 +6,12 @@ import styles from './styles';
 
 export default class StarPicker extends Component {
   render() {
-    const { max, input } = this.props;
+    const { input, label, max } = this.props;
 
     return (
       <div className="container">
+        <label htmlFor={input.name}>{label}</label>
+
         {Array.from(new Array(max), (value, index) => index).map((item) => {
           const value = item + 1;
 
@@ -32,5 +34,10 @@ export default class StarPicker extends Component {
 }
 
 StarPicker.propTypes = {
+  label: PropTypes.string,
   max: PropTypes.number.isRequired,
+};
+
+StarPicker.defaultProps = {
+  label: '',
 };
