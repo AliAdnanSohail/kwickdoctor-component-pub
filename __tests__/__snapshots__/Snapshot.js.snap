@@ -1926,7 +1926,7 @@ exports[`Storyshots Notification default 1`] = `
 </div>
 `;
 
-exports[`Storyshots Paginator default 1`] = `
+exports[`Storyshots Pagination default 1`] = `
 <div
   style={
     Object {

@@ -85,12 +85,12 @@ Object.defineProperty(exports, 'Notification', {
   }
 });
 
-var _Paginator = require('./Paginator');
+var _Pagination = require('./Pagination');
 
-Object.defineProperty(exports, 'Paginator', {
+Object.defineProperty(exports, 'Pagination', {
   enumerable: true,
   get: function get() {
-    return _interopRequireDefault(_Paginator).default;
+    return _interopRequireDefault(_Pagination).default;
   }
 });
 
