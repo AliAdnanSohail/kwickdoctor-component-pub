@@ -18,7 +18,13 @@ export default class DatePicker extends Component {
   constructor(props) {
     super(props);
 
-    this.state = { value: moment(props.input.value) };
+    const date = moment(props.input.value, props.dateFormat, true);
+
+    if(date.isValid()){
+      this.state = { value: moment(props.input.value) };
+    }else{
+      this.state = { value: moment() };
+    }
   }
 
   handleChange = (date) => {

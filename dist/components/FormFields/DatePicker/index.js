@@ -7,6 +7,8 @@ exports.default = undefined;
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
+var _class, _temp, _initialiseProps;
+
 var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
@@ -39,7 +41,7 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var DatePicker = function (_Component) {
+var DatePicker = (_temp = _class = function (_Component) {
   _inherits(DatePicker, _Component);
 
   function DatePicker(props) {
@@ -47,17 +49,15 @@ var DatePicker = function (_Component) {
 
     var _this = _possibleConstructorReturn(this, (DatePicker.__proto__ || Object.getPrototypeOf(DatePicker)).call(this, props));
 
-    _this.handleChange = function (date) {
-      var value = (0, _moment2.default)(date.target ? date.target.value : date, _this.props.dateFormat, true);
+    _initialiseProps.call(_this);
 
-      if (_moment2.default.isMoment(value) && value.isValid()) {
-        _this.setState({ value: value });
+    var date = (0, _moment2.default)(props.input.value, props.dateFormat, true);
 
-        _this.props.input.onChange(value);
-      }
-    };
-
-    _this.state = { value: (0, _moment2.default)(props.input.value) };
+    if (date.isValid()) {
+      _this.state = { value: (0, _moment2.default)(props.input.value) };
+    } else {
+      _this.state = { value: (0, _moment2.default)() };
+    }
     return _this;
   }
 
@@ -137,8 +137,19 @@ var DatePicker = function (_Component) {
   }]);
 
   return DatePicker;
-}(_react.Component);
+}(_react.Component), _initialiseProps = function _initialiseProps() {
+  var _this2 = this;
 
+  this.handleChange = function (date) {
+    var value = (0, _moment2.default)(date.target ? date.target.value : date, _this2.props.dateFormat, true);
+
+    if (_moment2.default.isMoment(value) && value.isValid()) {
+      _this2.setState({ value: value });
+
+      _this2.props.input.onChange(value);
+    }
+  };
+}, _temp);
 exports.default = DatePicker;
 
 
