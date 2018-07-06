@@ -2,50 +2,53 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import MaterialIcon from 'material-icons-react';
 
-import styles from './styles';
+import starPickerStyles from './styles';
+import { fieldset as fieldsetStyles, label as labelStyles } from '../styles';
 
 export default class StarPicker extends Component {
-  constructor(props) {
-    super(props);
-    this.state = { selectedOption: this.props.rank, stars: this.generateStars() };
-  }
-  handleChange(e) {
-    this.setState({
-      selectedOption: parseInt(e.target.value, 10),
-    });
-  }
-  generateStars() {
-    const res = [];
-    for (let i = 1; i <= this.props.amount; i += 1) {
-      res.push({ key: `star${i.toString()}`, value: parseInt(i, 10) });
-    }
-    return res;
-  }
-
   render() {
+    const {
+      containerClassName, input, label, max,
+    } = this.props;
+
     return (
-      <React.Fragment>
-        {this.state.stars.map(star => (
-          <label className="star" key={star.key} htmlFor={`${star.value}-${star.key}`}>
-            <input
-              type="radio"
-              name={star.value}
-              id={`${star.value}-${star.key}`}
-              value={star.value}
-              checked={this.state.selectedOption === star.value}
-              onChange={e => this.handleChange(e)}
-              onClick={this.props.onClick}
-            />
-            <MaterialIcon icon="star" />
-          </label>
-        ))}
-        <style jsx>{styles}</style>
-      </React.Fragment>
+      <div className={containerClassName}>
+        <fieldset className="fieldset">
+          <legend>{label}</legend>
+
+          <div className="stars">
+            {Array.from(new Array(max), (value, index) => index).map((item) => {
+              const value = item + 1;
+
+              return (
+                <label className="star" key={item} htmlFor={`${input.name}-${value}`}>
+                  <input {...input} id={`${input.name}-${value}`} type="radio" value={value} />
+                  {value <= input.value ? (
+                    <MaterialIcon color="#45cf7a" icon="star" size={36} />
+                  ) : (
+                    <MaterialIcon color="#babbd0" icon="star_outline" size={36} />
+                  )}
+                </label>
+              );
+            })}
+          </div>
+
+          <style jsx>{starPickerStyles}</style>
+          <style jsx>{fieldsetStyles}</style>
+          <style jsx>{labelStyles}</style>
+        </fieldset>
+      </div>
     );
   }
 }
+
 StarPicker.propTypes = {
-  rank: PropTypes.number.isRequired,
-  amount: PropTypes.number.isRequired,
-  onClick: PropTypes.func.isRequired,
+  containerClassName: PropTypes.string,
+  label: PropTypes.string,
+  max: PropTypes.number.isRequired,
+};
+
+StarPicker.defaultProps = {
+  containerClassName: '',
+  label: '',
 };

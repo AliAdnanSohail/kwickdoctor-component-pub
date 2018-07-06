@@ -5,7 +5,7 @@ import MaterialIcon from 'material-icons-react';
 
 import style from './styles';
 
-export default class Paginator extends Component {
+export default class Pagination extends Component {
   render() {
     return (
       <Fragment>
@@ -26,14 +26,14 @@ export default class Paginator extends Component {
   }
 }
 
-Paginator.propTypes = {
+Pagination.propTypes = {
   marginPagesDisplayed: PropTypes.number,
   onPageChange: PropTypes.func,
   pageCount: PropTypes.number,
   pageRangeDisplayed: PropTypes.number,
 };
 
-Paginator.defaultProps = {
+Pagination.defaultProps = {
   marginPagesDisplayed: 2,
   onPageChange: () => {},
   pageCount: 0,

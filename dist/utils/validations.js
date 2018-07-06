@@ -124,10 +124,10 @@ var phone = function phone(value) {
  */
 var required = function required(value) {
   if (Array.isArray(value)) {
-    return value.length > 0 ? undefined : 'This field is required. Please complete the field.';
+    return value.length > 0 ? undefined : 'This field is required. Please complete this field.';
   }
 
-  return value ? undefined : 'This field is required. Please complete the field.';
+  return value ? undefined : 'This field is required. Please complete this field.';
 };
 
 exports.default = {

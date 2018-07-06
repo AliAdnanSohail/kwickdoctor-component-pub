@@ -5,6 +5,8 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = undefined;
 
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 var _style = require('styled-jsx/style');
@@ -27,6 +29,8 @@ var _styles = require('./styles');
 
 var _styles2 = _interopRequireDefault(_styles);
 
+var _styles3 = require('../styles');
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -38,63 +42,70 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 var StarPicker = function (_Component) {
   _inherits(StarPicker, _Component);
 
-  function StarPicker(props) {
+  function StarPicker() {
     _classCallCheck(this, StarPicker);
 
-    var _this = _possibleConstructorReturn(this, (StarPicker.__proto__ || Object.getPrototypeOf(StarPicker)).call(this, props));
-
-    _this.state = { selectedOption: _this.props.rank, stars: _this.generateStars() };
-    return _this;
+    return _possibleConstructorReturn(this, (StarPicker.__proto__ || Object.getPrototypeOf(StarPicker)).apply(this, arguments));
   }
 
   _createClass(StarPicker, [{
-    key: 'handleChange',
-    value: function handleChange(e) {
-      this.setState({
-        selectedOption: parseInt(e.target.value, 10)
-      });
-    }
-  }, {
-    key: 'generateStars',
-    value: function generateStars() {
-      var res = [];
-      for (var i = 1; i <= this.props.amount; i += 1) {
-        res.push({ key: 'star' + i.toString(), value: parseInt(i, 10) });
-      }
-      return res;
-    }
-  }, {
     key: 'render',
     value: function render() {
-      var _this2 = this;
+      var _props = this.props,
+          containerClassName = _props.containerClassName,
+          input = _props.input,
+          label = _props.label,
+          max = _props.max;
+
 
       return _react2.default.createElement(
-        _react2.default.Fragment,
-        null,
-        this.state.stars.map(function (star) {
-          return _react2.default.createElement(
-            'label',
-            { key: star.key, htmlFor: star.value + '-' + star.key, className: 'jsx-' + _styles2.default.__scopedHash + ' ' + 'star'
+        'div',
+        { className: containerClassName },
+        _react2.default.createElement(
+          'fieldset',
+          {
+            className: 'jsx-' + _styles2.default.__scopedHash + ' jsx-' + _styles3.fieldset.__scopedHash + ' jsx-' + _styles3.label.__scopedHash + ' ' + 'fieldset'
+          },
+          _react2.default.createElement(
+            'legend',
+            {
+              className: 'jsx-' + _styles2.default.__scopedHash + ' jsx-' + _styles3.fieldset.__scopedHash + ' jsx-' + _styles3.label.__scopedHash
             },
-            _react2.default.createElement('input', {
-              type: 'radio',
-              name: star.value,
-              id: star.value + '-' + star.key,
-              value: star.value,
-              checked: _this2.state.selectedOption === star.value,
-              onChange: function onChange(e) {
-                return _this2.handleChange(e);
-              },
-              onClick: _this2.props.onClick,
-              className: 'jsx-' + _styles2.default.__scopedHash
-            }),
-            _react2.default.createElement(_materialIconsReact2.default, { icon: 'star' })
-          );
-        }),
-        _react2.default.createElement(_style2.default, {
-          styleId: _styles2.default.__scopedHash,
-          css: _styles2.default.__scoped
-        })
+            label
+          ),
+          _react2.default.createElement(
+            'div',
+            {
+              className: 'jsx-' + _styles2.default.__scopedHash + ' jsx-' + _styles3.fieldset.__scopedHash + ' jsx-' + _styles3.label.__scopedHash + ' ' + 'stars'
+            },
+            Array.from(new Array(max), function (value, index) {
+              return index;
+            }).map(function (item) {
+              var value = item + 1;
+
+              return _react2.default.createElement(
+                'label',
+                { key: item, htmlFor: input.name + '-' + value, className: 'jsx-' + _styles2.default.__scopedHash + ' jsx-' + _styles3.fieldset.__scopedHash + ' jsx-' + _styles3.label.__scopedHash + ' ' + 'star'
+                },
+                _react2.default.createElement('input', _extends({}, input, { id: input.name + '-' + value, type: 'radio', value: value, className: 'jsx-' + _styles2.default.__scopedHash + ' jsx-' + _styles3.fieldset.__scopedHash + ' jsx-' + _styles3.label.__scopedHash + ' ' + (input.className != null && input.className || '')
+                })),
+                value <= input.value ? _react2.default.createElement(_materialIconsReact2.default, { color: '#45cf7a', icon: 'star', size: 36 }) : _react2.default.createElement(_materialIconsReact2.default, { color: '#babbd0', icon: 'star_outline', size: 36 })
+              );
+            })
+          ),
+          _react2.default.createElement(_style2.default, {
+            styleId: _styles2.default.__scopedHash,
+            css: _styles2.default.__scoped
+          }),
+          _react2.default.createElement(_style2.default, {
+            styleId: _styles3.fieldset.__scopedHash,
+            css: _styles3.fieldset.__scoped
+          }),
+          _react2.default.createElement(_style2.default, {
+            styleId: _styles3.label.__scopedHash,
+            css: _styles3.label.__scoped
+          })
+        )
       );
     }
   }]);
@@ -104,8 +115,14 @@ var StarPicker = function (_Component) {
 
 exports.default = StarPicker;
 
+
 StarPicker.propTypes = {
-  rank: _propTypes2.default.number.isRequired,
-  amount: _propTypes2.default.number.isRequired,
-  onClick: _propTypes2.default.func.isRequired
+  containerClassName: _propTypes2.default.string,
+  label: _propTypes2.default.string,
+  max: _propTypes2.default.number.isRequired
+};
+
+StarPicker.defaultProps = {
+  containerClassName: '',
+  label: ''
 };

@@ -44,7 +44,7 @@ export default css`
       margin: 5px 11px;
 
       input {
-        line-height: 24px;
+        line-height: 16px;
         background: transparent;
 
         border: none;

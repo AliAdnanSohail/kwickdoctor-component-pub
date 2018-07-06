@@ -26,15 +26,18 @@ export default css`
     }
 
     &.rectangle-22 {
+      display: flex;
+      align-items: center;
       padding: 21px 18px;
-      width: 413px;
+      width: 392px;
+      height: 78px;
       border-radius: 4px;
       background-color: #ffffff;
       box-shadow: 0 2px 40px 0 rgba(0, 0, 0, 0.05);
     }
 
     .circle {
-      margin: 5px 15px 0 0;
+      margin: 0 15px 0 0;
       float: left;
       display: block;
       height: 7px;
@@ -48,17 +51,23 @@ export default css`
     }
 
     .message {
+      display: flex;
+      align-items: center;
       float: left;
-      width: 335px;
+      width: 303px;
+      height: 36px;
       color: #222328;
+      font-family: Montserrat;
+      font-size: 14px;
       font-weight: 500;
       line-height: 18px;
       word-break: break-all;
     }
 
     .icons-close {
-      padding-top: 2px;
-      width: 16px;
+      padding-top: 5px;
+      width: 21px;
+      height: 21px;
       float: right;
     }
 
@@ -69,8 +78,8 @@ export default css`
     .icon {
       padding: 0;
       margin: 0;
-      height: 14px;
-      width: 14px;
+      height: 13px;
+      width: 13px;
       transition: all 0.3s;
       border: none;
       outline: none;

@@ -202,7 +202,7 @@ exports[`Storyshots Calendar default 1`] = `
         className="jsx-431550909"
       >
         <button
-          className="jsx-3065497712 day day--selected"
+          className="jsx-3065497712 day day--disabled"
           data-day="2018-07-04"
           onClick={[Function]}
           type="button"
@@ -218,7 +218,7 @@ exports[`Storyshots Calendar default 1`] = `
         className="jsx-431550909"
       >
         <button
-          className="jsx-3065497712 day"
+          className="jsx-3065497712 day day--selected"
           data-day="2018-07-05"
           onClick={[Function]}
           type="button"
@@ -815,7 +815,7 @@ exports[`Storyshots Form Fields Autocomplete 1`] = `
       .autocomplete.focused,.autocomplete:focus{outline:none;border-color:#0c97f9;}
       .autocomplete.invalid,.autocomplete.invalid:focus{border-color:#FF5572;}
       .autocomplete__input{position:relative;margin:5px 11px;}
-      .autocomplete__input input{line-height:24px;background:transparent;border:none;border-radius:inherit;font-style:normal;font-weight:normal;font-size:0.875rem;}
+      .autocomplete__input input{line-height:16px;background:transparent;border:none;border-radius:inherit;font-style:normal;font-weight:normal;font-size:0.875rem;}
       .autocomplete__input input::-webkit-input-placeholder{color:#828393;}
       .autocomplete__input input::-moz-placeholder{color:#828393;}
       .autocomplete__input input:-ms-input-placeholder{color:#828393;}
@@ -1017,7 +1017,7 @@ exports[`Storyshots Form Fields DatePicker 1`] = `
             onFocus={[Function]}
             onKeyDown={[Function]}
             type="text"
-            value="04 Jul, 2018"
+            value="05 Jul, 2018"
           />
         </div>
       </div>
@@ -1346,32 +1346,32 @@ exports[`Storyshots Form Fields Select 1`] = `
       Label
     </label>
     <div
-      className="jsx-2653998143 select-container"
+      className="jsx-3634566321 select-container"
     >
       <select
-        className="jsx-2653998143 "
+        className="jsx-3634566321 "
         name="Name"
       >
         <option
-          className="jsx-2653998143"
+          className="jsx-3634566321"
           value="one"
         >
           one
         </option>
         <option
-          className="jsx-2653998143"
+          className="jsx-3634566321"
           value="two"
         >
           two
         </option>
         <option
-          className="jsx-2653998143"
+          className="jsx-3634566321"
           value="three"
         >
           three
         </option>
         <option
-          className="jsx-2653998143"
+          className="jsx-3634566321"
           value="four"
         >
           four
@@ -1410,162 +1410,138 @@ exports[`Storyshots Form Fields StarPicker 1`] = `
     }
   }
 >
-  <label
-    className="jsx-1505936054 star"
-    htmlFor="1-star1"
+  <div
+    className=""
   >
-    <input
-      checked={false}
-      className="jsx-1505936054"
-      id="1-star1"
-      name={1}
-      onChange={[Function]}
-      onClick={[Function]}
-      type="radio"
-      value={1}
-    />
-    <i
-      className="material-icons md-24 md-dark "
-      style={
-        Object {
-          "color": "",
-          "fontSize": "md-24",
-        }
-      }
+    <fieldset
+      className="jsx-2821742674 jsx-904933394 jsx-4038665278 fieldset"
     >
-      star
-    </i>
-  </label>
-  <label
-    className="jsx-1505936054 star"
-    htmlFor="2-star2"
-  >
-    <input
-      checked={false}
-      className="jsx-1505936054"
-      id="2-star2"
-      name={2}
-      onChange={[Function]}
-      onClick={[Function]}
-      type="radio"
-      value={2}
-    />
-    <i
-      className="material-icons md-24 md-dark "
-      style={
-        Object {
-          "color": "",
-          "fontSize": "md-24",
-        }
-      }
-    >
-      star
-    </i>
-  </label>
-  <label
-    className="jsx-1505936054 star"
-    htmlFor="3-star3"
-  >
-    <input
-      checked={true}
-      className="jsx-1505936054"
-      id="3-star3"
-      name={3}
-      onChange={[Function]}
-      onClick={[Function]}
-      type="radio"
-      value={3}
-    />
-    <i
-      className="material-icons md-24 md-dark "
-      style={
-        Object {
-          "color": "",
-          "fontSize": "md-24",
-        }
-      }
-    >
-      star
-    </i>
-  </label>
-  <label
-    className="jsx-1505936054 star"
-    htmlFor="4-star4"
-  >
-    <input
-      checked={false}
-      className="jsx-1505936054"
-      id="4-star4"
-      name={4}
-      onChange={[Function]}
-      onClick={[Function]}
-      type="radio"
-      value={4}
-    />
-    <i
-      className="material-icons md-24 md-dark "
-      style={
-        Object {
-          "color": "",
-          "fontSize": "md-24",
-        }
-      }
-    >
-      star
-    </i>
-  </label>
-  <label
-    className="jsx-1505936054 star"
-    htmlFor="5-star5"
-  >
-    <input
-      checked={false}
-      className="jsx-1505936054"
-      id="5-star5"
-      name={5}
-      onChange={[Function]}
-      onClick={[Function]}
-      type="radio"
-      value={5}
-    />
-    <i
-      className="material-icons md-24 md-dark "
-      style={
-        Object {
-          "color": "",
-          "fontSize": "md-24",
-        }
-      }
-    >
-      star
-    </i>
-  </label>
-  <label
-    className="jsx-1505936054 star"
-    htmlFor="6-star6"
-  >
-    <input
-      checked={false}
-      className="jsx-1505936054"
-      id="6-star6"
-      name={6}
-      onChange={[Function]}
-      onClick={[Function]}
-      type="radio"
-      value={6}
-    />
-    <i
-      className="material-icons md-24 md-dark "
-      style={
-        Object {
-          "color": "",
-          "fontSize": "md-24",
-        }
-      }
-    >
-      star
-    </i>
-  </label>
+      <legend
+        className="jsx-2821742674 jsx-904933394 jsx-4038665278"
+      >
+        Label
+      </legend>
+      <div
+        className="jsx-2821742674 jsx-904933394 jsx-4038665278 stars"
+      >
+        <label
+          className="jsx-2821742674 jsx-904933394 jsx-4038665278 star"
+          htmlFor="rate-1"
+        >
+          <input
+            className="jsx-2821742674 jsx-904933394 jsx-4038665278 "
+            id="rate-1"
+            name="rate"
+            type="radio"
+            value={1}
+          />
+          <i
+            className="material-icons 36 md-dark "
+            style={
+              Object {
+                "color": "#45cf7a",
+                "fontSize": 36,
+              }
+            }
+          >
+            star
+          </i>
+        </label>
+        <label
+          className="jsx-2821742674 jsx-904933394 jsx-4038665278 star"
+          htmlFor="rate-2"
+        >
+          <input
+            className="jsx-2821742674 jsx-904933394 jsx-4038665278 "
+            id="rate-2"
+            name="rate"
+            type="radio"
+            value={2}
+          />
+          <i
+            className="material-icons 36 md-dark "
+            style={
+              Object {
+                "color": "#45cf7a",
+                "fontSize": 36,
+              }
+            }
+          >
+            star
+          </i>
+        </label>
+        <label
+          className="jsx-2821742674 jsx-904933394 jsx-4038665278 star"
+          htmlFor="rate-3"
+        >
+          <input
+            className="jsx-2821742674 jsx-904933394 jsx-4038665278 "
+            id="rate-3"
+            name="rate"
+            type="radio"
+            value={3}
+          />
+          <i
+            className="material-icons 36 md-dark "
+            style={
+              Object {
+                "color": "#45cf7a",
+                "fontSize": 36,
+              }
+            }
+          >
+            star
+          </i>
+        </label>
+        <label
+          className="jsx-2821742674 jsx-904933394 jsx-4038665278 star"
+          htmlFor="rate-4"
+        >
+          <input
+            className="jsx-2821742674 jsx-904933394 jsx-4038665278 "
+            id="rate-4"
+            name="rate"
+            type="radio"
+            value={4}
+          />
+          <i
+            className="material-icons 36 md-dark "
+            style={
+              Object {
+                "color": "#babbd0",
+                "fontSize": 36,
+              }
+            }
+          >
+            star_outline
+          </i>
+        </label>
+        <label
+          className="jsx-2821742674 jsx-904933394 jsx-4038665278 star"
+          htmlFor="rate-5"
+        >
+          <input
+            className="jsx-2821742674 jsx-904933394 jsx-4038665278 "
+            id="rate-5"
+            name="rate"
+            type="radio"
+            value={5}
+          />
+          <i
+            className="material-icons 36 md-dark "
+            style={
+              Object {
+                "color": "#babbd0",
+                "fontSize": 36,
+              }
+            }
+          >
+            star_outline
+          </i>
+        </label>
+      </div>
+    </fieldset>
+  </div>
 </div>
 `;
 
@@ -1950,7 +1926,7 @@ exports[`Storyshots Notification default 1`] = `
 </div>
 `;
 
-exports[`Storyshots Paginator default 1`] = `
+exports[`Storyshots Pagination default 1`] = `
 <div
   style={
     Object {
@@ -2247,13 +2223,13 @@ exports[`Storyshots Toast default 1`] = `
       .toast-box{max-height:100%;box-sizing:border-box;margin-bottom:10px;color:#2A2A30;-webkit-transition:-webkit-transform 200ms ease-out,opacity 200ms ease-out,max-height 100ms ease 200ms,padding 100ms ease 300ms,margin 100ms ease 400ms;-webkit-transition:transform 200ms ease-out,opacity 200ms ease-out,max-height 100ms ease 200ms,padding 100ms ease 300ms,margin 100ms ease 400ms;transition:transform 200ms ease-out,opacity 200ms ease-out,max-height 100ms ease 200ms,padding 100ms ease 300ms,margin 100ms ease 400ms;}
       .toast-box.fade-enter{opacity:0;-webkit-transform:translate(40px);-ms-transform:translate(40px);transform:translate(40px);}
       .toast-box.fade-exit-active{opacity:0;-webkit-transform:translate(40px);-ms-transform:translate(40px);transform:translate(40px);max-height:0 !important;margin:0 !important;padding:0 !important;overflow:hidden;}
-      .toast-box.rectangle-22{padding:21px 18px;width:413px;border-radius:4px;background-color:#ffffff;box-shadow:0 2px 40px 0 rgba(0,0,0,0.05);}
-      .toast-box .circle{margin:5px 15px 0 0;float:left;display:block;height:7px;width:7px;background-color:#222328;border-radius:50%;}
+      .toast-box.rectangle-22{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;padding:21px 18px;width:392px;height:78px;border-radius:4px;background-color:#ffffff;box-shadow:0 2px 40px 0 rgba(0,0,0,0.05);}
+      .toast-box .circle{margin:0 15px 0 0;float:left;display:block;height:7px;width:7px;background-color:#222328;border-radius:50%;}
       .toast-box.primary .circle{background-color:#0c97f9;}
-      .toast-box .message{float:left;width:335px;color:#222328;font-weight:500;line-height:18px;word-break:break-all;}
-      .toast-box .icons-close{padding-top:2px;width:16px;float:right;}
+      .toast-box .message{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;float:left;width:303px;height:36px;color:#222328;font-family:Montserrat;font-size:14px;font-weight:500;line-height:18px;word-break:break-all;}
+      .toast-box .icons-close{padding-top:5px;width:21px;height:21px;float:right;}
       .toast-box .clear{clear:both;}
-      .toast-box .icon{padding:0;margin:0;height:14px;width:14px;-webkit-transition:all 0.3s;transition:all 0.3s;border:none;outline:none;opacity:0.6;cursor:pointer;background-repeat:no-repeat;background-color:transparent;}
+      .toast-box .icon{padding:0;margin:0;height:13px;width:13px;-webkit-transition:all 0.3s;transition:all 0.3s;border:none;outline:none;opacity:0.6;cursor:pointer;background-repeat:no-repeat;background-color:transparent;}
       .toast-box .icon:hover{opacity:1;}
       .toast-box .icon .material-icons{height:16px;width:16px;display:inline-block;font-size:1rem;}
       .toast-container{position:fixed;top:10px;left:50%;margin-left:-196px;}
