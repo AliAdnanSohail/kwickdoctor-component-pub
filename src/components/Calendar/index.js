@@ -43,7 +43,7 @@ export default class Calendar extends Component {
     const days = [];
     const momentDays = moment().range(start, end).by('days');
 
-    for(const day of momentDays){
+    for (const day of momentDays) {
       days.push(day);
     }
 
