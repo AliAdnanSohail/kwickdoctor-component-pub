@@ -20,7 +20,7 @@ export default class DatePicker extends Component {
 
     const date = moment(props.input.value, props.dateFormat, true);
 
-    if(date.isValid()){
+    if (date.isValid()) {
       this.state = { value: moment(props.input.value) };
     }else{
       this.state = { value: moment() };
