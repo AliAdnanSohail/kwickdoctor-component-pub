@@ -7,7 +7,7 @@ export { default as LinkButton } from './LinkButton';
 export { default as Loader } from './Loader';
 export { default as Modal } from './Modal';
 export { default as Notification } from './Notification';
-export { default as Paginator } from './Paginator';
+export { default as Pagination } from './Pagination';
 export { default as Toast } from './Toast';
 export { default as ToastManager } from './Toast/Manager';
 export { default as VideoPlayer } from './VideoPlayer';

@@ -37,16 +37,16 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var Paginator = function (_Component) {
-  _inherits(Paginator, _Component);
+var Pagination = function (_Component) {
+  _inherits(Pagination, _Component);
 
-  function Paginator() {
-    _classCallCheck(this, Paginator);
+  function Pagination() {
+    _classCallCheck(this, Pagination);
 
-    return _possibleConstructorReturn(this, (Paginator.__proto__ || Object.getPrototypeOf(Paginator)).apply(this, arguments));
+    return _possibleConstructorReturn(this, (Pagination.__proto__ || Object.getPrototypeOf(Pagination)).apply(this, arguments));
   }
 
-  _createClass(Paginator, [{
+  _createClass(Pagination, [{
     key: 'render',
     value: function render() {
       return _react2.default.createElement(
@@ -70,20 +70,20 @@ var Paginator = function (_Component) {
     }
   }]);
 
-  return Paginator;
+  return Pagination;
 }(_react.Component);
 
-exports.default = Paginator;
+exports.default = Pagination;
 
 
-Paginator.propTypes = {
+Pagination.propTypes = {
   marginPagesDisplayed: _propTypes2.default.number,
   onPageChange: _propTypes2.default.func,
   pageCount: _propTypes2.default.number,
   pageRangeDisplayed: _propTypes2.default.number
 };
 
-Paginator.defaultProps = {
+Pagination.defaultProps = {
   marginPagesDisplayed: 2,
   onPageChange: function onPageChange() {},
   pageCount: 0,

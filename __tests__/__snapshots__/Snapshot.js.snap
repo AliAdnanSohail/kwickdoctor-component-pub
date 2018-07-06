@@ -1410,162 +1410,138 @@ exports[`Storyshots Form Fields StarPicker 1`] = `
     }
   }
 >
-  <label
-    className="jsx-1505936054 star"
-    htmlFor="1-star1"
+  <div
+    className=""
   >
-    <input
-      checked={false}
-      className="jsx-1505936054"
-      id="1-star1"
-      name={1}
-      onChange={[Function]}
-      onClick={[Function]}
-      type="radio"
-      value={1}
-    />
-    <i
-      className="material-icons md-24 md-dark "
-      style={
-        Object {
-          "color": "",
-          "fontSize": "md-24",
-        }
-      }
+    <fieldset
+      className="jsx-2821742674 jsx-904933394 jsx-4038665278 fieldset"
     >
-      star
-    </i>
-  </label>
-  <label
-    className="jsx-1505936054 star"
-    htmlFor="2-star2"
-  >
-    <input
-      checked={false}
-      className="jsx-1505936054"
-      id="2-star2"
-      name={2}
-      onChange={[Function]}
-      onClick={[Function]}
-      type="radio"
-      value={2}
-    />
-    <i
-      className="material-icons md-24 md-dark "
-      style={
-        Object {
-          "color": "",
-          "fontSize": "md-24",
-        }
-      }
-    >
-      star
-    </i>
-  </label>
-  <label
-    className="jsx-1505936054 star"
-    htmlFor="3-star3"
-  >
-    <input
-      checked={true}
-      className="jsx-1505936054"
-      id="3-star3"
-      name={3}
-      onChange={[Function]}
-      onClick={[Function]}
-      type="radio"
-      value={3}
-    />
-    <i
-      className="material-icons md-24 md-dark "
-      style={
-        Object {
-          "color": "",
-          "fontSize": "md-24",
-        }
-      }
-    >
-      star
-    </i>
-  </label>
-  <label
-    className="jsx-1505936054 star"
-    htmlFor="4-star4"
-  >
-    <input
-      checked={false}
-      className="jsx-1505936054"
-      id="4-star4"
-      name={4}
-      onChange={[Function]}
-      onClick={[Function]}
-      type="radio"
-      value={4}
-    />
-    <i
-      className="material-icons md-24 md-dark "
-      style={
-        Object {
-          "color": "",
-          "fontSize": "md-24",
-        }
-      }
-    >
-      star
-    </i>
-  </label>
-  <label
-    className="jsx-1505936054 star"
-    htmlFor="5-star5"
-  >
-    <input
-      checked={false}
-      className="jsx-1505936054"
-      id="5-star5"
-      name={5}
-      onChange={[Function]}
-      onClick={[Function]}
-      type="radio"
-      value={5}
-    />
-    <i
-      className="material-icons md-24 md-dark "
-      style={
-        Object {
-          "color": "",
-          "fontSize": "md-24",
-        }
-      }
-    >
-      star
-    </i>
-  </label>
-  <label
-    className="jsx-1505936054 star"
-    htmlFor="6-star6"
-  >
-    <input
-      checked={false}
-      className="jsx-1505936054"
-      id="6-star6"
-      name={6}
-      onChange={[Function]}
-      onClick={[Function]}
-      type="radio"
-      value={6}
-    />
-    <i
-      className="material-icons md-24 md-dark "
-      style={
-        Object {
-          "color": "",
-          "fontSize": "md-24",
-        }
-      }
-    >
-      star
-    </i>
-  </label>
+      <legend
+        className="jsx-2821742674 jsx-904933394 jsx-4038665278"
+      >
+        Label
+      </legend>
+      <div
+        className="jsx-2821742674 jsx-904933394 jsx-4038665278 stars"
+      >
+        <label
+          className="jsx-2821742674 jsx-904933394 jsx-4038665278 star"
+          htmlFor="rate-1"
+        >
+          <input
+            className="jsx-2821742674 jsx-904933394 jsx-4038665278 "
+            id="rate-1"
+            name="rate"
+            type="radio"
+            value={1}
+          />
+          <i
+            className="material-icons 36 md-dark "
+            style={
+              Object {
+                "color": "#45cf7a",
+                "fontSize": 36,
+              }
+            }
+          >
+            star
+          </i>
+        </label>
+        <label
+          className="jsx-2821742674 jsx-904933394 jsx-4038665278 star"
+          htmlFor="rate-2"
+        >
+          <input
+            className="jsx-2821742674 jsx-904933394 jsx-4038665278 "
+            id="rate-2"
+            name="rate"
+            type="radio"
+            value={2}
+          />
+          <i
+            className="material-icons 36 md-dark "
+            style={
+              Object {
+                "color": "#45cf7a",
+                "fontSize": 36,
+              }
+            }
+          >
+            star
+          </i>
+        </label>
+        <label
+          className="jsx-2821742674 jsx-904933394 jsx-4038665278 star"
+          htmlFor="rate-3"
+        >
+          <input
+            className="jsx-2821742674 jsx-904933394 jsx-4038665278 "
+            id="rate-3"
+            name="rate"
+            type="radio"
+            value={3}
+          />
+          <i
+            className="material-icons 36 md-dark "
+            style={
+              Object {
+                "color": "#45cf7a",
+                "fontSize": 36,
+              }
+            }
+          >
+            star
+          </i>
+        </label>
+        <label
+          className="jsx-2821742674 jsx-904933394 jsx-4038665278 star"
+          htmlFor="rate-4"
+        >
+          <input
+            className="jsx-2821742674 jsx-904933394 jsx-4038665278 "
+            id="rate-4"
+            name="rate"
+            type="radio"
+            value={4}
+          />
+          <i
+            className="material-icons 36 md-dark "
+            style={
+              Object {
+                "color": "#babbd0",
+                "fontSize": 36,
+              }
+            }
+          >
+            star_outline
+          </i>
+        </label>
+        <label
+          className="jsx-2821742674 jsx-904933394 jsx-4038665278 star"
+          htmlFor="rate-5"
+        >
+          <input
+            className="jsx-2821742674 jsx-904933394 jsx-4038665278 "
+            id="rate-5"
+            name="rate"
+            type="radio"
+            value={5}
+          />
+          <i
+            className="material-icons 36 md-dark "
+            style={
+              Object {
+                "color": "#babbd0",
+                "fontSize": 36,
+              }
+            }
+          >
+            star_outline
+          </i>
+        </label>
+      </div>
+    </fieldset>
+  </div>
 </div>
 `;
 
@@ -1950,7 +1926,7 @@ exports[`Storyshots Notification default 1`] = `
 </div>
 `;
 
-exports[`Storyshots Paginator default 1`] = `
+exports[`Storyshots Pagination default 1`] = `
 <div
   style={
     Object {
