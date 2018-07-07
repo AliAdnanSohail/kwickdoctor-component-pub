@@ -14,14 +14,16 @@ export default class Modal extends Component {
   }
 
   componentDidUpdate(previousProps) {
-    if (previousProps.active !== this.props.active && !this.props.active) {
-      this.setState({ modalHasEntered: false }, () => {
-        this.timeoutSecond = setTimeout(() => {
-          this.setState({ active: false });
-        }, 300);
-      });
-    } else if (previousProps.active !== this.props.active){
-      this.setState({ active: true });
+    if (previousProps.active !== this.props.active) {
+      if (this.props.active) {
+        this.setState({ active: true });
+      } else {
+        this.setState({ modalHasEntered: false }, () => {
+          this.timeoutSecond = setTimeout(() => {
+            this.setState({ active: false });
+          }, 300);
+        });
+      }
     }
   }
 
