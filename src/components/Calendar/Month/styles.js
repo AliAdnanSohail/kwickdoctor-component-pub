@@ -19,8 +19,8 @@ export default css`
         display: flex;
         flex-wrap: wrap;
 
-        li{
-          flex-basis: 14.2857143%;
+        li {
+          flex-basis: calc(100% / 7);
         }
       }
   }
@@ -30,8 +30,8 @@ export default css`
       display: flex;
       flex-wrap: wrap;
 
-      li{
-        flex-basis: 14.2857143%;
+      li {
+        flex-basis: calc(100% / 7);
       }
     }
   }

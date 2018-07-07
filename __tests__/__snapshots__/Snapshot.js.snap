@@ -148,10 +148,10 @@ exports[`Storyshots Calendar default 1`] = `
       </ul>
     </div>
     <ul
-      className="jsx-431550909 month"
+      className="jsx-2528795015 month"
     >
       <li
-        className="jsx-431550909"
+        className="jsx-2528795015"
       >
         <button
           className="jsx-3065497712 day day--disabled"
@@ -167,7 +167,7 @@ exports[`Storyshots Calendar default 1`] = `
         </button>
       </li>
       <li
-        className="jsx-431550909"
+        className="jsx-2528795015"
       >
         <button
           className="jsx-3065497712 day day--disabled"
@@ -183,7 +183,7 @@ exports[`Storyshots Calendar default 1`] = `
         </button>
       </li>
       <li
-        className="jsx-431550909"
+        className="jsx-2528795015"
       >
         <button
           className="jsx-3065497712 day day--disabled"
@@ -199,7 +199,7 @@ exports[`Storyshots Calendar default 1`] = `
         </button>
       </li>
       <li
-        className="jsx-431550909"
+        className="jsx-2528795015"
       >
         <button
           className="jsx-3065497712 day day--disabled"
@@ -215,7 +215,7 @@ exports[`Storyshots Calendar default 1`] = `
         </button>
       </li>
       <li
-        className="jsx-431550909"
+        className="jsx-2528795015"
       >
         <button
           className="jsx-3065497712 day day--disabled"
@@ -231,10 +231,10 @@ exports[`Storyshots Calendar default 1`] = `
         </button>
       </li>
       <li
-        className="jsx-431550909"
+        className="jsx-2528795015"
       >
         <button
-          className="jsx-3065497712 day day--selected"
+          className="jsx-3065497712 day day--disabled"
           data-day="2018-07-06"
           onClick={[Function]}
           type="button"
@@ -247,10 +247,10 @@ exports[`Storyshots Calendar default 1`] = `
         </button>
       </li>
       <li
-        className="jsx-431550909"
+        className="jsx-2528795015"
       >
         <button
-          className="jsx-3065497712 day"
+          className="jsx-3065497712 day day--selected"
           data-day="2018-07-07"
           onClick={[Function]}
           type="button"
@@ -263,7 +263,7 @@ exports[`Storyshots Calendar default 1`] = `
         </button>
       </li>
       <li
-        className="jsx-431550909"
+        className="jsx-2528795015"
       >
         <button
           className="jsx-3065497712 day"
@@ -279,7 +279,7 @@ exports[`Storyshots Calendar default 1`] = `
         </button>
       </li>
       <li
-        className="jsx-431550909"
+        className="jsx-2528795015"
       >
         <button
           className="jsx-3065497712 day"
@@ -295,7 +295,7 @@ exports[`Storyshots Calendar default 1`] = `
         </button>
       </li>
       <li
-        className="jsx-431550909"
+        className="jsx-2528795015"
       >
         <button
           className="jsx-3065497712 day"
@@ -311,7 +311,7 @@ exports[`Storyshots Calendar default 1`] = `
         </button>
       </li>
       <li
-        className="jsx-431550909"
+        className="jsx-2528795015"
       >
         <button
           className="jsx-3065497712 day"
@@ -327,7 +327,7 @@ exports[`Storyshots Calendar default 1`] = `
         </button>
       </li>
       <li
-        className="jsx-431550909"
+        className="jsx-2528795015"
       >
         <button
           className="jsx-3065497712 day"
@@ -343,7 +343,7 @@ exports[`Storyshots Calendar default 1`] = `
         </button>
       </li>
       <li
-        className="jsx-431550909"
+        className="jsx-2528795015"
       >
         <button
           className="jsx-3065497712 day"
@@ -359,7 +359,7 @@ exports[`Storyshots Calendar default 1`] = `
         </button>
       </li>
       <li
-        className="jsx-431550909"
+        className="jsx-2528795015"
       >
         <button
           className="jsx-3065497712 day"
@@ -375,7 +375,7 @@ exports[`Storyshots Calendar default 1`] = `
         </button>
       </li>
       <li
-        className="jsx-431550909"
+        className="jsx-2528795015"
       >
         <button
           className="jsx-3065497712 day"
@@ -391,7 +391,7 @@ exports[`Storyshots Calendar default 1`] = `
         </button>
       </li>
       <li
-        className="jsx-431550909"
+        className="jsx-2528795015"
       >
         <button
           className="jsx-3065497712 day"
@@ -407,7 +407,7 @@ exports[`Storyshots Calendar default 1`] = `
         </button>
       </li>
       <li
-        className="jsx-431550909"
+        className="jsx-2528795015"
       >
         <button
           className="jsx-3065497712 day"
@@ -423,7 +423,7 @@ exports[`Storyshots Calendar default 1`] = `
         </button>
       </li>
       <li
-        className="jsx-431550909"
+        className="jsx-2528795015"
       >
         <button
           className="jsx-3065497712 day"
@@ -439,7 +439,7 @@ exports[`Storyshots Calendar default 1`] = `
         </button>
       </li>
       <li
-        className="jsx-431550909"
+        className="jsx-2528795015"
       >
         <button
           className="jsx-3065497712 day"
@@ -455,7 +455,7 @@ exports[`Storyshots Calendar default 1`] = `
         </button>
       </li>
       <li
-        className="jsx-431550909"
+        className="jsx-2528795015"
       >
         <button
           className="jsx-3065497712 day"
@@ -471,7 +471,7 @@ exports[`Storyshots Calendar default 1`] = `
         </button>
       </li>
       <li
-        className="jsx-431550909"
+        className="jsx-2528795015"
       >
         <button
           className="jsx-3065497712 day"
@@ -487,7 +487,7 @@ exports[`Storyshots Calendar default 1`] = `
         </button>
       </li>
       <li
-        className="jsx-431550909"
+        className="jsx-2528795015"
       >
         <button
           className="jsx-3065497712 day"
@@ -503,7 +503,7 @@ exports[`Storyshots Calendar default 1`] = `
         </button>
       </li>
       <li
-        className="jsx-431550909"
+        className="jsx-2528795015"
       >
         <button
           className="jsx-3065497712 day"
@@ -519,7 +519,7 @@ exports[`Storyshots Calendar default 1`] = `
         </button>
       </li>
       <li
-        className="jsx-431550909"
+        className="jsx-2528795015"
       >
         <button
           className="jsx-3065497712 day"
@@ -535,7 +535,7 @@ exports[`Storyshots Calendar default 1`] = `
         </button>
       </li>
       <li
-        className="jsx-431550909"
+        className="jsx-2528795015"
       >
         <button
           className="jsx-3065497712 day"
@@ -551,7 +551,7 @@ exports[`Storyshots Calendar default 1`] = `
         </button>
       </li>
       <li
-        className="jsx-431550909"
+        className="jsx-2528795015"
       >
         <button
           className="jsx-3065497712 day"
@@ -567,7 +567,7 @@ exports[`Storyshots Calendar default 1`] = `
         </button>
       </li>
       <li
-        className="jsx-431550909"
+        className="jsx-2528795015"
       >
         <button
           className="jsx-3065497712 day"
@@ -583,7 +583,7 @@ exports[`Storyshots Calendar default 1`] = `
         </button>
       </li>
       <li
-        className="jsx-431550909"
+        className="jsx-2528795015"
       >
         <button
           className="jsx-3065497712 day"
@@ -599,7 +599,7 @@ exports[`Storyshots Calendar default 1`] = `
         </button>
       </li>
       <li
-        className="jsx-431550909"
+        className="jsx-2528795015"
       >
         <button
           className="jsx-3065497712 day"
@@ -615,7 +615,7 @@ exports[`Storyshots Calendar default 1`] = `
         </button>
       </li>
       <li
-        className="jsx-431550909"
+        className="jsx-2528795015"
       >
         <button
           className="jsx-3065497712 day"
@@ -631,7 +631,7 @@ exports[`Storyshots Calendar default 1`] = `
         </button>
       </li>
       <li
-        className="jsx-431550909"
+        className="jsx-2528795015"
       >
         <button
           className="jsx-3065497712 day"
@@ -647,7 +647,7 @@ exports[`Storyshots Calendar default 1`] = `
         </button>
       </li>
       <li
-        className="jsx-431550909"
+        className="jsx-2528795015"
       >
         <button
           className="jsx-3065497712 day"
@@ -663,7 +663,7 @@ exports[`Storyshots Calendar default 1`] = `
         </button>
       </li>
       <li
-        className="jsx-431550909"
+        className="jsx-2528795015"
       >
         <button
           className="jsx-3065497712 day"
@@ -679,7 +679,7 @@ exports[`Storyshots Calendar default 1`] = `
         </button>
       </li>
       <li
-        className="jsx-431550909"
+        className="jsx-2528795015"
       >
         <button
           className="jsx-3065497712 day"
@@ -695,7 +695,7 @@ exports[`Storyshots Calendar default 1`] = `
         </button>
       </li>
       <li
-        className="jsx-431550909"
+        className="jsx-2528795015"
       >
         <button
           className="jsx-3065497712 day"
@@ -1017,7 +1017,7 @@ exports[`Storyshots Form Fields DatePicker 1`] = `
             onFocus={[Function]}
             onKeyDown={[Function]}
             type="text"
-            value="06 Jul, 2018"
+            value="07 Jul, 2018"
           />
         </div>
       </div>
