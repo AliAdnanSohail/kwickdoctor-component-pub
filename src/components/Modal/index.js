@@ -13,8 +13,8 @@ export default class Modal extends Component {
     this.state = { modalHasEntered: false, active: props.active };
   }
 
-  componentDidUpdate(previousProps) {
-    if (previousProps.active !== this.props.active) {
+  componentDidUpdate(props) {
+    if (props.active !== this.props.active) {
       if (this.props.active) {
         this.setState({ active: true });
       } else {

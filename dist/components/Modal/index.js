@@ -68,10 +68,10 @@ var Modal = function (_Component) {
 
   _createClass(Modal, [{
     key: 'componentDidUpdate',
-    value: function componentDidUpdate(previousProps) {
+    value: function componentDidUpdate(props) {
       var _this2 = this;
 
-      if (previousProps.active !== this.props.active) {
+      if (props.active !== this.props.active) {
         if (this.props.active) {
           this.setState({ active: true });
         } else {
