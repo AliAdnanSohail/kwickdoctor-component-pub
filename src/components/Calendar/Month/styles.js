@@ -12,4 +12,27 @@ export default css`
     list-style: none;
     font-size: 1rem;
   }
+
+  @media (-ms-high-contrast: none),
+    (-ms-high-contrast: active) {
+      .month {
+        display: flex;
+        flex-wrap: wrap;
+
+        li {
+          flex-basis: calc(100% / 7);
+        }
+      }
+  }
+
+  @supports (-ms-ime-align:auto) {
+    .month {
+      display: flex;
+      flex-wrap: wrap;
+
+      li {
+        flex-basis: calc(100% / 7);
+      }
+    }
+  }
 `;

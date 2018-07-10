@@ -7,14 +7,24 @@ import MaterialIcon from 'material-icons-react';
 import { modal, underlay } from './styles';
 
 export default class Modal extends Component {
-  static getDerivedStateFromProps(props, state) {
-    return props.active !== state.active ? { active: props.active } : null;
-  }
-
   constructor(props) {
     super(props);
 
     this.state = { modalHasEntered: false, active: props.active };
+  }
+
+  componentDidUpdate(props) {
+    if (props.active !== this.props.active) {
+      if (this.props.active) {
+        this.setState({ active: true });
+      } else {
+        this.setState({ modalHasEntered: false }, () => {
+          this.timeoutSecond = setTimeout(() => {
+            this.setState({ active: false });
+          }, 300);
+        });
+      }
+    }
   }
 
   componentWillUnmount() {
