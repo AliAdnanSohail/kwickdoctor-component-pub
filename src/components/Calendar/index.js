@@ -40,9 +40,12 @@ export default class Calendar extends Component {
       .endOf('month')
       .weekday(6);
 
-    const days = Array.from(moment()
-      .range(start, end)
-      .by('days'));
+    const days = [];
+    const momentDays = moment().range(start, end).by('days');
+
+    for (const day of momentDays) {
+      days.push(day);
+    }
 
     return days.map(day => ({
       day,
