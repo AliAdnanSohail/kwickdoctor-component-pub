@@ -44,13 +44,6 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 var Modal = function (_Component) {
   _inherits(Modal, _Component);
 
-  _createClass(Modal, null, [{
-    key: 'getDerivedStateFromProps',
-    value: function getDerivedStateFromProps(props, state) {
-      return props.active !== state.active ? { active: props.active } : null;
-    }
-  }]);
-
   function Modal(props) {
     _classCallCheck(this, Modal);
 
@@ -74,6 +67,23 @@ var Modal = function (_Component) {
   }
 
   _createClass(Modal, [{
+    key: 'componentDidUpdate',
+    value: function componentDidUpdate(props) {
+      var _this2 = this;
+
+      if (props.active !== this.props.active) {
+        if (this.props.active) {
+          this.setState({ active: true });
+        } else {
+          this.setState({ modalHasEntered: false }, function () {
+            _this2.timeoutSecond = setTimeout(function () {
+              _this2.setState({ active: false });
+            }, 300);
+          });
+        }
+      }
+    }
+  }, {
     key: 'componentWillUnmount',
     value: function componentWillUnmount() {
       clearTimeout(this.timeout);
