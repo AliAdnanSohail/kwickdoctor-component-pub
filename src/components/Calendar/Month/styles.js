@@ -13,7 +13,7 @@ export default css`
     font-size: 1rem;
   }
 
-  @media all and (-ms-high-contrast: none),
+  @media (-ms-high-contrast: none),
     (-ms-high-contrast: active) {
       .month {
         display: flex;
