@@ -28,6 +28,12 @@ export default class AvatarPicker extends Component {
           });
         });
     }
+
+    if (value && value instanceof Blob) {
+      this.setState({ avatar: value }, () => {
+        onChange(this.state.avatar);
+      });
+    }
   }
 
   componentDidUpdate(props) {
