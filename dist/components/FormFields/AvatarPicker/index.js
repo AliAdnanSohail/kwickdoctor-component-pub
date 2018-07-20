@@ -100,6 +100,12 @@ var AvatarPicker = function (_Component) {
           });
         });
       }
+
+      if (value && value instanceof Blob) {
+        this.setState({ avatar: value }, function () {
+          onChange(_this2.state.avatar);
+        });
+      }
     }
   }, {
     key: 'componentDidUpdate',
