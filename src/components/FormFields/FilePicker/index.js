@@ -8,6 +8,22 @@ import { error as errorStyles } from '../styles';
 import Button from '../../Button';
 
 export default class FilePicker extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = { initialValue: props.initialValue };
+  }
+
+  componentWillMount() {
+    const { input } = this.props;
+    const { initialValue } = this.state;
+
+    if (initialValue) {
+      const fileEmpty = new File([''], 'file-empty', { type: 'image/png' });
+      input.onChange(fileEmpty);
+    }
+  }
+
   handleChange = (event) => {
     const { input } = this.props;
 
@@ -19,9 +35,16 @@ export default class FilePicker extends Component {
   handleRemove = (event) => {
     event.preventDefault();
 
+    const { initialValue } = this.state;
+
     this.input.value = null;
 
     this.props.input.onChange(null);
+
+    if (initialValue) {
+      this.props.onRemove();
+      this.setState({ initialValue: '' });
+    }
   };
 
   render() {
@@ -33,21 +56,25 @@ export default class FilePicker extends Component {
       resetKey,
     } = this.props;
 
-    const classes = classnames('upload-file', { 'upload-file--selected': value.name });
+    const { initialValue } = this.state;
+
+    const classes = classnames('upload-file', {
+      'upload-file--selected': initialValue || value.name,
+    });
 
     return (
       <label className={classes} htmlFor={id}>
         <div className="upload-file__label-container">
-          {value.name ? (
+          {initialValue || value.name ? (
             <MaterialIcon icon="assignment" color="#0c97f9" size={16} />
           ) : (
             <MaterialIcon icon="cloud_upload" color="#0c97f9" size={16} />
           )}
 
-          <div className="upload-file__label">{value.name || placeholder}</div>
+          <div className="upload-file__label">{initialValue || value.name || placeholder}</div>
         </div>
 
-        {value.name && (
+        {(initialValue || value.name) && (
           <Button
             className="upload-file__close-icon"
             flat
@@ -84,7 +111,9 @@ export default class FilePicker extends Component {
 
 FilePicker.propTypes = {
   id: PropTypes.string.isRequired,
+  initialValue: PropTypes.string,
   input: PropTypes.object,
+  onRemove: PropTypes.func,
   placeholder: PropTypes.string,
 };
 
@@ -93,5 +122,7 @@ FilePicker.defaultProps = {
     onChange: () => {},
     value: {},
   },
+  initialValue: '',
+  onRemove: () => {},
   placeholder: 'Upload file',
 };

@@ -52,34 +52,53 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 var FilePicker = function (_Component) {
   _inherits(FilePicker, _Component);
 
-  function FilePicker() {
-    var _ref;
-
-    var _temp, _this, _ret;
-
+  function FilePicker(props) {
     _classCallCheck(this, FilePicker);
 
-    for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
-      args[_key] = arguments[_key];
-    }
+    var _this = _possibleConstructorReturn(this, (FilePicker.__proto__ || Object.getPrototypeOf(FilePicker)).call(this, props));
 
-    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = FilePicker.__proto__ || Object.getPrototypeOf(FilePicker)).call.apply(_ref, [this].concat(args))), _this), _this.handleChange = function (event) {
+    _this.handleChange = function (event) {
       var input = _this.props.input;
 
 
       var file = event.target.files[0];
 
       input.onChange(file);
-    }, _this.handleRemove = function (event) {
+    };
+
+    _this.handleRemove = function (event) {
       event.preventDefault();
+
+      var initialValue = _this.state.initialValue;
+
 
       _this.input.value = null;
 
       _this.props.input.onChange(null);
-    }, _temp), _possibleConstructorReturn(_this, _ret);
+
+      if (initialValue) {
+        _this.props.onRemove();
+        _this.setState({ initialValue: '' });
+      }
+    };
+
+    _this.state = { initialValue: props.initialValue };
+    return _this;
   }
 
   _createClass(FilePicker, [{
+    key: 'componentWillMount',
+    value: function componentWillMount() {
+      var input = this.props.input;
+      var initialValue = this.state.initialValue;
+
+
+      if (initialValue) {
+        var fileEmpty = new File([''], 'file-empty', { type: 'image/png' });
+        input.onChange(fileEmpty);
+      }
+    }
+  }, {
     key: 'render',
     value: function render() {
       var _this2 = this;
@@ -93,7 +112,12 @@ var FilePicker = function (_Component) {
           placeholder = _props.placeholder,
           resetKey = _props.resetKey;
 
-      var classes = (0, _classnames2.default)('upload-file', { 'upload-file--selected': value.name });
+      var initialValue = this.state.initialValue;
+
+
+      var classes = (0, _classnames2.default)('upload-file', {
+        'upload-file--selected': initialValue || value.name
+      });
 
       return _react2.default.createElement(
         'label',
@@ -104,16 +128,16 @@ var FilePicker = function (_Component) {
           {
             className: 'jsx-' + _styles2.default.__scopedHash + ' jsx-' + _styles3.error.__scopedHash + ' ' + 'upload-file__label-container'
           },
-          value.name ? _react2.default.createElement(_materialIconsReact2.default, { icon: 'assignment', color: '#0c97f9', size: 16 }) : _react2.default.createElement(_materialIconsReact2.default, { icon: 'cloud_upload', color: '#0c97f9', size: 16 }),
+          initialValue || value.name ? _react2.default.createElement(_materialIconsReact2.default, { icon: 'assignment', color: '#0c97f9', size: 16 }) : _react2.default.createElement(_materialIconsReact2.default, { icon: 'cloud_upload', color: '#0c97f9', size: 16 }),
           _react2.default.createElement(
             'div',
             {
               className: 'jsx-' + _styles2.default.__scopedHash + ' jsx-' + _styles3.error.__scopedHash + ' ' + 'upload-file__label'
             },
-            value.name || placeholder
+            initialValue || value.name || placeholder
           )
         ),
-        value.name && _react2.default.createElement(_Button2.default, {
+        (initialValue || value.name) && _react2.default.createElement(_Button2.default, {
           className: 'upload-file__close-icon',
           flat: true,
           icon: 'close',
@@ -161,7 +185,9 @@ exports.default = FilePicker;
 
 FilePicker.propTypes = {
   id: _propTypes2.default.string.isRequired,
+  initialValue: _propTypes2.default.string,
   input: _propTypes2.default.object,
+  onRemove: _propTypes2.default.func,
   placeholder: _propTypes2.default.string
 };
 
@@ -170,5 +196,7 @@ FilePicker.defaultProps = {
     onChange: function onChange() {},
     value: {}
   },
+  initialValue: '',
+  onRemove: function onRemove() {},
   placeholder: 'Upload file'
 };
