@@ -13,5 +13,5 @@ storiesOf('Form Fields', module)
   .addDecorator(withTests({ results })('FilePicker'))
   .addDecorator(getStory => <div style={{ padding: '24px' }}>{getStory()}</div>)
   .add('FilePicker', () => (
-    <FilePicker id={text('id', 'id')} initialValue={text('initialValue', 'image.png')} placeholder={text('placeholder', 'placeholder')} />
+    <FilePicker id={text('id', 'id')} placeholder={text('placeholder', 'placeholder')} />
   ));
