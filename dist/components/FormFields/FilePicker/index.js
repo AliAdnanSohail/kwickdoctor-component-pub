@@ -63,60 +63,75 @@ var FilePicker = function (_Component) {
 
       var file = event.target.files[0];
 
+      _this.setState({ file: file });
+
       input.onChange(file);
     };
 
     _this.handleRemove = function (event) {
       event.preventDefault();
 
-      var initialValue = _this.state.initialValue;
-
+      _this.setState({ file: null });
 
       _this.input.value = null;
 
       _this.props.input.onChange(null);
-
-      if (initialValue) {
-        _this.props.onRemove();
-        _this.setState({ initialValue: '' });
-      }
     };
 
-    _this.state = { initialValue: props.initialValue };
+    _this.state = { file: null };
     return _this;
   }
 
   _createClass(FilePicker, [{
     key: 'componentWillMount',
     value: function componentWillMount() {
-      var input = this.props.input;
-      var initialValue = this.state.initialValue;
+      var _this2 = this;
+
+      var _props = this.props,
+          baseURL = _props.baseURL,
+          fileName = _props.fileName,
+          _props$input = _props.input,
+          value = _props$input.value,
+          onChange = _props$input.onChange;
 
 
-      if (initialValue) {
-        var fileEmpty = new File([''], 'file-empty', { type: 'image/png' });
-        input.onChange(fileEmpty);
+      if (value && value instanceof Blob) {
+        this.setState({ file: value }, function () {
+          onChange(value);
+        });
+
+        return;
+      }
+
+      if (fileName && typeof fileName === 'string') {
+        fetch('' + baseURL + fileName, { method: 'GET' }).then(function (response) {
+          return response.blob();
+        }).then(function (file) {
+          _this2.setState({ file: file }, function () {
+            onChange(file);
+          });
+        });
       }
     }
   }, {
     key: 'render',
     value: function render() {
-      var _this2 = this;
+      var _this3 = this;
 
-      var _props = this.props,
-          id = _props.id,
-          _props$input = _props.input,
-          value = _props$input.value,
-          inputProps = _objectWithoutProperties(_props$input, ['value']),
-          meta = _props.meta,
-          placeholder = _props.placeholder,
-          resetKey = _props.resetKey;
+      var _props2 = this.props,
+          id = _props2.id,
+          _props2$input = _props2.input,
+          value = _props2$input.value,
+          inputProps = _objectWithoutProperties(_props2$input, ['value']),
+          meta = _props2.meta,
+          placeholder = _props2.placeholder,
+          resetKey = _props2.resetKey;
 
-      var initialValue = this.state.initialValue;
+      var file = this.state.file;
 
 
       var classes = (0, _classnames2.default)('upload-file', {
-        'upload-file--selected': initialValue || value.name
+        'upload-file--selected': file
       });
 
       return _react2.default.createElement(
@@ -128,16 +143,16 @@ var FilePicker = function (_Component) {
           {
             className: 'jsx-' + _styles2.default.__scopedHash + ' jsx-' + _styles3.error.__scopedHash + ' ' + 'upload-file__label-container'
           },
-          initialValue || value.name ? _react2.default.createElement(_materialIconsReact2.default, { icon: 'assignment', color: '#0c97f9', size: 16 }) : _react2.default.createElement(_materialIconsReact2.default, { icon: 'cloud_upload', color: '#0c97f9', size: 16 }),
+          file ? _react2.default.createElement(_materialIconsReact2.default, { icon: 'assignment', color: '#0c97f9', size: 16 }) : _react2.default.createElement(_materialIconsReact2.default, { icon: 'cloud_upload', color: '#0c97f9', size: 16 }),
           _react2.default.createElement(
             'div',
             {
               className: 'jsx-' + _styles2.default.__scopedHash + ' jsx-' + _styles3.error.__scopedHash + ' ' + 'upload-file__label'
             },
-            initialValue || value.name || placeholder
+            file && file.name || placeholder
           )
         ),
-        (initialValue || value.name) && _react2.default.createElement(_Button2.default, {
+        file && _react2.default.createElement(_Button2.default, {
           className: 'upload-file__close-icon',
           flat: true,
           icon: 'close',
@@ -153,7 +168,7 @@ var FilePicker = function (_Component) {
           },
           onChange: this.handleChange,
           ref: function ref(input) {
-            _this2.input = input;
+            _this3.input = input;
           },
           type: 'file',
           className: 'jsx-' + _styles2.default.__scopedHash + ' jsx-' + _styles3.error.__scopedHash + ' ' + 'input-file'
@@ -184,19 +199,19 @@ exports.default = FilePicker;
 
 
 FilePicker.propTypes = {
+  baseURL: _propTypes2.default.string,
+  fileName: _propTypes2.default.string,
   id: _propTypes2.default.string.isRequired,
-  initialValue: _propTypes2.default.string,
   input: _propTypes2.default.object,
-  onRemove: _propTypes2.default.func,
   placeholder: _propTypes2.default.string
 };
 
 FilePicker.defaultProps = {
+  baseURL: '',
+  fileName: '',
   input: {
     onChange: function onChange() {},
     value: {}
   },
-  initialValue: '',
-  onRemove: function onRemove() {},
   placeholder: 'Upload file'
 };

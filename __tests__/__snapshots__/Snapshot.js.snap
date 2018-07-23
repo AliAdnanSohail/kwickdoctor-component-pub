@@ -490,7 +490,7 @@ exports[`Storyshots Calendar default 1`] = `
         className="jsx-893175612"
       >
         <button
-          className="jsx-3065497712 day day--selected"
+          className="jsx-3065497712 day day--disabled"
           data-day="2018-07-22"
           onClick={[Function]}
           type="button"
@@ -506,7 +506,7 @@ exports[`Storyshots Calendar default 1`] = `
         className="jsx-893175612"
       >
         <button
-          className="jsx-3065497712 day"
+          className="jsx-3065497712 day day--selected"
           data-day="2018-07-23"
           onClick={[Function]}
           type="button"
@@ -1017,7 +1017,7 @@ exports[`Storyshots Form Fields DatePicker 1`] = `
             onFocus={[Function]}
             onKeyDown={[Function]}
             type="text"
-            value="22 Jul, 2018"
+            value="23 Jul, 2018"
           />
         </div>
       </div>
@@ -1073,7 +1073,7 @@ exports[`Storyshots Form Fields FilePicker 1`] = `
   }
 >
   <label
-    className="jsx-2218262938 jsx-2062352977 upload-file upload-file--selected"
+    className="jsx-2218262938 jsx-2062352977 upload-file"
     htmlFor="id"
   >
     <div
@@ -1088,36 +1088,14 @@ exports[`Storyshots Form Fields FilePicker 1`] = `
           }
         }
       >
-        assignment
+        cloud_upload
       </i>
       <div
         className="jsx-2218262938 jsx-2062352977 upload-file__label"
       >
-        image.png
+        placeholder
       </div>
     </div>
-    <button
-      className="jsx-526439197 button upload-file__close-icon button--xsmall button--flat button--with-icon button--rounded"
-      disabled={false}
-      onClick={[Function]}
-      type="button"
-    >
-      <div
-        className="jsx-526439197 button__icon"
-      >
-        <i
-          className="material-icons md-24 md-dark "
-          style={
-            Object {
-              "color": "",
-              "fontSize": "md-24",
-            }
-          }
-        >
-          close
-        </i>
-      </div>
-    </button>
     <input
       className="jsx-2218262938 jsx-2062352977 input-file"
       id="id"
