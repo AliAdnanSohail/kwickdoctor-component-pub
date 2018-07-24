@@ -69,17 +69,11 @@ var Modal = function (_Component) {
   _createClass(Modal, [{
     key: 'componentDidUpdate',
     value: function componentDidUpdate(props) {
-      var _this2 = this;
-
       if (props.active !== this.props.active) {
         if (this.props.active) {
           this.setState({ active: true });
         } else {
-          this.setState({ modalHasEntered: false }, function () {
-            _this2.timeoutSecond = setTimeout(function () {
-              _this2.setState({ active: false });
-            }, 300);
-          });
+          this.handleExit();
         }
       }
     }
