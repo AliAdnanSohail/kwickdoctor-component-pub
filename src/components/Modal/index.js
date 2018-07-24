@@ -18,11 +18,7 @@ export default class Modal extends Component {
       if (this.props.active) {
         this.setState({ active: true });
       } else {
-        this.setState({ modalHasEntered: false }, () => {
-          this.timeoutSecond = setTimeout(() => {
-            this.setState({ active: false });
-          }, 300);
-        });
+        this.handleExit();
       }
     }
   }
