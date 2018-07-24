@@ -24,8 +24,7 @@ exports.default = (0, _renderer2.default)(function (input, label, _ref) {
       id = _ref.id,
       name = _ref.name,
       placeholder = _ref.placeholder,
-      row = _ref.row,
-      value = _ref.value;
+      row = _ref.row;
   return _react2.default.createElement(
     _react.Fragment,
     null,
@@ -36,8 +35,7 @@ exports.default = (0, _renderer2.default)(function (input, label, _ref) {
         id: id,
         name: name,
         placeholder: placeholder,
-        row: row,
-        value: value
+        row: row
       }),
       children
     ),
