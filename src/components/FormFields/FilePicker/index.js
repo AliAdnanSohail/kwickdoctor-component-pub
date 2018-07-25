@@ -17,24 +17,36 @@ export default class FilePicker extends Component {
   componentWillMount() {
     const {
       baseURL,
-      fileName,
       input: { value, onChange },
     } = this.props;
 
-    if (value && value instanceof Blob) {
-      this.setState({ file: value }, () => {
-        onChange(value);
-      });
-
-      return;
-    }
-
-    if (fileName && typeof fileName === 'string') {
-      fetch(`${baseURL}${fileName}`, { method: 'GET' })
+    if (value && typeof value === 'string') {
+      fetch(`${baseURL}${value}`, { method: 'GET' })
         .then(response => response.blob())
         .then((file) => {
           this.setState({ file }, () => {
             onChange(file);
+          });
+        });
+    } else if (value && value instanceof Blob) {
+      this.setState({ file: value }, () => {
+        onChange(value);
+      });
+    }
+  }
+
+  componentDidUpdate(props) {
+    const {
+      baseURL,
+      input: { value, onChange },
+    } = this.props;
+
+    if (props.input.value !== value && value && typeof value === 'string') {
+      fetch(`${baseURL}${value}`, { method: 'GET' })
+        .then(response => response.blob())
+        .then((file) => {
+          this.setState({ file }, () => {
+            onChange(this.state.file);
           });
         });
     }
@@ -124,7 +136,6 @@ export default class FilePicker extends Component {
 
 FilePicker.propTypes = {
   baseURL: PropTypes.string,
-  fileName: PropTypes.string,
   id: PropTypes.string.isRequired,
   input: PropTypes.object,
   placeholder: PropTypes.string,
@@ -132,7 +143,6 @@ FilePicker.propTypes = {
 
 FilePicker.defaultProps = {
   baseURL: '',
-  fileName: '',
   input: {
     onChange: () => {},
     value: {},

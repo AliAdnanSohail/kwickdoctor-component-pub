@@ -89,26 +89,43 @@ var FilePicker = function (_Component) {
 
       var _props = this.props,
           baseURL = _props.baseURL,
-          fileName = _props.fileName,
           _props$input = _props.input,
           value = _props$input.value,
           onChange = _props$input.onChange;
 
 
-      if (value && value instanceof Blob) {
-        this.setState({ file: value }, function () {
-          onChange(value);
-        });
-
-        return;
-      }
-
-      if (fileName && typeof fileName === 'string') {
-        fetch('' + baseURL + fileName, { method: 'GET' }).then(function (response) {
+      if (value && typeof value === 'string') {
+        fetch('' + baseURL + value, { method: 'GET' }).then(function (response) {
           return response.blob();
         }).then(function (file) {
           _this2.setState({ file: file }, function () {
             onChange(file);
+          });
+        });
+      } else if (value && value instanceof Blob) {
+        this.setState({ file: value }, function () {
+          onChange(value);
+        });
+      }
+    }
+  }, {
+    key: 'componentDidUpdate',
+    value: function componentDidUpdate(props) {
+      var _this3 = this;
+
+      var _props2 = this.props,
+          baseURL = _props2.baseURL,
+          _props2$input = _props2.input,
+          value = _props2$input.value,
+          onChange = _props2$input.onChange;
+
+
+      if (props.input.value !== value && value && typeof value === 'string') {
+        fetch('' + baseURL + value, { method: 'GET' }).then(function (response) {
+          return response.blob();
+        }).then(function (file) {
+          _this3.setState({ file: file }, function () {
+            onChange(_this3.state.file);
           });
         });
       }
@@ -116,16 +133,16 @@ var FilePicker = function (_Component) {
   }, {
     key: 'render',
     value: function render() {
-      var _this3 = this;
+      var _this4 = this;
 
-      var _props2 = this.props,
-          id = _props2.id,
-          _props2$input = _props2.input,
-          value = _props2$input.value,
-          inputProps = _objectWithoutProperties(_props2$input, ['value']),
-          meta = _props2.meta,
-          placeholder = _props2.placeholder,
-          resetKey = _props2.resetKey;
+      var _props3 = this.props,
+          id = _props3.id,
+          _props3$input = _props3.input,
+          value = _props3$input.value,
+          inputProps = _objectWithoutProperties(_props3$input, ['value']),
+          meta = _props3.meta,
+          placeholder = _props3.placeholder,
+          resetKey = _props3.resetKey;
 
       var file = this.state.file;
 
@@ -168,7 +185,7 @@ var FilePicker = function (_Component) {
           },
           onChange: this.handleChange,
           ref: function ref(input) {
-            _this3.input = input;
+            _this4.input = input;
           },
           type: 'file',
           className: 'jsx-' + _styles2.default.__scopedHash + ' jsx-' + _styles3.error.__scopedHash + ' ' + 'input-file'
@@ -200,7 +217,6 @@ exports.default = FilePicker;
 
 FilePicker.propTypes = {
   baseURL: _propTypes2.default.string,
-  fileName: _propTypes2.default.string,
   id: _propTypes2.default.string.isRequired,
   input: _propTypes2.default.object,
   placeholder: _propTypes2.default.string
@@ -208,7 +224,6 @@ FilePicker.propTypes = {
 
 FilePicker.defaultProps = {
   baseURL: '',
-  fileName: '',
   input: {
     onChange: function onChange() {},
     value: {}
