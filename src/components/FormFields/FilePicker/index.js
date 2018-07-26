@@ -41,7 +41,7 @@ export default class FilePicker extends Component {
       input: { value, onChange },
     } = this.props;
 
-    if (props.input.value !== value && value && typeof value === 'string') {
+    if (value && props.input.value !== value && typeof value === 'string') {
       fetch(`${baseURL}${value}`, { method: 'GET' })
         .then(response => response.blob())
         .then((file) => {
