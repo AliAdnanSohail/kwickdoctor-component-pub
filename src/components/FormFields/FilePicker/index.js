@@ -8,16 +8,64 @@ import { error as errorStyles } from '../styles';
 import Button from '../../Button';
 
 export default class FilePicker extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = { file: null };
+  }
+
+  componentWillMount() {
+    const {
+      baseURL,
+      input: { value, onChange },
+    } = this.props;
+
+    if (value && typeof value === 'string') {
+      fetch(`${baseURL}${value}`, { method: 'GET' })
+        .then(response => response.blob())
+        .then((file) => {
+          this.setState({ file }, () => {
+            onChange(file);
+          });
+        });
+    } else if (value && value instanceof Blob) {
+      this.setState({ file: value }, () => {
+        onChange(value);
+      });
+    }
+  }
+
+  componentDidUpdate(props) {
+    const {
+      baseURL,
+      input: { value, onChange },
+    } = this.props;
+
+    if (value && props.input.value !== value && typeof value === 'string') {
+      fetch(`${baseURL}${value}`, { method: 'GET' })
+        .then(response => response.blob())
+        .then((file) => {
+          this.setState({ file }, () => {
+            onChange(this.state.file);
+          });
+        });
+    }
+  }
+
   handleChange = (event) => {
     const { input } = this.props;
 
     const file = event.target.files[0];
+
+    this.setState({ file });
 
     input.onChange(file);
   };
 
   handleRemove = (event) => {
     event.preventDefault();
+
+    this.setState({ file: null });
 
     this.input.value = null;
 
@@ -33,21 +81,25 @@ export default class FilePicker extends Component {
       resetKey,
     } = this.props;
 
-    const classes = classnames('upload-file', { 'upload-file--selected': value.name });
+    const { file } = this.state;
+
+    const classes = classnames('upload-file', {
+      'upload-file--selected': file,
+    });
 
     return (
       <label className={classes} htmlFor={id}>
         <div className="upload-file__label-container">
-          {value.name ? (
+          {file ? (
             <MaterialIcon icon="assignment" color="#0c97f9" size={16} />
           ) : (
             <MaterialIcon icon="cloud_upload" color="#0c97f9" size={16} />
           )}
 
-          <div className="upload-file__label">{value.name || placeholder}</div>
+          <div className="upload-file__label">{(file && file.name) || placeholder}</div>
         </div>
 
-        {value.name && (
+        {file && (
           <Button
             className="upload-file__close-icon"
             flat
@@ -83,12 +135,14 @@ export default class FilePicker extends Component {
 }
 
 FilePicker.propTypes = {
+  baseURL: PropTypes.string,
   id: PropTypes.string.isRequired,
   input: PropTypes.object,
   placeholder: PropTypes.string,
 };
 
 FilePicker.defaultProps = {
+  baseURL: '',
   input: {
     onChange: () => {},
     value: {},

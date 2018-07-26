@@ -119,7 +119,7 @@ var AvatarPicker = function (_Component) {
           onChange = _props2$input.onChange;
 
 
-      if (props.input.value !== value && value && typeof value === 'string') {
+      if (value && props.input.value !== value && typeof value === 'string') {
         fetch('' + baseURL + value, { method: 'GET' }).then(function (response) {
           return response.blob();
         }).then(function (avatar) {
