@@ -554,7 +554,7 @@ exports[`Storyshots Calendar default 1`] = `
         className="jsx-893175612"
       >
         <button
-          className="jsx-1058092368 day day--selected"
+          className="jsx-1058092368 day day--disabled"
           data-day="2018-07-26"
           onClick={[Function]}
           type="button"
@@ -570,7 +570,7 @@ exports[`Storyshots Calendar default 1`] = `
         className="jsx-893175612"
       >
         <button
-          className="jsx-1058092368 day"
+          className="jsx-1058092368 day day--disabled"
           data-day="2018-07-27"
           onClick={[Function]}
           type="button"
@@ -586,7 +586,7 @@ exports[`Storyshots Calendar default 1`] = `
         className="jsx-893175612"
       >
         <button
-          className="jsx-1058092368 day"
+          className="jsx-1058092368 day day--selected"
           data-day="2018-07-28"
           onClick={[Function]}
           type="button"
@@ -1017,7 +1017,7 @@ exports[`Storyshots Form Fields DatePicker 1`] = `
             onFocus={[Function]}
             onKeyDown={[Function]}
             type="text"
-            value="26 Jul, 2018"
+            value="28 Jul, 2018"
           />
         </div>
       </div>
