@@ -16,7 +16,7 @@ exports[`renders correctly 1`] = `
           "listen": [Function],
           "location": Object {
             "hash": "",
-            "pathname": "blank",
+            "pathname": "/",
             "search": "",
             "state": undefined,
           },

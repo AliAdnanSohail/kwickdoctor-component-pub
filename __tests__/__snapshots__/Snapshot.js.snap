@@ -1644,10 +1644,11 @@ exports[`Storyshots LinkButton default 1`] = `
   }
 >
   <a
-    aria-current={false}
-    className="button"
+    aria-current="true"
+    className="button active"
     href="/"
     onClick={[Function]}
+    style={Object {}}
   >
     
     <span
