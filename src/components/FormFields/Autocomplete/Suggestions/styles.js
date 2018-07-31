@@ -33,7 +33,7 @@ export const suggestion = css`
 
     button {
       width: 100%;
-      padding: 6px 18px;
+      padding: 5px 18px;
 
       background: transparent;
 
