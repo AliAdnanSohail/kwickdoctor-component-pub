@@ -11,9 +11,8 @@ exports[`renders correctly 1`] = `
     input-label
   </label>
   <textarea
-    className=""
+    className="jsx-1685083184 jsx-3325440485 jsx-844706462 "
     id="input-id"
-    name="input-name"
     placeholder="input-placeholder"
   />
   <style>

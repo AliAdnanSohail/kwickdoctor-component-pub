@@ -1337,40 +1337,39 @@ exports[`Storyshots Form Fields Select 1`] = `
   }
 >
   <div
-    className="jsx-1685083184 jsx-3325440485 jsx-844706462 form-field"
+    className="jsx-1685083184 jsx-3325440485 jsx-844706462 jsx-2830058064 form-field"
   >
     <label
-      className="jsx-1685083184 jsx-3325440485 jsx-844706462"
+      className="jsx-1685083184 jsx-3325440485 jsx-844706462 jsx-2830058064"
     >
       Label
     </label>
     <div
-      className="jsx-2830058064 select-container"
+      className="jsx-1685083184 jsx-3325440485 jsx-844706462 jsx-2830058064 select-container"
     >
       <select
-        className="jsx-2830058064 "
-        name="Name"
+        className="jsx-1685083184 jsx-3325440485 jsx-844706462 jsx-2830058064 "
       >
         <option
-          className="jsx-2830058064"
+          className="jsx-1685083184 jsx-3325440485 jsx-844706462 jsx-2830058064"
           value="one"
         >
           one
         </option>
         <option
-          className="jsx-2830058064"
+          className="jsx-1685083184 jsx-3325440485 jsx-844706462 jsx-2830058064"
           value="two"
         >
           two
         </option>
         <option
-          className="jsx-2830058064"
+          className="jsx-1685083184 jsx-3325440485 jsx-844706462 jsx-2830058064"
           value="three"
         >
           three
         </option>
         <option
-          className="jsx-2830058064"
+          className="jsx-1685083184 jsx-3325440485 jsx-844706462 jsx-2830058064"
           value="four"
         >
           four
@@ -1562,9 +1561,8 @@ exports[`Storyshots Form Fields TextArea 1`] = `
       Label
     </label>
     <textarea
-      className=""
+      className="jsx-1685083184 jsx-3325440485 jsx-844706462 "
       id="textarea"
-      name="Name"
       placeholder="Start typing"
     />
     <style>

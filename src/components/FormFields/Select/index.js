@@ -1,27 +1,48 @@
-import React, { Fragment } from 'react';
+import classnames from 'classnames';
 import MaterialIcon from 'material-icons-react';
+import React, { Component } from 'react';
 
-import renderer from '../renderer';
 import selectStyles from './styles';
-import { textInput } from '../styles';
+import styles, { error as errorStyles, label as labelStyles, textInput } from '../styles';
 
-export default renderer((input, label, {
-  className, id, name, options, placeholder,
-}) => (
-  <Fragment>
-    <div className="select-container">
-      <select {...input} className={className} id={id} name={name} placeholder={placeholder}>
-        {options.map(option => (
-          <option key={option.value} value={option.value}>
-            {option.label || option.value}
-          </option>
-        ))}
-      </select>
+export default class Input extends Component {
+  render() {
+    const {
+      containerClassName, id, input, label, meta, options, placeholder,
+    } = this.props;
 
-      <MaterialIcon icon="expand_more" />
-    </div>
+    return (
+      <div className={classnames('form-field', containerClassName)}>
+        <label htmlFor={id}>{label}</label>
 
-    <style>{textInput}</style>
-    <style jsx>{selectStyles}</style>
-  </Fragment>
-));
+        <div className="select-container">
+          <select
+            {...input}
+            className={classnames({
+              invalid: meta && meta.error && meta.touched,
+              active: meta && meta.active,
+            })}
+            id={id}
+            placeholder={placeholder}
+          >
+            {options.map(option => (
+              <option key={option.value} value={option.value}>
+                {option.label || option.value}
+              </option>
+            ))}
+          </select>
+
+          <MaterialIcon icon="expand_more" />
+        </div>
+
+        {meta && meta.error && meta.touched && <div className="error">{meta.error}</div>}
+
+        <style jsx>{styles}</style>
+        <style jsx>{labelStyles}</style>
+        <style jsx>{errorStyles}</style>
+        <style>{textInput}</style>
+        <style jsx>{selectStyles}</style>
+      </div>
+    );
+  }
+}
