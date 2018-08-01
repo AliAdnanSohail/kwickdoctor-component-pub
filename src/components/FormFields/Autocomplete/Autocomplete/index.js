@@ -58,7 +58,10 @@ export default class Autocomplete extends Component {
   handleChangeInput = (event) => {
     const { value } = event.target;
     const { values, suggestions } = this.state;
-    const filtered = suggestions.filter(item => item.includes(value) && !values.some(innerItem => innerItem === item));
+
+    const filtered = suggestions
+      .filter(item => item.includes(value) && !values.some(innerItem => innerItem === item));
+
     this.setState({
       value,
       filteredSuggestions: filtered,
@@ -115,7 +118,8 @@ export default class Autocomplete extends Component {
   handleClickSuggestion = (value) => {
     const { values, suggestions } = this.state;
 
-    const filtered = suggestions.filter(item => item !== value && !values.some(innerItem => innerItem === item));
+    const filtered = suggestions
+      .filter(item => item !== value && !values.some(innerItem => innerItem === item));
 
     this.setState({
       values: this.state.values.concat([value]),

@@ -99,11 +99,13 @@ var Autocomplete = function (_Component) {
           values = _this$state2.values,
           suggestions = _this$state2.suggestions;
 
+
       var filtered = suggestions.filter(function (item) {
         return item.includes(value) && !values.some(function (innerItem) {
           return innerItem === item;
         });
       });
+
       _this.setState({
         value: value,
         filteredSuggestions: filtered

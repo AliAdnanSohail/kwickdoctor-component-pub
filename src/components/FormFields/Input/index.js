@@ -1,21 +1,36 @@
-import React, { Fragment } from 'react';
+import classnames from 'classnames';
+import React, { Component } from 'react';
 
-import renderer from '../renderer';
-import { textInput } from '../styles';
+import styles, { error as errorStyles, label as labelStyles, textInput } from '../styles';
 
-export default renderer((input, label, {
-  className, id, name, placeholder, type,
-}) => (
-  <Fragment>
-    <input
-      {...input}
-      className={className}
-      id={id}
-      name={name}
-      placeholder={placeholder}
-      type={type}
-    />
+export default class Input extends Component {
+  render() {
+    const {
+      containerClassName, id, input, label, meta, placeholder, type,
+    } = this.props;
 
-    <style>{textInput}</style>
-  </Fragment>
-));
+    return (
+      <div className={classnames('form-field', containerClassName)}>
+        <label htmlFor={id}>{label}</label>
+
+        <input
+          {...input}
+          className={classnames({
+            invalid: meta && meta.error && meta.touched,
+            active: meta && meta.active,
+          })}
+          id={id}
+          placeholder={placeholder}
+          type={type}
+        />
+
+        {meta && meta.error && meta.touched && <div className="error">{meta.error}</div>}
+
+        <style jsx>{styles}</style>
+        <style jsx>{labelStyles}</style>
+        <style jsx>{errorStyles}</style>
+        <style>{textInput}</style>
+      </div>
+    );
+  }
+}
