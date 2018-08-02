@@ -20,16 +20,8 @@ export default css`
       padding: 5px;
       color: #ffffff;
 
-      :global(.grommetux-control-icon) {
-        display: inline-block;
-        width: 12px;
-        height: 12px;
-        margin-right: 4px;
-
-        :global(path) {
-          stroke-width: 4;
-          stroke: #ffffff;
-        }
+      i {
+        font-size: 0.75rem;
       }
     }
 

@@ -13,21 +13,17 @@ var _style = require('styled-jsx/style');
 
 var _style2 = _interopRequireDefault(_style);
 
-var _react = require('react');
-
-var _react2 = _interopRequireDefault(_react);
-
 var _classnames = require('classnames');
 
 var _classnames2 = _interopRequireDefault(_classnames);
 
-var _materialIconsReact = require('material-icons-react');
-
-var _materialIconsReact2 = _interopRequireDefault(_materialIconsReact);
-
 var _propTypes = require('prop-types');
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
+
+var _react = require('react');
+
+var _react2 = _interopRequireDefault(_react);
 
 var _styles = require('./styles');
 
@@ -92,7 +88,7 @@ var AvatarPicker = function (_Component) {
 
 
       if (value && typeof value === 'string') {
-        fetch('' + baseURL + value, { method: 'GET' }).then(function (response) {
+        fetch(baseURL + '/' + value, { method: 'GET' }).then(function (response) {
           return response.blob();
         }).then(function (avatar) {
           _this2.setState({ avatar: avatar }, function () {
@@ -120,7 +116,7 @@ var AvatarPicker = function (_Component) {
 
 
       if (value && props.input.value !== value && typeof value === 'string') {
-        fetch('' + baseURL + value, { method: 'GET' }).then(function (response) {
+        fetch(baseURL + '/' + value, { method: 'GET' }).then(function (response) {
           return response.blob();
         }).then(function (avatar) {
           _this3.setState({ avatar: avatar }, function () {
@@ -171,7 +167,13 @@ var AvatarPicker = function (_Component) {
           },
           _react2.default.createElement(_Button2.default, {
             onClick: this.handleRemove,
-            icon: 'delete_outline',
+            icon: _react2.default.createElement(
+              'i',
+              {
+                className: 'jsx-' + _styles.avatar.__scopedHash + ' jsx-' + _styles.fileInput.__scopedHash + ' ' + 'material-icons'
+              },
+              'delete'
+            ),
             size: 'xsmall',
             rounded: true,
             danger: true
@@ -187,7 +189,12 @@ var AvatarPicker = function (_Component) {
           type: 'file',
           className: 'jsx-' + _styles.avatar.__scopedHash + ' jsx-' + _styles.fileInput.__scopedHash + ' ' + 'file-input'
         })),
-        !isSelected && _react2.default.createElement(_materialIconsReact2.default, { color: '#BBBCCD', icon: 'photo_camera', size: size / 2 }),
+        !isSelected && _react2.default.createElement(
+          'i',
+          { style: { fontSize: size / 2 }, className: 'jsx-' + _styles.avatar.__scopedHash + ' jsx-' + _styles.fileInput.__scopedHash + ' ' + 'material-icons'
+          },
+          'photo_camera'
+        ),
         _react2.default.createElement(_style2.default, {
           styleId: _styles.avatar.__scopedHash,
           css: _styles.avatar.__scoped

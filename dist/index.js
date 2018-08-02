@@ -3,6 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
+exports.Validate = exports.Normalize = undefined;
 
 var _components = require('./components');
 
@@ -33,5 +34,7 @@ Object.defineProperty(exports, 'Validate', {
     return _interopRequireDefault(_validations).default;
   }
 });
+
+require('./icons.css');
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }

@@ -32,6 +32,10 @@ export const avatar = css`
       size: cover;
     }
 
+    i {
+      color: #bbbccd;
+    }
+
     &__button {
       position: absolute;
       width: 100%;
@@ -40,6 +44,10 @@ export const avatar = css`
       display: flex;
       align-items: flex-end;
       justify-content: center;
+
+      i {
+        color: #ffffff;
+      }
     }
   }
 `;

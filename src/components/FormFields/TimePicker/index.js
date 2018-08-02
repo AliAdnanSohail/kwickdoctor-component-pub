@@ -1,7 +1,6 @@
-import React, { Component } from 'react';
 import classnames from 'classnames';
-import MaterialIcon from 'material-icons-react';
 import PropTypes from 'prop-types';
+import React, { Component, Fragment } from 'react';
 
 import styles from './styles';
 
@@ -13,10 +12,10 @@ export default class TimePicker extends Component {
       defaultInputText: this.props.defaultInputText,
       selectedHours: '01',
       selectedMin: '00',
-      hoursToched: false,
-      minutsToched: false,
+      hoursTouched: false,
+      minutesTouched: false,
       visibleHoursList: false,
-      visibleMinutsList: false,
+      visibleMinutesList: false,
       visibleTimeBlock: false,
       hours: [...Array(24).keys()],
       minutes: [...Array(60).keys()],
@@ -32,7 +31,7 @@ export default class TimePicker extends Component {
     this.setState({ selectedMin: event.target.textContent });
     setTimeout(() => {
       this.changeTime();
-      this.setState(prevState => ({ minutsToched: !prevState.minutsToched }));
+      this.setState(prevState => ({ minutesTouched: !prevState.minutesTouched }));
       this.timeBlockController();
     }, 0);
   }
@@ -41,13 +40,13 @@ export default class TimePicker extends Component {
     this.setState({ selectedHours: event.target.textContent });
     setTimeout(() => {
       this.changeTime();
-      this.setState(prevState => ({ hoursToched: !prevState.hoursToched }));
+      this.setState(prevState => ({ hoursTouched: !prevState.hoursTouched }));
       this.timeBlockController();
     }, 0);
   }
 
   timeBlockController() {
-    if (this.state.hoursToched && this.state.minutsToched) {
+    if (this.state.hoursTouched && this.state.minutesTouched) {
       this.switchTimeBlock();
     }
   }
@@ -56,20 +55,20 @@ export default class TimePicker extends Component {
     this.setState(prevState => ({ visibleHoursList: !prevState.visibleHoursList }));
   }
 
-  switchMinutsList() {
-    this.setState(prevState => ({ visibleMinutsList: !prevState.visibleMinutsList }));
+  switchMinutesList() {
+    this.setState(prevState => ({ visibleMinutesList: !prevState.visibleMinutesList }));
   }
 
   switchTimeBlock() {
     this.setState(prevState => ({ visibleTimeBlock: !prevState.visibleTimeBlock }));
-    this.setState({ hoursToched: false });
-    this.setState({ minutsToched: false });
+    this.setState({ hoursTouched: false });
+    this.setState({ minutesTouched: false });
   }
 
   renderHoursList() {
     if (this.state.visibleHoursList) {
       return (
-        <React.Fragment>
+        <Fragment>
           <div className="select__options-wrap">
             {this.state.hours.map(time => (
               <div
@@ -87,16 +86,16 @@ export default class TimePicker extends Component {
             ))}
           </div>
           <style jsx>{styles}</style>
-        </React.Fragment>
+        </Fragment>
       );
     }
     return '';
   }
 
-  renderMinuntsList() {
-    if (this.state.visibleMinutsList) {
+  renderMinutesList() {
+    if (this.state.visibleMinutesList) {
       return (
-        <React.Fragment>
+        <Fragment>
           <div className="select__options-wrap">
             {this.state.minutes.map(time => (
               <div
@@ -114,7 +113,7 @@ export default class TimePicker extends Component {
             ))}
           </div>
           <style jsx>{styles}</style>
-        </React.Fragment>
+        </Fragment>
       );
     }
     return '';
@@ -135,7 +134,7 @@ export default class TimePicker extends Component {
               <div className="select__field">
                 {this.state.selectedHours}
                 <div className="select__arrow">
-                  <MaterialIcon icon="keyboard_arrow_left" />
+                  <i className="material-icons">keyboard_arrow_left</i>
                 </div>
                 {this.renderHoursList()}
               </div>
@@ -144,15 +143,15 @@ export default class TimePicker extends Component {
               className="select"
               role="button"
               tabIndex="0"
-              onClick={e => this.switchMinutsList(e)}
-              onKeyPress={e => this.switchMinutsList(e)}
+              onClick={e => this.switchMinutesList(e)}
+              onKeyPress={e => this.switchMinutesList(e)}
             >
               <div className="select__field">
                 {this.state.selectedMin}
                 <div className="select__arrow">
-                  <MaterialIcon icon="keyboard_arrow_left" />
+                  <i className="material-icons">keyboard_arrow_right</i>
                 </div>
-                {this.renderMinuntsList()}
+                {this.renderMinutesList()}
               </div>
             </div>
           </div>
@@ -178,7 +177,7 @@ export default class TimePicker extends Component {
             onKeyPress={e => this.switchTimeBlock(e)}
           >
             <div className="time-picker__logo">
-              <MaterialIcon icon="access_time" />
+              <i className="material-icons">access_time</i>
             </div>
             <input
               type="text"
@@ -189,7 +188,6 @@ export default class TimePicker extends Component {
           </div>
           {this.renderTimeBlock()}
         </div>
-
         <style jsx>{styles}</style>
       </section>
     );

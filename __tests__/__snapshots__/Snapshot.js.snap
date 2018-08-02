@@ -9,7 +9,7 @@ exports[`Storyshots Avatar default 1`] = `
   }
 >
   <div
-    className="jsx-2204262328 avatar"
+    className="jsx-4055291026 avatar"
     style={
       Object {
         "backgroundImage": "url(https://wallup.net/wp-content/uploads/2017/03/29/493007-Mac_OS_X-Mac_Sierra-748x421.jpg)",
@@ -31,14 +31,13 @@ exports[`Storyshots Button default 1`] = `
   }
 >
   <button
-    className="jsx-1756543789 button"
+    className="jsx-3516059905 button"
     disabled={false}
     onClick={[Function]}
     type="button"
   >
-    
     <span
-      className="jsx-1756543789 button__content"
+      className="jsx-3516059905 button__content"
     >
       Hello!
     </span>
@@ -61,47 +60,35 @@ exports[`Storyshots Calendar default 1`] = `
       className="jsx-3590812337"
     >
       <div
-        className="jsx-1167149914 navigation"
+        className="jsx-1620799419 navigation"
       >
         <button
-          className="jsx-1167149914 prev"
+          className="jsx-1620799419 prev"
           onClick={[Function]}
         >
           <i
-            className="material-icons 36 md-dark "
-            style={
-              Object {
-                "color": "#666",
-                "fontSize": 36,
-              }
-            }
+            className="jsx-1620799419 material-icons"
           >
             navigate_before
           </i>
         </button>
         <div
-          className="jsx-1167149914 navigation__month"
+          className="jsx-1620799419 navigation__month"
         >
           August
           <span
-            className="jsx-1167149914"
+            className="jsx-1620799419"
           >
             ·
           </span>
           2018
         </div>
         <button
-          className="jsx-1167149914 next"
+          className="jsx-1620799419 next"
           onClick={[Function]}
         >
           <i
-            className="material-icons 36 md-dark "
-            style={
-              Object {
-                "color": "#666",
-                "fontSize": 36,
-              }
-            }
+            className="jsx-1620799419 material-icons"
           >
             navigate_next
           </i>
@@ -202,7 +189,7 @@ exports[`Storyshots Calendar default 1`] = `
         className="jsx-893175612"
       >
         <button
-          className="jsx-1058092368 day day--selected"
+          className="jsx-1058092368 day day--disabled"
           data-day="2018-08-01"
           onClick={[Function]}
           type="button"
@@ -218,7 +205,7 @@ exports[`Storyshots Calendar default 1`] = `
         className="jsx-893175612"
       >
         <button
-          className="jsx-1058092368 day"
+          className="jsx-1058092368 day day--selected"
           data-day="2018-08-02"
           onClick={[Function]}
           type="button"
@@ -836,7 +823,7 @@ exports[`Storyshots Form Fields AvatarPicker 1`] = `
 >
   <label
     aria-label="Edit image"
-    className="jsx-1206862728 jsx-2165763448 avatar"
+    className="jsx-2345203643 jsx-2165763448 avatar"
     htmlFor="avatar"
     style={
       Object {
@@ -848,17 +835,16 @@ exports[`Storyshots Form Fields AvatarPicker 1`] = `
     }
   >
     <input
-      className="jsx-1206862728 jsx-2165763448 file-input"
+      className="jsx-2345203643 jsx-2165763448 file-input"
       id="avatar"
       onBlur={[Function]}
       onChange={[Function]}
       type="file"
     />
     <i
-      className="material-icons 75 md-dark "
+      className="jsx-2345203643 jsx-2165763448 material-icons"
       style={
         Object {
-          "color": "#BBBCCD",
           "fontSize": 75,
         }
       }
@@ -965,17 +951,17 @@ exports[`Storyshots Form Fields CheckBox 1`] = `
   }
 >
   <div
-    className="jsx-1325518731 jsx-844706462 checkbox"
+    className="jsx-3595152532 jsx-844706462 checkbox"
   >
     <label
-      className="jsx-1325518731 jsx-844706462 label"
+      className="jsx-3595152532 jsx-844706462 label"
       htmlFor="input"
     >
       Label
     </label>
     <input
       checked={false}
-      className="jsx-1325518731 jsx-844706462 "
+      className="jsx-3595152532 jsx-844706462 "
       id="input"
       type="checkbox"
       value={false}
@@ -1017,7 +1003,7 @@ exports[`Storyshots Form Fields DatePicker 1`] = `
             onFocus={[Function]}
             onKeyDown={[Function]}
             type="text"
-            value="01 Aug, 2018"
+            value="02 Aug, 2018"
           />
         </div>
       </div>
@@ -1073,31 +1059,25 @@ exports[`Storyshots Form Fields FilePicker 1`] = `
   }
 >
   <label
-    className="jsx-2605096786 jsx-844706462 upload-file"
+    className="jsx-3596653950 jsx-844706462 upload-file"
     htmlFor="id"
   >
     <div
-      className="jsx-2605096786 jsx-844706462 upload-file__label-container"
+      className="jsx-3596653950 jsx-844706462 upload-file__label-container"
     >
       <i
-        className="material-icons 16 md-dark "
-        style={
-          Object {
-            "color": "#0c97f9",
-            "fontSize": 16,
-          }
-        }
+        className="jsx-3596653950 jsx-844706462 material-icons"
       >
         cloud_upload
       </i>
       <div
-        className="jsx-2605096786 jsx-844706462 upload-file__label"
+        className="jsx-3596653950 jsx-844706462 upload-file__label"
       >
         placeholder
       </div>
     </div>
     <input
-      className="jsx-2605096786 jsx-844706462 input-file"
+      className="jsx-3596653950 jsx-844706462 input-file"
       id="id"
       onBlur={[Function]}
       onChange={[Function]}
@@ -1214,14 +1194,10 @@ exports[`Storyshots Form Fields RadioButtons 1`] = `
           className="radio__icon"
         >
           <i
-            className="material-icons md-24 md-dark "
-            style={
-              Object {
-                "color": "",
-                "fontSize": "md-24",
-              }
-            }
-          />
+            className="material-icons"
+          >
+            done
+          </i>
         </div>
         <input
           className="radio__select"
@@ -1240,14 +1216,10 @@ exports[`Storyshots Form Fields RadioButtons 1`] = `
           className="radio__icon"
         >
           <i
-            className="material-icons md-24 md-dark "
-            style={
-              Object {
-                "color": "",
-                "fontSize": "md-24",
-              }
-            }
-          />
+            className="material-icons"
+          >
+            done
+          </i>
         </div>
         <input
           className="radio__select"
@@ -1266,14 +1238,10 @@ exports[`Storyshots Form Fields RadioButtons 1`] = `
           className="radio__icon"
         >
           <i
-            className="material-icons md-24 md-dark "
-            style={
-              Object {
-                "color": "",
-                "fontSize": "md-24",
-              }
-            }
-          />
+            className="material-icons"
+          >
+            done
+          </i>
         </div>
         <input
           className="radio__select"
@@ -1292,14 +1260,10 @@ exports[`Storyshots Form Fields RadioButtons 1`] = `
           className="radio__icon"
         >
           <i
-            className="material-icons md-24 md-dark "
-            style={
-              Object {
-                "color": "",
-                "fontSize": "md-24",
-              }
-            }
-          />
+            className="material-icons"
+          >
+            done
+          </i>
         </div>
         <input
           className="radio__select"
@@ -1376,13 +1340,7 @@ exports[`Storyshots Form Fields Select 1`] = `
         </option>
       </select>
       <i
-        className="material-icons md-24 md-dark "
-        style={
-          Object {
-            "color": "",
-            "fontSize": "md-24",
-          }
-        }
+        className="jsx-1685083184 jsx-3325440485 jsx-844706462 jsx-2830058064 material-icons"
       >
         expand_more
       </i>
@@ -1412,129 +1370,99 @@ exports[`Storyshots Form Fields StarPicker 1`] = `
     className=""
   >
     <fieldset
-      className="jsx-2821742674 jsx-904933394 jsx-3325440485 fieldset"
+      className="jsx-1783782455 jsx-904933394 jsx-3325440485 fieldset"
     >
       <legend
-        className="jsx-2821742674 jsx-904933394 jsx-3325440485"
+        className="jsx-1783782455 jsx-904933394 jsx-3325440485"
       >
         Label
       </legend>
       <div
-        className="jsx-2821742674 jsx-904933394 jsx-3325440485 stars"
+        className="jsx-1783782455 jsx-904933394 jsx-3325440485 stars"
       >
         <label
-          className="jsx-2821742674 jsx-904933394 jsx-3325440485 star"
+          className="jsx-1783782455 jsx-904933394 jsx-3325440485 star"
           htmlFor="rate-1"
         >
           <input
-            className="jsx-2821742674 jsx-904933394 jsx-3325440485 "
+            className="jsx-1783782455 jsx-904933394 jsx-3325440485 "
             id="rate-1"
             name="rate"
             type="radio"
             value={1}
           />
           <i
-            className="material-icons 36 md-dark "
-            style={
-              Object {
-                "color": "#45cf7a",
-                "fontSize": 36,
-              }
-            }
+            className="jsx-1783782455 jsx-904933394 jsx-3325440485 material-icons checked"
           >
             star
           </i>
         </label>
         <label
-          className="jsx-2821742674 jsx-904933394 jsx-3325440485 star"
+          className="jsx-1783782455 jsx-904933394 jsx-3325440485 star"
           htmlFor="rate-2"
         >
           <input
-            className="jsx-2821742674 jsx-904933394 jsx-3325440485 "
+            className="jsx-1783782455 jsx-904933394 jsx-3325440485 "
             id="rate-2"
             name="rate"
             type="radio"
             value={2}
           />
           <i
-            className="material-icons 36 md-dark "
-            style={
-              Object {
-                "color": "#45cf7a",
-                "fontSize": 36,
-              }
-            }
+            className="jsx-1783782455 jsx-904933394 jsx-3325440485 material-icons checked"
           >
             star
           </i>
         </label>
         <label
-          className="jsx-2821742674 jsx-904933394 jsx-3325440485 star"
+          className="jsx-1783782455 jsx-904933394 jsx-3325440485 star"
           htmlFor="rate-3"
         >
           <input
-            className="jsx-2821742674 jsx-904933394 jsx-3325440485 "
+            className="jsx-1783782455 jsx-904933394 jsx-3325440485 "
             id="rate-3"
             name="rate"
             type="radio"
             value={3}
           />
           <i
-            className="material-icons 36 md-dark "
-            style={
-              Object {
-                "color": "#45cf7a",
-                "fontSize": 36,
-              }
-            }
+            className="jsx-1783782455 jsx-904933394 jsx-3325440485 material-icons checked"
           >
             star
           </i>
         </label>
         <label
-          className="jsx-2821742674 jsx-904933394 jsx-3325440485 star"
+          className="jsx-1783782455 jsx-904933394 jsx-3325440485 star"
           htmlFor="rate-4"
         >
           <input
-            className="jsx-2821742674 jsx-904933394 jsx-3325440485 "
+            className="jsx-1783782455 jsx-904933394 jsx-3325440485 "
             id="rate-4"
             name="rate"
             type="radio"
             value={4}
           />
           <i
-            className="material-icons 36 md-dark "
-            style={
-              Object {
-                "color": "#babbd0",
-                "fontSize": 36,
-              }
-            }
+            className="jsx-1783782455 jsx-904933394 jsx-3325440485 material-icons"
           >
-            star_outline
+            star_border
           </i>
         </label>
         <label
-          className="jsx-2821742674 jsx-904933394 jsx-3325440485 star"
+          className="jsx-1783782455 jsx-904933394 jsx-3325440485 star"
           htmlFor="rate-5"
         >
           <input
-            className="jsx-2821742674 jsx-904933394 jsx-3325440485 "
+            className="jsx-1783782455 jsx-904933394 jsx-3325440485 "
             id="rate-5"
             name="rate"
             type="radio"
             value={5}
           />
           <i
-            className="material-icons 36 md-dark "
-            style={
-              Object {
-                "color": "#babbd0",
-                "fontSize": 36,
-              }
-            }
+            className="jsx-1783782455 jsx-904933394 jsx-3325440485 material-icons"
           >
-            star_outline
+            star_border
           </i>
         </label>
       </div>
@@ -1608,13 +1536,7 @@ exports[`Storyshots Form Fields TimePicker 1`] = `
           className="jsx-3462367854 time-picker__logo"
         >
           <i
-            className="material-icons md-24 md-dark "
-            style={
-              Object {
-                "color": "",
-                "fontSize": "md-24",
-              }
-            }
+            className="jsx-3462367854 material-icons"
           >
             access_time
           </i>
@@ -1694,14 +1616,13 @@ exports[`Storyshots Modal default 1`] = `
   }
 >
   <button
-    className="jsx-1756543789 button"
+    className="jsx-3516059905 button"
     disabled={false}
     onClick={[Function]}
     type="button"
   >
-    
     <span
-      className="jsx-1756543789 button__content"
+      className="jsx-3516059905 button__content"
     >
       Open modal
     </span>
@@ -1732,13 +1653,7 @@ exports[`Storyshots Navigation default 1`] = `
           onClick={[Function]}
         >
           <i
-            className="material-icons 24 md-dark "
-            style={
-              Object {
-                "color": "#ffffff",
-                "fontSize": 24,
-              }
-            }
+            className="material-icons"
           >
             dashboard
           </i>
@@ -1764,13 +1679,7 @@ exports[`Storyshots Navigation default 1`] = `
           onClick={[Function]}
         >
           <i
-            className="material-icons 24 md-dark "
-            style={
-              Object {
-                "color": "#ffffff",
-                "fontSize": 24,
-              }
-            }
+            className="material-icons"
           >
             assignment_outline
           </i>
@@ -1793,13 +1702,7 @@ exports[`Storyshots Navigation default 1`] = `
           className="nav-item"
         >
           <i
-            className="material-icons 24 md-dark "
-            style={
-              Object {
-                "color": "#ffffff",
-                "fontSize": 24,
-              }
-            }
+            className="material-icons"
           >
             photo_camera_outline
           </i>
@@ -1850,44 +1753,32 @@ exports[`Storyshots Notification default 1`] = `
       className="jsx-3585762304 jsx-3014010845 notification__actions"
     >
       <button
-        className="jsx-1756543789 button button--small button--flat button--with-icon button--rounded"
+        className="jsx-3516059905 button button--small button--flat button--with-icon button--rounded"
         disabled={false}
         onClick={[Function]}
         type="button"
       >
         <div
-          className="jsx-1756543789 button__icon"
+          className="jsx-3516059905 button__icon"
         >
           <i
-            className="material-icons md-24 md-dark "
-            style={
-              Object {
-                "color": "",
-                "fontSize": "md-24",
-              }
-            }
+            className="jsx-3585762304 jsx-3014010845 material-icons"
           >
             done
           </i>
         </div>
       </button>
       <button
-        className="jsx-1756543789 button button--small button--flat button--with-icon button--rounded"
+        className="jsx-3516059905 button button--small button--flat button--with-icon button--rounded"
         disabled={false}
         onClick={[Function]}
         type="button"
       >
         <div
-          className="jsx-1756543789 button__icon"
+          className="jsx-3516059905 button__icon"
         >
           <i
-            className="material-icons md-24 md-dark "
-            style={
-              Object {
-                "color": "",
-                "fontSize": "md-24",
-              }
-            }
+            className="jsx-3585762304 jsx-3014010845 material-icons"
           >
             delete
           </i>
@@ -1898,22 +1789,16 @@ exports[`Storyshots Notification default 1`] = `
       className="jsx-3585762304 jsx-3014010845 notification__actions--mobile"
     >
       <button
-        className="jsx-1756543789 button button--flat button--with-icon button--rounded"
+        className="jsx-3516059905 button button--flat button--with-icon button--rounded"
         disabled={false}
         onClick={[Function]}
         type="button"
       >
         <div
-          className="jsx-1756543789 button__icon"
+          className="jsx-3516059905 button__icon"
         >
           <i
-            className="material-icons md-24 md-dark "
-            style={
-              Object {
-                "color": "",
-                "fontSize": "md-24",
-              }
-            }
+            className="jsx-3585762304 jsx-3014010845 material-icons"
           >
             more_horiz
           </i>
@@ -1944,13 +1829,7 @@ exports[`Storyshots Pagination default 1`] = `
         tabIndex="0"
       >
         <i
-          className="material-icons md-24 md-dark "
-          style={
-            Object {
-              "color": "",
-              "fontSize": "md-24",
-            }
-          }
+          className="material-icons"
         >
           chevron_left
         </i>
@@ -2049,13 +1928,7 @@ exports[`Storyshots Pagination default 1`] = `
         tabIndex="0"
       >
         <i
-          className="material-icons md-24 md-dark "
-          style={
-            Object {
-              "color": "",
-              "fontSize": "md-24",
-            }
-          }
+          className="material-icons"
         >
           chevron_right
         </i>
@@ -2077,38 +1950,6 @@ exports[`Storyshots Pagination default 1`] = `
 </div>
 `;
 
-exports[`Storyshots SearchBar default 1`] = `
-<div
-  style={
-    Object {
-      "padding": "24px",
-    }
-  }
->
-  <div
-    className="jsx-1685083184 jsx-3325440485 jsx-844706462 form-field"
-  >
-    <label
-      className="jsx-1685083184 jsx-3325440485 jsx-844706462"
-    />
-    <input
-      className="jsx-1685083184 jsx-3325440485 jsx-844706462 "
-      onChange={[Function]}
-      placeholder="Search...."
-    />
-    <style>
-      input,textarea,select{width:100%;min-width:100%;max-width:100%;min-height:44px;padding:12px 16px;background-color:#ffffff;color:#2A2A30;box-sizing:border-box;-webkit-appearance:none;font-style:normal;font-weight:normal;font-size:0.875rem;border-width:2px;border-style:solid;border-color:#E7E7F0;border-radius:4px;}
-      input::-webkit-input-placeholder,textarea::-webkit-input-placeholder,select::-webkit-input-placeholder{color:#828393;}
-      input::-moz-placeholder,textarea::-moz-placeholder,select::-moz-placeholder{color:#828393;}
-      input:-ms-input-placeholder,textarea:-ms-input-placeholder,select:-ms-input-placeholder{color:#828393;}
-      input:-moz-placeholder,textarea:-moz-placeholder,select:-moz-placeholder{color:#828393;}
-      input:focus,textarea:focus,select:focus{outline:none;padding:12px 16px;border-color:#0c97f9;}
-      input.invalid,input.invalid:focus,textarea.invalid,textarea.invalid:focus,select.invalid,select.invalid:focus{border-color:#FF5572;}
-    </style>
-  </div>
-</div>
-`;
-
 exports[`Storyshots Stepper Stepper 1`] = `
 <div
   style={
@@ -2122,45 +1963,45 @@ exports[`Storyshots Stepper Stepper 1`] = `
       className="jsx-291528123 stepper-header"
     >
       <li
-        className="jsx-3902184313 step-icon step-icon--current"
+        className="jsx-141628754 step-icon step-icon--current"
       >
         <span
-          className="jsx-3902184313"
+          className="jsx-141628754"
         />
       </li>
       <li
-        className="jsx-3902184313 step-icon step-icon--next"
+        className="jsx-141628754 step-icon step-icon--next"
       >
         <span
-          className="jsx-3902184313"
+          className="jsx-141628754"
         />
       </li>
       <li
-        className="jsx-3902184313 step-icon step-icon--next"
+        className="jsx-141628754 step-icon step-icon--next"
       >
         <span
-          className="jsx-3902184313"
+          className="jsx-141628754"
         />
       </li>
       <li
-        className="jsx-3902184313 step-icon step-icon--next"
+        className="jsx-141628754 step-icon step-icon--next"
       >
         <span
-          className="jsx-3902184313"
+          className="jsx-141628754"
         />
       </li>
       <li
-        className="jsx-3902184313 step-icon step-icon--next"
+        className="jsx-141628754 step-icon step-icon--next"
       >
         <span
-          className="jsx-3902184313"
+          className="jsx-141628754"
         />
       </li>
       <li
-        className="jsx-3902184313 step-icon step-icon--last step-icon--next"
+        className="jsx-141628754 step-icon step-icon--last step-icon--next"
       >
         <span
-          className="jsx-3902184313"
+          className="jsx-141628754"
         />
       </li>
     </ul>
@@ -2174,14 +2015,13 @@ exports[`Storyshots Stepper Stepper 1`] = `
       }
     >
       <button
-        className="jsx-1756543789 button"
+        className="jsx-3516059905 button"
         disabled={false}
         onClick={[Function]}
         type="button"
       >
-        
         <span
-          className="jsx-1756543789 button__content"
+          className="jsx-3516059905 button__content"
         >
           Next
         </span>
@@ -2202,14 +2042,13 @@ exports[`Storyshots Toast default 1`] = `
   }
 >
   <button
-    className="jsx-1756543789 button"
+    className="jsx-3516059905 button"
     disabled={false}
     onClick={[Function]}
     type="button"
   >
-    
     <span
-      className="jsx-1756543789 button__content"
+      className="jsx-3516059905 button__content"
     >
       Create toast
     </span>

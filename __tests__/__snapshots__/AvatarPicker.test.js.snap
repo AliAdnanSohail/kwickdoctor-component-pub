@@ -3,7 +3,7 @@
 exports[`renders correctly 1`] = `
 <label
   aria-label="Edit image"
-  className="jsx-1206862728 jsx-2165763448 avatar"
+  className="jsx-2345203643 jsx-2165763448 avatar"
   htmlFor="avatar"
   style={
     Object {
@@ -15,17 +15,16 @@ exports[`renders correctly 1`] = `
   }
 >
   <input
-    className="jsx-1206862728 jsx-2165763448 file-input"
+    className="jsx-2345203643 jsx-2165763448 file-input"
     id="avatar"
     onBlur={[Function]}
     onChange={[Function]}
     type="file"
   />
   <i
-    className="material-icons 20 md-dark "
+    className="jsx-2345203643 jsx-2165763448 material-icons"
     style={
       Object {
-        "color": "#BBBCCD",
         "fontSize": 20,
       }
     }

@@ -67,23 +67,7 @@ exports[`renders correctly 1`] = `
                           href="/dashboard"
                           onClick={[Function]}
                         >
-                          <MaterialIcon
-                            color="#ffffff"
-                            icon="dashboard"
-                            size={24}
-                          >
-                            <i
-                              className="material-icons 24 md-dark "
-                              style={
-                                Object {
-                                  "color": "#ffffff",
-                                  "fontSize": 24,
-                                }
-                              }
-                            >
-                              dashboard
-                            </i>
-                          </MaterialIcon>
+                          dashboard
                           <span
                             className="nav-item__label"
                           >
@@ -129,23 +113,7 @@ exports[`renders correctly 1`] = `
                           href="/notifications"
                           onClick={[Function]}
                         >
-                          <MaterialIcon
-                            color="#ffffff"
-                            icon="notification_important"
-                            size={24}
-                          >
-                            <i
-                              className="material-icons 24 md-dark "
-                              style={
-                                Object {
-                                  "color": "#ffffff",
-                                  "fontSize": 24,
-                                }
-                              }
-                            >
-                              notification_important
-                            </i>
-                          </MaterialIcon>
+                          notification_important
                           <span
                             className="nav-item__label"
                           >

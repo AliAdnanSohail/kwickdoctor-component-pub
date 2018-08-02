@@ -9,21 +9,17 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _react = require('react');
-
-var _react2 = _interopRequireDefault(_react);
-
 var _propTypes = require('prop-types');
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
 
+var _react = require('react');
+
+var _react2 = _interopRequireDefault(_react);
+
 var _reactPaginate = require('react-paginate');
 
 var _reactPaginate2 = _interopRequireDefault(_reactPaginate);
-
-var _materialIconsReact = require('material-icons-react');
-
-var _materialIconsReact2 = _interopRequireDefault(_materialIconsReact);
 
 var _styles = require('./styles');
 
@@ -53,8 +49,16 @@ var Pagination = function (_Component) {
         _react.Fragment,
         null,
         _react2.default.createElement(_reactPaginate2.default, _extends({}, this.props, {
-          previousLabel: _react2.default.createElement(_materialIconsReact2.default, { icon: 'chevron_left' }),
-          nextLabel: _react2.default.createElement(_materialIconsReact2.default, { icon: 'chevron_right' }),
+          previousLabel: _react2.default.createElement(
+            'i',
+            { className: 'material-icons' },
+            'chevron_left'
+          ),
+          nextLabel: _react2.default.createElement(
+            'i',
+            { className: 'material-icons' },
+            'chevron_right'
+          ),
           breakLabel: '...',
           e: 'break-me',
           containerClassName: 'pagination',

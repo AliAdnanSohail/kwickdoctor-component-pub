@@ -1,5 +1,4 @@
 import classnames from 'classnames';
-import MaterialIcon from 'material-icons-react';
 import React, { Component } from 'react';
 
 import selectStyles from './styles';
@@ -32,7 +31,7 @@ export default class Input extends Component {
             ))}
           </select>
 
-          <MaterialIcon icon="expand_more" />
+          <i className="material-icons">expand_more</i>
         </div>
 
         {meta && meta.error && meta.touched && <div className="error">{meta.error}</div>}

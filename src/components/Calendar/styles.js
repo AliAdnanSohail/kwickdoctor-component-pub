@@ -48,6 +48,10 @@ export const navigation = css`
     }
 
     button {
+      position: absolute;
+      left: 0;
+      top: 0;
+
       border: none;
       margin: 0;
       padding: 0;
@@ -57,18 +61,16 @@ export const navigation = css`
       background: transparent;
       outline: none;
       cursor: pointer;
-      position: absolute;
-      left: 0;
-      top: 0;
+
+      font-size: 1.1rem;
 
       &.next {
         left: auto;
         right: 0;
       }
 
-      svg {
-        width: 14px !important;
-        height: 14px !important;
+      i {
+        color: #666666;
       }
     }
   }

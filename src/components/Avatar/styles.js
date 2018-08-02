@@ -13,5 +13,9 @@ export default css`
       position: center;
       size: cover;
     }
+
+    i {
+      color: #BBBCCD;
+    }
   }
 `;

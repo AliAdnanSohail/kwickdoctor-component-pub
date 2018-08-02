@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import MaterialIcon from 'material-icons-react';
 import Moment from 'moment';
 import { extendMoment } from 'moment-range';
 import PropTypes from 'prop-types';
@@ -41,7 +40,9 @@ export default class Calendar extends Component {
       .weekday(6);
 
     const days = [];
-    const momentDays = moment().range(start, end).by('days');
+    const momentDays = moment()
+      .range(start, end)
+      .by('days');
 
     for (const day of momentDays) {
       days.push(day);
@@ -68,7 +69,7 @@ export default class Calendar extends Component {
     return (
       <div className="navigation">
         <button className="prev" onClick={() => this.onChangeMonth(-1)}>
-          <MaterialIcon icon="navigate_before" size={36} color="#666" />
+          <i className="material-icons">navigate_before</i>
         </button>
 
         <div className="navigation__month">
@@ -78,7 +79,7 @@ export default class Calendar extends Component {
         </div>
 
         <button className="next" onClick={() => this.onChangeMonth(1)}>
-          <MaterialIcon icon="navigate_next" size={36} color="#666" />
+          <i className="material-icons">navigate_next</i>
         </button>
 
         <style jsx>{navigation}</style>

@@ -1,8 +1,7 @@
-import React, { Component } from 'react';
-import MaterialIcon from 'material-icons-react';
 import classnames from 'classnames';
 import moment from 'moment';
 import PropTypes from 'prop-types';
+import React, { Component } from 'react';
 
 import { notification, notificationCard } from './styles';
 import { Button, Card } from '../';
@@ -25,7 +24,7 @@ export default class Notification extends Component {
       message, primary, read, onComplete, onDelete,
     } = this.props;
 
-    const сlasses = classnames('notification__dot', {
+    const classes = classnames('notification__dot', {
       'notification__dot--primary': primary,
       'notification__dot--read': read,
     });
@@ -34,28 +33,47 @@ export default class Notification extends Component {
       <Card className="notification">
         <div className="notification__time">{this.renderDate()}</div>
         <div className="notification__message">
-          <span className={сlasses} />
+          <span className={classes} />
           {message}
         </div>
 
         <div className="notification__actions">
-          {!read && <Button flat icon="done" onClick={onComplete} rounded size="small" />}
+          {!read && (
+            <Button
+              flat
+              icon={<i className="material-icons">done</i>}
+              onClick={onComplete}
+              rounded
+              size="small"
+            />
+          )}
 
-          <Button flat icon="delete" onClick={onDelete} rounded size="small" />
+          <Button
+            flat
+            icon={<i className="material-icons">delete</i>}
+            onClick={onDelete}
+            rounded
+            size="small"
+          />
         </div>
 
         <div className="notification__actions--mobile">
-          <Button flat icon="more_horiz" onClick={this.handleShowButtons} rounded />
+          <Button
+            flat
+            icon={<i className="material-icons">more_horiz</i>}
+            onClick={this.handleShowButtons}
+            rounded
+          />
           {this.state.buttonsVisible && (
             <ul className="notification__buttons">
               {!read && (
                 <button onClick={onComplete} type="button" className="notification__button--mobile">
-                  <MaterialIcon icon="done" />Read
+                  <i className="material-icons">done</i>Read
                 </button>
               )}
 
               <button onClick={onDelete} type="button" className="notification__button--mobile">
-                <MaterialIcon icon="delete" />Delete
+                <i className="material-icons">delete</i>Delete
               </button>
             </ul>
           )}

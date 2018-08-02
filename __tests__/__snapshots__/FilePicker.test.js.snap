@@ -2,31 +2,25 @@
 
 exports[`renders correctly 1`] = `
 <label
-  className="jsx-2605096786 jsx-844706462 upload-file"
+  className="jsx-3596653950 jsx-844706462 upload-file"
   htmlFor="file-picker"
 >
   <div
-    className="jsx-2605096786 jsx-844706462 upload-file__label-container"
+    className="jsx-3596653950 jsx-844706462 upload-file__label-container"
   >
     <i
-      className="material-icons 16 md-dark "
-      style={
-        Object {
-          "color": "#0c97f9",
-          "fontSize": 16,
-        }
-      }
+      className="jsx-3596653950 jsx-844706462 material-icons"
     >
       cloud_upload
     </i>
     <div
-      className="jsx-2605096786 jsx-844706462 upload-file__label"
+      className="jsx-3596653950 jsx-844706462 upload-file__label"
     >
       file-picker
     </div>
   </div>
   <input
-    className="jsx-2605096786 jsx-844706462 input-file"
+    className="jsx-3596653950 jsx-844706462 input-file"
     id="file-picker"
     onBlur={[Function]}
     onChange={[Function]}

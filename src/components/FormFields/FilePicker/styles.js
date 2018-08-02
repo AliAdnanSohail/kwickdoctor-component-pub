@@ -52,8 +52,11 @@ export default css`
       align-items: center;
       width: calc(100% - 32px);
 
-      :global(.material-icons) {
+      .material-icons {
         margin-right: 12px;
+
+        color: #0c97f9;
+        font-size: 1rem;
       }
     }
 

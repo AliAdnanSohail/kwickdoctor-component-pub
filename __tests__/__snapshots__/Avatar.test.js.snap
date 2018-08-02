@@ -2,7 +2,7 @@
 
 exports[`renders correctly 1`] = `
 <div
-  className="jsx-2204262328 avatar"
+  className="jsx-4055291026 avatar"
   style={
     Object {
       "backgroundImage": "",
@@ -13,10 +13,9 @@ exports[`renders correctly 1`] = `
   }
 >
   <i
-    className="material-icons 20 md-dark "
+    className="jsx-4055291026 material-icons"
     style={
       Object {
-        "color": "#BBBCCD",
         "fontSize": 20,
       }
     }

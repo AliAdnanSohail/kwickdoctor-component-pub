@@ -1,5 +1,4 @@
 import React from 'react';
-import MaterialIcon from 'material-icons-react';
 import { storiesOf } from '@storybook/react';
 import { withKnobs, text } from '@storybook/addon-knobs/react';
 import { checkA11y } from '@storybook/addon-a11y';
@@ -17,10 +16,10 @@ storiesOf('Form Fields', module)
     <RadioButtons
       selected={text('selected', '')}
       options={[
-        { value: 'Medical record', icon: <MaterialIcon /> },
-        { value: 'Prescription', icon: <MaterialIcon /> },
-        { value: 'Lab analysis', icon: <MaterialIcon /> },
-        { value: 'Sick list', icon: <MaterialIcon /> },
+        { value: 'Medical record', icon: <i className="material-icons">done</i> },
+        { value: 'Prescription', icon: <i className="material-icons">done</i> },
+        { value: 'Lab analysis', icon: <i className="material-icons">done</i> },
+        { value: 'Sick list', icon: <i className="material-icons">done</i> },
       ]}
       onChange={(value) => {
         console.log(value);

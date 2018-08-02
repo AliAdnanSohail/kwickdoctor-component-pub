@@ -23,10 +23,6 @@ var _classnames = require('classnames');
 
 var _classnames2 = _interopRequireDefault(_classnames);
 
-var _materialIconsReact = require('material-icons-react');
-
-var _materialIconsReact2 = _interopRequireDefault(_materialIconsReact);
-
 var _styles = require('./styles');
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
@@ -78,7 +74,13 @@ var StepperHeader = function (_Component) {
             {
               className: 'jsx-' + _styles.stepIcon.__scopedHash
             },
-            completed ? _react2.default.createElement(_materialIconsReact2.default, { color: '#6fcb83', icon: 'done' }) : undefined
+            completed ? _react2.default.createElement(
+              'i',
+              {
+                className: 'jsx-' + _styles.stepIcon.__scopedHash + ' ' + 'material-icons'
+              },
+              'done'
+            ) : undefined
           ),
           _react2.default.createElement(_style2.default, {
             styleId: _styles.stepIcon.__scopedHash,

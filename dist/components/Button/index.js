@@ -19,10 +19,6 @@ var _classnames2 = require('classnames');
 
 var _classnames3 = _interopRequireDefault(_classnames2);
 
-var _materialIconsReact = require('material-icons-react');
-
-var _materialIconsReact2 = _interopRequireDefault(_materialIconsReact);
-
 var _propTypes = require('prop-types');
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
@@ -126,14 +122,20 @@ var Button = function (_Component) {
           {
             className: 'jsx-' + _styles2.default.__scopedHash + ' ' + 'button__icon button__loading-icon'
           },
-          _react2.default.createElement(_materialIconsReact2.default, { icon: 'loop' })
+          _react2.default.createElement(
+            'i',
+            {
+              className: 'jsx-' + _styles2.default.__scopedHash + ' ' + 'material-icons'
+            },
+            'loop'
+          )
         ),
         !loading && icon && _react2.default.createElement(
           'div',
           {
             className: 'jsx-' + _styles2.default.__scopedHash + ' ' + 'button__icon'
           },
-          _react2.default.createElement(_materialIconsReact2.default, { icon: icon })
+          icon
         ),
         !rounded && _react2.default.createElement(
           'span',
@@ -161,7 +163,7 @@ exports.default = Button;
 Button.propTypes = {
   className: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.array]),
   children: _propTypes2.default.any,
-  icon: _propTypes2.default.string,
+  icon: _propTypes2.default.object,
   size: _propTypes2.default.oneOf(['small', 'xsmall', '']),
   accent: _propTypes2.default.bool,
   danger: _propTypes2.default.bool,
@@ -178,7 +180,7 @@ Button.propTypes = {
 Button.defaultProps = {
   className: '',
   children: null,
-  icon: '',
+  icon: null,
   size: undefined,
   accent: false,
   danger: false,

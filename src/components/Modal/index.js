@@ -1,8 +1,7 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
 import classnames from 'classnames';
+import PropTypes from 'prop-types';
+import React, { Component } from 'react';
 import AriaModal from 'react-aria-modal';
-import MaterialIcon from 'material-icons-react';
 
 import { modal, underlay } from './styles';
 
@@ -76,7 +75,7 @@ export default class Modal extends Component {
       >
         <div className={classes}>
           <button className="modal__close-button" onClick={this.handleExit}>
-            <MaterialIcon icon="close" />
+            <i className="material-icons">close</i>
           </button>
           <div className={classnames('modal__content', contentClassName)}>{children}</div>
         </div>

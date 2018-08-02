@@ -42,14 +42,8 @@ export default css`
         opacity: 1;
       }
 
-      :global(svg) {
-        height: 12px;
-        width: 12px;
-
-        :global(path) {
-          stroke-width: 4;
-          stroke: #000000;
-        }
+      i {
+        font-size: 0.875rem;
       }
     }
   }

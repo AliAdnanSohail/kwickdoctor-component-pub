@@ -130,15 +130,6 @@ Object.defineProperty(exports, 'VideoRecorder', {
   }
 });
 
-var _SearchBar = require('./SearchBar');
-
-Object.defineProperty(exports, 'SearchBar', {
-  enumerable: true,
-  get: function get() {
-    return _interopRequireDefault(_SearchBar).default;
-  }
-});
-
 var _FormFields = require('./FormFields');
 
 Object.keys(_FormFields).forEach(function (key) {

@@ -14,7 +14,11 @@ storiesOf('Button', module)
   .addDecorator(withTests({ results })('Button'))
   .addDecorator(getStory => <div style={{ padding: '24px' }}>{getStory()}</div>)
   .add('default', () => {
-    const icons = ['edit', 'delete', ''];
+    const icons = {
+      done: <i className="material-icons">done</i>,
+      delete: <i className="material-icons">delete</i>,
+      '': undefined,
+    };
 
     return (
       <Button
@@ -22,7 +26,7 @@ storiesOf('Button', module)
         danger={boolean('danger', false)}
         disabled={boolean('disabled', false)}
         flat={boolean('flat', false)}
-        icon={icons[select('icon', icons, '')]}
+        icon={icons[select('icon', Object.keys(icons), '')]}
         loading={boolean('loading', false)}
         onClick={action('clicked')}
         rounded={boolean('rounded', false)}

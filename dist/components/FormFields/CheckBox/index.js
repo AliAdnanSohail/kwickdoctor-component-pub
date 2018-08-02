@@ -10,10 +10,6 @@ var _style = require('styled-jsx/style');
 
 var _style2 = _interopRequireDefault(_style);
 
-var _react = require('react');
-
-var _react2 = _interopRequireDefault(_react);
-
 var _propTypes = require('prop-types');
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
@@ -22,9 +18,9 @@ var _classnames = require('classnames');
 
 var _classnames2 = _interopRequireDefault(_classnames);
 
-var _materialIconsReact = require('material-icons-react');
+var _react = require('react');
 
-var _materialIconsReact2 = _interopRequireDefault(_materialIconsReact);
+var _react2 = _interopRequireDefault(_react);
 
 var _styles = require('./styles');
 
@@ -49,7 +45,13 @@ var CheckBox = function CheckBox(_ref) {
       'label',
       { htmlFor: id, className: 'jsx-' + _styles2.default.__scopedHash + ' jsx-' + _styles3.error.__scopedHash + ' ' + ((0, _classnames2.default)('label', input.value && 'checked') || '')
       },
-      input.value && _react2.default.createElement(_materialIconsReact2.default, { icon: 'check', color: '#ffffff', size: 20 }),
+      input.value && _react2.default.createElement(
+        'i',
+        {
+          className: 'jsx-' + _styles2.default.__scopedHash + ' jsx-' + _styles3.error.__scopedHash + ' ' + 'material-icons'
+        },
+        'check'
+      ),
       label
     ),
     _react2.default.createElement('input', _extends({}, input, { id: id, checked: input.value, type: 'checkbox', className: 'jsx-' + _styles2.default.__scopedHash + ' jsx-' + _styles3.error.__scopedHash + ' ' + (input.className != null && input.className || '')

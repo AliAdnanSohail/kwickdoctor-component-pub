@@ -32,10 +32,13 @@ export default css`
         border-color: #0d97f9;
       }
 
-      :global(.material-icons) {
+      .material-icons {
         position: absolute;
         top: 2px;
         left: 2px;
+
+        color: #ffffff;
+        font-size: 1.2rem;
       }
     }
 

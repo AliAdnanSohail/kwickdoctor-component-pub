@@ -1,3 +1,5 @@
+import './icons.css';
+
 export * from './components';
 
 export { default as Normalize } from './utils/normalizers';

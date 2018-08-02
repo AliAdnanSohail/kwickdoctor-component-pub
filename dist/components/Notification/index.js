@@ -11,14 +11,6 @@ var _style = require('styled-jsx/style');
 
 var _style2 = _interopRequireDefault(_style);
 
-var _react = require('react');
-
-var _react2 = _interopRequireDefault(_react);
-
-var _materialIconsReact = require('material-icons-react');
-
-var _materialIconsReact2 = _interopRequireDefault(_materialIconsReact);
-
 var _classnames = require('classnames');
 
 var _classnames2 = _interopRequireDefault(_classnames);
@@ -30,6 +22,10 @@ var _moment2 = _interopRequireDefault(_moment);
 var _propTypes = require('prop-types');
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
+
+var _react = require('react');
+
+var _react2 = _interopRequireDefault(_react);
 
 var _styles = require('./styles');
 
@@ -74,7 +70,7 @@ var Notification = function (_Component) {
           onDelete = _props.onDelete;
 
 
-      var сlasses = (0, _classnames2.default)('notification__dot', {
+      var classes = (0, _classnames2.default)('notification__dot', {
         'notification__dot--primary': primary,
         'notification__dot--read': read
       });
@@ -95,7 +91,7 @@ var Notification = function (_Component) {
             className: 'jsx-' + _styles.notification.__scopedHash + ' jsx-' + _styles.notificationCard.__scopedHash + ' ' + 'notification__message'
           },
           _react2.default.createElement('span', {
-            className: 'jsx-' + _styles.notification.__scopedHash + ' jsx-' + _styles.notificationCard.__scopedHash + ' ' + (сlasses || '')
+            className: 'jsx-' + _styles.notification.__scopedHash + ' jsx-' + _styles.notificationCard.__scopedHash + ' ' + (classes || '')
           }),
           message
         ),
@@ -104,15 +100,50 @@ var Notification = function (_Component) {
           {
             className: 'jsx-' + _styles.notification.__scopedHash + ' jsx-' + _styles.notificationCard.__scopedHash + ' ' + 'notification__actions'
           },
-          !read && _react2.default.createElement(_.Button, { flat: true, icon: 'done', onClick: onComplete, rounded: true, size: 'small' }),
-          _react2.default.createElement(_.Button, { flat: true, icon: 'delete', onClick: onDelete, rounded: true, size: 'small' })
+          !read && _react2.default.createElement(_.Button, {
+            flat: true,
+            icon: _react2.default.createElement(
+              'i',
+              {
+                className: 'jsx-' + _styles.notification.__scopedHash + ' jsx-' + _styles.notificationCard.__scopedHash + ' ' + 'material-icons'
+              },
+              'done'
+            ),
+            onClick: onComplete,
+            rounded: true,
+            size: 'small'
+          }),
+          _react2.default.createElement(_.Button, {
+            flat: true,
+            icon: _react2.default.createElement(
+              'i',
+              {
+                className: 'jsx-' + _styles.notification.__scopedHash + ' jsx-' + _styles.notificationCard.__scopedHash + ' ' + 'material-icons'
+              },
+              'delete'
+            ),
+            onClick: onDelete,
+            rounded: true,
+            size: 'small'
+          })
         ),
         _react2.default.createElement(
           'div',
           {
             className: 'jsx-' + _styles.notification.__scopedHash + ' jsx-' + _styles.notificationCard.__scopedHash + ' ' + 'notification__actions--mobile'
           },
-          _react2.default.createElement(_.Button, { flat: true, icon: 'more_horiz', onClick: this.handleShowButtons, rounded: true }),
+          _react2.default.createElement(_.Button, {
+            flat: true,
+            icon: _react2.default.createElement(
+              'i',
+              {
+                className: 'jsx-' + _styles.notification.__scopedHash + ' jsx-' + _styles.notificationCard.__scopedHash + ' ' + 'material-icons'
+              },
+              'more_horiz'
+            ),
+            onClick: this.handleShowButtons,
+            rounded: true
+          }),
           this.state.buttonsVisible && _react2.default.createElement(
             'ul',
             {
@@ -122,14 +153,26 @@ var Notification = function (_Component) {
               'button',
               { onClick: onComplete, type: 'button', className: 'jsx-' + _styles.notification.__scopedHash + ' jsx-' + _styles.notificationCard.__scopedHash + ' ' + 'notification__button--mobile'
               },
-              _react2.default.createElement(_materialIconsReact2.default, { icon: 'done' }),
+              _react2.default.createElement(
+                'i',
+                {
+                  className: 'jsx-' + _styles.notification.__scopedHash + ' jsx-' + _styles.notificationCard.__scopedHash + ' ' + 'material-icons'
+                },
+                'done'
+              ),
               'Read'
             ),
             _react2.default.createElement(
               'button',
               { onClick: onDelete, type: 'button', className: 'jsx-' + _styles.notification.__scopedHash + ' jsx-' + _styles.notificationCard.__scopedHash + ' ' + 'notification__button--mobile'
               },
-              _react2.default.createElement(_materialIconsReact2.default, { icon: 'delete' }),
+              _react2.default.createElement(
+                'i',
+                {
+                  className: 'jsx-' + _styles.notification.__scopedHash + ' jsx-' + _styles.notificationCard.__scopedHash + ' ' + 'material-icons'
+                },
+                'delete'
+              ),
               'Delete'
             )
           )

@@ -19,10 +19,6 @@ var _classnames = require('classnames');
 
 var _classnames2 = _interopRequireDefault(_classnames);
 
-var _materialIconsReact = require('material-icons-react');
-
-var _materialIconsReact2 = _interopRequireDefault(_materialIconsReact);
-
 var _propTypes = require('prop-types');
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
@@ -71,7 +67,12 @@ var Avatar = function (_Component) {
         'div',
         { style: avatarStyle, className: 'jsx-' + _styles2.default.__scopedHash + ' ' + (classes || '')
         },
-        !src && _react2.default.createElement(_materialIconsReact2.default, { color: '#BBBCCD', icon: 'person_outline', size: size / 2 }),
+        !src && _react2.default.createElement(
+          'i',
+          { style: { fontSize: size / 2 }, className: 'jsx-' + _styles2.default.__scopedHash + ' ' + 'material-icons'
+          },
+          'person_outline'
+        ),
         _react2.default.createElement(_style2.default, {
           styleId: _styles2.default.__scopedHash,
           css: _styles2.default.__scoped

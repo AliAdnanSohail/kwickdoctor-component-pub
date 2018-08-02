@@ -15,10 +15,6 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
-var _materialIconsReact = require('material-icons-react');
-
-var _materialIconsReact2 = _interopRequireDefault(_materialIconsReact);
-
 var _moment = require('moment');
 
 var _moment2 = _interopRequireDefault(_moment);
@@ -143,7 +139,13 @@ var Calendar = function (_Component) {
               return _this.onChangeMonth(-1);
             }, className: 'jsx-' + _styles.navigation.__scopedHash + ' ' + 'prev'
           },
-          _react2.default.createElement(_materialIconsReact2.default, { icon: 'navigate_before', size: 36, color: '#666' })
+          _react2.default.createElement(
+            'i',
+            {
+              className: 'jsx-' + _styles.navigation.__scopedHash + ' ' + 'material-icons'
+            },
+            'navigate_before'
+          )
         ),
         _react2.default.createElement(
           'div',
@@ -166,7 +168,13 @@ var Calendar = function (_Component) {
               return _this.onChangeMonth(1);
             }, className: 'jsx-' + _styles.navigation.__scopedHash + ' ' + 'next'
           },
-          _react2.default.createElement(_materialIconsReact2.default, { icon: 'navigate_next', size: 36, color: '#666' })
+          _react2.default.createElement(
+            'i',
+            {
+              className: 'jsx-' + _styles.navigation.__scopedHash + ' ' + 'material-icons'
+            },
+            'navigate_next'
+          )
         ),
         _react2.default.createElement(_style2.default, {
           styleId: _styles.navigation.__scopedHash,

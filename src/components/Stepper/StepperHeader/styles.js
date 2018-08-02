@@ -60,6 +60,10 @@ export const stepIcon = css`
         width: 34px;
         height: 34px;
       }
+
+      i {
+        color: #6fcb83;
+      }
     }
 
     &--current {

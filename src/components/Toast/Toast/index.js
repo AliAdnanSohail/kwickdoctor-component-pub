@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
 import classnames from 'classnames';
-import MaterialIcon from 'material-icons-react';
+import PropTypes from 'prop-types';
+import React, { Component } from 'react';
+
 import Manager from './../Manager';
 
 export default class Toast extends Component {
@@ -68,20 +68,20 @@ export default class Toast extends Component {
   };
 
   render() {
-    const { primary, boxstyle, content } = this.props;
+    const { primary, boxStyle, content } = this.props;
 
     return (
       <div
         ref={(div) => {
           this.element = div;
         }}
-        className={classnames('toast-box', { primary }, boxstyle)}
+        className={classnames('toast-box', { primary }, boxStyle)}
       >
         <div className="circle" />
         <div className="message">{content}</div>
         <div className="icons-close">
           <button className="icon" onClick={this.closeToast}>
-            <MaterialIcon icon="close" />
+            <i className="material-icons">close</i>
           </button>
         </div>
         <div className="clear" />
@@ -94,7 +94,7 @@ Toast.propTypes = {
   id: PropTypes.string.isRequired,
   content: PropTypes.node.isRequired,
   primary: PropTypes.bool,
-  boxstyle: PropTypes.string,
+  boxStyle: PropTypes.string,
   onHideClick: PropTypes.func,
   timeOut: PropTypes.number,
   animationDuration: PropTypes.number,
@@ -103,7 +103,7 @@ Toast.propTypes = {
 
 Toast.defaultProps = {
   primary: false,
-  boxstyle: 'rectangle-22',
+  boxStyle: 'rectangle-22',
   onHideClick: null,
   timeOut: 5000,
   animationDuration: 500,

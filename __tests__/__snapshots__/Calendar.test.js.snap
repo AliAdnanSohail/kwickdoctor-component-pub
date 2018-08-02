@@ -8,47 +8,35 @@ exports[`Calendar renders correctly 1`] = `
     className="jsx-3590812337"
   >
     <div
-      className="jsx-1167149914 navigation"
+      className="jsx-1620799419 navigation"
     >
       <button
-        className="jsx-1167149914 prev"
+        className="jsx-1620799419 prev"
         onClick={[Function]}
       >
         <i
-          className="material-icons 36 md-dark "
-          style={
-            Object {
-              "color": "#666",
-              "fontSize": 36,
-            }
-          }
+          className="jsx-1620799419 material-icons"
         >
           navigate_before
         </i>
       </button>
       <div
-        className="jsx-1167149914 navigation__month"
+        className="jsx-1620799419 navigation__month"
       >
         March
         <span
-          className="jsx-1167149914"
+          className="jsx-1620799419"
         >
           ·
         </span>
         2018
       </div>
       <button
-        className="jsx-1167149914 next"
+        className="jsx-1620799419 next"
         onClick={[Function]}
       >
         <i
-          className="material-icons 36 md-dark "
-          style={
-            Object {
-              "color": "#666",
-              "fontSize": 36,
-            }
-          }
+          className="jsx-1620799419 material-icons"
         >
           navigate_next
         </i>

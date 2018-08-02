@@ -1,7 +1,6 @@
-import React, { Component, Fragment } from 'react';
 import PropTypes from 'prop-types';
+import React, { Component, Fragment } from 'react';
 import ReactPaginate from 'react-paginate';
-import MaterialIcon from 'material-icons-react';
 
 import style from './styles';
 
@@ -11,8 +10,8 @@ export default class Pagination extends Component {
       <Fragment>
         <ReactPaginate
           {...this.props}
-          previousLabel={<MaterialIcon icon="chevron_left" />}
-          nextLabel={<MaterialIcon icon="chevron_right" />}
+          previousLabel={<i className="material-icons">chevron_left</i>}
+          nextLabel={<i className="material-icons">chevron_right</i>}
           breakLabel="..."
           e="break-me"
           containerClassName="pagination"

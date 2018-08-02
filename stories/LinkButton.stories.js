@@ -1,5 +1,4 @@
 import React from 'react';
-import MaterialIcon from 'material-icons-react';
 import { BrowserRouter } from 'react-router-dom';
 import { storiesOf } from '@storybook/react';
 import { withKnobs, text, boolean, select } from '@storybook/addon-knobs/react';
@@ -16,8 +15,8 @@ storiesOf('LinkButton', module)
   .addDecorator(getStory => <div style={{ padding: '24px' }}>{getStory()}</div>)
   .add('default', () => {
     const icons = {
-      eidt: <MaterialIcon icon="edit" />,
-      delete: <MaterialIcon icon="delete" />,
+      done: <i className="material-icons">done</i>,
+      delete: <i className="material-icons">delete</i>,
       '': undefined,
     };
 

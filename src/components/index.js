@@ -12,7 +12,6 @@ export { default as Toast } from './Toast';
 export { default as ToastManager } from './Toast/Manager';
 export { default as VideoPlayer } from './VideoPlayer';
 export { default as VideoRecorder } from './VideoRecorder';
-export { default as SearchBar } from './SearchBar';
 
 export * from './FormFields';
 export * from './Navigation';

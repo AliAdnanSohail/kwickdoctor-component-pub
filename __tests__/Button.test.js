@@ -1,6 +1,5 @@
 import React from 'react';
 import { mount } from 'enzyme';
-import MaterialIcon from 'material-icons-react';
 
 import { Button } from '../src';
 
@@ -40,7 +39,7 @@ it('flat button renders correctly', () => {
 });
 
 it('rounded button renders correctly', () => {
-  const element = mount(<Button icon="edit" rounded>Hello!</Button>);
+  const element = mount(<Button icon={<i className="material-icons">edit</i>} rounded>Hello!</Button>);
 
   expect(element.find('button').hasClass('button--rounded')).toEqual(true);
   expect(element
@@ -72,7 +71,7 @@ it('button with loading prop renders correctly', () => {
 });
 
 it('button with icon renders correctly', () => {
-  const element = mount(<Button icon="edit">Hello!</Button>);
+  const element = mount(<Button icon={<i className="material-icons">edit</i>}>Hello!</Button>);
 
   expect(element.find('button').hasClass('button--with-icon')).toEqual(true);
   expect(element

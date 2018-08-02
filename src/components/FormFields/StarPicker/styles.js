@@ -28,5 +28,14 @@ export default css`
       width: 1px !important;
       overflow: hidden;
     }
+
+    i {
+      color: #babbd0;
+      font-size: 36px;
+
+      &.checked {
+        color: #45cf7a;
+      }
+    }
   }
 `;

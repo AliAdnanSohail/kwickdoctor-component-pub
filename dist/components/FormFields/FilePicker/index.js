@@ -13,21 +13,17 @@ var _style = require('styled-jsx/style');
 
 var _style2 = _interopRequireDefault(_style);
 
-var _react = require('react');
+var _classnames = require('classnames');
 
-var _react2 = _interopRequireDefault(_react);
+var _classnames2 = _interopRequireDefault(_classnames);
 
 var _propTypes = require('prop-types');
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
 
-var _classnames = require('classnames');
+var _react = require('react');
 
-var _classnames2 = _interopRequireDefault(_classnames);
-
-var _materialIconsReact = require('material-icons-react');
-
-var _materialIconsReact2 = _interopRequireDefault(_materialIconsReact);
+var _react2 = _interopRequireDefault(_react);
 
 var _styles = require('./styles');
 
@@ -95,7 +91,7 @@ var FilePicker = function (_Component) {
 
 
       if (value && typeof value === 'string') {
-        fetch('' + baseURL + value, { method: 'GET' }).then(function (response) {
+        fetch(baseURL + '/' + value, { method: 'GET' }).then(function (response) {
           return response.blob();
         }).then(function (file) {
           _this2.setState({ file: file }, function () {
@@ -121,7 +117,7 @@ var FilePicker = function (_Component) {
 
 
       if (value && props.input.value !== value && typeof value === 'string') {
-        fetch('' + baseURL + value, { method: 'GET' }).then(function (response) {
+        fetch(baseURL + '/' + value, { method: 'GET' }).then(function (response) {
           return response.blob();
         }).then(function (file) {
           _this3.setState({ file: file }, function () {
@@ -160,7 +156,19 @@ var FilePicker = function (_Component) {
           {
             className: 'jsx-' + _styles2.default.__scopedHash + ' jsx-' + _styles3.error.__scopedHash + ' ' + 'upload-file__label-container'
           },
-          file ? _react2.default.createElement(_materialIconsReact2.default, { icon: 'assignment', color: '#0c97f9', size: 16 }) : _react2.default.createElement(_materialIconsReact2.default, { icon: 'cloud_upload', color: '#0c97f9', size: 16 }),
+          file ? _react2.default.createElement(
+            'i',
+            {
+              className: 'jsx-' + _styles2.default.__scopedHash + ' jsx-' + _styles3.error.__scopedHash + ' ' + 'material-icons'
+            },
+            'assessment'
+          ) : _react2.default.createElement(
+            'i',
+            {
+              className: 'jsx-' + _styles2.default.__scopedHash + ' jsx-' + _styles3.error.__scopedHash + ' ' + 'material-icons'
+            },
+            'cloud_upload'
+          ),
           _react2.default.createElement(
             'div',
             {
@@ -172,7 +180,13 @@ var FilePicker = function (_Component) {
         file && _react2.default.createElement(_Button2.default, {
           className: 'upload-file__close-icon',
           flat: true,
-          icon: 'close',
+          icon: _react2.default.createElement(
+            'i',
+            {
+              className: 'jsx-' + _styles2.default.__scopedHash + ' jsx-' + _styles3.error.__scopedHash + ' ' + 'material-icons'
+            },
+            'close'
+          ),
           onClick: this.handleRemove,
           rounded: true,
           size: 'xsmall'

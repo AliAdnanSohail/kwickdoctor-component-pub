@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import MaterialIcon from 'material-icons-react';
 
 import starPickerStyles from './styles';
 import { fieldset as fieldsetStyles, label as labelStyles } from '../styles';
@@ -24,9 +23,9 @@ export default class StarPicker extends Component {
                 <label className="star" key={item} htmlFor={`${input.name}-${value}`}>
                   <input {...input} id={`${input.name}-${value}`} type="radio" value={value} />
                   {value <= input.value ? (
-                    <MaterialIcon color="#45cf7a" icon="star" size={36} />
+                    <i className="material-icons checked">star</i>
                   ) : (
-                    <MaterialIcon color="#babbd0" icon="star_outline" size={36} />
+                    <i className="material-icons">star_border</i>
                   )}
                 </label>
               );

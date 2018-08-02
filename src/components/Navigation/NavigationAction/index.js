@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import MaterialIcon from 'material-icons-react';
 
 import styles from './styles';
 
@@ -10,7 +9,7 @@ export default class NavigationAction extends Component {
     return (
       <li>
         <button onClick={onClick} className="nav-item">
-          <MaterialIcon color="#ffffff" icon={icon} size={24} />
+          {icon}
           <span className="nav-item__label">{label}</span>
         </button>
 

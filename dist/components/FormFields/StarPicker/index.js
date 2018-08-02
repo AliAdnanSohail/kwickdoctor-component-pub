@@ -21,10 +21,6 @@ var _propTypes = require('prop-types');
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
 
-var _materialIconsReact = require('material-icons-react');
-
-var _materialIconsReact2 = _interopRequireDefault(_materialIconsReact);
-
 var _styles = require('./styles');
 
 var _styles2 = _interopRequireDefault(_styles);
@@ -89,7 +85,19 @@ var StarPicker = function (_Component) {
                 },
                 _react2.default.createElement('input', _extends({}, input, { id: input.name + '-' + value, type: 'radio', value: value, className: 'jsx-' + _styles2.default.__scopedHash + ' jsx-' + _styles3.fieldset.__scopedHash + ' jsx-' + _styles3.label.__scopedHash + ' ' + (input.className != null && input.className || '')
                 })),
-                value <= input.value ? _react2.default.createElement(_materialIconsReact2.default, { color: '#45cf7a', icon: 'star', size: 36 }) : _react2.default.createElement(_materialIconsReact2.default, { color: '#babbd0', icon: 'star_outline', size: 36 })
+                value <= input.value ? _react2.default.createElement(
+                  'i',
+                  {
+                    className: 'jsx-' + _styles2.default.__scopedHash + ' jsx-' + _styles3.fieldset.__scopedHash + ' jsx-' + _styles3.label.__scopedHash + ' ' + 'material-icons checked'
+                  },
+                  'star'
+                ) : _react2.default.createElement(
+                  'i',
+                  {
+                    className: 'jsx-' + _styles2.default.__scopedHash + ' jsx-' + _styles3.fieldset.__scopedHash + ' jsx-' + _styles3.label.__scopedHash + ' ' + 'material-icons'
+                  },
+                  'star_border'
+                )
               );
             })
           ),

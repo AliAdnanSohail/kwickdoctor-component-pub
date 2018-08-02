@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import classnames from 'classnames';
-import MaterialIcon from 'material-icons-react';
 import PropTypes from 'prop-types';
 
 import styles from './styles';
@@ -22,8 +21,11 @@ export default class Avatar extends Component {
 
     return (
       <div className={classes} style={avatarStyle}>
-        {!src && <MaterialIcon color="#BBBCCD" icon="person_outline" size={size / 2} />}
-
+        {!src && (
+          <i className="material-icons" style={{ fontSize: size / 2 }}>
+            person_outline
+          </i>
+        )}
         <style jsx>{styles}</style>
       </div>
     );

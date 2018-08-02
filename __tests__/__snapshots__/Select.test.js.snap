@@ -41,13 +41,7 @@ exports[`renders correctly 1`] = `
       </option>
     </select>
     <i
-      className="material-icons md-24 md-dark "
-      style={
-        Object {
-          "color": "",
-          "fontSize": "md-24",
-        }
-      }
+      className="jsx-1685083184 jsx-3325440485 jsx-844706462 jsx-2830058064 material-icons"
     >
       expand_more
     </i>

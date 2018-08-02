@@ -15,10 +15,6 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
-var _materialIconsReact = require('material-icons-react');
-
-var _materialIconsReact2 = _interopRequireDefault(_materialIconsReact);
-
 var _propTypes = require('prop-types');
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
@@ -136,7 +132,13 @@ var ExistingTags = function (_React$Component) {
           'button',
           { onClick: this.handleClick, onKeyDown: this.handleKeyDown, className: 'jsx-' + _styles2.default.__scopedHash
           },
-          _react2.default.createElement(_materialIconsReact2.default, { icon: 'add', color: '#ffffff', size: 12 }),
+          _react2.default.createElement(
+            'i',
+            {
+              className: 'jsx-' + _styles2.default.__scopedHash + ' ' + 'material-icons'
+            },
+            'add'
+          ),
           'Add existing tag'
         ),
         _react2.default.createElement(_Suggestions2.default, {

@@ -7,21 +7,17 @@ exports.default = undefined;
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _react = require('react');
+var _classnames = require('classnames');
 
-var _react2 = _interopRequireDefault(_react);
+var _classnames2 = _interopRequireDefault(_classnames);
 
 var _propTypes = require('prop-types');
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
 
-var _classnames = require('classnames');
+var _react = require('react');
 
-var _classnames2 = _interopRequireDefault(_classnames);
-
-var _materialIconsReact = require('material-icons-react');
-
-var _materialIconsReact2 = _interopRequireDefault(_materialIconsReact);
+var _react2 = _interopRequireDefault(_react);
 
 var _Manager = require('./../Manager');
 
@@ -119,7 +115,7 @@ var Toast = function (_Component) {
 
       var _props = this.props,
           primary = _props.primary,
-          boxstyle = _props.boxstyle,
+          boxStyle = _props.boxStyle,
           content = _props.content;
 
 
@@ -129,7 +125,7 @@ var Toast = function (_Component) {
           ref: function ref(div) {
             _this2.element = div;
           },
-          className: (0, _classnames2.default)('toast-box', { primary: primary }, boxstyle)
+          className: (0, _classnames2.default)('toast-box', { primary: primary }, boxStyle)
         },
         _react2.default.createElement('div', { className: 'circle' }),
         _react2.default.createElement(
@@ -143,7 +139,11 @@ var Toast = function (_Component) {
           _react2.default.createElement(
             'button',
             { className: 'icon', onClick: this.closeToast },
-            _react2.default.createElement(_materialIconsReact2.default, { icon: 'close' })
+            _react2.default.createElement(
+              'i',
+              { className: 'material-icons' },
+              'close'
+            )
           )
         ),
         _react2.default.createElement('div', { className: 'clear' })
@@ -161,7 +161,7 @@ Toast.propTypes = {
   id: _propTypes2.default.string.isRequired,
   content: _propTypes2.default.node.isRequired,
   primary: _propTypes2.default.bool,
-  boxstyle: _propTypes2.default.string,
+  boxStyle: _propTypes2.default.string,
   onHideClick: _propTypes2.default.func,
   timeOut: _propTypes2.default.number,
   animationDuration: _propTypes2.default.number,
@@ -170,7 +170,7 @@ Toast.propTypes = {
 
 Toast.defaultProps = {
   primary: false,
-  boxstyle: 'rectangle-22',
+  boxStyle: 'rectangle-22',
   onHideClick: null,
   timeOut: 5000,
   animationDuration: 500,

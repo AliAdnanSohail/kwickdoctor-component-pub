@@ -1,7 +1,6 @@
-import React, { Component } from 'react';
 import classnames from 'classnames';
-import MaterialIcon from 'material-icons-react';
 import PropTypes from 'prop-types';
+import React, { Component } from 'react';
 import {
   BigPlayButton,
   ControlBar,
@@ -35,13 +34,11 @@ export default class VideoPlayer extends Component {
               <ProgressControl className="video-player__progress" order={1.1} />
               <FullscreenToggle className="video-player__fullscreen-button" order={1.2} />
             </ControlBar>
-
             <BigPlayButton position="center" className="video-player__big-play-button" order={2} />
           </Player>
         ) : (
-          <MaterialIcon color="#BBBCCD" icon="videocam_off" size={76} />
+          <i className="material-icons">videocam_off</i>
         )}
-
         <style jsx>{styles}</style>
         <style>{videoPlayer}</style>
       </div>

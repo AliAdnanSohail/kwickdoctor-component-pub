@@ -36,7 +36,7 @@ export default css`
       background-color: ${settings.primaryColor};
     }
 
-    :global(.material-icons) {
+    .material-icons {
       width: 21px;
       height: 21px;
     }
@@ -55,7 +55,7 @@ export default css`
       border-top-right-radius: 30px;
       border-bottom-right-radius: 30px;
 
-      :global(.material-icons) {
+      .material-icons {
         margin-right: 30px;
       }
 

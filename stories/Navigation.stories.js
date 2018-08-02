@@ -17,13 +17,20 @@ class NavigationWrapper extends Component {
       <BrowserRouter>
         <main style={{ minHeight: '100vh', display: 'flex' }}>
           <Navigation>
-            <NavigationItem route="/dashboard" icon="dashboard" label="Dashboards" />
+            <NavigationItem
+              route="/dashboard"
+              icon={<i className="material-icons">dashboard</i>}
+              label="Dashboards"
+            />
             <NavigationItem
               route="/notifications"
-              icon="assignment_outline"
+              icon={<i className="material-icons">assignment_outline</i>}
               label="Notifications"
             />
-            <NavigationAction icon="photo_camera_outline" label="Sign out" />
+            <NavigationAction
+              icon={<i className="material-icons">photo_camera_outline</i>}
+              label="Sign out"
+            />
           </Navigation>
 
           <Switch>

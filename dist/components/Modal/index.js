@@ -11,25 +11,21 @@ var _style = require('styled-jsx/style');
 
 var _style2 = _interopRequireDefault(_style);
 
-var _react = require('react');
+var _classnames = require('classnames');
 
-var _react2 = _interopRequireDefault(_react);
+var _classnames2 = _interopRequireDefault(_classnames);
 
 var _propTypes = require('prop-types');
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
 
-var _classnames = require('classnames');
+var _react = require('react');
 
-var _classnames2 = _interopRequireDefault(_classnames);
+var _react2 = _interopRequireDefault(_react);
 
 var _reactAriaModal = require('react-aria-modal');
 
 var _reactAriaModal2 = _interopRequireDefault(_reactAriaModal);
-
-var _materialIconsReact = require('material-icons-react');
-
-var _materialIconsReact2 = _interopRequireDefault(_materialIconsReact);
 
 var _styles = require('./styles');
 
@@ -131,7 +127,13 @@ var Modal = function (_Component) {
             'button',
             { onClick: this.handleExit, className: 'jsx-' + _styles.modal.__scopedHash + ' ' + 'modal__close-button'
             },
-            _react2.default.createElement(_materialIconsReact2.default, { icon: 'close' })
+            _react2.default.createElement(
+              'i',
+              {
+                className: 'jsx-' + _styles.modal.__scopedHash + ' ' + 'material-icons'
+              },
+              'close'
+            )
           ),
           _react2.default.createElement(
             'div',

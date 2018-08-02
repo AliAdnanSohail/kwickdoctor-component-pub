@@ -54,7 +54,7 @@ export default css`
       align-items: center;
       justify-content: center;
 
-      :global(.material-icons) {
+      .material-icons {
         color: #ffffff;
       }
     }
@@ -109,7 +109,7 @@ export default css`
       background-color: transparent;
       border-color: transparent;
 
-      :global(.material-icons) {
+      .material-icons {
         color: ${settings.textColor};
       }
 
@@ -129,7 +129,7 @@ export default css`
       background-color: transparent;
       border-color: transparent;
 
-      :global(.material-icons) {
+      .material-icons {
         color: ${settings.textColor};
       }
 
@@ -187,7 +187,7 @@ export default css`
         }
       }
 
-      .button__icon :global(.material-icons) {
+      .button__icon .material-icons {
         color: ${settings.textColor};
       }
     }
@@ -215,7 +215,7 @@ export default css`
         width: 18px;
         height: 18px;
 
-        :global(.material-icons) {
+        .material-icons {
           font-size: 18px;
         }
       }
@@ -243,7 +243,7 @@ export default css`
         width: 18px;
         height: 18px;
 
-        :global(.material-icons) {
+        .material-icons {
           font-size: 18px;
         }
       }

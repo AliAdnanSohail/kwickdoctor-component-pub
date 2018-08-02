@@ -17,10 +17,6 @@ var _classnames = require('classnames');
 
 var _classnames2 = _interopRequireDefault(_classnames);
 
-var _materialIconsReact = require('material-icons-react');
-
-var _materialIconsReact2 = _interopRequireDefault(_materialIconsReact);
-
 var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
@@ -98,7 +94,13 @@ var Input = function (_Component) {
               );
             })
           ),
-          _react2.default.createElement(_materialIconsReact2.default, { icon: 'expand_more' })
+          _react2.default.createElement(
+            'i',
+            {
+              className: 'jsx-' + _styles4.default.__scopedHash + ' jsx-' + _styles3.label.__scopedHash + ' jsx-' + _styles3.error.__scopedHash + ' jsx-' + _styles2.default.__scopedHash + ' ' + 'material-icons'
+            },
+            'expand_more'
+          )
         ),
         meta && meta.error && meta.touched && _react2.default.createElement(
           'div',

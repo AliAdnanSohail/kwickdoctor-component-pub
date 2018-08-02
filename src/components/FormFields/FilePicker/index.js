@@ -1,7 +1,6 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
 import classnames from 'classnames';
-import MaterialIcon from 'material-icons-react';
+import PropTypes from 'prop-types';
+import React, { Component } from 'react';
 
 import styles from './styles';
 import { error as errorStyles } from '../styles';
@@ -21,7 +20,7 @@ export default class FilePicker extends Component {
     } = this.props;
 
     if (value && typeof value === 'string') {
-      fetch(`${baseURL}${value}`, { method: 'GET' })
+      fetch(`${baseURL}/${value}`, { method: 'GET' })
         .then(response => response.blob())
         .then((file) => {
           this.setState({ file }, () => {
@@ -42,7 +41,7 @@ export default class FilePicker extends Component {
     } = this.props;
 
     if (value && props.input.value !== value && typeof value === 'string') {
-      fetch(`${baseURL}${value}`, { method: 'GET' })
+      fetch(`${baseURL}/${value}`, { method: 'GET' })
         .then(response => response.blob())
         .then((file) => {
           this.setState({ file }, () => {
@@ -91,9 +90,9 @@ export default class FilePicker extends Component {
       <label className={classes} htmlFor={id}>
         <div className="upload-file__label-container">
           {file ? (
-            <MaterialIcon icon="assignment" color="#0c97f9" size={16} />
+            <i className="material-icons">assessment</i>
           ) : (
-            <MaterialIcon icon="cloud_upload" color="#0c97f9" size={16} />
+            <i className="material-icons">cloud_upload</i>
           )}
 
           <div className="upload-file__label">{(file && file.name) || placeholder}</div>
@@ -103,7 +102,7 @@ export default class FilePicker extends Component {
           <Button
             className="upload-file__close-icon"
             flat
-            icon="close"
+            icon={<i className="material-icons">close</i>}
             onClick={this.handleRemove}
             rounded
             size="xsmall"

@@ -1,7 +1,6 @@
-import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
-import MaterialIcon from 'material-icons-react';
+import React from 'react';
 
 import styles from './styles';
 import { error as errorStyles } from '../styles';
@@ -11,7 +10,7 @@ const CheckBox = ({
 }) => (
   <div className={classnames('checkbox', className)}>
     <label className={classnames('label', input.value && 'checked')} htmlFor={id}>
-      {input.value && <MaterialIcon icon="check" color="#ffffff" size={20} />}
+      {input.value && <i className="material-icons">check</i>}
       {label}
     </label>
 

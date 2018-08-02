@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import classnames from 'classnames';
-import MaterialIcon from 'material-icons-react';
 import PropTypes from 'prop-types';
 
 import styles from './styles';
@@ -83,15 +82,10 @@ export default class Button extends Component {
       >
         {loading && (
           <div className="button__icon button__loading-icon">
-            <MaterialIcon icon="loop" />
+            <i className="material-icons">loop</i>
           </div>
         )}
-        {!loading &&
-          icon && (
-          <div className="button__icon">
-            <MaterialIcon icon={icon} />
-          </div>
-        )}
+        {!loading && icon && <div className="button__icon">{icon}</div>}
         {!rounded && <span className="button__content">{children}</span>}
 
         {clicked && <span className="button__wave" style={{ top, left }} />}
@@ -105,7 +99,7 @@ export default class Button extends Component {
 Button.propTypes = {
   className: PropTypes.oneOfType([PropTypes.string, PropTypes.array]),
   children: PropTypes.any,
-  icon: PropTypes.string,
+  icon: PropTypes.object,
   size: PropTypes.oneOf(['small', 'xsmall', '']),
   accent: PropTypes.bool,
   danger: PropTypes.bool,
@@ -122,7 +116,7 @@ Button.propTypes = {
 Button.defaultProps = {
   className: '',
   children: null,
-  icon: '',
+  icon: null,
   size: undefined,
   accent: false,
   danger: false,

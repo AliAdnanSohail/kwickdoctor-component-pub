@@ -1,7 +1,6 @@
-import React, { Component } from 'react';
 import classnames from 'classnames';
-import MaterialIcon from 'material-icons-react';
 import PropTypes from 'prop-types';
+import React, { Component } from 'react';
 
 import { avatar as avatarStyles, fileInput } from './styles';
 import Button from '../../Button';
@@ -20,7 +19,7 @@ export default class AvatarPicker extends Component {
     } = this.props;
 
     if (value && typeof value === 'string') {
-      fetch(`${baseURL}${value}`, { method: 'GET' })
+      fetch(`${baseURL}/${value}`, { method: 'GET' })
         .then(response => response.blob())
         .then((avatar) => {
           this.setState({ avatar }, () => {
@@ -43,7 +42,7 @@ export default class AvatarPicker extends Component {
     } = this.props;
 
     if (value && props.input.value !== value && typeof value === 'string') {
-      fetch(`${baseURL}${value}`, { method: 'GET' })
+      fetch(`${baseURL}/${value}`, { method: 'GET' })
         .then(response => response.blob())
         .then((avatar) => {
           this.setState({ avatar }, () => {
@@ -107,7 +106,7 @@ export default class AvatarPicker extends Component {
           <div className="avatar__button">
             <Button
               onClick={this.handleRemove}
-              icon="delete_outline"
+              icon={<i className="material-icons">delete</i>}
               size="xsmall"
               rounded
               danger
@@ -127,7 +126,11 @@ export default class AvatarPicker extends Component {
           type="file"
         />
 
-        {!isSelected && <MaterialIcon color="#BBBCCD" icon="photo_camera" size={size / 2} />}
+        {!isSelected && (
+          <i className="material-icons" style={{ fontSize: size / 2 }}>
+            photo_camera
+          </i>
+        )}
 
         <style jsx>{avatarStyles}</style>
         <style jsx>{fileInput}</style>

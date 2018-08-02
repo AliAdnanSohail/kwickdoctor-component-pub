@@ -1,7 +1,6 @@
-import React, { Component } from 'react';
 import classnames from 'classnames';
-import MaterialIcon from 'material-icons-react';
 import PropTypes from 'prop-types';
+import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
 
 import styles from './styles';
@@ -22,31 +21,24 @@ export default class LinkButton extends Component {
       transparent,
     } = this.props;
 
-    const classes = classnames(
-      'button',
-      className,
-      {
-        [`button--${size}`]: size,
-        'button--accent': accent,
-        'button--danger': danger,
-        'button--flat': flat,
-        'button--with-icon': icon,
-        'button--rounded': rounded,
-        'button--squared': squared,
-        'button--transparent': transparent,
-      },
-    );
+    const classes = classnames('button', className, {
+      [`button--${size}`]: size,
+      'button--accent': accent,
+      'button--danger': danger,
+      'button--flat': flat,
+      'button--with-icon': icon,
+      'button--rounded': rounded,
+      'button--squared': squared,
+      'button--transparent': transparent,
+    });
 
     return (
       <NavLink className={classes} to={to}>
-        {icon && (
-          <span className="button__icon">
-            <MaterialIcon icon={icon} />
-          </span>
-        )}
+        {icon && <span className="button__icon">{icon}</span>}
         {!rounded && <span className="button__content">{children}</span>}
-
-        <style jsx global>{styles}</style>
+        <style jsx global>
+          {styles}
+        </style>
       </NavLink>
     );
   }

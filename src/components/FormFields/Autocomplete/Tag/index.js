@@ -1,6 +1,5 @@
-import React, { Component } from 'react';
-import MaterialIcon from 'material-icons-react';
 import PropTypes from 'prop-types';
+import React, { Component } from 'react';
 
 import styles from './styles';
 
@@ -12,7 +11,7 @@ export default class Tag extends Component {
       <div className="tag">
         <div className="tag__text">{name}</div>
         <button className="tag__button" onClick={onRemove}>
-          <MaterialIcon icon="close" color="#000000" size={14} />
+          <i className="material-icons">close</i>
         </button>
 
         <style jsx>{styles}</style>

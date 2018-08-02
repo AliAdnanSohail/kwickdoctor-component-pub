@@ -11,21 +11,17 @@ var _style = require('styled-jsx/style');
 
 var _style2 = _interopRequireDefault(_style);
 
-var _react = require('react');
-
-var _react2 = _interopRequireDefault(_react);
-
 var _classnames = require('classnames');
 
 var _classnames2 = _interopRequireDefault(_classnames);
 
-var _materialIconsReact = require('material-icons-react');
-
-var _materialIconsReact2 = _interopRequireDefault(_materialIconsReact);
-
 var _propTypes = require('prop-types');
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
+
+var _react = require('react');
+
+var _react2 = _interopRequireDefault(_react);
 
 var _styles = require('./styles');
 
@@ -53,10 +49,10 @@ var TimePicker = function (_Component) {
       defaultInputText: _this.props.defaultInputText,
       selectedHours: '01',
       selectedMin: '00',
-      hoursToched: false,
-      minutsToched: false,
+      hoursTouched: false,
+      minutesTouched: false,
       visibleHoursList: false,
-      visibleMinutsList: false,
+      visibleMinutesList: false,
       visibleTimeBlock: false,
       hours: [].concat(_toConsumableArray(Array(24).keys())),
       minutes: [].concat(_toConsumableArray(Array(60).keys()))
@@ -79,7 +75,7 @@ var TimePicker = function (_Component) {
       setTimeout(function () {
         _this2.changeTime();
         _this2.setState(function (prevState) {
-          return { minutsToched: !prevState.minutsToched };
+          return { minutesTouched: !prevState.minutesTouched };
         });
         _this2.timeBlockController();
       }, 0);
@@ -93,7 +89,7 @@ var TimePicker = function (_Component) {
       setTimeout(function () {
         _this3.changeTime();
         _this3.setState(function (prevState) {
-          return { hoursToched: !prevState.hoursToched };
+          return { hoursTouched: !prevState.hoursTouched };
         });
         _this3.timeBlockController();
       }, 0);
@@ -101,7 +97,7 @@ var TimePicker = function (_Component) {
   }, {
     key: 'timeBlockController',
     value: function timeBlockController() {
-      if (this.state.hoursToched && this.state.minutsToched) {
+      if (this.state.hoursTouched && this.state.minutesTouched) {
         this.switchTimeBlock();
       }
     }
@@ -113,10 +109,10 @@ var TimePicker = function (_Component) {
       });
     }
   }, {
-    key: 'switchMinutsList',
-    value: function switchMinutsList() {
+    key: 'switchMinutesList',
+    value: function switchMinutesList() {
       this.setState(function (prevState) {
-        return { visibleMinutsList: !prevState.visibleMinutsList };
+        return { visibleMinutesList: !prevState.visibleMinutesList };
       });
     }
   }, {
@@ -125,8 +121,8 @@ var TimePicker = function (_Component) {
       this.setState(function (prevState) {
         return { visibleTimeBlock: !prevState.visibleTimeBlock };
       });
-      this.setState({ hoursToched: false });
-      this.setState({ minutsToched: false });
+      this.setState({ hoursTouched: false });
+      this.setState({ minutesTouched: false });
     }
   }, {
     key: 'renderHoursList',
@@ -135,7 +131,7 @@ var TimePicker = function (_Component) {
 
       if (this.state.visibleHoursList) {
         return _react2.default.createElement(
-          _react2.default.Fragment,
+          _react.Fragment,
           null,
           _react2.default.createElement(
             'div',
@@ -173,13 +169,13 @@ var TimePicker = function (_Component) {
       return '';
     }
   }, {
-    key: 'renderMinuntsList',
-    value: function renderMinuntsList() {
+    key: 'renderMinutesList',
+    value: function renderMinutesList() {
       var _this5 = this;
 
-      if (this.state.visibleMinutsList) {
+      if (this.state.visibleMinutesList) {
         return _react2.default.createElement(
-          _react2.default.Fragment,
+          _react.Fragment,
           null,
           _react2.default.createElement(
             'div',
@@ -256,7 +252,13 @@ var TimePicker = function (_Component) {
                   {
                     className: 'jsx-' + _styles2.default.__scopedHash + ' ' + 'select__arrow'
                   },
-                  _react2.default.createElement(_materialIconsReact2.default, { icon: 'keyboard_arrow_left' })
+                  _react2.default.createElement(
+                    'i',
+                    {
+                      className: 'jsx-' + _styles2.default.__scopedHash + ' ' + 'material-icons'
+                    },
+                    'keyboard_arrow_left'
+                  )
                 ),
                 this.renderHoursList()
               )
@@ -267,10 +269,10 @@ var TimePicker = function (_Component) {
                 role: 'button',
                 tabIndex: '0',
                 onClick: function onClick(e) {
-                  return _this6.switchMinutsList(e);
+                  return _this6.switchMinutesList(e);
                 },
                 onKeyPress: function onKeyPress(e) {
-                  return _this6.switchMinutsList(e);
+                  return _this6.switchMinutesList(e);
                 },
                 className: 'jsx-' + _styles2.default.__scopedHash + ' ' + 'select'
               },
@@ -285,9 +287,15 @@ var TimePicker = function (_Component) {
                   {
                     className: 'jsx-' + _styles2.default.__scopedHash + ' ' + 'select__arrow'
                   },
-                  _react2.default.createElement(_materialIconsReact2.default, { icon: 'keyboard_arrow_left' })
+                  _react2.default.createElement(
+                    'i',
+                    {
+                      className: 'jsx-' + _styles2.default.__scopedHash + ' ' + 'material-icons'
+                    },
+                    'keyboard_arrow_right'
+                  )
                 ),
-                this.renderMinuntsList()
+                this.renderMinutesList()
               )
             )
           ),
@@ -344,7 +352,13 @@ var TimePicker = function (_Component) {
               {
                 className: 'jsx-' + _styles2.default.__scopedHash + ' ' + 'time-picker__logo'
               },
-              _react2.default.createElement(_materialIconsReact2.default, { icon: 'access_time' })
+              _react2.default.createElement(
+                'i',
+                {
+                  className: 'jsx-' + _styles2.default.__scopedHash + ' ' + 'material-icons'
+                },
+                'access_time'
+              )
             ),
             _react2.default.createElement('input', {
               type: 'text',
