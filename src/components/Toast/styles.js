@@ -30,7 +30,6 @@ export default css`
       align-items: center;
       padding: 21px 18px;
       width: 392px;
-      height: 78px;
       border-radius: 4px;
       background-color: #ffffff;
       box-shadow: 0 2px 40px 0 rgba(0, 0, 0, 0.05);
@@ -38,7 +37,6 @@ export default css`
 
     .circle {
       margin: 0 15px 0 0;
-      float: left;
       display: block;
       height: 7px;
       width: 7px;
@@ -53,9 +51,7 @@ export default css`
     .message {
       display: flex;
       align-items: center;
-      float: left;
       width: 303px;
-      height: 36px;
       color: #222328;
       font-family: Montserrat;
       font-size: 14px;
@@ -65,10 +61,10 @@ export default css`
     }
 
     .icons-close {
-      padding-top: 5px;
-      width: 21px;
-      height: 21px;
-      float: right;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
     }
 
     .clear {
@@ -76,10 +72,15 @@ export default css`
     }
 
     .icon {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+
       padding: 0;
       margin: 0;
-      height: 13px;
-      width: 13px;
+      height: 21px;
+      width: 21px;
       transition: all 0.3s;
       border: none;
       outline: none;
@@ -92,15 +93,15 @@ export default css`
         opacity: 1;
       }
 
-      :global(.material-icons) {
+      .material-icons {
         height: 16px;
         width: 16px;
-        display: inline-block;
 
         font-size: 1rem;
       }
     }
   }
+
   .toast-container {
     position: fixed;
     top: 10px;
