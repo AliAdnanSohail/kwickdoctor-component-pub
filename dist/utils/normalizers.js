@@ -32,8 +32,8 @@ var date = function date(value) {
   var month = result.slice(2, 4);
   var year = result.slice(4, 8);
 
-  if (year.length === 4 && moment(value, 'DD/MM/YYYY') >= moment()) {
-    return moment(new Date()).format('DD/MM/YYYY');
+  if (moment(value, 'DD/MM/YYYY').isAfter(moment())) {
+    return moment().format('DD/MM/YYYY');
   }
 
   var numberOfDay = year.length === 4 ? moment(year + '-' + month, 'YYYY-MM').daysInMonth() : 31;
