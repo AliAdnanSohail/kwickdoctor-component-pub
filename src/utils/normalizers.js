@@ -31,7 +31,7 @@ const date = (value) => {
     return moment().format('DD/MM/YYYY');
   }
 
-  const numberOfDay = year.length === 4 ? moment((`${year}-${month}`), 'YYYY-MM').daysInMonth() : 31;
+  const numberOfDay = year.length === 4 ? moment(`${year}-${month}`, 'YYYY-MM').daysInMonth() : 31;
   return `${day <= numberOfDay ? day : numberOfDay}/${(month <= 12 ? month : 12)}/${year}`;
 };
 
