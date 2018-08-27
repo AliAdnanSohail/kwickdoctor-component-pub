@@ -26,8 +26,23 @@ const date = (value) => {
   const day = result.slice(0, 2);
   const month = result.slice(2, 4);
   const year = result.slice(4, 8);
+  
+  const currentDate = new Date();
+  const currentYear = currentDate.getFullYear();
+  
+  if (year >= currentYear) {
+    const currentMonth = ('0' + (currentDate.getMonth() + 1)).slice(-2);
+    const currentDay = ('0' + currentDate.getDate()).slice(-2);
 
-  return `${day <= 31 ? day : 31}/${month <= 12 ? month : 12}/${year}`;
+    const monthResult = month <= currentMonth ? month : currentMonth;
+    const numberOfDay = new Date(currentYear, monthResult, 0).getDate();
+    const dayResult = month >= currentMonth && day >= currentDay ? currentDay : day <= numberOfDay ? day : numberOfDay;
+
+    return `${dayResult}/${monthResult}/${currentYear}`;
+  }
+
+  const numberOfDay = year.length === 4 ? new Date(year, month, 0).getDate() : 31;
+  return `${day <= numberOfDay ? day : numberOfDay}/${month <= 12 ? month : 12}/${year}`;
 };
 
 /**
