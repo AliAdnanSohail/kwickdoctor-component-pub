@@ -32,7 +32,14 @@ var date = function date(value) {
   var month = result.slice(2, 4);
   var year = result.slice(4, 8);
 
-  return (day <= 31 ? day : 31) + '/' + (month <= 12 ? month : 12) + '/' + year;
+  if (year.length === 4) {
+    if (moment(value, 'DD/MM/YYYY') >= moment()) {
+      return moment(new Date()).format('DD/MM/YYYY');
+    }
+  }
+
+  var numberOfDay = year.length === 4 ? moment(year + "-" + month, "YYYY-MM").daysInMonth() : 31;
+  return (day <= numberOfDay ? day : numberOfDay) + '/' + (month <= 12 ? month : 12) + '/' + year;
 };
 
 /**
