@@ -27,14 +27,12 @@ const date = (value) => {
   const month = result.slice(2, 4);
   const year = result.slice(4, 8);
   
-  if (year.length === 4) {
-    if (moment(value, 'DD/MM/YYYY') >= moment()) {
+  if (year.length === 4 && (moment(value, 'DD/MM/YYYY') >= moment())) {
       return moment(new Date()).format('DD/MM/YYYY');
-    }
   }
 
-  const numberOfDay = year.length === 4 ? moment((year + "-" + month), "YYYY-MM").daysInMonth() : 31;
-  return (day <= numberOfDay ? day : numberOfDay) + '/' + (month <= 12 ? month : 12) + '/' + year;
+  const numberOfDay = year.length === 4 ? moment((`${year}-${month}`), 'YYYY-MM').daysInMonth() : 31;
+  return `${(day <= numberOfDay ? day : numberOfDay)}/${(month <= 12 ? month : 12)}/${year}`;
 };
 
 /**
