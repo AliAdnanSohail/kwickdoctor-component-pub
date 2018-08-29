@@ -18,7 +18,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
  * @return {String|undefined} [description]
  */
 var date = function date(value) {
-  return (0, _moment2.default)(value, 'DD/MM/YYYY').isValid() ? undefined : 'This doesn’t look like a valid date. Check up, please!';
+  return (0, _moment2.default)(value, 'DD/MM/YYYY').isValid() && (0, _moment2.default)(value, 'DD/MM/YYYY').isBefore((0, _moment2.default)(), 'year') ? undefined : 'This doesn’t look like a valid date. Check up, please!';
 };
 
 /**
