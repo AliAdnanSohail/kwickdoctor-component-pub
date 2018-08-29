@@ -3,6 +3,13 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
+
+var _moment = require('moment');
+
+var _moment2 = _interopRequireDefault(_moment);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
 /**
  * Returns normalized date
  *
@@ -32,11 +39,11 @@ var date = function date(value) {
   var month = result.slice(2, 4);
   var year = result.slice(4, 8);
 
-  if (moment(value, 'DD/MM/YYYY').isAfter(moment())) {
-    return moment().format('DD/MM/YYYY');
+  if ((0, _moment2.default)(value, 'DD/MM/YYYY').isAfter((0, _moment2.default)())) {
+    return (0, _moment2.default)().format('DD/MM/YYYY');
   }
 
-  var numberOfDay = year.length === 4 ? moment(year + '-' + month, 'YYYY-MM').daysInMonth() : 31;
+  var numberOfDay = year.length === 4 ? (0, _moment2.default)(year + '-' + month, 'YYYY-MM').daysInMonth() : 31;
   return (day <= numberOfDay ? day : numberOfDay) + '/' + (month <= 12 ? month : 12) + '/' + year;
 };
 

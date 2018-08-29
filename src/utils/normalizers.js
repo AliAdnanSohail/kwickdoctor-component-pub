@@ -1,3 +1,4 @@
+import moment from 'moment';
 /**
  * Returns normalized date
  *
