@@ -25,19 +25,14 @@ var date = function date(value) {
     var _day = result.slice(0, 2);
     var _month = result.slice(2, 4);
 
-    return (_day <= 31 ? _day : 31) + '/' + (_month <= 12 ? _month : 12);
+    return _day + '/' + _month;
   }
 
   var day = result.slice(0, 2);
   var month = result.slice(2, 4);
   var year = result.slice(4, 8);
 
-  if (moment(value, 'DD/MM/YYYY').isAfter(moment())) {
-    return moment().format('DD/MM/YYYY');
-  }
-
-  var numberOfDay = year.length === 4 ? moment(year + '-' + month, 'YYYY-MM').daysInMonth() : 31;
-  return (day <= numberOfDay ? day : numberOfDay) + '/' + (month <= 12 ? month : 12) + '/' + year;
+  return day + '/' + month + '/' + year;
 };
 
 /**
