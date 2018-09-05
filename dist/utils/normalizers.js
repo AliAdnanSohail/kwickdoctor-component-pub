@@ -25,14 +25,14 @@ var date = function date(value) {
     var _day = result.slice(0, 2);
     var _month = result.slice(2, 4);
 
-    return (_day <= 31 ? _day : 31) + '/' + (_month <= 12 ? _month : 12);
+    return _day + '/' + _month;
   }
 
   var day = result.slice(0, 2);
   var month = result.slice(2, 4);
   var year = result.slice(4, 8);
 
-  return (day <= 31 ? day : 31) + '/' + (month <= 12 ? month : 12) + '/' + year;
+  return day + '/' + month + '/' + year;
 };
 
 /**
