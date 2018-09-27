@@ -5,6 +5,8 @@ import settings from '../../../utils/style-helper';
 export default css`
   .upload-file {
     position: relative;
+    display: inline-block;
+    margin-top: 15px;
 
     color: ${settings.primaryColor};
     line-height: 16px;
