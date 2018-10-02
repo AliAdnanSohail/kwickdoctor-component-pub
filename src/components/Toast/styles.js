@@ -5,6 +5,7 @@ import settings from '../../utils/style-helper';
 export default css`
   .toast-box {
     max-height: 100%;
+    max-width: 100%;
     box-sizing: border-box;
     margin-bottom: 10px;
     color: ${settings.textColor};
@@ -42,6 +43,7 @@ export default css`
       width: 7px;
       background-color: #222328;
       border-radius: 50%;
+      flex-shrink: 0;
     }
 
     &.primary .circle {
@@ -106,6 +108,8 @@ export default css`
     position: fixed;
     top: 10px;
     left: 50%;
-    margin-left: -196px;
+    max-width: 85%;
+    z-index: 1;
+    transform: translateX(-50%);
   }
 `;
