@@ -93,13 +93,6 @@ var Input = function (_Component) {
                 option.label || option.value
               );
             })
-          ),
-          _react2.default.createElement(
-            'i',
-            {
-              className: 'jsx-' + _styles4.default.__scopedHash + ' jsx-' + _styles3.label.__scopedHash + ' jsx-' + _styles3.error.__scopedHash + ' jsx-' + _styles2.default.__scopedHash + ' ' + 'material-icons'
-            },
-            'expand_more'
           )
         ),
         meta && meta.error && meta.touched && _react2.default.createElement(
