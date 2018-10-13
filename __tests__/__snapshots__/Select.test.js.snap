@@ -2,46 +2,46 @@
 
 exports[`renders correctly 1`] = `
 <div
-  className="jsx-1685083184 jsx-4038665278 jsx-2062352977 jsx-3634566321 form-field"
+  className="jsx-1685083184 jsx-3325440485 jsx-844706462 jsx-2830058064 form-field"
 >
   <label
-    className="jsx-1685083184 jsx-4038665278 jsx-2062352977 jsx-3634566321"
+    className="jsx-1685083184 jsx-3325440485 jsx-844706462 jsx-2830058064"
   >
     Label
   </label>
   <div
-    className="jsx-1685083184 jsx-4038665278 jsx-2062352977 jsx-3634566321 select-container"
+    className="jsx-1685083184 jsx-3325440485 jsx-844706462 jsx-2830058064 select-container"
   >
     <select
-      className="jsx-1685083184 jsx-4038665278 jsx-2062352977 jsx-3634566321 "
+      className="jsx-1685083184 jsx-3325440485 jsx-844706462 jsx-2830058064 "
     >
       <option
-        className="jsx-1685083184 jsx-4038665278 jsx-2062352977 jsx-3634566321"
+        className="jsx-1685083184 jsx-3325440485 jsx-844706462 jsx-2830058064"
         value="one"
       >
         one
       </option>
       <option
-        className="jsx-1685083184 jsx-4038665278 jsx-2062352977 jsx-3634566321"
+        className="jsx-1685083184 jsx-3325440485 jsx-844706462 jsx-2830058064"
         value="two"
       >
         two
       </option>
       <option
-        className="jsx-1685083184 jsx-4038665278 jsx-2062352977 jsx-3634566321"
+        className="jsx-1685083184 jsx-3325440485 jsx-844706462 jsx-2830058064"
         value="three"
       >
         three
       </option>
       <option
-        className="jsx-1685083184 jsx-4038665278 jsx-2062352977 jsx-3634566321"
+        className="jsx-1685083184 jsx-3325440485 jsx-844706462 jsx-2830058064"
         value="four"
       >
         four
       </option>
     </select>
     <i
-      className="jsx-1685083184 jsx-4038665278 jsx-2062352977 jsx-3634566321 material-icons"
+      className="jsx-1685083184 jsx-3325440485 jsx-844706462 jsx-2830058064 material-icons"
     >
       expand_more
     </i>

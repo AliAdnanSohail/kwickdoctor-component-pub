@@ -137,61 +137,61 @@ exports[`renders correctly 1`] = `
                 type="button"
               >
                 <button
-                  className="jsx-2444636248 button"
+                  className="jsx-3516059905 button"
                   disabled={false}
                   onClick={[Function]}
                   type="button"
                 >
                   <span
-                    className="jsx-2444636248 button__content"
+                    className="jsx-3516059905 button__content"
                   >
                     Next
                   </span>
                   <JSXStyle
                     css={
                       Array [
-                        ".button.jsx-2444636248{position:relative;padding:13px 64px;height:52px;background-color:#0c97f9;box-sizing:border-box;cursor:pointer;color:#ffffff;line-height:22px;-webkit-transition:background-color 0.4s ease-in-out,border-color 0.4s ease-in-out;transition:background-color 0.4s ease-in-out,border-color 0.4s ease-in-out;overflow:hidden;border-width:2px;border-style:solid;border-color:#0c97f9;border-radius:26px;font-style:normal;font-weight:500;font-size:1rem;text-align:center;text-transform:uppercase;}",
-                        ".button.jsx-2444636248:focus{outline:none;}",
-                        ".button__content.jsx-2444636248{display:inline-block;-webkit-transition:all 0.3s ease-in-out;transition:all 0.3s ease-in-out;}",
-                        ".button__icon.jsx-2444636248{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;}",
-                        ".button__icon.jsx-2444636248 .material-icons.jsx-2444636248{color:#ffffff;}",
-                        ".button__loading-icon.jsx-2444636248{width:24px;height:24px;-webkit-transform-origin:center;-ms-transform-origin:center;transform-origin:center;-webkit-animation-name:rotate-jsx-2444636248;animation-name:rotate-jsx-2444636248;-webkit-animation-duration:1s;animation-duration:1s;-webkit-animation-iteration-count:infinite;animation-iteration-count:infinite;-webkit-animation-timing-function:ease-in-out;animation-timing-function:ease-in-out;}",
-                        ".button__wave.jsx-2444636248{position:absolute;display:block;width:0;height:0;border-radius:50%;background-color:#ffffff;opacity:0.5;-webkit-transform:translate(-50%,-50%);-ms-transform:translate(-50%,-50%);transform:translate(-50%,-50%);}",
-                        ".button--with-icon.jsx-2444636248 .button__content.jsx-2444636248{-webkit-transform:translateX(16px);-ms-transform:translateX(16px);transform:translateX(16px);}",
-                        ".button--disabled.jsx-2444636248{opacity:0.7;cursor:not-allowed;}",
-                        ".button.jsx-2444636248:not(.button--disabled):hover,.button.jsx-2444636248:not(.button--disabled):focus{background-color:#38a9fa;border-color:#38a9fa;box-shadow:2px 2px 10px rgba(0,0,0,0.1);}",
-                        ".button--flat.jsx-2444636248{color:#0c97f9;background-color:transparent;border-color:transparent;}",
-                        ".button--flat.jsx-2444636248 .material-icons.jsx-2444636248{color:#2A2A30;}",
-                        ".button--flat.jsx-2444636248:not(.button--disabled):hover,.button--flat.jsx-2444636248:not(.button--disabled):focus{color:#0c97f9;background-color:transparent;border-color:transparent;box-shadow:none;}",
-                        ".button--accent.jsx-2444636248{color:#0c97f9;background-color:transparent;border-color:transparent;}",
-                        ".button--accent.jsx-2444636248 .material-icons.jsx-2444636248{color:#2A2A30;}",
-                        ".button--accent.jsx-2444636248:not(.button--disabled):hover,.button--accent.jsx-2444636248:not(.button--disabled):focus{color:#0c97f9;background-color:transparent;border-color:transparent;}",
-                        ".button--danger.jsx-2444636248{color:#ffffff;background-color:#ea6577;border-color:#ea6577;}",
-                        ".button--danger.jsx-2444636248:not(.button--disabled):hover,.button--danger.jsx-2444636248:not(.button--disabled):focus{background-color:#ed7888;border-color:#ed7888;}",
-                        ".button--rounded.jsx-2444636248{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;width:52px;height:52px;padding:0 !important;border-radius:50%;}",
-                        ".button--squared.jsx-2444636248{border-radius:12px;}",
-                        ".button--transparent.jsx-2444636248{background-color:transparent;color:#0c97f9;}",
-                        ".button--transparent.jsx-2444636248:not(.button--disabled):hover,.button--transparent.jsx-2444636248:not(.button--disabled):focus{color:#ffffff;}",
-                        ".button--transparent.jsx-2444636248 .button__icon.jsx-2444636248 .material-icons.jsx-2444636248{color:#2A2A30;}",
-                        ".button.jsx-2444636248:not(.button--rounded) .button__icon.jsx-2444636248{position:absolute;top:calc(50% - 12px);left:32px;}",
-                        ".button--small.jsx-2444636248{height:42px;line-height:1;padding:0 42px;font-size:0.875rem;}",
-                        ".button--small.button--rounded.jsx-2444636248{width:42px;height:42px;}",
-                        ".button--small.jsx-2444636248 .button__icon.jsx-2444636248{width:18px;height:18px;}",
-                        ".button--small.jsx-2444636248 .button__icon.jsx-2444636248 .material-icons.jsx-2444636248{font-size:18px;}",
-                        ".button--small.jsx-2444636248:not(.button--rounded) .button__icon.jsx-2444636248{left:21px;top:calc(50% - 9px);}",
-                        ".button--xsmall.jsx-2444636248{height:32px;line-height:1;padding:0 32px;font-size:0.75rem;}",
-                        ".button--xsmall.button--rounded.jsx-2444636248{width:32px;height:32px;}",
-                        ".button--xsmall.jsx-2444636248 .button__icon.jsx-2444636248{width:18px;height:18px;}",
-                        ".button--xsmall.jsx-2444636248 .button__icon.jsx-2444636248 .material-icons.jsx-2444636248{font-size:18px;}",
-                        ".button--xsmall.jsx-2444636248:not(.button--rounded) .button__icon.jsx-2444636248{left:16px;top:calc(50% - 9px);}",
-                        ".button.has-clicked.jsx-2444636248 .button__wave.jsx-2444636248{-webkit-animation:wave-jsx-2444636248 0.8s;animation:wave-jsx-2444636248 0.8s;}",
-                        "@-webkit-keyframes wave-jsx-2444636248{0%{opacity:0.5;width:0;height:0;}100%{opacity:0;width:300px;height:300px;}}",
-                        "@keyframes wave-jsx-2444636248{0%{opacity:0.5;width:0;height:0;}100%{opacity:0;width:300px;height:300px;}}",
-                        "@-webkit-keyframes rotate-jsx-2444636248{0%{-webkit-transform:rotate(0);-ms-transform:rotate(0);transform:rotate(0);}100%{-webkit-transform:rotate(360deg);-ms-transform:rotate(360deg);transform:rotate(360deg);}}",
-                        "@keyframes rotate-jsx-2444636248{0%{-webkit-transform:rotate(0);-ms-transform:rotate(0);transform:rotate(0);}100%{-webkit-transform:rotate(360deg);-ms-transform:rotate(360deg);transform:rotate(360deg);}}",
+                        ".button.jsx-3516059905{position:relative;padding:13px 64px;height:52px;background-color:#0c97f9;box-sizing:border-box;cursor:pointer;color:#ffffff;line-height:22px;-webkit-transition:background-color 0.4s ease-in-out,border-color 0.4s ease-in-out;transition:background-color 0.4s ease-in-out,border-color 0.4s ease-in-out;overflow:hidden;border-width:2px;border-style:solid;border-color:#0c97f9;border-radius:26px;font-style:normal;font-weight:500;font-size:1rem;text-align:center;text-transform:uppercase;}",
+                        ".button.jsx-3516059905:focus{outline:none;}",
+                        ".button__content.jsx-3516059905{display:inline-block;-webkit-transition:all 0.3s ease-in-out;transition:all 0.3s ease-in-out;}",
+                        ".button__icon.jsx-3516059905{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;}",
+                        ".button__icon.jsx-3516059905 .material-icons.jsx-3516059905{color:#ffffff;}",
+                        ".button__loading-icon.jsx-3516059905{width:24px;height:24px;-webkit-transform-origin:center;-ms-transform-origin:center;transform-origin:center;-webkit-animation-name:rotate-jsx-3516059905;animation-name:rotate-jsx-3516059905;-webkit-animation-duration:1s;animation-duration:1s;-webkit-animation-iteration-count:infinite;animation-iteration-count:infinite;-webkit-animation-timing-function:ease-in-out;animation-timing-function:ease-in-out;}",
+                        ".button__wave.jsx-3516059905{position:absolute;display:block;width:0;height:0;border-radius:50%;background-color:#ffffff;opacity:0.5;-webkit-transform:translate(-50%,-50%);-ms-transform:translate(-50%,-50%);transform:translate(-50%,-50%);}",
+                        ".button--with-icon.jsx-3516059905 .button__content.jsx-3516059905{-webkit-transform:translateX(16px);-ms-transform:translateX(16px);transform:translateX(16px);}",
+                        ".button--disabled.jsx-3516059905{opacity:0.7;cursor:not-allowed;}",
+                        ".button.jsx-3516059905:not(.button--disabled):hover,.button.jsx-3516059905:not(.button--disabled):focus{background-color:#38a9fa;border-color:#38a9fa;box-shadow:2px 2px 10px rgba(0,0,0,0.1);}",
+                        ".button--flat.jsx-3516059905{color:#0c97f9;background-color:transparent;border-color:transparent;}",
+                        ".button--flat.jsx-3516059905 .material-icons.jsx-3516059905{color:#2A2A30;}",
+                        ".button--flat.jsx-3516059905:not(.button--disabled):hover,.button--flat.jsx-3516059905:not(.button--disabled):focus{color:#0c97f9;background-color:transparent;border-color:transparent;box-shadow:none;}",
+                        ".button--accent.jsx-3516059905{color:#0c97f9;background-color:transparent;border-color:transparent;}",
+                        ".button--accent.jsx-3516059905 .material-icons.jsx-3516059905{color:#2A2A30;}",
+                        ".button--accent.jsx-3516059905:not(.button--disabled):hover,.button--accent.jsx-3516059905:not(.button--disabled):focus{color:#0c97f9;background-color:transparent;border-color:transparent;}",
+                        ".button--danger.jsx-3516059905{color:#ffffff;background-color:#ea6577;border-color:#ea6577;}",
+                        ".button--danger.jsx-3516059905:not(.button--disabled):hover,.button--danger.jsx-3516059905:not(.button--disabled):focus{background-color:#ed7888;border-color:#ed7888;}",
+                        ".button--rounded.jsx-3516059905{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;width:52px;height:52px;padding:0 !important;border-radius:50%;}",
+                        ".button--squared.jsx-3516059905{border-radius:12px;}",
+                        ".button--transparent.jsx-3516059905{background-color:transparent;color:#0c97f9;}",
+                        ".button--transparent.jsx-3516059905:not(.button--disabled):hover,.button--transparent.jsx-3516059905:not(.button--disabled):focus{color:#ffffff;}",
+                        ".button--transparent.jsx-3516059905 .button__icon.jsx-3516059905 .material-icons.jsx-3516059905{color:#2A2A30;}",
+                        ".button.jsx-3516059905:not(.button--rounded) .button__icon.jsx-3516059905{position:absolute;top:calc(50% - 12px);left:32px;}",
+                        ".button--small.jsx-3516059905{height:42px;line-height:1;padding:0 42px;font-size:0.875rem;}",
+                        ".button--small.button--rounded.jsx-3516059905{width:42px;height:42px;}",
+                        ".button--small.jsx-3516059905 .button__icon.jsx-3516059905{width:18px;height:18px;}",
+                        ".button--small.jsx-3516059905 .button__icon.jsx-3516059905 .material-icons.jsx-3516059905{font-size:18px;}",
+                        ".button--small.jsx-3516059905:not(.button--rounded) .button__icon.jsx-3516059905{left:21px;top:calc(50% - 9px);}",
+                        ".button--xsmall.jsx-3516059905{height:32px;line-height:1;padding:0 32px;font-size:0.75rem;}",
+                        ".button--xsmall.button--rounded.jsx-3516059905{width:32px;height:32px;}",
+                        ".button--xsmall.jsx-3516059905 .button__icon.jsx-3516059905{width:18px;height:18px;}",
+                        ".button--xsmall.jsx-3516059905 .button__icon.jsx-3516059905 .material-icons.jsx-3516059905{font-size:18px;}",
+                        ".button--xsmall.jsx-3516059905:not(.button--rounded) .button__icon.jsx-3516059905{left:16px;top:calc(50% - 9px);}",
+                        ".button.has-clicked.jsx-3516059905 .button__wave.jsx-3516059905{-webkit-animation:wave-jsx-3516059905 0.8s;animation:wave-jsx-3516059905 0.8s;}",
+                        "@-webkit-keyframes wave-jsx-3516059905{0%{opacity:0.5;width:0;height:0;}100%{opacity:0;width:300px;height:300px;}}",
+                        "@keyframes wave-jsx-3516059905{0%{opacity:0.5;width:0;height:0;}100%{opacity:0;width:300px;height:300px;}}",
+                        "@-webkit-keyframes rotate-jsx-3516059905{0%{-webkit-transform:rotate(0);-ms-transform:rotate(0);transform:rotate(0);}100%{-webkit-transform:rotate(360deg);-ms-transform:rotate(360deg);transform:rotate(360deg);}}",
+                        "@keyframes rotate-jsx-3516059905{0%{-webkit-transform:rotate(0);-ms-transform:rotate(0);transform:rotate(0);}100%{-webkit-transform:rotate(360deg);-ms-transform:rotate(360deg);transform:rotate(360deg);}}",
                       ]
                     }
-                    styleId="2444636248"
+                    styleId="3516059905"
                   />
                 </button>
               </Button>
