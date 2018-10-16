@@ -2,38 +2,38 @@
 
 exports[`renders correctly 1`] = `
 <div
-  className="jsx-1685083184 jsx-3325440485 jsx-844706462 jsx-904933394 jsx-3435665855 form-field"
+  className="jsx-1685083184 jsx-4038665278 jsx-2062352977 jsx-904933394 jsx-3585184402 form-field"
 >
   <fieldset
-    className="jsx-1685083184 jsx-3325440485 jsx-844706462 jsx-904933394 jsx-3435665855 fieldset"
+    className="jsx-1685083184 jsx-4038665278 jsx-2062352977 jsx-904933394 jsx-3585184402 fieldset"
   >
     <legend
-      className="jsx-1685083184 jsx-3325440485 jsx-844706462 jsx-904933394 jsx-3435665855 legend"
+      className="jsx-1685083184 jsx-4038665278 jsx-2062352977 jsx-904933394 jsx-3585184402 legend"
     >
       Label
     </legend>
     <div
-      className="jsx-1685083184 jsx-3325440485 jsx-844706462 jsx-904933394 jsx-3435665855 radio-buttons"
+      className="jsx-1685083184 jsx-4038665278 jsx-2062352977 jsx-904933394 jsx-3585184402 radio-buttons"
     >
       <label
-        className="jsx-1685083184 jsx-3325440485 jsx-844706462 jsx-904933394 jsx-3435665855 radio-button"
+        className="jsx-1685083184 jsx-4038665278 jsx-2062352977 jsx-904933394 jsx-3585184402 radio-button"
         htmlFor="gender-male"
       >
         male
         <input
-          className="jsx-1685083184 jsx-3325440485 jsx-844706462 jsx-904933394 jsx-3435665855 "
+          className="jsx-1685083184 jsx-4038665278 jsx-2062352977 jsx-904933394 jsx-3585184402 "
           id="gender-male"
           type="radio"
           value="male"
         />
       </label>
       <label
-        className="jsx-1685083184 jsx-3325440485 jsx-844706462 jsx-904933394 jsx-3435665855 radio-button"
+        className="jsx-1685083184 jsx-4038665278 jsx-2062352977 jsx-904933394 jsx-3585184402 radio-button"
         htmlFor="gender-female"
       >
         female
         <input
-          className="jsx-1685083184 jsx-3325440485 jsx-844706462 jsx-904933394 jsx-3435665855 "
+          className="jsx-1685083184 jsx-4038665278 jsx-2062352977 jsx-904933394 jsx-3585184402 "
           id="gender-female"
           type="radio"
           value="female"

@@ -58,7 +58,9 @@ var Avatar = function (_Component) {
         backgroundImage: src ? 'url(' + src + ')' : '',
         borderRadius: borderRadius + 'px',
         height: size + 'px',
-        width: size + 'px'
+        width: size + 'px',
+        maxHeight: size + 'px',
+        maxWidth: size + 'px'
       };
 
       var classes = (0, _classnames2.default)('avatar', className);
