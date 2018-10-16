@@ -30,8 +30,6 @@ export default class Input extends Component {
               </option>
             ))}
           </select>
-
-          <i className="material-icons">expand_more</i>
         </div>
 
         {meta && meta.error && meta.touched && <div className="error">{meta.error}</div>}
