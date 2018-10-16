@@ -15,6 +15,8 @@ export default class Avatar extends Component {
       borderRadius: `${borderRadius}px`,
       height: `${size}px`,
       width: `${size}px`,
+      maxHeight: `${size}px`,
+      maxWidth: `${size}px`,
     };
 
     const classes = classnames('avatar', className);

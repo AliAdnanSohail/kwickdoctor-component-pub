@@ -17,6 +17,10 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
+var _classnames = require('classnames');
+
+var _classnames2 = _interopRequireDefault(_classnames);
+
 var _propTypes = require('prop-types');
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
@@ -54,7 +58,8 @@ var Step = function (_Component) {
     value: function render() {
       var _props = this.props,
           active = _props.active,
-          children = _props.children;
+          children = _props.children,
+          className = _props.className;
 
 
       return _react2.default.createElement(
@@ -63,7 +68,7 @@ var Step = function (_Component) {
         function (state) {
           return _react2.default.createElement(
             'div',
-            { style: _extends({}, transitionStyles[state]), className: 'jsx-' + _styles2.default.__scopedHash + ' ' + 'step'
+            { style: _extends({}, transitionStyles[state]), className: 'jsx-' + _styles2.default.__scopedHash + ' ' + ((0, _classnames2.default)('step', className) || '')
             },
             children,
             _react2.default.createElement(_style2.default, {
@@ -84,9 +89,11 @@ exports.default = Step;
 
 Step.propTypes = {
   active: _propTypes2.default.bool,
-  children: _propTypes2.default.node.isRequired
+  children: _propTypes2.default.node.isRequired,
+  className: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.array])
 };
 
 Step.defaultProps = {
-  active: false
+  active: false,
+  className: ''
 };

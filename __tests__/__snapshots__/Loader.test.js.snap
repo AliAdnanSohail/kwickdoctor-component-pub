@@ -2,13 +2,13 @@
 
 exports[`renders correctly 1`] = `
 <div
-  className="jsx-894766770 loader"
+  className="jsx-1462383989 loader"
 >
   <svg
-    className="jsx-894766770 circular"
+    className="jsx-1462383989 circular"
   >
     <circle
-      className="jsx-894766770 path"
+      className="jsx-1462383989 path"
       cx="50"
       cy="50"
       fill="none"
