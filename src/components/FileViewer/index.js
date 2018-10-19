@@ -6,8 +6,7 @@ import styles from './styles';
 
 function FileExtension(filename) {
   // rocket jump : all files which are not pdf renders as image
-  const fileFormat = /[^.]+$/.exec(filename).toString();
-  return fileFormat !== 'jpeg' && fileFormat !== 'png';
+  return !(/\.(jpeg|png)$/i).test(filename);
 }
 
 export default class FileViewer extends Component {
