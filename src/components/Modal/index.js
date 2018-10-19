@@ -45,6 +45,7 @@ export default class Modal extends Component {
       children,
       className,
       contentClassName,
+      overlayClassName,
       escapeExits,
       rootId,
       title,
@@ -69,7 +70,7 @@ export default class Modal extends Component {
         underlayColor={false}
         underlayClass={classnames('underlay', {
           'has-entered': modalHasEntered,
-        })}
+        }, overlayClassName)}
         underlayClickExits={underlayClickExits}
         verticallyCenter
       >
@@ -93,6 +94,7 @@ Modal.propTypes = {
   children: PropTypes.node,
   className: PropTypes.oneOfType([PropTypes.string, PropTypes.array]),
   contentClassName: PropTypes.oneOfType([PropTypes.string, PropTypes.array]),
+  overlayClassName: PropTypes.oneOfType([PropTypes.string, PropTypes.array]),
   escapeExits: PropTypes.bool,
   onExit: PropTypes.func.isRequired,
   rootId: PropTypes.string,
@@ -105,6 +107,7 @@ Modal.defaultProps = {
   children: null,
   className: null,
   contentClassName: null,
+  overlayClassName: null,
   escapeExits: true,
   rootId: 'root',
   title: 'dom one',

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import classnames from 'classnames';
 import PropTypes from 'prop-types';
 
 import starPickerStyles from './styles';
@@ -7,7 +8,7 @@ import { fieldset as fieldsetStyles, label as labelStyles } from '../styles';
 export default class StarPicker extends Component {
   render() {
     const {
-      containerClassName, input, label, max,
+      containerClassName, className, input, label, max,
     } = this.props;
 
     return (
@@ -15,7 +16,7 @@ export default class StarPicker extends Component {
         <fieldset className="fieldset">
           <legend>{label}</legend>
 
-          <div className="stars">
+          <div className={classnames('stars', className)}>
             {Array.from(new Array(max), (value, index) => index).map((item) => {
               const value = item + 1;
 
@@ -43,11 +44,13 @@ export default class StarPicker extends Component {
 
 StarPicker.propTypes = {
   containerClassName: PropTypes.string,
+  className: PropTypes.oneOfType([PropTypes.string, PropTypes.array]),
   label: PropTypes.string,
   max: PropTypes.number.isRequired,
 };
 
 StarPicker.defaultProps = {
   containerClassName: '',
+  className: '',
   label: '',
 };
