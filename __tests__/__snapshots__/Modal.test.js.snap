@@ -84,6 +84,7 @@ exports[`renders correctly 1`] = `
     contentClassName={null}
     escapeExits={true}
     onExit={[Function]}
+    overlayClassName={null}
     rootId="root"
     title="dom one"
     underlayClickExits={true}
