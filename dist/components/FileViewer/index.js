@@ -35,7 +35,7 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 function FileExtension(filename) {
   // rocket jump : all files which are not pdf renders as image
-  return (/[^.]+$/.exec(filename).toString() === 'pdf'
+  return (/^((?!png|jpe?g).)*$/i.test(filename)
   );
 }
 
@@ -69,11 +69,17 @@ var FileViewer = function (_Component) {
         _react2.default.Fragment,
         null,
         this.state.isPdf ? _react2.default.createElement(
-          _entry.Document,
-          { file: file, onLoadSuccess: this.onDocumentLoad },
-          Array.from(new Array(numPages), function (el, index) {
-            return _react2.default.createElement(_entry.Page, { key: 'page_' + (index + 1), pageNumber: index + 1 });
-          })
+          'div',
+          {
+            className: 'jsx-' + _styles2.default.__scopedHash + ' ' + 'pdf__wrapper'
+          },
+          _react2.default.createElement(
+            _entry.Document,
+            { file: file, onLoadSuccess: this.onDocumentLoad },
+            Array.from(new Array(numPages), function (el, index) {
+              return _react2.default.createElement(_entry.Page, { key: 'page_' + (index + 1), pageNumber: index + 1 });
+            })
+          )
         ) : _react2.default.createElement('img', { src: file, alt: 'This document can\'t be displayed', className: 'jsx-' + _styles2.default.__scopedHash + ' ' + 'image'
         }),
         _react2.default.createElement(_style2.default, {

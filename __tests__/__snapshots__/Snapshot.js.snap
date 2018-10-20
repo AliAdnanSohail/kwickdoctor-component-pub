@@ -731,12 +731,16 @@ exports[`Storyshots FileViewer simple PDF viewer 1`] = `
   }
 >
   <div
-    className="react-pdf__Document"
+    className="jsx-3208594766 pdf__wrapper"
   >
     <div
-      className="react-pdf__message react-pdf__message--loading"
+      className="react-pdf__Document"
     >
-      Loading PDF…
+      <div
+        className="react-pdf__message react-pdf__message--loading"
+      >
+        Loading PDF…
+      </div>
     </div>
   </div>
 </div>
@@ -754,7 +758,7 @@ exports[`Storyshots FileViewer simple img viewer 1`] = `
 >
   <img
     alt="This document can't be displayed"
-    className="jsx-3222015831 image"
+    className="jsx-3208594766 image"
     src="https://www.stihi.ru/pics/2013/03/09/12023.jpg"
   />
 </div>
