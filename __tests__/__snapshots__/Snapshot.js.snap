@@ -399,7 +399,7 @@ exports[`Storyshots Calendar default 1`] = `
         className="jsx-893175612"
       >
         <button
-          className="jsx-3065497712 day day--selected"
+          className="jsx-3065497712 day day--disabled"
           data-day="2018-10-16"
           onClick={[Function]}
           type="button"
@@ -415,7 +415,7 @@ exports[`Storyshots Calendar default 1`] = `
         className="jsx-893175612"
       >
         <button
-          className="jsx-3065497712 day"
+          className="jsx-3065497712 day day--disabled"
           data-day="2018-10-17"
           onClick={[Function]}
           type="button"
@@ -431,7 +431,7 @@ exports[`Storyshots Calendar default 1`] = `
         className="jsx-893175612"
       >
         <button
-          className="jsx-3065497712 day"
+          className="jsx-3065497712 day day--disabled"
           data-day="2018-10-18"
           onClick={[Function]}
           type="button"
@@ -447,7 +447,7 @@ exports[`Storyshots Calendar default 1`] = `
         className="jsx-893175612"
       >
         <button
-          className="jsx-3065497712 day"
+          className="jsx-3065497712 day day--disabled"
           data-day="2018-10-19"
           onClick={[Function]}
           type="button"
@@ -463,7 +463,7 @@ exports[`Storyshots Calendar default 1`] = `
         className="jsx-893175612"
       >
         <button
-          className="jsx-3065497712 day"
+          className="jsx-3065497712 day day--disabled"
           data-day="2018-10-20"
           onClick={[Function]}
           type="button"
@@ -479,7 +479,7 @@ exports[`Storyshots Calendar default 1`] = `
         className="jsx-893175612"
       >
         <button
-          className="jsx-3065497712 day"
+          className="jsx-3065497712 day day--disabled"
           data-day="2018-10-21"
           onClick={[Function]}
           type="button"
@@ -495,7 +495,7 @@ exports[`Storyshots Calendar default 1`] = `
         className="jsx-893175612"
       >
         <button
-          className="jsx-3065497712 day"
+          className="jsx-3065497712 day day--selected"
           data-day="2018-10-22"
           onClick={[Function]}
           type="button"
@@ -731,12 +731,16 @@ exports[`Storyshots FileViewer simple PDF viewer 1`] = `
   }
 >
   <div
-    className="react-pdf__Document"
+    className="jsx-3208594766 pdf__wrapper"
   >
     <div
-      className="react-pdf__message react-pdf__message--loading"
+      className="react-pdf__Document"
     >
-      Loading PDF…
+      <div
+        className="react-pdf__message react-pdf__message--loading"
+      >
+        Loading PDF…
+      </div>
     </div>
   </div>
 </div>
@@ -754,7 +758,7 @@ exports[`Storyshots FileViewer simple img viewer 1`] = `
 >
   <img
     alt="This document can't be displayed"
-    className="jsx-3222015831 image"
+    className="jsx-3208594766 image"
     src="https://www.stihi.ru/pics/2013/03/09/12023.jpg"
   />
 </div>
@@ -1005,7 +1009,7 @@ exports[`Storyshots Form Fields DatePicker 1`] = `
             onFocus={[Function]}
             onKeyDown={[Function]}
             type="text"
-            value="16 Oct, 2018"
+            value="22 Oct, 2018"
           />
         </div>
       </div>

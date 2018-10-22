@@ -86,6 +86,7 @@ var Modal = function (_Component) {
           children = _props.children,
           className = _props.className,
           contentClassName = _props.contentClassName,
+          overlayClassName = _props.overlayClassName,
           escapeExits = _props.escapeExits,
           rootId = _props.rootId,
           title = _props.title,
@@ -114,7 +115,7 @@ var Modal = function (_Component) {
           underlayColor: false,
           underlayClass: (0, _classnames2.default)('underlay', {
             'has-entered': modalHasEntered
-          }),
+          }, overlayClassName),
           underlayClickExits: underlayClickExits,
           verticallyCenter: true
         },
@@ -168,6 +169,7 @@ Modal.propTypes = {
   children: _propTypes2.default.node,
   className: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.array]),
   contentClassName: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.array]),
+  overlayClassName: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.array]),
   escapeExits: _propTypes2.default.bool,
   onExit: _propTypes2.default.func.isRequired,
   rootId: _propTypes2.default.string,
@@ -180,6 +182,7 @@ Modal.defaultProps = {
   children: null,
   className: null,
   contentClassName: null,
+  overlayClassName: null,
   escapeExits: true,
   rootId: 'root',
   title: 'dom one',
