@@ -6,7 +6,7 @@ import styles from './styles';
 
 function FileExtension(filename) {
   // rocket jump : all files which are not pdf renders as image
-  return /[^.]+$/.exec(filename).toString() === 'pdf';
+  return (/^((?!png|jpe?g).)*$/i).test(filename);
 }
 
 export default class FileViewer extends Component {
@@ -25,11 +25,13 @@ export default class FileViewer extends Component {
     return (
       <React.Fragment>
         {this.state.isPdf ? (
-          <Document file={file} onLoadSuccess={this.onDocumentLoad}>
-            {Array.from(new Array(numPages), (el, index) => (
-              <Page key={`page_${index + 1}`} pageNumber={index + 1} />
-            ))}
-          </Document>
+          <div className="pdf__wrapper">
+            <Document file={file} onLoadSuccess={this.onDocumentLoad}>
+              {Array.from(new Array(numPages), (el, index) => (
+                <Page key={`page_${index + 1}`} pageNumber={index + 1} />
+              ))}
+            </Document>
+          </div>
         ) : (
           <img className="image" src={file} alt="This document can't be displayed" />
         )}
