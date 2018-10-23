@@ -54,6 +54,7 @@ export default css`
       display: flex;
       align-items: center;
       width: 303px;
+      padding-right: 10px;
       color: #222328;
       font-family: Montserrat;
       font-size: 14px;
@@ -109,7 +110,7 @@ export default css`
     top: 10px;
     left: 50%;
     max-width: 85%;
-    z-index: 1;
+    z-index: 20;
     transform: translateX(-50%);
   }
 `;
