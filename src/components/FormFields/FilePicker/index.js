@@ -124,7 +124,8 @@ export default class FilePicker extends Component {
           type="file"
         />
 
-        {meta && meta.error && meta.touched ? <div className="error">{meta.error}</div> : undefined}
+        {meta && meta.error && meta.touched && meta.invalid && !meta.dirty && meta.active
+          ? <div className="error">{meta.error}</div> : undefined}
 
         <style jsx>{styles}</style>
         <style jsx>{errorStyles}</style>
