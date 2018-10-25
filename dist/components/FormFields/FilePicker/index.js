@@ -204,13 +204,13 @@ var FilePicker = function (_Component) {
           type: 'file',
           className: 'jsx-' + _styles2.default.__scopedHash + ' jsx-' + _styles3.error.__scopedHash + ' ' + 'input-file'
         })),
-        meta && meta.error && meta.touched ? _react2.default.createElement(
+        meta && meta.error && meta.touched && meta.invalid && !meta.dirty && meta.active && _react2.default.createElement(
           'div',
           {
             className: 'jsx-' + _styles2.default.__scopedHash + ' jsx-' + _styles3.error.__scopedHash + ' ' + 'error'
           },
           meta.error
-        ) : undefined,
+        ),
         _react2.default.createElement(_style2.default, {
           styleId: _styles2.default.__scopedHash,
           css: _styles2.default.__scoped
