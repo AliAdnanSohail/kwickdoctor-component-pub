@@ -112,7 +112,7 @@ var number = function number(value) {
  * @return {String|undefined} [description]
  */
 var phone = function phone(value) {
-  return value && !/^[+]?[(]?[0-9]{1,3}[)]?[-s.]?[0-9]{3,4}[-s.]?[0-9]{6,7}$/i.test(value) ? 'This doesn’t look like a valid phone number. Please check your phone number.' : undefined;
+  return value && !/^[+]?[(]?[0-9]{3}[)]?[-s.]?[0-9]{4}[-s.]?[0-9]{5}$/i.test(value) ? 'This doesn’t look like a valid phone number. Please check your phone number.' : undefined;
 };
 
 /**
