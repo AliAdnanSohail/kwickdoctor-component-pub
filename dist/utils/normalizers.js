@@ -54,7 +54,7 @@ var phone = function phone(value) {
       return result;
     }
 
-    return '+' + result;
+    return '+92' + result;
   }
 
   if (result.length <= 8) {

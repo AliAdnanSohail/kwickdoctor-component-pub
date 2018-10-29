@@ -2,16 +2,16 @@
 
 exports[`renders correctly 1`] = `
 <div
-  className="jsx-1685083184 jsx-4038665278 jsx-2062352977 form-field"
+  className="jsx-1685083184 jsx-3325440485 jsx-844706462 form-field"
 >
   <label
-    className="jsx-1685083184 jsx-4038665278 jsx-2062352977"
+    className="jsx-1685083184 jsx-3325440485 jsx-844706462"
     htmlFor="input-id"
   >
     input-label
   </label>
   <textarea
-    className="jsx-1685083184 jsx-4038665278 jsx-2062352977 "
+    className="jsx-1685083184 jsx-3325440485 jsx-844706462 "
     id="input-id"
     placeholder="input-placeholder"
   />
