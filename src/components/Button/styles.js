@@ -5,6 +5,8 @@ import settings from '../../utils/style-helper';
 export default css`
   .button {
     position: relative;
+    display: flex;
+    align-item: center;
 
     padding: 13px 64px;
     height: 52px;
@@ -87,7 +89,7 @@ export default css`
     }
 
     &--with-icon &__content {
-      transform: translateX(16px);
+      transform: translateX(6px);
     }
 
     &--disabled {
@@ -193,9 +195,8 @@ export default css`
     }
 
     &:not(&--rounded) .button__icon {
-      position: absolute;
-      top: calc(50% - 12px);
-      left: 32px;
+      position: relative;
+      top: -2px;
     }
 
     &--small {
@@ -212,17 +213,16 @@ export default css`
       }
 
       .button__icon {
-        width: 18px;
-        height: 18px;
+        width: 17px;
+        height: 17px;
 
         .material-icons {
           font-size: 18px;
         }
       }
-
-      &:not(.button--rounded) .button__icon {
-        left: 21px;
-        top: calc(50% - 9px);
+      
+      &:not(&--rounded) .button__icon {
+        top: 0;
       }
     }
 
@@ -240,17 +240,16 @@ export default css`
       }
 
       .button__icon {
-        width: 18px;
-        height: 18px;
+        width: 13px;
+        height: 13px;
 
         .material-icons {
           font-size: 18px;
         }
       }
-
-      &:not(.button--rounded) .button__icon {
-        left: 16px;
-        top: calc(50% - 9px);
+      
+      &:not(&--rounded) .button__icon {
+        top: 0;
       }
     }
 
@@ -279,7 +278,7 @@ export default css`
       transform: rotate(0);
     }
     100% {
-      transform: rotate(360deg);
+      transform: rotate(-360deg);
     }
   }
 `;
