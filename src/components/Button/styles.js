@@ -7,6 +7,7 @@ export default css`
     position: relative;
     display: flex;
     align-item: center;
+    justify-content: center;
 
     padding: 13px 64px;
     height: 52px;
