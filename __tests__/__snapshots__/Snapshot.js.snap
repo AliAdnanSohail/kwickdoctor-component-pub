@@ -33,13 +33,13 @@ exports[`Storyshots Button default 1`] = `
   }
 >
   <button
-    className="jsx-3516059905 button"
+    className="jsx-3335033363 button"
     disabled={false}
     onClick={[Function]}
     type="button"
   >
     <span
-      className="jsx-3516059905 button__content"
+      className="jsx-3335033363 button__content"
     >
       Hello!
     </span>
@@ -607,7 +607,7 @@ exports[`Storyshots Calendar default 1`] = `
         className="jsx-893175612"
       >
         <button
-          className="jsx-1058092368 day day--selected"
+          className="jsx-1058092368 day day--disabled"
           data-day="2018-10-29"
           onClick={[Function]}
           type="button"
@@ -623,7 +623,7 @@ exports[`Storyshots Calendar default 1`] = `
         className="jsx-893175612"
       >
         <button
-          className="jsx-1058092368 day"
+          className="jsx-1058092368 day day--disabled"
           data-day="2018-10-30"
           onClick={[Function]}
           type="button"
@@ -639,7 +639,7 @@ exports[`Storyshots Calendar default 1`] = `
         className="jsx-893175612"
       >
         <button
-          className="jsx-1058092368 day"
+          className="jsx-1058092368 day day--selected"
           data-day="2018-10-31"
           onClick={[Function]}
           type="button"
@@ -1009,7 +1009,7 @@ exports[`Storyshots Form Fields DatePicker 1`] = `
             onFocus={[Function]}
             onKeyDown={[Function]}
             type="text"
-            value="29 Oct, 2018"
+            value="31 Oct, 2018"
           />
         </div>
       </div>
@@ -1617,13 +1617,13 @@ exports[`Storyshots Modal default 1`] = `
   }
 >
   <button
-    className="jsx-3516059905 button"
+    className="jsx-3335033363 button"
     disabled={false}
     onClick={[Function]}
     type="button"
   >
     <span
-      className="jsx-3516059905 button__content"
+      className="jsx-3335033363 button__content"
     >
       Open modal
     </span>
@@ -1754,13 +1754,13 @@ exports[`Storyshots Notification default 1`] = `
       className="jsx-3585762304 jsx-3014010845 notification__actions"
     >
       <button
-        className="jsx-3516059905 button button--small button--flat button--with-icon button--rounded"
+        className="jsx-3335033363 button button--small button--flat button--with-icon button--rounded"
         disabled={false}
         onClick={[Function]}
         type="button"
       >
         <div
-          className="jsx-3516059905 button__icon"
+          className="jsx-3335033363 button__icon"
         >
           <i
             className="jsx-3585762304 jsx-3014010845 material-icons"
@@ -1770,13 +1770,13 @@ exports[`Storyshots Notification default 1`] = `
         </div>
       </button>
       <button
-        className="jsx-3516059905 button button--small button--flat button--with-icon button--rounded"
+        className="jsx-3335033363 button button--small button--flat button--with-icon button--rounded"
         disabled={false}
         onClick={[Function]}
         type="button"
       >
         <div
-          className="jsx-3516059905 button__icon"
+          className="jsx-3335033363 button__icon"
         >
           <i
             className="jsx-3585762304 jsx-3014010845 material-icons"
@@ -1790,13 +1790,13 @@ exports[`Storyshots Notification default 1`] = `
       className="jsx-3585762304 jsx-3014010845 notification__actions--mobile"
     >
       <button
-        className="jsx-3516059905 button button--flat button--with-icon button--rounded"
+        className="jsx-3335033363 button button--flat button--with-icon button--rounded"
         disabled={false}
         onClick={[Function]}
         type="button"
       >
         <div
-          className="jsx-3516059905 button__icon"
+          className="jsx-3335033363 button__icon"
         >
           <i
             className="jsx-3585762304 jsx-3014010845 material-icons"
@@ -2016,13 +2016,13 @@ exports[`Storyshots Stepper Stepper 1`] = `
       }
     >
       <button
-        className="jsx-3516059905 button"
+        className="jsx-3335033363 button"
         disabled={false}
         onClick={[Function]}
         type="button"
       >
         <span
-          className="jsx-3516059905 button__content"
+          className="jsx-3335033363 button__content"
         >
           Next
         </span>
@@ -2043,13 +2043,13 @@ exports[`Storyshots Toast default 1`] = `
   }
 >
   <button
-    className="jsx-3516059905 button"
+    className="jsx-3335033363 button"
     disabled={false}
     onClick={[Function]}
     type="button"
   >
     <span
-      className="jsx-3516059905 button__content"
+      className="jsx-3335033363 button__content"
     >
       Create toast
     </span>
