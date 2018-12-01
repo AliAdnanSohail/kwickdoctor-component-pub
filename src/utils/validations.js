@@ -10,7 +10,7 @@ import moment from 'moment';
 const date = value =>
   (moment(value, 'DD/MM/YYYY').isValid() && moment(value, 'DD/MM/YYYY').isBefore(moment(), 'year')
     ? undefined
-    : 'This doesn’t look like a valid date. Check up, please!');
+    : 'This doesn’t look like a valid date. Please check the date entered!');
 
 /**
  * Returns error message if the value is incorrect email address and undefined if it's ok
