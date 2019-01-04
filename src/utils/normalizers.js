@@ -56,7 +56,7 @@ const phone = (value) => {
     return `${result.slice(0, 4)}-${result.slice(4)}`;
   }
 
-  return `${result.slice(0, 4)}-${result.slice(4, 8)}-${result.slice(8, 15)}`;
+  return `${result.slice(0, 4)}-${result.slice(4, 8)}-${result.slice(8, 13)}`;
 };
 
 export default {
