@@ -41,7 +41,7 @@
   },
   "peerDependencies": {
     "react": "16.4.1",
-    "react-dom": "16.4.1"
+    "react-dom": "16.4.2"
   },
   "devDependencies": {
     "@storybook/addon-links": "3.4.0",
@@ -98,7 +98,7 @@
     "moment-range": "3.1.1",
     "react-aria-modal": "2.12.1",
     "react-datepicker": "1.4.1",
-    "react-dom": "16.4.1",
+    "react-dom": "16.4.2",
     "react-motion": "0.5.2",
     "react-paginate": "5.2.2",
     "react-pdf": "3.0.4",
