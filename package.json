@@ -94,7 +94,7 @@
     "@storybook/react": "3.4.0",
     "classnames": "2.2.5",
     "lodash.debounce": "4.0.8",
-    "moment": "2.22.0",
+    "moment": "2.29.2",
     "moment-range": "3.1.1",
     "react-aria-modal": "2.12.1",
     "react-datepicker": "1.4.1",
